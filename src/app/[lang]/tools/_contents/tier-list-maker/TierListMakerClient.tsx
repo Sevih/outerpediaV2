@@ -928,6 +928,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     const load = (src: string) =>
       new Promise<HTMLImageElement | null>((resolve) => {
         const im = new Image();
+        im.crossOrigin = 'anonymous'; // keep the canvas origin-clean so toBlob works
         im.onload = () => resolve(im);
         im.onerror = () => resolve(null);
         im.src = src;
@@ -947,7 +948,9 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     await Promise.all([...urls].map(async (u) => { const im = await load(u); if (im) img.set(u, im); }));
 
     const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
+    // willReadFrequently forces a CPU-backed canvas, which both speeds up the
+    // readback and dodges broken GPU-canvas drivers that render nothing.
+    const ctx = canvas.getContext('2d', { willReadFrequently: true });
     if (!ctx) return;
 
     // Pre-wrap names in full (no truncation). Each tier's cell height grows to
@@ -983,10 +986,14 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     const width = PAD * 2 + contentW;
     const height = PAD * 2 + titleH + rowHeights.reduce((a, b) => a + b, 0) + footerH;
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    canvas.width = width * dpr;
-    canvas.height = height * dpr;
-    ctx.scale(dpr, dpr);
+    // Scale for crispness, but cap the device size so the canvas backing store
+    // never exceeds the browser limit (which yields a silently blank export).
+    const MAX_SIDE = 8192;
+    let scale = Math.min(window.devicePixelRatio || 1, 2);
+    scale = Math.max(0.5, Math.min(scale, MAX_SIDE / width, MAX_SIDE / height));
+    canvas.width = Math.floor(width * scale);
+    canvas.height = Math.floor(height * scale);
+    ctx.scale(scale, scale);
 
     ctx.fillStyle = '#18181b';
     ctx.fillRect(0, 0, width, height);
@@ -1081,16 +1088,34 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     ctx.textBaseline = 'middle';
     ctx.fillText('outerpedia.com', width - PAD, y + footerH / 2);
 
-    canvas.toBlob((blob) => {
-      if (!blob) return;
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `${(title.trim() || 'tier-list').replace(/[^\w-]+/g, '_')}.png`;
-      a.click();
-      URL.revokeObjectURL(url);
-    }, 'image/png');
-  }, [tiers, title, itemMap, iconSize, showNames, showElement, showClass, showRarity, showSkinNames, lang]);
+    // Guard: if canvas readback comes back blank (broken GPU canvas, or a
+    // privacy/anti-fingerprinting browser that neuters canvas), bail with a
+    // message instead of silently downloading an empty PNG.
+    try {
+      if (ctx.getImageData(5, 5, 1, 1).data[3] === 0) {
+        window.alert(t('tools.tier-list-maker.export_blocked'));
+        return;
+      }
+    } catch {
+      window.alert(t('tools.tier-list-maker.export_blocked'));
+      return;
+    }
+
+    try {
+      canvas.toBlob((blob) => {
+        if (!blob) { window.alert('PNG export failed: the image came back empty.'); return; }
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${(title.trim() || 'tier-list').replace(/[^\w-]+/g, '_')}.png`;
+        a.click();
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+    } catch (err) {
+      // A tainted canvas throws here — surface it instead of failing silently.
+      window.alert(`PNG export failed: ${(err as Error).message}`);
+    }
+  }, [tiers, title, itemMap, iconSize, showNames, showElement, showClass, showRarity, showSkinNames, lang, t]);
 
   // ── Render ──
   // Count base characters only — costumes are an opt-in extra hidden by default.

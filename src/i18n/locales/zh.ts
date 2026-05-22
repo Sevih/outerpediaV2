@@ -290,6 +290,7 @@ const zh: Record<TranslationKey, string> = {
   'tools.tier-list-maker.export_json': '导出 JSON',
   'tools.tier-list-maker.import_json': '导入 JSON',
   'tools.tier-list-maker.import_error': '无法读取该文件。',
+  'tools.tier-list-maker.export_blocked': '你的浏览器拦截了图片导出——可能是隐私/防指纹设置或显卡驱动问题。请尝试其他浏览器，或为本站允许 canvas。',
   'tools.tier-list-maker.sort': '排序',
   'tools.tier-list-maker.sort_default': '默认',
   'tools.tier-list-maker.sort_name': '名称',

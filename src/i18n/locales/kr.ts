@@ -290,6 +290,7 @@ const kr: Record<TranslationKey, string> = {
   'tools.tier-list-maker.export_json': 'JSON 내보내기',
   'tools.tier-list-maker.import_json': 'JSON 가져오기',
   'tools.tier-list-maker.import_error': '파일을 읽을 수 없습니다.',
+  'tools.tier-list-maker.export_blocked': '브라우저가 이미지 내보내기를 차단했습니다. 개인정보/핑거프린트 방지 설정이나 그래픽 드라이버 문제일 수 있습니다. 다른 브라우저를 사용하거나 이 사이트의 canvas를 허용하세요.',
   'tools.tier-list-maker.sort': '정렬',
   'tools.tier-list-maker.sort_default': '기본',
   'tools.tier-list-maker.sort_name': '이름',

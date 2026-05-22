@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getDbPool } from '@/lib/db';
+import { getDbConnection } from '@/lib/db';
 import { ensureTable, payloadId, MAX_PAYLOAD } from './_store';
 
 export const dynamic = 'force-dynamic';
@@ -33,9 +33,6 @@ function clientIp(request: Request): string {
 
 /** POST { z } → stores the encoded tier list, returns { id }. */
 export async function POST(request: Request) {
-  const pool = getDbPool();
-  if (!pool) return NextResponse.json({ error: 'storage_unavailable' }, { status: 503 });
-
   if (rateLimited(clientIp(request))) {
     return NextResponse.json({ error: 'rate_limited' }, { status: 429 });
   }
@@ -50,16 +47,20 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'bad_payload' }, { status: 400 });
   }
 
+  const conn = await getDbConnection();
+  if (!conn) return NextResponse.json({ error: 'storage_unavailable' }, { status: 503 });
   try {
-    await ensureTable(pool);
+    await ensureTable(conn);
     const id = payloadId(z);
     // Same payload ⇒ same id; the upsert keeps the call idempotent.
-    await pool.execute(
+    await conn.execute(
       'INSERT INTO tier_lists (id, payload) VALUES (?, ?) ON DUPLICATE KEY UPDATE id = id',
       [id, z],
     );
     return NextResponse.json({ id });
   } catch {
     return NextResponse.json({ error: 'storage_error' }, { status: 500 });
+  } finally {
+    await conn.end().catch(() => {});
   }
 }

@@ -1,5 +1,5 @@
 import { createHash } from 'crypto';
-import type { Pool } from 'mysql2/promise';
+import type { Connection } from 'mysql2/promise';
 
 /** Shared storage helpers for the tier-list share endpoints. */
 
@@ -8,10 +8,10 @@ export const ID_RE = /^[A-Za-z0-9_-]{1,16}$/;
 
 let tableReady: Promise<void> | null = null;
 
-/** Create the `tier_lists` table once per process (idempotent). */
-export function ensureTable(pool: Pool): Promise<void> {
+/** Create the `tier_lists` table once per process (idempotent, cached). */
+export function ensureTable(conn: Connection): Promise<void> {
   if (!tableReady) {
-    tableReady = pool
+    tableReady = conn
       .query(
         `CREATE TABLE IF NOT EXISTS tier_lists (
            id VARCHAR(16) NOT NULL PRIMARY KEY,

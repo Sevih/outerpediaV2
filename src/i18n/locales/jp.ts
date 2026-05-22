@@ -290,6 +290,7 @@ const jp: Record<TranslationKey, string> = {
   'tools.tier-list-maker.export_json': 'JSON書き出し',
   'tools.tier-list-maker.import_json': 'JSON読み込み',
   'tools.tier-list-maker.import_error': 'ファイルを読み込めませんでした。',
+  'tools.tier-list-maker.export_blocked': 'ブラウザが画像の書き出しをブロックしました。プライバシー／フィンガープリント対策、またはグラフィックドライバーの問題の可能性があります。別のブラウザを試すか、このサイトでcanvasを許可してください。',
   'tools.tier-list-maker.sort': '並び替え',
   'tools.tier-list-maker.sort_default': 'デフォルト',
   'tools.tier-list-maker.sort_name': '名前',

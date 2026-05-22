@@ -290,6 +290,7 @@ const fr: Record<TranslationKey, string> = {
   'tools.tier-list-maker.export_json': 'Exporter JSON',
   'tools.tier-list-maker.import_json': 'Importer JSON',
   'tools.tier-list-maker.import_error': 'Impossible de lire ce fichier.',
+  'tools.tier-list-maker.export_blocked': 'Ton navigateur a bloqué l\'export image — probablement un réglage anti-fingerprint/vie privée ou un souci de pilote graphique. Essaie un autre navigateur, ou autorise le canvas pour ce site.',
   'tools.tier-list-maker.sort': 'Trier',
   'tools.tier-list-maker.sort_default': 'Par défaut',
   'tools.tier-list-maker.sort_name': 'Nom',

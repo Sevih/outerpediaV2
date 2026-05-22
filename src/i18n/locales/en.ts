@@ -290,6 +290,7 @@ const en = {
   'tools.tier-list-maker.export_json': 'Export JSON',
   'tools.tier-list-maker.import_json': 'Import JSON',
   'tools.tier-list-maker.import_error': "Couldn't read that file.",
+  'tools.tier-list-maker.export_blocked': 'Your browser blocked the image export — likely a privacy / anti-fingerprinting setting or a graphics-driver issue. Try another browser, or allow canvas for this site.',
   'tools.tier-list-maker.sort': 'Sort',
   'tools.tier-list-maker.sort_default': 'Default',
   'tools.tier-list-maker.sort_name': 'Name',
