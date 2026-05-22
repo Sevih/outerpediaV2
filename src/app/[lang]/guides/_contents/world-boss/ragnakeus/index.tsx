@@ -13,28 +13,63 @@ import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
+import type {
+  WorldBossMode,
+  WorldBossConfig,
+  WorldBossDefaultConfig,
+  WorldBossVersionOverride,
+} from '@/types/world-boss';
+
+/* ── Shared data ────────────────────────────────────────── */
+import defaultConfig from './config.json';
 
 /* ── Version: 12-2025 ──────────────────────────────────── */
+import v12Config from './versions/12-2025/config.json';
 import v12Strings from './versions/12-2025/strings.json';
 import v12Teams from './versions/12-2025/teams.json';
 import v12Recommended from './versions/12-2025/recommended.json';
 import v12Tips from './versions/12-2025/tips.json';
 
-/* ── Boss data (default mode: Extreme) ───────────────── */
-import boss4086041 from '@data/boss/4086041.json';
-import boss4086042 from '@data/boss/4086042.json';
+/* ── Version: 10-2024 ──────────────────────────────────── */
+import v10Config from './versions/10-2024/config.json';
+import v10Strings from './versions/10-2024/strings.json';
 
-const preloadedBosses: Record<string, Boss> = {
-  '4086041': boss4086041 as unknown as Boss,
-  '4086042': boss4086042 as unknown as Boss,
+/* ── Config merge ───────────────────────────────────────── */
+const DEFAULT_MODE: WorldBossMode = 'Extreme';
+
+function loadBoss(id: string, suffix = ''): Boss {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  return require(`@data/boss/${id}${suffix}.json`) as Boss;
+}
+const defaults = defaultConfig as WorldBossDefaultConfig;
+
+function preloadMode(boss: WorldBossConfig, suffix: string | undefined, mode: WorldBossMode): Record<string, Boss> {
+  const ids = [boss.boss1Ids[mode], boss.boss2Ids[mode]].filter(Boolean) as string[];
+  return Object.fromEntries(ids.map((id) => [id, loadBoss(id, suffix)]));
+}
+
+type ResolvedVersion = {
+  label: LangMap;
+  boss: WorldBossConfig;
+  bossSuffix?: string;
+  preloaded: Record<string, Boss>;
 };
 
-/* ── Version: 10-2024 ──────────────────────────────────── */
-import v10Strings from './versions/10-2024/strings.json';
+function resolve(override: WorldBossVersionOverride): ResolvedVersion {
+  const boss = defaults.boss;
+  const suffix = override.boss?.version != null ? `-${override.boss.version}` : undefined;
+  return {
+    label: override.label,
+    boss,
+    bossSuffix: suffix,
+    preloaded: preloadMode(boss, suffix, DEFAULT_MODE),
+  };
+}
 
 /* ── Typed data ─────────────────────────────────────────── */
 
 const dec2025 = {
+  ...resolve(v12Config as WorldBossVersionOverride),
   strings: v12Strings as Record<string, LangMap>,
   teams: v12Teams as TeamData,
   phase1: v12Recommended.phase1 as CharacterRecommendation[],
@@ -43,25 +78,9 @@ const dec2025 = {
 };
 
 const oct2024 = {
+  label: (v10Config as WorldBossVersionOverride).label,
   strings: v10Strings as Record<string, LangMap>,
 };
-
-/* ── Boss config ────────────────────────────────────────── */
-
-const bossConfig = {
-  boss1Key: 'Dragon of Death Ragnakeus',
-  boss2Key: 'Mecha Dragon of Death Ragnakeus',
-  boss1Ids: {
-    Normal: '4086037',
-    'Very Hard': '4086039',
-    Extreme: '4086041',
-  },
-  boss2Ids: {
-    Hard: '4086038',
-    'Very Hard': '4086040',
-    Extreme: '4086042',
-  },
-} as const;
 
 /* ── Component ──────────────────────────────────────────── */
 
@@ -75,10 +94,15 @@ export default function RagnakeusGuide() {
       defaultVersion="december2025"
       versions={{
         december2025: {
-          label: lRec(dec2025.strings.label, lang),
+          label: lRec(dec2025.label, lang),
           content: (
             <>
-              <WorldBossDisplay config={bossConfig} defaultMode="Extreme" preloadedBosses={preloadedBosses} />
+              <WorldBossDisplay
+                config={dec2025.boss}
+                defaultMode="Extreme"
+                preloadedBosses={dec2025.preloaded}
+                bossFileSuffix={dec2025.bossSuffix}
+              />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
                 sections={[
@@ -116,7 +140,7 @@ export default function RagnakeusGuide() {
           ),
         },
         october2024: {
-          label: lRec(oct2024.strings.label, lang),
+          label: lRec(oct2024.label, lang),
           content: (
             <>
               <div>

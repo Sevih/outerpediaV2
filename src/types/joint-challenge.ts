@@ -1,19 +1,21 @@
 import type { LangMap } from './common';
 
-/** Default joint challenge config: just the boss reference */
+/** Default joint challenge config (root config.json): the base boss id */
 export type JointChallengeDefaultConfig = {
   boss: { id: string };
 };
 
-/** Per-version override: label is required, boss optionally overrides the default.
- *  bossSuffix (e.g. "-1") loads legacy snapshot files: `${id}${suffix}.json`. */
+/** Boss reference for one guide version.
+ *  - `version` selects an archived snapshot file `${id}-${version}.json`
+ *    (omit / null for the latest, suffix-less file).
+ *  - `id` optionally overrides the default boss id (rare). */
+export type JointChallengeBossRef = {
+  id?: string;
+  version?: number;
+};
+
+/** Per-version override (version config.json): label + optional boss ref */
 export type JointChallengeVersionOverride = {
   label: LangMap;
-  bossSuffix?: string;
-} & Partial<JointChallengeDefaultConfig>;
-
-/** Resolved config after merging default + version override */
-export type JointChallengeVersionConfig = {
-  label: LangMap;
-  bossSuffix?: string;
-} & JointChallengeDefaultConfig;
+  boss?: JointChallengeBossRef;
+};

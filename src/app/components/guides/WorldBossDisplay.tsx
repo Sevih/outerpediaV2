@@ -14,21 +14,16 @@ import type { Boss, BossSkill } from '@/types/boss';
 import type { ElementType } from '@/types/enums';
 import type { LangMap } from '@/types/common';
 import type { Lang } from '@/lib/i18n/config';
-
-type WorldBossMode = 'Normal' | 'Hard' | 'Very Hard' | 'Extreme';
-
-type WorldBossConfig = {
-  boss1Key: string;
-  boss2Key: string;
-  boss1Ids: Partial<Record<WorldBossMode, string>>;
-  boss2Ids: Partial<Record<WorldBossMode, string>>;
-};
+import type { WorldBossMode, WorldBossConfig } from '@/types/world-boss';
 
 type Props = {
   config: WorldBossConfig;
   defaultMode?: WorldBossMode;
   /** Pre-loaded boss data keyed by ID — rendered at SSR time (no loading state) */
   preloadedBosses?: Record<string, Boss>;
+  /** Suffix appended to the boss JSON filename (e.g. "-1" for legacy snapshots).
+   *  Mode IDs in `config` stay as the bare current ids. */
+  bossFileSuffix?: string;
 };
 
 const ALL_MODES: WorldBossMode[] = ['Normal', 'Hard', 'Very Hard', 'Extreme'];
@@ -136,7 +131,7 @@ function BossCard({ boss, lang }: { boss: Boss; lang: Lang }) {
   );
 }
 
-export default function WorldBossDisplay({ config, defaultMode = 'Extreme', preloadedBosses }: Props) {
+export default function WorldBossDisplay({ config, defaultMode = 'Extreme', preloadedBosses, bossFileSuffix = '' }: Props) {
   const { lang: rawLang } = useI18n();
   const lang = rawLang as Lang;
   const { buffMap, debuffMap } = use(effectMapsPromise);
@@ -159,17 +154,18 @@ export default function WorldBossDisplay({ config, defaultMode = 'Extreme', prel
     if (!id) return null;
     // Check preloaded data first
     if (preloadedBosses?.[id]) return preloadedBosses[id];
-    const cached = bossCache.get(id);
+    const cacheKey = `${id}${bossFileSuffix}`;
+    const cached = bossCache.get(cacheKey);
     if (cached) return cached;
     try {
-      const mod = await import(`@data/boss/${id}.json`);
+      const mod = await import(`@data/boss/${id}${bossFileSuffix}.json`);
       const data = (mod.default ?? mod) as Boss;
-      bossCache.set(id, data);
+      bossCache.set(cacheKey, data);
       return data;
     } catch {
       return null;
     }
-  }, [preloadedBosses]);
+  }, [preloadedBosses, bossFileSuffix]);
 
   useEffect(() => {
     if (mode === defaultMode && (preloadedBoss1 || preloadedBoss2)) {

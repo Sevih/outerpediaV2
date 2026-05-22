@@ -13,31 +13,67 @@ import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
+import type {
+  WorldBossMode,
+  WorldBossConfig,
+  WorldBossDefaultConfig,
+  WorldBossVersionOverride,
+} from '@/types/world-boss';
+
+/* ── Shared data ────────────────────────────────────────── */
+import defaultConfig from './config.json';
 
 /* ── Version: 01-2026 ──────────────────────────────────── */
+import v01Config from './versions/01-2026/config.json';
 import v01Strings from './versions/01-2026/strings.json';
 import v01Teams from './versions/01-2026/teams.json';
 import v01Recommended from './versions/01-2026/recommended.json';
 import v01Tips from './versions/01-2026/tips.json';
 
-/* ── Boss data (default mode: Extreme) ───────────────── */
-import boss4086017 from '@data/boss/4086017.json';
-import boss4086018 from '@data/boss/4086018.json';
-
-const preloadedBosses: Record<string, Boss> = {
-  '4086017': boss4086017 as unknown as Boss,
-  '4086018': boss4086018 as unknown as Boss,
-};
-
 /* ── Version: 06-2025 ──────────────────────────────────── */
+import v06Config from './versions/06-2025/config.json';
 import v06Strings from './versions/06-2025/strings.json';
 
 /* ── Version: legacy-2024 ──────────────────────────────── */
+import vLegacyConfig from './versions/legacy-2024/config.json';
 import vLegacyStrings from './versions/legacy-2024/strings.json';
+
+/* ── Config merge ───────────────────────────────────────── */
+const DEFAULT_MODE: WorldBossMode = 'Extreme';
+
+function loadBoss(id: string, suffix = ''): Boss {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  return require(`@data/boss/${id}${suffix}.json`) as Boss;
+}
+const defaults = defaultConfig as WorldBossDefaultConfig;
+
+function preloadMode(boss: WorldBossConfig, suffix: string | undefined, mode: WorldBossMode): Record<string, Boss> {
+  const ids = [boss.boss1Ids[mode], boss.boss2Ids[mode]].filter(Boolean) as string[];
+  return Object.fromEntries(ids.map((id) => [id, loadBoss(id, suffix)]));
+}
+
+type ResolvedVersion = {
+  label: LangMap;
+  boss: WorldBossConfig;
+  bossSuffix?: string;
+  preloaded: Record<string, Boss>;
+};
+
+function resolve(override: WorldBossVersionOverride): ResolvedVersion {
+  const boss = defaults.boss;
+  const suffix = override.boss?.version != null ? `-${override.boss.version}` : undefined;
+  return {
+    label: override.label,
+    boss,
+    bossSuffix: suffix,
+    preloaded: preloadMode(boss, suffix, DEFAULT_MODE),
+  };
+}
 
 /* ── Typed data ─────────────────────────────────────────── */
 
 const jan2026 = {
+  ...resolve(v01Config as WorldBossVersionOverride),
   strings: v01Strings as Record<string, LangMap>,
   teams: v01Teams as TeamData,
   phase1: v01Recommended.phase1 as CharacterRecommendation[],
@@ -46,29 +82,14 @@ const jan2026 = {
 };
 
 const jun2025 = {
+  label: (v06Config as WorldBossVersionOverride).label,
   strings: v06Strings as Record<string, LangMap>,
 };
 
 const legacy2024 = {
+  label: (vLegacyConfig as WorldBossVersionOverride).label,
   strings: vLegacyStrings as Record<string, LangMap>,
 };
-
-/* ── Boss config ────────────────────────────────────────── */
-
-const bossConfig = {
-  boss1Key: 'Walking Fortress Vault Venion',
-  boss2Key: 'Uncharted Fortress Vault Venion',
-  boss1Ids: {
-    Normal: '4086013',
-    'Very Hard': '4086015',
-    Extreme: '4086017',
-  },
-  boss2Ids: {
-    Hard: '4086014',
-    'Very Hard': '4086016',
-    Extreme: '4086018',
-  },
-} as const;
 
 /* ── Component ──────────────────────────────────────────── */
 
@@ -82,10 +103,15 @@ export default function VenionGuide() {
       defaultVersion="january2026"
       versions={{
         january2026: {
-          label: lRec(jan2026.strings.label, lang),
+          label: lRec(jan2026.label, lang),
           content: (
             <>
-              <WorldBossDisplay config={bossConfig} defaultMode="Extreme" preloadedBosses={preloadedBosses} />
+              <WorldBossDisplay
+                config={jan2026.boss}
+                defaultMode="Extreme"
+                preloadedBosses={jan2026.preloaded}
+                bossFileSuffix={jan2026.bossSuffix}
+              />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
                 sections={[
@@ -123,7 +149,7 @@ export default function VenionGuide() {
           ),
         },
         june2025: {
-          label: lRec(jun2025.strings.label, lang),
+          label: lRec(jun2025.label, lang),
           content: (
             <>
               <div>
@@ -145,7 +171,7 @@ export default function VenionGuide() {
           ),
         },
         legacy2024: {
-          label: lRec(legacy2024.strings.label, lang),
+          label: lRec(legacy2024.label, lang),
           content: (
             <>
               <div>

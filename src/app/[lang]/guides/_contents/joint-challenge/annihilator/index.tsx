@@ -16,7 +16,6 @@ import type { CharacterRecommendation } from '@/app/components/guides/Recommende
 import type {
   JointChallengeDefaultConfig,
   JointChallengeVersionOverride,
-  JointChallengeVersionConfig,
 } from '@/types/joint-challenge';
 
 /* -- Shared data ---------------------------------------------- */
@@ -51,15 +50,7 @@ function loadBoss(id: string, suffix = ''): Boss {
 const defaults = defaultConfig as JointChallengeDefaultConfig;
 const str = strings as Record<string, LangMap>;
 
-/* -- Config merge --------------------------------------------- */
-
-function mergeConfig(override: JointChallengeVersionOverride): JointChallengeVersionConfig {
-  return {
-    label: override.label,
-    boss: override.boss ?? defaults.boss,
-    bossSuffix: override.bossSuffix,
-  };
-}
+/* -- Config resolve ------------------------------------------- */
 
 type ResolvedVersion = {
   label: LangMap;
@@ -68,11 +59,12 @@ type ResolvedVersion = {
 };
 
 function resolve(override: JointChallengeVersionOverride): ResolvedVersion {
-  const config = mergeConfig(override);
+  const id = override.boss?.id ?? defaults.boss.id;
+  const suffix = override.boss?.version != null ? `-${override.boss.version}` : '';
   return {
-    label: config.label,
-    boss: { id: config.boss.id, data: loadBoss(config.boss.id, config.bossSuffix) },
-    bossSuffix: config.bossSuffix,
+    label: override.label,
+    boss: { id, data: loadBoss(id, suffix) },
+    bossSuffix: suffix || undefined,
   };
 }
 

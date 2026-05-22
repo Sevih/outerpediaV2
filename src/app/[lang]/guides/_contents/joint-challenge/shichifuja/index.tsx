@@ -13,47 +13,74 @@ import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
+import type {
+  JointChallengeDefaultConfig,
+  JointChallengeVersionOverride,
+} from '@/types/joint-challenge';
+
+/* -- Shared data ---------------------------------------------- */
+import strings from './strings.json';
+import defaultConfig from './config.json';
 
 /* -- Version: 02-2026 ---------------------------------------- */
-import v0226Strings from './versions/02-2026/strings.json';
+import v0226Config from './versions/02-2026/config.json';
 import v0226Tips from './versions/02-2026/tips.json';
 import v0226Recommended from './versions/02-2026/recommended.json';
 import v0226Teams from './versions/02-2026/teams.json';
 
 /* -- Version: 08-2025 ---------------------------------------- */
-import v0825Strings from './versions/08-2025/strings.json';
+import v0825Config from './versions/08-2025/config.json';
 import v0825Tips from './versions/08-2025/tips.json';
 import v0825Recommended from './versions/08-2025/recommended.json';
 import v0825Teams from './versions/08-2025/teams.json';
 
 /* -- Version: 01-2024 ---------------------------------------- */
-import v0124Strings from './versions/01-2024/strings.json';
+import v0124Config from './versions/01-2024/config.json';
 
-/* -- Boss data ------------------------------------------------ */
-import boss4634084 from '@data/boss/4634084.json';
+/* -- Typed JSON casts (JSON imports have literal types) -------- */
+function loadBoss(id: string, suffix = ''): Boss {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  return require(`@data/boss/${id}${suffix}.json`) as Boss;
+}
+const defaults = defaultConfig as JointChallengeDefaultConfig;
+const str = strings as Record<string, LangMap>;
 
-const preloadedBosses: Record<string, Boss> = {
-  '4634084': boss4634084 as unknown as Boss,
+/* -- Config resolve ------------------------------------------- */
+
+type ResolvedVersion = {
+  label: LangMap;
+  boss: { id: string; data: Boss };
+  bossSuffix?: string;
 };
+
+function resolve(override: JointChallengeVersionOverride): ResolvedVersion {
+  const id = override.boss?.id ?? defaults.boss.id;
+  const suffix = override.boss?.version != null ? `-${override.boss.version}` : '';
+  return {
+    label: override.label,
+    boss: { id, data: loadBoss(id, suffix) },
+    bossSuffix: suffix || undefined,
+  };
+}
 
 /* -- Typed data ----------------------------------------------- */
 
 const feb2026 = {
-  strings: v0226Strings as Record<string, LangMap>,
+  ...resolve(v0226Config as JointChallengeVersionOverride),
   tips: v0226Tips as Record<string, LangMap[]>,
   recommended: v0226Recommended as CharacterRecommendation[],
   teams: v0226Teams as TeamData,
 };
 
 const aug2025 = {
-  strings: v0825Strings as Record<string, LangMap>,
+  ...resolve(v0825Config as JointChallengeVersionOverride),
   tips: v0825Tips as Record<string, LangMap[]>,
   recommended: v0825Recommended as CharacterRecommendation[],
   teams: v0825Teams as TeamData,
 };
 
 const legacy2024 = {
-  strings: v0124Strings as Record<string, LangMap>,
+  label: (v0124Config as JointChallengeVersionOverride).label,
 };
 
 /* -- Component ------------------------------------------------ */
@@ -63,19 +90,20 @@ export default function ShichifujaGuide() {
 
   return (
     <GuideTemplate
-      title={lRec(feb2026.strings.title, lang)}
-      introduction={lRec(feb2026.strings.intro, lang)}
+      title={lRec(str.title, lang)}
+      introduction={lRec(str.intro, lang)}
       defaultVersion="february2026"
       versions={{
         february2026: {
-          label: lRec(feb2026.strings.label, lang),
+          label: lRec(feb2026.label, lang),
           content: (
             <>
               <BossDisplay
                 bossName="Shichifuja"
                 modeKey="Joint Challenge"
-                defaultBossId="4634084"
-                preloadedBosses={preloadedBosses}
+                defaultBossId={feb2026.boss.id}
+                preloadedBosses={{ [feb2026.boss.id]: feb2026.boss.data }}
+                bossFileSuffix={feb2026.bossSuffix}
               />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
@@ -96,14 +124,15 @@ export default function ShichifujaGuide() {
           ),
         },
         august2025: {
-          label: lRec(aug2025.strings.label, lang),
+          label: lRec(aug2025.label, lang),
           content: (
             <>
               <BossDisplay
                 bossName="Shichifuja"
                 modeKey="Joint Challenge"
-                defaultBossId="4634084"
-                preloadedBosses={preloadedBosses}
+                defaultBossId={aug2025.boss.id}
+                preloadedBosses={{ [aug2025.boss.id]: aug2025.boss.data }}
+                bossFileSuffix={aug2025.bossSuffix}
               />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
@@ -137,7 +166,7 @@ export default function ShichifujaGuide() {
           ),
         },
         legacy2024: {
-          label: lRec(legacy2024.strings.label, lang),
+          label: lRec(legacy2024.label, lang),
           content: (
             <>
               <CombatFootage

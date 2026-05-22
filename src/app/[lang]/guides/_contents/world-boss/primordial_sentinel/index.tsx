@@ -14,35 +14,71 @@ import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
+import type {
+  WorldBossMode,
+  WorldBossConfig,
+  WorldBossDefaultConfig,
+  WorldBossVersionOverride,
+} from '@/types/world-boss';
+
+/* ── Shared data ────────────────────────────────────────── */
+import defaultConfig from './config.json';
 
 /* ── Version: 03-2026 ──────────────────────────────────── */
+import v03_26Config from './versions/03-2026/config.json';
 import v03_26Strings from './versions/03-2026/strings.json';
 import v03_26Teams from './versions/03-2026/teams.json';
 import v03_26Recommended from './versions/03-2026/recommended.json';
 import v03_26Tips from './versions/03-2026/tips.json';
 
 /* ── Version: 11-2025 ──────────────────────────────────── */
+import v11Config from './versions/11-2025/config.json';
 import v11Strings from './versions/11-2025/strings.json';
 import v11Teams from './versions/11-2025/teams.json';
 import v11Recommended from './versions/11-2025/recommended.json';
 import v11Tips from './versions/11-2025/tips.json';
 
 /* ── Version: 07-2024 ──────────────────────────────────── */
+import v07Config from './versions/07-2024/config.json';
 import v07Strings from './versions/07-2024/strings.json';
 import v07Tips from './versions/07-2024/tips.json';
 
-/* ── Boss data (default mode: Extreme) ───────────────── */
-import boss4086011 from '@data/boss/4086011.json';
-import boss4086012 from '@data/boss/4086012.json';
+/* ── Config merge ───────────────────────────────────────── */
+const DEFAULT_MODE: WorldBossMode = 'Extreme';
 
-const preloadedBosses: Record<string, Boss> = {
-  '4086011': boss4086011 as unknown as Boss,
-  '4086012': boss4086012 as unknown as Boss,
+function loadBoss(id: string, suffix = ''): Boss {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  return require(`@data/boss/${id}${suffix}.json`) as Boss;
+}
+const defaults = defaultConfig as WorldBossDefaultConfig;
+
+function preloadMode(boss: WorldBossConfig, suffix: string | undefined, mode: WorldBossMode): Record<string, Boss> {
+  const ids = [boss.boss1Ids[mode], boss.boss2Ids[mode]].filter(Boolean) as string[];
+  return Object.fromEntries(ids.map((id) => [id, loadBoss(id, suffix)]));
+}
+
+type ResolvedVersion = {
+  label: LangMap;
+  boss: WorldBossConfig;
+  bossSuffix?: string;
+  preloaded: Record<string, Boss>;
 };
+
+function resolve(override: WorldBossVersionOverride): ResolvedVersion {
+  const boss = defaults.boss;
+  const suffix = override.boss?.version != null ? `-${override.boss.version}` : undefined;
+  return {
+    label: override.label,
+    boss,
+    bossSuffix: suffix,
+    preloaded: preloadMode(boss, suffix, DEFAULT_MODE),
+  };
+}
 
 /* ── Typed data ─────────────────────────────────────────── */
 
 const mar2026 = {
+  ...resolve(v03_26Config as WorldBossVersionOverride),
   strings: v03_26Strings as Record<string, LangMap>,
   teams: v03_26Teams as TeamData,
   phase1: v03_26Recommended.phase1 as CharacterRecommendation[],
@@ -51,6 +87,7 @@ const mar2026 = {
 };
 
 const nov2025 = {
+  ...resolve(v11Config as WorldBossVersionOverride),
   strings: v11Strings as Record<string, LangMap>,
   teams: v11Teams as TeamData,
   phase1: v11Recommended.phase1 as CharacterRecommendation[],
@@ -59,26 +96,10 @@ const nov2025 = {
 };
 
 const jul2024 = {
+  label: (v07Config as WorldBossVersionOverride).label,
   strings: v07Strings as Record<string, LangMap>,
   tips: v07Tips as Record<string, LangMap[]>,
 };
-
-/* ── Boss config ────────────────────────────────────────── */
-
-const bossConfig = {
-  boss1Key: 'Primordial Sentinel',
-  boss2Key: 'Glorious Sentinel',
-  boss1Ids: {
-    Normal: '4086007',
-    'Very Hard': '4086009',
-    Extreme: '4086011',
-  },
-  boss2Ids: {
-    Hard: '4086008',
-    'Very Hard': '4086010',
-    Extreme: '4086012',
-  },
-} as const;
 
 /* ── Component ──────────────────────────────────────────── */
 
@@ -92,10 +113,15 @@ export default function PrimordialSentinelGuide() {
       defaultVersion="march2026"
       versions={{
         march2026: {
-          label: lRec(mar2026.strings.label, lang),
+          label: lRec(mar2026.label, lang),
           content: (
             <>
-              <WorldBossDisplay config={bossConfig} defaultMode="Extreme" preloadedBosses={preloadedBosses} />
+              <WorldBossDisplay
+                config={mar2026.boss}
+                defaultMode="Extreme"
+                preloadedBosses={mar2026.preloaded}
+                bossFileSuffix={mar2026.bossSuffix}
+              />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
                 sections={[
@@ -139,10 +165,15 @@ export default function PrimordialSentinelGuide() {
           ),
         },
         november2025: {
-          label: lRec(nov2025.strings.label, lang),
+          label: lRec(nov2025.label, lang),
           content: (
             <>
-              <WorldBossDisplay config={bossConfig} defaultMode="Extreme" preloadedBosses={preloadedBosses} />
+              <WorldBossDisplay
+                config={nov2025.boss}
+                defaultMode="Extreme"
+                preloadedBosses={nov2025.preloaded}
+                bossFileSuffix={nov2025.bossSuffix}
+              />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
                 sections={[
@@ -166,7 +197,7 @@ export default function PrimordialSentinelGuide() {
           ),
         },
         july2024: {
-          label: lRec(jul2024.strings.label, lang),
+          label: lRec(jul2024.label, lang),
           content: (
             <>
               <TacticalTips

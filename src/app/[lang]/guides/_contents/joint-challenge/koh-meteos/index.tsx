@@ -13,60 +13,87 @@ import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
+import type {
+  JointChallengeDefaultConfig,
+  JointChallengeVersionOverride,
+} from '@/types/joint-challenge';
+
+/* -- Shared data ---------------------------------------------- */
+import strings from './strings.json';
+import defaultConfig from './config.json';
 
 /* -- Version: 04-2026 ---------------------------------------- */
-import v04Strings from './versions/04-2026/strings.json';
+import v04Config from './versions/04-2026/config.json';
 import v04Tips from './versions/04-2026/tips.json';
 import v04Recommended from './versions/04-2026/recommended.json';
 import v04Teams from './versions/04-2026/teams.json';
 
 /* -- Version: 11-2025 ---------------------------------------- */
-import v11Strings from './versions/11-2025/strings.json';
+import v11Config from './versions/11-2025/config.json';
 import v11Tips from './versions/11-2025/tips.json';
 import v11Recommended from './versions/11-2025/recommended.json';
 import v11Teams from './versions/11-2025/teams.json';
 
 /* -- Version: 05-2025 ---------------------------------------- */
-import v05Strings from './versions/05-2025/strings.json';
+import v05Config from './versions/05-2025/config.json';
 import v05Tips from './versions/05-2025/tips.json';
 import v05Recommended from './versions/05-2025/recommended.json';
 import v05Teams from './versions/05-2025/teams.json';
 
 /* -- Version: 01-2024 ---------------------------------------- */
-import v01Strings from './versions/01-2024/strings.json';
+import v01Config from './versions/01-2024/config.json';
 
-/* -- Boss data ------------------------------------------------ */
-import boss4176152 from '@data/boss/4176152.json';
+/* -- Typed JSON casts (JSON imports have literal types) -------- */
+function loadBoss(id: string, suffix = ''): Boss {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  return require(`@data/boss/${id}${suffix}.json`) as Boss;
+}
+const defaults = defaultConfig as JointChallengeDefaultConfig;
+const str = strings as Record<string, LangMap>;
 
-const preloadedBosses: Record<string, Boss> = {
-  '4176152': boss4176152 as unknown as Boss,
+/* -- Config resolve ------------------------------------------- */
+
+type ResolvedVersion = {
+  label: LangMap;
+  boss: { id: string; data: Boss };
+  bossSuffix?: string;
 };
+
+function resolve(override: JointChallengeVersionOverride): ResolvedVersion {
+  const id = override.boss?.id ?? defaults.boss.id;
+  const suffix = override.boss?.version != null ? `-${override.boss.version}` : '';
+  return {
+    label: override.label,
+    boss: { id, data: loadBoss(id, suffix) },
+    bossSuffix: suffix || undefined,
+  };
+}
 
 /* -- Typed data ----------------------------------------------- */
 
 const apr2026 = {
-  strings: v04Strings as Record<string, LangMap>,
+  ...resolve(v04Config as JointChallengeVersionOverride),
   tips: v04Tips as Record<string, LangMap[]>,
   recommended: v04Recommended as CharacterRecommendation[],
   teams: v04Teams as TeamData,
 };
 
 const nov2025 = {
-  strings: v11Strings as Record<string, LangMap>,
+  ...resolve(v11Config as JointChallengeVersionOverride),
   tips: v11Tips as Record<string, LangMap[]>,
   recommended: v11Recommended as CharacterRecommendation[],
   teams: v11Teams as TeamData,
 };
 
 const may2025 = {
-  strings: v05Strings as Record<string, LangMap>,
+  ...resolve(v05Config as JointChallengeVersionOverride),
   tips: v05Tips as Record<string, LangMap[]>,
   recommended: v05Recommended as CharacterRecommendation[],
   teams: v05Teams as TeamData,
 };
 
 const legacy2024 = {
-  strings: v01Strings as Record<string, LangMap>,
+  label: (v01Config as JointChallengeVersionOverride).label,
 };
 
 /* -- Component ------------------------------------------------ */
@@ -76,19 +103,20 @@ export default function KOHMeteosGuide() {
 
   return (
     <GuideTemplate
-      title={lRec(apr2026.strings.title, lang)}
-      introduction={lRec(apr2026.strings.intro, lang)}
+      title={lRec(str.title, lang)}
+      introduction={lRec(str.intro, lang)}
       defaultVersion="april2026"
       versions={{
         april2026: {
-          label: lRec(apr2026.strings.label, lang),
+          label: lRec(apr2026.label, lang),
           content: (
             <>
               <BossDisplay
                 bossName="Knight of Hope Meteos"
                 modeKey="Joint Challenge"
-                defaultBossId="4176152"
-                preloadedBosses={preloadedBosses}
+                defaultBossId={apr2026.boss.id}
+                preloadedBosses={{ [apr2026.boss.id]: apr2026.boss.data }}
+                bossFileSuffix={apr2026.bossSuffix}
               />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
@@ -114,14 +142,15 @@ export default function KOHMeteosGuide() {
           ),
         },
         november2025: {
-          label: lRec(nov2025.strings.label, lang),
+          label: lRec(nov2025.label, lang),
           content: (
             <>
               <BossDisplay
                 bossName="Knight of Hope Meteos"
                 modeKey="Joint Challenge"
-                defaultBossId="4176152"
-                preloadedBosses={preloadedBosses}
+                defaultBossId={nov2025.boss.id}
+                preloadedBosses={{ [nov2025.boss.id]: nov2025.boss.data }}
+                bossFileSuffix={nov2025.bossSuffix}
               />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
@@ -146,14 +175,15 @@ export default function KOHMeteosGuide() {
           ),
         },
         may2025: {
-          label: lRec(may2025.strings.label, lang),
+          label: lRec(may2025.label, lang),
           content: (
             <>
               <BossDisplay
                 bossName="Knight of Hope Meteos"
                 modeKey="Joint Challenge"
-                defaultBossId="4176152"
-                preloadedBosses={preloadedBosses}
+                defaultBossId={may2025.boss.id}
+                preloadedBosses={{ [may2025.boss.id]: may2025.boss.data }}
+                bossFileSuffix={may2025.bossSuffix}
               />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
@@ -187,7 +217,7 @@ export default function KOHMeteosGuide() {
           ),
         },
         legacy2024: {
-          label: lRec(legacy2024.strings.label, lang),
+          label: lRec(legacy2024.label, lang),
           content: (
             <>
               <CombatFootage

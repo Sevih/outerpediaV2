@@ -13,60 +13,87 @@ import type { Boss } from '@/types/boss';
 import type { LangMap } from '@/types/common';
 import type { TeamData } from '@/types/team';
 import type { CharacterRecommendation } from '@/app/components/guides/RecommendedCharacterList';
+import type {
+  JointChallengeDefaultConfig,
+  JointChallengeVersionOverride,
+} from '@/types/joint-challenge';
+
+/* -- Shared data ---------------------------------------------- */
+import strings from './strings.json';
+import defaultConfig from './config.json';
 
 /* -- Version: 01-2026 ---------------------------------------- */
-import v0126Strings from './versions/01-2026/strings.json';
+import v0126Config from './versions/01-2026/config.json';
 import v0126Tips from './versions/01-2026/tips.json';
 import v0126Recommended from './versions/01-2026/recommended.json';
 import v0126Teams from './versions/01-2026/teams.json';
 
 /* -- Version: 07-2025 ---------------------------------------- */
-import v0725Strings from './versions/07-2025/strings.json';
+import v0725Config from './versions/07-2025/config.json';
 import v0725Tips from './versions/07-2025/tips.json';
 import v0725Recommended from './versions/07-2025/recommended.json';
 import v0725Teams from './versions/07-2025/teams.json';
 
 /* -- Version: 03-2025 ---------------------------------------- */
-import v0325Strings from './versions/03-2025/strings.json';
+import v0325Config from './versions/03-2025/config.json';
 import v0325Tips from './versions/03-2025/tips.json';
 import v0325Recommended from './versions/03-2025/recommended.json';
 import v0325Teams from './versions/03-2025/teams.json';
 
 /* -- Version: 10-2024 ---------------------------------------- */
-import v1024Strings from './versions/10-2024/strings.json';
+import v1024Config from './versions/10-2024/config.json';
 
-/* -- Boss data ------------------------------------------------ */
-import boss4134065 from '@data/boss/4134065.json';
+/* -- Typed JSON casts (JSON imports have literal types) -------- */
+function loadBoss(id: string, suffix = ''): Boss {
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  return require(`@data/boss/${id}${suffix}.json`) as Boss;
+}
+const defaults = defaultConfig as JointChallengeDefaultConfig;
+const str = strings as Record<string, LangMap>;
 
-const preloadedBosses: Record<string, Boss> = {
-  '4134065': boss4134065 as unknown as Boss,
+/* -- Config resolve ------------------------------------------- */
+
+type ResolvedVersion = {
+  label: LangMap;
+  boss: { id: string; data: Boss };
+  bossSuffix?: string;
 };
+
+function resolve(override: JointChallengeVersionOverride): ResolvedVersion {
+  const id = override.boss?.id ?? defaults.boss.id;
+  const suffix = override.boss?.version != null ? `-${override.boss.version}` : '';
+  return {
+    label: override.label,
+    boss: { id, data: loadBoss(id, suffix) },
+    bossSuffix: suffix || undefined,
+  };
+}
 
 /* -- Typed data ----------------------------------------------- */
 
 const jan2026 = {
-  strings: v0126Strings as Record<string, LangMap>,
+  ...resolve(v0126Config as JointChallengeVersionOverride),
   tips: v0126Tips as Record<string, LangMap[]>,
   recommended: v0126Recommended as CharacterRecommendation[],
   teams: v0126Teams as TeamData,
 };
 
 const jul2025 = {
-  strings: v0725Strings as Record<string, LangMap>,
+  ...resolve(v0725Config as JointChallengeVersionOverride),
   tips: v0725Tips as Record<string, LangMap[]>,
   recommended: v0725Recommended as CharacterRecommendation[],
   teams: v0725Teams as TeamData,
 };
 
 const mar2025 = {
-  strings: v0325Strings as Record<string, LangMap>,
+  ...resolve(v0325Config as JointChallengeVersionOverride),
   tips: v0325Tips as Record<string, LangMap[]>,
   recommended: v0325Recommended as CharacterRecommendation[],
   teams: v0325Teams as TeamData,
 };
 
 const legacy2024 = {
-  strings: v1024Strings as Record<string, LangMap>,
+  label: (v1024Config as JointChallengeVersionOverride).label,
 };
 
 /* -- Component ------------------------------------------------ */
@@ -76,19 +103,20 @@ export default function DeepSeaGuardianGuide() {
 
   return (
     <GuideTemplate
-      title={lRec(jan2026.strings.title, lang)}
-      introduction={lRec(jan2026.strings.intro, lang)}
+      title={lRec(str.title, lang)}
+      introduction={lRec(str.intro, lang)}
       defaultVersion="january2026"
       versions={{
         january2026: {
-          label: lRec(jan2026.strings.label, lang),
+          label: lRec(jan2026.label, lang),
           content: (
             <>
               <BossDisplay
                 bossName="Deep Sea Guardian"
                 modeKey="Joint Challenge"
-                defaultBossId="4134065"
-                preloadedBosses={preloadedBosses}
+                defaultBossId={jan2026.boss.id}
+                preloadedBosses={{ [jan2026.boss.id]: jan2026.boss.data }}
+                bossFileSuffix={jan2026.bossSuffix}
               />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
@@ -113,14 +141,15 @@ export default function DeepSeaGuardianGuide() {
           ),
         },
         july2025: {
-          label: lRec(jul2025.strings.label, lang),
+          label: lRec(jul2025.label, lang),
           content: (
             <>
               <BossDisplay
                 bossName="Deep Sea Guardian"
                 modeKey="Joint Challenge"
-                defaultBossId="4134065"
-                preloadedBosses={preloadedBosses}
+                defaultBossId={jul2025.boss.id}
+                preloadedBosses={{ [jul2025.boss.id]: jul2025.boss.data }}
+                bossFileSuffix={jul2025.bossSuffix}
               />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
@@ -161,14 +190,15 @@ export default function DeepSeaGuardianGuide() {
           ),
         },
         march2025: {
-          label: lRec(mar2025.strings.label, lang),
+          label: lRec(mar2025.label, lang),
           content: (
             <>
               <BossDisplay
                 bossName="Deep Sea Guardian"
                 modeKey="Joint Challenge"
-                defaultBossId="4134065"
-                preloadedBosses={preloadedBosses}
+                defaultBossId={mar2025.boss.id}
+                preloadedBosses={{ [mar2025.boss.id]: mar2025.boss.data }}
+                bossFileSuffix={mar2025.bossSuffix}
               />
               <hr className="my-6 border-neutral-700" />
               <TacticalTips
@@ -182,7 +212,7 @@ export default function DeepSeaGuardianGuide() {
           ),
         },
         legacy2024: {
-          label: lRec(legacy2024.strings.label, lang),
+          label: lRec(legacy2024.label, lang),
           content: (
             <>
               <CombatFootage
