@@ -6,6 +6,7 @@ import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
 import type { TranslationKey } from '@/i18n';
 import { getGuideMeta, getGuideSlugsWithCategories } from '@/lib/data/guides';
+import { getBoss } from '@/lib/data/bosses';
 import { lRec } from '@/lib/i18n/localize';
 import Link from 'next/link';
 import { localePath } from '@/lib/navigation';
@@ -42,7 +43,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const categoryTitle = t[categoryKey] ?? cat;
   const hasCustomOg = !!(guide.og_image || guide.boss_id);
 
+  // Dimensional Singularity boss portraits are named after the boss's `icons` field,
+  // not its stage `boss_id`, so resolve it to point the OG image at a file that exists.
+  let singularityOg: string | undefined;
+  if (cat === 'dimensional-singularity' && guide.boss_id) {
+    const boss = await getBoss(guide.boss_id);
+    if (boss?.icons) singularityOg = `/images/characters/boss/portrait/MT_${boss.icons}.png`;
+  }
+
   const ogImage = guide.og_image
+    ?? singularityOg
     ?? (guide.boss_id?.startsWith('2') ? `/images/characters/portrait/og_${guide.boss_id}.png` : undefined)
     ?? (guide.boss_id ? `/images/characters/boss/portrait/MT_${guide.boss_id}.png` : undefined)
     ?? (cat === 'irregular-extermination'
