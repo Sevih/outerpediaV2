@@ -102,5 +102,77 @@
         "fr": "Support sacrificiel (en choisir 3). L'EE octroie +30% de dégâts tant qu'elle a {B/BT_BARRIER} (60% à EE+10). Laissez-la mourir avant son premier tour."
       }
     }
+  ],
+  "dark": [
+    {
+      "names": ["Demiurge Vlada"],
+      "reason": {
+        "en": "Decreases the boss's Priority Gain efficiency (20% at 4★, 50% at 5★).",
+        "jp": "ボスの優先度獲得効率を減少させる（4★で20%、5★で50%）。",
+        "kr": "보스의 우선도 획득 효율을 감소시킵니다(4★ 20%, 5★ 50%).",
+        "zh": "降低Boss的行动值获取效率（4★时20%，5★时50%）。",
+        "fr": "Réduit l'efficacité de gain de priorité du Boss (20% à 4★, 50% à 5★)."
+      }
+    },
+    {
+      "names": ["Gnosis Viella"],
+      "reason": {
+        "en": "Damage option whose {D/CORROSIVE_POISON} also decreases the boss's Priority Gain efficiency.",
+        "jp": "ダメージ選択肢。{D/CORROSIVE_POISON}でボスの優先度獲得効率も減少させる。",
+        "kr": "딜링 선택지. {D/CORROSIVE_POISON}으로 보스의 우선도 획득 효율도 감소시킵니다.",
+        "zh": "输出选项，其{D/CORROSIVE_POISON}还能降低Boss的行动值获取效率。",
+        "fr": "Option de dégâts dont le {D/CORROSIVE_POISON} réduit aussi l'efficacité de gain de priorité du Boss."
+      }
+    },
+    {
+      "names": ["Gnosis Dahlia", "Gnosis Domine", "Demiurge Astei", "Maxwell"],
+      "reason": {
+        "en": "Damage options.",
+        "jp": "ダメージ選択肢。",
+        "kr": "딜링 선택지.",
+        "zh": "输出选项。",
+        "fr": "Options de dégâts."
+      }
+    },
+    {
+      "names": ["Monad Iota"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} dual attacks and buff support.",
+        "jp": "{B/BT_CALL_BACKUP}による連携攻撃とバフサポート。",
+        "kr": "{B/BT_CALL_BACKUP} 연계 공격과 버프 지원.",
+        "zh": "{B/BT_CALL_BACKUP}连携攻击与增益支援。",
+        "fr": "Attaques doubles {B/BT_CALL_BACKUP} et support de buffs."
+      }
+    },
+    {
+      "names": ["Monad Eva"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} dual attacks, AP battery and {B/BT_REVIVAL} once damage ramps up.",
+        "jp": "{B/BT_CALL_BACKUP}による連携攻撃、APバッテリー、ダメージが上昇してからの{B/BT_REVIVAL}。",
+        "kr": "{B/BT_CALL_BACKUP} 연계 공격, AP 배터리, 피해가 증가할 때의 {B/BT_REVIVAL}.",
+        "zh": "{B/BT_CALL_BACKUP}连携攻击、AP电池，以及伤害递增后的{B/BT_REVIVAL}。",
+        "fr": "Attaques doubles {B/BT_CALL_BACKUP}, batterie d'AP et {B/BT_REVIVAL} une fois que les dégâts montent."
+      }
+    },
+    {
+      "names": ["Nella"],
+      "reason": {
+        "en": "AP battery and {B/BT_RESURRECTION}.",
+        "jp": "APバッテリーと{B/BT_RESURRECTION}。",
+        "kr": "AP 배터리와 {B/BT_RESURRECTION}.",
+        "zh": "AP电池与{B/BT_RESURRECTION}。",
+        "fr": "Batterie d'AP et {B/BT_RESURRECTION}."
+      }
+    },
+    {
+      "names": ["Omega Nadja"],
+      "reason": {
+        "en": "{C/Defender} providing strong teamwide damage mitigation.",
+        "jp": "{C/Defender}。チーム全体に高いダメージ軽減を提供する。",
+        "kr": "{C/Defender}로 팀 전체에 강력한 피해 감소를 제공합니다.",
+        "zh": "{C/Defender}，为全队提供高额伤害减免。",
+        "fr": "{C/Defender} apportant une forte mitigation de dégâts à toute l'équipe."
+      }
+    }
   ]
 }
