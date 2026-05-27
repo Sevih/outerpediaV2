@@ -12,7 +12,7 @@ import { splitCharacterName } from '@/lib/character-name';
 import { LANGS } from '@/lib/i18n/config';
 import { encodeFilters, decodeFilters, isEmptyPayload, type FilterPayload } from '@/lib/filter-url';
 import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
-import { FilterPill, FilterSearch, IconFilterGroup } from '@/app/components/ui/FilterPills';
+import FiltersTopBar from '@/app/components/ui/FiltersTopBar';
 
 const TIERS = ['S', 'A', 'B', 'C', 'D', 'E'] as const;
 type Tier = typeof TIERS[number];
@@ -91,16 +91,6 @@ export default function EePriorityPlus10Client({ characters }: Props) {
     });
   };
 
-  const ELEMENTS_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...ELEMENTS.map(v => ({ name: v, value: v })),
-  ], [t]);
-
-  const CLASSES_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...CLASSES.map(v => ({ name: v, value: v })),
-  ], [t]);
-
   const resolved = useMemo(() =>
     characters.map(char => {
       const displayName = l(char, 'Fullname', lang);
@@ -154,54 +144,18 @@ export default function EePriorityPlus10Client({ characters }: Props) {
         ))}
       </div>
 
-      {/* Search */}
-      <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={t('search.placeholder')} />
-
-      {/* Rarity */}
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">{t('filters.rarity')}</p>
-      <div className="flex justify-center gap-2">
-        <FilterPill
-          active={rarityFilter.length === 0}
-          onClick={() => setRarityFilter([])}
-          className="h-8 px-3"
-        >
-          {t('common.all')}
-        </FilterPill>
-        {RARITIES.map(r => (
-          <FilterPill
-            key={r}
-            active={rarityFilter.includes(r)}
-            onClick={() => toggleArray(setRarityFilter, r, RARITIES)}
-            className="h-8 px-3"
-          >
-            <div className="flex items-center -space-x-1">
-              {Array.from({ length: r }, (_, i) => (
-                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="star" width={16} height={16} style={{ width: 16, height: 16 }} />
-              ))}
-            </div>
-          </FilterPill>
-        ))}
-      </div>
-
-      {/* Elements + Classes */}
-      <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center">
-        <IconFilterGroup
-          label={t('filters.elements')}
-          items={ELEMENTS_UI}
-          filter={elementFilter}
-          onToggle={v => toggleArray(setElementFilter, v, ELEMENTS)}
-          onReset={() => setElementFilter([])}
-          imagePath={v => `/images/ui/elem/CM_Element_${v}.webp`}
-        />
-        <IconFilterGroup
-          label={t('filters.classes')}
-          items={CLASSES_UI}
-          filter={classFilter}
-          onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
-          onReset={() => setClassFilter([])}
-          imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
-        />
-      </div>
+      {/* Top bar — search + element + class + rarity on one row */}
+      <FiltersTopBar
+        query={rawQuery}
+        onQueryChange={setRawQuery}
+        placeholder={t('characters.filters.search_placeholder')}
+        elementFilter={elementFilter}
+        onToggleElement={v => toggleArray(setElementFilter, v, ELEMENTS as readonly string[])}
+        classFilter={classFilter}
+        onToggleClass={v => toggleArray(setClassFilter, v, CLASSES as readonly string[])}
+        rarityFilter={rarityFilter}
+        onToggleRarity={v => toggleArray(setRarityFilter, v, RARITIES)}
+      />
 
       {/* Tier groups */}
       <div className="mt-6 space-y-4">

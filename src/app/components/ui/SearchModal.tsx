@@ -21,10 +21,29 @@ export function SearchTrigger({ onClick }: { onClick: () => void }) {
     <button
       onClick={onClick}
       aria-label={t('common.search')}
-      className="flex items-center gap-2 rounded-md px-2 py-2 text-sm text-zinc-400 hover:bg-zinc-800/60 hover:text-zinc-200"
+      className="flex w-full items-center gap-2 rounded-full border border-zinc-800 bg-zinc-900/70 px-3 py-1.5 text-left text-sm text-zinc-400 transition hover:border-zinc-700 hover:bg-zinc-900 md:w-60 lg:w-72"
     >
-      <FaSearch className="text-xs" />
-      <span className="hidden text-xs text-zinc-500 lg:inline">Ctrl+K</span>
+      <FaSearch className="shrink-0 text-zinc-500" />
+      <span className="flex-1 truncate text-zinc-500">
+        {t('search.short_placeholder')}
+      </span>
+      <kbd className="hidden rounded border border-zinc-700 px-1.5 py-0.5 font-mono text-[10px] text-zinc-400 lg:inline">
+        Ctrl+K
+      </kbd>
+    </button>
+  );
+}
+
+/** Compact icon-only trigger for mobile (replaces the full bar). */
+export function SearchTriggerCompact({ onClick }: { onClick: () => void }) {
+  const { t } = useI18n();
+  return (
+    <button
+      onClick={onClick}
+      aria-label={t('common.search')}
+      className="flex size-9 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300 transition hover:bg-zinc-800"
+    >
+      <FaSearch className="text-sm" />
     </button>
   );
 }

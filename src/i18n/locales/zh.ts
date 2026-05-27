@@ -115,10 +115,21 @@ const zh: Record<TranslationKey, string> = {
   'tierlist.legend.C': '一般',
   'tierlist.legend.D': '没什么用',
   'tierlist.legend.E': '降级',
+  // ─── Tierlist landing (versus split) ──────────────────────────────────
+  'tierlist.versus.preview': '顶级预览',
+  'tierlist.versus.units': '已排名 {count} 名角色',
+  'tierlist.versus.view': '查看',
+  'tierlist.versus.tools_count': '排行榜',
   'page.tools.title': '异域战记 实用工具 & 程序',
   'page.tools.description':
     '异域战记工具：装备推荐器、队伍规划器、抽卡模拟器、进度追踪器等。',
   'page.tool.meta_title': '{title}',
+  // ─── Tools page UI ──────────────────────────────────────────────────────
+  'tools.featured': '精选',
+  'tools.count': '{count} 个工具',
+  'tools.ribbon.most_used': '最常用',
+  'tools.ribbon.community_pick': '社区推荐',
+  'tools.ribbon.new': '新',
   // ─── Tool Categories ────────────────────────────────────────────────────
   'tools.category.rankings': '排名',
   'tools.category.equipment': '装备',
@@ -523,18 +534,30 @@ const zh: Record<TranslationKey, string> = {
     '在世界首领战极限联赛中实现SSS排名的综合策略：优化队伍设置、学习轮换技巧和伤害最大化策略。',
   'guides.category.dimensional-singularity.desc':
     '每日轮换的奇点Boss攻略：日程、机制、排名分数目标，以及奇点升华装备强化。',
-  'guides.category.dimensional-singularity.intro':
-    '次元奇点是从单子门切换至「次元奇点模式」进入的终局内容。每天会出现不同的奇点Boss，当日分数将决定排名与奖励。',
-  'guides.category.dimensional-singularity.unlock':
+  'guides.singularity.info.intro':
+    '次元奇点是从单子门切换至「次元奇点模式」进入的终局内容。每周三到周六，每天会出现不同的奇点Boss，当日分数将决定排名与奖励。',
+  'guides.singularity.info.unlock':
     '解锁条件：通关单子门深层1的真结局。',
-  'guides.category.dimensional-singularity.schedule':
+  'guides.singularity.info.schedule':
     '每周三00:00 UTC至周六23:59 UTC开放。目标Boss每日00:00 UTC更换。每日2次挑战机会。',
-  'guides.category.dimensional-singularity.feature.repel':
+  'guides.singularity.info.feature.repel':
     '奇点击退：开始当日的Boss战斗。',
-  'guides.category.dimensional-singularity.feature.ascension':
+  'guides.singularity.info.feature.ascension':
     '奇点升华装置：将达到最大强化和最大重铸的装备进行升华。升华会提升装备的主属性数值并获得+3次重铸机会；强化等级达到+15时还会附加一项随机额外属性（类型取决于装备槽位，数值随机）。',
-  'guides.category.dimensional-singularity.feature.ranking':
+  'guides.singularity.info.feature.ranking':
     '排名报告：根据前一日分数领取每日奖励。',
+  'guides.singularity.timer.next': '下次重置 {time}',
+  'guides.singularity.week.title': '本周开放',
+  'guides.singularity.week.title_mobile': '当前进行中',
+  'guides.singularity.week.tagline': '周中3只Boss于周三至周五开放。周末Boss仅周六开放。',
+  'guides.singularity.week.live': '进行中 · {dow}',
+  'guides.singularity.weekend.today': '周末Boss · 今日开放',
+  'guides.singularity.weekend.tomorrow': '周末Boss · 明日',
+  'guides.singularity.weekend.in_days': '周末Boss · {n}天后',
+  'guides.singularity.day.weekly': '周三~周五',
+  'guides.singularity.day.sat_only': '仅周六',
+  'guides.singularity.library.title': 'Boss 图鉴',
+  'guides.singularity.library.tagline': '无论Boss是否处于轮换中，每篇攻略都始终可访问。',
   'guides.category.joint-challenge.desc':
     '使用高级战略在"联合挑战"中获得更高分：获悉顶尖排名的队伍组合、技能时机安排及协同技巧。',
   'guides.category.special-request.desc':
@@ -546,6 +569,23 @@ const zh: Record<TranslationKey, string> = {
   'guides.category.skyward-tower.desc':
     '飞天之塔与元素之塔攻略：队伍搭配、楼层机制与攻略建议。',
   'guides.category.other.desc': '不属于其他分类或已过时的攻略、新闻和内容。',
+
+  // Guide landing — categories index
+  'guides.counter': '{guides} 个攻略 · {categories} 个分类',
+  'guides.count.one': '{count} 攻略',
+  'guides.count.many': '{count} 攻略',
+
+  // /guides/general-guides — 阶段式学习路径
+  'guides.general.counter': '{guides} 个攻略 · {tiers} 个阶段 · 每周更新',
+  'guides.general.tier.prefix': 'TIER',
+  'guides.general.tier.first-steps.label': '入门',
+  'guides.general.tier.first-steps.tagline': '免费角色、起始卡池，以及新玩家最先想问的一切。',
+  'guides.general.tier.pulls.label': '卡池 & 抽卡',
+  'guides.general.tier.pulls.tagline': '卡池类型、里程数、抽卡优先级，以及优先追求的角色。',
+  'guides.general.tier.economy.label': '资源 & 日常',
+  'guides.general.tier.economy.tagline': '以太来源、体力分配，以及内容解锁的顺序。',
+  'guides.general.tier.heroes-gear.label': '角色 & 装备',
+  'guides.general.tier.heroes-gear.tagline': '角色养成、装备、Quirk 系统，与背后的全部战斗算法。',
 
   'guides.tips.tactical': '战术提示',
   'guides.tips.strategy': '策略',
@@ -649,7 +689,7 @@ const zh: Record<TranslationKey, string> = {
 
   // Homepage sections
   'home.cta.characters': '查看角色',
-  'home.section.banners': '当前限定角色',
+  'home.section.banners': '进行中的卡池',
   'home.section.codes': '有效兑换码',
   'home.section.beginner': '异域战记新手？',
   'home.beginner.desc': '阅读这些新手攻略以开始您的冒险：',
@@ -709,6 +749,13 @@ const zh: Record<TranslationKey, string> = {
   'search.characters': '角色',
   'search.equipment': '装备',
   'search.guides': '攻略',
+  'search.short_placeholder': '搜索…',
+
+  // Header
+  'header.lang.official': '官方',
+  'header.lang.community': '社区',
+  'header.lang.community_note': '社区翻译在游戏数据上将回退到英语。',
+  'header.buff.active': '增益激活中',
 
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': '角色',
@@ -729,6 +776,11 @@ const zh: Record<TranslationKey, string> = {
   'footer.social.official_x': '官方 X (Twitter)',
   'footer.social.publisher_x': '发行商 X (Twitter)',
   'footer.social.rss': 'RSS',
+  'footer.col.database': '数据库',
+  'footer.col.tools': '工具',
+  'footer.col.guides': '攻略',
+  'footer.col.community': '社区',
+  'footer.col.official': '官方',
   'footer.disclaimer':
     'Outerpedia是非官方粉丝制作项目。与异域战记相关的所有内容（包括角色、图片及其他游戏资产）均为VAGAMES CORP所有。本网站与VAGAMES CORP无任何关联、认可或赞助关系。',
 
@@ -850,6 +902,21 @@ const zh: Record<TranslationKey, string> = {
   'characters.filters.sources.fusionPassive': '核心融合被动',
   'characters.filters.sources.dualAttack': '夹攻',
   'characters.filters.teamBonus': '团队加成',
+  'characters.filters.title': '筛选',
+  'characters.filters.advanced': '高级筛选',
+  'characters.filters.advanced.subtitle': '效果、来源、标签和团队加成',
+  'characters.filters.empty_hint': '尚未筛选 — 选择属性或职业开始',
+  'characters.filters.match_logic': '条件',
+  'characters.filters.tab.basics': '基础',
+  'characters.filters.tab.combat': '战斗',
+  'characters.filters.tab.effects': '效果',
+  'characters.filters.tab.tags': '标签',
+  'characters.filters.tab.bonus': '团队加成',
+  'characters.filters.search_placeholder': '搜索角色…',
+  'characters.filters.search_effects': '搜索效果…',
+  'characters.filters.close': '关闭',
+  'characters.filters.no_match': '没有匹配的角色',
+  'characters.filters.active.count': '{count, plural, other {# 个有效筛选}}',
 
   // Characters common
   'characters.loading': '角色加载中……',

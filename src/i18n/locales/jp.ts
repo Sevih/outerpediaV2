@@ -115,10 +115,21 @@ const jp: Record<TranslationKey, string> = {
   'tierlist.legend.C': '微妙',
   'tierlist.legend.D': '特に意味なし',
   'tierlist.legend.E': 'ダウングレード',
+  // ─── Tierlist landing (versus split) ──────────────────────────────────
+  'tierlist.versus.preview': 'トップティアのプレビュー',
+  'tierlist.versus.units': '{count}体ランク付け',
+  'tierlist.versus.view': '見る',
+  'tierlist.versus.tools_count': 'ランキング',
   'page.tools.title': 'アウタープレーン ツール & ユーティリティ',
   'page.tools.description':
     'アウタープレーンのツール：装備ソルバー、チームプランナー、ガチャシミュレーター、進捗トラッカーなど。',
   'page.tool.meta_title': '{title}',
+  // ─── Tools page UI ──────────────────────────────────────────────────────
+  'tools.featured': '注目のツール',
+  'tools.count': 'ツール {count} 件',
+  'tools.ribbon.most_used': '最も使用',
+  'tools.ribbon.community_pick': 'コミュニティ推薦',
+  'tools.ribbon.new': '新着',
   // ─── Tool Categories ────────────────────────────────────────────────────
   'tools.category.rankings': 'ランキング',
   'tools.category.equipment': '装備',
@@ -523,18 +534,30 @@ const jp: Record<TranslationKey, string> = {
     'エクストリームリーグのワールドボス戦でSSSランクを達成するための完全攻略：最適なチーム編成、スキルローテーション、ダメージ最大化。',
   'guides.category.dimensional-singularity.desc':
     '日替わりで変わる特異点ボスの攻略：スケジュール、メカニクス、ランキングスコア目標、特異点昇華装備強化。',
-  'guides.category.dimensional-singularity.intro':
-    '次元特異点はモナドゲートから「次元特異点モード」に切り替えてアクセスするエンドコンテンツです。毎日異なる特異点ボスが出現し、その日のスコアによってランキングと報酬が決まります。',
-  'guides.category.dimensional-singularity.unlock':
+  'guides.singularity.info.intro':
+    '次元特異点はモナドゲートから「次元特異点モード」に切り替えてアクセスするエンドコンテンツです。水曜から土曜まで、毎日異なる特異点ボスが出現し、その日のスコアによってランキングと報酬が決まります。',
+  'guides.singularity.info.unlock':
     '解放条件：モナドゲート深層1の真エンディングをクリア。',
-  'guides.category.dimensional-singularity.schedule':
+  'guides.singularity.info.schedule':
     '毎週水曜00:00 UTCから土曜23:59 UTCまで開放。対象ボスは毎日00:00 UTCに変化。1日2回挑戦可能。',
-  'guides.category.dimensional-singularity.feature.repel':
+  'guides.singularity.info.feature.repel':
     '特異点討伐：その日のボス戦を開始する。',
-  'guides.category.dimensional-singularity.feature.ascension':
+  'guides.singularity.info.feature.ascension':
     '特異点昇華装置：強化と再鍛造が最大に達した装備を昇華する。昇華により装備のメインステータスが上昇し、再鍛造回数が+3される。さらに強化+15に到達するとランダムな追加ステータスが付与される（種類は装備スロットに依存、数値はランダム）。',
-  'guides.category.dimensional-singularity.feature.ranking':
+  'guides.singularity.info.feature.ranking':
     'ランキングレポート：前日のスコアに応じた日次報酬を受け取る。',
+  'guides.singularity.timer.next': '次のリセットまで {time}',
+  'guides.singularity.week.title': '今週の対象',
+  'guides.singularity.week.title_mobile': '本日の対象',
+  'guides.singularity.week.tagline': '週中ボス3体が水〜金に出現。週末ボスは土曜のみ。',
+  'guides.singularity.week.live': '開催中 · {dow}',
+  'guides.singularity.weekend.today': '週末ボス · 本日開催',
+  'guides.singularity.weekend.tomorrow': '週末ボス · 明日',
+  'guides.singularity.weekend.in_days': '週末ボス · あと{n}日',
+  'guides.singularity.day.weekly': '水〜金',
+  'guides.singularity.day.sat_only': '土曜のみ',
+  'guides.singularity.library.title': 'ボス一覧',
+  'guides.singularity.library.tagline': 'ローテーション外でも、各ボスのガイドは常時アクセス可能です。',
   'guides.category.joint-challenge.desc':
     '共同作戦で高スコアを狙うための上級攻略：最適なチーム編成、スキルタイミング、シナジー活用のコツ。',
   'guides.category.special-request.desc':
@@ -546,6 +569,23 @@ const jp: Record<TranslationKey, string> = {
   'guides.category.skyward-tower.desc':
     '飛天の塔とエレメンタルタワーの攻略：チーム編成、フロアメカニクス、攻略ヒント。',
   'guides.category.other.desc': '他のカテゴリに該当しない、または最新でなくなったガイド、ニュース、コンテンツ。',
+
+  // Guide landing — categories index
+  'guides.counter': 'ガイド{guides}件 · カテゴリー{categories}件',
+  'guides.count.one': 'ガイド{count}件',
+  'guides.count.many': 'ガイド{count}件',
+
+  // /guides/general-guides — 段階別カリキュラム
+  'guides.general.counter': 'ガイド{guides}件 · {tiers}段階 · 毎週更新',
+  'guides.general.tier.prefix': 'TIER',
+  'guides.general.tier.first-steps.label': '最初のステップ',
+  'guides.general.tier.first-steps.tagline': '無料ヒーロー、スタートバナー、そして新規プレイヤーが最初に抱く疑問。',
+  'guides.general.tier.pulls.label': 'バナー & ガチャ',
+  'guides.general.tier.pulls.tagline': 'バナーの種類、マイレージ、ガチャ優先度、そして最初に狙うべきヒーロー。',
+  'guides.general.tier.economy.label': 'リソース & デイリー',
+  'guides.general.tier.economy.tagline': 'エーテルの入手元、スタミナの使い道、そしてコンテンツ解放の順番。',
+  'guides.general.tier.heroes-gear.label': 'ヒーロー & 装備',
+  'guides.general.tier.heroes-gear.tagline': '育成、装備、クァーク、そしてその裏にあるすべての戦闘計算式。',
 
   'guides.tips.tactical': '戦術のヒント',
   'guides.tips.strategy': '戦略',
@@ -649,7 +689,7 @@ const jp: Record<TranslationKey, string> = {
 
   // Homepage sections
   'home.cta.characters': 'キャラクター一覧',
-  'home.section.banners': '現在入手可能',
+  'home.section.banners': '開催中のバナー',
   'home.section.codes': '有効なプロモコード',
   'home.section.beginner': 'アウタープレーン初心者ですか？',
   'home.beginner.desc': '初心者向けのガイドで冒険を始めましょう：',
@@ -709,6 +749,13 @@ const jp: Record<TranslationKey, string> = {
   'search.characters': 'キャラクター',
   'search.equipment': '装備',
   'search.guides': 'ガイド',
+  'search.short_placeholder': '検索...',
+
+  // Header
+  'header.lang.official': '公式',
+  'header.lang.community': 'コミュニティ',
+  'header.lang.community_note': 'コミュニティ翻訳はゲームデータには英語版が使用されます。',
+  'header.buff.active': 'バフ有効',
 
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': 'キャラ',
@@ -729,6 +776,11 @@ const jp: Record<TranslationKey, string> = {
   'footer.social.official_x': '公式 X (Twitter)',
   'footer.social.publisher_x': 'パブリッシャー X (Twitter)',
   'footer.social.rss': 'RSS',
+  'footer.col.database': 'データベース',
+  'footer.col.tools': 'ツール',
+  'footer.col.guides': 'ガイド',
+  'footer.col.community': 'コミュニティ',
+  'footer.col.official': '公式',
   'footer.disclaimer':
     'Outerpediaは非公式のファンメイドプロジェクトです。キャラクター、画像、その他のゲームアセットを含むアウタープレーンに関するすべてのコンテンツはVAGAMES CORPの所有物です。本サイトはVAGAMES CORPとの提携、承認、またはスポンサーシップを受けていません。',
 
@@ -850,6 +902,21 @@ const jp: Record<TranslationKey, string> = {
   'characters.filters.sources.fusionPassive': 'コアフュージョンパッシブ',
   'characters.filters.sources.dualAttack': 'デュアルアタック',
   'characters.filters.teamBonus': 'チームボーナス',
+  'characters.filters.title': 'フィルター',
+  'characters.filters.advanced': '詳細フィルター',
+  'characters.filters.advanced.subtitle': '効果、スキル元、タグ、チームボーナス',
+  'characters.filters.empty_hint': 'フィルターなし — 属性またはクラスを選択してください',
+  'characters.filters.match_logic': '条件',
+  'characters.filters.tab.basics': '基本',
+  'characters.filters.tab.combat': '戦闘',
+  'characters.filters.tab.effects': '効果',
+  'characters.filters.tab.tags': 'タグ',
+  'characters.filters.tab.bonus': 'チームボーナス',
+  'characters.filters.search_placeholder': 'キャラクターを検索…',
+  'characters.filters.search_effects': '効果を検索…',
+  'characters.filters.close': '閉じる',
+  'characters.filters.no_match': '条件に一致するキャラクターはいません',
+  'characters.filters.active.count': '{count, plural, other {有効: # フィルター}}',
 
   // Characters common
   'characters.loading': 'キャラクターを読み込み中...',

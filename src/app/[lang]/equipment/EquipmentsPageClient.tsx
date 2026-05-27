@@ -6,14 +6,16 @@ import type { Weapon, Amulet, Talisman, ArmorSet, ExclusiveEquipment, BossDispla
 import type { Effect } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
 import type { Messages } from '@/i18n';
-import type { ClassType } from '@/types/enums';
-import { CLASSES } from '@/types/enums';
+import type { ClassType, ElementType, RarityType } from '@/types/enums';
+import { CLASSES, ELEMENTS, RARITIES } from '@/types/enums';
 import { l, lRec } from '@/lib/i18n/localize';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import Tabs from '@/app/components/ui/Tabs';
 import { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import { WeaponCard, AmuletCard, TalismanCard, SetCard, EECard } from '@/app/components/equipment';
-import { FilterSearch, FilterPill, IconFilterGroup } from '@/app/components/ui/FilterPills';
+import { FilterSearch, FilterPill } from '@/app/components/ui/FilterPills';
+import { FilterBarGroup, FilterBarDivider } from '@/app/components/ui/FiltersTopBar';
+import { ElementIconPill, ClassIconPill, StarPill } from '@/app/components/characters/filters/FilterAtoms';
 
 type StatEntry = { label: string; icon: string };
 const statsPromise = import('@data/stats.json').then(m => m.default as Record<string, StatEntry>);
@@ -23,6 +25,14 @@ type TabKey = (typeof TAB_KEYS)[number];
 
 const LEVELS = [5, 6] as const;
 type EquipLevel = (typeof LEVELS)[number];
+
+const TALISMAN_TYPES = ['AP', 'CP'] as const;
+type TalismanType = (typeof TALISMAN_TYPES)[number];
+
+const TALISMAN_TYPE_TONE: Record<TalismanType, string> = {
+  AP: 'text-amber-300',
+  CP: 'text-cyan-300',
+};
 
 // ── Helpers ──
 
@@ -60,6 +70,8 @@ type Props = {
   ee: Record<string, ExclusiveEquipment>;
   eeCharNames: Record<string, string>;
   eeCharClasses: Record<string, string>;
+  eeCharElements: Record<string, string>;
+  eeCharRarities: Record<string, number>;
   gearSourceFilters: SourceFilterOption[];
   setSourceFilters: SourceFilterOption[];
   mainStatsOptions: string[];
@@ -72,6 +84,7 @@ type Props = {
 
 export default function EquipmentsPageClient({
   weapons, amulets, talismans, sets, ee, eeCharNames, eeCharClasses,
+  eeCharElements, eeCharRarities,
   gearSourceFilters, setSourceFilters, mainStatsOptions, bossMap, buffMap, debuffMap, lang, messages,
 }: Props) {
   const { t } = useI18n();
@@ -82,29 +95,43 @@ export default function EquipmentsPageClient({
   const [rawQuery, setRawQuery] = useState('');
   const query = useDeferredValue(rawQuery);
   const [classFilter, setClassFilter] = useState<ClassType[]>([]);
+  const [elementFilter, setElementFilter] = useState<ElementType[]>([]);
+  const [rarityFilter, setRarityFilter] = useState<RarityType[]>([]);
   const [levelFilter, setLevelFilter] = useState<EquipLevel[]>([]);
   const [sourceFilter, setSourceFilter] = useState<string[]>([]);
   const [mainStatFilter, setMainStatFilter] = useState<string[]>([]);
+  const [talismanTypeFilter, setTalismanTypeFilter] = useState<TalismanType[]>([]);
 
-  const handleTabChange = (v: string) => {
-    setActiveTab(v as TabKey);
+  const resetAllFilters = () => {
     setRawQuery('');
     setClassFilter([]);
+    setElementFilter([]);
+    setRarityFilter([]);
     setLevelFilter([]);
     setSourceFilter([]);
     setMainStatFilter([]);
+    setTalismanTypeFilter([]);
   };
+
+  const handleTabChange = (v: string) => {
+    setActiveTab(v as TabKey);
+    resetAllFilters();
+  };
+
+  const hasActiveFilters =
+    rawQuery.trim().length > 0
+    || classFilter.length > 0
+    || elementFilter.length > 0
+    || rarityFilter.length > 0
+    || levelFilter.length > 0
+    || sourceFilter.length > 0
+    || mainStatFilter.length > 0
+    || talismanTypeFilter.length > 0;
 
   const tabLabels = TAB_KEYS.map((k) => messages[`equip.tab.${k}`]);
 
   // ── Filter UI data ──
 
-  const CLASSES_UI = useMemo(() => [
-    { name: t('common.all'), value: null as ClassType | null },
-    ...CLASSES.map(v => ({ name: v, value: v })),
-  ], [t]);
-
-  const isGearTab = activeTab === 'weapons' || activeTab === 'accessories';
   const activeFilters = activeTab === 'sets' ? setSourceFilters : gearSourceFilters;
   const activeSourceKeys = useMemo(() => activeFilters.map(f => f.key), [activeFilters]);
 
@@ -142,15 +169,20 @@ export default function EquipmentsPageClient({
   }, [sets, q, sourceFilter, lang]);
 
   const filteredTalismans = useMemo(() => {
-    if (!q) return talismans;
-    return talismans.filter(t => norm(l(t, 'name', lang)).includes(q));
-  }, [talismans, q, lang]);
+    return talismans.filter(tlm => {
+      if (q && !norm(l(tlm, 'name', lang)).includes(q)) return false;
+      if (talismanTypeFilter.length && !talismanTypeFilter.includes(tlm.type as TalismanType)) return false;
+      return true;
+    });
+  }, [talismans, q, talismanTypeFilter, lang]);
 
   const eeEntries = useMemo(() => Object.entries(ee), [ee]);
 
   const filteredEE = useMemo(() => {
     return eeEntries.filter(([charId, eeItem]) => {
       if (classFilter.length && !classFilter.includes(eeCharClasses[charId] as ClassType)) return false;
+      if (elementFilter.length && !elementFilter.includes(eeCharElements[charId] as ElementType)) return false;
+      if (rarityFilter.length && !rarityFilter.includes(eeCharRarities[charId] as RarityType)) return false;
       if (q) {
         const eeName = norm(l(eeItem, 'name', lang));
         const charName = norm(eeCharNames[charId] ?? '');
@@ -158,23 +190,17 @@ export default function EquipmentsPageClient({
       }
       return true;
     });
-  }, [eeEntries, q, classFilter, eeCharClasses, eeCharNames, lang]);
+  }, [eeEntries, q, classFilter, elementFilter, rarityFilter, eeCharClasses, eeCharElements, eeCharRarities, eeCharNames, lang]);
 
-  // ── Visibility flags ──
-
-  const showClassFilter = activeTab === 'weapons' || activeTab === 'accessories' || activeTab === 'ee';
-  const showLevelFilter = activeTab === 'weapons' || activeTab === 'accessories';
-  const showSourceFilter = activeTab === 'weapons' || activeTab === 'accessories' || activeTab === 'sets';
-  const showMainStatFilter = activeTab === 'accessories';
-  const hasAdvancedFilters = showClassFilter || showLevelFilter || showSourceFilter || showMainStatFilter;
-  const hasActiveAdvanced = classFilter.length > 0 || levelFilter.length > 0 || sourceFilter.length > 0 || mainStatFilter.length > 0;
   const searchPlaceholder = activeTab === 'ee' ? t('equip.filter.searchEE') : t('equip.filter.search');
 
   // ── Source pill renderer ──
 
   // Split gear filters into boss row (no prefix) and other row (ie: / source:)
-  const gearBossFilters = gearSourceFilters.filter(f => !f.key.includes(':'));
-  const gearOtherFilters = gearSourceFilters.filter(f => f.key.includes(':'));
+  const gearSourceHalves = useMemo(() => {
+    const half = Math.ceil(gearSourceFilters.length / 2);
+    return [gearSourceFilters.slice(0, half), gearSourceFilters.slice(half)];
+  }, [gearSourceFilters]);
 
   function renderSourcePill(item: SourceFilterOption) {
     const label = item.i18nKey
@@ -225,145 +251,176 @@ export default function EquipmentsPageClient({
         className="justify-center"
       />
 
-      {/* Filters */}
-      <div className="flex flex-col gap-3 items-center">
-        <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={searchPlaceholder} />
+      {/* Top filter bar (per tab) */}
+      <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 rounded-xl border border-zinc-800 bg-slate-800/50 px-3 py-2.5 backdrop-blur-sm md:justify-start">
+        <div className="w-full md:w-72">
+          <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={searchPlaceholder} />
+        </div>
 
-        {hasAdvancedFilters && (
-          <details className="w-full group">
-            <summary className="mx-auto flex w-fit cursor-pointer select-none items-center gap-1.5 text-xs text-zinc-400 hover:text-zinc-200 transition-colors">
-              <svg className="h-3 w-3 transition-transform group-open:rotate-90" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4.5 2.5L8 6L4.5 9.5" /></svg>
-              {t('equip.filter.more')}
-              {hasActiveAdvanced && (
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-400" />
-              )}
-            </summary>
-
-            <div className="flex flex-col gap-3 items-center pt-3">
-              {showClassFilter && showLevelFilter && (
-                <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center w-full">
-                  <IconFilterGroup
-                    label={t('filters.classes')}
-                    items={CLASSES_UI}
-                    filter={classFilter}
-                    onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
-                    onReset={() => setClassFilter([])}
-                    imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
-                  />
-                  <div className="w-full flex flex-col items-center">
-                    <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('equip.filter.level')}</p>
-                    <div className="flex gap-2 justify-center">
-                      <FilterPill active={levelFilter.length === 0} onClick={() => setLevelFilter([])} className="h-8 px-3">
-                        {t('common.all')}
-                      </FilterPill>
-                      {LEVELS.map(lv => (
-                        <FilterPill
-                          key={lv}
-                          active={levelFilter.includes(lv)}
-                          onClick={() => toggleArray(setLevelFilter, lv, LEVELS)}
-                          className="h-8 px-3"
-                        >
-                          <div className="flex items-center -space-x-1">
-                            {Array.from({ length: lv }, (_, i) => (
-                              <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="star" width={14} height={14} style={{ width: 14, height: 14 }} />
-                            ))}
-                          </div>
-                        </FilterPill>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {showClassFilter && !showLevelFilter && (
-                <IconFilterGroup
-                  label={t('filters.classes')}
-                  items={CLASSES_UI}
-                  filter={classFilter}
-                  onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
-                  onReset={() => setClassFilter([])}
-                  imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
+        {(activeTab === 'weapons' || activeTab === 'accessories') && (
+          <>
+            <FilterBarDivider />
+            <FilterBarGroup label={t('filters.classes')}>
+              {CLASSES.map(cls => (
+                <ClassIconPill
+                  key={cls}
+                  classType={cls}
+                  active={classFilter.includes(cls)}
+                  onClick={() => toggleArray(setClassFilter, cls, CLASSES)}
                 />
-              )}
-
-              {showSourceFilter && (
-                <div className="w-full flex flex-col items-center">
-                  <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('equip.filter.source')}</p>
-                  {isGearTab ? (
-                    <div className="flex flex-col gap-2 items-center">
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        <FilterPill
-                          active={sourceFilter.length === 0}
-                          onClick={() => setSourceFilter([])}
-                          className="h-10 px-3"
-                        >
-                          {t('common.all')}
-                        </FilterPill>
-                        {gearBossFilters.map(renderSourcePill)}
-                      </div>
-                      {gearOtherFilters.length > 0 && (
-                        <div className="flex flex-wrap gap-2 justify-center">
-                          {gearOtherFilters.map(renderSourcePill)}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      <FilterPill
-                        active={sourceFilter.length === 0}
-                        onClick={() => setSourceFilter([])}
-                        className="h-10 px-3"
-                      >
-                        {t('common.all')}
-                      </FilterPill>
-                      {setSourceFilters.map(renderSourcePill)}
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {showMainStatFilter && mainStatsOptions.length > 0 && (
-                <div className="w-full flex flex-col items-center">
-                  <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-1">{t('equip.detail.mainstats')}</p>
-                  <div className="flex flex-wrap gap-2 justify-center">
-                    <FilterPill
-                      active={mainStatFilter.length === 0}
-                      onClick={() => setMainStatFilter([])}
-                      className="h-8 px-3"
-                    >
-                      {t('common.all')}
-                    </FilterPill>
-                    {mainStatsOptions.map(stat => {
-                      const info = statsData[stat];
-                      return (
-                        <FilterPill
-                          key={stat}
-                          active={mainStatFilter.includes(stat)}
-                          onClick={() => toggleArray(setMainStatFilter, stat, mainStatsOptions)}
-                          title={info?.label ?? stat}
-                          className="h-8 px-2"
-                        >
-                          {info ? (
-                            <Image
-                              src={`/images/ui/effect/${info.icon}`}
-                              alt={info.label}
-                              width={20}
-                              height={20}
-                              style={{ width: 20, height: 20 }}
-                            />
-                          ) : (
-                            <span className="text-xs">{stat}</span>
-                          )}
-                        </FilterPill>
-                      );
-                    })}
+              ))}
+            </FilterBarGroup>
+            <FilterBarDivider />
+            <FilterBarGroup label={t('equip.filter.level')}>
+              {LEVELS.map(lv => (
+                <FilterPill
+                  key={lv}
+                  active={levelFilter.includes(lv)}
+                  onClick={() => toggleArray(setLevelFilter, lv, LEVELS)}
+                  className="h-9 px-3"
+                >
+                  <div className="flex items-center -space-x-1">
+                    {Array.from({ length: lv }, (_, i) => (
+                      <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="star" width={14} height={14} style={{ width: 14, height: 14 }} />
+                    ))}
                   </div>
-                </div>
-              )}
-            </div>
-          </details>
+                </FilterPill>
+              ))}
+            </FilterBarGroup>
+            <FilterBarDivider />
+            <SourceColumn
+              label={t('equip.filter.source')}
+              rows={gearSourceHalves}
+              renderPill={renderSourcePill}
+            />
+          </>
         )}
+
+        {activeTab === 'sets' && (
+          <>
+            <FilterBarDivider />
+            <SourceColumn
+              label={t('equip.filter.source')}
+              rows={[setSourceFilters]}
+              renderPill={renderSourcePill}
+            />
+          </>
+        )}
+
+        {activeTab === 'talismans' && (
+          <>
+            <FilterBarDivider />
+            <FilterBarGroup label="Type">
+              {TALISMAN_TYPES.map(tp => (
+                <FilterPill
+                  key={tp}
+                  active={talismanTypeFilter.includes(tp)}
+                  onClick={() => toggleArray(setTalismanTypeFilter, tp, TALISMAN_TYPES)}
+                  className="h-9 px-3"
+                >
+                  <span className={`font-mono text-xs font-semibold tracking-wider ${TALISMAN_TYPE_TONE[tp]}`}>{tp}</span>
+                </FilterPill>
+              ))}
+            </FilterBarGroup>
+          </>
+        )}
+
+        {activeTab === 'ee' && (
+          <>
+            <FilterBarDivider />
+            <FilterBarGroup label={t('filters.classes')}>
+              {CLASSES.map(cls => (
+                <ClassIconPill
+                  key={cls}
+                  classType={cls}
+                  active={classFilter.includes(cls)}
+                  onClick={() => toggleArray(setClassFilter, cls, CLASSES)}
+                />
+              ))}
+            </FilterBarGroup>
+            <FilterBarDivider />
+            <FilterBarGroup label={t('filters.elements')}>
+              {ELEMENTS.map(el => (
+                <ElementIconPill
+                  key={el}
+                  element={el}
+                  active={elementFilter.includes(el)}
+                  onClick={() => toggleArray(setElementFilter, el, ELEMENTS)}
+                />
+              ))}
+            </FilterBarGroup>
+            <FilterBarDivider />
+            <FilterBarGroup label={t('filters.rarity')}>
+              {RARITIES.map(r => (
+                <StarPill
+                  key={r}
+                  stars={r}
+                  active={rarityFilter.includes(r)}
+                  onClick={() => toggleArray(setRarityFilter, r, RARITIES)}
+                />
+              ))}
+            </FilterBarGroup>
+          </>
+        )}
+
+        <button
+          type="button"
+          onClick={resetAllFilters}
+          disabled={!hasActiveFilters}
+          className={`inline-flex h-9 shrink-0 items-center gap-1.5 self-center rounded-lg border px-3 text-xs transition md:ml-auto ${
+            hasActiveFilters
+              ? 'border-rose-500/40 bg-rose-500/10 text-rose-200 hover:border-rose-400/60 hover:bg-rose-500/20'
+              : 'cursor-not-allowed border-zinc-800 bg-slate-900/80 text-zinc-500 opacity-60'
+          }`}
+        >
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M2 4h8M3 4v6a1 1 0 001 1h4a1 1 0 001-1V4M5 4V3a1 1 0 011-1h0a1 1 0 011 1v1" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
+          </svg>
+          {t('characters.filters.reset')}
+        </button>
       </div>
+
+      {/* Mainstat row for accessories */}
+      {activeTab === 'accessories' && mainStatsOptions.length > 0 && (
+        <div className="flex flex-col items-center gap-2 rounded-xl border border-zinc-800 bg-slate-800/50 p-4">
+          <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-300">
+            {t('equip.detail.mainstats')}
+          </p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            <FilterPill
+              active={mainStatFilter.length === 0}
+              onClick={() => setMainStatFilter([])}
+              className="h-8 px-3"
+            >
+              {t('common.all')}
+            </FilterPill>
+            {mainStatsOptions.map(stat => {
+              const info = statsData[stat];
+              return (
+                <FilterPill
+                  key={stat}
+                  active={mainStatFilter.includes(stat)}
+                  onClick={() => toggleArray(setMainStatFilter, stat, mainStatsOptions)}
+                  title={info?.label ?? stat}
+                  className="h-8 px-2"
+                >
+                  {info ? (
+                    <Image
+                      src={`/images/ui/effect/${info.icon}`}
+                      alt={info.label}
+                      width={20}
+                      height={20}
+                      style={{ width: 20, height: 20 }}
+                    />
+                  ) : (
+                    <span className="text-xs">{stat}</span>
+                  )}
+                </FilterPill>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* Weapons */}
       {activeTab === 'weapons' && (
@@ -418,5 +475,30 @@ export default function EquipmentsPageClient({
 
     </div>
     </EffectsProvider>
+  );
+}
+
+/** Source column with optional multi-row layout, used inline inside the top bar. */
+function SourceColumn({
+  label, rows, renderPill,
+}: {
+  label: string;
+  rows: SourceFilterOption[][];
+  renderPill: (item: SourceFilterOption) => React.ReactNode;
+}) {
+  const visibleRows = rows.filter(r => r.length > 0);
+  return (
+    <div className="flex flex-col gap-1">
+      <span className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-300">
+        {label}
+      </span>
+      <div className="flex flex-col items-center gap-1">
+        {visibleRows.map((row, i) => (
+          <div key={i} className="flex flex-wrap justify-center gap-1">
+            {row.map(renderPill)}
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

@@ -1,7 +1,6 @@
 'use client';
 
 import { use, useEffect, useState, useMemo, useRef, useDeferredValue } from 'react';
-import Image from 'next/image';
 import { useRouter, usePathname } from 'next/navigation';
 import LZString from 'lz-string';
 type EffectsIndex = {
@@ -17,19 +16,22 @@ import type { Effect } from '@/types/effect';
 import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
 import {
-  type RoleType, type SkillKey, type RarityType,
-  ELEMENTS, CLASSES, CHAIN_TYPES, RARITIES, ROLES, GIFTS, GIFT_LABELS, CHAIN_TYPE_LABELS, SKILL_SOURCES,
+  type RoleType, type SkillKey, type RarityType, type ElementType, type ChainType, type GiftType,
+  ELEMENTS, CLASSES, CHAIN_TYPES, RARITIES, ROLES, GIFTS,
+  GIFT_LABELS, CHAIN_TYPE_LABELS, SKILL_SOURCES,
 } from '@/types/enums';
 import type { TranslationKey } from '@/i18n/locales/en';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import type { WithLocalizedFields } from '@/types/common';
 import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
-import EffectIcon from '@/app/components/character/EffectIcon';
 import { splitCharacterName } from '@/lib/character-name';
-import { FILTER } from '@/lib/theme';
-import { FilterSearch, FilterPill, IconFilterGroup, TextFilterGroup, FilterSelect } from '@/app/components/ui/FilterPills';
 import type { FilterSelectOption } from '@/app/components/ui/FilterPills';
+import CharactersFiltersBar from '@/app/components/characters/filters/CharactersFiltersBar';
+import CharactersFiltersDrawer from '@/app/components/characters/filters/CharactersFiltersDrawer';
+import type { DrawerTagGroup } from '@/app/components/characters/filters/CharactersFiltersDrawer';
+import ActiveFiltersStrip, { type ActiveChipItem } from '@/app/components/characters/filters/ActiveFiltersStrip';
+import { ELEMENT_HEX, ROLE_HEX, RARITY_HEX, TONE } from '@/app/components/characters/filters/FilterAtoms';
 
 // ── URL encoding maps ──
 
@@ -250,160 +252,6 @@ function groupEffectsByCategory(
   }));
 }
 
-function splitIntoRows<T>(arr: T[], rows = 2): T[][] {
-  if (rows <= 1) return [arr];
-  const perRow = Math.ceil(arr.length / rows);
-  const out: T[][] = [];
-  for (let i = 0; i < rows; i++) out.push(arr.slice(i * perRow, (i + 1) * perRow));
-  return out;
-}
-
-function CheckboxSelect({
-  title, effects, effectsMap, selected, type, lang, onToggle,
-}: {
-  title: string;
-  effects: string[];
-  effectsMap: Map<string, Effect>;
-  selected: string[];
-  type: 'buff' | 'debuff';
-  lang: Lang;
-  onToggle: (effectKey: string) => void;
-}) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-  const count = effects.filter(k => selected.includes(k)).length;
-  const border = type === 'buff' ? 'ring-cyan-500/50' : 'ring-red-500/50';
-  const accent = type === 'buff' ? 'accent-cyan-500' : 'accent-red-500';
-  const color = type === 'buff' ? 'text-cyan-300' : 'text-red-300';
-
-  useEffect(() => {
-    if (!open) return;
-    const handleClick = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
-    };
-    document.addEventListener('mousedown', handleClick);
-    return () => document.removeEventListener('mousedown', handleClick);
-  }, [open]);
-
-  return (
-    <div ref={ref} className="relative">
-      <button
-        type="button"
-        onClick={() => setOpen(o => !o)}
-        className={`w-full flex items-center justify-between rounded-lg bg-zinc-800 px-3 py-2 text-sm ring-1 ${open ? border : 'ring-zinc-700'}`}
-      >
-        <span className={`font-semibold ${color}`}>{title}</span>
-        <span className="flex items-center gap-1.5">
-          {count > 0 && (
-            <span className={`text-[10px] font-bold rounded-full px-1.5 py-0.5 ${type === 'buff' ? 'bg-cyan-500/30 text-cyan-300' : 'bg-red-500/30 text-red-300'}`}>
-              {count}
-            </span>
-          )}
-          <svg className={`h-4 w-4 text-zinc-400 transition-transform ${open ? 'rotate-180' : ''}`} viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-          </svg>
-        </span>
-      </button>
-      {open && (
-        <div className="absolute z-40 mt-1 w-full max-h-60 overflow-y-auto rounded-lg bg-zinc-800 ring-1 ring-zinc-600 shadow-xl">
-          {effects.map(effectKey => {
-            const effect = effectsMap.get(effectKey);
-            if (!effect) return null;
-            const effectLabel = l(effect, 'label', lang);
-            const isIrremovable = effect.icon.includes('Interruption');
-            const imageFilter = isIrremovable ? '' : `${type}-icon`;
-            const checked = selected.includes(effectKey);
-            return (
-              <label
-                key={effectKey}
-                className={`flex items-center gap-2 px-3 py-1.5 cursor-pointer select-none transition ${checked ? 'bg-zinc-700/60' : 'hover:bg-zinc-700/30'}`}
-              >
-                <input
-                  type="checkbox"
-                  checked={checked}
-                  onChange={() => onToggle(effectKey)}
-                  className={`${accent} w-4 h-4 shrink-0`}
-                />
-                <span className="relative h-5 w-5 shrink-0 rounded bg-black">
-                  <Image
-                    src={`/images/ui/effect/${effect.icon}.webp`}
-                    alt={effectLabel}
-                    fill
-                    sizes="20px"
-                    className={`object-contain ${imageFilter}`}
-                  />
-                </span>
-                <span className="text-xs text-zinc-200">{effectLabel}</span>
-              </label>
-            );
-          })}
-        </div>
-      )}
-    </div>
-  );
-}
-
-function EffectGroupGrid({
-  groups, effectsMap, selected, type, lang, onToggle, className,
-}: {
-  groups: { title: string; effects: string[] }[];
-  effectsMap: Map<string, Effect>;
-  selected: string[];
-  type: 'buff' | 'debuff';
-  lang: Lang;
-  onToggle: (effectKey: string) => void;
-  className: string;
-}) {
-  const { t } = useI18n();
-  const color = type === 'buff' ? 'text-cyan-300' : 'text-red-300';
-  return (
-    <>
-      {/* Desktop: icon grid */}
-      <div className={`hidden md:grid ${className}`}>
-        {groups.map((group, i) => (
-          <div key={`${type}-${i}`} className="rounded-xl bg-zinc-800/40 ring-1 ring-zinc-700 p-2">
-            <p className={`text-center ${color} font-semibold mb-2`}>
-              {t(group.title as TranslationKey)}
-            </p>
-            <div className="grid grid-cols-7 gap-1 justify-items-center">
-              {group.effects.map(effectKey => {
-                const effect = effectsMap.get(effectKey);
-                if (!effect) return null;
-                return (
-                  <EffectIcon
-                    key={effectKey}
-                    effect={effect}
-                    type={type}
-                    lang={lang}
-                    selected={selected.includes(effectKey)}
-                    onClick={() => onToggle(effectKey)}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Mobile: checkbox select dropdowns */}
-      <div className="md:hidden space-y-1.5">
-        {groups.map((group, i) => (
-          <CheckboxSelect
-            key={`${type}-m-${i}`}
-            title={t(group.title as TranslationKey)}
-            effects={group.effects}
-            effectsMap={effectsMap}
-            selected={selected}
-            type={type}
-            lang={lang}
-            onToggle={onToggle}
-          />
-        ))}
-      </div>
-    </>
-  );
-}
-
 // ── Main component ──
 
 type ClientProps = {
@@ -426,11 +274,11 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   const pathname = usePathname();
 
   // Filter state
-  const [elementFilter, setElementFilter] = useState<string[]>([]);
+  const [elementFilter, setElementFilter] = useState<ElementType[]>([]);
   const [classFilter, setClassFilter] = useState<string[]>([]);
   const [rarityFilter, setRarityFilter] = useState<RarityType[]>([]);
-  const [chainFilter, setChainFilter] = useState<string[]>([]);
-  const [giftFilter, setGiftFilter] = useState<string[]>([]);
+  const [chainFilter, setChainFilter] = useState<ChainType[]>([]);
+  const [giftFilter, setGiftFilter] = useState<GiftType[]>([]);
   const [roleFilter, setRoleFilter] = useState<RoleType[]>([]);
   const [selectedBuffs, setSelectedBuffs] = useState<string[]>([]);
   const [selectedDebuffs, setSelectedDebuffs] = useState<string[]>([]);
@@ -444,8 +292,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   const query = useDeferredValue(rawQuery);
 
   // UI state
-  const [showFilters, setShowFilters] = useState(false);
-  const [showTagsPanel, setShowTagsPanel] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [copied, setCopied] = useState(false);
 
   // Lazy-loaded data
@@ -467,36 +314,6 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
       return allValues && next.length === allValues.length ? [] : next;
     });
   };
-
-  // ── Derived UI arrays ──
-
-  const ELEMENTS_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...ELEMENTS.map(v => ({ name: v, value: v })),
-  ], [t]);
-
-  const CLASSES_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...CLASSES.map(v => ({ name: v, value: v })),
-  ], [t]);
-
-  const CHAINS_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...CHAIN_TYPES.map(v => ({
-      name: t(`characters.chains.${CHAIN_TYPE_LABELS[v].toLowerCase()}` as TranslationKey),
-      value: v,
-    })),
-  ], [t]);
-
-  const GIFTS_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...GIFTS.map(v => ({ name: t(`characters.gifts.${GIFT_LABELS[v]}` as TranslationKey), value: v })),
-  ], [t]);
-
-  const ROLES_UI = useMemo(() => [
-    { name: t('common.all'), value: null as RoleType | null },
-    ...ROLES.map(v => ({ name: t(`filters.roles.${v}`), value: v })),
-  ], [t]);
 
   // ── Team bonus UI items (derived from characters + stats.json) ──
 
@@ -573,11 +390,11 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     roleFilter, tagFilter, tagLogic, sourceFilter, teamBonusFilter]);
 
   const applyPayload = (p: Partial<Payload>) => {
-    setElementFilter(p.el ?? []);
+    setElementFilter((p.el ?? []) as ElementType[]);
     setClassFilter(p.cl ?? []);
     setRarityFilter((p.r ?? []) as RarityType[]);
-    setChainFilter(p.chain ?? []);
-    setGiftFilter(p.gift ?? []);
+    setChainFilter((p.chain ?? []) as ChainType[]);
+    setGiftFilter((p.gift ?? []) as GiftType[]);
     setSelectedBuffs(p.buffs ?? []);
     setSelectedDebuffs(p.debuffs ?? []);
     setRawQuery(p.q ?? '');
@@ -621,7 +438,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
       if (classSet.size && !classSet.has(char.Class)) return false;
       if (raritySet.size && !raritySet.has(char.Rarity)) return false;
       if (chainSet.size && !chainSet.has(char.Chain_Type)) return false;
-      if (giftSet.size && !giftSet.has(char.gift)) return false;
+      if (giftSet.size && !giftSet.has(char.gift as GiftType)) return false;
       if (roleSet.size && !roleSet.has(char.role)) return false;
 
       // Effect matching (effects are pre-canonicalized in the pipeline)
@@ -671,16 +488,15 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     didHydrateFromURL.current = true;
     const z = new URLSearchParams(window.location.search).get('z');
     const decoded = decodeZToState(z || undefined, effectMaps);
-    if (decoded) {
-      applyPayload(decoded);
-      if ((decoded.buffs?.length || 0) + (decoded.debuffs?.length || 0) > 0) setShowFilters(true);
-    }
+    if (decoded) applyPayload(decoded);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Lazy load buffs/debuffs metadata
+  // Lazy load buffs/debuffs metadata when drawer opens or when URL had effects
+  const wantsEffectsData =
+    drawerOpen || selectedBuffs.length > 0 || selectedDebuffs.length > 0;
   useEffect(() => {
-    if (showFilters && buffsMetadata.length === 0) {
+    if (wantsEffectsData && buffsMetadata.length === 0) {
       Promise.all([
         import('@data/effects/buffs.json'),
         import('@data/effects/debuffs.json'),
@@ -689,16 +505,17 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
         setDebuffsMetadata(debuffsModule.default as Effect[]);
       });
     }
-  }, [showFilters, buffsMetadata.length]);
+  }, [wantsEffectsData, buffsMetadata.length]);
 
-  // Lazy load tags
+  // Lazy load tags when drawer opens or when URL had tag filters
+  const wantsTagsData = drawerOpen || tagFilter.length > 0;
   useEffect(() => {
-    if (showTagsPanel && !tagsData) {
+    if (wantsTagsData && !tagsData) {
       import('@data/tags.json').then(module => {
         setTagsData(module.default as Record<string, TagMeta>);
       });
     }
-  }, [showTagsPanel, tagsData]);
+  }, [wantsTagsData, tagsData]);
 
   // Sync filters → URL
   useEffect(() => {
@@ -742,276 +559,247 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     setShowUniqueEffects(false);
     setSourceFilter([]);
     setTeamBonusFilter([]);
-    setShowFilters(false);
-    setShowTagsPanel(false);
     lastSerializedRef.current = pathname;
     router.replace(pathname as never, { scroll: false });
   };
 
-  const hasActiveFilters = Boolean(
-    payload.el || payload.cl || payload.r || payload.chain || payload.gift
-    || payload.role || payload.tags || payload.buffs || payload.debuffs || payload.tb
-  );
+  // ── Active chips (for the strip below the bar) ──
+
+  const tagsMetaIndex = useMemo(() => tagsData ?? {}, [tagsData]);
+  const bonusLabelMap = useMemo(() => {
+    const m: Record<string, string> = {};
+    for (const opt of TEAM_BONUSES_UI) m[opt.value] = opt.label;
+    return m;
+  }, [TEAM_BONUSES_UI]);
+
+  const activeChips: ActiveChipItem[] = useMemo(() => {
+    const chips: ActiveChipItem[] = [];
+    const q = rawQuery.trim();
+    if (q) {
+      chips.push({
+        key: 's',
+        label: `"${q}"`,
+        color: TONE.cyan,
+        onRemove: () => setRawQuery(''),
+      });
+    }
+    for (const el of elementFilter) {
+      chips.push({
+        key: `e-${el}`,
+        label: el,
+        color: ELEMENT_HEX[el as ElementType] ?? TONE.cyan,
+        onRemove: () => setElementFilter(prev => prev.filter(v => v !== el)),
+      });
+    }
+    for (const cls of classFilter) {
+      chips.push({
+        key: `c-${cls}`,
+        label: cls,
+        color: TONE.cyan,
+        onRemove: () => setClassFilter(prev => prev.filter(v => v !== cls)),
+      });
+    }
+    for (const r of rarityFilter) {
+      chips.push({
+        key: `r-${r}`,
+        label: `${r}★`,
+        color: RARITY_HEX[r],
+        onRemove: () => setRarityFilter(prev => prev.filter(v => v !== r)),
+      });
+    }
+    for (const c of chainFilter) {
+      const label = t(`characters.chains.${CHAIN_TYPE_LABELS[c as ChainType]?.toLowerCase() ?? c}` as TranslationKey);
+      chips.push({
+        key: `ch-${c}`,
+        label,
+        color: TONE.cyan,
+        onRemove: () => setChainFilter(prev => prev.filter(v => v !== c)),
+      });
+    }
+    for (const r of roleFilter) {
+      chips.push({
+        key: `ro-${r}`,
+        label: t(`filters.roles.${r}`),
+        color: ROLE_HEX[r],
+        onRemove: () => setRoleFilter(prev => prev.filter(v => v !== r)),
+      });
+    }
+    for (const g of giftFilter) {
+      const label = t(`characters.gifts.${GIFT_LABELS[g as GiftType] ?? g}` as TranslationKey);
+      chips.push({
+        key: `g-${g}`,
+        label,
+        color: TONE.amber,
+        onRemove: () => setGiftFilter(prev => prev.filter(v => v !== g)),
+      });
+    }
+    for (const tb of teamBonusFilter) {
+      chips.push({
+        key: `tb-${tb}`,
+        label: bonusLabelMap[tb] ?? tb,
+        color: TONE.amber,
+        onRemove: () => setTeamBonusFilter(prev => prev.filter(v => v !== tb)),
+      });
+    }
+    for (const src of sourceFilter) {
+      const meta = SKILL_SOURCES.find(s => s.key === src);
+      chips.push({
+        key: `src-${src}`,
+        label: meta ? t(meta.labelKey as TranslationKey) : src,
+        color: TONE.indigo,
+        onRemove: () => setSourceFilter(prev => prev.filter(v => v !== src)),
+      });
+    }
+    if (showUniqueEffects) {
+      chips.push({
+        key: 'uniq',
+        label: t('characters.filters.unique'),
+        color: TONE.indigo,
+        onRemove: () => setShowUniqueEffects(false),
+      });
+    }
+    for (const b of selectedBuffs) {
+      const meta = buffsMap.get(b);
+      chips.push({
+        key: `b-${b}`,
+        label: meta ? l(meta, 'label', lang) : b,
+        color: TONE.emerald,
+        onRemove: () => setSelectedBuffs(prev => prev.filter(v => v !== b)),
+      });
+    }
+    for (const d of selectedDebuffs) {
+      const meta = debuffsMap.get(d);
+      chips.push({
+        key: `d-${d}`,
+        label: meta ? l(meta, 'label', lang) : d,
+        color: TONE.rose,
+        onRemove: () => setSelectedDebuffs(prev => prev.filter(v => v !== d)),
+      });
+    }
+    for (const tk of tagFilter) {
+      const meta = tagsMetaIndex[tk];
+      chips.push({
+        key: `t-${tk}`,
+        label: meta ? l(meta, 'label', lang) : `#${tk}`,
+        color: TONE.indigo,
+        onRemove: () => setTagFilter(prev => prev.filter(v => v !== tk)),
+      });
+    }
+    return chips;
+  }, [
+    rawQuery, elementFilter, classFilter, rarityFilter, chainFilter, roleFilter,
+    giftFilter, teamBonusFilter, sourceFilter, showUniqueEffects,
+    selectedBuffs, selectedDebuffs, tagFilter,
+    buffsMap, debuffsMap, tagsMetaIndex, bonusLabelMap, lang, t,
+  ]);
+
+  const advancedCount =
+    chainFilter.length + roleFilter.length + giftFilter.length
+    + selectedBuffs.length + selectedDebuffs.length
+    + sourceFilter.length + (showUniqueEffects ? 1 : 0)
+    + teamBonusFilter.length + tagFilter.length;
+
+  const drawerTagGroups = TAG_GROUPS as DrawerTagGroup[];
 
   // ── Render ──
 
   return (
-    <div className="mx-auto max-w-350 px-2 md:px-4 space-y-3">
-      {/* Search */}
-      <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={t('search.placeholder')} />
+    <div className="mx-auto max-w-350 space-y-3 px-2 md:px-4">
+      {/* Filters bar — top strip on desktop, sticky bar on mobile */}
+      <CharactersFiltersBar
+        query={rawQuery}
+        onQueryChange={setRawQuery}
+        elementFilter={elementFilter}
+        onToggleElement={v => toggleArray(setElementFilter, v, ELEMENTS)}
+        classFilter={classFilter}
+        onToggleClass={v => toggleArray(setClassFilter, v, CLASSES)}
+        rarityFilter={rarityFilter}
+        onToggleRarity={v => toggleArray(setRarityFilter, v, RARITIES)}
+        advancedCount={advancedCount}
+        onOpenAdvanced={() => setDrawerOpen(true)}
+        advancedOpen={drawerOpen}
+      />
 
-      {/* Match count */}
-      {hasActiveFilters && (
-        <div className="flex justify-center">
-          <span className="text-xs text-zinc-400">
-            {t('characters.common.matches', { count: filtered.length })}
-          </span>
+      {/* Active filters chip strip */}
+      <ActiveFiltersStrip
+        items={activeChips}
+        totalCount={indexedCharacters.length}
+        matchCount={filtered.length}
+        onResetAll={resetAll}
+        onCopyShareUrl={copyShareUrl}
+        copied={copied}
+      />
+
+      {/* Character grid */}
+      {filtered.length === 0 ? (
+        <div className="flex flex-col items-center gap-3 py-12 text-center">
+          <p className="text-sm text-zinc-400">{t('characters.filters.no_match')}</p>
+          <button
+            type="button"
+            onClick={resetAll}
+            className="rounded-md border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs text-zinc-200 transition hover:border-zinc-700"
+          >
+            {t('characters.filters.reset')}
+          </button>
+        </div>
+      ) : (
+        <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
+          {filtered.map((char: IndexedCharacter, index: number) => (
+            <ResponsiveCharacterCard
+              key={char.ID}
+              id={char.ID}
+              name={char.displayName}
+              prefix={char.prefix}
+              element={char.Element}
+              classType={char.Class}
+              rarity={char.Rarity}
+              tags={char.tags}
+              href={href(`/characters/${char.slug}`)}
+              priority={index <= 5}
+            />
+          ))}
         </div>
       )}
 
-      {/* Rarity */}
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">{t('filters.rarity')}</p>
-      <div className="flex justify-center gap-2">
-        <FilterPill
-          active={rarityFilter.length === 0}
-          onClick={() => setRarityFilter([])}
-          className="h-8 px-3"
-        >
-          {t('common.all')}
-        </FilterPill>
-        {RARITIES.map(r => (
-          <FilterPill
-            key={r}
-            active={rarityFilter.includes(r)}
-            onClick={() => toggleArray(setRarityFilter, r, RARITIES)}
-            className="h-8 px-3"
-          >
-            <div className="flex items-center -space-x-1">
-              {Array.from({ length: r }, (_, i) => (
-                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="star" width={16} height={16} style={{ width: 16, height: 16 }} />
-              ))}
-            </div>
-          </FilterPill>
-        ))}
-      </div>
-
-      {/* Elements + Classes */}
-      <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center">
-        <IconFilterGroup
-          label={t('filters.elements')}
-          items={ELEMENTS_UI}
-          filter={elementFilter}
-          onToggle={v => toggleArray(setElementFilter, v, ELEMENTS)}
-          onReset={() => setElementFilter([])}
-          imagePath={v => `/images/ui/elem/CM_Element_${v}.webp`}
-        />
-        <IconFilterGroup
-          label={t('filters.classes')}
-          items={CLASSES_UI}
-          filter={classFilter}
-          onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
-          onReset={() => setClassFilter([])}
-          imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
-        />
-      </div>
-
-      {/* Chains + Roles */}
-      <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center">
-        <TextFilterGroup
-          label={t('characters.filters.chains')}
-          items={CHAINS_UI}
-          filter={chainFilter}
-          onToggle={v => toggleArray(setChainFilter, v, CHAIN_TYPES)}
-          onReset={() => setChainFilter([])}
-        />
-        <TextFilterGroup
-          label={t('characters.filters.roles')}
-          items={ROLES_UI}
-          filter={roleFilter}
-          onToggle={v => toggleArray(setRoleFilter, v, ROLES)}
-          onReset={() => setRoleFilter([])}
-        />
-      </div>
-
-      {/* Gifts + Team Bonus */}
-      <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center">
-        <TextFilterGroup
-          label={t('characters.filters.gifts')}
-          items={GIFTS_UI}
-          filter={giftFilter}
-          onToggle={v => toggleArray(setGiftFilter, v, GIFTS)}
-          onReset={() => setGiftFilter([])}
-        />
-        <FilterSelect
-          label={t('characters.filters.teamBonus' as TranslationKey)}
-          placeholder={t('common.all')}
-          options={TEAM_BONUSES_UI}
-          value={teamBonusFilter[0] ?? null}
-          onChange={v => setTeamBonusFilter(v ? [v] : [])}
-        />
-      </div>
-
-      {/* Toggle Buff/Debuff filters */}
-      <div className="text-center mt-4">
-        <div className="flex gap-2 justify-center">
-          <button
-            type="button"
-            onClick={() => setShowFilters(s => !s)}
-            className={`rounded ${FILTER.bg} px-4 py-2 text-sm text-white ${FILTER.hover} transition`}
-          >
-            {showFilters ? t('characters.filters.hideBuffs') : t('characters.filters.showBuffs')}
-          </button>
-        </div>
-
-        {showFilters && (
-          <div className="flex flex-col items-center gap-2 w-full mt-3 mb-2">
-            {/* Header controls */}
-            <div className="flex justify-center gap-3 items-center">
-              <label htmlFor="show-unique" className={`inline-flex items-center gap-2 h-9 px-3 rounded text-sm text-white cursor-pointer select-none ${FILTER.bg} ${FILTER.hover} transition`}>
-                <input type="checkbox" id="show-unique" checked={showUniqueEffects} onChange={() => setShowUniqueEffects(v => !v)} className="accent-cyan-500 w-4 h-4" />
-                {t('characters.filters.unique')}
-              </label>
-
-              <div className={`inline-grid grid-cols-2 rounded ${FILTER.bg} text-xs`}>
-                <button type="button" className={`px-2 py-1 rounded-l ${effectLogic === 'AND' ? FILTER.active : ''}`} onClick={() => setEffectLogic('AND')}>{t('characters.filters.and')}</button>
-                <button type="button" className={`px-2 py-1 rounded-r ${effectLogic === 'OR' ? FILTER.active : ''}`} onClick={() => setEffectLogic('OR')}>{t('characters.filters.or')}</button>
-              </div>
-            </div>
-
-            {/* Source filter */}
-            <div className="flex flex-col items-center gap-2">
-              <p className="text-xs text-zinc-300">{t('characters.filters.sources.filterBySource')}</p>
-              <div className="flex flex-wrap gap-2 justify-center">
-                {SKILL_SOURCES.map(source => (
-                  <FilterPill
-                    key={source.key}
-                    active={sourceFilter.includes(source.key)}
-                    onClick={() => toggleArray(setSourceFilter, source.key)}
-                    className="h-8 px-2.5 text-xs"
-                  >
-                    {t(source.labelKey as TranslationKey)}
-                  </FilterPill>
-                ))}
-              </div>
-            </div>
-
-            {/* Buffs/Debuffs grid */}
-            <div className="mx-auto max-w-5xl w-full rounded-2xl border border-zinc-700 bg-zinc-900/60 p-4">
-              <p className="text-center text-xs uppercase tracking-wide text-cyan-300 mb-2">{t('characters.filters.buffs')}</p>
-              <EffectGroupGrid
-                groups={buffGroups}
-                effectsMap={buffsMap}
-                selected={selectedBuffs}
-                type="buff"
-                lang={lang}
-                onToggle={key => toggleArray(setSelectedBuffs, key)}
-                className="grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3"
-              />
-
-              <div className="my-4 border-t border-zinc-700" />
-
-              <p className="text-center text-xs uppercase tracking-wide text-red-300 mb-2">{t('characters.filters.debuffs')}</p>
-              <EffectGroupGrid
-                groups={debuffGroups}
-                effectsMap={debuffsMap}
-                selected={selectedDebuffs}
-                type="debuff"
-                lang={lang}
-                onToggle={key => toggleArray(setSelectedDebuffs, key)}
-                className="grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3"
-              />
-            </div>
-          </div>
-        )}
-
-        {/* Tags toggle */}
-        <div className="mt-2">
-          <button
-            type="button"
-            onClick={() => setShowTagsPanel(s => !s)}
-            className={`rounded ${FILTER.bg} px-4 py-2 text-sm text-white ${FILTER.hover} transition`}
-          >
-            {showTagsPanel ? t('characters.filters.hideTags') : t('characters.filters.showTags')}
-          </button>
-        </div>
-
-        {showTagsPanel && (
-          <div className="w-full mt-2">
-            <div className="flex justify-center gap-3 items-center mb-2">
-              <div className={`inline-grid grid-cols-2 rounded ${FILTER.bg} text-xs`}>
-                <button type="button" className={`px-2 py-1 rounded-l ${tagLogic === 'AND' ? FILTER.active : ''}`} onClick={() => setTagLogic('AND')}>{t('characters.filters.and')}</button>
-                <button type="button" className={`px-2 py-1 rounded-r ${tagLogic === 'OR' ? FILTER.active : ''}`} onClick={() => setTagLogic('OR')}>{t('characters.filters.or')}</button>
-              </div>
-            </div>
-            <div className="mx-auto max-w-5xl rounded-2xl border border-zinc-700 bg-zinc-900/60 p-4">
-              <div className="grid md:grid-cols-2 gap-6">
-                {TAG_GROUPS.map(group => (
-                  <div key={group.type}>
-                    <p className="text-center text-xs uppercase tracking-wide text-zinc-300 mb-2">
-                      {t(`characters.tags.types.${group.type}` as TranslationKey)}
-                    </p>
-                    <div className="space-y-2">
-                      {splitIntoRows(group.items, 2).map((row, ridx) => (
-                        <div
-                          key={`row-${group.type}-${ridx}`}
-                          className="grid grid-cols-[repeat(auto-fit,minmax(120px,max-content))] gap-2 justify-center justify-items-center"
-                        >
-                          {row.map(({ key, meta }) => (
-                            <FilterPill
-                              key={key}
-                              title={l(meta, 'desc', lang)}
-                              active={tagFilter.includes(key)}
-                              onClick={() => toggleArray(setTagFilter, key)}
-                              className="w-auto min-w-30 h-8 px-2 text-[11px] gap-1 justify-center"
-                            >
-                              <div className="flex items-center gap-1.5">
-                                {meta.image && (
-                                  <div className="relative h-4 w-4 shrink-0">
-                                    <Image src={meta.image} alt={l(meta, 'label', lang)} fill sizes="16px" className="object-contain" />
-                                  </div>
-                                )}
-                                <span>{l(meta, 'label', lang)}</span>
-                              </div>
-                            </FilterPill>
-                          ))}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Actions */}
-        <div className="mt-4 mb-4 flex flex-wrap justify-center gap-4">
-          <button type="button" onClick={resetAll} className={`rounded ${FILTER.bg} px-4 py-1 text-sm text-white hover:bg-red-700 transition`}>
-            {t('characters.filters.reset')}
-          </button>
-          <button type="button" onClick={copyShareUrl} className={`rounded ${FILTER.bg} px-4 py-1 text-sm text-white ${FILTER.hover} transition`}>
-            {copied ? t('common.copied') : t('characters.filters.copy')}
-          </button>
-        </div>
-      </div>
-
-      {/* Character grid */}
-      <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
-        {filtered.map((char: IndexedCharacter, index: number) => (
-          <ResponsiveCharacterCard
-            key={char.ID}
-            id={char.ID}
-            name={char.displayName}
-            prefix={char.prefix}
-            element={char.Element}
-            classType={char.Class}
-            rarity={char.Rarity}
-            tags={char.tags}
-            href={href(`/characters/${char.slug}`)}
-            priority={index <= 5}
-          />
-        ))}
-      </div>
+      {/* Advanced drawer / bottom sheet */}
+      <CharactersFiltersDrawer
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        lang={lang}
+        chainFilter={chainFilter}
+        onToggleChain={v => toggleArray(setChainFilter, v, CHAIN_TYPES)}
+        roleFilter={roleFilter}
+        onToggleRole={v => toggleArray(setRoleFilter, v, ROLES)}
+        giftFilter={giftFilter}
+        onToggleGift={v => toggleArray(setGiftFilter, v, GIFTS)}
+        buffGroups={buffGroups}
+        debuffGroups={debuffGroups}
+        buffsMap={buffsMap}
+        debuffsMap={debuffsMap}
+        selectedBuffs={selectedBuffs}
+        onToggleBuff={key => toggleArray(setSelectedBuffs, key)}
+        selectedDebuffs={selectedDebuffs}
+        onToggleDebuff={key => toggleArray(setSelectedDebuffs, key)}
+        effectLogic={effectLogic}
+        onEffectLogicChange={setEffectLogic}
+        effectsLoaded={buffsMetadata.length > 0}
+        sourceFilter={sourceFilter}
+        onToggleSource={v => toggleArray(setSourceFilter, v)}
+        showUniqueEffects={showUniqueEffects}
+        onToggleShowUnique={() => setShowUniqueEffects(v => !v)}
+        teamBonusFilter={teamBonusFilter}
+        onSetTeamBonus={setTeamBonusFilter}
+        teamBonusOptions={TEAM_BONUSES_UI}
+        tagGroups={drawerTagGroups}
+        tagFilter={tagFilter}
+        onToggleTag={v => toggleArray(setTagFilter, v)}
+        tagLogic={tagLogic}
+        onTagLogicChange={setTagLogic}
+        tagsLoaded={tagsData !== null}
+        onResetAll={resetAll}
+        matchCount={filtered.length}
+        totalCount={indexedCharacters.length}
+      />
     </div>
   );
 }

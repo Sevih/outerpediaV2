@@ -115,10 +115,21 @@ const fr: Record<TranslationKey, string> = {
   'tierlist.legend.C': 'Moyen',
   'tierlist.legend.D': 'N\'apporte rien d\'intéressant',
   'tierlist.legend.E': 'Downgrade',
+  // ─── Tierlist landing (versus split) ──────────────────────────────────
+  'tierlist.versus.preview': 'Aperçu top tier',
+  'tierlist.versus.units': '{count} unités classées',
+  'tierlist.versus.view': 'Voir',
+  'tierlist.versus.tools_count': 'classements',
   'page.tools.title': 'Outils et utilitaires Outerplane',
   'page.tools.description':
     'Outils Outerplane : solveur d\'équipement, planificateur d\'équipe, simulateur de pulls, suivi de progression, et plus encore.',
   'page.tool.meta_title': '{title}',
+  // ─── Tools page UI ──────────────────────────────────────────────────────
+  'tools.featured': 'À la une',
+  'tools.count': '{count} outils',
+  'tools.ribbon.most_used': 'Le plus utilisé',
+  'tools.ribbon.community_pick': 'Choix communautaire',
+  'tools.ribbon.new': 'Nouveau',
   // ─── Tool Categories ────────────────────────────────────────────────────
   'tools.category.rankings': 'Classements',
   'tools.category.equipment': 'Équipement',
@@ -523,18 +534,30 @@ const fr: Record<TranslationKey, string> = {
     'Stratégies complètes pour atteindre le rang SSS dans les batailles World Boss en Extreme League : configurations d\'équipe optimales, timing des rotations et maximisation des dégâts.',
   'guides.category.dimensional-singularity.desc':
     'Guides quotidiens des Boss de Singularity en rotation : planning, mécaniques, objectifs de score au classement et progression de l\'équipement Singularity Ascension.',
-  'guides.category.dimensional-singularity.intro':
-    'Dimensional Singularity est un mode de fin de jeu accessible depuis Monad Gate en passant en Dimensional Singularity Mode. Chaque jour, un Boss Singularity différent apparaît, et votre score quotidien détermine votre classement et vos récompenses.',
-  'guides.category.dimensional-singularity.unlock':
+  'guides.singularity.info.intro':
+    'Dimensional Singularity est un mode de fin de jeu accessible depuis Monad Gate en passant en Dimensional Singularity Mode. Un Boss Singularity différent est actif chaque jour du mercredi au samedi, et votre score quotidien détermine votre classement et vos récompenses.',
+  'guides.singularity.info.unlock':
     'Condition de déblocage : terminer la True Ending de Monad Gate Depth 1.',
-  'guides.category.dimensional-singularity.schedule':
+  'guides.singularity.info.schedule':
     'Ouvert chaque semaine du mercredi 00:00 UTC au samedi 23:59 UTC. Le Boss cible change chaque jour à 00:00 UTC. 2 entrées par jour.',
-  'guides.category.dimensional-singularity.feature.repel':
+  'guides.singularity.info.feature.repel':
     'Singularity Repel : lance le combat de Boss du jour.',
-  'guides.category.dimensional-singularity.feature.ascension':
+  'guides.singularity.info.feature.ascension':
     'Singularity Ascension Device : fait ascensionner un équipement ayant atteint l\'Enhancement max et le Reforge max. L\'ascension augmente la/les stat(s) principale(s) de l\'équipement et octroie 3 tentatives de Reforge supplémentaires ; atteindre Enhancement +15 ajoute alors une stat bonus aléatoire (le type dépend du slot, la valeur est aléatoire).',
-  'guides.category.dimensional-singularity.feature.ranking':
+  'guides.singularity.info.feature.ranking':
     'Ranking Report : récupérez vos récompenses quotidiennes en fonction de votre score de la veille.',
+  'guides.singularity.timer.next': 'Prochain reset dans {time}',
+  'guides.singularity.week.title': 'Active cette semaine',
+  'guides.singularity.week.title_mobile': 'Active maintenant',
+  'guides.singularity.week.tagline': 'Trois boss hebdomadaires actifs du mercredi au vendredi. Un boss de week-end uniquement le samedi.',
+  'guides.singularity.week.live': 'En cours · {dow}',
+  'guides.singularity.weekend.today': 'Boss de week-end · aujourd\'hui',
+  'guides.singularity.weekend.tomorrow': 'Boss de week-end · demain',
+  'guides.singularity.weekend.in_days': 'Boss de week-end · dans {n} jours',
+  'guides.singularity.day.weekly': 'Mer.–Ven.',
+  'guides.singularity.day.sat_only': 'SAM. UNIQUEMENT',
+  'guides.singularity.library.title': 'Bibliothèque des boss',
+  'guides.singularity.library.tagline': 'Chaque guide reste accessible même quand son boss n\'est pas actif.',
   'guides.category.joint-challenge.desc':
     'Obtenez de meilleurs scores en Joint Challenge grâce à des stratégies avancées : meilleures compositions d\'équipe, timing des compétences et conseils de synergie pour atteindre le sommet du classement.',
   'guides.category.special-request.desc':
@@ -546,6 +569,23 @@ const fr: Record<TranslationKey, string> = {
   'guides.category.skyward-tower.desc':
     'Stratégies pour Skyward Tower et Elemental Towers : compositions d\'équipe, mécaniques d\'étage et astuces.',
   'guides.category.other.desc': 'Guides, actualités et contenus qui n\'entrent dans aucune autre catégorie ou ne sont plus à jour.',
+
+  // Guide landing — categories index
+  'guides.counter': '{guides} guides · {categories} catégories',
+  'guides.count.one': '{count} GUIDE',
+  'guides.count.many': '{count} GUIDES',
+
+  // /guides/general-guides — parcours pédagogique en paliers
+  'guides.general.counter': '{guides} guides · {tiers} paliers · mis à jour chaque semaine',
+  'guides.general.tier.prefix': 'PALIER',
+  'guides.general.tier.first-steps.label': 'Premiers pas',
+  'guides.general.tier.first-steps.tagline': 'Héros gratuits, bannière de départ, et les questions que se pose tout nouveau joueur.',
+  'guides.general.tier.pulls.label': 'Bannières & pulls',
+  'guides.general.tier.pulls.tagline': 'Types de bannières, mileage, priorités de pulls, et les héros à viser en premier.',
+  'guides.general.tier.economy.label': 'Ressources & routine quotidienne',
+  'guides.general.tier.economy.tagline': 'D\'où vient votre Ether, sur quoi dépenser la stamina, et l\'ordre pour débloquer le contenu.',
+  'guides.general.tier.heroes-gear.label': 'Héros & gear',
+  'guides.general.tier.heroes-gear.tagline': 'Growth des héros, gear, quirks, et les maths de combat derrière chaque fight.',
 
   'guides.tips.tactical': 'Conseils tactiques',
   'guides.tips.strategy': 'Stratégie',
@@ -649,7 +689,7 @@ const fr: Record<TranslationKey, string> = {
 
   // Homepage sections
   'home.cta.characters': 'Parcourir les personnages',
-  'home.section.banners': 'Actuellement disponibles',
+  'home.section.banners': 'Bannières actives',
   'home.section.codes': 'Codes promo actifs',
   'home.section.beginner': 'Nouveau sur Outerplane ?',
   'home.beginner.desc': 'Commencez votre aventure avec ces guides pour débutants :',
@@ -709,6 +749,13 @@ const fr: Record<TranslationKey, string> = {
   'search.characters': 'Personnages',
   'search.equipment': 'Équipement',
   'search.guides': 'Guides',
+  'search.short_placeholder': 'Rechercher...',
+
+  // Header
+  'header.lang.official': 'Officielle',
+  'header.lang.community': 'Communauté',
+  'header.lang.community_note': 'Les traductions communautaires utilisent l\'anglais pour les données du jeu.',
+  'header.buff.active': 'Buff actif',
 
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': 'Persos',
@@ -729,6 +776,11 @@ const fr: Record<TranslationKey, string> = {
   'footer.social.official_x': 'X officiel (Twitter)',
   'footer.social.publisher_x': 'X de l\'éditeur (Twitter)',
   'footer.social.rss': 'RSS',
+  'footer.col.database': 'Base de données',
+  'footer.col.tools': 'Outils',
+  'footer.col.guides': 'Guides',
+  'footer.col.community': 'Communauté',
+  'footer.col.official': 'Officiel',
   'footer.disclaimer':
     'Outerpedia est un projet de fans non officiel. Tous les contenus liés à Outerplane, y compris les personnages, images et autres éléments du jeu, sont la propriété de VAGAMES CORP. Ce site n\'est ni affilié, ni approuvé, ni sponsorisé par VAGAMES CORP de quelque manière que ce soit.',
 
@@ -850,6 +902,21 @@ const fr: Record<TranslationKey, string> = {
   'characters.filters.sources.fusionPassive': 'Core-Fused Passive',
   'characters.filters.sources.dualAttack': 'Dual Attack',
   'characters.filters.teamBonus': 'Bonus d\'équipe',
+  'characters.filters.title': 'Filtres',
+  'characters.filters.advanced': 'Filtres avancés',
+  'characters.filters.advanced.subtitle': 'Effets, sources, tags & bonus d\'équipe',
+  'characters.filters.empty_hint': 'Aucun filtre — choisis un élément ou une classe pour commencer',
+  'characters.filters.match_logic': 'Logique',
+  'characters.filters.tab.basics': 'Bases',
+  'characters.filters.tab.combat': 'Combat',
+  'characters.filters.tab.effects': 'Effets',
+  'characters.filters.tab.tags': 'Tags',
+  'characters.filters.tab.bonus': 'Bonus d\'équipe',
+  'characters.filters.search_placeholder': 'Rechercher un personnage…',
+  'characters.filters.search_effects': 'Rechercher un effet…',
+  'characters.filters.close': 'Fermer',
+  'characters.filters.no_match': 'Aucun personnage ne correspond à ces filtres',
+  'characters.filters.active.count': '{count, plural, one {# filtre actif} other {# filtres actifs}}',
 
   // Characters common
   'characters.loading': 'Chargement des personnages...',

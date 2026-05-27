@@ -115,10 +115,21 @@ const en = {
   'tierlist.legend.C': 'Meh',
   'tierlist.legend.D': 'Does nothing of interest',
   'tierlist.legend.E': 'Downgrade',
+  // ─── Tierlist landing (versus split) ──────────────────────────────────
+  'tierlist.versus.preview': 'Top-of-tier preview',
+  'tierlist.versus.units': '{count} units ranked',
+  'tierlist.versus.view': 'View',
+  'tierlist.versus.tools_count': 'rankings',
   'page.tools.title': 'Outerplane Tools & Utilities',
   'page.tools.description':
     'Outerplane tools: gear solver, team planner, pull simulator, progress tracker, and more.',
   'page.tool.meta_title': '{title}',
+  // ─── Tools page UI ──────────────────────────────────────────────────────
+  'tools.featured': 'Featured',
+  'tools.count': '{count} tools',
+  'tools.ribbon.most_used': 'Most used',
+  'tools.ribbon.community_pick': 'Community pick',
+  'tools.ribbon.new': 'New',
   // ─── Tool Categories ────────────────────────────────────────────────────
   'tools.category.rankings': 'Rankings',
   'tools.category.equipment': 'Equipment',
@@ -523,18 +534,30 @@ const en = {
     'Comprehensive strategies to achieve SSS rank in Extreme League World Boss battles: optimal team setups, rotation timing, and damage maximization.',
   'guides.category.dimensional-singularity.desc':
     'Daily-rotating Singularity boss guides: schedule, mechanics, ranking score targets, and Singularity Ascension gear progression.',
-  'guides.category.dimensional-singularity.intro':
-    'Dimensional Singularity is an endgame mode accessible from Monad Gate by switching to Dimensional Singularity Mode. Each day a different Singularity boss appears, and your daily score determines your ranking and rewards.',
-  'guides.category.dimensional-singularity.unlock':
+  'guides.singularity.info.intro':
+    'Dimensional Singularity is an endgame mode accessible from Monad Gate by switching to Dimensional Singularity Mode. A different Singularity boss is active each day from Wednesday to Saturday, and your daily score determines your ranking and rewards.',
+  'guides.singularity.info.unlock':
     'Unlock condition: clear Monad Gate Depth 1 True Ending.',
-  'guides.category.dimensional-singularity.schedule':
+  'guides.singularity.info.schedule':
     'Open every week from Wednesday 00:00 UTC to Saturday 23:59 UTC. The target boss changes daily at 00:00 UTC. 2 entries per day.',
-  'guides.category.dimensional-singularity.feature.repel':
+  'guides.singularity.info.feature.repel':
     'Singularity Repel: launch the daily boss battle.',
-  'guides.category.dimensional-singularity.feature.ascension':
+  'guides.singularity.info.feature.ascension':
     'Singularity Ascension Device: ascend gear that has reached max Enhancement and max Reforge. Ascending boosts the gear\'s main stat(s) and grants 3 extra Reforge attempts; reaching Enhancement +15 then adds a random bonus stat (type depends on the slot, value is random).',
-  'guides.category.dimensional-singularity.feature.ranking':
+  'guides.singularity.info.feature.ranking':
     'Ranking Report: claim daily rewards based on your score the previous day.',
+  'guides.singularity.timer.next': 'Next reset in {time}',
+  'guides.singularity.week.title': 'Active this week',
+  'guides.singularity.week.title_mobile': 'Active now',
+  'guides.singularity.week.tagline': 'Three weekly bosses run Wed–Fri. One weekend boss is up Saturday only.',
+  'guides.singularity.week.live': 'Live now · {dow}',
+  'guides.singularity.weekend.today': 'Weekend boss · today',
+  'guides.singularity.weekend.tomorrow': 'Weekend boss · tomorrow',
+  'guides.singularity.weekend.in_days': 'Weekend boss · in {n} days',
+  'guides.singularity.day.weekly': 'Wed–Fri',
+  'guides.singularity.day.sat_only': 'SAT ONLY',
+  'guides.singularity.library.title': 'Boss library',
+  'guides.singularity.library.tagline': 'Every guide stays accessible even when its boss isn\'t active.',
   'guides.category.joint-challenge.desc':
     'Score higher in Joint Challenge battles with advanced strategies: best team compositions, skill timing, and synergy tips for top rankings.',
   'guides.category.special-request.desc':
@@ -546,6 +569,23 @@ const en = {
   'guides.category.skyward-tower.desc':
     'Strategies for Skyward Tower and Elemental Towers: team compositions, floor mechanics, and tips.',
   'guides.category.other.desc': 'Guides, news, and content that doesn\'t fit into the other categories or is no longer up to date.',
+
+  // Guide landing — categories index
+  'guides.counter': '{guides} guides · {categories} categories',
+  'guides.count.one': '{count} GUIDE',
+  'guides.count.many': '{count} GUIDES',
+
+  // /guides/general-guides — tiered curriculum
+  'guides.general.counter': '{guides} guides · {tiers} tiers · updated weekly',
+  'guides.general.tier.prefix': 'TIER',
+  'guides.general.tier.first-steps.label': 'First Steps',
+  'guides.general.tier.first-steps.tagline': 'Free heroes, the starter banner, and the questions every new player asks first.',
+  'guides.general.tier.pulls.label': 'Banners & Pulls',
+  'guides.general.tier.pulls.tagline': 'Banner types, mileage, pull priorities, and which heroes are worth chasing first.',
+  'guides.general.tier.economy.label': 'Resources & Daily Loop',
+  'guides.general.tier.economy.tagline': 'Where your Ether comes from, what to spend stamina on, and the order to unlock new content.',
+  'guides.general.tier.heroes-gear.label': 'Heroes & Gear',
+  'guides.general.tier.heroes-gear.tagline': 'Hero growth, gear, quirks, and the combat math behind every fight.',
 
   'guides.tips.tactical': 'Tactical Tips',
   'guides.tips.strategy': 'Strategy',
@@ -649,7 +689,7 @@ const en = {
 
   // Homepage sections
   'home.cta.characters': 'Browse Characters',
-  'home.section.banners': 'Currently Pullable',
+  'home.section.banners': 'Active banners',
   'home.section.codes': 'Active Promo Codes',
   'home.section.beginner': 'New to Outerplane?',
   'home.beginner.desc': 'Start your journey with these beginner-friendly guides:',
@@ -709,6 +749,13 @@ const en = {
   'search.characters': 'Characters',
   'search.equipment': 'Equipment',
   'search.guides': 'Guides',
+  'search.short_placeholder': 'Search...',
+
+  // Header
+  'header.lang.official': 'Official',
+  'header.lang.community': 'Community',
+  'header.lang.community_note': 'Community translations fall back to English for game data.',
+  'header.buff.active': 'Buff active',
 
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': 'Chars',
@@ -729,6 +776,11 @@ const en = {
   'footer.social.official_x': 'Official X (Twitter)',
   'footer.social.publisher_x': 'Publisher X (Twitter)',
   'footer.social.rss': 'RSS',
+  'footer.col.database': 'Database',
+  'footer.col.tools': 'Tools',
+  'footer.col.guides': 'Guides',
+  'footer.col.community': 'Community',
+  'footer.col.official': 'Official',
   'footer.disclaimer':
     'Outerpedia is an unofficial fan-made project. All content related to Outerplane, including characters, images, and other game assets, is the property of VAGAMES CORP. This website is not affiliated with, endorsed by, or sponsored by VAGAMES CORP in any way.',
 
@@ -850,6 +902,21 @@ const en = {
   'characters.filters.sources.fusionPassive': 'Core-Fused Passive',
   'characters.filters.sources.dualAttack': 'Dual Attack',
   'characters.filters.teamBonus': 'Team Bonus',
+  'characters.filters.title': 'Filters',
+  'characters.filters.advanced': 'Advanced filters',
+  'characters.filters.advanced.subtitle': 'Effects, sources, tags & team bonus',
+  'characters.filters.empty_hint': 'No filters yet — pick element or class to start',
+  'characters.filters.match_logic': 'Match',
+  'characters.filters.tab.basics': 'Basics',
+  'characters.filters.tab.combat': 'Combat',
+  'characters.filters.tab.effects': 'Effects',
+  'characters.filters.tab.tags': 'Tags',
+  'characters.filters.tab.bonus': 'Team Bonus',
+  'characters.filters.search_placeholder': 'Search a character…',
+  'characters.filters.search_effects': 'Search effects…',
+  'characters.filters.close': 'Close',
+  'characters.filters.no_match': 'No characters match these filters',
+  'characters.filters.active.count': '{count, plural, one {# active filter} other {# active filters}}',
 
   // Characters common
   'characters.loading': 'Loading characters...',

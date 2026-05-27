@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { LANGUAGES, isValidLang, LANGS } from '@/lib/i18n/config';
 import { loadMessages } from '@/i18n';
 import { I18nProvider } from '@/lib/contexts/I18nContext';
-import { buildUrl } from '@/lib/seo';
+import { buildSiteJsonLd, buildUrl } from '@/lib/seo';
 import type { Lang } from '@/lib/i18n/config';
 import { setRequestLang } from '@/lib/i18n/server';
 import Header from '@/app/components/layout/Header';
@@ -11,6 +11,7 @@ import Footer from '@/app/components/layout/Footer';
 import BackToTop from '@/app/components/ui/BackToTop';
 import Breadcrumbs from '@/app/components/ui/Breadcrumbs';
 import EventBanner from '@/app/components/layout/EventBanner';
+import JsonLd from '@/app/components/seo/JsonLd';
 import { BreadcrumbProvider } from '@/lib/contexts/BreadcrumbContext';
 
 /** Pre-generate all language variants at build time */
@@ -61,6 +62,7 @@ export default async function LangLayout({
 
   setRequestLang(lang);
   const messages = await loadMessages(lang);
+  const siteJsonLd = buildSiteJsonLd(lang as Lang, messages['page.home.description']);
 
   return (
     <I18nProvider lang={lang} messages={messages}>
@@ -70,6 +72,7 @@ export default async function LangLayout({
             __html: `document.documentElement.lang="${LANGUAGES[lang].htmlLang}"`,
           }}
         />
+        <JsonLd data={siteJsonLd} id="ld-site" />
         <Header />
         <EventBanner />
         <Breadcrumbs />

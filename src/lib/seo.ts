@@ -120,3 +120,68 @@ export function createPageMetadata({
     }),
   };
 }
+
+// ─── JSON-LD builders ────────────────────────────────────────────────────────
+// Stable @id anchors so cross-references stay valid regardless of subdomain.
+const CANONICAL_ORIGIN = `https://${BASE_DOMAIN}`;
+const WEBSITE_ID = `${CANONICAL_ORIGIN}/#website`;
+const VIDEOGAME_ID = `${CANONICAL_ORIGIN}/#videogame`;
+const ORGANIZATION_ID = `${CANONICAL_ORIGIN}/#organization`;
+
+type JsonLdValue = string | number | boolean | null | JsonLdNode | JsonLdValue[];
+type JsonLdNode = { [key: string]: JsonLdValue };
+
+/**
+ * WebSite + VideoGame as a connected @graph.
+ * Outerpedia (WebSite) is `about` Outerplane (VideoGame), with the publisher
+ * Organization as a separate node. Goes in the root <head> for every page.
+ */
+export function buildSiteJsonLd(lang: Lang, description: string): JsonLdNode {
+  const safeLang = normalizeLang(lang);
+  const siteUrl = buildUrl(safeLang, '/');
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebSite',
+        '@id': WEBSITE_ID,
+        url: siteUrl,
+        name: SITE_NAME,
+        description,
+        inLanguage: LANGUAGES[safeLang].htmlLang,
+        about: { '@id': VIDEOGAME_ID },
+      },
+      {
+        '@type': 'VideoGame',
+        '@id': VIDEOGAME_ID,
+        name: 'Outerplane',
+        applicationCategory: 'Game',
+        genre: 'RPG',
+        gamePlatform: ['Android', 'iOS'],
+        operatingSystem: ['Android', 'iOS'],
+        publisher: { '@id': ORGANIZATION_ID },
+      },
+      {
+        '@type': 'Organization',
+        '@id': ORGANIZATION_ID,
+        name: 'VAGAMES CORP',
+      },
+    ],
+  };
+}
+
+/** BreadcrumbList for the current path. Items must already be absolute URLs. */
+export function buildBreadcrumbJsonLd(
+  items: ReadonlyArray<{ name: string; url: string }>
+): JsonLdNode {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}

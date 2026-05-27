@@ -29,14 +29,30 @@ export default async function GuidesPage({ params }: Props) {
   ]);
   const monthYear = getMonthYear(lang);
 
+  const totalGuides = Object.values(counts).reduce((sum, n) => sum + n, 0);
+  const counterLabel = t['guides.counter']
+    .replace('{guides}', String(totalGuides))
+    .replace('{categories}', String(categories.length));
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">
-      <h1 className="h1-page text-center">
-        {t['page.guides.title']}
-        <span className="sr-only">{` — Boss Strategies, Tips & Guides`}</span>
-      </h1>
-      <p className="mt-2 text-center text-sm text-zinc-400">{t['page.guides.description']}</p>
-      <p className="sr-only">{monthYear}</p>
+      {/* Hero */}
+      <div className="flex flex-col items-center text-center">
+        <h1 className="h1-page">
+          {t['page.guides.title']}
+          <span className="sr-only">{` — Boss Strategies, Tips & Guides`}</span>
+        </h1>
+        <p className="mx-auto mt-2 max-w-2xl text-sm text-zinc-400">
+          {t['page.guides.description']}
+        </p>
+        <p className="sr-only">{monthYear}</p>
+        <div className="mt-3 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+          <span className="inline-block size-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)]" aria-hidden />
+          <span>{counterLabel}</span>
+        </div>
+      </div>
+
+      <h2 className="sr-only">{t['page.guides.list']}</h2>
 
       <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((cat) => (

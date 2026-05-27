@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import type { CategoryViewProps } from './types';
 import AdventureList from './AdventureList';
 import AdventureLicenseList from './AdventureLicenseList';
+import GeneralGuidesList from './GeneralGuidesList';
 import JointChallengeList from './JointChallengeList';
 import WorldBossList from './WorldBossList';
 import DimensionalSingularityList from './DimensionalSingularityList';
@@ -14,6 +15,7 @@ import SkywardTowerList from './SkywardTowerList';
 type CategoryView = (props: CategoryViewProps) => ReactNode | Promise<ReactNode>;
 
 const categoryViews: Record<string, CategoryView> = {
+  'general-guides': GeneralGuidesList,
   'adventure': AdventureList,
   'adventure-license': AdventureLicenseList,
   'joint-challenge': JointChallengeList,

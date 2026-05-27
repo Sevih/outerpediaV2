@@ -115,10 +115,21 @@ const kr: Record<TranslationKey, string> = {
   'tierlist.legend.C': '그저 그럼',
   'tierlist.legend.D': '별 의미 없음',
   'tierlist.legend.E': '다운그레이드',
+  // ─── Tierlist landing (versus split) ──────────────────────────────────
+  'tierlist.versus.preview': '최상위 티어 미리보기',
+  'tierlist.versus.units': '{count}명 평가',
+  'tierlist.versus.view': '보기',
+  'tierlist.versus.tools_count': '랭킹',
   'page.tools.title': '아우터플레인 도구 & 유틸리티',
   'page.tools.description':
     '아우터플레인 도구: 장비 솔버, 팀 플래너, 뽑기 시뮬레이터, 진행 트래커 등.',
   'page.tool.meta_title': '{title}',
+  // ─── Tools page UI ──────────────────────────────────────────────────────
+  'tools.featured': '추천 도구',
+  'tools.count': '도구 {count}개',
+  'tools.ribbon.most_used': '가장 많이 사용',
+  'tools.ribbon.community_pick': '커뮤니티 추천',
+  'tools.ribbon.new': '신규',
   // ─── Tool Categories ────────────────────────────────────────────────────
   'tools.category.rankings': '랭킹',
   'tools.category.equipment': '장비',
@@ -523,18 +534,30 @@ const kr: Record<TranslationKey, string> = {
     '익스트림 리그 월드 보스전에서 SSS 등급을 달성하기 위한 완벽 공략: 최적 팀 구성, 스킬 로테이션, 데미지 극대화.',
   'guides.category.dimensional-singularity.desc':
     '매일 바뀌는 특이점 보스 공략: 일정, 메커닉, 랭킹 점수 목표, 특이점 승화 장비 강화.',
-  'guides.category.dimensional-singularity.intro':
-    '차원 특이점은 모나드 게이트에서 「차원 특이점 모드」로 전환하여 접근하는 엔드 콘텐츠입니다. 매일 다른 특이점 보스가 등장하며, 일일 점수에 따라 랭킹과 보상이 결정됩니다.',
-  'guides.category.dimensional-singularity.unlock':
+  'guides.singularity.info.intro':
+    '차원 특이점은 모나드 게이트에서 「차원 특이점 모드」로 전환하여 접근하는 엔드 콘텐츠입니다. 수요일부터 토요일까지 매일 다른 특이점 보스가 등장하며, 일일 점수에 따라 랭킹과 보상이 결정됩니다.',
+  'guides.singularity.info.unlock':
     '해금 조건: 모나드 게이트 심층 1 진 엔딩 클리어.',
-  'guides.category.dimensional-singularity.schedule':
+  'guides.singularity.info.schedule':
     '매주 수요일 00:00 UTC부터 토요일 23:59 UTC까지 개방. 대상 보스는 매일 00:00 UTC에 변경. 1일 2회 도전 가능.',
-  'guides.category.dimensional-singularity.feature.repel':
+  'guides.singularity.info.feature.repel':
     '특이점 격퇴: 당일 보스전을 시작합니다.',
-  'guides.category.dimensional-singularity.feature.ascension':
+  'guides.singularity.info.feature.ascension':
     '특이점 승화 장치: 강화와 재련이 최대치에 도달한 장비를 승화합니다. 승화 시 장비의 메인 스탯이 상승하고 재련 횟수가 +3되며, 강화 +15에 도달하면 추가 랜덤 스탯이 부여됩니다(종류는 장비 슬롯에 따라 다르며, 수치는 랜덤).',
-  'guides.category.dimensional-singularity.feature.ranking':
+  'guides.singularity.info.feature.ranking':
     '랭킹 보고서: 전일 점수에 따른 일일 보상을 수령합니다.',
+  'guides.singularity.timer.next': '다음 초기화까지 {time}',
+  'guides.singularity.week.title': '이번 주 활성',
+  'guides.singularity.week.title_mobile': '오늘 진행 중',
+  'guides.singularity.week.tagline': '주중 보스 3종은 수~금에 등장. 주말 보스는 토요일에만 등장.',
+  'guides.singularity.week.live': '진행 중 · {dow}',
+  'guides.singularity.weekend.today': '주말 보스 · 오늘 등장',
+  'guides.singularity.weekend.tomorrow': '주말 보스 · 내일',
+  'guides.singularity.weekend.in_days': '주말 보스 · {n}일 후',
+  'guides.singularity.day.weekly': '수~금',
+  'guides.singularity.day.sat_only': '토요일 전용',
+  'guides.singularity.library.title': '보스 도감',
+  'guides.singularity.library.tagline': '보스가 활성화되지 않아도 모든 가이드는 언제든 열람 가능합니다.',
   'guides.category.joint-challenge.desc':
     '합동 챌린지에서 높은 점수를 얻기 위한 고급 공략: 최적 팀 구성, 스킬 타이밍, 시너지 활용 팁.',
   'guides.category.special-request.desc':
@@ -546,6 +569,23 @@ const kr: Record<TranslationKey, string> = {
   'guides.category.skyward-tower.desc':
     '비천의 탑과 엘레멘탈 타워 공략: 팀 구성, 층별 메커닉, 공략 팁.',
   'guides.category.other.desc': '다른 카테고리에 해당하지 않거나 더 이상 최신이 아닌 가이드, 뉴스 및 콘텐츠.',
+
+  // Guide landing — categories index
+  'guides.counter': '가이드 {guides}개 · 카테고리 {categories}개',
+  'guides.count.one': '가이드 {count}개',
+  'guides.count.many': '가이드 {count}개',
+
+  // /guides/general-guides — 단계별 학습 코스
+  'guides.general.counter': '가이드 {guides}개 · {tiers}단계 · 매주 업데이트',
+  'guides.general.tier.prefix': 'TIER',
+  'guides.general.tier.first-steps.label': '첫 걸음',
+  'guides.general.tier.first-steps.tagline': '무료 영웅, 스타터 배너, 그리고 새 플레이어가 가장 먼저 묻는 것들.',
+  'guides.general.tier.pulls.label': '배너 & 뽑기',
+  'guides.general.tier.pulls.tagline': '배너 종류, 마일리지, 뽑기 우선순위, 그리고 먼저 노려야 할 영웅.',
+  'guides.general.tier.economy.label': '자원 & 데일리 루틴',
+  'guides.general.tier.economy.tagline': '에테르 출처, 스태미나 사용처, 그리고 콘텐츠 해금 순서.',
+  'guides.general.tier.heroes-gear.label': '영웅 & 장비',
+  'guides.general.tier.heroes-gear.tagline': '영웅 성장, 장비, 쿼크, 그 뒤의 모든 전투 계산식.',
 
   'guides.tips.tactical': '전술 팁',
   'guides.tips.strategy': '전략',
@@ -649,7 +689,7 @@ const kr: Record<TranslationKey, string> = {
 
   // Homepage sections
   'home.cta.characters': '캐릭터 보기',
-  'home.section.banners': '현재 픽업 가능',
+  'home.section.banners': '진행 중인 배너',
   'home.section.codes': '유효한 프로모 코드',
   'home.section.beginner': '아우터플레인이 처음이신가요?',
   'home.beginner.desc': '초보자를 위한 가이드로 여정을 시작하세요:',
@@ -709,6 +749,13 @@ const kr: Record<TranslationKey, string> = {
   'search.characters': '캐릭터',
   'search.equipment': '장비',
   'search.guides': '가이드',
+  'search.short_placeholder': '검색...',
+
+  // Header
+  'header.lang.official': '공식',
+  'header.lang.community': '커뮤니티',
+  'header.lang.community_note': '커뮤니티 번역은 게임 데이터에서 영어로 대체됩니다.',
+  'header.buff.active': '버프 활성',
 
   // Navigation (short labels for md-xl breakpoint)
   'nav.characters.short': '캐릭',
@@ -729,6 +776,11 @@ const kr: Record<TranslationKey, string> = {
   'footer.social.official_x': '공식 X (Twitter)',
   'footer.social.publisher_x': '퍼블리셔 X (Twitter)',
   'footer.social.rss': 'RSS',
+  'footer.col.database': '데이터베이스',
+  'footer.col.tools': '도구',
+  'footer.col.guides': '가이드',
+  'footer.col.community': '커뮤니티',
+  'footer.col.official': '공식',
   'footer.disclaimer':
     'Outerpedia는 비공식 팬메이드 프로젝트입니다. 캐릭터, 이미지 및 기타 게임 에셋을 포함한 아우터플레인 관련 모든 콘텐츠는 VAGAMES CORP의 재산입니다. 이 웹사이트는 VAGAMES CORP와 어떠한 제휴, 보증 또는 후원 관계도 없습니다.',
 
@@ -850,6 +902,21 @@ const kr: Record<TranslationKey, string> = {
   'characters.filters.sources.fusionPassive': '코어 융합 패시브',
   'characters.filters.sources.dualAttack': '듀얼 어택',
   'characters.filters.teamBonus': '팀 보너스',
+  'characters.filters.title': '필터',
+  'characters.filters.advanced': '고급 필터',
+  'characters.filters.advanced.subtitle': '효과, 출처, 태그, 팀 보너스',
+  'characters.filters.empty_hint': '필터 없음 — 속성 또는 클래스를 선택하세요',
+  'characters.filters.match_logic': '조건',
+  'characters.filters.tab.basics': '기본',
+  'characters.filters.tab.combat': '전투',
+  'characters.filters.tab.effects': '효과',
+  'characters.filters.tab.tags': '태그',
+  'characters.filters.tab.bonus': '팀 보너스',
+  'characters.filters.search_placeholder': '캐릭터 검색…',
+  'characters.filters.search_effects': '효과 검색…',
+  'characters.filters.close': '닫기',
+  'characters.filters.no_match': '조건에 맞는 캐릭터가 없습니다',
+  'characters.filters.active.count': '{count, plural, other {활성 필터 #개}}',
 
   // Characters common
   'characters.loading': '캐릭터 불러오는 중...',

@@ -6,14 +6,14 @@ import { useRouter, usePathname } from 'next/navigation';
 import type { CharacterListEntry } from '@/types/character';
 import type { RarityType, RoleType } from '@/types/enums';
 import { ELEMENTS, CLASSES, RARITIES, ROLES } from '@/types/enums';
-import type { TranslationKey } from '@/i18n/locales/en';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { l } from '@/lib/i18n/localize';
 import { splitCharacterName } from '@/lib/character-name';
 import { LANGS } from '@/lib/i18n/config';
 import { encodeFilters, decodeFilters, isEmptyPayload, type FilterPayload } from '@/lib/filter-url';
 import ResponsiveCharacterCard from '@/app/components/character/ResponsiveCharacterCard';
-import { FilterPill, FilterSearch, IconFilterGroup, TextFilterGroup } from '@/app/components/ui/FilterPills';
+import { FilterPill } from '@/app/components/ui/FilterPills';
+import FiltersTopBar from '@/app/components/ui/FiltersTopBar';
 
 const TIERS = ['S', 'A', 'B', 'C', 'D', 'E'] as const;
 type Tier = typeof TIERS[number];
@@ -99,22 +99,6 @@ export default function TierListPveClient({ characters }: Props) {
     });
   };
 
-  // UI arrays
-  const ELEMENTS_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...ELEMENTS.map(v => ({ name: v, value: v })),
-  ], [t]);
-
-  const CLASSES_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...CLASSES.map(v => ({ name: v, value: v })),
-  ], [t]);
-
-  const ROLES_UI = useMemo(() => [
-    { name: t('common.all'), value: null as RoleType | null },
-    ...ROLES.map(v => ({ name: t(`filters.roles.${v}`), value: v })),
-  ], [t]);
-
   // Resolve rank & role for current transcend level
   const resolvedCharacters = useMemo(() =>
     characters.map(char => {
@@ -167,84 +151,43 @@ export default function TierListPveClient({ characters }: Props) {
         <span className="mr-1.5">⚠️</span>{t('tierlist.disclaimer_pve')}
       </div>
 
-      {/* Search */}
-      <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={t('search.placeholder')} />
-
-      {/* Rarity */}
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">{t('filters.rarity')}</p>
-      <div className="flex justify-center gap-2">
-        <FilterPill
-          active={rarityFilter.length === 0}
-          onClick={() => setRarityFilter([])}
-          className="h-8 px-3"
-        >
-          {t('common.all')}
-        </FilterPill>
-        {RARITIES.map(r => (
-          <FilterPill
-            key={r}
-            active={rarityFilter.includes(r)}
-            onClick={() => toggleArray(setRarityFilter, r, RARITIES)}
-            className="h-8 px-3"
-          >
-            <div className="flex items-center -space-x-1">
-              {Array.from({ length: r }, (_, i) => (
-                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="star" width={16} height={16} style={{ width: 16, height: 16 }} />
-              ))}
-            </div>
-          </FilterPill>
-        ))}
-      </div>
-
-      {/* Elements + Classes */}
-      <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center">
-        <IconFilterGroup
-          label={t('filters.elements')}
-          items={ELEMENTS_UI}
-          filter={elementFilter}
-          onToggle={v => toggleArray(setElementFilter, v, ELEMENTS)}
-          onReset={() => setElementFilter([])}
-          imagePath={v => `/images/ui/elem/CM_Element_${v}.webp`}
-        />
-        <IconFilterGroup
-          label={t('filters.classes')}
-          items={CLASSES_UI}
-          filter={classFilter}
-          onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
-          onReset={() => setClassFilter([])}
-          imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
-        />
-      </div>
-
-      {/* Transcend level selector */}
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">
-        {t('tierlist.transcend_level')}
-      </p>
-      <div className="flex justify-center gap-2">
-        {TRANSCEND_LEVELS.map(lvl => (
-          <FilterPill
-            key={lvl}
-            active={transcendLevel === lvl}
-            onClick={() => setTranscendLevel(lvl)}
-            className="h-8 px-3"
-          >
-            <div className="flex items-center -space-x-1">
-              {Array.from({ length: lvl }, (_, i) => (
-                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="Star" width={16} height={16} style={{ width: 16, height: 16 }} />
-              ))}
-            </div>
-          </FilterPill>
-        ))}
-      </div>
-
-      {/* Roles */}
-      <TextFilterGroup
-        label={t('characters.filters.roles' as TranslationKey)}
-        items={ROLES_UI}
-        filter={roleFilter}
-        onToggle={v => toggleArray(setRoleFilter, v, ROLES)}
-        onReset={() => setRoleFilter([])}
+      {/* Top bar — search + element + class + rarity + roles on one row */}
+      <FiltersTopBar
+        query={rawQuery}
+        onQueryChange={setRawQuery}
+        placeholder={t('characters.filters.search_placeholder')}
+        elementFilter={elementFilter}
+        onToggleElement={v => toggleArray(setElementFilter, v, ELEMENTS as readonly string[])}
+        classFilter={classFilter}
+        onToggleClass={v => toggleArray(setClassFilter, v, CLASSES as readonly string[])}
+        rarityFilter={rarityFilter}
+        onToggleRarity={v => toggleArray(setRarityFilter, v, RARITIES)}
+        roleFilter={roleFilter}
+        onToggleRole={v => toggleArray(setRoleFilter, v, ROLES)}
       />
+
+      {/* Transcend level — centered on its own row */}
+      <div className="flex flex-col items-center gap-2 rounded-xl border border-zinc-800 bg-slate-800/50 p-4">
+        <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-300">
+          {t('tierlist.transcend_level')}
+        </p>
+        <div className="flex flex-wrap justify-center gap-2">
+          {TRANSCEND_LEVELS.map(lvl => (
+            <FilterPill
+              key={lvl}
+              active={transcendLevel === lvl}
+              onClick={() => setTranscendLevel(lvl)}
+              className="h-8 px-3"
+            >
+              <div className="flex items-center -space-x-1">
+                {Array.from({ length: lvl }, (_, i) => (
+                  <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="Star" width={16} height={16} style={{ width: 16, height: 16 }} />
+                ))}
+              </div>
+            </FilterPill>
+          ))}
+        </div>
+      </div>
 
       {/* Tier groups */}
       <div className="mt-6 space-y-4">

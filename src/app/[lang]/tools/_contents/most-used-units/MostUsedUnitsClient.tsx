@@ -11,7 +11,8 @@ import { l } from '@/lib/i18n/localize';
 import { LANGS } from '@/lib/i18n/config';
 import { encodeFilters, decodeFilters, isEmptyPayload, type FilterPayload } from '@/lib/filter-url';
 import CharacterPortrait from '@/app/components/character/CharacterPortrait';
-import { FilterPill, FilterSearch, IconFilterGroup } from '@/app/components/ui/FilterPills';
+import { FilterPill } from '@/app/components/ui/FilterPills';
+import FiltersTopBar from '@/app/components/ui/FiltersTopBar';
 import type { TranslationKey } from '@/i18n/locales/en';
 import type { MostUsedEntry, GuideTitleMap, MostUsedCharacter } from './index';
 
@@ -152,17 +153,6 @@ export default function MostUsedUnitsClient({ characters, usage, guideTitles }: 
       .sort((a, b) => b.total - a.total);
   }, [enriched, query, elementFilter, classFilter, rarityFilter, categoryFilter]);
 
-  // UI filter arrays
-  const ELEMENTS_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...ELEMENTS.map(v => ({ name: v, value: v })),
-  ], [t]);
-
-  const CLASSES_UI = useMemo(() => [
-    { name: t('common.all'), value: null as string | null },
-    ...CLASSES.map(v => ({ name: v, value: v })),
-  ], [t]);
-
   /** Resolve a guide slug to its localized title */
   const guideTitle = (guideSlug: string): string => {
     const titles = guideTitles[guideSlug];
@@ -178,77 +168,43 @@ export default function MostUsedUnitsClient({ characters, usage, guideTitles }: 
 
   return (
     <div className="mx-auto max-w-250 space-y-3">
-      {/* Search */}
-      <FilterSearch value={rawQuery} onChange={setRawQuery} placeholder={t('search.placeholder')} />
-
-      {/* Rarity */}
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">{t('filters.rarity')}</p>
-      <div className="flex justify-center gap-2">
-        <FilterPill
-          active={rarityFilter.length === 0}
-          onClick={() => setRarityFilter([])}
-          className="h-8 px-3"
-        >
-          {t('common.all')}
-        </FilterPill>
-        {RARITIES.map(r => (
-          <FilterPill
-            key={r}
-            active={rarityFilter.includes(r)}
-            onClick={() => toggleArray(setRarityFilter, r, RARITIES)}
-            className="h-8 px-3"
-          >
-            <div className="flex items-center -space-x-1">
-              {Array.from({ length: r }, (_, i) => (
-                <Image key={i} src="/images/ui/star/CM_icon_star_y.webp" alt="star" width={16} height={16} style={{ width: 16, height: 16 }} />
-              ))}
-            </div>
-          </FilterPill>
-        ))}
-      </div>
-
-      {/* Elements + Classes */}
-      <div className="mx-auto max-w-205 grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-6 place-items-center">
-        <IconFilterGroup
-          label={t('filters.elements')}
-          items={ELEMENTS_UI}
-          filter={elementFilter}
-          onToggle={v => toggleArray(setElementFilter, v, ELEMENTS)}
-          onReset={() => setElementFilter([])}
-          imagePath={v => `/images/ui/elem/CM_Element_${v}.webp`}
-        />
-        <IconFilterGroup
-          label={t('filters.classes')}
-          items={CLASSES_UI}
-          filter={classFilter}
-          onToggle={v => toggleArray(setClassFilter, v, CLASSES)}
-          onReset={() => setClassFilter([])}
-          imagePath={v => `/images/ui/class/CM_Class_${v}.webp`}
-        />
-      </div>
+      {/* Top bar — search + element + class + rarity on one row */}
+      <FiltersTopBar
+        query={rawQuery}
+        onQueryChange={setRawQuery}
+        placeholder={t('characters.filters.search_placeholder')}
+        elementFilter={elementFilter}
+        onToggleElement={v => toggleArray(setElementFilter, v, ELEMENTS as readonly string[])}
+        classFilter={classFilter}
+        onToggleClass={v => toggleArray(setClassFilter, v, CLASSES as readonly string[])}
+        rarityFilter={rarityFilter}
+        onToggleRarity={v => toggleArray(setRarityFilter, v, RARITIES)}
+      />
 
       {/* Category filter */}
-      <p className="text-center text-xs uppercase tracking-wide text-zinc-300">
-        {t('tools.most-used-units.category_filter' as TranslationKey)}
-      </p>
-      <div className="flex flex-wrap justify-center gap-2">
-        <FilterPill
-          active={categoryFilter.length === 0}
-          onClick={() => setCategoryFilter([])}
-          className="h-8 px-3"
-        >
-          {t('common.all')}
-        </FilterPill>
-        {GUIDE_CATEGORIES.map(cat => (
+      <div className="space-y-2 rounded-xl border border-zinc-800 bg-slate-800/50 p-4">
+        <p className="text-center text-xs uppercase tracking-wide text-zinc-300">
+          {t('tools.most-used-units.category_filter' as TranslationKey)}
+        </p>
+        <div className="flex flex-wrap justify-center gap-2">
           <FilterPill
-            key={cat}
-            active={categoryFilter.includes(cat)}
-            onClick={() => toggleArray(setCategoryFilter, cat, GUIDE_CATEGORIES)}
+            active={categoryFilter.length === 0}
+            onClick={() => setCategoryFilter([])}
             className="h-8 px-3"
           >
-            {t(`guides.category.${cat}` as TranslationKey)}
+            {t('common.all')}
           </FilterPill>
-        ))}
+          {GUIDE_CATEGORIES.map(cat => (
+            <FilterPill
+              key={cat}
+              active={categoryFilter.includes(cat)}
+              onClick={() => toggleArray(setCategoryFilter, cat, GUIDE_CATEGORIES)}
+              className="h-8 px-3"
+            >
+              {t(`guides.category.${cat}` as TranslationKey)}
+            </FilterPill>
+          ))}
+        </div>
       </div>
 
       {/* Results */}

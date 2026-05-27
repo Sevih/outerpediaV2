@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { readFile } from 'fs/promises';
 import { join } from 'path';
 import type { Lang } from '@/lib/i18n/config';
 import { createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
+import HomeHero from '@/app/components/home/HomeHero';
 import CurrentBanners from '@/app/components/home/CurrentBanners';
 import PromoCodes from '@/app/components/home/PromoCodes';
 import BeginnerGuides from '@/app/components/home/BeginnerGuides';
@@ -26,7 +26,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t['page.home.title'],
     description: t['page.home.description'],
   });
-  // Bypass layout template — home title already includes site name
   return { ...meta, title: { absolute: t['page.home.title'] } };
 }
 
@@ -60,45 +59,34 @@ export default async function Home({ params }: Props) {
 
   return (
     <main>
-      {/* Banner — full width, cropped top & bottom */}
-      <div className="relative mx-auto w-full max-w-screen-2xl">
-        <Image
-          src="/images/croped_banner.webp"
-          alt="Outerpedia — Outerplane Wiki & Database"
-          width={5120}
-          height={1297}
-          priority
-          sizes="100vw"
-          className="w-full h-auto"
-        />
-        <h1 className="sr-only">{t['page.home.title']}</h1>
-      </div>
+      {/* Hero — banner with text overlay */}
+      <HomeHero t={t} />
 
-      <div className="mx-auto max-w-6xl space-y-12 px-4 py-6 md:space-y-16 md:px-6">
-      {/* Hero */}
-      <section className="text-center">
-        <p className="mx-auto max-w-2xl text-zinc-400">{t['page.home.description']}</p>
-      </section>
-
-      {/* Discord + Daily Buff + Server Resets */}
-      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-[1fr_auto_auto]">
+      <div className="mx-auto max-w-7xl space-y-12 px-4 py-10 md:space-y-16 md:px-6">
+        {/* Discord — top of content, full width */}
         <DiscordBanner t={t} />
-        <BuffEventTimer schedule={buffEvents} lang={lang} t={t} />
-        <ServerResets t={t} />
-      </div>
 
-      {/* Desktop: left (banners + beginner) | right (codes spanning both rows) */}
-      {/* Mobile: banners → codes → beginner */}
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-[3fr_1fr] md:grid-rows-[auto_auto]">
-        <div className="order-1 md:order-0">
-          <CurrentBanners t={t} />
-        </div>
+        {/* Outer 2-col layout.
+            Left col stacks: Active banners + Today section (Resets + Buff).
+            Right col: PromoCodes spans the full available height. */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-[2fr_1fr]">
+          <div className="flex flex-col gap-10 md:gap-12">
+            <CurrentBanners t={t} />
+            <section>
+              <h2 className="mx-auto mb-6 text-2xl">
+                {t['home.resets.title']} · {t['home.buff.title']}
+              </h2>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:items-stretch">
+                <ServerResets t={t} />
+                <BuffEventTimer schedule={buffEvents} lang={lang} t={t} />
+              </div>
+            </section>
+          </div>
 
-        <div className="order-2 md:order-0 md:row-span-2">
           <PromoCodes
             codes={promoCodes}
             lang={lang}
-            limit={5}
+            limit={6}
             t={{
               title: t['home.section.codes'],
               copy: t['home.codes.copy'],
@@ -109,13 +97,11 @@ export default async function Home({ params }: Props) {
           />
         </div>
 
-        <div className="order-3 md:order-0">
-          <BeginnerGuides lang={lang} t={t} />
-        </div>
-      </div>
+        {/* Beginner guides */}
+        <BeginnerGuides lang={lang} t={t} />
 
-      {/* Recent Updates — full width */}
-      <RecentUpdates lang={lang} t={t} />
+        {/* Recent updates — full-width timeline */}
+        <RecentUpdates lang={lang} t={t} />
       </div>
     </main>
   );

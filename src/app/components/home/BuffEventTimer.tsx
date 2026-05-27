@@ -113,7 +113,7 @@ export default function BuffEventTimer({ schedule, lang, t }: Props) {
   };
 
   return (
-    <div className="card-interactive flex flex-col justify-center gap-1.5 p-3 md:w-80">
+    <div className="card-interactive flex h-full flex-col justify-center gap-1.5 p-3">
       <div className="flex items-center justify-between gap-2">
         <p className="text-xs font-semibold uppercase tracking-wide text-zinc-400">
           {t['home.buff.title']}

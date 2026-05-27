@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { useBreadcrumbLabel } from '@/lib/contexts/BreadcrumbContext';
+import { buildBreadcrumbJsonLd, buildUrl } from '@/lib/seo';
+import JsonLd from '@/app/components/seo/JsonLd';
+import type { Lang } from '@/lib/i18n/config';
 import type { TranslationKey } from '@/i18n';
 
 const SEGMENT_LABELS: Record<string, TranslationKey> = {
@@ -30,41 +33,47 @@ export default function Breadcrumbs() {
   const segments = stripped.split('/').filter(Boolean);
   if (segments.length === 0) return null;
 
+  const items = segments.map((segment, i) => {
+    const path = `/${segments.slice(0, i + 1).join('/')}`;
+    const isLast = i === segments.length - 1;
+    const labelKey = SEGMENT_LABELS[segment];
+    const guideCatKey = segments[i - 1] === 'guides'
+      ? `guides.category.${segment}` as TranslationKey
+      : undefined;
+    const label = isLast && breadcrumbOverride
+      ? breadcrumbOverride
+      : labelKey ? t(labelKey)
+      : guideCatKey && t(guideCatKey) !== guideCatKey ? t(guideCatKey)
+      : decodeURIComponent(segment);
+    return { path, href: buildHref(path), label, isLast };
+  });
+
+  const jsonLd = buildBreadcrumbJsonLd([
+    { name: t('nav.home'), url: buildUrl(lang as Lang, '/') },
+    ...items.map(({ path, label }) => ({ name: label, url: buildUrl(lang as Lang, path) })),
+  ]);
+
   return (
     <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl px-4 pt-4 md:px-6">
+      <JsonLd data={jsonLd} />
       <ol className="flex items-center gap-1.5 text-xs text-zinc-500">
         <li>
           <Link href={buildHref('/')} className="hover:text-zinc-300">
             {t('nav.home')}
           </Link>
         </li>
-        {segments.map((segment, i) => {
-          const href = buildHref(`/${segments.slice(0, i + 1).join('/')}`);
-          const isLast = i === segments.length - 1;
-          const labelKey = SEGMENT_LABELS[segment];
-          // Guide category segments: try guides.category.{slug} key
-          const guideCatKey = segments[i - 1] === 'guides'
-            ? `guides.category.${segment}` as TranslationKey
-            : undefined;
-          const label = isLast && breadcrumbOverride
-            ? breadcrumbOverride
-            : labelKey ? t(labelKey)
-            : guideCatKey && t(guideCatKey) !== guideCatKey ? t(guideCatKey)
-            : decodeURIComponent(segment);
-
-          return (
-            <li key={href} className="flex items-center gap-1.5">
-              <span aria-hidden="true">/</span>
-              {isLast ? (
-                <span className="text-zinc-300">{label}</span>
-              ) : (
-                <Link href={href as never} className="hover:text-zinc-300">
-                  {label}
-                </Link>
-              )}
-            </li>
-          );
-        })}
+        {items.map(({ href, label, isLast }) => (
+          <li key={href} className="flex items-center gap-1.5">
+            <span aria-hidden="true">/</span>
+            {isLast ? (
+              <span className="text-zinc-300">{label}</span>
+            ) : (
+              <Link href={href as never} className="hover:text-zinc-300">
+                {label}
+              </Link>
+            )}
+          </li>
+        ))}
       </ol>
     </nav>
   );

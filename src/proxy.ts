@@ -16,6 +16,7 @@ export function proxy(request: NextRequest) {
     pathname.startsWith('/api') ||
     pathname.startsWith('/admin') ||
     pathname.startsWith('/images') ||
+    pathname.startsWith('/icons') ||
     pathname.startsWith('/audio') ||
     pathname.startsWith('/feed') ||
     pathname.startsWith('/damage-calc/')
@@ -24,7 +25,7 @@ export function proxy(request: NextRequest) {
   }
 
   // Let Next.js handle its own generated files (sitemap.xml, robots.txt, sw.js, etc.)
-  if (/^\/(sitemap.*\.xml|robots\.txt|manifest\.json|sw\.js)$/.test(pathname)) {
+  if (/^\/(sitemap.*\.xml|robots\.txt|manifest\.(json|webmanifest)|sw\.js)$/.test(pathname)) {
     return NextResponse.next();
   }
 

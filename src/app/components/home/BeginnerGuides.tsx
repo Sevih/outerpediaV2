@@ -22,26 +22,29 @@ export default function BeginnerGuides({ lang, t }: Props) {
   return (
     <section>
       <h2 className="mx-auto mb-6 text-2xl">{t['home.section.beginner']}</h2>
-      <div className="card-light p-5 md:p-6">
-        <p className="mb-4 text-sm text-zinc-400">{t['home.beginner.desc']}</p>
-        <ul className="space-y-2 text-sm">
-          {GUIDES.map((guide) => (
+      <div className="rounded-xl border border-zinc-800 bg-slate-800/50">
+        <ol className="grid grid-cols-1 divide-y divide-zinc-800 md:grid-cols-5 md:divide-x md:divide-y-0">
+          {GUIDES.map((guide, i) => (
             <li key={guide.key}>
               <Link
                 href={localePath(lang, `/guides/${CATEGORY}/${guide.slug}`)}
-                className="font-semibold text-cyan-400 underline"
+                className="flex h-full items-start gap-3 px-3 py-2.5 transition hover:bg-zinc-800/40 md:flex-col md:items-stretch md:gap-2 md:p-4"
               >
-                {t[guide.nameKey]}
-              </Link>{' '}
-              <span className="text-zinc-400">
-                &mdash; {t[guide.descKey]}
-              </span>
+                <span className="shrink-0 font-mono text-xs font-semibold uppercase tracking-wider text-cyan-400 md:text-[11px]">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold leading-tight text-zinc-100">
+                    {t[guide.nameKey]}
+                  </p>
+                  <p className="mt-0.5 text-xs leading-snug text-zinc-500 md:mt-1 md:leading-relaxed">
+                    {t[guide.descKey]}
+                  </p>
+                </div>
+              </Link>
             </li>
           ))}
-        </ul>
-        <p className="mt-4 text-xs italic text-zinc-500">
-          {t['home.beginner.footer']}
-        </p>
+        </ol>
       </div>
     </section>
   );

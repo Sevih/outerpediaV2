@@ -84,7 +84,7 @@ export const CHAIN_TEXT: Record<ChainType, string> = {
 // ── Filters ──
 
 export const FILTER = {
-  bg: 'bg-filter-bg',
+  bg: 'bg-slate-900/80',
   active: 'bg-filter/25',
   hover: 'hover:bg-filter/25',
   ring: 'ring-filter-ring',

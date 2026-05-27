@@ -1,0 +1,2917 @@
+{
+  "entries": [
+    {
+      "id": "55",
+      "contentType": "ADVENTURE_LICENSE",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "111007, 121511, 122010"
+      },
+      "textId": "SYS_ADVENTURE_LICENSE",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_ADVENTURE_LICENSE",
+      "lockTextId": "SYS_CONTENT_POPUP_ADVENTURE_LICENSE_LOCK",
+      "lockScreenName": {
+        "en": "Adventure License",
+        "jp": "アドベンチャーライセンス",
+        "kr": "모험 라이선스",
+        "zh": "冒险执照"
+      },
+      "officialName": {
+        "en": "Adventure License",
+        "jp": "冒険者ライセンス",
+        "kr": "모험 라이선스",
+        "zh": "冒险许可证"
+      },
+      "officialDescription": {
+        "en": "You can challenge new heights of adventure.\\n<color=#FED434>Adventure License</color> has been enabled.",
+        "jp": "冒険の新境地に挑戦できるコンテンツ\\n<color=#FED434>【冒険者ライセンス】</color>が解放されました。",
+        "kr": "새로운 모험의 경지에 도전할 수 있습니다.\\n<color=#FED434>[모험 라이선스]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "可挑战新冒险境界。\\n已激活<color=#FED434>【冒险许可证】</color>玩法。"
+      },
+      "lockPopup": {
+        "en": "Clear all Hard stages of one season among Story Season 1, Season 2 Part 1, or Season 2 Part 2.",
+        "jp": "【ストーリー】のシーズン1、シーズン2 パート1、シーズン2 パート2のいずれか1シーズンのハード難易度を全てクリア。",
+        "kr": "<color=#FED434>[모험 라이선스]</color>\\n\\n[스토리]의 시즌1, 시즌2 파트1, 시즌2 파트2 중 한가지 시즌의 하드 난이도를 전부 클리어.",
+        "zh": "通关 [故事] 的第1季、第2季第1部或第2部中任意一季的所有困难难度。"
+      },
+      "requirements": [
+        {
+          "dungeonId": "111007",
+          "stage": "S1H-10-7",
+          "dungeonName": {
+            "en": "Good Night",
+            "jp": "おやすみ",
+            "kr": "잘 자",
+            "zh": "晚安"
+          },
+          "areaName": {
+            "en": "Conclusion",
+            "jp": "決着",
+            "kr": "결착",
+            "zh": "完结"
+          }
+        },
+        {
+          "dungeonId": "121511",
+          "stage": "S2H-5-11",
+          "dungeonName": {
+            "en": "Snapped Back to Reality",
+            "jp": "現実に向き合う時",
+            "kr": "현실로 돌아갈 시간",
+            "zh": "该回到现实了"
+          },
+          "areaName": {
+            "en": "Garden of Dolls",
+            "jp": "箱庭",
+            "kr": "모형 정원",
+            "zh": "模型庄园"
+          }
+        },
+        {
+          "dungeonId": "122010",
+          "stage": "S3H-10-10",
+          "dungeonName": {
+            "en": "Conqueror and Destroyer",
+            "jp": "征服者と破壊者",
+            "kr": "정복자와 파괴자",
+            "zh": "征服者和破坏者"
+          },
+          "areaName": {
+            "en": "Conqueror and Destroyer",
+            "jp": "征服者と破壊者",
+            "kr": "정복자와 파괴자",
+            "zh": "征服者和破坏者"
+          }
+        }
+      ]
+    },
+    {
+      "id": "56",
+      "contentType": "AGIT_CUSTOM_CRAFT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100905"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "SYS_CONTENT_POPUP_EXPLORATION_DUNGEON_LOCK",
+      "lockScreenName": {
+        "en": "Precise Craft",
+        "jp": "精密作成",
+        "kr": "정밀 제작",
+        "zh": "精密制作"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": {
+        "en": "[Season 1 Normal_9-5. The Responsibility of the Guilty] Unlocks after clearing the dungeon.",
+        "jp": "シーズン１の9-5(ノーマル)「奪った者の責任感」までクリアすると解放。",
+        "kr": "[시즌 1 노멀_9-5. 빼앗은 자의 책임감] 던전 클리어 시 개방됩니다.",
+        "zh": "【第1季 普通 9-5 掠夺者的责任感】关卡后解锁。"
+      },
+      "requirements": [
+        {
+          "dungeonId": "100905",
+          "stage": "S1-9-5",
+          "dungeonName": {
+            "en": "The Responsibility of the Guilty",
+            "jp": "奪った者の責任感",
+            "kr": "빼앗은 자의 책임감",
+            "zh": "掠夺者的责任感"
+          },
+          "areaName": {
+            "en": "Nameless Island",
+            "jp": "名もなき島",
+            "kr": "이름 없는 섬",
+            "zh": "无名岛屿"
+          }
+        }
+      ]
+    },
+    {
+      "id": "57",
+      "contentType": "AGIT_GIFT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100905"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "SYS_CONTENT_POPUP_EXPLORATION_DUNGEON_LOCK",
+      "lockScreenName": {
+        "en": "Gift",
+        "jp": "ギフト",
+        "kr": "기프트",
+        "zh": "礼物"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": {
+        "en": "[Season 1 Normal_9-5. The Responsibility of the Guilty] Unlocks after clearing the dungeon.",
+        "jp": "シーズン１の9-5(ノーマル)「奪った者の責任感」までクリアすると解放。",
+        "kr": "[시즌 1 노멀_9-5. 빼앗은 자의 책임감] 던전 클리어 시 개방됩니다.",
+        "zh": "【第1季 普通 9-5 掠夺者的责任感】关卡后解锁。"
+      },
+      "requirements": [
+        {
+          "dungeonId": "100905",
+          "stage": "S1-9-5",
+          "dungeonName": {
+            "en": "The Responsibility of the Guilty",
+            "jp": "奪った者の責任感",
+            "kr": "빼앗은 자의 책임감",
+            "zh": "掠夺者的责任感"
+          },
+          "areaName": {
+            "en": "Nameless Island",
+            "jp": "名もなき島",
+            "kr": "이름 없는 섬",
+            "zh": "无名岛屿"
+          }
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "contentType": "AGIT_MAIN",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100301"
+      },
+      "textId": "SYS_MENU_AGIT",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_AGIT",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Base",
+        "jp": "アジト",
+        "kr": "아지트",
+        "zh": "据点"
+      },
+      "officialName": {
+        "en": "Base",
+        "jp": "アジト",
+        "kr": "아지트",
+        "zh": "基地"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>[Base]</color> content has been activated.\\nYou can now manage the activity of your heroes.",
+        "jp": "仲間の活動を管理できるコンテンツ\\n<color=#FED434>【アジト】</color>が解放されました。",
+        "kr": "동료들의 활동을 관리할 수 있는\\n<color=#FED434>[아지트]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "已激活可管理同伴活动的\\n<color=#FED434>【基地】</color>"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100301",
+          "stage": "S1-3-1",
+          "dungeonName": {
+            "en": "Gathering Supplies",
+            "jp": "物資補給",
+            "kr": "물자 보급",
+            "zh": "物资补给"
+          },
+          "areaName": {
+            "en": "Forest Dungeon",
+            "jp": "森林ダンジョン",
+            "kr": "숲 속의 던전",
+            "zh": "林中暗堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "contentType": "AGIT_SYNCHRO_ROOM",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100705"
+      },
+      "textId": "SYS_MENU_SYNCHRO",
+      "descTextId": "SYS_MENU_SYNCHRO_DESC",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Synchro Room",
+        "jp": "シンクロルーム",
+        "kr": "싱크로 룸",
+        "zh": "同步室"
+      },
+      "officialName": {
+        "en": "Synchro Room",
+        "jp": "シンクロルーム",
+        "kr": "싱크로 룸",
+        "zh": "同步空间"
+      },
+      "officialDescription": {
+        "en": "A new facility has been unlocked in the Hideout to share ally growth stats:\\n<color=#FED434>[Synchro Room]</color>.",
+        "jp": "アジトに仲間の成長値を共有できる新施設、\\n<color=#FED434>【シンクロルーム】</color>が解放されました。",
+        "kr": "아지트에 동료의 성장치를 공유할 수 있는 신규 설비,\\n<color=#FED434>[싱크로 룸]</color>이 활성화되었습니다.",
+        "zh": "根据地解锁了新的设施，可共享同伴成长值：\\n<color=#FED434>[同步室]</color>。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100705",
+          "stage": "S1-7-5",
+          "dungeonName": {
+            "en": "An Unjust Fight",
+            "jp": "仁義なき戦い",
+            "kr": "인의 없는 싸움",
+            "zh": "不讲仁义的战斗"
+          },
+          "areaName": {
+            "en": "Fiend Territory",
+            "jp": "魔族の領域",
+            "kr": "마족의 영역",
+            "zh": "魔族领域"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "contentType": "BATTLE_AUTO",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100104"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Auto Battle",
+        "jp": "自動戦闘",
+        "kr": "자동 전투",
+        "zh": "自动战斗"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100104",
+          "stage": "S1-1-4",
+          "dungeonName": {
+            "en": "Outer City",
+            "jp": "アウターシティへ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "71",
+      "contentType": "BATTLE_AUTO_CONTINUE",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100111"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": null,
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100111",
+          "stage": "S1-1-11",
+          "dungeonName": {
+            "en": "Quirk",
+            "jp": "ギフト",
+            "kr": "기프트",
+            "zh": "天赋"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "contentType": "BATTLE_BURST",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100103"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Skill Burst",
+        "jp": "スキルバースト",
+        "kr": "스킬 버스트",
+        "zh": "技能爆发"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100103",
+          "stage": "S1-1-3",
+          "dungeonName": {
+            "en": "A Knight Appears",
+            "jp": "騎士イディス、現る",
+            "kr": "기사, 나타나다",
+            "zh": "骑士现身"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "contentType": "BATTLE_CHAIN",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100110"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Skill Chain",
+        "jp": "スキルチェイン",
+        "kr": "스킬 체인",
+        "zh": "技能连锁"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100110",
+          "stage": "S1-1-10",
+          "dungeonName": {
+            "en": "Transformation",
+            "jp": "メタモルフォーゼ",
+            "kr": "변모",
+            "zh": "变形"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "contentType": "BATTLE_CONTINUOUS",
+      "condition": {
+        "type": "TUTORIAL_CLEAR",
+        "value": "315"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Continuous Battle",
+        "jp": "オート進行",
+        "kr": "연속 전투",
+        "zh": "连续战斗"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": []
+    },
+    {
+      "id": "1",
+      "contentType": "BATTLE_MENU",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "1"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Battle Settings",
+        "jp": "バトル設定",
+        "kr": "전투 설정",
+        "zh": "战斗设置"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "1",
+          "stage": null,
+          "dungeonName": {
+            "en": "Intro - Dungeon Core",
+            "jp": "プロローグ：ことの始まり",
+            "kr": "Intro - 던전 코어",
+            "zh": "Intro-暗堡核心"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "contentType": "BATTLE_REPEAT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100110"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Repeat Battle",
+        "jp": "リピート戦闘",
+        "kr": "반복 전투",
+        "zh": "重复战斗"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100110",
+          "stage": "S1-1-10",
+          "dungeonName": {
+            "en": "Transformation",
+            "jp": "メタモルフォーゼ",
+            "kr": "변모",
+            "zh": "变形"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "28",
+      "contentType": "BATTLE_SWEEP",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100110"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Sweep",
+        "jp": "掃討",
+        "kr": "소탕",
+        "zh": "扫荡"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100110",
+          "stage": "S1-1-10",
+          "dungeonName": {
+            "en": "Transformation",
+            "jp": "メタモルフォーゼ",
+            "kr": "변모",
+            "zh": "变形"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "contentType": "BATTLE_ULTIMATE_SKIP",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100104"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Ultimate Skill Cutscene",
+        "jp": "必殺スキル演出",
+        "kr": "필살기 연출",
+        "zh": "必杀技演出"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100104",
+          "stage": "S1-1-4",
+          "dungeonName": {
+            "en": "Outer City",
+            "jp": "アウターシティへ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "contentType": "CHARACTER_ENCHANT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100103"
+      },
+      "textId": "SYS_CHARLEVELUP_TITLE",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_CHAR_ENCHANT",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Hero Enhancement",
+        "jp": "仲間強化",
+        "kr": "동료 강화",
+        "zh": "同伴强化"
+      },
+      "officialName": {
+        "en": "Enhance Hero",
+        "jp": "レベル強化",
+        "kr": "동료 강화",
+        "zh": "同伴强化"
+      },
+      "officialDescription": {
+        "en": "You can now use\\n<color=#FED434>[Enhance]</color> to unleash the potential abilities of heroes.",
+        "jp": "仲間をレベルアップできる機能\\n<color=#FED434>【仲間強化】</color>が解放されました。",
+        "kr": "동료를 레벨업 시킬 수 있는\\n<color=#FED434>[동료 강화]</color> 기능이 활성화 되었습니다.",
+        "zh": "已激活可升级同伴的\\n<color=#FED434>【同伴强化】</color>"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100103",
+          "stage": "S1-1-3",
+          "dungeonName": {
+            "en": "A Knight Appears",
+            "jp": "騎士イディス、現る",
+            "kr": "기사, 나타나다",
+            "zh": "骑士现身"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "contentType": "CHARACTER_EQUIP_SPECIAL",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100501"
+      },
+      "textId": "SYS_CONTENT_POPUP_NAME_REMAINS",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_PVE_REMAINS",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Special Gear",
+        "jp": "特殊装備",
+        "kr": "특수 장비",
+        "zh": "特殊装备"
+      },
+      "officialName": {
+        "en": "Special Gear/The Archdemon's Ruins",
+        "jp": "特殊装備・魔王の遺跡",
+        "kr": "특수장비/마왕의 유적",
+        "zh": "特殊装备/魔王遗迹"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>[The Archdemon's Ruins]</color>, where you can obtain [Special Gear]\\n<color=#FED434>[Special Gear]</color> is now available. Unlike general gear, special gear has special abilities.",
+        "jp": "通常装備より特殊な効果を持つ<color=#FED434>【特殊装備】</color>と、\\n【特殊装備】を獲得できるコンテンツ<color=#FED434>【魔王の遺跡】</color>が解放されました。",
+        "kr": "[특수 장비]를 획득할 수 있는 <color=#FED434>[마왕의 유적]</color> 컨텐츠 \\n일반 장비와 달리 특별한 효과를 지닌 <color=#FED434>[특수 장비]</color>의 장착 기능이 활성화 되었습니다.",
+        "zh": "已解锁可获得【特殊装备】的<color=#FED434>【魔王遗迹】</color>，\\n可配戴具有特殊效果的<color=#FED434>【特殊装备】</color>的功能激活。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100501",
+          "stage": "S1-5-1",
+          "dungeonName": {
+            "en": "Onwards to Magnolia",
+            "jp": "マグノリアを目指して",
+            "kr": "매그놀리아를 향해",
+            "zh": "向着麦格诺里亚"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "contentType": "CHARACTER_EVOLUTION",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100207"
+      },
+      "textId": "SYS_CONTENT_POPUP_NAME_EVOLUTION",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_EVOLUTION",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Hero Evolution",
+        "jp": "仲間進化",
+        "kr": "동료 진화",
+        "zh": "同伴进化"
+      },
+      "officialName": {
+        "en": "Ark Raid",
+        "jp": "アーク強襲",
+        "kr": "방주 습격",
+        "zh": "方舟强袭"
+      },
+      "officialDescription": {
+        "en": "The <color=#FED434>[Ark Raid]</color> challenge content has been enabled.",
+        "jp": "様々な素材を獲得できる<color=#FED434>[アーク強襲]</color>コンテンツが有効化されました。",
+        "kr": "다양한 재료를 획득할 수 있는  <color=#FED434>[방주 습격]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "可获得各种材料的<color=#FED434>[方舟强袭]</color>内容已激活。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100207",
+          "stage": "S1-2-7",
+          "dungeonName": {
+            "en": "A Hunch About a Strong Enemy",
+            "jp": "強敵の予感",
+            "kr": "강적의 예감",
+            "zh": "预感强敌"
+          },
+          "areaName": {
+            "en": "Eastern Dungeon",
+            "jp": "東部ダンジョン",
+            "kr": "동부 던전",
+            "zh": "东部暗堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "66",
+      "contentType": "CHARACTER_FUSION",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "121012"
+      },
+      "textId": "SYS_CHARACTER_FUSION",
+      "descTextId": "SYS_CHARACTER_FUSION_DESC",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Core Fusion",
+        "jp": "コアフュージョン",
+        "kr": "코어 융합",
+        "zh": "核心融合"
+      },
+      "officialName": null,
+      "officialDescription": {
+        "en": "<color=#FED434>[Core Fusion]</color>, which unlocks new potential for your allies, is now available.",
+        "jp": "仲間の新たな潜在能力を解放できる<color=#FED434>【コアフュージョン】</color>が開放されました。",
+        "kr": "동료의 새로운 잠재력을 해방할 수 있는 <color=#FED434>[코어 융합]</color>이 오픈되었습니다.",
+        "zh": "可以解放同伴新潜能的<color=#FED434>【核心融合】</color>现已开放。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "121012",
+          "stage": "S3-10-12",
+          "dungeonName": {
+            "en": "Conqueror and Destroyer",
+            "jp": "征服者と破壊者",
+            "kr": "정복자와 파괴자",
+            "zh": "征服者和破坏者"
+          },
+          "areaName": {
+            "en": "Conqueror and Destroyer",
+            "jp": "征服者と破壊者",
+            "kr": "정복자와 파괴자",
+            "zh": "征服者和破坏者"
+          }
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "contentType": "CHARACTER_SKILL",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "1"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Skill Enhancement",
+        "jp": "スキル強化",
+        "kr": "스킬 강화",
+        "zh": "技能强化"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "1",
+          "stage": null,
+          "dungeonName": {
+            "en": "Intro - Dungeon Core",
+            "jp": "プロローグ：ことの始まり",
+            "kr": "Intro - 던전 코어",
+            "zh": "Intro-暗堡核心"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "contentType": "CHARACTER_TRANSCENDENT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "1"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Hero Transcendence",
+        "jp": "仲間超越",
+        "kr": "동료 초월",
+        "zh": "同伴超越"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "1",
+          "stage": null,
+          "dungeonName": {
+            "en": "Intro - Dungeon Core",
+            "jp": "プロローグ：ことの始まり",
+            "kr": "Intro - 던전 코어",
+            "zh": "Intro-暗堡核心"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "contentType": "DEMIURGE_MISSION",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "1"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Demiurge Mission",
+        "jp": "デミウルゴス任務",
+        "kr": "데미우르고스 미션",
+        "zh": "德米乌戈斯任务"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "1",
+          "stage": null,
+          "dungeonName": {
+            "en": "Intro - Dungeon Core",
+            "jp": "プロローグ：ことの始まり",
+            "kr": "Intro - 던전 코어",
+            "zh": "Intro-暗堡核心"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "contentType": "EQUIP_ALL",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100105"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Equip All",
+        "jp": "一括装備",
+        "kr": "일괄 착용",
+        "zh": "一键穿戴"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100105",
+          "stage": "S1-1-5",
+          "dungeonName": {
+            "en": "The Demibeast and the Lord",
+            "jp": "獣人と領主",
+            "kr": "수인과 영주",
+            "zh": "兽人与领主"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "contentType": "EVA_BATTLE_TUTORIAL",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100111"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Eva’s Tactical Guide",
+        "jp": "エヴァの戦術ガイド",
+        "kr": "에바의 전술 가이드",
+        "zh": "艾娃的战术指南"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100111",
+          "stage": "S1-1-11",
+          "dungeonName": {
+            "en": "Quirk",
+            "jp": "ギフト",
+            "kr": "기프트",
+            "zh": "天赋"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "64",
+      "contentType": "EVENT_BOSS_CHALLENGE",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100706"
+      },
+      "textId": "SYS_EVENT_BOSS_CHALLENGE",
+      "descTextId": "SYS_EVENT_BOSS_CHALLENGE_DESC",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Joint Challenge",
+        "jp": "合同チャレンジ",
+        "kr": "합동 챌린지",
+        "zh": "联合挑战"
+      },
+      "officialName": {
+        "en": "Joint Challenge",
+        "jp": "合同チャレンジ",
+        "kr": "합동 챌린지",
+        "zh": "合作挑战"
+      },
+      "officialDescription": {
+        "en": "You can team up with many users to challenge bosses.\\n<color=#FED434>[Joint Challenge]</color> content has been activated.",
+        "jp": "多くのユーザーと協力してボスに挑める\\n<color=#FED434>【合同チャレンジ】</color>コンテンツが解放されました。",
+        "kr": "다수의 유저들과 협력해 보스에게 도전할 수 있는\\n<color=#FED434>[합동 챌린지]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "与众多玩家合作挑战Boss的\\n<color=#FED434>[合作挑战]</color>内容已开启。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100706",
+          "stage": "S1-7-6",
+          "dungeonName": {
+            "en": "Awakening of an Archdemon",
+            "jp": "魔王覚醒",
+            "kr": "마왕 각성",
+            "zh": "魔王觉醒"
+          },
+          "areaName": {
+            "en": "Fiend Territory",
+            "jp": "魔族の領域",
+            "kr": "마족의 영역",
+            "zh": "魔族领域"
+          }
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "contentType": "EVENT_DUNGEON",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100305"
+      },
+      "textId": "SYS_CONTENT_POPUP_NAME_EVENT_DUNGEON",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_EVENT_DUNGEON",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Event Dungeon",
+        "jp": "イベントダンジョン",
+        "kr": "이벤트 던전",
+        "zh": "活动暗堡"
+      },
+      "officialName": {
+        "en": "Survey Hub",
+        "jp": "調査支援所",
+        "kr": "조사 지원소",
+        "zh": "调查支援所"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>The event dungeon</color> is now active.",
+        "jp": "<color=#FED434>【イベントダンジョン】</color>が解放されました。",
+        "kr": "<color=#FED434>[이벤트 던전]</color>이 활성화 되었습니다.",
+        "zh": "已激活<color=#FED434>【活动副本】</color>。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100305",
+          "stage": "S1-3-5",
+          "dungeonName": {
+            "en": "Finding Blacksmith",
+            "jp": "鍛冶屋の姉御",
+            "kr": "대장장이 확보",
+            "zh": "拉拢铁匠"
+          },
+          "areaName": {
+            "en": "Forest Dungeon",
+            "jp": "森林ダンジョン",
+            "kr": "숲 속의 던전",
+            "zh": "林中暗堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "74",
+      "contentType": "FESTIVAL",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100103"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": null,
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100103",
+          "stage": "S1-1-3",
+          "dungeonName": {
+            "en": "A Knight Appears",
+            "jp": "騎士イディス、現る",
+            "kr": "기사, 나타나다",
+            "zh": "骑士现身"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "contentType": "GUIDE_QUEST_SEASON_1",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "1"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Guide Quest Season 1",
+        "jp": "ガイドクエスト シーズン1",
+        "kr": "가이드 퀘스트 시즌 1",
+        "zh": "引导任务 第1季"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "1",
+          "stage": null,
+          "dungeonName": {
+            "en": "Intro - Dungeon Core",
+            "jp": "プロローグ：ことの始まり",
+            "kr": "Intro - 던전 코어",
+            "zh": "Intro-暗堡核心"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "contentType": "GUIDE_QUEST_SEASON_2",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "101014"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Guide Quest Season 2",
+        "jp": "ガイドクエスト シーズン2",
+        "kr": "가이드 퀘스트 시즌 2",
+        "zh": "引导任务 第2季"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "101014",
+          "stage": "S1-10-14",
+          "dungeonName": {
+            "en": "An Automaton's Wish",
+            "jp": "オートマタの願い",
+            "kr": "자동인형의 바람",
+            "zh": "机械人偶的心愿"
+          },
+          "areaName": {
+            "en": "Ksai",
+            "jp": "ザイ",
+            "kr": "크사이",
+            "zh": "科赛"
+          }
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "contentType": "GUIDE_QUEST_SEASON_2_P2",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "120514"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Guide Quest Season 2",
+        "jp": "ガイドクエスト シーズン2",
+        "kr": "가이드 퀘스트 시즌 2",
+        "zh": "引导任务 第2季"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "120514",
+          "stage": "S2-5-14",
+          "dungeonName": {
+            "en": "Notia's Letter",
+            "jp": "ノティアの手紙",
+            "kr": "노티아의 편지",
+            "zh": "诺缇亚的信"
+          },
+          "areaName": {
+            "en": "Garden of Dolls",
+            "jp": "箱庭",
+            "kr": "모형 정원",
+            "zh": "模型庄园"
+          }
+        }
+      ]
+    },
+    {
+      "id": "60",
+      "contentType": "GUIDE_QUEST_SEASON_3",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "121015"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Guide Quest Season 3",
+        "jp": "ガイドクエスト シーズン3",
+        "kr": "가이드 퀘스트 시즌 3",
+        "zh": "引导任务 第3季"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "121015",
+          "stage": "S3-10-15",
+          "dungeonName": {
+            "en": "Unchanging",
+            "jp": "何も変わってなどない",
+            "kr": "아무것도 변한 것 없이",
+            "zh": "一切都没有变"
+          },
+          "areaName": {
+            "en": "Conqueror and Destroyer",
+            "jp": "征服者と破壊者",
+            "kr": "정복자와 파괴자",
+            "zh": "征服者和破坏者"
+          }
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "contentType": "GUIDE_QUEST_SEASON_4",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "130920"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": null,
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "130920",
+          "stage": "S4-9-20",
+          "dungeonName": {
+            "en": "To Feel Alive",
+            "jp": "生きているという感覚",
+            "kr": "살아있다는 감각",
+            "zh": "活着的感觉"
+          },
+          "areaName": {
+            "en": "War's End",
+            "jp": "終戦",
+            "kr": "종전",
+            "zh": "终战"
+          }
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "contentType": "GUILD",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "1"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Guild",
+        "jp": "ギルド",
+        "kr": "길드",
+        "zh": "公会"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "1",
+          "stage": null,
+          "dungeonName": {
+            "en": "Intro - Dungeon Core",
+            "jp": "プロローグ：ことの始まり",
+            "kr": "Intro - 던전 코어",
+            "zh": "Intro-暗堡核心"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "62",
+      "contentType": "IRREGULAR_CHASE",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "73010121"
+      },
+      "textId": "SYS_IRR_CHASE_NAME_01",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_IRR_CHASE",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Pursuit Operation",
+        "jp": "追撃殲滅戦",
+        "kr": "추격 섬멸전",
+        "zh": "追击歼灭战"
+      },
+      "officialName": {
+        "en": "Pursuit Operation",
+        "jp": "追撃殲滅戦",
+        "kr": "추격 섬멸전",
+        "zh": "追击歼灭战"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>Irregular Extermination Project - Pursuit Operation</color> is now open.",
+        "jp": "<color=#FED434>【イレギュラー殲滅戦 - 追撃殲滅戦】</color>が解放されました。",
+        "kr": "<color=#FED434>[이레귤러 섬멸전 - 추격 섬멸전]</color>이 오픈되었습니다.",
+        "zh": "<color=#FED434>【异型怪歼灭战 - 追击歼灭战】</color>已开启。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "73010121",
+          "stage": null,
+          "dungeonName": {
+            "en": "Search Coordinates: F01_A01_S14",
+            "jp": "探索座標：01_A01_S14",
+            "kr": "탐색 좌표 : F01_A01_S14",
+            "zh": "探索坐标：F01_A01_S14"
+          },
+          "areaName": null
+        }
+      ]
+    },
+    {
+      "id": "61",
+      "contentType": "IRREGULAR_INFILTRATE",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "121015"
+      },
+      "textId": "SYS_IRR_INFILTREATE_NAME_01",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_IRR_INFILTREATE",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Infiltration Operation",
+        "jp": "侵入殲滅戦",
+        "kr": "침투 섬멸전",
+        "zh": "渗透歼灭战"
+      },
+      "officialName": {
+        "en": "Infiltration Operation",
+        "jp": "侵入殲滅戦",
+        "kr": "침투 섬멸전",
+        "zh": "渗透歼灭战"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>Irregular Extermination Project - Infiltration Operation</color> is now open.",
+        "jp": "<color=#FED434>【イレギュラー殲滅戦 - 侵入殲滅戦】</color>が解放されました。",
+        "kr": "<color=#FED434>[이레귤러 섬멸전 - 침투 섬멸전]</color>이 오픈되었습니다.",
+        "zh": "<color=#FED434>【异型怪歼灭战 - 渗透歼灭战】</color>已开启。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "121015",
+          "stage": "S3-10-15",
+          "dungeonName": {
+            "en": "Unchanging",
+            "jp": "何も変わってなどない",
+            "kr": "아무것도 변한 것 없이",
+            "zh": "一切都没有变"
+          },
+          "areaName": {
+            "en": "Conqueror and Destroyer",
+            "jp": "征服者と破壊者",
+            "kr": "정복자와 파괴자",
+            "zh": "征服者和破坏者"
+          }
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "contentType": "ITEM_BREAK_LIMIT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100505"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Gear Limit Break",
+        "jp": "装備限界突破",
+        "kr": "장비 돌파",
+        "zh": "装备突破"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100505",
+          "stage": "S1-5-5",
+          "dungeonName": {
+            "en": "A Temporary Truce",
+            "jp": "一時休戦",
+            "kr": "일시 휴전",
+            "zh": "临时休战"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "contentType": "ITEM_SMELTING",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100505"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Gear Refine",
+        "jp": "装備錬成",
+        "kr": "장비 재련",
+        "zh": "装备精炼"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100505",
+          "stage": "S1-5-5",
+          "dungeonName": {
+            "en": "A Temporary Truce",
+            "jp": "一時休戦",
+            "kr": "일시 휴전",
+            "zh": "临时休战"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "contentType": "IVANEZ_FESTIVAL",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100111"
+      },
+      "textId": "SYS_IVANEZ_FESTIVAL",
+      "descTextId": "SYS_IVANEZ_FESTIVAL_DESC",
+      "lockTextId": "0",
+      "lockScreenName": null,
+      "officialName": {
+        "en": "Mirsha Festival",
+        "jp": "メルシャフェス",
+        "kr": "메르샤 페스티벌",
+        "zh": "美洛沙庆典"
+      },
+      "officialDescription": {
+        "en": "A limited content is now available:\\n<color=#FED434>Mirsha Festival</color>.",
+        "jp": "特定期間中ご利用できる\\n<color=#FED434>【メルシャフェス】</color>コンテンツが解放されました。",
+        "kr": "특정한 기간에만 한정으로 이용 가능한\\n<color=#FED434>[메르샤 페스티벌]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "仅在特定期间内可使用的\\n<color=#FED434>美洛沙庆典</color>内容已开放。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100111",
+          "stage": "S1-1-11",
+          "dungeonName": {
+            "en": "Quirk",
+            "jp": "ギフト",
+            "kr": "기프트",
+            "zh": "天赋"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "contentType": "MAIN_MENU_FRIEND",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100108"
+      },
+      "textId": "SYS_MENU_FRIEND",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_FRIEND",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Friends",
+        "jp": "フレンド",
+        "kr": "친구",
+        "zh": "好友"
+      },
+      "officialName": {
+        "en": "Friends",
+        "jp": "フレンド",
+        "kr": "친구",
+        "zh": "好友"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>[Friend]</color> content has been activated.\\nYou can now meet other players and make friends.",
+        "jp": "他のプレイヤーと交流できる機能\\n<color=#FED434>【フレンド】</color>が解放されました。",
+        "kr": "나 이외의 플레이어를 만나 인연을 맺을 수 있는\\n<color=#FED434>[친구]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "已激活可与其他玩家加深友情的\\n<color=#FED434>【好友】</color>"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100108",
+          "stage": "S1-1-8",
+          "dungeonName": {
+            "en": "Prisoners",
+            "jp": "受刑者",
+            "kr": "수감자",
+            "zh": "囚犯"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "contentType": "MAIN_MENU_INVENTORY",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100105"
+      },
+      "textId": "SYS_MENU_INVENTORY",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_INVEN",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Inventory",
+        "jp": "バック",
+        "kr": "소지품",
+        "zh": "背包"
+      },
+      "officialName": {
+        "en": "Inventory",
+        "jp": "バッグ",
+        "kr": "소지품",
+        "zh": "背包"
+      },
+      "officialDescription": {
+        "en": "You can now use\\n<color=#FED434>[Inventory]</color> to manage gear and items you obtained.",
+        "jp": "獲得した装備とアイテムを確認できる機能\\n<color=#FED434>【バッグ】</color>が解放されました。",
+        "kr": "획득한 장비와 아이템을 관리하는\\n<color=#FED434>[소지품]</color> 기능이 활성화 되었습니다.",
+        "zh": "已激活可管理装备和物品的\\n<color=#FED434>【背包】</color>"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100105",
+          "stage": "S1-1-5",
+          "dungeonName": {
+            "en": "The Demibeast and the Lord",
+            "jp": "獣人と領主",
+            "kr": "수인과 영주",
+            "zh": "兽人与领主"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "contentType": "MAIN_MENU_PVE",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100203"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Challenge",
+        "jp": "チャレンジ",
+        "kr": "도전",
+        "zh": "挑战"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100203",
+          "stage": "S1-2-3",
+          "dungeonName": {
+            "en": "The Mage and Her Cat",
+            "jp": "魔法使いと猫さん",
+            "kr": "마법사와 고양이",
+            "zh": "魔法师与猫"
+          },
+          "areaName": {
+            "en": "Eastern Dungeon",
+            "jp": "東部ダンジョン",
+            "kr": "동부 던전",
+            "zh": "东部暗堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "contentType": "MAIN_MENU_PVP",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100406"
+      },
+      "textId": "SYS_MENU_PVP",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_PVP",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Arena",
+        "jp": "アリーナ",
+        "kr": "결투장",
+        "zh": "竞技场"
+      },
+      "officialName": {
+        "en": "Arena",
+        "jp": "アリーナ",
+        "kr": "결투장",
+        "zh": "竞技场"
+      },
+      "officialDescription": {
+        "en": "You can now enter the <color=#FED434>Arena</color> to test your skills against other players.",
+        "jp": "他のプレイヤーと実力を競い合うコンテンツ\\n<color=#FED434>【アリーナ】</color>が解放されました。",
+        "kr": "다른 플레이어와 실력을 겨룰 수 있는\\n<color=#FED434>[결투장]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "已激活可与其他玩家较量实力的\\n<color=#FED434>【竞技场】</color>内容。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100406",
+          "stage": "S1-4-6",
+          "dungeonName": {
+            "en": "The Commander's Sophistry",
+            "jp": "騎士団長の詭弁",
+            "kr": "단장의 궤변",
+            "zh": "团长的诡辩"
+          },
+          "areaName": {
+            "en": "Nightwatch",
+            "jp": "ナイトウォッチ",
+            "kr": "나이트워치",
+            "zh": "骑士堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "contentType": "MAIN_MENU_RECRUIT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100103"
+      },
+      "textId": "SYS_GACHA_TITLE",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_GACHA",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Recruit",
+        "jp": "スカウト",
+        "kr": "영입",
+        "zh": "招募"
+      },
+      "officialName": {
+        "en": "Recruit",
+        "jp": "スカウト",
+        "kr": "영입",
+        "zh": "招募"
+      },
+      "officialDescription": {
+        "en": "You can now use\\n<color=#FED434>[Recruit]</color> to obtain new heroes",
+        "jp": "仲間をスカウトできる機能\\n<color=#FED434>【スカウト】</color>が解放されました。",
+        "kr": "동료를 모집할 수 있는\\n<color=#FED434>[영입]</color> 기능이 활성화 되었습니다.",
+        "zh": "已激活可招募同伴的\\n<color=#FED434>【招募】</color>"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100103",
+          "stage": "S1-1-3",
+          "dungeonName": {
+            "en": "A Knight Appears",
+            "jp": "騎士イディス、現る",
+            "kr": "기사, 나타나다",
+            "zh": "骑士现身"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "contentType": "MAIN_MENU_SIDESTORY",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "1"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Side Story",
+        "jp": "外伝",
+        "kr": "외전",
+        "zh": "外传"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "1",
+          "stage": null,
+          "dungeonName": {
+            "en": "Intro - Dungeon Core",
+            "jp": "プロローグ：ことの始まり",
+            "kr": "Intro - 던전 코어",
+            "zh": "Intro-暗堡核心"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "68",
+      "contentType": "MIRSHA_SETTLEMENT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100103"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": null,
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100103",
+          "stage": "S1-1-3",
+          "dungeonName": {
+            "en": "A Knight Appears",
+            "jp": "騎士イディス、現る",
+            "kr": "기사, 나타나다",
+            "zh": "骑士现身"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "63",
+      "contentType": "MONADGATE",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "120514"
+      },
+      "textId": "SYS_MONAD_GATE_CONTENTS_NAME",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_MONAD_GATE",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Monad Gate",
+        "jp": "モナドゲート",
+        "kr": "모나드 게이트",
+        "zh": "单子门"
+      },
+      "officialName": {
+        "en": "[Monad Gate]",
+        "jp": "【モナド・ゲート】",
+        "kr": "[모나드 게이트]",
+        "zh": "【单子门】"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>[Monad Gate]</color> has been opened.",
+        "jp": "<color=#FED434>【モナド・ゲート】</color>が解放されました。",
+        "kr": "<color=#FED434>[모나드 게이트]</color>가 오픈되었습니다.",
+        "zh": "已解锁<color=#FED434>【单子门】</color>。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "120514",
+          "stage": "S2-5-14",
+          "dungeonName": {
+            "en": "Notia's Letter",
+            "jp": "ノティアの手紙",
+            "kr": "노티아의 편지",
+            "zh": "诺缇亚的信"
+          },
+          "areaName": {
+            "en": "Garden of Dolls",
+            "jp": "箱庭",
+            "kr": "모형 정원",
+            "zh": "模型庄园"
+          }
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "contentType": "PIECE_DUNGEON",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100605"
+      },
+      "textId": "SYS_PIECE_DUNGEON",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_PIECE_DUNGEON",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Defeat the Doppelgänger",
+        "jp": "自己像幻視退治",
+        "kr": "도플갱어 퇴치",
+        "zh": "击退二重身"
+      },
+      "officialName": {
+        "en": "Defeat the Doppelgänger",
+        "jp": "自己像幻視退治",
+        "kr": "도플갱어 퇴치",
+        "zh": "击退二重身"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>Defeat the Doppelgänger</color> content has been activated.\\nYou can now acquire Hero Pieces.",
+        "jp": "仲間のピースを獲得できるコンテンツ\\n<color=#FED434>【自己像幻視退治】</color>が解放されました。",
+        "kr": "동료 조각을 획득할 수 있는\\n<color=#FED434>[도플갱어 퇴치]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "可获得同伴碎片的\\n<color=#FED434>【击退二重身】</color>已解锁。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100605",
+          "stage": "S1-6-5",
+          "dungeonName": {
+            "en": "Pass",
+            "jp": "合格",
+            "kr": "합격",
+            "zh": "通过"
+          },
+          "areaName": {
+            "en": "Magnolia",
+            "jp": "マグノリア",
+            "kr": "매그놀리아",
+            "zh": "麦格诺里亚"
+          }
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "contentType": "PVE_EXPLORATION",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100905"
+      },
+      "textId": "SYS_EXPLORATION_DUNGEON",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_EXPLORATION_DUNGEON",
+      "lockTextId": "SYS_CONTENT_POPUP_EXPLORATION_DUNGEON_LOCK",
+      "lockScreenName": {
+        "en": "Terminus Isle",
+        "jp": "テルミナス島",
+        "kr": "멸망의 섬",
+        "zh": "灭亡之岛"
+      },
+      "officialName": {
+        "en": "Terminus Isle Exploration",
+        "jp": "テルミナス島探査",
+        "kr": "멸망의 섬 탐사",
+        "zh": "探索灭亡之岛"
+      },
+      "officialDescription": {
+        "en": "A new deadly creature has appeared in Terminus Isle\\n<color=#FED434>Terminus Isle Exploration</color> content has been activated.",
+        "jp": "テルミナス島に新しい危険種が出現しました。\\n<color=#FED434>【テルミナス島探査】</color>が解放されました。",
+        "kr": "멸망의 섬에 신규 위험종이 출현했습니다.\\n<color=#FED434>[멸망의 섬 탐사]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "灭亡之岛出现全新危险物种。\\n<color=#FED434>【探索灭亡之岛】</color>玩法解锁。"
+      },
+      "lockPopup": {
+        "en": "[Season 1 Normal_9-5. The Responsibility of the Guilty] Unlocks after clearing the dungeon.",
+        "jp": "シーズン１の9-5(ノーマル)「奪った者の責任感」までクリアすると解放。",
+        "kr": "[시즌 1 노멀_9-5. 빼앗은 자의 책임감] 던전 클리어 시 개방됩니다.",
+        "zh": "【第1季 普通 9-5 掠夺者的责任感】关卡后解锁。"
+      },
+      "requirements": [
+        {
+          "dungeonId": "100905",
+          "stage": "S1-9-5",
+          "dungeonName": {
+            "en": "The Responsibility of the Guilty",
+            "jp": "奪った者の責任感",
+            "kr": "빼앗은 자의 책임감",
+            "zh": "掠夺者的责任感"
+          },
+          "areaName": {
+            "en": "Nameless Island",
+            "jp": "名もなき島",
+            "kr": "이름 없는 섬",
+            "zh": "无名岛屿"
+          }
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "contentType": "PVE_EXP_DUNGEON",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100203"
+      },
+      "textId": "SYS_PVE_DUNGEON",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_PVE_DUNGEON",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Hypnotic Frog Hall",
+        "jp": "催眠カエルの殿堂",
+        "kr": "최면 개구리의 전당",
+        "zh": "催眠青蛙殿堂"
+      },
+      "officialName": {
+        "en": "Challenge",
+        "jp": "挑戦する",
+        "kr": "도전",
+        "zh": "挑战"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>[Challenge]</color> content has been activated.\\nYou can now enter special battles.",
+        "jp": "特殊な戦闘を行うコンテンツ\\n<color=#FED434>【チャレンジ】</color>が解放されました。",
+        "kr": "특수 전투를 진행 가능한 \\n<color=#FED434>[도전]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "已激活可进行特殊战斗的\\n<color=#FED434>【挑战】</color>"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100203",
+          "stage": "S1-2-3",
+          "dungeonName": {
+            "en": "The Mage and Her Cat",
+            "jp": "魔法使いと猫さん",
+            "kr": "마법사와 고양이",
+            "zh": "魔法师与猫"
+          },
+          "areaName": {
+            "en": "Eastern Dungeon",
+            "jp": "東部ダンジョン",
+            "kr": "동부 던전",
+            "zh": "东部暗堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "contentType": "PVE_FARMING_DUNGEON",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100207"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Ark Raid",
+        "jp": "アーク強襲",
+        "kr": "방주 습격",
+        "zh": "方舟强袭"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100207",
+          "stage": "S1-2-7",
+          "dungeonName": {
+            "en": "A Hunch About a Strong Enemy",
+            "jp": "強敵の予感",
+            "kr": "강적의 예감",
+            "zh": "预感强敌"
+          },
+          "areaName": {
+            "en": "Eastern Dungeon",
+            "jp": "東部ダンジョン",
+            "kr": "동부 던전",
+            "zh": "东部暗堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "contentType": "PVE_RAID_A",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100505"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Special Request: Ecology Survey",
+        "jp": "特別依頼：生態調査",
+        "kr": "특별의뢰: 생태 조사",
+        "zh": "特别委托：生态调查"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100505",
+          "stage": "S1-5-5",
+          "dungeonName": {
+            "en": "A Temporary Truce",
+            "jp": "一時休戦",
+            "kr": "일시 휴전",
+            "zh": "临时休战"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "contentType": "PVE_RAID_A_DARK",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100505"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Special Request: Ecology Survey",
+        "jp": "特別依頼：生態調査",
+        "kr": "특별의뢰: 생태 조사",
+        "zh": "特别委托：生态调查"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100505",
+          "stage": "S1-5-5",
+          "dungeonName": {
+            "en": "A Temporary Truce",
+            "jp": "一時休戦",
+            "kr": "일시 휴전",
+            "zh": "临时休战"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "contentType": "PVE_RAID_A_LIGHT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100505"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Special Request: Ecology Survey",
+        "jp": "特別依頼：生態調査",
+        "kr": "특별의뢰: 생태 조사",
+        "zh": "特别委托：生态调查"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100505",
+          "stage": "S1-5-5",
+          "dungeonName": {
+            "en": "A Temporary Truce",
+            "jp": "一時休戦",
+            "kr": "일시 휴전",
+            "zh": "临时休战"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "contentType": "PVE_RAID_B",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100505"
+      },
+      "textId": "SYS_CONTENT_POPUP_NAME_SMELTING",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_SMELTING",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Special Request: Identity Analysis",
+        "jp": "特別依頼：正体究明",
+        "kr": "특별의뢰: 정체 규명",
+        "zh": "特别委托：身份查明"
+      },
+      "officialName": {
+        "en": "Gear Reforge/Breakthrough",
+        "jp": "装備再錬・突破",
+        "kr": "장비 재련/돌파",
+        "zh": "装备重铸/突破"
+      },
+      "officialDescription": {
+        "en": "You can now access <color=#FED434>Special Requests</color>.\\nYou can now use <color=#FED434>Reforge and Breakthrough</color> to enhance the substats of high tier gear.",
+        "jp": "レアリティの高い装備を獲得できるコンテンツ<color=#FED434>【特別依頼】</color>と\\n装備のオプションを強化できる機能<color=#FED434>【再錬】【突破】</color>が解放されました。",
+        "kr": "높은 등급의 장비를 획득할 수 있는 <color=#FED434>[특별의뢰]</color> 컨텐츠 \\n장비의 추가 옵션을 강화할 수 있는 <color=#FED434>[재련] / [돌파]</color> 기능이 활성화 되었습니다.",
+        "zh": "已激活可获得高级别装备的<color=#FED434>【特别委托】</color>内容，\\n可强化装备附加属性的<color=#FED434>【重铸】/【突破】</color>功能。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100505",
+          "stage": "S1-5-5",
+          "dungeonName": {
+            "en": "A Temporary Truce",
+            "jp": "一時休戦",
+            "kr": "일시 휴전",
+            "zh": "临时休战"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "contentType": "PVE_RAID_B_DARK",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100505"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Special Request: Identity Analysis",
+        "jp": "特別依頼：正体究明",
+        "kr": "특별의뢰: 정체 규명",
+        "zh": "特别委托：身份查明"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100505",
+          "stage": "S1-5-5",
+          "dungeonName": {
+            "en": "A Temporary Truce",
+            "jp": "一時休戦",
+            "kr": "일시 휴전",
+            "zh": "临时休战"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "contentType": "PVE_RAID_B_LIGHT",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100505"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Special Request: Identity Analysis",
+        "jp": "特別依頼：正体究明",
+        "kr": "특별의뢰: 정체 규명",
+        "zh": "特别委托：身份查明"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100505",
+          "stage": "S1-5-5",
+          "dungeonName": {
+            "en": "A Temporary Truce",
+            "jp": "一時休戦",
+            "kr": "일시 휴전",
+            "zh": "临时休战"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "contentType": "PVE_REMAINS",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100501"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "The Archdemon's Ruins: The Deeps",
+        "jp": "魔王の遺跡：深界",
+        "kr": "마왕의 유적: 심계",
+        "zh": "魔王遗迹：深界"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100501",
+          "stage": "S1-5-1",
+          "dungeonName": {
+            "en": "Onwards to Magnolia",
+            "jp": "マグノリアを目指して",
+            "kr": "매그놀리아를 향해",
+            "zh": "向着麦格诺里亚"
+          },
+          "areaName": {
+            "en": "Dimensional Bridge",
+            "jp": "ディメンションブリッジ",
+            "kr": "디멘션 브리지",
+            "zh": "次元之桥"
+          }
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "contentType": "PVE_REMAINS_LOOP",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100612"
+      },
+      "textId": "SYS_CONTENT_POPUP_NAME_REMAINS_LOOP",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_REMAINS_LOOP",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "The Archdemon's Ruins: The Infinite Corridor",
+        "jp": "魔王の遺跡：無限の回廊",
+        "kr": "마왕의 유적: 무한의 회랑",
+        "zh": "魔王遗迹：无限回廊"
+      },
+      "officialName": {
+        "en": "The Archdemon's Ruins: The Infinite Corridor",
+        "jp": "魔王の遺跡：無限の回廊",
+        "kr": "마왕의 유적: 무한 회랑",
+        "zh": "魔王遗迹：无限回廊"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>[The Infinite Corridor]</color> has now been activated in <color=#FED434>[The Archdemon's Ruins]</color>.",
+        "jp": "<color=#FED434>【魔王の遺跡】</color>で<color=#FED434>【無限の回廊】</color>が解放されました。",
+        "kr": "<color=#FED434>[마왕의 유적]</color>에 <color=#FED434>[무한 회랑]</color>이 활성화 되었습니다.",
+        "zh": "已激活<color=#FED434>【魔王遗迹】</color>中的<color=#FED434>【无限回廊】</color>"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100612",
+          "stage": "S1-6-12",
+          "dungeonName": {
+            "en": "Laplace Magnolia",
+            "jp": "ラプラス・マグノリア",
+            "kr": "라플라스 매그놀리아",
+            "zh": "拉普拉丝·麦格诺里亚"
+          },
+          "areaName": {
+            "en": "Magnolia",
+            "jp": "マグノリア",
+            "kr": "매그놀리아",
+            "zh": "麦格诺里亚"
+          }
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "contentType": "PVE_TOWER",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100313"
+      },
+      "textId": "SYS_PVE_TOWER",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_PVE_TOWER",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Skyward Tower - Normal",
+        "jp": "飛天の塔 ノーマル",
+        "kr": "비천의 탑 노멀",
+        "zh": "飞天之塔 - 普通"
+      },
+      "officialName": {
+        "en": "Skyward Tower",
+        "jp": "飛天の塔",
+        "kr": "비천의 탑",
+        "zh": "飞天之塔"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>[Skyward Tower]</color>\\nhas been enabled in Challenge content.",
+        "jp": "チャレンジコンテンツのうち\\n<color=#FED434>【飛天の塔】</color>が解放されました。",
+        "kr": "도전 컨텐츠 중 \\n<color=#FED434>[비천의 탑]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "已激活挑战内容中的\\n<color=#FED434>【飞天之塔】</color>"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100313",
+          "stage": "S1-3-13",
+          "dungeonName": {
+            "en": "Her Name is Alpha",
+            "jp": "その名はアルファ",
+            "kr": "그 이름은 알파",
+            "zh": "其名为阿尔法"
+          },
+          "areaName": {
+            "en": "Forest Dungeon",
+            "jp": "森林ダンジョン",
+            "kr": "숲 속의 던전",
+            "zh": "林中暗堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "contentType": "PVE_TOWER_ELEMENTAL",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100705"
+      },
+      "textId": "SYS_PVE_TOWER_ELEMENTAL",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_PVE_TOWER_ELEMENTAL",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Elemental Tower",
+        "jp": "エレメンタルタワー",
+        "kr": "엘레멘탈 타워",
+        "zh": "元素之塔"
+      },
+      "officialName": {
+        "en": "Elemental Tower",
+        "jp": "エレメンタルタワー",
+        "kr": "엘레멘탈 타워",
+        "zh": "元素之塔"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>Elemental Tower</color> has been enabled among challenge content.",
+        "jp": "チャレンジコンテンツ\\n<color=#FED434>【エレメンタルタワー】</color>が解放されました。",
+        "kr": "도전 컨텐츠 중 \\n<color=#FED434>[엘레멘탈 타워]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "已激活挑战内容中的\\n<color=#FED434>【元素之塔】</color>。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100705",
+          "stage": "S1-7-5",
+          "dungeonName": {
+            "en": "An Unjust Fight",
+            "jp": "仁義なき戦い",
+            "kr": "인의 없는 싸움",
+            "zh": "不讲仁义的战斗"
+          },
+          "areaName": {
+            "en": "Fiend Territory",
+            "jp": "魔族の領域",
+            "kr": "마족의 영역",
+            "zh": "魔族领域"
+          }
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "contentType": "PVE_TOWER_HARD",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100311"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Skyward Tower - Hard",
+        "jp": "飛天の塔 ハード",
+        "kr": "비천의 탑 하드",
+        "zh": "飞天之塔 - 困难"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100311",
+          "stage": "S1-3-11",
+          "dungeonName": {
+            "en": "Hating One's Own Kind",
+            "jp": "同族嫌悪",
+            "kr": "동족혐오",
+            "zh": "同族相斥"
+          },
+          "areaName": {
+            "en": "Forest Dungeon",
+            "jp": "森林ダンジョン",
+            "kr": "숲 속의 던전",
+            "zh": "林中暗堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "contentType": "PVP",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100406"
+      },
+      "textId": "SYS_MENU_PVP",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_PVP",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Arena",
+        "jp": "アリーナ",
+        "kr": "결투장",
+        "zh": "竞技场"
+      },
+      "officialName": {
+        "en": "Arena",
+        "jp": "アリーナ",
+        "kr": "결투장",
+        "zh": "竞技场"
+      },
+      "officialDescription": {
+        "en": "You can now enter the <color=#FED434>Arena</color> to test your skills against other players.",
+        "jp": "他のプレイヤーと実力を競い合うコンテンツ\\n<color=#FED434>【アリーナ】</color>が解放されました。",
+        "kr": "다른 플레이어와 실력을 겨룰 수 있는\\n<color=#FED434>[결투장]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "已激活可与其他玩家较量实力的\\n<color=#FED434>【竞技场】</color>内容。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100406",
+          "stage": "S1-4-6",
+          "dungeonName": {
+            "en": "The Commander's Sophistry",
+            "jp": "騎士団長の詭弁",
+            "kr": "단장의 궤변",
+            "zh": "团长的诡辩"
+          },
+          "areaName": {
+            "en": "Nightwatch",
+            "jp": "ナイトウォッチ",
+            "kr": "나이트워치",
+            "zh": "骑士堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "contentType": "PVP_REAL_TIME",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100406"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Real Time Arena",
+        "jp": "ワールドアリーナ",
+        "kr": "실시간 대전",
+        "zh": "实时对战"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100406",
+          "stage": "S1-4-6",
+          "dungeonName": {
+            "en": "The Commander's Sophistry",
+            "jp": "騎士団長の詭弁",
+            "kr": "단장의 궤변",
+            "zh": "团长的诡辩"
+          },
+          "areaName": {
+            "en": "Nightwatch",
+            "jp": "ナイトウォッチ",
+            "kr": "나이트워치",
+            "zh": "骑士堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "contentType": "PVP_REAL_TIME_FRIENDLY",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100406"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Friendly Match",
+        "jp": "フレンドリーマッチ",
+        "kr": "친선 대전",
+        "zh": "好友对战"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100406",
+          "stage": "S1-4-6",
+          "dungeonName": {
+            "en": "The Commander's Sophistry",
+            "jp": "騎士団長の詭弁",
+            "kr": "단장의 궤변",
+            "zh": "团长的诡辩"
+          },
+          "areaName": {
+            "en": "Nightwatch",
+            "jp": "ナイトウォッチ",
+            "kr": "나이트워치",
+            "zh": "骑士堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "72",
+      "contentType": "PVP_REAL_TIME_FRIENDLY",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100411"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Friendly Match",
+        "jp": "フレンドリーマッチ",
+        "kr": "친선 대전",
+        "zh": "好友对战"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100411",
+          "stage": "S1-4-11",
+          "dungeonName": {
+            "en": "Schwartz",
+            "jp": "シュヴァルツ",
+            "kr": "슈바르츠",
+            "zh": "施瓦兹"
+          },
+          "areaName": {
+            "en": "Nightwatch",
+            "jp": "ナイトウォッチ",
+            "kr": "나이트워치",
+            "zh": "骑士堡"
+          }
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "contentType": "SHOP_CONTENT",
+      "condition": {
+        "type": "SHOP",
+        "value": "0"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": null,
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": []
+    },
+    {
+      "id": "69",
+      "contentType": "SHOP_GENERAL",
+      "condition": {
+        "type": "SHOP",
+        "value": "0"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": null,
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": []
+    },
+    {
+      "id": "73",
+      "contentType": "SINGULARITY",
+      "condition": {
+        "type": "MONAD_CLEAR",
+        "value": "1"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "SYS_CONTENT_POPUP_SINGULARITY_LOCK",
+      "lockScreenName": {
+        "en": "Dimensional Singularity",
+        "jp": "次元特異点",
+        "kr": "차원 특이점",
+        "zh": "次元奇点"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": {
+        "en": "<color=#FED434>[Monad Gate - Dimensional Singularity]</color>\\n\\nUnlocked after viewing the True Ending of [Monad Gate] Depth 1.",
+        "jp": "<color=#FED434>[モナドゲート - 次元特異点]</color>\\n\\n[モナドゲート]深度1のトゥルーエンディング鑑賞後に開放されます。",
+        "kr": "<color=#FED434>[모나드 게이트 - 차원 특이점]</color>\\n\\n[모나드 게이트] 의 심도 1의 트루 엔딩 감상 이후 개방됩니다.",
+        "zh": "<color=#FED434>[单子门户 - 次元奇点]</color>\\n\\n观看[单子门户]深度1的真结局后开放。"
+      },
+      "requirements": []
+    },
+    {
+      "id": "36",
+      "contentType": "SUPPORT_SURVEY_SHOP",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "110106"
+      },
+      "textId": "SYS_CONTENT_POPUP_NAME_SURVEY",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_SURVEY",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Survey Hub",
+        "jp": "調査支援所",
+        "kr": "조사 지원소",
+        "zh": "调查支援所"
+      },
+      "officialName": {
+        "en": "Survey Hub",
+        "jp": "調査支援所",
+        "kr": "조사 지원소",
+        "zh": "调查支援所"
+      },
+      "officialDescription": {
+        "en": "<color=#FED434>The Survey Hub</color> is now active.",
+        "jp": "<color=#FED434>【調査支援所】</color>が解放されました。",
+        "kr": "<color=#FED434>[조사 지원소]</color>가 활성화 되었습니다.",
+        "zh": "已激活<color=#FED434>【调查支援所】</color>。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "110106",
+          "stage": "S1H-1-6",
+          "dungeonName": {
+            "en": "A Potential Enemy",
+            "jp": "潜在的な敵",
+            "kr": "잠재적인 적",
+            "zh": "潜在敌人"
+          },
+          "areaName": {
+            "en": "Another Beginning",
+            "jp": "始まり、再び",
+            "kr": "시작, 다시",
+            "zh": "开始，再次"
+          }
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "contentType": "SUPPORT_SURVEY_SHOP_SEASON_2",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "120514"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Survey Hub",
+        "jp": "調査支援所",
+        "kr": "조사 지원소",
+        "zh": "调查支援所"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "120514",
+          "stage": "S2-5-14",
+          "dungeonName": {
+            "en": "Notia's Letter",
+            "jp": "ノティアの手紙",
+            "kr": "노티아의 편지",
+            "zh": "诺缇亚的信"
+          },
+          "areaName": {
+            "en": "Garden of Dolls",
+            "jp": "箱庭",
+            "kr": "모형 정원",
+            "zh": "模型庄园"
+          }
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "contentType": "UNEQUIP_ALL",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "100105"
+      },
+      "textId": "0",
+      "descTextId": "0",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "Unequip All",
+        "jp": "一括解除",
+        "kr": "일괄 해제",
+        "zh": "一键卸下"
+      },
+      "officialName": null,
+      "officialDescription": null,
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "100105",
+          "stage": "S1-1-5",
+          "dungeonName": {
+            "en": "The Demibeast and the Lord",
+            "jp": "獣人と領主",
+            "kr": "수인과 영주",
+            "zh": "兽人与领主"
+          },
+          "areaName": {
+            "en": "Outer City",
+            "jp": "アウターシティ",
+            "kr": "아우터시티",
+            "zh": "外城"
+          }
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "contentType": "WORLD_BOSS",
+      "condition": {
+        "type": "DUNGEON_CLAER",
+        "value": "101014"
+      },
+      "textId": "SYS_CONTENT_POPUP_NAME_WORLD_BOSS",
+      "descTextId": "SYS_CONTENT_POPUP_DESC_WORLD_BOSS",
+      "lockTextId": "0",
+      "lockScreenName": {
+        "en": "World Boss",
+        "jp": "ワールドボス",
+        "kr": "월드 보스",
+        "zh": "世界首领"
+      },
+      "officialName": {
+        "en": "World Boss",
+        "jp": "ワールドボス",
+        "kr": "월드 보스",
+        "zh": "世界首领"
+      },
+      "officialDescription": {
+        "en": "The hidden champions of Mersha have appeared.\\n<color=#FED434>[World Boss]</color> content has been unlocked.",
+        "jp": "メルシャの隠された強者たちが登場しました。\\n<color=#FED434>【ワールドボス】</color>コンテンツが解放されました。",
+        "kr": "메르샤의 숨겨진 강자들이 등장했습니다.\\n<color=#FED434>[월드 보스]</color> 컨텐츠가 활성화 되었습니다.",
+        "zh": "梅尔莎的隐藏强者现身了。\\n<color=#FED434>[世界首领]</color>内容已开启。"
+      },
+      "lockPopup": null,
+      "requirements": [
+        {
+          "dungeonId": "101014",
+          "stage": "S1-10-14",
+          "dungeonName": {
+            "en": "An Automaton's Wish",
+            "jp": "オートマタの願い",
+            "kr": "자동인형의 바람",
+            "zh": "机械人偶的心愿"
+          },
+          "areaName": {
+            "en": "Ksai",
+            "jp": "ザイ",
+            "kr": "크사이",
+            "zh": "科赛"
+          }
+        }
+      ]
+    }
+  ],
+  "count": 71
+}

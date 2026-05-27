@@ -14,6 +14,10 @@ import { localePath } from '@/lib/navigation';
 
 type Props = { params: Promise<{ lang: string; category: string }> };
 
+// ISR revalidate every hour — the dimensional-singularity view picks the active
+// boss from "today" (00:00 UTC), so the page must refresh shortly after midnight.
+export const revalidate = 3600;
+
 export async function generateStaticParams() {
   const categories = await getValidCategories();
   return LANGS.flatMap((lang) =>

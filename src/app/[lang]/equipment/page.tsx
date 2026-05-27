@@ -78,12 +78,16 @@ export default async function EquipmentsPage({ params }: Props) {
   const debuffMap: Record<string, Effect> = {};
   for (const d of debuffsArr) debuffMap[d.name] = d;
 
-  // Build character ID → localized name + class map for EE tab
+  // Build character ID → localized name + class/element/rarity maps for EE tab
   const eeCharNames: Record<string, string> = {};
   const eeCharClasses: Record<string, string> = {};
+  const eeCharElements: Record<string, string> = {};
+  const eeCharRarities: Record<string, number> = {};
   for (const char of characters) {
     eeCharNames[char.ID] = loc(char, 'Fullname', l);
     eeCharClasses[char.ID] = char.Class;
+    eeCharElements[char.ID] = char.Element;
+    eeCharRarities[char.ID] = char.Rarity;
   }
 
   // Compute source filter options dynamically from actual equipment data
@@ -122,6 +126,8 @@ export default async function EquipmentsPage({ params }: Props) {
         ee={stripOtherLangsRecord(ee, l)}
         eeCharNames={eeCharNames}
         eeCharClasses={eeCharClasses}
+        eeCharElements={eeCharElements}
+        eeCharRarities={eeCharRarities}
         gearSourceFilters={gearSourceFilters}
         setSourceFilters={setSourceFilters}
         mainStatsOptions={mainStatsOptions}
