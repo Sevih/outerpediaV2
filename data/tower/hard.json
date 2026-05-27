@@ -378,6 +378,91 @@
       "restrictions": [
         "AtLeast1_2Star",
         "BanDefender"
+      ],
+      "reason": [
+        {
+          "en": "DPS: non-traditional attacker only — must be health or defense based.",
+          "jp": "DPS：非伝統的なアタッカーのみ — 体力または防御依存型である必要があります。",
+          "kr": "DPS: 비전통적인 어태커만 가능 — 체력 또는 방어력 기반이어야 합니다.",
+          "zh": "DPS：仅限非传统型攻击手 — 必须是基于生命值或防御力的输出。",
+          "fr": "DPS : uniquement des attaquants non traditionnels — basés sur les PV ou la DEF."
+        },
+        {
+          "en": "Healer: {B/BT_CALL_BACKUP} preferred with debuff cleanse.",
+          "jp": "ヒーラー：{B/BT_CALL_BACKUP}持ち、かつデバフ解除可能なものが望ましい。",
+          "kr": "힐러: {B/BT_CALL_BACKUP} 보유, 디버프 해제 가능자 권장.",
+          "zh": "治疗:推荐拥有{B/BT_CALL_BACKUP}且能清除Debuff的角色。",
+          "fr": "Healer : {B/BT_CALL_BACKUP} et capable de purger les debuffs."
+        }
+      ],
+      "recommended": [
+        {
+          "names": [
+            "2000014"
+          ],
+          "reason": {
+            "en": "2-star DPS dealing damage through {D/BT_DOT_CURSE} based on target's Max HP",
+            "jp": "2★のDPSで、{D/BT_DOT_CURSE}を介して敵の最大体力に応じたダメージを与える",
+            "kr": "2성 DPS, {D/BT_DOT_CURSE}을 통해 대상 최대 체력 기반 피해 부여",
+            "zh": "2星DPS，通过{D/BT_DOT_CURSE}造成基于目标最大生命的伤害",
+            "fr": "DPS 2★ qui inflige des dégâts via {D/BT_DOT_CURSE} basés sur les PV max de la cible"
+          }
+        },
+        {
+          "names": [
+            "2000114",
+            "2000099"
+          ],
+          "reason": {
+            "en": "Health based DPS with {B/BT_STAT|ST_COUNTER_RATE} (team-wide for Delta)",
+            "jp": "体力依存型DPSで、{B/BT_STAT|ST_COUNTER_RATE}を持つ（Deltaはチーム全体に付与）",
+            "kr": "체력 기반 DPS, {B/BT_STAT|ST_COUNTER_RATE} 보유 (Delta는 팀 전체 부여)",
+            "zh": "基于生命值的DPS，拥有{B/BT_STAT|ST_COUNTER_RATE}（Delta可为全队提供）",
+            "fr": "DPS basé sur les PV avec {B/BT_STAT|ST_COUNTER_RATE} (sur toute l'équipe pour Delta)"
+          }
+        },
+        {
+          "names": [
+            "2000089",
+            "2000071",
+            "2000112"
+          ],
+          "reason": {
+            "en": "Defense based DPS",
+            "jp": "防御依存型DPS",
+            "kr": "방어력 기반 DPS",
+            "zh": "基于防御力的DPS",
+            "fr": "DPS basé sur la DEF"
+          }
+        },
+        {
+          "names": [
+            "2000108",
+            "2000084",
+            "2000113"
+          ],
+          "reason": {
+            "en": "{B/BT_CALL_BACKUP} and debuff cleanser",
+            "jp": "{B/BT_CALL_BACKUP}持ちでデバフ解除も可能",
+            "kr": "{B/BT_CALL_BACKUP} 보유, 디버프 해제 가능",
+            "zh": "拥有{B/BT_CALL_BACKUP}且可清除Debuff",
+            "fr": "{B/BT_CALL_BACKUP} et purge des debuffs"
+          }
+        },
+        {
+          "names": [
+            "2000012",
+            "2000101",
+            "2000066"
+          ],
+          "reason": {
+            "en": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}",
+            "jp": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}",
+            "kr": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}",
+            "zh": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}",
+            "fr": "{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}"
+          }
+        }
       ]
     },
     {
