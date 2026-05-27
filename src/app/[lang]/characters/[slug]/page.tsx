@@ -2,7 +2,9 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Lang } from '@/lib/i18n/config';
 import { LANGS, GAME_SUFFIX_LANGS } from '@/lib/i18n/config';
-import { createPageMetadata, getMonthYear } from '@/lib/seo';
+import { buildBreadcrumbJsonLd, buildUrl, buildVideoGameCharacterJsonLd, createPageMetadata, getMonthYear } from '@/lib/seo';
+import JsonLd from '@/app/components/seo/JsonLd';
+import BreadcrumbSetter from '@/app/components/ui/BreadcrumbSetter';
 import { getT } from '@/i18n';
 import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners, getCharacterVideos, getCharacterById, resolveIdToSlug } from '@/lib/data/characters';
 import { getExclusiveEquipment, getWeapons, getAmulets, getTalismans, getArmorSets } from '@/lib/data/equipment';
@@ -187,8 +189,24 @@ export default async function CharacterDetailPage({ params }: Props) {
     }
   }
 
+  const characterJsonLd = buildVideoGameCharacterJsonLd({
+    lang,
+    path: `/characters/${slug}`,
+    name: fullname,
+    description: seoDescription,
+    image: `/images/characters/atb/IG_Turn_${character.ID}.webp`,
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: t('nav.home'), url: buildUrl(lang, '/') },
+    { name: t('nav.characters'), url: buildUrl(lang, '/characters') },
+    { name: fullname, url: buildUrl(lang, `/characters/${slug}`) },
+  ]);
+
   return (
     <>
+      <JsonLd data={characterJsonLd} id="ld-character" />
+      <JsonLd data={breadcrumbJsonLd} id="ld-breadcrumb" />
+      <BreadcrumbSetter label={fullname} />
       <p className="sr-only">{seoDescription}</p>
       <CharacterDetailClient
         character={stripOtherLangs(character, lang)}

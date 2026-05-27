@@ -40,22 +40,36 @@ export default function Breadcrumbs() {
     const guideCatKey = segments[i - 1] === 'guides'
       ? `guides.category.${segment}` as TranslationKey
       : undefined;
-    const label = isLast && breadcrumbOverride
-      ? breadcrumbOverride
-      : labelKey ? t(labelKey)
-      : guideCatKey && t(guideCatKey) !== guideCatKey ? t(guideCatKey)
-      : decodeURIComponent(segment);
-    return { path, href: buildHref(path), label, isLast };
+    // `authoritative` = label came from a translation key, not a raw slug fallback.
+    // The client-side override from BreadcrumbSetter isn't present at SSR, so we
+    // don't treat it as authoritative for JSON-LD purposes — detail pages that
+    // need a proper last-segment name emit their own BreadcrumbList server-side.
+    let label: string;
+    let authoritative = true;
+    if (isLast && breadcrumbOverride) {
+      label = breadcrumbOverride;
+    } else if (labelKey) {
+      label = t(labelKey);
+    } else if (guideCatKey && t(guideCatKey) !== guideCatKey) {
+      label = t(guideCatKey);
+    } else {
+      label = decodeURIComponent(segment);
+      authoritative = false;
+    }
+    return { path, href: buildHref(path), label, isLast, authoritative };
   });
 
-  const jsonLd = buildBreadcrumbJsonLd([
-    { name: t('nav.home'), url: buildUrl(lang as Lang, '/') },
-    ...items.map(({ path, label }) => ({ name: label, url: buildUrl(lang as Lang, path) })),
-  ]);
+  const allAuthoritative = items.every((item) => item.authoritative);
+  const jsonLd = allAuthoritative
+    ? buildBreadcrumbJsonLd([
+        { name: t('nav.home'), url: buildUrl(lang as Lang, '/') },
+        ...items.map(({ path, label }) => ({ name: label, url: buildUrl(lang as Lang, path) })),
+      ])
+    : null;
 
   return (
     <nav aria-label="Breadcrumb" className="mx-auto max-w-6xl px-4 pt-4 md:px-6">
-      <JsonLd data={jsonLd} />
+      {jsonLd && <JsonLd data={jsonLd} />}
       <ol className="flex items-center gap-1.5 text-xs text-zinc-500">
         <li>
           <Link href={buildHref('/')} className="hover:text-zinc-300">

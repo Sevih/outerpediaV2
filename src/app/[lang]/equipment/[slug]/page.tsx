@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
-import { createPageMetadata } from '@/lib/seo';
+import { buildBreadcrumbJsonLd, buildEquipmentJsonLd, buildUrl, createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
+import JsonLd from '@/app/components/seo/JsonLd';
+import BreadcrumbSetter from '@/app/components/ui/BreadcrumbSetter';
 import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment, getTalismanStatRanges, getEEStatRange } from '@/lib/data/equipment';
 import { getItemStatRanges, getItemAscendedRanges, getArmorSetStatRanges, getArmorSetAscendedRanges } from '@/lib/data/stat-ranges-v2';
 import type { EquipmentLookup } from '@/lib/data/equipment';
@@ -115,12 +117,18 @@ export async function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { lang: rawLang, slug } = await params;
-  const lang = rawLang as Lang;
-  const equipment = await getEquipmentBySlug(slug);
-  if (!equipment) return {};
+function resolveEquipmentOgImage(equipment: EquipmentLookup): string {
+  switch (equipment.type) {
+    case 'set':
+      return `/images/equipment/TI_Equipment_Armor_${equipment.data.image_prefix}.webp`;
+    case 'ee':
+      return `/images/characters/ee/${equipment.characterId}.webp`;
+    default:
+      return `/images/equipment/${equipment.data.image}.webp`;
+  }
+}
 
+function resolveEquipmentTypeLabel(equipment: EquipmentLookup, lang: Lang): string {
   const name = l(equipment.data, 'name', lang);
   const typeLabelMap = TYPE_LABELS[equipment.type];
   let typeLabel = typeLabelMap?.[lang] ?? typeLabelMap?.en ?? '';
@@ -128,25 +136,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (equipment.type === 'set' && /set$/i.test(name)) {
     typeLabel = { en: 'Armor', jp: '防具', kr: '방어구', zh: '防具', fr: 'Armure' }[lang] ?? 'Armor';
   }
+  return typeLabel;
+}
 
-  let ogImage: string;
-  switch (equipment.type) {
-    case 'set':
-      ogImage = `/images/equipment/TI_Equipment_Armor_${equipment.data.image_prefix}.webp`;
-      break;
-    case 'ee':
-      ogImage = `/images/characters/ee/${equipment.characterId}.webp`;
-      break;
-    default:
-      ogImage = `/images/equipment/${equipment.data.image}.webp`;
-  }
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang: rawLang, slug } = await params;
+  const lang = rawLang as Lang;
+  const equipment = await getEquipmentBySlug(slug);
+  if (!equipment) return {};
+
+  const name = l(equipment.data, 'name', lang);
+  const typeLabel = resolveEquipmentTypeLabel(equipment, lang);
 
   return createPageMetadata({
     lang,
     path: `/equipment/${slug}`,
     title: `${name} — ${typeLabel}`,
     description: `${name} — ${typeLabel} | Outerpedia`,
-    ogImage,
+    ogImage: resolveEquipmentOgImage(equipment),
   });
 }
 
@@ -274,8 +281,27 @@ export default async function EquipmentDetailPage({ params }: Props) {
   const recoNames = recoCharacters.map(r => r.name);
   const seoText = buildSeoText(equipment, lang, bossMap, recoNames);
 
+  const equipName = l(equipment.data, 'name', lang);
+  const equipTypeLabel = resolveEquipmentTypeLabel(equipment, lang);
+  const equipmentJsonLd = buildEquipmentJsonLd({
+    lang,
+    path: `/equipment/${slug}`,
+    name: equipName,
+    category: equipTypeLabel,
+    description: seoText,
+    image: resolveEquipmentOgImage(equipment),
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: messages['nav.home'], url: buildUrl(lang, '/') },
+    { name: messages['nav.equipment'], url: buildUrl(lang, '/equipment') },
+    { name: equipName, url: buildUrl(lang, `/equipment/${slug}`) },
+  ]);
+
   return (
     <>
+      <JsonLd data={equipmentJsonLd} id="ld-equipment" />
+      <JsonLd data={breadcrumbJsonLd} id="ld-breadcrumb" />
+      <BreadcrumbSetter label={equipName} />
       <EquipmentDetailClient
         equipment={equipment}
         recoCharacters={recoCharacters}

@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Tabs from './Tabs';
+import { buildVideoObjectJsonLd } from '@/lib/seo';
+import JsonLd from '@/app/components/seo/JsonLd';
 
 export type VideoPlatform = 'youtube' | 'twitch' | 'bilibili';
 
@@ -48,6 +50,19 @@ function VideoFrame({ video }: { video: VideoItem }) {
   );
 }
 
+function VideoJsonLd({ videos }: { videos: VideoItem[] }) {
+  return (
+    <>
+      {videos.map((v) => (
+        <JsonLd
+          key={`${v.platform}-${v.id}`}
+          data={buildVideoObjectJsonLd({ platform: v.platform, id: v.id, title: v.title, author: v.author })}
+        />
+      ))}
+    </>
+  );
+}
+
 export default function MultiVideoEmbed({ videos, hashPrefix }: Props) {
   const [activeId, setActiveId] = useState(videos[0]?.id ?? '');
 
@@ -57,6 +72,7 @@ export default function MultiVideoEmbed({ videos, hashPrefix }: Props) {
     const v = videos[0];
     return (
       <div className="space-y-2">
+        <VideoJsonLd videos={videos} />
         {(v.author || v.title) && (
           <div className="flex flex-wrap items-center gap-3 text-xs text-zinc-400">
             <span className="font-medium text-zinc-300">{v.title}</span>
@@ -81,6 +97,7 @@ export default function MultiVideoEmbed({ videos, hashPrefix }: Props) {
 
   return (
     <div className="space-y-3">
+      <VideoJsonLd videos={videos} />
       <Tabs
         items={items}
         labels={labels}

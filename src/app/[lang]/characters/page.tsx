@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
 import type { Lang } from '@/lib/i18n/config';
-import { createPageMetadata, getMonthYear } from '@/lib/seo';
+import { buildItemListJsonLd, buildUrl, createPageMetadata, getMonthYear } from '@/lib/seo';
 import { getT, loadMessages } from '@/i18n';
 import { getCharactersForList } from '@/lib/data/characters';
+import { l as loc } from '@/lib/i18n/localize';
+import JsonLd from '@/app/components/seo/JsonLd';
 import CharactersPageClient from './CharactersPageClient';
 
 export const revalidate = 86400;
@@ -30,8 +32,21 @@ export default async function CharactersPage({ params }: Props) {
     getCharactersForList(),
   ]);
 
+  const items = [...characters]
+    .map((c) => ({ name: loc(c, 'Fullname', l), url: buildUrl(l, `/characters/${c.slug}`) }))
+    .sort((a, b) => a.name.localeCompare(b.name, l));
+
+  const itemListJsonLd = buildItemListJsonLd({
+    name: t['page.characters.title'],
+    description: t['page.characters.description'].replace('{monthYear}', getMonthYear(l)),
+    url: buildUrl(l, '/characters'),
+    items,
+    itemListOrder: 'Unordered',
+  });
+
   return (
     <div className="mx-auto max-w-350 px-4 py-6 md:px-6">
+      <JsonLd data={itemListJsonLd} id="ld-characters" />
       <h1 className="mx-auto text-center text-3xl font-bold">{t['page.characters.title']}</h1>
       <p className="mt-2 mb-4 text-center text-sm text-zinc-400">{t['page.characters.description'].replace('{monthYear}', getMonthYear(l))}</p>
       <CharactersPageClient characters={characters} lang={l} />

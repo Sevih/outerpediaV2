@@ -2,16 +2,18 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
-import { createPageMetadata } from '@/lib/seo';
+import { buildArticleJsonLd, buildBreadcrumbJsonLd, buildUrl, createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
 import type { TranslationKey } from '@/i18n';
 import { getGuideMeta, getGuideSlugsWithCategories } from '@/lib/data/guides';
 import { getBoss } from '@/lib/data/bosses';
 import { lRec } from '@/lib/i18n/localize';
+import type { GuideMeta } from '@/types/guide';
 import Link from 'next/link';
 import { localePath } from '@/lib/navigation';
 import BreadcrumbSetter from '@/app/components/ui/BreadcrumbSetter';
 import ShareButtons from '@/app/components/ui/ShareButtons';
+import JsonLd from '@/app/components/seo/JsonLd';
 
 export const revalidate = 86400;
 
@@ -24,23 +26,11 @@ export async function generateStaticParams() {
   );
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { lang: rawLang, slug } = await params;
-  const lang = rawLang as Lang;
-  const [t, guide] = await Promise.all([
-    loadMessages(lang),
-    getGuideMeta(slug),
-  ]);
-
-  if (!guide) return {};
-
-  const metaTitleMap = guide.meta_title ? { ...guide.title, ...guide.meta_title } : guide.title;
-  const title = lRec(metaTitleMap, lang);
-  const description = lRec(guide.description, lang);
-
+async function resolveGuideOgImage(guide: GuideMeta): Promise<{
+  ogImage?: string;
+  ogImageSize?: { width: number; height: number };
+}> {
   const cat = guide.category;
-  const categoryKey = `guides.category.${cat}` as TranslationKey;
-  const categoryTitle = t[categoryKey] ?? cat;
   const hasCustomOg = !!(guide.og_image || guide.boss_id);
 
   // Dimensional Singularity boss portraits are named after the boss's `icons` field,
@@ -70,6 +60,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     else if (cat === 'general-guides') ogImageSize = { width: 150, height: 150 };
   }
 
+  return { ogImage, ogImageSize };
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang: rawLang, slug } = await params;
+  const lang = rawLang as Lang;
+  const [t, guide] = await Promise.all([
+    loadMessages(lang),
+    getGuideMeta(slug),
+  ]);
+
+  if (!guide) return {};
+
+  const metaTitleMap = guide.meta_title ? { ...guide.title, ...guide.meta_title } : guide.title;
+  const title = lRec(metaTitleMap, lang);
+  const description = lRec(guide.description, lang);
+  const categoryKey = `guides.category.${guide.category}` as TranslationKey;
+  const categoryTitle = t[categoryKey] ?? guide.category;
+  const { ogImage, ogImageSize } = await resolveGuideOgImage(guide);
+
   return createPageMetadata({
     lang,
     path: `/guides/${guide.category}/${slug}`,
@@ -91,6 +101,23 @@ export default async function GuideDetailPage({ params }: Props) {
   const categoryKey = `guides.category.${category}` as TranslationKey;
   const categoryTitle = t[categoryKey] ?? category;
   const title = lRec(guide.title, lang);
+  const description = lRec(guide.description, lang);
+  const { ogImage } = await resolveGuideOgImage(guide);
+  const articleJsonLd = buildArticleJsonLd({
+    lang,
+    path: `/guides/${category}/${slug}`,
+    headline: title,
+    description,
+    image: ogImage,
+    author: guide.author,
+    datePublished: guide.last_updated,
+  });
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: t['nav.home'], url: buildUrl(lang, '/') },
+    { name: t['nav.guides'], url: buildUrl(lang, '/guides') },
+    { name: categoryTitle, url: buildUrl(lang, `/guides/${category}`) },
+    { name: title, url: buildUrl(lang, `/guides/${category}/${slug}`) },
+  ]);
 
   // Server-side dynamic import — full HTML in the response
   let GuideContent: React.ComponentType;
@@ -103,6 +130,8 @@ export default async function GuideDetailPage({ params }: Props) {
 
   return (
     <div className="px-4 py-6 md:px-6">
+      <JsonLd data={articleJsonLd} id="ld-article" />
+      <JsonLd data={breadcrumbJsonLd} id="ld-breadcrumb" />
       <BreadcrumbSetter label={title} />
       <Link
         href={localePath(lang, `/guides/${category}`)}

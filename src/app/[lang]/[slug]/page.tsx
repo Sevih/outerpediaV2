@@ -2,13 +2,14 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import type { Lang } from '@/lib/i18n/config';
 import { LANGS } from '@/lib/i18n/config';
-import { createPageMetadata } from '@/lib/seo';
+import { buildBreadcrumbJsonLd, buildUrl, createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
 import type { TranslationKey } from '@/i18n';
 import { getToolMeta, getToolSlugs, isDev } from '@/lib/data/tools';
 import Link from 'next/link';
 import { localePath } from '@/lib/navigation';
 import BreadcrumbSetter from '@/app/components/ui/BreadcrumbSetter';
+import JsonLd from '@/app/components/seo/JsonLd';
 
 export const revalidate = 86400;
 
@@ -58,6 +59,10 @@ export default async function ToolDetailPage({ params }: Props) {
   const descKey = `tools.${slug}.desc` as TranslationKey;
   const title = t[titleKey] ?? slug;
   const description = t[descKey] ?? '';
+  const breadcrumbJsonLd = buildBreadcrumbJsonLd([
+    { name: t['nav.home'], url: buildUrl(lang, '/') },
+    { name: title, url: buildUrl(lang, `/${slug}`) },
+  ]);
 
   let ToolContent: React.ComponentType;
   try {
@@ -69,6 +74,7 @@ export default async function ToolDetailPage({ params }: Props) {
 
   return (
     <div className="px-4 py-6 md:px-6">
+      <JsonLd data={breadcrumbJsonLd} id="ld-breadcrumb" />
       <BreadcrumbSetter label={title} />
       <Link
         href={localePath(lang, '/tools')}

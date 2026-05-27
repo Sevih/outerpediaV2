@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import type { Lang } from '@/lib/i18n/config';
-import { createPageMetadata } from '@/lib/seo';
+import { buildBlogJsonLd, createPageMetadata } from '@/lib/seo';
 import { loadMessages } from '@/i18n';
 import { getChangelog, CHANGELOG_TYPE_STYLES } from '@/lib/changelog';
 import type { TranslationKey } from '@/i18n/locales/en';
 import { localePath } from '@/lib/navigation';
+import JsonLd from '@/app/components/seo/JsonLd';
 
 export const revalidate = 86400;
 
@@ -26,9 +27,17 @@ export default async function ChangelogPage({ params }: Props) {
   const { lang } = await params;
   const t = await loadMessages(lang as Lang);
   const entries = getChangelog(lang as Lang);
+  const blogJsonLd = buildBlogJsonLd({
+    lang: lang as Lang,
+    path: '/changelog',
+    name: t['changelog.title'],
+    description: t['changelog.description'],
+    entries,
+  });
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-6 md:px-6">
+      <JsonLd data={blogJsonLd} id="ld-blog" />
       <h1 className="mx-auto mb-8 text-center text-3xl font-bold">
         {t['changelog.title']}
         <span className="sr-only">{` — Outerplane Updates & Patch Notes`}</span>
