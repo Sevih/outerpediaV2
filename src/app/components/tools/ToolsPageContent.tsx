@@ -109,7 +109,6 @@ export default function ToolsPageContent({ groups, lang, t, devMode }: Props) {
       {/* Sections */}
       {visibleGroups.map(({ category, tools }) => {
         const key = asAccentKey(category.slug);
-        const accent = CATEGORY_ACCENT[key];
         const catLabel = t[`tools.category.${category.slug}` as TranslationKey] ?? category.slug;
         return (
           <section key={category.slug} className="flex flex-col gap-3">
@@ -133,11 +132,6 @@ export default function ToolsPageContent({ groups, lang, t, devMode }: Props) {
                   category={key}
                 />
               ))}
-            </div>
-            {/* Subtle bottom rule with accent dot */}
-            <div className="mt-1 flex items-center gap-2 opacity-50">
-              <span className={`size-1 rounded-full ${accent.dot}`} aria-hidden />
-              <span className="h-px flex-1 bg-zinc-800" aria-hidden />
             </div>
           </section>
         );
@@ -207,7 +201,6 @@ function SectionHeader({
         className={`absolute -bottom-px left-0 h-0.5 w-10 rounded-full ${accent.stripe}`}
         aria-hidden
       />
-      <span className={`size-2 rounded-full ${accent.dot}`} aria-hidden />
       <h2 className={`text-base font-semibold tracking-tight ${accent.text} after:hidden`}>
         {label}
       </h2>

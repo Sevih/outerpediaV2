@@ -9,13 +9,11 @@ import { guideAccent } from '../guidesTheme';
 
 type TierKey = 'first-steps' | 'pulls' | 'economy' | 'heroes-gear';
 
-type TierDef = { key: TierKey; n: string };
-
-const TIERS: TierDef[] = [
-  { key: 'first-steps', n: '01' },
-  { key: 'pulls',       n: '02' },
-  { key: 'economy',     n: '03' },
-  { key: 'heroes-gear', n: '04' },
+const TIERS: { key: TierKey }[] = [
+  { key: 'first-steps' },
+  { key: 'pulls' },
+  { key: 'economy' },
+  { key: 'heroes-gear' },
 ];
 
 /**
@@ -54,35 +52,18 @@ export default function GeneralGuidesList({ guides, lang, t }: CategoryViewProps
     items: withTier.filter((x) => x.tier === def.key),
   })).filter((bucket) => bucket.items.length > 0);
 
-  const counterLabel = t['guides.general.counter']
-    .replace('{guides}', String(sorted.length))
-    .replace('{tiers}', String(tiers.length));
-
   return (
     <div className="mt-6 flex flex-col gap-10">
-      <div className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-zinc-500">
-        <span className={`size-1.5 rounded-full ${accent.dot}`} aria-hidden />
-        <span>{counterLabel}</span>
-      </div>
-
       {tiers.map(({ def, items }) => {
         const labelKey = `guides.general.tier.${def.key}.label` as TranslationKey;
-        const taglineKey = `guides.general.tier.${def.key}.tagline` as TranslationKey;
         const label = t[labelKey] ?? def.key;
-        const tagline = t[taglineKey] ?? '';
         return (
           <section key={def.key} className="flex flex-col gap-5">
-            <header className="relative flex flex-col gap-2 border-b border-zinc-800 pb-3 md:flex-row md:items-baseline md:justify-between md:gap-4">
+            <header className="relative border-b border-zinc-800 pb-3">
               <span className={`absolute -bottom-px left-0 h-0.5 w-12 rounded-full ${accent.stripe}`} aria-hidden />
-              <div className="flex items-center gap-3">
-                <span className={`size-2 rounded-full ${accent.dot}`} aria-hidden />
-                <span className={`font-mono text-[11px] font-semibold uppercase tracking-[0.18em] ${accent.text}`}>
-                  {t['guides.general.tier.prefix']} {def.n} · {label}
-                </span>
-              </div>
-              {tagline && (
-                <p className="text-sm text-zinc-400 md:text-right">{tagline}</p>
-              )}
+              <span className={`font-mono text-[11px] font-semibold uppercase tracking-[0.18em] ${accent.text}`}>
+                {label}
+              </span>
             </header>
 
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">

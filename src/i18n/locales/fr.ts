@@ -576,16 +576,10 @@ const fr: Record<TranslationKey, string> = {
   'guides.count.many': '{count} GUIDES',
 
   // /guides/general-guides — parcours pédagogique en paliers
-  'guides.general.counter': '{guides} guides · {tiers} paliers · mis à jour chaque semaine',
-  'guides.general.tier.prefix': 'PALIER',
   'guides.general.tier.first-steps.label': 'Premiers pas',
-  'guides.general.tier.first-steps.tagline': 'Héros gratuits, bannière de départ, et les questions que se pose tout nouveau joueur.',
   'guides.general.tier.pulls.label': 'Bannières & pulls',
-  'guides.general.tier.pulls.tagline': 'Types de bannières, mileage, priorités de pulls, et les héros à viser en premier.',
   'guides.general.tier.economy.label': 'Ressources & routine quotidienne',
-  'guides.general.tier.economy.tagline': 'D\'où vient votre Ether, sur quoi dépenser la stamina, et l\'ordre pour débloquer le contenu.',
   'guides.general.tier.heroes-gear.label': 'Héros & gear',
-  'guides.general.tier.heroes-gear.tagline': 'Growth des héros, gear, quirks, et les maths de combat derrière chaque fight.',
 
   'guides.tips.tactical': 'Conseils tactiques',
   'guides.tips.strategy': 'Stratégie',

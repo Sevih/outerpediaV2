@@ -576,16 +576,10 @@ const jp: Record<TranslationKey, string> = {
   'guides.count.many': 'ガイド{count}件',
 
   // /guides/general-guides — 段階別カリキュラム
-  'guides.general.counter': 'ガイド{guides}件 · {tiers}段階 · 毎週更新',
-  'guides.general.tier.prefix': 'TIER',
   'guides.general.tier.first-steps.label': '最初のステップ',
-  'guides.general.tier.first-steps.tagline': '無料ヒーロー、スタートバナー、そして新規プレイヤーが最初に抱く疑問。',
   'guides.general.tier.pulls.label': 'バナー & ガチャ',
-  'guides.general.tier.pulls.tagline': 'バナーの種類、マイレージ、ガチャ優先度、そして最初に狙うべきヒーロー。',
   'guides.general.tier.economy.label': 'リソース & デイリー',
-  'guides.general.tier.economy.tagline': 'エーテルの入手元、スタミナの使い道、そしてコンテンツ解放の順番。',
   'guides.general.tier.heroes-gear.label': 'ヒーロー & 装備',
-  'guides.general.tier.heroes-gear.tagline': '育成、装備、クァーク、そしてその裏にあるすべての戦闘計算式。',
 
   'guides.tips.tactical': '戦術のヒント',
   'guides.tips.strategy': '戦略',

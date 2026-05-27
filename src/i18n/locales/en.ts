@@ -576,16 +576,10 @@ const en = {
   'guides.count.many': '{count} GUIDES',
 
   // /guides/general-guides — tiered curriculum
-  'guides.general.counter': '{guides} guides · {tiers} tiers · updated weekly',
-  'guides.general.tier.prefix': 'TIER',
   'guides.general.tier.first-steps.label': 'First Steps',
-  'guides.general.tier.first-steps.tagline': 'Free heroes, the starter banner, and the questions every new player asks first.',
   'guides.general.tier.pulls.label': 'Banners & Pulls',
-  'guides.general.tier.pulls.tagline': 'Banner types, mileage, pull priorities, and which heroes are worth chasing first.',
   'guides.general.tier.economy.label': 'Resources & Daily Loop',
-  'guides.general.tier.economy.tagline': 'Where your Ether comes from, what to spend stamina on, and the order to unlock new content.',
   'guides.general.tier.heroes-gear.label': 'Heroes & Gear',
-  'guides.general.tier.heroes-gear.tagline': 'Hero growth, gear, quirks, and the combat math behind every fight.',
 
   'guides.tips.tactical': 'Tactical Tips',
   'guides.tips.strategy': 'Strategy',

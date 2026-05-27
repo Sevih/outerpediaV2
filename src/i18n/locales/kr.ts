@@ -576,16 +576,10 @@ const kr: Record<TranslationKey, string> = {
   'guides.count.many': '가이드 {count}개',
 
   // /guides/general-guides — 단계별 학습 코스
-  'guides.general.counter': '가이드 {guides}개 · {tiers}단계 · 매주 업데이트',
-  'guides.general.tier.prefix': 'TIER',
   'guides.general.tier.first-steps.label': '첫 걸음',
-  'guides.general.tier.first-steps.tagline': '무료 영웅, 스타터 배너, 그리고 새 플레이어가 가장 먼저 묻는 것들.',
   'guides.general.tier.pulls.label': '배너 & 뽑기',
-  'guides.general.tier.pulls.tagline': '배너 종류, 마일리지, 뽑기 우선순위, 그리고 먼저 노려야 할 영웅.',
   'guides.general.tier.economy.label': '자원 & 데일리 루틴',
-  'guides.general.tier.economy.tagline': '에테르 출처, 스태미나 사용처, 그리고 콘텐츠 해금 순서.',
   'guides.general.tier.heroes-gear.label': '영웅 & 장비',
-  'guides.general.tier.heroes-gear.tagline': '영웅 성장, 장비, 쿼크, 그 뒤의 모든 전투 계산식.',
 
   'guides.tips.tactical': '전술 팁',
   'guides.tips.strategy': '전략',

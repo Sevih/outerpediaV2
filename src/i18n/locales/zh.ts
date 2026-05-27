@@ -576,16 +576,10 @@ const zh: Record<TranslationKey, string> = {
   'guides.count.many': '{count} 攻略',
 
   // /guides/general-guides — 阶段式学习路径
-  'guides.general.counter': '{guides} 个攻略 · {tiers} 个阶段 · 每周更新',
-  'guides.general.tier.prefix': 'TIER',
   'guides.general.tier.first-steps.label': '入门',
-  'guides.general.tier.first-steps.tagline': '免费角色、起始卡池，以及新玩家最先想问的一切。',
   'guides.general.tier.pulls.label': '卡池 & 抽卡',
-  'guides.general.tier.pulls.tagline': '卡池类型、里程数、抽卡优先级，以及优先追求的角色。',
   'guides.general.tier.economy.label': '资源 & 日常',
-  'guides.general.tier.economy.tagline': '以太来源、体力分配，以及内容解锁的顺序。',
   'guides.general.tier.heroes-gear.label': '角色 & 装备',
-  'guides.general.tier.heroes-gear.tagline': '角色养成、装备、Quirk 系统，与背后的全部战斗算法。',
 
   'guides.tips.tactical': '战术提示',
   'guides.tips.strategy': '策略',
