@@ -4,6 +4,8 @@ import { PATHS } from './config';
 type Step = {
   name: string;
   run: () => Promise<string | void>;
+  /** Skipped on `--prod` builds (e.g. fetches that rely on a dev-only API key). */
+  devOnly?: boolean;
 };
 
 // Pipeline steps — executed in order
@@ -45,6 +47,7 @@ const steps: Step[] = [
   { name: 'gear-finder-index', run: () => import('./steps/gear-finder-index').then(m => m.run()) },
   { name: 'event-registry', run: () => import('./steps/event-registry').then(m => m.run()) },
   { name: 'tower-data', run: () => import('./steps/tower-data').then(m => m.run()) },
+  { name: 'video-meta', devOnly: true, run: () => import('./steps/video-meta').then(m => m.run()) },
   { name: 'validate-reco', run: () => import('./steps/validate-reco').then(m => m.run()) },
 ];
 
@@ -54,6 +57,7 @@ async function main() {
   const args = process.argv.slice(2);
   const stepFilter = args.includes('--step') ? args[args.indexOf('--step') + 1] : null;
   const validateOnly = args.includes('--validate');
+  const isProd = args.includes('--prod');
 
   const compact = process.stdout.isTTY && !process.argv.includes('--verbose');
 
@@ -73,11 +77,15 @@ async function main() {
     return;
   }
 
-  const toRun = validateOnly
+  const selected = validateOnly
     ? steps.filter(s => s.name === 'validate')
     : stepFilter
       ? steps.filter(s => s.name === stepFilter)
       : steps;
+
+  // Drop dev-only steps on prod builds (they rely on a dev-only API key and
+  // the artifacts they produce are committed).
+  const toRun = isProd ? selected.filter(s => !s.devOnly) : selected;
 
   if (toRun.length === 0) {
     console.error(`  Step "${stepFilter || 'validate'}" not found.`);

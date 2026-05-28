@@ -4,6 +4,10 @@ import { useState } from 'react';
 import Tabs from './Tabs';
 import { buildVideoObjectJsonLd } from '@/lib/seo';
 import JsonLd from '@/app/components/seo/JsonLd';
+import videoMeta from '@data/generated/video-meta.json';
+
+type VideoMeta = { uploadDate: string; title: string; author: string };
+const VIDEO_META = videoMeta as Record<string, VideoMeta>;
 
 export type VideoPlatform = 'youtube' | 'twitch' | 'bilibili';
 
@@ -51,12 +55,22 @@ function VideoFrame({ video }: { video: VideoItem }) {
 }
 
 function VideoJsonLd({ videos }: { videos: VideoItem[] }) {
+  // Only emit VideoObject when we have an uploadDate — Google rejects the
+  // schema without it. Meta comes from data/video-meta.json (YouTube only).
+  const withMeta = videos.filter((v) => VIDEO_META[v.id]);
+  if (withMeta.length === 0) return null;
   return (
     <>
-      {videos.map((v) => (
+      {withMeta.map((v) => (
         <JsonLd
           key={`${v.platform}-${v.id}`}
-          data={buildVideoObjectJsonLd({ platform: v.platform, id: v.id, title: v.title, author: v.author })}
+          data={buildVideoObjectJsonLd({
+            platform: v.platform,
+            id: v.id,
+            title: v.title,
+            author: v.author,
+            uploadDate: VIDEO_META[v.id].uploadDate,
+          })}
         />
       ))}
     </>

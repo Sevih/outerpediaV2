@@ -24,6 +24,9 @@ import CoreFusionBanner from '@/app/components/character/CoreFusionBanner';
 import type { CoreFusionLink } from '@/app/components/character/CoreFusionBanner';
 import ReviewsSection from '@/app/components/character/ReviewsSection';
 import MultiVideoEmbed, { type VideoItem } from '@/app/components/ui/MultiVideoEmbed';
+import videoMeta from '@data/generated/video-meta.json';
+
+const VIDEO_META = videoMeta as Record<string, { uploadDate: string; title: string; author: string }>;
 
 type TagEntry = {
   label: string;
@@ -88,10 +91,14 @@ export default function CharacterDetailClient({
   const videos = useMemo<VideoItem[]>(() => {
     const list: VideoItem[] = [];
     if (character.video) {
+      // The character `video` field is a raw ID with no title/author; pull the
+      // real ones from video-meta when available, falling back to the generic label.
+      const meta = VIDEO_META[character.video];
       list.push({
         platform: 'youtube',
         id: character.video,
-        title: t('page.character.toc.video'),
+        title: meta?.title ?? t('page.character.toc.video'),
+        ...(meta?.author && { author: meta.author }),
       });
     }
     list.push(...extraVideos);

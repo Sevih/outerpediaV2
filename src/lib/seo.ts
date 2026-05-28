@@ -309,16 +309,17 @@ export function buildItemListJsonLd(opts: {
 }
 
 /**
- * VideoObject for an embedded video. `uploadDate` is intentionally omitted
- * (we don't have it in the data); the resulting schema is valid schema.org
- * but not eligible for Google's video rich result carousel — the value here
- * is entity linking for LLM crawlers, not SERP enrichment.
+ * VideoObject for an embedded video. `uploadDate` (required by Google) is
+ * resolved from data/video-meta.json via the fetch-video-meta script.
+ * Callers should only emit this when an uploadDate is available — otherwise
+ * Google flags the schema as invalid (missing required field).
  */
 export function buildVideoObjectJsonLd(opts: {
   platform: 'youtube' | 'twitch' | 'bilibili';
   id: string;
   title: string;
   author?: string;
+  uploadDate?: string;
 }): JsonLdNode {
   let embedUrl: string;
   let contentUrl: string | undefined;
@@ -347,6 +348,7 @@ export function buildVideoObjectJsonLd(opts: {
   };
   if (contentUrl) node.contentUrl = contentUrl;
   if (thumbnailUrl) node.thumbnailUrl = thumbnailUrl;
+  if (opts.uploadDate) node.uploadDate = opts.uploadDate;
   if (opts.author) node.author = { '@type': 'Person', name: opts.author };
   return node;
 }
