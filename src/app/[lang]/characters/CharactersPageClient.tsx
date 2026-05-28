@@ -747,7 +747,7 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     showUniqueEffects,
     onToggleShowUnique: () => setShowUniqueEffects(v => !v),
     teamBonusFilter,
-    onSetTeamBonus: setTeamBonusFilter,
+    onToggleTeamBonus: (v: string) => toggleArray(setTeamBonusFilter, v),
     teamBonusOptions: TEAM_BONUSES_UI,
     tagGroups: drawerTagGroups,
     tagFilter,

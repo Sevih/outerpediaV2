@@ -9,7 +9,7 @@ import type { Effect } from '@/types/effect';
 import type { RoleType, SkillKey, ChainType, GiftType } from '@/types/enums';
 import { CHAIN_TYPES, CHAIN_TYPE_LABELS, ROLES, GIFTS, GIFT_LABELS, SKILL_SOURCES } from '@/types/enums';
 import { l } from '@/lib/i18n/localize';
-import { FilterPill, FilterSelect } from '@/app/components/ui/FilterPills';
+import { FilterPill } from '@/app/components/ui/FilterPills';
 import type { FilterSelectOption } from '@/app/components/ui/FilterPills';
 import { EffectGroupGrid } from './EffectGroupGrid';
 import { LogicToggle, Eyebrow, TONE } from './FilterAtoms';
@@ -60,7 +60,7 @@ export type AdvancedFiltersPanelProps = {
 
   // Team Bonus
   teamBonusFilter: string[];
-  onSetTeamBonus: (v: string[]) => void;
+  onToggleTeamBonus: (v: string) => void;
   teamBonusOptions: FilterSelectOption[];
 
   // Tags
@@ -85,7 +85,7 @@ export default function AdvancedFiltersPanel(props: AdvancedFiltersPanelProps) {
     selectedBuffs, onToggleBuff, selectedDebuffs, onToggleDebuff,
     effectLogic, onEffectLogicChange, effectsLoaded,
     sourceFilter, onToggleSource, showUniqueEffects, onToggleShowUnique,
-    teamBonusFilter, onSetTeamBonus, teamBonusOptions,
+    teamBonusFilter, onToggleTeamBonus, teamBonusOptions,
     tagGroups, tagFilter, onToggleTag, tagLogic, onTagLogicChange, tagsLoaded,
   } = props;
 
@@ -177,8 +177,8 @@ export default function AdvancedFiltersPanel(props: AdvancedFiltersPanelProps) {
         )}
         {activeTab === 'bonus' && (
           <BonusTab
-            value={teamBonusFilter[0] ?? null}
-            onChange={v => onSetTeamBonus(v ? [v] : [])}
+            selected={teamBonusFilter}
+            onToggle={onToggleTeamBonus}
             options={teamBonusOptions}
           />
         )}
@@ -364,22 +364,33 @@ function EffectsTab({
 }
 
 function BonusTab({
-  value, onChange, options,
+  selected, onToggle, options,
 }: {
-  value: string | null;
-  onChange: (v: string | null) => void;
+  selected: string[];
+  onToggle: (v: string) => void;
   options: FilterSelectOption[];
 }) {
   const { t } = useI18n();
   return (
     <div className="space-y-3">
       <SectionLabel>{t('characters.filters.teamBonus')}</SectionLabel>
-      <FilterSelect
-        placeholder={t('common.all')}
-        options={options}
-        value={value}
-        onChange={onChange}
-      />
+      <div className="flex flex-wrap gap-2">
+        {options.map(opt => (
+          <FilterPill
+            key={opt.value}
+            active={selected.includes(opt.value)}
+            onClick={() => onToggle(opt.value)}
+            className="h-8 gap-1.5 px-2.5"
+          >
+            {opt.image && (
+              <span className="relative size-4 shrink-0">
+                <Image src={opt.image} alt="" fill sizes="16px" className="object-contain" />
+              </span>
+            )}
+            <span>{opt.label}</span>
+          </FilterPill>
+        ))}
+      </div>
     </div>
   );
 }
