@@ -10,6 +10,7 @@ import { useI18n } from '@/lib/contexts/I18nContext';
 import type { TranslationKey } from '@/i18n/locales/en';
 import ShareButtons from '@/app/components/ui/ShareButtons';
 import { elementAccent } from './characterDetailTheme';
+import FullArtCarousel, { type FullArt } from './FullArtCarousel';
 
 type TagEntry = {
   label: string;
@@ -23,11 +24,12 @@ type Props = {
   character: Character;
   profile: CharacterProfile | null;
   tags: Record<string, TagEntry>;
+  fullArts: FullArt[];
 };
 
 const UNIT_TYPE_ORDER = ['premium', 'limited', 'seasonal', 'collab', 'free'] as const;
 
-export default function OverviewSection({ character, profile, tags }: Props) {
+export default function OverviewSection({ character, profile, tags, fullArts }: Props) {
   const { lang, t } = useI18n();
   const { hex } = elementAccent(character.Element);
   const fullname = l(character, 'Fullname', lang);
@@ -56,16 +58,7 @@ export default function OverviewSection({ character, profile, tags }: Props) {
     >
       <div className="mx-auto grid max-w-330 grid-cols-1 gap-8 px-4 py-8 md:px-6 lg:grid-cols-[360px_1fr] lg:gap-14 lg:px-8 lg:py-14">
         {/* Full-body art */}
-        <div className="relative mx-auto aspect-6/7 w-full max-w-90 shrink-0 lg:mx-0">
-          <Image
-            src={`/images/characters/full/IMG_${character.ID}.webp`}
-            alt={fullname}
-            fill
-            sizes="(max-width: 1024px) 90vw, 360px"
-            priority
-            className="object-contain"
-          />
-        </div>
+        <FullArtCarousel items={fullArts} hex={hex} />
 
         {/* Meta column */}
         <div className="flex min-w-0 flex-col gap-5 lg:pt-3">

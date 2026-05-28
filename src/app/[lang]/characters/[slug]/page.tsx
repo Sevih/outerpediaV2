@@ -6,7 +6,7 @@ import { buildBreadcrumbJsonLd, buildUrl, buildVideoGameCharacterJsonLd, createP
 import JsonLd from '@/app/components/seo/JsonLd';
 import BreadcrumbSetter from '@/app/components/ui/BreadcrumbSetter';
 import { getT } from '@/i18n';
-import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners, getCharacterVideos, getCharacterById, resolveIdToSlug } from '@/lib/data/characters';
+import { getCharacter, getCharacterSlugs, getCharacterReco, getRecoPresets, getCharacterProfile, getCharacterStats, getCharacterProsCons, getCharacterPartners, getCharacterVideos, getCharacterById, getCharacterSkins, resolveIdToSlug } from '@/lib/data/characters';
 import { getExclusiveEquipment, getWeapons, getAmulets, getTalismans, getArmorSets } from '@/lib/data/equipment';
 import { getReviewsForCharacter } from '@/lib/data/reviews';
 import { getBossDisplayMap } from '@/lib/data/bosses';
@@ -14,10 +14,12 @@ import { resolveRecoPresets } from '@/lib/data/reco';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getGiftItems } from '@/lib/data/gifts';
 import type { Effect } from '@/types/effect';
-import { l, stripOtherLangs, stripOtherLangsArray, stripOtherLangsRecord } from '@/lib/i18n/localize';
+import { l, lRec, stripOtherLangs, stripOtherLangsArray, stripOtherLangsRecord } from '@/lib/i18n/localize';
 import { readFile } from 'fs/promises';
+import { existsSync } from 'fs';
 import { join } from 'path';
 import type { CoreFusionLink } from '@/app/components/character/CoreFusionBanner';
+import type { FullArt } from '@/app/components/character/FullArtCarousel';
 import CharacterDetailClient from './CharacterDetailClient';
 
 export const revalidate = 86400;
@@ -84,7 +86,7 @@ export default async function CharacterDetailPage({ params }: Props) {
   const { lang: rawLang, slug } = await params;
   const lang = rawLang as Lang;
 
-  const [character, reco, recoPresets, prosCons, partners, extraVideos, eeMap, allWeapons, allAmulets, allTalismans, allSets, tagsRaw, giftItemsMap, buffsArr, debuffsArr, reviews] = await Promise.all([
+  const [character, reco, recoPresets, prosCons, partners, extraVideos, eeMap, allWeapons, allAmulets, allTalismans, allSets, tagsRaw, giftItemsMap, buffsArr, debuffsArr, reviews, allSkins] = await Promise.all([
     getCharacter(slug),
     getCharacterReco(slug),
     getRecoPresets(),
@@ -103,6 +105,7 @@ export default async function CharacterDetailPage({ params }: Props) {
     getBuffs(),
     getDebuffs(),
     getReviewsForCharacter(slug),
+    getCharacterSkins(),
   ]);
 
   if (!character) notFound();
@@ -164,6 +167,28 @@ export default async function CharacterDetailPage({ params }: Props) {
   const giftItems = giftItemsMap[character.gift as keyof typeof giftItemsMap] ?? [];
 
   const fullname = l(character, 'Fullname', lang);
+
+  // Default art + any skins that have a full-body render on disk. Core-fusion
+  // characters inherit the original character's skins (keyed under its ID).
+  const fullArts: FullArt[] = [
+    { src: `/images/characters/full/IMG_${character.ID}.webp`, alt: fullname, label: null },
+  ];
+  const skinSourceIds = new Set<string>([character.ID]);
+  if (character.originalCharacter) skinSourceIds.add(character.originalCharacter);
+  const seenModels = new Set<string>();
+  for (const sourceId of skinSourceIds) {
+    for (const skin of allSkins[sourceId] ?? []) {
+      if (skinSourceIds.has(skin.modelNameID)) continue; // default costume = base art
+      if (seenModels.has(skin.modelNameID)) continue;
+      const rel = `images/download/HeroFullArt/IMG_${skin.modelNameID}.webp`;
+      if (existsSync(join(process.cwd(), 'public', rel))) {
+        seenModels.add(skin.modelNameID);
+        const skinName = lRec(skin.name, lang);
+        fullArts.push({ src: `/${rel}`, alt: skinName || fullname, label: skinName || null });
+      }
+    }
+  }
+
   const element = t(`sys.element.${character.Element.toLowerCase()}` as Parameters<typeof t>[0]);
   const classType = t(`sys.class.${character.Class.toLowerCase()}` as Parameters<typeof t>[0]);
   const seoDescription = t('page.character.meta_description', { name: fullname, monthYear: getMonthYear(lang), element, classType });
@@ -211,6 +236,7 @@ export default async function CharacterDetailPage({ params }: Props) {
       <CharacterDetailClient
         character={stripOtherLangs(character, lang)}
         profile={profile}
+        fullArts={fullArts}
         stats={stats}
         ee={ee ? stripOtherLangs(ee, lang) : null}
         reco={resolvedReco}

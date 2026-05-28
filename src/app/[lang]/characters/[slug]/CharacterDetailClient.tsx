@@ -14,6 +14,7 @@ import QuickToc, { type TocSection } from '@/app/components/character/QuickToc';
 import CharacterSectionHeader from '@/app/components/character/CharacterSectionHeader';
 import { elementAccent } from '@/app/components/character/characterDetailTheme';
 import OverviewSection from '@/app/components/character/OverviewSection';
+import type { FullArt } from '@/app/components/character/FullArtCarousel';
 import StatsRankingSection from '@/app/components/character/StatsRankingSection';
 import EeSection from '@/app/components/character/EeSection';
 import SkillsSection from '@/app/components/character/SkillsSection';
@@ -41,6 +42,7 @@ type TagEntry = {
 type Props = {
   character: Character;
   profile: CharacterProfile | null;
+  fullArts: FullArt[];
   stats: CharacterStats | null;
   ee: ExclusiveEquipment | null;
   reco: ResolvedCharacterReco | null;
@@ -65,6 +67,7 @@ type Sec = { anchor: string; titleKey: TranslationKey; body: ReactNode; row?: st
 export default function CharacterDetailClient({
   character,
   profile,
+  fullArts,
   stats,
   ee,
   reco,
@@ -161,7 +164,7 @@ export default function CharacterDetailClient({
       )}
 
       <div className="cd-page" style={{ '--cd-el': hex } as React.CSSProperties}>
-        <OverviewSection character={character} profile={profile} tags={tags} />
+        <OverviewSection character={character} profile={profile} tags={tags} fullArts={fullArts} />
 
         {coreFusionLink && (
           <div className="mx-auto max-w-330 px-4 md:px-6 lg:px-8">
