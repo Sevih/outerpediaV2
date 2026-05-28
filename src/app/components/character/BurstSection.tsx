@@ -29,7 +29,7 @@ type SkillBurstGroup = {
 };
 
 export default function BurstSection({ character }: Props) {
-  const { lang, t } = useI18n();
+  const { lang } = useI18n();
 
   const groups = useMemo<SkillBurstGroup[]>(() => {
     const result: SkillBurstGroup[] = [];
@@ -59,14 +59,11 @@ export default function BurstSection({ character }: Props) {
   if (!groups.length) return null;
 
   return (
-    <section id="burst">
-      <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.burst')}</h2>
-
-      <div className="space-y-6">
-        {groups.map((group) => (
-          <div key={group.skillIcon}>
-            {/* Burst cards */}
-            <div className="flex flex-wrap justify-center gap-4">
+    <div className="flex flex-col gap-6">
+      {groups.map((group) => (
+        <div key={group.skillIcon}>
+          {/* Burst cards */}
+          <div className="flex flex-wrap justify-center gap-4">
               {group.bursts.map((burst) => (
                 <div
                   key={burst.level}
@@ -98,7 +95,6 @@ export default function BurstSection({ character }: Props) {
             </div>
           </div>
         ))}
-      </div>
-    </section>
+    </div>
   );
 }

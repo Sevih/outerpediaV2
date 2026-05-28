@@ -271,6 +271,28 @@ body {
       top: var(--pin-top-lg);
     }
   }
+
+  /* Character page: discreet element-tinted top accent on cards (--cd-el set on .cd-page) */
+  .cd-page .card {
+    position: relative;
+  }
+  .cd-page .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      var(--cd-el, transparent) 0%,
+      color-mix(in srgb, var(--cd-el, transparent) 25%, transparent) 45%,
+      transparent 85%
+    );
+  }
 }
 
 /* Fix perf: background-attachment fixed causes repaints on mobile Safari */

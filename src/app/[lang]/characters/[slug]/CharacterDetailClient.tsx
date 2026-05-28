@@ -1,19 +1,21 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useMemo, type ReactNode } from 'react';
 import type { Character, CharacterProfile, CharacterProsCons, CharacterStats, CharacterSynergies, CharacterVideo } from '@/types/character';
 import type { ExclusiveEquipment, ResolvedCharacterReco, BossDisplayMap } from '@/types/equipment';
 import type { Weapon, Amulet, Talisman, ArmorSet } from '@/types/equipment';
 import type { Item } from '@/types/item';
 import type { Effect } from '@/types/effect';
 import type { Review } from '@/types/review';
+import type { TranslationKey } from '@/i18n/locales/en';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { EffectsProvider } from '@/app/components/character/BuffDebuffDisplay';
 import QuickToc, { type TocSection } from '@/app/components/character/QuickToc';
+import CharacterSectionHeader from '@/app/components/character/CharacterSectionHeader';
+import { elementAccent } from '@/app/components/character/characterDetailTheme';
 import OverviewSection from '@/app/components/character/OverviewSection';
 import StatsRankingSection from '@/app/components/character/StatsRankingSection';
 import EeSection from '@/app/components/character/EeSection';
-import TranscendenceSection from '@/app/components/character/TranscendenceSection';
 import SkillsSection from '@/app/components/character/SkillsSection';
 import BurstSection from '@/app/components/character/BurstSection';
 import ChainDualSection from '@/app/components/character/ChainDualSection';
@@ -58,6 +60,8 @@ type Props = {
   extraVideos: CharacterVideo[];
 };
 
+type Sec = { anchor: string; titleKey: TranslationKey; body: ReactNode; row?: string; noHeader?: boolean };
+
 export default function CharacterDetailClient({
   character,
   profile,
@@ -80,19 +84,21 @@ export default function CharacterDetailClient({
   extraVideos,
 }: Props) {
   const { t } = useI18n();
+  const element = character.Element;
+  const { hex } = elementAccent(element);
 
   const hasProsCons = !!prosCons && (prosCons.pros.length > 0 || prosCons.cons.length > 0);
   const hasEe = !!ee;
-  const hasTranscend = !!character.transcend;
   const hasChainPassive = !!character.skills.SKT_CHAIN_PASSIVE;
   const hasSynergies = !!partners && partners.partner.length > 0;
   const hasReviews = reviews.length > 0;
+  const hasBurst = !!(['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE'] as const).find(
+    (k) => character.skills[k]?.burnEffect && Object.keys(character.skills[k]!.burnEffect!).length > 0
+  );
 
   const videos = useMemo<VideoItem[]>(() => {
     const list: VideoItem[] = [];
     if (character.video) {
-      // The character `video` field is a raw ID with no title/author; pull the
-      // real ones from video-meta when available, falling back to the generic label.
       const meta = VIDEO_META[character.video];
       list.push({
         platform: 'youtube',
@@ -105,26 +111,46 @@ export default function CharacterDetailClient({
     return list;
   }, [character.video, extraVideos, t]);
   const hasVideo = videos.length > 0;
-  const hasBurst = !!(['SKT_FIRST', 'SKT_SECOND', 'SKT_ULTIMATE'] as const).find(
-    (k) => character.skills[k]?.burnEffect && Object.keys(character.skills[k]!.burnEffect!).length > 0
-  );
 
-  const sections = useMemo<TocSection[]>(() => {
-    return [
-      { id: 'overview', label: t('page.character.toc.overview') },
-      hasProsCons && { id: 'pros-cons', label: t('page.character.toc.pros_cons') },
-      { id: 'stats-ranking', label: t('page.character.toc.stats_ranking') },
-      hasEe && { id: 'ee', label: t('equip.tab.ee') },
-      hasTranscend && { id: 'transcend', label: t('page.character.toc.transcend') },
-      { id: 'skills', label: t('page.character.toc.skills') },
-      hasBurst && { id: 'burst', label: t('page.character.toc.burst') },
-      hasChainPassive && { id: 'chain-dual', label: t('page.character.toc.chain_dual') },
-      hasSynergies && { id: 'synergies', label: t('page.character.toc.synergies') },
-      { id: 'gear', label: t('page.character.toc.gear') },
-      hasReviews && { id: 'reviews', label: t('page.character.toc.reviews') },
-      hasVideo && { id: 'video', label: t('page.character.toc.video') },
-    ].filter(Boolean) as TocSection[];
-  }, [t, hasProsCons, hasEe, hasTranscend, hasChainPassive, hasBurst, hasSynergies, hasReviews, hasVideo]);
+  // Editorial flow — sections in reading order; conditional ones drop out.
+  const secs: Sec[] = [];
+  if (hasProsCons && prosCons) {
+    secs.push({ anchor: 'pros-cons', titleKey: 'page.character.toc.pros_cons', body: <ProsConsSection prosCons={prosCons} /> });
+  }
+  secs.push({ anchor: 'stats-ranking', titleKey: 'page.character.toc.stats_ranking', body: <StatsRankingSection character={character} stats={stats} ee={ee} giftItems={giftItems} /> });
+  if (hasEe && ee) {
+    secs.push({ anchor: 'ee', titleKey: 'page.character.toc.ee', body: <EeSection character={character} ee={ee} />, noHeader: true });
+  }
+  secs.push({ anchor: 'skills', titleKey: 'page.character.toc.skills', body: <SkillsSection character={character} /> });
+  if (hasBurst) {
+    secs.push({ anchor: 'burst', titleKey: 'page.character.toc.burst', body: <BurstSection character={character} />, row: 'kit' });
+  }
+  if (hasChainPassive) {
+    secs.push({ anchor: 'chain-dual', titleKey: 'page.character.toc.chain_dual', body: <ChainDualSection character={character} />, row: 'kit' });
+  }
+  secs.push({ anchor: 'gear', titleKey: 'page.character.toc.gear', body: <GearRecoSection reco={reco ?? {}} weapons={weapons} amulets={amulets} talismans={talismans} sets={sets} bossMap={bossMap} /> });
+  if (hasSynergies && partners) {
+    secs.push({ anchor: 'synergies', titleKey: 'page.character.toc.synergies', body: <SynergiesSection synergies={partners} /> });
+  }
+  if (hasReviews) {
+    secs.push({ anchor: 'reviews', titleKey: 'page.character.toc.reviews', body: <ReviewsSection reviews={reviews} element={element} /> });
+  }
+  if (hasVideo) {
+    secs.push({ anchor: 'video', titleKey: 'page.character.toc.video', body: <MultiVideoEmbed videos={videos} hashPrefix="video" /> });
+  }
+
+  const tocSections: TocSection[] = [
+    { id: 'overview', label: t('page.character.toc.overview') },
+    ...secs.map((s) => ({ id: s.anchor, label: t(s.titleKey) })),
+  ];
+
+  // Group adjacent sections sharing a `row` (e.g. Burst + Chain & Dual) side by side.
+  const rows: Sec[][] = [];
+  for (const s of secs) {
+    const last = rows[rows.length - 1];
+    if (s.row && last && last[0].row === s.row) last.push(s);
+    else rows.push([s]);
+  }
 
   return (
     <EffectsProvider buffMap={buffMap} debuffMap={debuffMap}>
@@ -133,66 +159,32 @@ export default function CharacterDetailClient({
           ID: {character.ID}
         </div>
       )}
-      <div className="mx-auto max-w-6xl space-y-10 px-4 py-6 md:px-6">
-        <QuickToc sections={sections} />
 
-        <OverviewSection
-          character={character}
-          profile={profile}
-          tags={tags}
-        />
+      <div className="cd-page" style={{ '--cd-el': hex } as React.CSSProperties}>
+        <OverviewSection character={character} profile={profile} tags={tags} />
 
         {coreFusionLink && (
-          <CoreFusionBanner link={coreFusionLink} />
+          <div className="mx-auto max-w-330 px-4 md:px-6 lg:px-8">
+            <CoreFusionBanner link={coreFusionLink} />
+          </div>
         )}
 
-        {hasProsCons && prosCons && (
-          <ProsConsSection prosCons={prosCons} />
-        )}
+        <QuickToc sections={tocSections} element={element} />
 
-        <StatsRankingSection character={character} stats={stats} ee={ee} />
-
-        {hasEe && ee && (
-          <EeSection character={character} ee={ee} giftItems={giftItems} />
-        )}
-
-        {hasTranscend && (
-          <TranscendenceSection character={character} />
-        )}
-
-        <SkillsSection character={character} />
-
-        {hasBurst && (
-          <BurstSection character={character} />
-        )}
-
-        {hasChainPassive && (
-          <ChainDualSection character={character} />
-        )}
-
-        {hasSynergies && partners && (
-          <SynergiesSection synergies={partners} />
-        )}
-
-        <GearRecoSection
-          reco={reco ?? {}}
-          weapons={weapons}
-          amulets={amulets}
-          talismans={talismans}
-          sets={sets}
-          bossMap={bossMap}
-        />
-
-        {hasReviews && (
-          <ReviewsSection reviews={reviews} />
-        )}
-
-        {hasVideo && (
-          <section id="video">
-            <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.video')}</h2>
-            <MultiVideoEmbed videos={videos} hashPrefix="video" />
-          </section>
-        )}
+        <main className="pb-20">
+          {rows.map((row) => (
+            <div key={row[0].anchor} className="mx-auto w-full max-w-285 px-4 pt-12 lg:px-6 lg:pt-16">
+              <div className={row.length > 1 ? 'grid gap-8 lg:grid-cols-2' : undefined}>
+                {row.map((s) => (
+                  <section key={s.anchor} id={s.anchor} className="min-w-0 scroll-mt-28">
+                    {!s.noHeader && <CharacterSectionHeader title={t(s.titleKey)} />}
+                    <div className="min-w-0">{s.body}</div>
+                  </section>
+                ))}
+              </div>
+            </div>
+          ))}
+        </main>
       </div>
     </EffectsProvider>
   );

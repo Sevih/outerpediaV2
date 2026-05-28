@@ -4,14 +4,21 @@ import { useState, useMemo } from 'react';
 import Image from 'next/image';
 import type { Character, CharacterStats, StatsStep } from '@/types/character';
 import type { ExclusiveEquipment } from '@/types/equipment';
+import type { Item } from '@/types/item';
 import { StatInline } from '@/app/components/inline';
 import ItemInline from '@/app/components/inline/ItemInline';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { l } from '@/lib/i18n/localize';
+import { getRarityBgPath } from '@/lib/format-text';
+import { ITEM_RARITY_TEXT } from '@/lib/theme';
+import { GIFT_LABELS } from '@/types/enums';
+import type { GiftType } from '@/types/enums';
 
 type Props = {
   character: Character;
   stats: CharacterStats | null;
   ee: ExclusiveEquipment | null;
+  giftItems: Item[];
 };
 
 function lvFromKey(key: string): number {
@@ -44,8 +51,13 @@ function formatValue(value: number, isPercent: boolean): string {
   return String(Math.round(value));
 }
 
-export default function StatsRankingSection({ character, stats, ee }: Props) {
-  const { t } = useI18n();
+export default function StatsRankingSection({ character, stats, ee, giftItems }: Props) {
+  const { lang, t } = useI18n();
+
+  const giftLabelKey = GIFT_LABELS[character.gift as GiftType];
+  const giftLabel = giftLabelKey
+    ? t(`characters.gifts.${giftLabelKey}` as Parameters<typeof t>[0])
+    : character.gift;
 
   const stepKeys = useMemo(() => {
     if (!stats) return [];
@@ -72,14 +84,11 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
   const isMaxStep = stepIdx === stepKeys.length - 1;
 
   return (
-    <section id="stats-ranking">
-      <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.stats_ranking')}</h2>
-
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-[2fr_1fr]">
+    <div className="grid grid-cols-1 gap-6 lg:grid-cols-[2fr_1fr]">
         {/* Base stats */}
         <div className="card rounded-xl p-4">
           <div className="mb-3 flex items-baseline justify-between">
-            <div className="text-sm font-semibold text-zinc-300">{t('page.character.stats.title')}</div>
+            <h3 className="font-game">{t('page.character.stats.title')}</h3>
             {stepKeys[stepIdx] && (
               <span className="text-xs text-zinc-400">Lv.{lvFromKey(stepKeys[stepIdx])}</span>
             )}
@@ -98,7 +107,7 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
                   const premiumVal = isPremium ? currentStep.premium_value : 0;
 
                   return (
-                    <div key={key} className="flex items-center justify-between">
+                    <div key={key} className="flex items-center justify-between border-b border-white/6 py-2">
                       <StatInline name={displayKey ?? key} />
                       <span className="text-sm font-medium text-zinc-100">
                         {formatValue(value + premiumVal, isPercent)}
@@ -188,22 +197,55 @@ export default function StatsRankingSection({ character, stats, ee }: Props) {
           )}
         </div>
 
-        {/* Ranking */}
-        <div className="card flex flex-col items-center justify-center rounded-xl p-4">
-          <div className="mb-4 text-sm font-semibold text-zinc-300">{t('page.character.toc.ranking')}</div>
-          <div className="grid grid-cols-2 place-items-center gap-x-6 gap-y-2">
-            <TierCard label={t('page.character.tier.pve')} rank={pveRank} placeholder={t('common.coming_soon')} />
-            <TierCard label={t('page.character.tier.pvp')} rank={character.rank_pvp ?? null} placeholder={t('common.coming_soon')} />
-            {ee && (
-              <TierCard label={t('page.character.ee.rank')} rank={ee.rank} placeholder={t('common.coming_soon')} />
-            )}
-            {ee && (
-              <TierCard label={t('page.character.ee.rank10')} rank={ee.rank10} placeholder={t('common.coming_soon')} />
-            )}
+        {/* Ranking + Gifts */}
+        <div className="flex flex-col gap-6">
+          <div className="card rounded-xl p-4">
+            <h3 className="mb-4 font-game">{t('page.character.toc.ranking')}</h3>
+            <div className="grid grid-cols-2 place-items-center gap-x-6 gap-y-2">
+              <TierCard label={t('page.character.tier.pve')} rank={pveRank} placeholder={t('common.coming_soon')} />
+              <TierCard label={t('page.character.tier.pvp')} rank={character.rank_pvp ?? null} placeholder={t('common.coming_soon')} />
+              {ee && (
+                <TierCard label={t('page.character.ee.rank')} rank={ee.rank} placeholder={t('common.coming_soon')} />
+              )}
+              {ee && (
+                <TierCard label={t('page.character.ee.rank10')} rank={ee.rank10} placeholder={t('common.coming_soon')} />
+              )}
+            </div>
           </div>
+
+          {giftItems.length > 0 && (
+            <div className="card rounded-xl p-4">
+              <h3 className="mb-0.5 font-game">{t('characters.filters.gifts')}</h3>
+              <p className="mb-3 text-sm text-zinc-400">{giftLabel}</p>
+              <div className="grid grid-cols-4 gap-2">
+                {giftItems.map((item) => (
+                  <div key={item.id} className="flex flex-col items-center gap-1">
+                    <div className="relative h-12 w-12 shrink-0">
+                      <Image
+                        src={getRarityBgPath(item.rarity)}
+                        alt={`${item.rarity} rarity`}
+                        fill
+                        sizes="48px"
+                        className="object-contain"
+                      />
+                      <Image
+                        src={`/images/items/${item.icon}.webp`}
+                        alt={l(item, 'name', lang)}
+                        fill
+                        sizes="48px"
+                        className="object-contain"
+                      />
+                    </div>
+                    <span className={`text-center text-[10px] leading-tight ${ITEM_RARITY_TEXT[item.rarity]}`}>
+                      {l(item, 'name', lang)}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
-      </div>
-    </section>
+    </div>
   );
 }
 

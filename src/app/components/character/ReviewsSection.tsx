@@ -1,13 +1,16 @@
 'use client';
 
 import type { Review } from '@/types/review';
+import type { ElementType } from '@/types/enums';
 import { useState } from 'react';
 import { useI18n } from '@/lib/contexts/I18nContext';
+import { elementAccent } from './characterDetailTheme';
 
 const PAGE_SIZE = 10;
 
 type Props = {
   reviews: Review[];
+  element: ElementType;
 };
 
 function getDiscordAvatarUrl(userId: string, avatar: string | null): string {
@@ -75,8 +78,9 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-export default function ReviewsSection({ reviews }: Props) {
+export default function ReviewsSection({ reviews, element }: Props) {
   const { t } = useI18n();
+  const { hex } = elementAccent(element);
   const [page, setPage] = useState(1);
 
   const average =
@@ -84,16 +88,21 @@ export default function ReviewsSection({ reviews }: Props) {
       ? Math.round((reviews.reduce((sum, r) => sum + r.rating, 0) / reviews.length) * 10) / 10
       : 0;
 
+  // Distribution per integer star bucket (1..5)
+  const distribution = [0, 0, 0, 0, 0];
+  for (const r of reviews) {
+    const bucket = Math.min(5, Math.max(1, Math.round(r.rating)));
+    distribution[bucket - 1]++;
+  }
+
   const totalPages = Math.ceil(reviews.length / PAGE_SIZE);
   const visibleReviews = reviews.slice(0, page * PAGE_SIZE);
   const hasMore = page < totalPages;
 
   return (
-    <section id="reviews">
-      <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.reviews')}</h2>
-
+    <div className="flex flex-col gap-4">
       {/* CTA */}
-      <p className="mb-6 text-sm text-zinc-400">
+      <p className="text-sm text-zinc-400">
         {t('page.character.reviews.cta')}{' '}
         <a
           href="https://discord.gg/PNMd5mkAV8"
@@ -109,58 +118,70 @@ export default function ReviewsSection({ reviews }: Props) {
         <p className="text-sm italic text-zinc-500">{t('page.character.reviews.no_reviews')}</p>
       ) : (
         <>
-          {/* Summary */}
-          <div className="mb-6 flex items-center gap-4">
-            <div className="text-4xl font-bold text-amber-400">{average}</div>
-            <div>
-              <StarRating rating={Math.round(average)} />
-              <p className="mt-1 text-sm text-zinc-400">
+          {/* Summary: average + distribution */}
+          <div className="grid grid-cols-[auto_1fr] items-center gap-7 border-b border-white/6 pb-5">
+            <div className="flex min-w-32 flex-col items-center gap-1.5">
+              <div className="font-game text-5xl leading-none font-bold" style={{ color: hex, textShadow: `0 0 24px ${hex}55` }}>
+                {average}
+              </div>
+              <StarRating rating={average} />
+              <span className="font-mono text-[10px] tracking-wider text-zinc-500 uppercase">
                 {t('page.character.reviews.count', { count: String(reviews.length) })}
-              </p>
+              </span>
+            </div>
+            <div className="flex flex-col gap-1">
+              {[5, 4, 3, 2, 1].map((star) => {
+                const count = distribution[star - 1];
+                const pct = reviews.length ? (count / reviews.length) * 100 : 0;
+                return (
+                  <div key={star} className="grid grid-cols-[28px_1fr_36px] items-center gap-2.5">
+                    <span className="font-mono text-[11px] text-zinc-400">{star}★</span>
+                    <span className="h-1.5 overflow-hidden rounded-full bg-white/5">
+                      <span className="block h-full" style={{ width: `${pct}%`, background: hex, opacity: 0.7 }} />
+                    </span>
+                    <span className="text-right font-mono text-[10.5px] text-zinc-500">{count}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
           {/* Reviews list */}
-          <div className="space-y-4">
+          <div className="flex flex-col gap-3">
             {visibleReviews.map((review) => (
-              <div
-                key={review.id}
-                className="rounded-xl border border-zinc-700/50 bg-zinc-800/50 p-4"
-              >
-                <div className="flex items-start gap-3">
-                  {/* Vote score */}
-                  <div className="flex shrink-0 flex-col items-center gap-0.5 pt-1">
-                    <span className="text-xs text-zinc-500">👍</span>
-                    <span className={`text-sm font-semibold ${review.score > 0 ? 'text-emerald-400' : review.score < 0 ? 'text-red-400' : 'text-zinc-500'}`}>
-                      {review.score || 0}
-                    </span>
-                    <span className="text-xs text-zinc-500">👎</span>
+              <div key={review.id} className="card flex items-start gap-3 rounded-xl p-4">
+                {/* Vote score */}
+                <div className="flex shrink-0 flex-col items-center gap-0.5 pt-1">
+                  <span className="text-xs text-zinc-500">👍</span>
+                  <span className={`text-sm font-semibold ${review.score > 0 ? 'text-emerald-400' : review.score < 0 ? 'text-red-400' : 'text-zinc-500'}`}>
+                    {review.score || 0}
+                  </span>
+                  <span className="text-xs text-zinc-500">👎</span>
+                </div>
+
+                {/* Avatar */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={getDiscordAvatarUrl(review.userId, review.avatar)}
+                  alt={review.displayName}
+                  width={40}
+                  height={40}
+                  className="shrink-0 rounded-full"
+                  loading="lazy"
+                />
+
+                <div className="min-w-0 flex-1">
+                  {/* Header: name + rating + date */}
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-semibold text-zinc-200">{review.displayName}</span>
+                    <StarRating rating={review.rating} />
+                    <span className="text-xs text-zinc-500">{formatDate(review.timestamp)}</span>
                   </div>
 
-                  {/* Avatar */}
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={getDiscordAvatarUrl(review.userId, review.avatar)}
-                    alt={review.displayName}
-                    width={40}
-                    height={40}
-                    className="shrink-0 rounded-full"
-                    loading="lazy"
-                  />
-
-                  <div className="min-w-0 flex-1">
-                    {/* Header: name + rating + date */}
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="font-semibold text-zinc-200">{review.displayName}</span>
-                      <StarRating rating={review.rating} />
-                      <span className="text-xs text-zinc-500">{formatDate(review.timestamp)}</span>
-                    </div>
-
-                    {/* Review text */}
-                    <p className="mt-2 text-sm leading-relaxed text-zinc-300 whitespace-pre-line">
-                      {renderTextWithEmojis(review.text)}
-                    </p>
-                  </div>
+                  {/* Review text */}
+                  <p className="mt-2 text-sm leading-relaxed text-zinc-300 whitespace-pre-line">
+                    {renderTextWithEmojis(review.text)}
+                  </p>
                 </div>
               </div>
             ))}
@@ -170,18 +191,18 @@ export default function ReviewsSection({ reviews }: Props) {
           {hasMore && (
             <button
               onClick={() => setPage(p => p + 1)}
-              className="mt-4 w-full rounded-lg border border-zinc-700 bg-zinc-800/50 py-2 text-sm text-zinc-400 transition hover:bg-zinc-700/50 hover:text-zinc-200"
+              className="w-full rounded-lg border border-white/10 bg-white/5 py-2 text-sm text-zinc-400 transition hover:bg-white/10 hover:text-zinc-200"
             >
               {t('page.character.reviews.load_more')}
             </button>
           )}
 
           {/* Discord attribution */}
-          <p className="mt-4 text-xs text-zinc-500">
+          <p className="text-xs text-zinc-500">
             {t('page.character.reviews.via_discord')}
           </p>
         </>
       )}
-    </section>
+    </div>
   );
 }

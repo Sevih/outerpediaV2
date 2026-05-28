@@ -65,13 +65,11 @@ export default function SkillsSection({ character }: Props) {
     : null;
 
   return (
-    <section id="skills">
-      <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.skills')}</h2>
-
+    <div className="flex flex-col gap-6">
       {priorityOrder && priorityOrder.length > 0 && (
-        <div className="mb-6 max-w-2xl mx-auto">
+        <div className="mx-auto max-w-2xl text-center">
           <div className="font-game text-lg font-bold">{t('page.character.skill.priority_title')}</div>
-          <div className="flex flex-wrap items-start justify-center gap-3 text-sm">
+          <div className="mt-3 flex flex-wrap items-start justify-center gap-3 text-sm">
             {priorityOrder.map(({ key, name, icon }, i) => (
               <Fragment key={key}>
                 {i > 0 && (
@@ -97,7 +95,7 @@ export default function SkillsSection({ character }: Props) {
               </Fragment>
             ))}
           </div>
-          <div className="panel-warning mt-4 px-4 py-3">
+          <div className="mt-4 border-l-2 border-amber-400/70 bg-amber-400/5 px-4 py-3 text-left">
             <p className="mb-2 text-xs font-semibold text-yellow-100/90">{t('page.character.skill.priority_rule_title')}</p>
             <ul className="ml-4 list-inside list-disc space-y-1 text-xs text-yellow-100/90">
               <li>{t('page.character.skill.priority_rule_1')}</li>
@@ -126,6 +124,6 @@ export default function SkillsSection({ character }: Props) {
           <SkillCard key={skill!.SkillType} skill={skill!} />
         ))}
       </div>
-    </section>
+    </div>
   );
 }

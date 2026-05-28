@@ -14,73 +14,58 @@ type Props = {
 };
 
 export default function SynergiesSection({ synergies }: Props) {
-  const { lang, t, href } = useI18n();
+  const { lang, href } = useI18n();
   const slugToId = use(slugToIdPromise);
   const characters = use(charIndexPromise);
 
   return (
-    <section id="synergies">
-      <h2 className="mb-4 text-2xl font-bold">
-        {t('page.character.toc.synergies')}
-      </h2>
-
-      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-        {synergies.partner.map((group, i) => (
-          <div
-            key={i}
-            className="card rounded-xl p-4"
-          >
-            {/* Partner heroes */}
-            <div className="flex flex-wrap gap-3">
-              {group.hero.map((entry, j) => {
-                if (entry.startsWith('{')) {
-                  return (
-                    <span key={j} className="flex items-center text-sm">
-                      {parseText(entry)}
-                    </span>
-                  );
-                }
-
-                const id = slugToId[entry];
-                const char = id ? characters[id] : null;
-
-                if (!char || !id) {
-                  return (
-                    <span key={j} className="text-sm text-red-400">{entry}</span>
-                  );
-                }
-
-                const displayName = l(char, 'Fullname', lang);
-
+    <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
+      {synergies.partner.map((group, i) => (
+        <li
+          key={i}
+          className="card flex flex-col gap-3 rounded-xl p-4"
+        >
+          {/* Partner heroes */}
+          <div className="flex flex-wrap gap-2">
+            {group.hero.map((entry, j) => {
+              if (entry.startsWith('{')) {
                 return (
-                  <Link
-                    key={j}
-                    href={href(`/characters/${entry}`)}
-                    className="flex items-center gap-2 rounded-lg bg-zinc-800/80 pr-3 transition-colors hover:bg-zinc-700/80"
-                  >
-                    <CharacterPortrait
-                      id={id}
-                      name={displayName}
-                      size="sm"
-                      showIcons
-                    />
-                    <span className="text-sm font-medium text-zinc-200">
-                      {displayName}
-                    </span>
-                  </Link>
+                  <span key={j} className="flex items-center text-sm">
+                    {parseText(entry)}
+                  </span>
                 );
-              })}
-            </div>
+              }
 
-            {/* Reason */}
-            <div className="mt-3 border-t border-white/5 pt-3">
-              <p className="text-sm leading-relaxed text-zinc-300">
-                {parseText(lRec(group.reason, lang) ?? '')}
-              </p>
-            </div>
+              const id = slugToId[entry];
+              const char = id ? characters[id] : null;
+
+              if (!char || !id) {
+                return (
+                  <span key={j} className="text-sm text-red-400">{entry}</span>
+                );
+              }
+
+              const displayName = l(char, 'Fullname', lang);
+
+              return (
+                <Link
+                  key={j}
+                  href={href(`/characters/${entry}`)}
+                  className="flex items-center gap-2 rounded-lg pr-2 transition-colors hover:bg-white/5"
+                >
+                  <CharacterPortrait id={id} name={displayName} size="sm" showIcons />
+                  <span className="text-sm font-medium text-zinc-200">{displayName}</span>
+                </Link>
+              );
+            })}
           </div>
-        ))}
-      </div>
-    </section>
+
+          {/* Reason */}
+          <p className="text-sm leading-relaxed text-zinc-300">
+            {parseText(lRec(group.reason, lang) ?? '')}
+          </p>
+        </li>
+      ))}
+    </ul>
   );
 }

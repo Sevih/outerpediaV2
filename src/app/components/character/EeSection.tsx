@@ -3,36 +3,26 @@
 import Image from 'next/image';
 import type { Character } from '@/types/character';
 import type { ExclusiveEquipment } from '@/types/equipment';
-import type { Item } from '@/types/item';
-import { ITEM_RARITY_TEXT } from '@/lib/theme';
 import { l } from '@/lib/i18n/localize';
 import { formatEffectText, getRarityBgPath } from '@/lib/format-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
-import { GIFT_LABELS } from '@/types/enums';
-import type { GiftType } from '@/types/enums';
 import BuffDebuffDisplay from './BuffDebuffDisplay';
+import TranscendenceSlider from './TranscendenceSlider';
 
 type Props = {
   character: Character;
   ee: ExclusiveEquipment;
-  giftItems: Item[];
 };
 
-export default function EeSection({ character, ee, giftItems }: Props) {
+export default function EeSection({ character, ee }: Props) {
   const { lang, t } = useI18n();
-  const giftType = character.gift as GiftType;
-  const giftLabelKey = GIFT_LABELS[giftType];
-  const giftLabel = giftLabelKey
-    ? t(`characters.gifts.${giftLabelKey}` as Parameters<typeof t>[0])
-    : character.gift;
 
   return (
-    <section id="ee">
-      <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.ee')}</h2>
-
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-[1fr_auto]">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
         {/* EE card */}
-        <div className="card rounded-xl p-4">
+        <div>
+          <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.ee')}</h2>
+          <div className="card rounded-xl p-4">
           <div className="flex items-start gap-4">
             {/* EE portrait */}
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg">
@@ -100,52 +90,18 @@ export default function EeSection({ character, ee, giftItems }: Props) {
           <div className="mt-3">
             <BuffDebuffDisplay buffs={ee.buff} debuffs={ee.debuff} keepInterruptions />
           </div>
+          </div>
         </div>
 
-        {/* Gifts card */}
-        {giftItems.length > 0 && (
-          <div className="card rounded-xl p-4 md:w-52">
-            <div className="flex items-center gap-1.5">
-              <div className="relative h-5 w-5 shrink-0">
-                <Image
-                  src="/images/items/CM_Goods_FriendPoint.webp"
-                  alt={giftLabel}
-                  fill
-                  sizes="20px"
-                  className="object-contain"
-                />
-              </div>
-              {t('characters.filters.gifts')}
-            </div>
-            <p className="mt-1 mb-3 font-game text-sm font-bold">{giftLabel}</p>
-            <div className="grid grid-cols-4 gap-2 md:grid-cols-2">
-              {giftItems.map((item) => (
-                <div key={item.id} className="flex flex-col items-center gap-1">
-                  <div className="relative h-12 w-12 shrink-0">
-                    <Image
-                      src={getRarityBgPath(item.rarity)}
-                      alt={`${item.rarity} rarity`}
-                      fill
-                      sizes="48px"
-                      className="object-contain"
-                    />
-                    <Image
-                      src={`/images/items/${item.icon}.webp`}
-                      alt={l(item, 'name', lang)}
-                      fill
-                      sizes="48px"
-                      className="object-contain"
-                    />
-                  </div>
-                  <span className={`text-center text-[10px] leading-tight ${ITEM_RARITY_TEXT[item.rarity]}`}>
-                    {l(item, 'name', lang)}
-                  </span>
-                </div>
-              ))}
+        {/* Transcendence */}
+        {character.transcend && (
+          <div>
+            <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.transcend')}</h2>
+            <div className="card rounded-xl p-4">
+              <TranscendenceSlider transcend={character.transcend} rarity={character.Rarity} />
             </div>
           </div>
         )}
       </div>
-    </section>
   );
 }

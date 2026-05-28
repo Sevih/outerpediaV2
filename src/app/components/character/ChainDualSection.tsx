@@ -8,6 +8,7 @@ import { formatEffectText } from '@/lib/format-text';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import BuffDebuffDisplay from './BuffDebuffDisplay';
 import type { Lang } from '@/lib/i18n/config';
+import { elementAccent } from './characterDetailTheme';
 
 type Props = { character: Character };
 
@@ -35,6 +36,7 @@ function getEnhancement(enhancement: Record<string, string[]>, level: string, la
 function FusionPassiveCard({ character }: Props) {
   const { lang, t } = useI18n();
   const [level, setLevel] = useState('1');
+  const { hex } = elementAccent(character.Element);
   const fp = character.skills.SKT_FUSION_PASSIVE;
   if (!fp) return null;
 
@@ -49,7 +51,7 @@ function FusionPassiveCard({ character }: Props) {
   const iconPath = `/images/characters/core-fusion-skill/${fp.IconName}.webp`;
 
   return (
-    <div className="card mt-4 rounded-xl p-4">
+    <div className="mt-6 border-l-2 py-3 pl-4" style={{ borderColor: hex, background: `linear-gradient(90deg, ${hex}10, transparent 80%)` }}>
       <div className="mb-4 flex items-center gap-3">
         <div className="relative h-14 w-14 shrink-0 overflow-hidden">
           <Image src={iconPath} alt={name} fill sizes="56px" className="object-contain" />
@@ -135,9 +137,7 @@ export default function ChainDualSection({ character }: Props) {
   const chainIcon = `/images/characters/chain/Skill_ChainPassive_${character.Element}_${character.Chain_Type}.webp`;
 
   return (
-    <section id="chain-dual">
-      <h2 className="mb-4 text-2xl font-bold">{t('page.character.toc.chain_dual')}</h2>
-
+    <>
       <div className="card rounded-xl p-4">
         {/* Icon + name */}
         <div className="mb-4 flex items-center gap-3">
@@ -236,6 +236,6 @@ export default function ChainDualSection({ character }: Props) {
       </div>
 
       <FusionPassiveCard character={character} />
-    </section>
+    </>
   );
 }
