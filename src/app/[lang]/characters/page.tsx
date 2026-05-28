@@ -45,7 +45,7 @@ export default async function CharactersPage({ params }: Props) {
   });
 
   return (
-    <div className="mx-auto max-w-350 px-4 py-6 md:px-6">
+    <div className="px-4 py-6 md:px-6">
       <JsonLd data={itemListJsonLd} id="ld-characters" />
       <h1 className="mx-auto text-center text-3xl font-bold">{t['page.characters.title']}</h1>
       <p className="mt-2 mb-4 text-center text-sm text-zinc-400">{t['page.characters.description'].replace('{monthYear}', getMonthYear(l))}</p>

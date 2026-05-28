@@ -898,7 +898,6 @@ const kr: Record<TranslationKey, string> = {
   'characters.filters.teamBonus': '팀 보너스',
   'characters.filters.title': '필터',
   'characters.filters.advanced': '고급 필터',
-  'characters.filters.advanced.subtitle': '효과, 출처, 태그, 팀 보너스',
   'characters.filters.empty_hint': '필터 없음 — 속성 또는 클래스를 선택하세요',
   'characters.filters.match_logic': '조건',
   'characters.filters.tab.basics': '기본',

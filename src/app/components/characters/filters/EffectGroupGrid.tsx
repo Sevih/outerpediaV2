@@ -118,7 +118,7 @@ export function EffectGroupGrid({
             <p className={`mb-2 text-center font-semibold ${color}`}>
               {t(group.title as TranslationKey)}
             </p>
-            <div className="grid grid-cols-7 justify-items-center gap-1">
+            <div className="grid grid-cols-7 justify-items-center gap-1 xl:grid-cols-5">
               {group.effects.map(effectKey => {
                 const effect = effectsMap.get(effectKey);
                 if (!effect) return null;

@@ -47,7 +47,7 @@ export default function InlineTooltip({ children, content, bg = 'bg-neutral-800'
           side="top"
           align="center"
           sideOffset={6}
-          className={`z-50 max-w-70 rounded px-3 py-2 shadow-lg border border-white/10 ${bg}`}
+          className={`z-80 max-w-70 rounded px-3 py-2 shadow-lg border border-white/10 ${bg}`}
         >
           {content}
           <HoverCard.Arrow className={arrowClass(bg)} />

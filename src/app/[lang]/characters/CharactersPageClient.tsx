@@ -29,6 +29,7 @@ import { splitCharacterName } from '@/lib/character-name';
 import type { FilterSelectOption } from '@/app/components/ui/FilterPills';
 import CharactersFiltersBar from '@/app/components/characters/filters/CharactersFiltersBar';
 import CharactersFiltersDrawer from '@/app/components/characters/filters/CharactersFiltersDrawer';
+import CharactersFiltersSidebar from '@/app/components/characters/filters/CharactersFiltersSidebar';
 import type { DrawerTagGroup } from '@/app/components/characters/filters/CharactersFiltersDrawer';
 import ActiveFiltersStrip, { type ActiveChipItem } from '@/app/components/characters/filters/ActiveFiltersStrip';
 import { ELEMENT_HEX, ROLE_HEX, RARITY_HEX, TONE } from '@/app/components/characters/filters/FilterAtoms';
@@ -294,6 +295,8 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   // UI state
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  // xl+ shows the persistent filters sidebar instead of the overlay drawer.
+  const [isXl, setIsXl] = useState(false);
 
   // Lazy-loaded data
   const [buffsMetadata, setBuffsMetadata] = useState<Effect[]>([]);
@@ -492,9 +495,26 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Lazy load buffs/debuffs metadata when drawer opens or when URL had effects
+  // Track the xl breakpoint — the sidebar is always mounted there, so it needs
+  // effects/tags metadata loaded even when the drawer was never opened.
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 80rem)');
+    const update = () => setIsXl(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
+
+  // Close the overlay drawer when we cross into xl (the sidebar takes over) so a
+  // stale scroll-lock doesn't linger behind the now-hidden drawer.
+  useEffect(() => {
+    if (isXl) setDrawerOpen(false);
+  }, [isXl]);
+
+  // Lazy load buffs/debuffs metadata when the advanced filters become visible
+  // (drawer open, xl sidebar shown) or when the URL pre-seeded effect filters.
   const wantsEffectsData =
-    drawerOpen || selectedBuffs.length > 0 || selectedDebuffs.length > 0;
+    drawerOpen || isXl || selectedBuffs.length > 0 || selectedDebuffs.length > 0;
   useEffect(() => {
     if (wantsEffectsData && buffsMetadata.length === 0) {
       Promise.all([
@@ -507,8 +527,8 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
     }
   }, [wantsEffectsData, buffsMetadata.length]);
 
-  // Lazy load tags when drawer opens or when URL had tag filters
-  const wantsTagsData = drawerOpen || tagFilter.length > 0;
+  // Lazy load tags when the advanced filters become visible or URL had tag filters
+  const wantsTagsData = drawerOpen || isXl || tagFilter.length > 0;
   useEffect(() => {
     if (wantsTagsData && !tagsData) {
       import('@data/tags.json').then(module => {
@@ -701,10 +721,46 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
 
   const drawerTagGroups = TAG_GROUPS as DrawerTagGroup[];
 
+  // Shared advanced-filters props — consumed by both the mobile drawer and the
+  // persistent xl sidebar.
+  const filtersPanelProps = {
+    lang,
+    chainFilter,
+    onToggleChain: (v: ChainType) => toggleArray(setChainFilter, v, CHAIN_TYPES),
+    roleFilter,
+    onToggleRole: (v: RoleType) => toggleArray(setRoleFilter, v, ROLES),
+    giftFilter,
+    onToggleGift: (v: GiftType) => toggleArray(setGiftFilter, v, GIFTS),
+    buffGroups,
+    debuffGroups,
+    buffsMap,
+    debuffsMap,
+    selectedBuffs,
+    onToggleBuff: (key: string) => toggleArray(setSelectedBuffs, key),
+    selectedDebuffs,
+    onToggleDebuff: (key: string) => toggleArray(setSelectedDebuffs, key),
+    effectLogic,
+    onEffectLogicChange: setEffectLogic,
+    effectsLoaded: buffsMetadata.length > 0,
+    sourceFilter,
+    onToggleSource: (v: SkillKey) => toggleArray(setSourceFilter, v),
+    showUniqueEffects,
+    onToggleShowUnique: () => setShowUniqueEffects(v => !v),
+    teamBonusFilter,
+    onSetTeamBonus: setTeamBonusFilter,
+    teamBonusOptions: TEAM_BONUSES_UI,
+    tagGroups: drawerTagGroups,
+    tagFilter,
+    onToggleTag: (v: string) => toggleArray(setTagFilter, v),
+    tagLogic,
+    onTagLogicChange: setTagLogic,
+    tagsLoaded: tagsData !== null,
+  };
+
   // ── Render ──
 
   return (
-    <div className="mx-auto max-w-350 space-y-3 px-2 md:px-4">
+    <div className="space-y-3 px-2 md:px-4">
       {/* Filters bar — top strip on desktop, sticky bar on mobile */}
       <CharactersFiltersBar
         query={rawQuery}
@@ -720,85 +776,61 @@ export default function CharactersPageClient({ characters, lang }: ClientProps) 
         advancedOpen={drawerOpen}
       />
 
-      {/* Active filters chip strip */}
-      <ActiveFiltersStrip
-        items={activeChips}
-        totalCount={indexedCharacters.length}
-        matchCount={filtered.length}
-        onResetAll={resetAll}
-        onCopyShareUrl={copyShareUrl}
-        copied={copied}
-      />
+      {/* xl+: persistent filters sidebar beside the grid. Below xl: drawer only. */}
+      <div className="flex gap-4">
+        <CharactersFiltersSidebar onResetAll={resetAll} {...filtersPanelProps} />
 
-      {/* Character grid */}
-      {filtered.length === 0 ? (
-        <div className="flex flex-col items-center gap-3 py-12 text-center">
-          <p className="text-sm text-zinc-400">{t('characters.filters.no_match')}</p>
-          <button
-            type="button"
-            onClick={resetAll}
-            className="rounded-md border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs text-zinc-200 transition hover:border-zinc-700"
-          >
-            {t('characters.filters.reset')}
-          </button>
-        </div>
-      ) : (
-        <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
-          {filtered.map((char: IndexedCharacter, index: number) => (
-            <ResponsiveCharacterCard
-              key={char.ID}
-              id={char.ID}
-              name={char.displayName}
-              prefix={char.prefix}
-              element={char.Element}
-              classType={char.Class}
-              rarity={char.Rarity}
-              tags={char.tags}
-              href={href(`/characters/${char.slug}`)}
-              priority={index <= 5}
-            />
-          ))}
-        </div>
-      )}
+        <div className="min-w-0 flex-1 space-y-3">
+          {/* Active filters chip strip — aligned with the sidebar header, capped to the grid width */}
+          <ActiveFiltersStrip
+            items={activeChips}
+            totalCount={indexedCharacters.length}
+            matchCount={filtered.length}
+            onResetAll={resetAll}
+            onCopyShareUrl={copyShareUrl}
+            copied={copied}
+          />
 
-      {/* Advanced drawer / bottom sheet */}
+          {filtered.length === 0 ? (
+            <div className="flex flex-col items-center gap-3 py-12 text-center">
+              <p className="text-sm text-zinc-400">{t('characters.filters.no_match')}</p>
+              <button
+                type="button"
+                onClick={resetAll}
+                className="rounded-md border border-zinc-800 bg-zinc-900 px-3 py-1.5 text-xs text-zinc-200 transition hover:border-zinc-700"
+              >
+                {t('characters.filters.reset')}
+              </button>
+            </div>
+          ) : (
+            <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
+              {filtered.map((char: IndexedCharacter, index: number) => (
+                <ResponsiveCharacterCard
+                  key={char.ID}
+                  id={char.ID}
+                  name={char.displayName}
+                  prefix={char.prefix}
+                  element={char.Element}
+                  classType={char.Class}
+                  rarity={char.Rarity}
+                  tags={char.tags}
+                  href={href(`/characters/${char.slug}`)}
+                  priority={index <= 5}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Advanced drawer / bottom sheet — below xl only (sidebar replaces it on xl) */}
       <CharactersFiltersDrawer
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        lang={lang}
-        chainFilter={chainFilter}
-        onToggleChain={v => toggleArray(setChainFilter, v, CHAIN_TYPES)}
-        roleFilter={roleFilter}
-        onToggleRole={v => toggleArray(setRoleFilter, v, ROLES)}
-        giftFilter={giftFilter}
-        onToggleGift={v => toggleArray(setGiftFilter, v, GIFTS)}
-        buffGroups={buffGroups}
-        debuffGroups={debuffGroups}
-        buffsMap={buffsMap}
-        debuffsMap={debuffsMap}
-        selectedBuffs={selectedBuffs}
-        onToggleBuff={key => toggleArray(setSelectedBuffs, key)}
-        selectedDebuffs={selectedDebuffs}
-        onToggleDebuff={key => toggleArray(setSelectedDebuffs, key)}
-        effectLogic={effectLogic}
-        onEffectLogicChange={setEffectLogic}
-        effectsLoaded={buffsMetadata.length > 0}
-        sourceFilter={sourceFilter}
-        onToggleSource={v => toggleArray(setSourceFilter, v)}
-        showUniqueEffects={showUniqueEffects}
-        onToggleShowUnique={() => setShowUniqueEffects(v => !v)}
-        teamBonusFilter={teamBonusFilter}
-        onSetTeamBonus={setTeamBonusFilter}
-        teamBonusOptions={TEAM_BONUSES_UI}
-        tagGroups={drawerTagGroups}
-        tagFilter={tagFilter}
-        onToggleTag={v => toggleArray(setTagFilter, v)}
-        tagLogic={tagLogic}
-        onTagLogicChange={setTagLogic}
-        tagsLoaded={tagsData !== null}
         onResetAll={resetAll}
         matchCount={filtered.length}
         totalCount={indexedCharacters.length}
+        {...filtersPanelProps}
       />
     </div>
   );

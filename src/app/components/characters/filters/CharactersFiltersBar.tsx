@@ -127,12 +127,15 @@ export default function CharactersFiltersBar({
 
         <div className="flex-1" />
 
-        <AdvancedButton
-          label={t('characters.filters.advanced')}
-          count={advancedCount}
-          active={advancedOpen}
-          onClick={onOpenAdvanced}
-        />
+        {/* xl+ shows the persistent sidebar instead, so the trigger is hidden there. */}
+        <div className="xl:hidden">
+          <AdvancedButton
+            label={t('characters.filters.advanced')}
+            count={advancedCount}
+            active={advancedOpen}
+            onClick={onOpenAdvanced}
+          />
+        </div>
       </div>
     </div>
   );

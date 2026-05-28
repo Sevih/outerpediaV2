@@ -898,7 +898,6 @@ const fr: Record<TranslationKey, string> = {
   'characters.filters.teamBonus': 'Bonus d\'équipe',
   'characters.filters.title': 'Filtres',
   'characters.filters.advanced': 'Filtres avancés',
-  'characters.filters.advanced.subtitle': 'Effets, sources, tags & bonus d\'équipe',
   'characters.filters.empty_hint': 'Aucun filtre — choisis un élément ou une classe pour commencer',
   'characters.filters.match_logic': 'Logique',
   'characters.filters.tab.basics': 'Bases',

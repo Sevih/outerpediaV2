@@ -898,7 +898,6 @@ const en = {
   'characters.filters.teamBonus': 'Team Bonus',
   'characters.filters.title': 'Filters',
   'characters.filters.advanced': 'Advanced filters',
-  'characters.filters.advanced.subtitle': 'Effects, sources, tags & team bonus',
   'characters.filters.empty_hint': 'No filters yet — pick element or class to start',
   'characters.filters.match_logic': 'Match',
   'characters.filters.tab.basics': 'Basics',

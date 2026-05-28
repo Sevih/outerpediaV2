@@ -898,7 +898,6 @@ const zh: Record<TranslationKey, string> = {
   'characters.filters.teamBonus': '团队加成',
   'characters.filters.title': '筛选',
   'characters.filters.advanced': '高级筛选',
-  'characters.filters.advanced.subtitle': '效果、来源、标签和团队加成',
   'characters.filters.empty_hint': '尚未筛选 — 选择属性或职业开始',
   'characters.filters.match_logic': '条件',
   'characters.filters.tab.basics': '基础',

@@ -898,7 +898,6 @@ const jp: Record<TranslationKey, string> = {
   'characters.filters.teamBonus': 'チームボーナス',
   'characters.filters.title': 'フィルター',
   'characters.filters.advanced': '詳細フィルター',
-  'characters.filters.advanced.subtitle': '効果、スキル元、タグ、チームボーナス',
   'characters.filters.empty_hint': 'フィルターなし — 属性またはクラスを選択してください',
   'characters.filters.match_logic': '条件',
   'characters.filters.tab.basics': '基本',
