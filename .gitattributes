@@ -1,0 +1,22 @@
+# Normalize all text files to LF in the repo and on checkout.
+# This stops autocrlf from creating phantom CRLF diffs on Windows.
+* text=auto eol=lf
+
+# Binary assets — never apply line-ending conversion
+*.webp binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.svg  text eol=lf
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
+*.eot   binary
+*.mp3 binary
+*.mp4 binary
+*.webm binary
+*.pdf  binary
+*.zip  binary
