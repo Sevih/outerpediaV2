@@ -86,8 +86,49 @@ def build_hard_area_set(area_rows):
     return {r['ID'] for r in area_rows if (r.get('ShortName') or '').startswith('SYS_HARD_AREA')}
 
 
-def derive_stage_label(dungeon_id, dungeon_row, area_index, hard_area_set):
-    """Format 'S<season>-<episode>-<stage>' (optionally with 'H' suffix for Hard)."""
+def build_season_display_map(area_rows):
+    """Map internal SeasonID → player-facing season number.
+
+    The game splits a story season into several internal SeasonIDs but keeps a
+    CONTINUOUS episode numbering across them. e.g. internal Season 2 runs
+    episodes 1-5 and internal Season 3 runs episodes 6-10 — together they are
+    the player's "Season 2" (Part 1 + Part 2). A genuinely new player season
+    always restarts episode numbering at 1.
+
+    So: walk SeasonIDs in order; a season whose episodes start back at 1 opens
+    a new display season, while one whose episodes continue (min episode > 1)
+    is a later part of the same display season. No hardcoded split tables.
+    """
+    min_ep = {}
+    for r in area_rows:
+        season = r.get('SeasonID')
+        episode = r.get('EpisodeNum')
+        if not season or not episode:
+            continue
+        try:
+            s, e = int(season), int(episode)
+        except (ValueError, TypeError):
+            continue
+        if s not in min_ep or e < min_ep[s]:
+            min_ep[s] = e
+
+    display = {}
+    counter = 0
+    for i, s in enumerate(sorted(min_ep)):
+        # First season always opens display #1; afterwards only a restart at
+        # episode 1 advances the player-facing season number.
+        if i == 0 or min_ep[s] == 1:
+            counter += 1
+        display[s] = counter
+    return display
+
+
+def derive_stage_label(dungeon_id, dungeon_row, area_index, hard_area_set, season_display):
+    """Format 'S<season>-<episode>-<stage>' (optionally with 'H' suffix for Hard).
+
+    <season> is the player-facing season number (see build_season_display_map),
+    not the raw internal SeasonID.
+    """
     if not dungeon_id or not dungeon_id.isdigit() or len(dungeon_id) < 2:
         return None
     if not dungeon_row:
@@ -106,8 +147,12 @@ def derive_stage_label(dungeon_id, dungeon_row, area_index, hard_area_set):
         stage = int(dungeon_id[-2:])
     except ValueError:
         return None
+    try:
+        display_season = season_display.get(int(season), int(season))
+    except (ValueError, TypeError):
+        display_season = season
     hard = 'H' if area_id in hard_area_set else ''
-    return f'S{season}{hard}-{episode}-{stage}'
+    return f'S{display_season}{hard}-{episode}-{stage}'
 
 
 def main():
@@ -130,6 +175,7 @@ def main():
     area_index = {r['ID']: r for r in area_rows}
     text_index = {r['ID']: r for r in text_system}
     hard_area_set = build_hard_area_set(area_rows)
+    season_display = build_season_display_map(area_rows)
 
     def resolve_dungeon(did):
         """Build a unit-of-requirement: {dungeonId, stage, dungeonName, areaName}."""
@@ -137,7 +183,7 @@ def main():
         out = {'dungeonId': did, 'stage': None, 'dungeonName': None, 'areaName': None}
         if not dungeon:
             return out
-        out['stage'] = derive_stage_label(did, dungeon, area_index, hard_area_set)
+        out['stage'] = derive_stage_label(did, dungeon, area_index, hard_area_set, season_display)
         name_id = dungeon.get('NameID') or ''
         out['dungeonName'] = lang_map(text_index.get(name_id)) if name_id else None
         area_id = dungeon.get('AreaID')
