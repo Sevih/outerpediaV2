@@ -7,6 +7,7 @@ import { loadMessages } from '@/i18n';
 import JsonLd from '@/app/components/seo/JsonLd';
 import BreadcrumbSetter from '@/app/components/ui/BreadcrumbSetter';
 import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEquipment, getTalismanStatRanges, getEEStatRange } from '@/lib/data/equipment';
+import { getItemLiveDetail } from '@/lib/data/item-stats-detail';
 import { getItemStatRanges, getItemAscendedRanges, getArmorSetStatRanges, getArmorSetAscendedRanges } from '@/lib/data/stat-ranges-v2';
 import type { EquipmentLookup } from '@/lib/data/equipment';
 import { getCharacterIndex, resolveIdToSlug } from '@/lib/data/characters';
@@ -164,12 +165,13 @@ export default async function EquipmentDetailPage({ params }: Props) {
   const equipment = await getEquipmentBySlug(slug);
   if (!equipment) notFound();
 
-  const [messages, recoRefs, charIndex, buffsArr, debuffsArr] = await Promise.all([
+  const [messages, recoRefs, charIndex, buffsArr, debuffsArr, liveDetail] = await Promise.all([
     loadMessages(lang),
     getCharactersRecommendingEquipment(equipment.data.name, equipment.type),
     getCharacterIndex(),
     getBuffs(),
     getDebuffs(),
+    getItemLiveDetail(equipment),
   ]);
 
   const buffMap: Record<string, Effect> = {};
@@ -319,6 +321,7 @@ export default async function EquipmentDetailPage({ params }: Props) {
         armorSetAscendedRanges={armorSetAscendedRanges}
         talismanStatRanges={talismanStatRanges}
         eeStatRange={eeStatRange}
+        liveDetail={liveDetail}
         messages={messages}
         lang={lang}
       />
