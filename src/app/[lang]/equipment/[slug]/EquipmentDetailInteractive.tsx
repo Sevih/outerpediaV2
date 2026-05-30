@@ -1,7 +1,7 @@
 'use client';
 
-// Interactive progression preview (Console direction · "live" layer).
-// Gated behind ?build=live by EquipmentDetailClient. Renders client-only.
+// Interactive equipment detail view (Console direction). Default view for /equipment/<slug>.
+// Renders client-only.
 //
 // Driven by REAL data: data/equipment/item-stats-detail.json via the data layer
 // (getItemLiveDetail → liveDetail prop). Mechanics:
@@ -9,7 +9,7 @@
 //   • Breakthrough T0→T4 → main stat(s) + passive/effect text
 //   • Reforge 0→N (N = stars, +3 if 6★) → secondary stats only (from the real pool,
 //     excluding fixed mains + the chosen choice-main)
-// EE has no datamine detail → falls back to the eeStatRange/curated effect.
+// EE falls back to the eeStatRange/curated effect if not yet in item-stats-detail.json.
 
 import { useState, useCallback, useRef, useEffect, useMemo } from 'react';
 import Image from 'next/image';
@@ -717,7 +717,7 @@ export function EquipmentInteractiveInner(props: EquipmentViewProps) {
     if (model.passive || model.effect) modules.push({ key: 'eff', title: model.passive ? lRec(model.passive.name, lang) : t('page.character.ee.effect'), span: 2, node: <PassiveModule model={model} build={build} accentHex={accentHex} /> });
     const ascStd = model.type === 'weapon' ? weaponStatRanges : accessoryStatRanges;
     const ascEnd = model.type === 'weapon' ? weaponAscendedRanges : accessoryAscendedRanges;
-    if (ascEnd && Object.keys(ascEnd).length > 0) modules.push({ key: 'asc', title: lRec(ASCENSION_LABELS.title, lang), span: 2, ascension: true, node: <AscensionContent slot={model.type === 'weapon' ? 'weapons' : 'accessories'} standardRanges={ascStd} ascendedRanges={ascEnd} lang={lang} variant="live" /> });
+    if (ascEnd && Object.keys(ascEnd).length > 0) modules.push({ key: 'asc', title: lRec(ASCENSION_LABELS.title, lang), span: 2, ascension: true, node: <AscensionContent slot={model.type === 'weapon' ? 'weapons' : 'accessories'} standardRanges={ascStd} ascendedRanges={ascEnd} lang={lang} /> });
     const src = equipment.data as SrcLike;
     if (src.source || src.boss) modules.push({ key: 'src', title: t('equip.filter.source'), span: 1, node: <EquipmentSource source={src.source ?? undefined} boss={src.boss ?? undefined} bossMap={bossMap} lang={lang} linkable /> });
   } else if (model.type === 'talisman' && f) {
@@ -735,7 +735,7 @@ export function EquipmentInteractiveInner(props: EquipmentViewProps) {
       return p.pool.some((o) => !ex.has(slotSig(o.key, o.percent)));
     })) modules.push({ key: 'sub', title: lRec(LIVE_LABELS.substats, lang), span: 2, node: <ArmorSelectedSubstats model={model} f={f} selectedPiece={selectedPiece} /> });
     if (armorSetAscendedRanges && (['Helmet', 'Armor', 'Gloves', 'Shoes'] as ArmorPiece[]).some((p) => armorSetAscendedRanges[p] && Object.keys(armorSetAscendedRanges[p]).length > 0)) {
-      modules.push({ key: 'asc', title: lRec(ASCENSION_LABELS.title, lang), span: 2, ascension: true, node: <AscensionContentForSet standardRanges={armorSetStatRanges} ascendedRanges={armorSetAscendedRanges} lang={lang} variant="live" /> });
+      modules.push({ key: 'asc', title: lRec(ASCENSION_LABELS.title, lang), span: 2, ascension: true, node: <AscensionContentForSet standardRanges={armorSetStatRanges} ascendedRanges={armorSetAscendedRanges} lang={lang} /> });
     }
     if (s.source || s.boss) modules.push({ key: 'src', title: t('equip.filter.source'), span: 1, node: <EquipmentSource source={s.source ?? undefined} boss={s.boss ?? undefined} bossMap={bossMap} lang={lang} linkable /> });
   } else if (equipment.type === 'ee' && eeOwner) {
@@ -808,10 +808,6 @@ export function EquipmentInteractiveInner(props: EquipmentViewProps) {
       <Link href={href('/equipment')} className="mb-4 inline-flex items-center gap-1.5 text-xs uppercase tracking-wider text-zinc-500 transition-colors hover:text-zinc-300">
         <span aria-hidden="true">←</span> {t('equip.detail.back')}
       </Link>
-
-      <div className="panel-warning mb-3.5 px-3.5 py-2 text-xs text-amber-200/80">
-        Preview · interactive build — drives main / substats / passive from the real item-stats data.
-      </div>
 
       <div className="mb-3.5 grid grid-cols-1 gap-3.5 md:grid-cols-2">
         <div className="overflow-hidden rounded-xl border bg-zinc-900/60" style={{ borderColor: `${accentHex}3a` }}>
