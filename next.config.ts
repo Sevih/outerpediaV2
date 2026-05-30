@@ -62,6 +62,43 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+
+  async redirects() {
+    return [
+      // Renamed Dimensional Singularity guides: <name> → <name>-<element>
+      // to disambiguate Light/Dark variants of the same boss.
+      {
+        source: '/guides/dimensional-singularity/urd',
+        destination: '/guides/dimensional-singularity/urd-light',
+        permanent: true,
+      },
+      {
+        source: '/:lang/guides/dimensional-singularity/urd',
+        destination: '/:lang/guides/dimensional-singularity/urd-light',
+        permanent: true,
+      },
+      {
+        source: '/guides/dimensional-singularity/verdandi',
+        destination: '/guides/dimensional-singularity/verdandi-dark',
+        permanent: true,
+      },
+      {
+        source: '/:lang/guides/dimensional-singularity/verdandi',
+        destination: '/:lang/guides/dimensional-singularity/verdandi-dark',
+        permanent: true,
+      },
+      {
+        source: '/guides/dimensional-singularity/skuld',
+        destination: '/guides/dimensional-singularity/skuld-light',
+        permanent: true,
+      },
+      {
+        source: '/:lang/guides/dimensional-singularity/skuld',
+        destination: '/:lang/guides/dimensional-singularity/skuld-light',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

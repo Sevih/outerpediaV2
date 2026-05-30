@@ -22,19 +22,40 @@ export type LiveMeta = {
   statPercent: Record<string, boolean>;   // drives the "%" suffix (EFF/RES are true here)
 };
 
+// `percent` is the per-occurrence display flag (true → render with "%"). It comes from
+// the generator (derived from the in-game OAT_ADD vs OAT_RATE pair) and overrides the
+// global statMeta for stats whose unit is context-dependent (EFF/RES: flat on gear,
+// % on talismans). Optional so older payloads (no flag) still fall back to statMeta.
 export type LiveMainSlot =
-  | { type: 'fixed'; key: string; base: number }
-  | { type: 'choice'; options: { key: string; base: number; levels?: number[] }[] };
+  | { type: 'fixed'; key: string; base: number; percent?: boolean }
+  | { type: 'choice'; options: { key: string; base: number; levels?: number[]; percent?: boolean }[] };
 
-export type LiveSubOpt = { key: string; step: number; max: number; maxSegments: number };
+export type LiveSubOpt = { key: string; step: number; max: number; maxSegments: number; percent?: boolean };
 // Passive: per-language template (`desc`) with native tokens + per-tier token→value tables.
 export type LivePassive = { name: LangMap; desc: LangMap; valuesByTier: Record<string, string>[] } | null;
+// Talisman passive: each tier unlocks at a specific enhancement level (1 = base, 10 = +10 unlock).
+// `isAdd=true` → tier stacks on the base (two distinct effects active together).
+// `isAdd=false` → tier upgrades the base (same effect, stronger value: base hidden once tier unlocks).
+export type LiveTalismanPassiveTier = { unlockLevel: number; isAdd: boolean; desc: LangMap; values: Record<string, string> };
+export type LiveTalismanPassive = { name: LangMap; tiers: LiveTalismanPassiveTier[] } | null;
 export type LiveArmorPiece = { slot: string; mainStats: LiveMainSlot[]; subPool: LiveSubOpt[]; excludedSubStats: string[] };
 export type LiveSetEffectBlock = { base: LangMap; bt4: LangMap };
 export type LiveSetPassive = { twoPc: LiveSetEffectBlock; fourPc: LiveSetEffectBlock } | null;
 
+// EE (Exclusive Equipment) main stat slot — explicit 11-level lookup (no formula).
+// `conditional=true` for the %-stat (vs element), false for the flat HIT_AP/KILL_AP secondary.
+// `label` is localized: from curated ee.json for the conditional one (includes "vs <element>");
+// from SYS_STAT_* for the flat one.
+export type LiveEEMainStat = {
+  key: string;
+  label: LangMap | null;
+  percent: boolean;
+  conditional: boolean;
+  levels: number[];   // index 0 = +0 … index 10 = +10
+};
+
 export type ItemLiveDetail = {
-  kind: 'weapon' | 'accessory' | 'talisman' | 'armor';
+  kind: 'weapon' | 'accessory' | 'talisman' | 'armor' | 'ee';
   star: number;
   canAscend: boolean;
   scalesVia?: 'enhanceLevels';
@@ -42,8 +63,11 @@ export type ItemLiveDetail = {
   subPool?: LiveSubOpt[];            // weapon / accessory (full pool, before exclusions)
   excludedSubStats?: string[];
   passive?: LivePassive;             // weapon / accessory
+  talismanPassive?: LiveTalismanPassive; // talisman + EE (multi-tier: base + +10 unlock)
   pieces?: LiveArmorPiece[];         // armor (one entry per slot)
   setPassive?: LiveSetPassive;       // armor
+  eeMainStats?: LiveEEMainStat[];    // EE (2 slots: conditional % + flat HIT_AP/KILL_AP)
+  characterId?: string;              // EE (links to the owning character)
 };
 
 export type ItemLiveBundle = { meta: LiveMeta; item: ItemLiveDetail };
@@ -95,6 +119,16 @@ export function renderPassive(
   let text = p.desc[lang] ?? p.desc.en ?? '';
   const vals = p.valuesByTier[Math.min(Math.max(tier, 0), p.valuesByTier.length - 1)] ?? {};
   for (const [token, value] of Object.entries(vals)) {
+    const v = color ? `<color=#28d9ed>${value}</color>` : value;
+    text = text.split(token).join(v);
+  }
+  return text;
+}
+
+/** Resolve a talisman passive tier: substitute the per-tier token values into the language template. */
+export function renderTalismanTier(tier: LiveTalismanPassiveTier, lang: Lang, color = true): string {
+  let text = tier.desc[lang] ?? tier.desc.en ?? '';
+  for (const [token, value] of Object.entries(tier.values)) {
     const v = color ? `<color=#28d9ed>${value}</color>` : value;
     text = text.split(token).join(v);
   }

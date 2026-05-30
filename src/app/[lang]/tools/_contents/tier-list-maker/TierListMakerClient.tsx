@@ -12,6 +12,7 @@ import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import { FilterSearch, FilterPill } from '@/app/components/ui/FilterPills';
 import { ElementIcon, ClassIcon, StarsRow } from '@/app/components/character/PortraitOverlays';
+import CharacterCard from '@/app/components/character/CharacterCard';
 
 // ── Types ──
 
@@ -28,6 +29,9 @@ export type TierSourceItem = {
   baseKey?: string;
   /** Per-language short display name (abbreviation) for cramped labels. */
   short?: LangMap;
+  /** Tall character card URL (`portrait/CT_*`) — set for items that have one
+   *  (characters + skins). Used by the ranked grid when "Show cards" is on. */
+  card?: string;
 };
 
 type Props = {
@@ -392,6 +396,16 @@ const ITEM_SIZES: Record<IconSize, { box: string; col: string }> = {
   l: { box: 'h-16 w-16 sm:h-20 sm:w-20', col: 'w-16 sm:w-20' },
 };
 
+/** Card widths for the ranked grid — match CharacterCard's sm/md/lg sizes
+ *  (66×128, 100×192, 120×231). Height is derived via the card's portrait
+ *  aspect so the drop-preview lines up with a real CharacterCard. */
+const CARD_SIZES: Record<IconSize, { w: string; size: 'sm' | 'md' | 'lg' }> = {
+  s: { w: 'w-[66px]', size: 'sm' },
+  m: { w: 'w-25', size: 'md' },
+  l: { w: 'w-30', size: 'lg' },
+};
+const CARD_ASPECT = 'aspect-[120/231]';
+
 type ItemViewProps = {
   item: TierSourceItem;
   selected: boolean;
@@ -444,6 +458,64 @@ const ItemView = memo(function ItemView({
   );
 });
 
+// ── Full-art card (used in the ranked grid when "Show cards" is on) ──
+
+type CardViewProps = {
+  item: TierSourceItem;
+  selected: boolean;
+  dimmed: boolean;
+  /** Base character name — rendered ON the card. */
+  label: string;
+  /** Skin display name — rendered UNDER the card when set. */
+  skinLabel?: string;
+  size: IconSize;
+  showName: boolean;
+  showElement: boolean;
+  showClass: boolean;
+  showStars: boolean;
+  showBadge: boolean;
+  onPointerDown: (e: React.PointerEvent, key: string) => void;
+};
+
+const CardView = memo(function CardView({
+  item, selected, dimmed, label, skinLabel, size, showName, showElement, showClass, showStars, showBadge, onPointerDown,
+}: CardViewProps) {
+  // Strip the "c"/"e"/"b" type prefix to get the raw character/skin id.
+  const id = item.key.slice(1);
+  return (
+    <div
+      data-item-key={item.key}
+      onPointerDown={(e) => onPointerDown(e, item.key)}
+      title={skinLabel ?? label}
+      className={[
+        CARD_SIZES[size].w,
+        'relative flex shrink-0 cursor-grab touch-none select-none flex-col items-center',
+        dimmed ? 'opacity-30' : '',
+      ].join(' ')}
+    >
+      <div className={['rounded ring-offset-1 ring-offset-zinc-900 transition', selected ? 'ring-2 ring-amber-400' : ''].join(' ')}>
+        <CharacterCard
+          id={id}
+          name={label}
+          element={item.element as ElementType | undefined}
+          classType={item.cls as ClassType | undefined}
+          rarity={item.rarity as RarityType | undefined}
+          tags={item.tags}
+          size={CARD_SIZES[size].size}
+          showName={showName}
+          showElement={showElement}
+          showClass={showClass}
+          showStars={showStars}
+          showBadge={showBadge}
+        />
+      </div>
+      {skinLabel && (
+        <span className="mt-0.5 line-clamp-2 w-full text-center text-[10px] leading-tight text-zinc-400">{skinLabel}</span>
+      )}
+    </div>
+  );
+});
+
 // ── Tier label (auto-growing, word-wrapping) ──
 
 function TierLabel({
@@ -475,9 +547,10 @@ function TierLabel({
 }
 
 /** Faded preview of the dragged item, shown at the insertion point during a drag. */
-function DropPreview({ src, size }: { src: string | undefined; size: IconSize }) {
+function DropPreview({ src, size, card }: { src: string | undefined; size: IconSize; card?: boolean }) {
+  const sizeCls = card ? `${CARD_SIZES[size].w} ${CARD_ASPECT}` : ITEM_SIZES[size].box;
   return (
-    <div className={`${ITEM_SIZES[size].box} shrink-0 overflow-hidden rounded-md border-2 border-dashed border-amber-400/80 bg-amber-400/10`}>
+    <div className={`${sizeCls} shrink-0 overflow-hidden rounded-md border-2 border-dashed border-amber-400/80 bg-amber-400/10`}>
       {src && (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={src} alt="" draggable={false} className="h-full w-full rounded-md object-cover opacity-40" />
@@ -520,6 +593,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   const [classFilter, setClassFilter] = useState<ClassType[]>([]);
   const [rarityFilter, setRarityFilter] = useState<RarityType[]>([]);
   const [tagFilter, setTagFilter] = useState<string[]>([]);
+  const [skinsOnly, setSkinsOnly] = useState(false);
   const [sort, setSort] = useState<SortKey>('default');
 
   // Display settings (persisted in localStorage)
@@ -529,6 +603,9 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
   const [showClass, setShowClass] = useState(false);
   const [showRarity, setShowRarity] = useState(false);
   const [showSkins, setShowSkins] = useState(false);
+  const [showCards, setShowCards] = useState(false);
+  const [cardSize, setCardSize] = useState<IconSize>('m');
+  const [showCardTags, setShowCardTags] = useState(false);
   const [showSkinNames, setShowSkinNames] = useState(true); // skin name vs base character name
   const [showSettings, setShowSettings] = useState(false);
 
@@ -552,14 +629,17 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
         if (typeof s.showRarity === 'boolean') setShowRarity(s.showRarity);
         if (typeof s.showSkins === 'boolean') setShowSkins(s.showSkins);
         if (typeof s.showSkinNames === 'boolean') setShowSkinNames(s.showSkinNames);
+        if (typeof s.showCards === 'boolean') setShowCards(s.showCards);
+        if (s.cardSize === 's' || s.cardSize === 'm' || s.cardSize === 'l') setCardSize(s.cardSize);
+        if (typeof s.showCardTags === 'boolean') setShowCardTags(s.showCardTags);
       }
     } catch { /* ignore */ }
   }, []);
   useEffect(() => {
     try {
-      localStorage.setItem(SETTINGS_KEY, JSON.stringify({ iconSize, showNames, showElement, showClass, showRarity, showSkins, showSkinNames }));
+      localStorage.setItem(SETTINGS_KEY, JSON.stringify({ iconSize, showNames, showElement, showClass, showRarity, showSkins, showSkinNames, showCards, cardSize, showCardTags }));
     } catch { /* ignore */ }
-  }, [iconSize, showNames, showElement, showClass, showRarity, showSkins, showSkinNames]);
+  }, [iconSize, showNames, showElement, showClass, showRarity, showSkins, showSkinNames, showCards, cardSize, showCardTags]);
 
   const localName = useCallback(
     (key: string) => {
@@ -648,7 +728,10 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     const q = query.trim().toLowerCase();
     const filtered = sourceByTab[tab].filter((it) => {
       if (placed.has(it.key)) return false;
-      if (it.isSkin && !showSkins) return false;
+      // "Skins only" overrides the default skin-hiding so the filter works
+      // even when the Settings toggle is off.
+      if (skinsOnly) { if (!it.isSkin) return false; }
+      else if (it.isSkin && !showSkins) return false;
       if (elementFilter.length && (!it.element || !elementFilter.includes(it.element as ElementType))) return false;
       if (classFilter.length && (!it.cls || !classFilter.includes(it.cls as ClassType))) return false;
       if (rarityFilter.length && (it.rarity === undefined || !rarityFilter.includes(it.rarity as RarityType))) return false;
@@ -669,7 +752,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       arr.sort((a, b) => ELEMENT_ORDER.indexOf(a.element ?? '') - ELEMENT_ORDER.indexOf(b.element ?? '') || lRec(a.name, lang).localeCompare(lRec(b.name, lang)));
     }
     return arr;
-  }, [sourceByTab, tab, placed, query, elementFilter, classFilter, rarityFilter, tagFilter, showSkins, sort, lang]);
+  }, [sourceByTab, tab, placed, query, elementFilter, classFilter, rarityFilter, tagFilter, showSkins, skinsOnly, sort, lang]);
 
   // ── Drag & drop (pointer events, mouse + touch) ──
   const startRef = useRef<{ x: number; y: number; key: string } | null>(null);
@@ -918,12 +1001,31 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
 
   // ── PNG export (mirrors the on-screen display settings) ──
   const exportPng = useCallback(async () => {
-    const CELL = { s: 56, m: 76, l: 100 }[iconSize];
+    // Cell geometry: square portrait when cards are off, tall card otherwise.
+    const ICON = { s: 56, m: 76, l: 100 }[iconSize];
+    const CARD_W = { s: 66, m: 100, l: 120 }[cardSize];
+    const CARD_H = Math.round(CARD_W * 231 / 120);
+    const cellW = showCards ? CARD_W : ICON;
+    const cellH = showCards ? CARD_H : ICON;
     const PER_ROW = 12, PAD = 20, LABEL_W = 110;
     const LABEL_PAD = 8, LINE_H = 24, LABEL_FONT = '700 20px system-ui, sans-serif';
-    const NAME_PX = Math.max(10, Math.round(CELL * 0.16));
+    const NAME_PX = Math.max(10, Math.round(cellW * 0.16));
     const NAME_LH = NAME_PX + 2;
     const NAME_FONT = `500 ${NAME_PX}px system-ui, sans-serif`;
+
+    /** Recruit-badge file for a tag set (priority matches CharacterCard). */
+    const recruitBadge = (tags?: string[]): string | null => {
+      if (!tags) return null;
+      const pairs: [string, string][] = [
+        ['collab', '/images/ui/recruit/CM_Recruit_Tag_Collab.webp'],
+        ['seasonal', '/images/ui/recruit/CM_Recruit_Tag_Seasonal.webp'],
+        ['premium', '/images/ui/recruit/CM_Recruit_Tag_Premium.webp'],
+        ['free', '/images/ui/recruit/CM_Recruit_Tag_Free.webp'],
+        ['limited', '/images/ui/recruit/CM_Recruit_Tag_Fes.webp'],
+      ];
+      for (const [tag, src] of pairs) if (tags.includes(tag)) return src;
+      return null;
+    };
 
     const load = (src: string) =>
       new Promise<HTMLImageElement | null>((resolve) => {
@@ -939,9 +1041,13 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     for (const tr of tiers) for (const k of tr.items) {
       const it = itemMap.get(k);
       if (!it) continue;
-      urls.add(it.img);
+      urls.add(showCards && it.card ? it.card : it.img);
       if (showElement && it.element) urls.add(`/images/ui/elem/CM_Element_${it.element}.webp`);
       if (showClass && it.cls) urls.add(`/images/ui/class/CM_Class_${it.cls}.webp`);
+      if (showCards && showCardTags) {
+        const b = recruitBadge(it.tags);
+        if (b) urls.add(b);
+      }
     }
     if (showRarity) urls.add('/images/ui/star/CM_icon_star_y.webp');
     const img = new Map<string, HTMLImageElement>();
@@ -953,35 +1059,51 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     const ctx = canvas.getContext('2d', { willReadFrequently: true });
     if (!ctx) return;
 
-    // Pre-wrap names in full (no truncation). Each tier's cell height grows to
-    // fit its longest name, so nothing is cut and the grid stays aligned.
+    // Pre-wrap names so each tier's row height fits the longest name(s).
+    // Card mode renders TWO names below the cell: base character (when
+    // showNames) and the skin's own name (always, when it's a costume).
     ctx.font = NAME_FONT;
-    const nameLines = new Map<string, string[]>();
-    if (showNames) {
-      for (const tr of tiers) for (const k of tr.items) {
-        const it = itemMap.get(k);
-        if (!it) continue;
-        // A costume is named after its base character when "skin names" is off.
+    const baseNameLines = new Map<string, string[]>();
+    const skinNameLines = new Map<string, string[]>();
+    for (const tr of tiers) for (const k of tr.items) {
+      const it = itemMap.get(k);
+      if (!it) continue;
+      if (showCards) {
+        if (showNames) {
+          const baseIt = it.isSkin && it.baseKey ? itemMap.get(it.baseKey) ?? it : it;
+          baseNameLines.set(k, wrapLabel(ctx, baseIt.short?.[lang] ?? lRec(baseIt.name, lang), cellW - 2));
+        }
+        if (it.isSkin) {
+          skinNameLines.set(k, wrapLabel(ctx, it.short?.[lang] ?? lRec(it.name, lang), cellW - 2));
+        }
+      } else if (showNames) {
         const named = it.isSkin && !showSkinNames && it.baseKey ? itemMap.get(it.baseKey) ?? it : it;
-        nameLines.set(k, wrapLabel(ctx, named.short?.[lang] ?? lRec(named.name, lang), CELL - 2));
+        baseNameLines.set(k, wrapLabel(ctx, named.short?.[lang] ?? lRec(named.name, lang), cellW - 2));
       }
     }
-    const cellH = tiers.map((tr) => {
-      if (!showNames) return CELL;
-      const maxLines = Math.max(1, ...tr.items.map((k) => nameLines.get(k)?.length ?? 1));
-      return CELL + maxLines * NAME_LH + 4;
+    const cellTotalH = tiers.map((tr) => {
+      let extra = 0;
+      if (showCards) {
+        const maxBase = Math.max(0, ...tr.items.map((k) => baseNameLines.get(k)?.length ?? 0));
+        const maxSkin = Math.max(0, ...tr.items.map((k) => skinNameLines.get(k)?.length ?? 0));
+        if (maxBase || maxSkin) extra = (maxBase + maxSkin) * NAME_LH + 4;
+      } else if (showNames) {
+        const maxLines = Math.max(1, ...tr.items.map((k) => baseNameLines.get(k)?.length ?? 1));
+        extra = maxLines * NAME_LH + 4;
+      }
+      return cellH + extra;
     });
 
     ctx.font = LABEL_FONT;
     const labelLines = tiers.map((tr) => wrapLabel(ctx, tr.label, LABEL_W - LABEL_PAD * 2));
     const rowHeights = tiers.map((tr, i) => {
-      const itemsH = Math.max(1, Math.ceil(tr.items.length / PER_ROW)) * cellH[i];
+      const itemsH = Math.max(1, Math.ceil(tr.items.length / PER_ROW)) * cellTotalH[i];
       const labelH = labelLines[i].length * LINE_H + LABEL_PAD * 2;
       return Math.max(itemsH, labelH);
     });
 
     const titleH = title.trim() ? 56 : 0;
-    const contentW = LABEL_W + PER_ROW * CELL;
+    const contentW = LABEL_W + PER_ROW * cellW;
     const footerH = 30;
     const width = PAD * 2 + contentW;
     const height = PAD * 2 + titleH + rowHeights.reduce((a, b) => a + b, 0) + footerH;
@@ -998,10 +1120,10 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
     ctx.fillStyle = '#18181b';
     ctx.fillRect(0, 0, width, height);
 
-    const drawCover = (im: HTMLImageElement, dx: number, dy: number, d: number) => {
-      const scale = Math.max(d / im.width, d / im.height);
-      const sw = d / scale, sh = d / scale;
-      ctx.drawImage(im, (im.width - sw) / 2, (im.height - sh) / 2, sw, sh, dx, dy, d, d);
+    const drawCover = (im: HTMLImageElement, dx: number, dy: number, dw: number, dh: number) => {
+      const sc = Math.max(dw / im.width, dh / im.height);
+      const sw = dw / sc, sh = dh / sc;
+      ctx.drawImage(im, (im.width - sw) / 2, (im.height - sh) / 2, sw, sh, dx, dy, dw, dh);
     };
     const drawContain = (im: HTMLImageElement, dx: number, dy: number, d: number) => {
       const scale = Math.min(d / im.width, d / im.height);
@@ -1033,50 +1155,93 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       lines.forEach((ln, i) => ctx.fillText(ln, PAD + LABEL_W / 2, startY + i * LINE_H));
       // Items row background
       ctx.fillStyle = '#27272a';
-      ctx.fillRect(PAD + LABEL_W, y, PER_ROW * CELL, rh);
+      ctx.fillRect(PAD + LABEL_W, y, PER_ROW * cellW, rh);
       // Items
       tr.items.forEach((k, idx) => {
         const it = itemMap.get(k);
-        const im = it ? img.get(it.img) : undefined;
-        if (!it || !im) return;
-        const cellX = PAD + LABEL_W + (idx % PER_ROW) * CELL;
-        const cellY = y + Math.floor(idx / PER_ROW) * cellH[ti];
-        const pad = 3;
-        const box = CELL - pad * 2;
+        if (!it) return;
+        const isCard = !!(showCards && it.card);
+        const src = isCard ? it.card! : it.img;
+        const im = img.get(src);
+        if (!im) return;
+        const cellX = PAD + LABEL_W + (idx % PER_ROW) * cellW;
+        const cellY = y + Math.floor(idx / PER_ROW) * cellTotalH[ti];
+        const pad = isCard ? 0 : 3;
+        const boxW = cellW - pad * 2;
+        const boxH = cellH - pad * 2;
         const bx = cellX + pad, by = cellY + pad;
-        // Thumbnail (rounded, cover-cropped)
+        // Thumbnail (rounded, cover-cropped to fill the box)
         ctx.save();
         ctx.beginPath();
-        ctx.roundRect(bx, by, box, box, 6);
+        ctx.roundRect(bx, by, boxW, boxH, isCard ? 4 : 6);
         ctx.clip();
-        drawCover(im, bx, by, box);
+        drawCover(im, bx, by, boxW, boxH);
         ctx.restore();
-        // Badges
-        if (showElement && it.element) {
-          const el = img.get(`/images/ui/elem/CM_Element_${it.element}.webp`);
-          if (el) { const s = box * 0.40; drawContain(el, bx + box - s, by, s); }
-        }
-        if (showClass && it.cls) {
-          const cl = img.get(`/images/ui/class/CM_Class_${it.cls}.webp`);
-          if (cl) { const s = box * 0.28; drawContain(cl, bx + box - s, by + box * 0.40, s); }
-        }
-        if (showRarity && it.rarity) {
-          const star = img.get('/images/ui/star/CM_icon_star_y.webp');
-          if (star) {
-            const s = box * 0.20;
-            let sx = bx + (box - it.rarity * s) / 2;
-            const sy = by + box - s - 2;
-            for (let r = 0; r < it.rarity; r++) { drawContain(star, sx, sy, s); sx += s; }
+        // Overlays — positions differ per mode (CharacterCard puts elem/class
+        // bottom-right; the portrait export puts elem top-right, class side).
+        if (isCard) {
+          if (showElement && it.element) {
+            const el = img.get(`/images/ui/elem/CM_Element_${it.element}.webp`);
+            if (el) { const s = boxW * 0.24; drawContain(el, bx + boxW - s - 2, by + boxH - s - 4, s); }
+          }
+          if (showClass && it.cls) {
+            const cl = img.get(`/images/ui/class/CM_Class_${it.cls}.webp`);
+            if (cl) { const s = boxW * 0.26; drawContain(cl, bx + boxW - s - 2, by + boxH - s * 2 - 8, s); }
+          }
+          if (showRarity && it.rarity) {
+            const star = img.get('/images/ui/star/CM_icon_star_y.webp');
+            if (star) {
+              const s = boxW * 0.16;
+              for (let r = 0; r < it.rarity; r++) drawContain(star, bx + boxW - s - 4, by + 4 + r * (s + 1), s);
+            }
+          }
+          if (showCardTags) {
+            const badgeSrc = recruitBadge(it.tags);
+            const bd = badgeSrc ? img.get(badgeSrc) : null;
+            if (bd) {
+              const bw = boxW * 0.6;
+              const bh = bw * bd.height / bd.width;
+              ctx.drawImage(bd, bx + 2, by + 2, bw, bh);
+            }
+          }
+        } else {
+          if (showElement && it.element) {
+            const el = img.get(`/images/ui/elem/CM_Element_${it.element}.webp`);
+            if (el) { const s = boxW * 0.40; drawContain(el, bx + boxW - s, by, s); }
+          }
+          if (showClass && it.cls) {
+            const cl = img.get(`/images/ui/class/CM_Class_${it.cls}.webp`);
+            if (cl) { const s = boxW * 0.28; drawContain(cl, bx + boxW - s, by + boxW * 0.40, s); }
+          }
+          if (showRarity && it.rarity) {
+            const star = img.get('/images/ui/star/CM_icon_star_y.webp');
+            if (star) {
+              const s = boxW * 0.20;
+              let sx = bx + (boxW - it.rarity * s) / 2;
+              const sy = by + boxW - s - 2;
+              for (let r = 0; r < it.rarity; r++) { drawContain(star, sx, sy, s); sx += s; }
+            }
           }
         }
-        // Name (full, wrapped — height was reserved per tier above)
-        if (showNames) {
-          ctx.font = NAME_FONT;
+        // Names below the cell — base then skin (card mode) or just base (portrait).
+        ctx.font = NAME_FONT;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'top';
+        let ty = cellY + cellH + 2;
+        if (isCard) {
+          if (showNames) {
+            ctx.fillStyle = '#d4d4d8';
+            const bn = baseNameLines.get(k) ?? [];
+            bn.forEach((ln, i) => ctx.fillText(ln, cellX + cellW / 2, ty + i * NAME_LH));
+            ty += bn.length * NAME_LH;
+          }
+          if (it.isSkin) {
+            ctx.fillStyle = '#a1a1aa';
+            (skinNameLines.get(k) ?? []).forEach((ln, i) => ctx.fillText(ln, cellX + cellW / 2, ty + i * NAME_LH));
+          }
+        } else if (showNames) {
           ctx.fillStyle = '#d4d4d8';
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'top';
-          (nameLines.get(k) ?? [])
-            .forEach((ln, i) => ctx.fillText(ln, cellX + CELL / 2, cellY + CELL + 2 + i * NAME_LH));
+          (baseNameLines.get(k) ?? []).forEach((ln, i) => ctx.fillText(ln, cellX + cellW / 2, ty + i * NAME_LH));
         }
       });
       y += rh;
@@ -1115,7 +1280,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
       // A tainted canvas throws here — surface it instead of failing silently.
       window.alert(`PNG export failed: ${(err as Error).message}`);
     }
-  }, [tiers, title, itemMap, iconSize, showNames, showElement, showClass, showRarity, showSkinNames, lang, t]);
+  }, [tiers, title, itemMap, iconSize, showNames, showElement, showClass, showRarity, showSkinNames, showCards, cardSize, showCardTags, lang, t]);
 
   // ── Render ──
   // Count base characters only — costumes are an opt-in extra hidden by default.
@@ -1189,6 +1354,31 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                     <span className="text-zinc-200">{t('tools.tier-list-maker.show_skin_names')}</span>
                     <input type="checkbox" checked={showSkinNames} onChange={(e) => setShowSkinNames(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
                   </label>
+                  <label className="mb-2 flex cursor-pointer items-center justify-between border-t border-zinc-800 pt-2">
+                    <span className="text-zinc-200">{t('tools.tier-list-maker.show_cards')}</span>
+                    <input type="checkbox" checked={showCards} onChange={(e) => setShowCards(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
+                  </label>
+                  {showCards && (
+                    <>
+                      <p className="mb-1 text-xs uppercase tracking-wide text-zinc-400">{t('tools.tier-list-maker.card_size')}</p>
+                      <div className="mb-3 flex gap-1.5">
+                        {(['s', 'm', 'l'] as IconSize[]).map((sz) => (
+                          <button
+                            key={sz}
+                            type="button"
+                            onClick={() => setCardSize(sz)}
+                            className={['flex-1 rounded px-2 py-1 text-xs font-medium transition', cardSize === sz ? 'bg-filter text-white' : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'].join(' ')}
+                          >
+                            {t(`tools.tier-list-maker.size_${sz}` as Parameters<typeof t>[0])}
+                          </button>
+                        ))}
+                      </div>
+                      <label className="mb-3 flex cursor-pointer items-center justify-between">
+                        <span className="text-zinc-200">{t('tools.tier-list-maker.show_card_tags')}</span>
+                        <input type="checkbox" checked={showCardTags} onChange={(e) => setShowCardTags(e.target.checked)} className="h-4 w-4 accent-(--color-filter)" />
+                      </label>
+                    </>
+                  )}
                   <div className="flex gap-2 border-t border-zinc-800 pt-3">
                     <button type="button" onClick={exportJson} className="flex flex-1 items-center justify-center gap-1.5 rounded bg-zinc-800 px-2 py-1.5 text-xs text-zinc-200 hover:bg-zinc-700">
                       <FaFileExport /> {t('tools.tier-list-maker.export_json')}
@@ -1285,13 +1475,36 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                 {(() => {
                   const showMarker = !!drag && dropAt?.tierId === tier.id;
                   const markerIdx = dropAt?.index ?? -1;
-                  const dragImg = drag ? itemMap.get(drag.key)?.img : undefined;
-                  const marker = <DropPreview key="drop-marker" src={dragImg} size={iconSize} />;
+                  const dragIt = drag ? itemMap.get(drag.key) : undefined;
+                  const useCardForDrag = showCards && !!dragIt?.card;
+                  const dragImg = useCardForDrag ? dragIt!.card : dragIt?.img;
+                  const marker = <DropPreview key="drop-marker" src={dragImg} size={useCardForDrag ? cardSize : iconSize} card={useCardForDrag} />;
                   const nodes: React.ReactNode[] = [];
                   tier.items.forEach((key, i) => {
                     if (showMarker && i === markerIdx) nodes.push(marker);
                     const it = itemMap.get(key);
-                    if (it) {
+                    if (!it) return;
+                    if (showCards && it.card) {
+                      nodes.push(
+                        <CardView
+                          key={key}
+                          item={it}
+                          selected={selectedKey === key}
+                          dimmed={drag?.key === key}
+                          /* Cards always show the base character name; the skin's own
+                             name (if any) gets rendered below the card. */
+                          label={localName(it.baseKey ?? key)}
+                          skinLabel={it.isSkin ? localName(key) : undefined}
+                          size={cardSize}
+                          showName={showNames}
+                          showElement={showElement}
+                          showClass={showClass}
+                          showStars={showRarity}
+                          showBadge={showCardTags}
+                          onPointerDown={onItemPointerDown}
+                        />,
+                      );
+                    } else {
                       nodes.push(
                         <ItemView
                           key={key}
@@ -1437,6 +1650,14 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
                   <span className="text-xs font-medium leading-none">{t(`tools.tier-list-maker.tag.${tg}` as Parameters<typeof t>[0])}</span>
                 </FilterPill>
               ))}
+              <FilterPill
+                active={skinsOnly}
+                onClick={() => setSkinsOnly((v) => !v)}
+                className="h-8 px-2"
+                title={t('tools.tier-list-maker.filter_skins_only') as string}
+              >
+                <span className="text-xs font-medium leading-none">{t('tools.tier-list-maker.filter_skins_only')}</span>
+              </FilterPill>
             </div>
           </div>
         )}
@@ -1449,7 +1670,7 @@ export default function TierListMakerClient({ characters, ee, bosses }: Props) {
         >
           {poolItems.length === 0 ? (
             <p className="py-6 text-sm text-zinc-500">
-              {placed.size > 0 && query.trim() === '' && elementFilter.length === 0 && classFilter.length === 0 && rarityFilter.length === 0 && tagFilter.length === 0
+              {placed.size > 0 && query.trim() === '' && elementFilter.length === 0 && classFilter.length === 0 && rarityFilter.length === 0 && tagFilter.length === 0 && !skinsOnly
                 ? t('tools.tier-list-maker.empty_pool')
                 : t('tools.tier-list-maker.no_results')}
             </p>

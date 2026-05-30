@@ -310,5 +310,33 @@
           "BT_ACTION_GAUGE"
       ]
     }
+  },
+  "skill:Enraged|60000013": {
+    "*": {
+      "clear_debuff": true,
+      "clear_buff": true,
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ]
+    }
+  },
+  "skill:Objective : Past Protection|60000013": {
+    "*": {
+      "clear_debuff": true,
+      "clear_buff": true
+    }
+  },
+  "skill:Factor : Absolute Fate|60000013": {
+    "*": {
+            "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    }
+  },
+  "skill:Establish : Fate Compulsion|60000013": {
+    "*": {
+      "clear_buff": true
+    }
   }
 }

@@ -10,7 +10,7 @@ import { getEquipmentBySlug, getAllEquipmentSlugs, getCharactersRecommendingEqui
 import { getItemLiveDetail } from '@/lib/data/item-stats-detail';
 import { getItemStatRanges, getItemAscendedRanges, getArmorSetStatRanges, getArmorSetAscendedRanges } from '@/lib/data/stat-ranges-v2';
 import type { EquipmentLookup } from '@/lib/data/equipment';
-import { getCharacterIndex, resolveIdToSlug } from '@/lib/data/characters';
+import { getCharacterIndex, getNameAliases, resolveIdToSlug } from '@/lib/data/characters';
 import { getBuffs, getDebuffs } from '@/lib/data/effects';
 import { getBossDisplayMap } from '@/lib/data/bosses';
 import type { Effect } from '@/types/effect';
@@ -165,13 +165,14 @@ export default async function EquipmentDetailPage({ params }: Props) {
   const equipment = await getEquipmentBySlug(slug);
   if (!equipment) notFound();
 
-  const [messages, recoRefs, charIndex, buffsArr, debuffsArr, liveDetail] = await Promise.all([
+  const [messages, recoRefs, charIndex, buffsArr, debuffsArr, liveDetail, nameAliases] = await Promise.all([
     loadMessages(lang),
     getCharactersRecommendingEquipment(equipment.data.name, equipment.type),
     getCharacterIndex(),
     getBuffs(),
     getDebuffs(),
     getItemLiveDetail(equipment),
+    getNameAliases(),
   ]);
 
   const buffMap: Record<string, Effect> = {};
@@ -190,14 +191,19 @@ export default async function EquipmentDetailPage({ params }: Props) {
   }
   const bossMap = await getBossDisplayMap([...bossIds]);
 
-  // Resolve reco references to character info with slugs
+  // Resolve reco references to character info with slugs. Use the short-name alias
+  // (data/name-aliases.json, keyed by `c{id}`) when present for the current language —
+  // falls back to alias.en, then the full localized name.
   const recoCharacters = await Promise.all(
     recoRefs.map(async (ref) => {
       const charInfo = charIndex[ref.characterId];
       const charSlug = charInfo?.slug ?? await resolveIdToSlug(ref.characterId);
+      const alias = nameAliases[`c${ref.characterId}`];
+      const aliasName = alias?.[lang] ?? alias?.en ?? null;
+      const fullName = charInfo ? l(charInfo, 'Fullname', lang) : ref.characterId;
       return {
         id: ref.characterId,
-        name: charInfo ? l(charInfo, 'Fullname', lang) : ref.characterId,
+        name: aliasName ?? fullName,
         slug: charSlug,
         element: charInfo?.Element ?? null,
         classType: charInfo?.Class ?? null,

@@ -14,22 +14,14 @@ import type { CharacterRecommendation } from '@/app/components/guides/Recommende
 import strings from './strings.json';
 import tips from './tips.json';
 import recommended from './recommended.json';
-import boss60000014 from '@data/boss/60000014.json';
+import boss60000013 from '@data/boss/60000013.json';
 
 const STRINGS = strings as Record<string, LangMap>;
 const TIPS = tips as Record<string, LangMap[]>;
 const RECOMMENDED = recommended as Record<string, CharacterRecommendation[]>;
 
 const preloadedBosses: Record<string, Boss> = {
-  '60000014': boss60000014 as unknown as Boss,
-};
-
-const GBETH_TITLE: LangMap = {
-  en: 'GBeth team strategy',
-  jp: 'GBeth編成戦略',
-  kr: 'GBeth 팀 전략',
-  zh: 'GBeth队伍策略',
-  fr: 'Strategie equipe GBeth',
+  '60000013': boss60000013 as unknown as Boss,
 };
 
 const LIGHT_TITLE: LangMap = {
@@ -40,7 +32,23 @@ const LIGHT_TITLE: LangMap = {
   fr: 'Strategie equipe Light',
 };
 
-export default function VerdandiGuide() {
+const MERO_TITLE: LangMap = {
+  en: 'Mero strategy',
+  jp: 'メロ戦略',
+  kr: '메로 전략',
+  zh: '梅萝策略',
+  fr: 'Strategie Mero',
+};
+
+const GBETH_TITLE: LangMap = {
+  en: 'GBeth team strategy',
+  jp: 'GBeth編成戦略',
+  kr: 'GBeth 팀 전략',
+  zh: 'GBeth队伍策略',
+  fr: 'Strategie equipe GBeth',
+};
+
+export default function UrdDarkGuide() {
   const { lang } = useI18n();
 
   return (
@@ -49,37 +57,31 @@ export default function VerdandiGuide() {
       introduction={lRec(STRINGS.intro, lang)}
     >
       <BossDisplay
-        bossName="Verdandi"
+        bossName="Urd"
         modeKey="Dimensional Singularity"
-        defaultBossId="60000014"
+        defaultBossId="60000013"
         preloadedBosses={preloadedBosses}
       />
-
       <hr className="my-6 border-neutral-700" />
-      <TacticalTips
-        sections={[
-          { title: 'general', tips: TIPS.general },
-          { title: GBETH_TITLE, tips: TIPS.gbeth },
-          { title: LIGHT_TITLE, tips: TIPS.light },
-        ]}
-      />
-
-      <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
-
+      <TacticalTips sections={[
+        { title: 'general', tips: TIPS.general },
+      ]} />
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={LIGHT_TITLE} entries={RECOMMENDED.light} />
-
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={MERO_TITLE} entries={RECOMMENDED.mero} />
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
-        hashPrefix="verdandi-video"
+        hashPrefix="urd-dark-video"
         videos={[
           {
             platform: 'youtube',
-            id: '4h2JnK2MXkM',
-            title: 'Verdandi — Dimensional Singularity — Rank SSS++',
+            id: 'TTFAtX5A4dg',
+            title: 'Urd (Dark) - Dimensional Singularity - Rank SSS++',
             author: 'Sevih',
-            label: 'Rank SSS++',
+            label: 'Mero — Rank SSS++',
           },
         ]}
       />

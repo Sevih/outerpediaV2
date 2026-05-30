@@ -24,7 +24,7 @@ import {
   statUnit, RARITY_HEX, STAT_HEX, HUD_LABELS, ASCENSION_LABELS,
   Module, StatRow, ListStats, EEMainStat, EffectContent, CharacterRefCard,
   SetEffectsContent, ArmorPiecesContent, AscensionContent, AscensionContentForSet,
-  type CharacterRef,
+  type CharacterRef, type EDModule,
 } from './equipment-console-shared';
 import { EquipmentInteractiveInner } from './EquipmentDetailInteractive';
 
@@ -52,7 +52,6 @@ type Props = {
 
 export type EquipmentViewProps = Props;
 
-type EDModule = { key: string; title: string; span?: 1 | 2; ascension?: boolean; node: React.ReactNode };
 type EDKpi = { label: string; value: string; color?: string };
 
 export default function EquipmentDetailClient(props: Props) {

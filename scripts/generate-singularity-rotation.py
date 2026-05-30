@@ -3,12 +3,20 @@ Generate data/generated/singularity-rotation.json
 
 Reads the Dimensional Singularity rotation structure from json2 sources:
   - SingularityTemplet.json              : 6-week schedule (start DOW, period, themes)
-  - SingularityDungeonGroupTemplet.json  : 4 bosses per group, with thumbnail codes
+  - SingularityDungeonGroupTemplet.json  : 4 bosses per group with DungeonID + thumbnail
+  - DungeonTemplet.json                  : DungeonID → element letter via NameID
+                                           (SYS_SINGULAR_DUNGEON_<F|W|E|L|D><NN>)
 
-Resolves each thumbnail code to a boss ID by scanning data/boss/*.json where
-location.mode.en == "Dimensional Singularity". Falls back to a 5-digit prefix
-match when the templet thumbnail code differs slightly from the boss file's
-`icons` field (observed for Harshna: templet=4086020 vs boss=4086026).
+Resolves each group entry to a boss ID by combining:
+  • Element from the DungeonID's NameID (the L/D distinction matters for the
+    Norn sisters Urd/Skuld/Verdandi, who all have Light AND Dark variants
+    sharing the same `icons` code — e.g. Urd Light=60000010 vs Dark=60000013
+    both use icons 4004006).
+  • Icons code from BossThumbnail / boss file's `icons` field, with a 5-digit
+    prefix fallback for Harshna (templet=4086020 vs boss=4086026).
+
+When a (icons, element) combination has no boss file (e.g. Verdandi Light or
+Skuld Dark not yet shipped), the entry is reported as unresolved.
 
 Output:
   {
@@ -37,7 +45,19 @@ BOSS_DIR = os.path.join(ROOT, 'data', 'boss')
 OUT_DIR = os.path.join(ROOT, 'data', 'generated')
 OUT_FILE = os.path.join(OUT_DIR, 'singularity-rotation.json')
 
-REQUIRED_INPUTS = ['SingularityTemplet', 'SingularityDungeonGroupTemplet']
+REQUIRED_INPUTS = ['SingularityTemplet', 'SingularityDungeonGroupTemplet', 'DungeonTemplet']
+
+# DungeonTemplet NameID prefix used by Singularity dungeons
+DUNGEON_NAME_PREFIX = 'SYS_SINGULAR_DUNGEON_'
+
+# Element letter in the dungeon NameID → boss file's `element` field
+ELEMENT_LETTER_TO_NAME = {
+    'F': 'Fire',
+    'W': 'Water',
+    'E': 'Earth',
+    'L': 'Light',
+    'D': 'Dark',
+}
 
 # User-confirmed anchor: week starting 2026-05-20 was GroupID 3
 # (Shichifuja, Harshna, Belial + Skuld on Saturday). The week before that
@@ -58,12 +78,12 @@ def load_json2(name):
         return json.load(f)
 
 
-def build_code_to_boss_id():
-    """Map a thumbnail code (e.g. '4038004') to a Dimensional Singularity boss ID.
+def build_boss_index():
+    """Map (icons, element) → boss_id for every Dimensional Singularity boss.
 
-    Exact match by `icons` field, with a 5-digit prefix fallback for cases
-    where the templet thumbnail code drifts from the boss file's icons code
-    (Harshna: 4086020 vs 4086026).
+    Also returns a prefix-5 index of (icons5, element) → boss_id for the
+    Harshna case where the templet thumbnail (4086020) doesn't exact-match
+    the boss file's icons (4086026).
     """
     exact = {}
     by_prefix5 = {}
@@ -78,28 +98,42 @@ def build_code_to_boss_id():
             continue
         boss_id = str(d.get('id'))
         icons = str(d.get('icons') or '')
-        if not icons:
+        element = d.get('element') or ''
+        if not icons or not element:
             continue
-        exact[icons] = boss_id
-        by_prefix5.setdefault(icons[:5], []).append((icons, boss_id))
+        exact[(icons, element)] = boss_id
+        by_prefix5.setdefault((icons[:5], element), []).append((icons, boss_id))
     return exact, by_prefix5
 
 
-def resolve_code(code, exact, by_prefix5):
-    if code in exact:
-        return exact[code]
-    candidates = by_prefix5.get(code[:5], [])
+def resolve_boss(code, element, exact, by_prefix5):
+    if (code, element) in exact:
+        return exact[(code, element)]
+    # Prefix-5 fallback only fires when exactly ONE candidate shares the prefix
+    # and the requested element — this handles Harshna's templet-vs-file code
+    # drift (4086020 vs 4086026) without misattributing across distinct bosses
+    # (the Norn sisters Urd/Skuld/Verdandi all share prefix 40040).
+    candidates = by_prefix5.get((code[:5], element), [])
     if len(candidates) == 1:
         return candidates[0][1]
-    if len(candidates) > 1:
-        # Pick the closest icons numerically (smallest absolute diff)
-        try:
-            target = int(code)
-            best = min(candidates, key=lambda c: abs(int(c[0]) - target))
-            return best[1]
-        except ValueError:
-            return candidates[0][1]
     return None
+
+
+def build_dungeon_to_element(dungeon_rows):
+    """Map DungeonID → element name via the SYS_SINGULAR_DUNGEON_<X><NN> NameID."""
+    out = {}
+    for r in dungeon_rows:
+        name_id = r.get('NameID') or ''
+        if not name_id.startswith(DUNGEON_NAME_PREFIX):
+            continue
+        suffix = name_id[len(DUNGEON_NAME_PREFIX):]
+        if not suffix:
+            continue
+        letter = suffix[0]
+        element = ELEMENT_LETTER_TO_NAME.get(letter)
+        if element:
+            out[str(r.get('ID'))] = element
+    return out
 
 
 def group_id_for_week(week_start):
@@ -121,13 +155,16 @@ def main():
 
     singularity = load_json2('SingularityTemplet')
     dungeon_group = load_json2('SingularityDungeonGroupTemplet')
+    dungeon_rows = load_json2('DungeonTemplet')
 
-    exact, by_prefix5 = build_code_to_boss_id()
+    exact, by_prefix5 = build_boss_index()
     if not exact:
         print('skipped: no Dimensional Singularity bosses found in data/boss')
         return 0
 
-    # Build per-GroupID -> ordered list of (order, code)
+    dungeon_to_element = build_dungeon_to_element(dungeon_rows)
+
+    # Build per-GroupID -> ordered list of (order, code, element)
     # `Order` is missing for the main/first boss (treat as 0)
     raw = {}
     for entry in dungeon_group:
@@ -136,7 +173,9 @@ def main():
         thumbnail = entry.get('BossThumbnail', '')
         # MT_Singularity_<code>
         code = thumbnail.rsplit('_', 1)[-1] if thumbnail else ''
-        raw.setdefault(gid, []).append((order, code, entry.get('SingularBossGroupID')))
+        dungeon_id = str(entry.get('DungeonID') or '')
+        element = dungeon_to_element.get(dungeon_id, '')
+        raw.setdefault(gid, []).append((order, code, element))
 
     # Theme name from SingularityTemplet, keyed by SingularityDungeonGroupID
     theme_by_group = {row['SingularityDungeonGroupID']: row.get('SingularityThemeName', '') for row in singularity}
@@ -146,10 +185,10 @@ def main():
     for gid_str in sorted(raw.keys(), key=lambda x: int(x)):
         entries = sorted(raw[gid_str], key=lambda t: t[0])
         boss_ids = []
-        for _, code, _ in entries:
-            bid = resolve_code(code, exact, by_prefix5)
+        for _, code, element in entries:
+            bid = resolve_boss(code, element, exact, by_prefix5)
             if bid is None:
-                unresolved.append((gid_str, code))
+                unresolved.append((gid_str, code, element))
                 boss_ids.append(None)
             else:
                 boss_ids.append(bid)
@@ -160,8 +199,10 @@ def main():
         })
 
     if unresolved:
-        print(f'skipped: could not resolve boss code(s): {unresolved}')
-        return 0
+        # Don't bail entirely — the Norn sister variants we haven't shipped yet
+        # (e.g. Verdandi Light, Skuld Dark) will surface here. Log and continue
+        # with null bossIds; consumers can render a "?" cell.
+        print(f'note: {len(unresolved)} unresolved (icons, element) combination(s): {unresolved}')
 
     groups_by_id = {g['id']: g for g in groups}
 

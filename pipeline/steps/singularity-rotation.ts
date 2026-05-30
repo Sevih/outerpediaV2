@@ -7,7 +7,7 @@ const SCRIPT = join(__dirname, '../../scripts/generate-singularity-rotation.py')
 const OUTPUT = join(PATHS.generated, 'singularity-rotation.json');
 const STAMP = join(PATHS.generated, '.singularity-rotation-stamp');
 
-const REQUIRED_INPUTS = ['SingularityTemplet', 'SingularityDungeonGroupTemplet'];
+const REQUIRED_INPUTS = ['SingularityTemplet', 'SingularityDungeonGroupTemplet', 'DungeonTemplet'];
 
 function latestInputMtime(): number {
   let latest = 0;

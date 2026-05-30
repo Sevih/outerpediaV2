@@ -56,7 +56,7 @@ const MERO_TITLE: LangMap = {
   fr: "Strategie Mero",
 };
 
-export default function UrdGuide() {
+export default function UrdLightGuide() {
   const { lang } = useI18n();
 
   return (

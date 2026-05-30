@@ -14,14 +14,14 @@ import type { CharacterRecommendation } from '@/app/components/guides/Recommende
 import strings from './strings.json';
 import tips from './tips.json';
 import recommended from './recommended.json';
-import boss60000012 from '@data/boss/60000012.json';
+import boss60000014 from '@data/boss/60000014.json';
 
 const STRINGS = strings as Record<string, LangMap>;
 const TIPS = tips as Record<string, LangMap[]>;
 const RECOMMENDED = recommended as Record<string, CharacterRecommendation[]>;
 
 const preloadedBosses: Record<string, Boss> = {
-  '60000012': boss60000012 as unknown as Boss,
+  '60000014': boss60000014 as unknown as Boss,
 };
 
 const GBETH_TITLE: LangMap = {
@@ -32,23 +32,15 @@ const GBETH_TITLE: LangMap = {
   fr: 'Strategie equipe GBeth',
 };
 
-const GDAHLIA_TITLE: LangMap = {
-  en: 'GDahlia team strategy',
-  jp: 'GDahliaチーム戦略',
-  kr: 'GDahlia 팀 전략',
-  zh: 'GDahlia队伍策略',
-  fr: 'Strategie equipe GDahlia',
+const LIGHT_TITLE: LangMap = {
+  en: 'Light team strategy',
+  jp: '光属性編成戦略',
+  kr: '빛 속성 팀 전략',
+  zh: '光属性队伍策略',
+  fr: 'Strategie equipe Light',
 };
 
-const DARK_TITLE: LangMap = {
-  en: 'Dark team strategy',
-  jp: '闇属性編成戦略',
-  kr: '암속성 구성 전략',
-  zh: '暗属性队伍策略',
-  fr: 'Strategie equipe Dark',
-};
-
-export default function SkuldGuide() {
+export default function VerdandiDarkGuide() {
   const { lang } = useI18n();
 
   return (
@@ -57,31 +49,37 @@ export default function SkuldGuide() {
       introduction={lRec(STRINGS.intro, lang)}
     >
       <BossDisplay
-        bossName="Skuld"
+        bossName="Verdandi"
         modeKey="Dimensional Singularity"
-        defaultBossId="60000012"
+        defaultBossId="60000014"
         preloadedBosses={preloadedBosses}
       />
+
       <hr className="my-6 border-neutral-700" />
-      <TacticalTips sections={[
-        { title: 'strategy', tips: TIPS.strategy },
-      ]} />
+      <TacticalTips
+        sections={[
+          { title: 'general', tips: TIPS.general },
+          { title: GBETH_TITLE, tips: TIPS.gbeth },
+          { title: LIGHT_TITLE, tips: TIPS.light },
+        ]}
+      />
+
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
+
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList title={GDAHLIA_TITLE} entries={RECOMMENDED.gdahlia} />
-      <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList title={DARK_TITLE} entries={RECOMMENDED.dark} />
+      <RecommendedCharacterList title={LIGHT_TITLE} entries={RECOMMENDED.light} />
+
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
-        hashPrefix="skuld-video"
+        hashPrefix="verdandi-video"
         videos={[
           {
             platform: 'youtube',
-            id: '4_6VLVfIkMI',
-            title: 'Skuld — Dimensional Singularity',
-            author: 'Jaego Sun',
-            label: 'G.Dahlia — Rank SSS++',
+            id: '4h2JnK2MXkM',
+            title: 'Verdandi — Dimensional Singularity — Rank SSS++',
+            author: 'Sevih',
+            label: 'Rank SSS++',
           },
         ]}
       />

@@ -1,0 +1,180 @@
+{
+  "id": "60000013",
+  "Name": {
+    "en": "Urd",
+    "jp": "ウルド",
+    "kr": "울드",
+    "zh": "乌尔德"
+  },
+  "Surname": {
+    "en": "Confirmed Past",
+    "jp": "確定された過去",
+    "kr": "확정된 과거",
+    "zh": "已确定的过去"
+  },
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Dark",
+  "level": 100,
+  "icons": "4004006",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO,BT_REMOVE_BUFF,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "[Singularity] - Urd",
+      "jp": "[特異点] - ウルド",
+      "kr": "[특이점] - 울드",
+      "zh": "[奇点] - 乌尔德"
+    },
+    "mode": {
+      "en": "Dimensional Singularity",
+      "jp": "次元特異点",
+      "kr": "차원 특이점",
+      "zh": "次元奇点"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Establish : Fate Compulsion",
+        "jp": "策定：運命の強要",
+        "kr": "수립 : 운명 강요",
+        "zh": "制定：命运强迫"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Prioritizes attacking the frontmost enemy.\\nIf the target is not a <color=#28d9ed>Defender</color>, deals <color=#28d9ed>Fixed DMG</color> equal to <color=#28d9ed>20%</color> of the target's Max Health.",
+        "jp": "最も前列にいる敵を優先的に攻撃する。\\n対象が<color=#28d9ed>防御型</color>でない場合、対象の最大HPの<color=#28d9ed>20%</color>分の<color=#28d9ed>固定ダメージ</color>を与える。",
+        "kr": "가장 전열의 적을 우선적으로 공격합니다. \\n대상이 <color=#28d9ed>방어형</color>이 아니라면 대상 최대 체력의 <color=#28d9ed>20%</color> 만큼 <color=#28d9ed>고정 피해</color>을 입힙니다.",
+        "zh": "优先攻击最前排的敌人。\\n若目标非<color=#28d9ed>防御型</color>，对目标造成相当于其最大生命值<color=#28d9ed>20%</color>的<color=#28d9ed>固定伤害</color>。"
+      },
+      "icon": "Skill_First_4004006_D",
+      "debuff": [
+        "BT_FIXED_DAMAGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Measure : Control Logic Reinforcement",
+        "jp": "措置：制御論理強化",
+        "kr": "조치 : 통제 논리 강화",
+        "zh": "措施：控制逻辑强化"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and increases own <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turns</color>.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間増加させる。",
+        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킵니다.",
+        "zh": "攻击全体敌人，使自身<color=#28d9ed>防御力</color>在<color=#28d9ed>2回合</color>内提升。"
+      },
+      "icon": "Skill_Second_4004006_D",
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Execute : Causality Secured",
+        "jp": "執行：因果律確保",
+        "kr": "집행 : 인과율 확보",
+        "zh": "执行：因果律确保"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and increases own <color=#28d9ed>Speed</color>, <color=#28d9ed>Critical Hit Chance</color>, and <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>4 turns</color>.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>スピード</color>、<color=#28d9ed>会心率</color>、<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>4ターン</color>の間増加させる。",
+        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>속도</color>,<color=#28d9ed>치명 확률</color>,<color=#28d9ed>치명 피해</color>를 <color=#28d9ed>4턴</color> 동안 증가시킵니다.",
+        "zh": "攻击全体敌人，使自身<color=#28d9ed>速度</color>、<color=#28d9ed>暴击率</color>、<color=#28d9ed>暴击伤害</color>在<color=#28d9ed>4回合</color>内提升。"
+      },
+      "icon": "Skill_Ultimate_4004006_D",
+      "buff": [
+        "BT_STAT|ST_CRITICAL_DMG_RATE",
+        "BT_STAT|ST_CRITICAL_RATE",
+        "BT_STAT|ST_SPEED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Objective : Past Protection",
+        "jp": "目標：過去の保護",
+        "kr": "목표 : 과거 보호",
+        "zh": "目标：保护过去"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "If self has a <color=#28d9ed>Defense</color> increase effect, ignores <color=#28d9ed>30%</color> of the target's <color=#28d9ed>Defense</color>.\\nDMG increases by <color=#28d9ed>5%</color> per <color=#28d9ed>debuff</color> inflicted on self.\\nCurse and Fixed DMG taken by the boss cannot exceed <color=#28d9ed>50000</color>.",
+        "jp": "自分に<color=#28d9ed>防御力</color>増加効果がある場合、対象の<color=#28d9ed>防御力</color>を<color=#28d9ed>30%</color>無視し、\\n自分に付与された<color=#28d9ed>弱体効果</color>1個あたりダメージが<color=#28d9ed>5%</color>増加する。\\nボスが受ける呪いおよび固定ダメージは<color=#28d9ed>50000</color>を超えない。",
+        "kr": "자신에게 <color=#28d9ed>방어력</color> 증가 효과가 있다면 대상의 <color=#28d9ed>방어력</color>을 <color=#28d9ed>30%</color> 무시하고\\n자신에게 부여된 <color=#28d9ed>약화 효과</color> 1개 마다 피해가 <color=#28d9ed>5%</color> 증가합니다.\\n보스가 받는 저주 및 고정 피해의 피해는 <color=#28d9ed>50000</color>을 초과하지 않습니다.",
+        "zh": "若自身拥有<color=#28d9ed>防御力</color>提升效果，无视目标<color=#28d9ed>30%</color>的<color=#28d9ed>防御力</color>，\\n自身每持有1个<color=#28d9ed>弱化效果</color>，伤害增加<color=#28d9ed>5%</color>。\\n首领受到的诅咒及固定伤害不超过<color=#28d9ed>50000</color>。"
+      },
+      "icon": "MT_Passive_1_Dark"
+    },
+    {
+      "name": {
+        "en": "Factor : Absolute Fate",
+        "jp": "要因：運命の絶対性",
+        "kr": "요인 : 운명의 절대성",
+        "zh": "要因：命运的绝对性"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "After attacking, <color=#28d9ed>Priority</color> increases by <color=#28d9ed>15%</color>. (Effect doubles when Increased Defense is active.)\\nDMG dealt to the boss increases by <color=#28d9ed>10%</color> per own <color=#28d9ed>buff</color>.",
+        "jp": "攻撃後、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>15%</color>増加させる。（貫通力増加保有時は効果2倍）\\n自分の<color=#28d9ed>強化効果</color>1個あたり、敵全体への与ダメージが<color=#28d9ed>10%</color>増加する。",
+        "kr": "공격 후 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>15%</color> 증가시킵니다.(방어력 증가 보유 시 효과 2배)\\n적 전체는 자신의 <color=#28d9ed>강화 효과</color> 1개 마다 보스에게 주는 피해가 <color=#28d9ed>10%</color> 증가합니다.",
+        "zh": "攻击后使<color=#28d9ed>行动值</color>增加<color=#28d9ed>15%</color>。（持有穿透力提升时效果翻倍）\\n自身每持有1个<color=#28d9ed>强化效果</color>，对全体敌人造成的伤害增加<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Dark",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dimensional Rift",
+        "jp": "次元の亀裂",
+        "kr": "차원의 균열",
+        "zh": "次元裂缝"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Boss monsters' Priority increases upon entering Berserk. Additional effects are added based on rank as follows.\\n\\n<color=#ffd732>Applied from RANK D:</color> DMG dealt increases and DMG taken decreases for all attacks. The values increase as rank rises, maxing out at SSS. (Max 300%/200% respectively)\\n\\n<color=#ffd732>Applied from RANK B:</color> Final DMG and WG DMG taken from targets without elemental advantage decrease by <color=#28d9ed>70%/50%</color> respectively.\\n\\n<color=#ffd732>Applied from RANK S:</color> Increases own <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color> and decreases all enemies' <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color>.",
+        "jp": "(パッシブ効果) ボスモンスターは狂暴化突入後、行動ゲージが増加する。またランクに応じて以下の効果が追加される。\\n\\n<color=#ffd732>RANK D から適用：</color>すべての攻撃に対して与ダメージが増加し、受けるダメージが減少する。ランクが上がるほど数値が増加し、SSSで最大となる。（各最大300%/200%）\\n\\n<color=#ffd732>RANK B から適用：</color>有利な相性でない対象から受ける最終ダメージとWGダメージがそれぞれ<color=#28d9ed>70%/50%</color>減少する。\\n\\n<color=#ffd732>RANK S から適用：</color>自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>増加させ、敵全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>減少させる。",
+        "kr": "(패시브 효과) 보스 몬스터는 광폭화 진입 후 행동게이지가 증가합니다. 또한 랭크에 따라 아래 효과가 추가합니다.\\n\\n<color=#ffd732>RANK D 부터 적용:</color> 모든 공격에 대해 주는 피해가 증가하고 받는 피해가 감소합니다. 랭크가 오를수록 수치가 증가하여 SSS에서 최대가 됩니다.(각각 최대 300%/200%)\\n\\n<color=#ffd732>RANK B 부터 적용:</color> 유리한 상성이 아닌 대상에게 받는 최종 피해와 WG피해가 각각 <color=#28d9ed>70%/50%</color> 감소합니다.\\n\\n<color=#ffd732>RANK S 부터 적용:</color> 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 증가시키고 적 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "(被动效果) 首领怪物进入狂暴化后行动值提升。同时根据等级追加以下效果。\\n\\n<color=#ffd732>从RANK D开始适用：</color>所有攻击的造成伤害提升，受到伤害减少。等级越高数值越大，在SSS达到最大。（各最大300%/200%）\\n\\n<color=#ffd732>从RANK B开始适用：</color>受到非克制属性目标的最终伤害和WG伤害分别减少<color=#28d9ed>70%/50%</color>。\\n\\n<color=#ffd732>从RANK S开始适用：</color>使自身<color=#28d9ed>穿透力</color>增加<color=#28d9ed>30%</color>，使全体敌人<color=#28d9ed>穿透力</color>减少<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Passive_1_Singularity",
+      "buff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ],
+      "debuff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "jp": "狂暴化",
+        "kr": "광폭화",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state every time HP decreases by <color=#28d9ed>250000</color>.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Deals DMG to all enemies and recovers WG by 10%.\\nSkill DMG increases by 30% after attacking.",
+        "jp": "HPが<color=#28d9ed>250000</color>減少するたびに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体にダメージを与え、WGを10%回復する。\\n攻撃後、スキルのダメージが30%増加する。",
+        "kr": "체력이 <color=#28d9ed>250000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 피해를 입히고 WG를 10% 회복시킵니다.\\n공격 후 스킬의 피해량이 30% 증가합니다.",
+        "zh": "每当HP减少<color=#28d9ed>250000</color>时进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化突入与必杀技</color>：对全体敌人造成伤害，并恢复WG10%。\\n攻击后技能伤害量增加30%。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ]
+    }
+  ]
+}

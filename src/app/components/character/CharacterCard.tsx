@@ -100,6 +100,9 @@ export type Props = {
   href?: string;
   showName?: boolean;
   showIcons?: boolean;
+  /** Per-icon override; falls back to `showIcons` when unset. */
+  showElement?: boolean;
+  showClass?: boolean;
   showStars?: boolean;
   showBadge?: boolean;
   priority?: boolean;
@@ -118,6 +121,8 @@ export default function CharacterCard({
   href,
   showName = true,
   showIcons = true,
+  showElement,
+  showClass,
   showStars = true,
   showBadge = true,
   priority = false,
@@ -125,6 +130,8 @@ export default function CharacterCard({
 }: Props) {
   const s = SIZES[size];
   const badge = showBadge && s.badgeClass && tags ? getRecruitBadge(tags) : null;
+  const renderElement = (showElement ?? showIcons) && element;
+  const renderClass = (showClass ?? showIcons) && classType;
 
   const portraitBox = (
     <div className={`relative overflow-hidden rounded ${s.container}`}>
@@ -182,7 +189,7 @@ export default function CharacterCard({
       <div className="absolute inset-x-0 bottom-0 h-1/4 bg-linear-to-t from-black/80 to-transparent z-5" />
 
       {/* Element icon — bottom right */}
-      {showIcons && element && (
+      {renderElement && (
         <div className={`absolute ${s.elemBottom} right-1 z-10`} style={{ width: s.iconSize, height: s.iconSize }}>
           <Image
             src={`/images/ui/elem/CM_Element_${element}.webp`}
@@ -195,7 +202,7 @@ export default function CharacterCard({
       )}
 
       {/* Class icon — above element */}
-      {showIcons && classType && (
+      {renderClass && (
         <div className={`absolute ${s.classBottom} right-1 z-10`} style={{ width: s.classIconSize, height: s.classIconSize }}>
           <Image
             src={`/images/ui/class/CM_Class_${classType}.webp`}

@@ -12,10 +12,11 @@ so the value at any (level, tier) can be recomputed.
 Scope (cross-referenced by `id` with data/equipment/):
   - weapons      → weapon.json     (curated named weapons)
   - accessories  → accessory.json  (curated named accessories)
-  - talismans    → talisman.json   (OOPARTS — flat stat, no scaling)
+  - talismans    → talisman.json   (OOPARTS — per-stat +0..+10 lookup, no breakthrough)
   - armor        → every armor piece (Helmet/Armor/Gloves/Shoes) belonging to a
                    set listed in sets.json, scoped to epic/legendary 5★/6★
-  (Exclusive Equipment / ee.json is intentionally left out for now.)
+  - ee           → ee.json (Exclusive Equipment — character-bound; conditional %-stat
+                   + flat HIT_AP/KILL_AP, both scaling +0..+10; LV10 unique-option upgrade)
 
 Main-stat shape per item: a list of "slots", each either
   { "type": "fixed",  "stat":    { "key", "base" } }              # always granted
@@ -54,11 +55,12 @@ REQUIRED_INPUTS = [
     'BuffTemplet',
     'ItemSpecialOptionTemplet',
     'TextSkill',
+    'TextSystem',
 ]
 
 # Curated equipment files cross-referenced by id (item-names.json is itself produced
 # by the item-names pipeline step).
-REQUIRED_EQUIP = ['weapon', 'accessory', 'talisman', 'sets', 'item-names']
+REQUIRED_EQUIP = ['weapon', 'accessory', 'talisman', 'sets', 'item-names', 'ee']
 
 # ── Display name mappings (unavoidable: JSON enums → display strings) ──
 
@@ -174,9 +176,11 @@ singularity = load('SingularityEquipEnchantTemplet')
 buffs = load('BuffTemplet')
 special_opts = load('ItemSpecialOptionTemplet')
 text_skill = load('TextSkill')
+text_system = load('TextSystem')
 
 special_opt_by_id = {s['ID']: s for s in special_opts}
 text_skill_by_id = {t['ID']: t for t in text_skill}
+text_system_by_id = {t['ID']: t for t in text_system}
 # TextSkill language columns (matches lib.ts LANG_COLUMNS / i18n config order)
 GAME_LANGS = {'en': 'English', 'jp': 'Japanese', 'kr': 'Korean', 'zh': 'China_Simplified'}
 
@@ -279,7 +283,10 @@ SINGULARITY_REFORGE_BONUS = 3
 # ── Stat extraction helpers ──
 
 def resolve_stat(stat_type, applying_type, raw_value):
-    """(StatType, ApplyingType, rawValue) → {key, base} or None if not a known stat."""
+    """(StatType, ApplyingType, rawValue) → {key, base, percent} or None if not a known stat.
+    `percent` is per occurrence: OAT_RATE pairs (in TIMES_TEN) display with "%", OAT_ADD
+    pairs are flat. EFF/RES depend on this — flat on gear (OAT_ADD), % on talisman (OAT_RATE).
+    """
     pair = (stat_type, applying_type)
     key = STAT_KEY_MAP.get(pair)
     if not key or raw_value is None:
@@ -287,20 +294,22 @@ def resolve_stat(stat_type, applying_type, raw_value):
     val = float(raw_value)
     if pair in TIMES_TEN:
         val /= 10
-    return {'key': key, 'base': val if val != int(val) else int(val)}
+    return {'key': key, 'base': val if val != int(val) else int(val), 'percent': pair in TIMES_TEN}
 
 
 def resolve_substat(o):
-    """A sub-option row → {key, step, max} (one reforge segment = `step`)."""
+    """A sub-option row → {key, step, max, percent} (one reforge segment = `step`).
+    `percent` follows the same OAT_RATE vs OAT_ADD rule as resolve_stat."""
     pair = (o.get('StatType'), o.get('ApplyingType'))
     key = STAT_KEY_MAP.get(pair)
     if not key or o.get('OptionValue') is None:
         return None
-    div = 10 if pair in TIMES_TEN else 1
+    is_pct = pair in TIMES_TEN
+    div = 10 if is_pct else 1
     step = float(o['OptionValue']) / div
     mx = float(o['OptionMaxValue']) / div if o.get('OptionMaxValue') is not None else step
     fmt = lambda v: v if v != int(v) else int(v)
-    return {'key': key, 'step': fmt(step), 'max': fmt(mx)}
+    return {'key': key, 'step': fmt(step), 'max': fmt(mx), 'percent': is_pct}
 
 
 def resolve_substat_pool(gid):
@@ -437,13 +446,21 @@ TOKEN_RE = re.compile(r'\[[^\]]+\]')
 
 
 def _lang_texts(row):
-    """A TextSkill/TextItem row → { en, jp, kr, zh } (trimmed, smart quotes normalized)."""
+    """A TextSkill/TextSystem/TextItem row → { en, jp, kr, zh } (trimmed, smart quotes normalized)."""
     if not row:
         return None
     return {
         lang: ((row.get(col) or '').strip().replace('‘', "'").replace('’', "'"))
         for lang, col in GAME_LANGS.items()
     }
+
+
+def _curated_lang(row, base):
+    """A curated equipment row (ee.json, talisman.json, …) → { en, jp, kr, zh } for `base`
+    using the suffix convention `base` (en) / `base_jp` / `base_kr` / `base_zh`."""
+    if not row:
+        return None
+    return {lang: (row.get(base) if lang == 'en' else row.get(f'{base}_{lang}')) for lang in GAME_LANGS}
 
 
 def _token_values(buff_id_str, level):
@@ -459,7 +476,8 @@ def _token_values(buff_id_str, level):
     val4, val5 = _fmt_value(b4), _fmt_value(b5)
     return {
         '[Value]': val, '[+Value]': f'+{val}', '[-Value]': f'-{val}',
-        '[Value2]': val2, '[Value4]': val4, '[Value5]': val5,
+        '[Value2]': val2, '[+Value2]': f'+{val2}', '[-Value2]': f'-{val2}',
+        '[Value4]': val4, '[Value5]': val5,
         '[Rate]': rate, '[RATE]': rate, '[Rate1]': rate,
         '[Turn]': turn, '[Turn1]': turn, '[+Turn]': turn, '[+Turn1]': turn, '[-Turn]': f'-{turn}',
         '[Turn2]': turn2,
@@ -501,6 +519,188 @@ def build_passive(item):
     }
 
 
+# ── EE (Exclusive Equipment) — character-bound, conditional main + flat secondary + LV10 passive ──
+# Each EE's `MainOptionGroupID` resolves to ONE ItemOption entry that bundles:
+#   • a direct flat stat (StatType + OptionFactor/OptionMaxValue: HIT_AP or KILL_AP), and
+#   • a BuffID giving the conditional %-stat (DMG vs X / EFF vs X / etc.) over 11 buff levels.
+# Display values for the conditional stat follow the same permille/abs rules as other buffs.
+
+# ItemOption StatType → canonical EE flat-secondary stat key (no % display).
+EE_FLAT_STAT_KEY_MAP = {
+    'ST_HIT_AP': 'HIT_AP',
+    'ST_KILL_AP': 'KILL_AP',
+}
+# In-game system text IDs for those flat stats' labels (4-language).
+EE_FLAT_STAT_LABEL_ID = {
+    'ST_HIT_AP': 'SYS_STAT_HIT_AP',
+    'ST_KILL_AP': 'SYS_STAT_KILL_AP',
+}
+
+# Conditional main stat: keyed by the BuffID PREFIX (not by StatType+ApplyingType).
+# Reason: the in-game display flips some pairs vs the raw buff:
+#   • BUFF_CHANCE uses ST_BUFF_RESIST (reduces enemy resist) → DISPLAYED as EFF, not RES
+#   • DMG/DMG_REDUCE buffs are OAT_RATE permille — not in the standard STAT_KEY_MAP
+# The 4 prefixes below match the existing EE_STAT_KEY_MAP in src/lib/data/equipment.ts.
+EE_BUFF_PREFIX_KEY = {
+    'DMG_REDUCE':         'DMG RED%',
+    'DMG':                'DMG UP%',
+    'BUFF_CHANCE':        'EFF',
+    'BUFF_CRITICAL_RATE': 'CHC',
+}
+
+
+def _ee_conditional_key(buff_id):
+    """BuffID like `BID_CEQUIP_MAIN_DMG_REDUCE_FIRE` → 'DMG RED%' (matches the in-game display)."""
+    if not buff_id or not buff_id.startswith('BID_CEQUIP_MAIN_'):
+        return None
+    rest = buff_id[len('BID_CEQUIP_MAIN_'):]
+    prefix = rest.rsplit('_', 1)[0]
+    return EE_BUFF_PREFIX_KEY.get(prefix)
+
+
+def _ee_buff_levels(buff_id, max_lv=11):
+    """Resolve the 11 enhance-level values from the buff template. Returns a list of
+    numerics (float for %, int for flat) — abs() applied because some buffs store a
+    negative raw (e.g. BUFF_RESIST reduces enemy resist → my effectiveness goes up)."""
+    out = []
+    for lv in range(1, max_lv + 1):
+        b = _find_buff(buff_id, lv, 0)
+        if not b:
+            out.append(None)
+            continue
+        try:
+            v = int(b.get('Value') or 0)
+        except ValueError:
+            v = 0
+        v = abs(v)
+        if _is_permille(b):
+            val = v / 10
+            out.append(int(val) if val == int(val) else val)
+        else:
+            out.append(v)
+    return out
+
+
+def build_ee_main_stats(item, curated_entry):
+    """Build the EE mainStats array — two slots, both scaling on enhancement level (+0..+10):
+      • [0] conditional %-stat (e.g. "Reduced DMG Taken vs Earth") with curated localized label
+        from ee.json (the "vs X" element is character-specific, only resolvable from curated data)
+      • [1] flat secondary stat (HIT_AP / KILL_AP) with label from TextSystem (SYS_STAT_*).
+    Returns [] if anything is missing — guards prod against partially-extracted EE."""
+    group_id = item.get('MainOptionGroupID')
+    if not group_id:
+        return []
+    opt_rows = opts_by_gid.get(group_id) or []
+    if not opt_rows:
+        return []
+    opt = opt_rows[0]
+    out = []
+
+    # Conditional %-stat (the wrapping option's BuffID).
+    buff_id = opt.get('BuffID')
+    if buff_id:
+        key = _ee_conditional_key(buff_id)
+        levels = _ee_buff_levels(buff_id)
+        if key and levels and None not in levels:
+            label = _curated_lang(curated_entry, 'mainStat') if curated_entry else None
+            out.append({
+                'key': key,
+                'label': label,
+                'percent': True,
+                'conditional': True,
+                'levels': levels,
+            })
+
+    # Flat secondary (option row's own StatType + Factor/MaxValue).
+    flat_st = opt.get('StatType')
+    flat_key = EE_FLAT_STAT_KEY_MAP.get(flat_st)
+    if flat_key:
+        try:
+            factor = int(opt.get('OptionFactor') or 0)
+            max_val = int(opt.get('OptionMaxValue') or 0)
+        except ValueError:
+            factor, max_val = 0, 0
+        # Formula: value(enh) = min(MaxValue, Factor × (enh + 1)). +0 yields Factor, then +1 per enh.
+        levels = [min(max_val, factor * (lv + 1)) for lv in range(11)]
+        label = _lang_texts(text_system_by_id.get(EE_FLAT_STAT_LABEL_ID.get(flat_st)))
+        out.append({
+            'key': flat_key,
+            'label': label,
+            'percent': False,
+            'conditional': False,
+            'levels': levels,
+        })
+
+    return out
+
+
+def build_talisman_passive(item):
+    """Talisman passive — handles the multi-option pattern (`UniqueOptionID = "base[, lv10]"`).
+    6★ talismans bundle a base option (Level=1) with a Lv 10 option (Level=10). The Lv 10
+    option's `IsAdd` flag tells the renderer whether the second effect is cumulative
+    (True → both active at +10) or an upgrade of the same effect (False → replaces value).
+    Each option becomes a tier:
+      { unlockLevel, isAdd, desc:{en,jp,kr,zh}, values:{token: value} }
+    Values are looked up at the option's own `Level` in the buff; falls back to buff Level=1
+    if the buff doesn't have that level (some `_lv10` buffs only declare Level=1).
+    `name` is shared across tiers (all options of one talisman use the same NameID).
+    Returns None when the item has no resolvable description.
+    """
+    uo = item.get('UniqueOptionID')
+    if not uo:
+        return None
+    tiers = []
+    shared_name = None
+    for oid in (s.strip() for s in uo.split(',')):
+        opt = special_opt_by_id.get(oid)
+        if not opt:
+            continue
+        buff_id_str = opt.get('BuffID') or ''
+        desc_id = opt.get('DescID') or opt.get('CustomCraftDescID')
+        desc = _lang_texts(text_skill_by_id.get(desc_id)) if desc_id else None
+        if not desc or not any(desc.values()):
+            continue
+        tokens = set()
+        for text in desc.values():
+            tokens |= set(TOKEN_RE.findall(text or ''))
+        try:
+            lv = int(opt.get('Level') or 1)
+        except ValueError:
+            lv = 1
+        # Resolve token values from the buff (if any). Talismans/EE with no tokens in the
+        # desc don't need a buff — the value is already baked in the text (e.g. Eclipse Lv10
+        # "+30% Critical Damage"). Only drop the tier if it has tokens we can't resolve
+        # (= the "ghost" Lv 10 case where the datamine has a placeholder option without buff).
+        all_vals = {}
+        if buff_id_str:
+            all_vals = _token_values(buff_id_str, lv)
+            if all_vals.get('[Value]') == '?':
+                all_vals = _token_values(buff_id_str, 1)
+        # Case-insensitive token resolution: some localized strings use lowercase variants
+        # of the canonical token (e.g. Korean `UO_OOPARTS_11_DESC` uses `[value]` instead of
+        # `[Value]`). Build a case-insensitive index of the canonical values, then preserve
+        # the exact case found in each language's text so the renderer's `split/join` matches.
+        all_vals_ci = {k.lower(): v for k, v in all_vals.items()}
+        resolved = {}
+        for tok in tokens:
+            v = all_vals.get(tok) if tok in all_vals else all_vals_ci.get(tok.lower())
+            if v is not None and v != '?':
+                resolved[tok] = v
+        if any(t not in resolved for t in tokens):
+            continue
+        if shared_name is None:
+            shared_name = _lang_texts(text_skill_by_id.get(opt.get('NameID')))
+        tiers.append({
+            'unlockLevel': lv,
+            'isAdd': opt.get('IsAdd') == 'True',
+            'desc': desc,
+            'values': resolved,
+        })
+    if not tiers:
+        return None
+    return {'name': shared_name, 'tiers': tiers}
+
+
 # ── Build per-item entries ──
 
 def base_entry(item):
@@ -510,7 +710,7 @@ def base_entry(item):
     return slot, rarity, star
 
 
-weapons, accessories, talismans, armor = {}, {}, {}, {}
+weapons, accessories, talismans, armor, ee_items = {}, {}, {}, {}, {}
 skipped = []
 referenced_sub_groups = set()
 
@@ -580,6 +780,29 @@ for src in load_equip('talisman'):
         'star': int(star) if star and star.isdigit() else star,
         'scalesVia': 'enhanceLevels',  # per-stat +0..+10 lookup; no breakthrough
         'mainStats': build_main_stats(it, use_buffs=True),
+        'passive': build_talisman_passive(it),
+    }
+
+# EE / Exclusive Equipment (curated — character-bound, +0..+10 enhancement, Lv 10 unlock) -----
+# Iterates over the curated ee.json (the authoritative list of which EE the site surfaces).
+# Datamine ItemTemplet supplies CharacterLimit + MainOptionGroupID + UniqueOptionID; curated
+# ee.json supplies the localized `mainStat` label (the "vs <element>" part is character-specific).
+for eid, src in load_equip('ee').items():
+    iid = str(eid)
+    it = items_by_id.get(iid)
+    if not it:
+        skipped.append(('ee', iid))
+        continue
+    _, rarity, star = base_entry(it)
+    ee_items[iid] = {
+        'name': src.get('name'),
+        'slot': 'ee',
+        'characterId': it.get('CharacterLimit'),
+        'rarity': rarity,
+        'star': int(star) if star and star.isdigit() else star,
+        'scalesVia': 'enhanceLevels',
+        'mainStats': build_ee_main_stats(it, src),
+        'passive': build_talisman_passive(it),  # same multi-tier shape; EE always upgrade pattern
     }
 
 # Armor (every piece of a documented set, scoped to epic/legendary 5★/6★) ------
@@ -695,6 +918,10 @@ output = {
                      'only when canAscend is true'),
         'talisman': ('no breakthrough; each main-stat option carries an explicit "levels" array '
                      'of 11 values (index 0 = +0 … index 10 = +10) — use levels[lv] directly'),
+        'ee': ('no breakthrough; each EE mainStats entry has its own "levels" array of 11 values '
+               '(index 0 = +0 … index 10 = +10). The conditional %-stat (item 0) is derived from '
+               'the BuffID Lv 1..11; the flat secondary (item 1, HIT_AP/KILL_AP) follows '
+               'min(MaxValue, Factor × (enh + 1)). Use levels[lv] directly — no formula needed.'),
         'floor_display': 'floor() for flat stats; floor to 0.1 for percentage stats',
         'percentStats': sorted(PERCENT_STATS),
         'subStats': ('reforge-driven, not enhancement-driven. Each item references a '
@@ -709,8 +936,13 @@ output = {
                     'languages). To render for (lang, breakthrough tier): take desc[lang] and '
                     'replace every token by valuesByTier[tier][token] (optionally wrapped in '
                     '<color=#28d9ed>…</color>). Index 0 = T0 → the passive changes at every '
-                    'breakthrough. armor: passive is the SET bonus in sets[setId] (changes only '
-                    'at breakthrough 4: base vs bt4). All effect text covers en/jp/kr/zh.'),
+                    'breakthrough. talismans: `passive` = { name{…}, tiers:[{unlockLevel,isAdd,'
+                    'desc{…},values{token:value}}, …] }. Base tier (unlockLevel=1) is always '
+                    'active; additional tiers unlock at their unlockLevel (typically +10). '
+                    '`isAdd=true` → tier stacks on top of base (cumulative); `isAdd=false` → '
+                    'tier replaces the base description (upgraded value of same effect). '
+                    'armor: passive is the SET bonus in sets[setId] (changes only at '
+                    'breakthrough 4: base vs bt4). All effect text covers en/jp/kr/zh.'),
     },
     'statMeta': {
         k: {'percent': k in PERCENT_DISPLAY}
@@ -723,6 +955,7 @@ output = {
         'accessories': dict(sorted(accessories.items(), key=lambda kv: int(kv[0]))),
         'talismans': dict(sorted(talismans.items(), key=lambda kv: int(kv[0]))),
         'armor': dict(sorted(armor.items(), key=lambda kv: int(kv[0]))),
+        'ee': dict(sorted(ee_items.items(), key=lambda kv: int(kv[0]))),
     },
 }
 
@@ -750,9 +983,17 @@ print(f'Wrote {OUT_FILE}')
 print(f'  constants: enhance={enhance_factor}, tier={tier_factor}, '
       f'talisman={talisman_factor}, sing.activation={sing["activation"]}')
 print(f'  items: weapons={len(weapons)}, accessories={len(accessories)}, '
-      f'talismans={len(talismans)}, armor={len(armor)}')
+      f'talismans={len(talismans)}, armor={len(armor)}, ee={len(ee_items)}')
 print(f'  subStatPools: {len(sub_stat_pools)} -> {sorted(sub_stat_pools)}')
 n_passive = sum(1 for d in (*weapons.values(), *accessories.values()) if d.get('passive'))
-print(f'  passives: {n_passive} (weapons+accessories), sets: {len(set_effects)}')
+n_tali_passive = sum(1 for d in talismans.values() if d.get('passive'))
+n_tali_tiers = sum(len(d['passive']['tiers']) for d in talismans.values() if d.get('passive'))
+n_ee_passive = sum(1 for d in ee_items.values() if d.get('passive'))
+n_ee_tiers = sum(len(d['passive']['tiers']) for d in ee_items.values() if d.get('passive'))
+n_ee_mainstats = sum(1 for d in ee_items.values() if d.get('mainStats'))
+print(f'  passives: {n_passive} (weapons+accessories), '
+      f'{n_tali_passive} talismans ({n_tali_tiers} tiers), '
+      f'{n_ee_passive} EE ({n_ee_tiers} tiers), sets: {len(set_effects)}')
+print(f'  EE main stats resolved: {n_ee_mainstats}/{len(ee_items)}')
 if skipped:
     print(f'  skipped (not in ItemTemplet): {len(skipped)} -> {skipped[:10]}')

@@ -70,6 +70,7 @@ export default async function TierListMakerTool() {
       key: `c${c.ID}`,
       name: { en: c.Fullname, jp: c.Fullname_jp, kr: c.Fullname_kr, zh: c.Fullname_zh },
       img: `/images/characters/faceicon/FI_${c.ID}.webp`,
+      card: `/images/characters/portrait/CT_${c.ID}.webp`,
       element: c.Element,
       cls: c.Class,
       rarity: c.Rarity,
@@ -81,6 +82,7 @@ export default async function TierListMakerTool() {
         key: `c${skin.modelNameID}`,
         name: skin.name,
         img: `/images/characters/faceicon/FI_${skin.modelNameID}.webp`,
+        card: `/images/characters/portrait/CT_${skin.modelNameID}.webp`,
         element: c.Element, // a costume keeps the character's element/class/rarity
         cls: c.Class,
         rarity: c.Rarity,

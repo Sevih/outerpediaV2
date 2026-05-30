@@ -1,0 +1,168 @@
+{
+  "light": [
+    {
+      "names": ["Demiurge Luna", "Regina", "Midnight Rush Skadi"],
+      "reason": {
+        "en": "Damage dealer with high damage mitigation.",
+        "jp": "高いダメージ軽減を持つアタッカー。",
+        "kr": "높은 피해 감소를 갖춘 딜러.",
+        "zh": "兼具高额伤害减免的输出。",
+        "fr": "DPS avec une forte mitigation de dégâts."
+      }
+    },
+    {
+      "names": ["Akari", "Gnosis Nella"],
+      "reason": {
+        "en": "{D/BT_SEALED} source.",
+        "jp": "{D/BT_SEALED}の供給源。",
+        "kr": "{D/BT_SEALED} 공급원.",
+        "zh": "{D/BT_SEALED}来源。",
+        "fr": "Source de {D/BT_SEALED}."
+      }
+    },
+    {
+      "names": ["Mystic Sage Ame", "Skadi"],
+      "reason": {
+        "en": "Cooldown decrease and damage buffs.",
+        "jp": "クールダウン短縮とダメージバフ。",
+        "kr": "쿨다운 감소 및 피해 증가 버프.",
+        "zh": "缩短冷却时间并提供伤害增益。",
+        "fr": "Réduction de cooldown et buffs de dégâts."
+      }
+    },
+    {
+      "names": ["Monad Eva"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} dual attacks, AP battery and {B/BT_REVIVAL} once damage ramps up.",
+        "jp": "{B/BT_CALL_BACKUP}による連携攻撃、APバッテリー、ダメージが上昇してからの{B/BT_REVIVAL}。",
+        "kr": "{B/BT_CALL_BACKUP} 연계 공격, AP 배터리, 피해가 증가할 때의 {B/BT_REVIVAL}.",
+        "zh": "{B/BT_CALL_BACKUP}连携攻击、AP电池，以及伤害递增后的{B/BT_REVIVAL}。",
+        "fr": "Attaques doubles {B/BT_CALL_BACKUP}, batterie d'AP et {B/BT_REVIVAL} une fois que les dégâts montent."
+      }
+    }
+  ],
+  "mero": [
+    {
+      "names": ["Mero"],
+      "reason": {
+        "en": "Main DPS — equip {I-W/Heartunder's Blade} for {D/BT_DOT_BURN}; self-applies {B/BT_COUNTERATTACK} and {B/BT_UNDEAD}. Use S3, then loop S2 (burst 1) until turns run out.",
+        "jp": "メインDPS — {I-W/Heartunder's Blade}で{D/BT_DOT_BURN}を付与。自身に{B/BT_COUNTERATTACK}と{B/BT_UNDEAD}を付与する。S3使用後、ターンが尽きるまでS2（バースト1）をループする。",
+        "kr": "메인 딜러 — {I-W/Heartunder's Blade}로 {D/BT_DOT_BURN}을 부여하고, 자신에게 {B/BT_COUNTERATTACK}와 {B/BT_UNDEAD}를 부여합니다. S3 후 턴이 다할 때까지 S2(버스트 1)를 반복합니다.",
+        "zh": "主C — 装备{I-W/Heartunder's Blade}附加{D/BT_DOT_BURN}，自身附加{B/BT_COUNTERATTACK}与{B/BT_UNDEAD}。先开S3，然后循环S2（爆发1阶）直到回合数耗尽。",
+        "fr": "DPS principal — équipe {I-W/Heartunder's Blade} pour {D/BT_DOT_BURN} ; s'applique lui-même {B/BT_COUNTERATTACK} et {B/BT_UNDEAD}. S3 puis boucle de S2 (burst 1) jusqu'à épuisement des tours."
+      }
+    },
+    {
+      "names": ["Mystic Sage Ame"],
+      "reason": {
+        "en": "Pick 3. Stacks {D/BT_STAT|ST_DEF} down, {B/BT_STAT|ST_ATK} up and damage bonus.",
+        "jp": "3体から選択。{D/BT_STAT|ST_DEF}減少、{B/BT_STAT|ST_ATK}増加、ダメージボーナスを蓄積する。",
+        "kr": "3명 중 선택. {D/BT_STAT|ST_DEF} 감소, {B/BT_STAT|ST_ATK} 증가, 피해 보너스를 누적합니다.",
+        "zh": "三选一。叠加{D/BT_STAT|ST_DEF}降低、{B/BT_STAT|ST_ATK}提升与伤害加成。",
+        "fr": "À choisir parmi 3. Empile {D/BT_STAT|ST_DEF} down, {B/BT_STAT|ST_ATK} up et bonus de dégâts."
+      }
+    },
+    {
+      "names": ["Tamamo-no-Mae"],
+      "reason": {
+        "en": "Pick 3. Boss damage bonus for {E/Fire}-element allies.",
+        "jp": "3体から選択。{E/Fire}属性味方のボスダメージボーナス。",
+        "kr": "3명 중 선택. {E/Fire} 속성 아군의 보스 피해 보너스.",
+        "zh": "三选一。为{E/Fire}属性盟友提供Boss伤害加成。",
+        "fr": "À choisir parmi 3. Bonus de dégâts au Boss pour les alliés {E/Fire}."
+      }
+    },
+    {
+      "names": ["Tamara", "Skadi", "Valentine"],
+      "reason": {
+        "en": "Pick 3. {B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} buffers.",
+        "jp": "3体から選択。{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}バッファー。",
+        "kr": "3명 중 선택. {B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE} 버퍼.",
+        "zh": "三选一。{B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}增益型。",
+        "fr": "À choisir parmi 3. Buffeurs de {B/BT_STAT|ST_CRITICAL_RATE} / {B/BT_STAT|ST_CRITICAL_DMG_RATE}."
+      }
+    },
+    {
+      "names": ["Summer Knight's Dream Ember", "Demiurge Drakhan"],
+      "reason": {
+        "en": "Pick 3. {S/PEN%} buffers.",
+        "jp": "3体から選択。{S/PEN%}バッファー。",
+        "kr": "3명 중 선택. {S/PEN%} 버퍼.",
+        "zh": "三选一。{S/PEN%}增益型。",
+        "fr": "À choisir parmi 3. Buffeurs de {S/PEN%}."
+      }
+    },
+    {
+      "names": ["Demiurge Luna"],
+      "reason": {
+        "en": "Pick 3. High damage option while she can stay up.",
+        "jp": "3体から選択。生存している間は高いダメージを出せる選択肢。",
+        "kr": "3명 중 선택. 생존하는 동안 높은 피해를 낼 수 있는 선택지.",
+        "zh": "三选一。存活期间能提供高额伤害的选项。",
+        "fr": "À choisir parmi 3. Option de dégâts élevés tant qu'elle peut rester en vie."
+      }
+    },
+    {
+      "names": ["Fran"],
+      "reason": {
+        "en": "Pick 3. {B/BT_COUNTERATTACK} buffs for {P/Mystic Sage Ame} / {P/Demiurge Luna}.",
+        "jp": "3体から選択。{P/Mystic Sage Ame} / {P/Demiurge Luna}向けの{B/BT_COUNTERATTACK}バフ。",
+        "kr": "3명 중 선택. {P/Mystic Sage Ame} / {P/Demiurge Luna}를 위한 {B/BT_COUNTERATTACK} 버프.",
+        "zh": "三选一。为{P/Mystic Sage Ame} / {P/Demiurge Luna}提供{B/BT_COUNTERATTACK}增益。",
+        "fr": "À choisir parmi 3. Buffs de {B/BT_COUNTERATTACK} pour {P/Mystic Sage Ame} / {P/Demiurge Luna}."
+      }
+    },
+    {
+      "names": [],
+      "reason": {
+        "en": "Pick 3. Any 6★ {C/Ranger|Vanguard} works as a generic {B/BT_STAT|ST_ATK} buffer — avoid {P/Demiurge Vlada} since her priority gain reduction costs {P/Mero} counterattack triggers.",
+        "jp": "3体から選択。任意の6★{C/Ranger|Vanguard}は汎用{B/BT_STAT|ST_ATK}バッファーとして機能する — ただし{P/Demiurge Vlada}は避ける（行動ゲージ獲得効率を減少させ、{P/Mero}の反撃発動機会を奪うため）。",
+        "kr": "3명 중 선택. 임의의 6★ {C/Ranger|Vanguard}는 범용 {B/BT_STAT|ST_ATK} 버퍼로 사용 가능 — 단, {P/Demiurge Vlada}는 피하세요(우선도 획득 효율을 감소시켜 {P/Mero}의 반격 발동 기회를 줄입니다).",
+        "zh": "三选一。任意6★{C/Ranger|Vanguard}可作为通用{B/BT_STAT|ST_ATK}增益 — 但避免选用{P/Demiurge Vlada}，她会降低Boss的行动值获取效率，从而减少{P/Mero}的反击触发机会。",
+        "fr": "À choisir parmi 3. N'importe quel {C/Ranger|Vanguard} 6★ fait office de buffeur générique de {B/BT_STAT|ST_ATK} — évitez {P/Demiurge Vlada} car sa réduction d'efficacité de gain de priorité coûte des déclenchements de contre-attaque à {P/Mero}."
+      }
+    }
+  ],
+  "gbeth": [
+    {
+      "names": ["Gnosis Beth"],
+      "reason": {
+        "en": "Main DPS — carries with {D/ETERNAL_BLEEDING}.",
+        "jp": "メインDPS — {D/ETERNAL_BLEEDING}でキャリーする。",
+        "kr": "메인 딜러 — {D/ETERNAL_BLEEDING}로 운영합니다.",
+        "zh": "主C — 以{D/ETERNAL_BLEEDING}进行输出。",
+        "fr": "DPS principal — porte l'équipe avec {D/ETERNAL_BLEEDING}."
+      }
+    },
+    {
+      "names": ["Roxie", "Maxie"],
+      "reason": {
+        "en": "{D/BT_EXTEND_DEBUFF} to keep {D/ETERNAL_BLEEDING} stacks alive.",
+        "jp": "{D/BT_EXTEND_DEBUFF}で{D/ETERNAL_BLEEDING}スタックを維持する。",
+        "kr": "{D/BT_EXTEND_DEBUFF}으로 {D/ETERNAL_BLEEDING} 스택을 유지합니다.",
+        "zh": "以{D/BT_EXTEND_DEBUFF}维持{D/ETERNAL_BLEEDING}层数。",
+        "fr": "{D/BT_EXTEND_DEBUFF} pour maintenir les stacks d'{D/ETERNAL_BLEEDING} actifs."
+      }
+    },
+    {
+      "names": ["Akari"],
+      "reason": {
+        "en": "{D/BT_SEALED} and {D/BT_EXTEND_DEBUFF}.",
+        "jp": "{D/BT_SEALED}と{D/BT_EXTEND_DEBUFF}を提供する。",
+        "kr": "{D/BT_SEALED}과 {D/BT_EXTEND_DEBUFF}을 제공합니다.",
+        "zh": "提供{D/BT_SEALED}与{D/BT_EXTEND_DEBUFF}。",
+        "fr": "{D/BT_SEALED} et {D/BT_EXTEND_DEBUFF}."
+      }
+    },
+    {
+      "names": ["Monad Eva"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} dual attacks, AP battery and {B/BT_REVIVAL} once damage ramps up.",
+        "jp": "{B/BT_CALL_BACKUP}による連携攻撃、APバッテリー、ダメージが上昇してからの{B/BT_REVIVAL}。",
+        "kr": "{B/BT_CALL_BACKUP} 연계 공격, AP 배터리, 피해가 증가할 때의 {B/BT_REVIVAL}.",
+        "zh": "{B/BT_CALL_BACKUP}连携攻击、AP电池，以及伤害递增后的{B/BT_REVIVAL}。",
+        "fr": "Attaques doubles {B/BT_CALL_BACKUP}, batterie d'AP et {B/BT_REVIVAL} une fois que les dégâts montent."
+      }
+    }
+  ]
+}
