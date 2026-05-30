@@ -30,6 +30,7 @@ export default function HeaderClient({ guideCategorySlugs }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const { t, href } = useI18n();
   const appVersion = process.env.NEXT_PUBLIC_APP_VERSION;
+  const gameVersion = process.env.NEXT_PUBLIC_GAME_VERSION;
 
   // Ctrl+K shortcut
   const onGlobalKeyDown = useCallback((e: KeyboardEvent) => {
@@ -105,8 +106,13 @@ export default function HeaderClient({ guideCategorySlugs }: Props) {
             Outerpedia
           </span>
           {appVersion && !scrolled && (
-            <span className="hidden rounded border border-zinc-800 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-widest text-zinc-500 lg:inline">
-              v{appVersion}
+            <span className="hidden flex-col items-start gap-0.5 font-mono text-[9px] uppercase tracking-widest text-zinc-500 lg:inline-flex">
+              <span className="rounded border border-zinc-800 px-1.5 py-0.5">v{appVersion}</span>
+              {gameVersion && (
+                <span className="rounded border border-zinc-800 px-1.5 py-0.5" title={`Game version ${gameVersion}`}>
+                  GV {gameVersion}
+                </span>
+              )}
             </span>
           )}
         </Link>

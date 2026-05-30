@@ -128,33 +128,36 @@ function AxActivationBand() {
   );
 }
 
-function AxStepsTable() {
+function AxStepsCard() {
   return (
-    <table className="w-full text-sm">
-      <thead>
-        <tr>
-          <th className="pb-1.5 text-left text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Step</th>
-          <th className="whitespace-nowrap pb-1.5 pl-3 text-right text-xs font-normal text-zinc-400"><ItemInline name="Gold" /></th>
-          <th className="whitespace-nowrap pb-1.5 pl-3 text-right text-xs font-normal text-zinc-400"><ItemInline name={ASC_CHIP_ITEM} /></th>
-          <th className="whitespace-nowrap pb-1.5 pl-3 text-right text-xs font-normal text-zinc-400"><ItemInline name={ASC_HAMMER_ITEM} /></th>
-          <th className="pb-1.5 pl-3 text-right text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Chance</th>
-        </tr>
-      </thead>
-      <tbody>
-        {ASCENSION_STEPS.map((s) => {
-          const c = ascSuccessHex(s.success);
-          return (
-            <tr key={s.to} className="border-t border-white/5">
-              <td className="whitespace-nowrap py-2 align-middle font-mono text-sm font-bold text-zinc-100">+{s.to}</td>
-              <td className="whitespace-nowrap py-2 pl-3 text-right align-middle font-mono text-xs tabular-nums text-amber-300/90">{ASC_GOLD_FMT.format(s.gold)}</td>
-              <td className="whitespace-nowrap py-2 pl-3 text-right align-middle font-mono text-xs tabular-nums text-zinc-300">×{s.chip}</td>
-              <td className="whitespace-nowrap py-2 pl-3 text-right align-middle font-mono text-xs tabular-nums text-zinc-300">×{s.hammer}</td>
-              <td className="whitespace-nowrap py-2 pl-3 text-right align-middle font-mono text-sm font-bold tabular-nums" style={{ color: c }}>{ascSuccessPct(s.success)}</td>
-            </tr>
-          );
-        })}
-      </tbody>
-    </table>
+    <div className="rounded-xl border border-white/10 bg-zinc-900/40 px-4 py-3.5">
+      <div className="mb-3"><AxEyebrow>Step success rates</AxEyebrow></div>
+      <table className="w-full text-sm">
+        <thead>
+          <tr>
+            <th className="pb-1.5 text-left text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Step</th>
+            <th className="whitespace-nowrap pb-1.5 pl-2 text-right text-xs"><ItemInline name="Gold" iconOnly /></th>
+            <th className="whitespace-nowrap pb-1.5 pl-2 text-right text-xs"><ItemInline name={ASC_CHIP_ITEM} iconOnly /></th>
+            <th className="whitespace-nowrap pb-1.5 pl-2 text-right text-xs"><ItemInline name={ASC_HAMMER_ITEM} iconOnly /></th>
+            <th className="pb-1.5 pl-2 text-right text-[10px] font-semibold uppercase tracking-wider text-zinc-500">Chance</th>
+          </tr>
+        </thead>
+        <tbody>
+          {ASCENSION_STEPS.map((s) => {
+            const c = ascSuccessHex(s.success);
+            return (
+              <tr key={s.to} className="border-t border-white/5">
+                <td className="whitespace-nowrap py-2 align-middle font-mono text-sm font-bold text-zinc-100">+{s.to}</td>
+                <td className="whitespace-nowrap py-2 pl-2 text-right align-middle font-mono text-xs tabular-nums text-amber-300/90">{ASC_GOLD_FMT.format(s.gold)}</td>
+                <td className="whitespace-nowrap py-2 pl-2 text-right align-middle font-mono text-xs tabular-nums text-zinc-300">×{s.chip}</td>
+                <td className="whitespace-nowrap py-2 pl-2 text-right align-middle font-mono text-xs tabular-nums text-zinc-300">×{s.hammer}</td>
+                <td className="whitespace-nowrap py-2 pl-2 text-right align-middle font-mono text-sm font-bold tabular-nums" style={{ color: c }}>{ascSuccessPct(s.success)}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
   );
 }
 
@@ -221,11 +224,15 @@ function AscensionLedger({ slot, lang }: { slot: string; lang: Lang }) {
   const effects = getBonusEffectsForSlot(slot);
   return (
     <div className={`grid grid-cols-1 items-start gap-4 ${effects.length > 0 ? 'md:grid-cols-2' : ''}`}>
-      <div className="flex flex-col gap-4">
+      <div className="flex min-w-0 flex-col gap-4">
         <AxActivationBand />
-        <AxStepsTable />
+        <AxStepsCard />
       </div>
-      {effects.length > 0 && <AxBonusColumn effects={effects} lang={lang} />}
+      {effects.length > 0 && (
+        <div className="min-w-0">
+          <AxBonusColumn effects={effects} lang={lang} />
+        </div>
+      )}
     </div>
   );
 }

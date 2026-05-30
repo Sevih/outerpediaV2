@@ -12,8 +12,8 @@ import { EquipmentBadge } from './WeaponInline';
 const itemsPromise = import('@data/items.json').then(m => m.default as Item[]);
 
 type Props =
-  | { name: string; id?: never }
-  | { id: string; name?: never };
+  | { name: string; id?: never; iconOnly?: boolean }
+  | { id: string; name?: never; iconOnly?: boolean };
 
 export default function ItemInline(props: Props) {
   const { lang } = useI18n();
@@ -55,7 +55,7 @@ export default function ItemInline(props: Props) {
   return (
     <InlineTooltip content={tooltip}>
       <button type="button" className="cursor-default">
-        <EquipmentBadge icon={iconPath} bg={getRarityBgPath(item.rarity)} label={label} />
+        <EquipmentBadge icon={iconPath} bg={getRarityBgPath(item.rarity)} label={label} iconOnly={props.iconOnly} />
       </button>
     </InlineTooltip>
   );

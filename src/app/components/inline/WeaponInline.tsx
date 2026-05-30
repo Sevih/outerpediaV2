@@ -68,12 +68,15 @@ export default function WeaponInline({ name }: Props) {
   );
 }
 
-/** Shared inline badge: rarity background + equipment icon + label */
-export function EquipmentBadge({ icon, bg, label, color = 'text-equipment' }: {
+/** Shared inline badge: rarity background + equipment icon + label.
+ *  Pass `iconOnly` to render the icon without the textual label (the surrounding
+ *  tooltip still surfaces the name). */
+export function EquipmentBadge({ icon, bg, label, color = 'text-equipment', iconOnly = false }: {
   icon: string;
   bg: string;
   label: string;
   color?: string;
+  iconOnly?: boolean;
 }) {
   return (
     <span className={`inline-flex items-center gap-0.5 align-middle ${color}`}>
@@ -81,7 +84,7 @@ export function EquipmentBadge({ icon, bg, label, color = 'text-equipment' }: {
         <Image src={bg} alt="Rarity" fill sizes="18px" className="object-contain" />
         <Image src={icon} alt={label} fill sizes="18px" className="object-contain" />
       </span>
-      <span className="underline">{label}</span>
+      {!iconOnly && <span className="underline">{label}</span>}
     </span>
   );
 }

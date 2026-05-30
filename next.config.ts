@@ -1,8 +1,23 @@
 import type { NextConfig } from "next";
-import { readFileSync } from "fs";
+import { readFileSync, existsSync } from "fs";
 
 // Read version from package.json (single source of truth)
 const { version } = JSON.parse(readFileSync("./package.json", "utf-8"));
+
+// Game (resource) version — written by `pipeline/steps/game-version` from
+// `datamine/files/bundles/manifest.dat`. Absent on bare prod deploys without
+// the generated artifact; we fall back to an empty string so the UI can hide it.
+function readGameVersion(): string {
+  const p = "./data/generated/game-version.json";
+  if (!existsSync(p)) return "";
+  try {
+    const { resVersion } = JSON.parse(readFileSync(p, "utf-8")) as { resVersion?: string };
+    return resVersion ?? "";
+  } catch {
+    return "";
+  }
+}
+const gameVersion = readGameVersion();
 
 const securityHeaders = [
   { key: 'X-DNS-Prefetch-Control', value: 'on' },
@@ -39,6 +54,7 @@ const nextConfig: NextConfig = {
 
   env: {
     NEXT_PUBLIC_APP_VERSION: version,
+    NEXT_PUBLIC_GAME_VERSION: gameVersion,
   },
 
   images: {

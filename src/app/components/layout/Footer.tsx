@@ -25,6 +25,7 @@ export default async function Footer() {
   const lang = getRequestLang();
   const t = await getT(lang);
   const appVersion = process.env.NEXT_PUBLIC_APP_VERSION || 'dev';
+  const gameVersion = process.env.NEXT_PUBLIC_GAME_VERSION;
 
   // Load dynamic lists used in the columns
   const [tools, guideCategories] = await Promise.all([
@@ -116,6 +117,11 @@ export default async function Footer() {
                 <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-500">
                   v{appVersion}
                 </p>
+                {gameVersion && (
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-zinc-500" title={`Game version ${gameVersion}`}>
+                    GV {gameVersion}
+                  </p>
+                )}
               </div>
             </div>
             <p className="mb-5 max-w-sm text-sm leading-relaxed text-zinc-400">
@@ -206,6 +212,9 @@ export default async function Footer() {
           <span className="inline-flex items-center gap-2">
             <span className="size-1.5 rounded-full bg-emerald-500 shadow-sm shadow-emerald-500/50" />
             v{appVersion}
+            {gameVersion && (
+              <span title={`Game version ${gameVersion}`}>· GV {gameVersion}</span>
+            )}
           </span>
         </div>
       </div>
