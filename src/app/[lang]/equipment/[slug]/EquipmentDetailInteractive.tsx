@@ -348,8 +348,8 @@ function PossibleSubstats({ pool, f }: { pool: LiveSubOpt[]; f: Formula }) {
           // Per-occurrence `percent` from the generator (OAT_ADD = flat, OAT_RATE = %),
           // falls back to the global statMeta if absent.
           const unit = (s.percent ?? f.isPercent(s.key)) ? '%' : '';
-          const perProc = f.subValue(s.step, 1, s.key);
-          const max = f.subValue(s.step, s.maxSegments, s.key);
+          const perProc = f.subValue(s.step, 1, s.key, s.percent);
+          const max = f.subValue(s.step, s.maxSegments, s.key, s.percent);
           return (
             <div key={s.key} className="flex items-center justify-between gap-2.5 rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5">
               <span className="min-w-0 truncate text-sm text-zinc-300"><StatInline name={s.key} /></span>

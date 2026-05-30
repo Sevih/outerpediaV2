@@ -76,8 +76,11 @@ export type ItemLiveBundle = { meta: LiveMeta; item: ItemLiveDetail };
 export function makeFormula(meta: LiveMeta) {
   const C = meta.constants;
   const pct = new Set(meta.percentStats);
-  const floorDisplay = (v: number, key: string) =>
-    pct.has(key) ? Math.floor(v * 10 + 1e-9) / 10 : Math.floor(v + 1e-9);
+  // EFF/RES are context-dependent (flat on gear, % on talismans/substats): they're missing
+  // from `percentStats` but flagged on a per-occurrence basis. Callers that know they're
+  // displaying a percent value can override via the `percent` arg to force 0.1 rounding.
+  const floorDisplay = (v: number, key: string, percent?: boolean) =>
+    (percent ?? pct.has(key)) ? Math.floor(v * 10 + 1e-9) / 10 : Math.floor(v + 1e-9);
 
   // Main stat — standard enhancement (lv 0..10) × breakthrough (tier 0..4).
   const mainStat = (base: number, key: string, lv: number, tier: number) =>
@@ -101,8 +104,10 @@ export function makeFormula(meta: LiveMeta) {
   // Talisman — no breakthrough, direct lookup (lv 0..10).
   const talismanStat = (levels: number[], lv: number) => levels[Math.min(lv, levels.length - 1)] ?? levels[levels.length - 1];
 
-  // Substat value at n segments (step is a single segment).
-  const subValue = (step: number, segments: number, key: string) => floorDisplay(step * segments, key);
+  // Substat value at n segments (step is a single segment). Optional `percent` override
+  // forwards the per-occurrence display flag so EFF/RES %-substats round to 0.1.
+  const subValue = (step: number, segments: number, key: string, percent?: boolean) =>
+    floorDisplay(step * segments, key, percent);
 
   const isPercent = (key: string) => meta.statPercent[key] ?? pct.has(key);
 
