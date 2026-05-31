@@ -39,7 +39,6 @@ import os
 import re
 import sys
 from collections import defaultdict
-from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_DIR = os.path.join(ROOT, 'data', 'admin', 'json2')
@@ -510,7 +509,10 @@ def build_passive(item):
     values_by_tier = []
     for lv in range(1, _max_buff_level(buff_id_str) + 1):
         all_vals = _token_values(buff_id_str, lv)
-        values_by_tier.append({tok: all_vals[tok] for tok in tokens if tok in all_vals})
+        # Iterate all_vals (fixed insertion order), not `tokens` (a set whose
+        # iteration order varies by run) — keeps the emitted key order canonical
+        # and deterministic so the committed JSON is diff-free across rebuilds.
+        values_by_tier.append({tok: all_vals[tok] for tok in all_vals if tok in tokens})
 
     return {
         'name': _lang_texts(text_skill_by_id.get(opt.get('NameID'))),
@@ -682,7 +684,8 @@ def build_talisman_passive(item):
         # the exact case found in each language's text so the renderer's `split/join` matches.
         all_vals_ci = {k.lower(): v for k, v in all_vals.items()}
         resolved = {}
-        for tok in tokens:
+        # sorted() for deterministic key order (`tokens` is a set) → diff-free JSON.
+        for tok in sorted(tokens):
             v = all_vals.get(tok) if tok in all_vals else all_vals_ci.get(tok.lower())
             if v is not None and v != '?':
                 resolved[tok] = v
@@ -874,7 +877,6 @@ output = {
     '$source': ('Generated from data/admin/json2/ + data/equipment/'
                 '{weapon,accessory,talisman,sets}.json — do not edit by hand. '
                 'Run scripts/generate-item-stats-detail.py to regenerate.'),
-    '$generatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds'),
     'constants': {
         'enhanceFactor': enhance_factor,
         'tierFactor': tier_factor,

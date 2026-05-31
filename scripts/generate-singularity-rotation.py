@@ -20,7 +20,6 @@ Skuld Dark not yet shipped), the entry is reported as unresolved.
 
 Output:
   {
-    "generatedAt": "YYYY-MM-DD",
     "cycleLengthWeeks": 6,
     "startDayOfWeek": "WED",
     "activeDays": 4,
@@ -225,7 +224,6 @@ def main():
         })
 
     out = {
-        'generatedAt': today.isoformat(),
         'cycleLengthWeeks': 6,
         'startDayOfWeek': 'WED',
         'activeDays': 4,

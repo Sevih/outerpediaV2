@@ -8,7 +8,6 @@ enum-to-display-string mappings (slot, rarity, stat key).
 Output structure:
 {
   "$source": "...",
-  "$generatedAt": "...",
   "constants": {
     "enhanceFactor": 0.4,
     "tierFactor": 0.05,
@@ -67,7 +66,6 @@ import os
 import re
 import sys
 from collections import defaultdict
-from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_DIR = os.path.join(ROOT, 'data', 'admin', 'json2')
@@ -359,7 +357,6 @@ for (slot, stat_key, rarity, star), base_to_items in sorted(bases_by_key.items()
 
 output = {
     '$source': 'Generated from data/admin/json2/ — do not edit by hand. Run scripts/generate-stat-ranges-v2.py to regenerate.',
-    '$generatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds'),
     'constants': {
         'enhanceFactor': enhance_factor,
         'tierFactor': tier_factor,

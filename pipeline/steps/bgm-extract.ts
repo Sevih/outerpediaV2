@@ -22,6 +22,27 @@ const BGM_FILTER = '^(Agitpunkt|Battle_|Boss_|Event_|Guild_Agit|Intro|Lobby_|Rem
 
 // ─── Helpers ────────────────────────────────────────────────────────
 
+/**
+ * Deterministic, environment-independent filename comparator.
+ *
+ * `localeCompare` (ICU) variable-weights punctuation, so e.g.
+ * `"Monadgate".localeCompare("Monadgate_Ending_Bad") === 0` — a name and its
+ * underscore-suffixed siblings compare as EQUAL. With a stable Array.sort, tied
+ * elements keep their input order (here `readdirSync`, i.e. filesystem order),
+ * so a datamine update that adds/removes files reshuffles those entries and the
+ * committed JSON churns on every rebuild.
+ *
+ * Code-unit comparison on the lowercased strings is a total order (a shorter
+ * prefix sorts before `prefix_suffix`), with an exact-case tiebreak so no pair
+ * is ever "equal" — output order no longer depends on the input order.
+ */
+function byFileNameCI(a: string, b: string): number {
+  const al = a.toLowerCase();
+  const bl = b.toLowerCase();
+  if (al !== bl) return al < bl ? -1 : 1;
+  return a < b ? -1 : a > b ? 1 : 0;
+}
+
 function which(cmd: string): string | null {
   try {
     const result = execFileSync(process.platform === 'win32' ? 'where' : 'which', [cmd], {
@@ -198,7 +219,7 @@ function findPairs(audioDir: string): { pairs: Pair[]; standalone: string[] } {
     .filter(f => !pairedFiles.has(f.toLowerCase()))
     .sort();
 
-  return { pairs: pairs.sort((a, b) => a.baseName.localeCompare(b.baseName)), standalone };
+  return { pairs: pairs.sort((a, b) => byFileNameCI(a.baseName, b.baseName)), standalone };
 }
 
 // ─── Step 4: Merge & convert ────────────────────────────────────────
@@ -293,7 +314,7 @@ export async function run() {
     }
 
     const result: MappingEntry[] = [];
-    for (const filename of [...allFiles].sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))) {
+    for (const filename of [...allFiles].sort(byFileNameCI)) {
       const old = oldMapping.get(filename.toLowerCase());
       const name = jukeboxMapping[filename] ?? old?.name ?? formatFilenameAsName(filename);
       const entry: MappingEntry = { file: filename, name };
@@ -346,7 +367,7 @@ export async function run() {
   // Build final mapping
   const allMp3s = readdirSync(OUTPUT_DIR)
     .filter(f => f.endsWith('.mp3'))
-    .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+    .sort(byFileNameCI);
 
   const result: MappingEntry[] = [];
   for (const mp3 of allMp3s) {

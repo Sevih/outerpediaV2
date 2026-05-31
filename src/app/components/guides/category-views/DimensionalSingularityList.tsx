@@ -21,7 +21,6 @@ type RotationWeek = {
 };
 
 type RotationFile = {
-  generatedAt: string;
   cycleLengthWeeks: number;
   startDayOfWeek: string;
   rotation: RotationWeek[];

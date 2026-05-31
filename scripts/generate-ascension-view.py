@@ -12,7 +12,6 @@ already consumed by `AscensionStepsTable` and `AscensionBonusEffectsTable`):
 
 {
   "$source": "...",
-  "$generatedAt": "...",
   "init": { gold, chip, hammer, successRate, factorOP, addMaxLevel, addReforgeCount },
   "steps": [{ from, to, gold, chip, hammer, success, factor, mainStatPct, unlocksBonus? }],
   "reroll": { gold, cartridge, successRate },
@@ -37,7 +36,6 @@ import os
 import re
 import sys
 from collections import defaultdict
-from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC_FILE = os.path.join(ROOT, 'data', 'generated', 'singularity-ascension.json')
@@ -296,7 +294,6 @@ defensive = process_defensive_group(src['options']['31000']['effects'])
 
 output = {
     '$source': 'Generated from data/generated/singularity-ascension.json — do not edit by hand. Run scripts/generate-ascension-view.py to regenerate.',
-    '$generatedAt': datetime.now(timezone.utc).isoformat(timespec='seconds'),
     'totalRate': src['options']['30000']['totalRate'],
     'grades': GRADES,
     'init': init,

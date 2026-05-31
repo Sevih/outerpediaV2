@@ -41,7 +41,9 @@ export async function run() {
   }
 
   if (existsSync(STAMP) && existsSync(OUTPUT)) {
-    const saved = Number(readFileSync(STAMP, 'utf-8').trim());
+    // Stamp format: `<mtime>|<ISO>` — split off the leading mtime (back-compat
+    // with legacy mtime-only stamps, where split('|')[0] is the whole string).
+    const saved = Number(readFileSync(STAMP, 'utf-8').split('|')[0]);
     if (saved >= latest) {
       return 'up to date';
     }
@@ -54,6 +56,8 @@ export async function run() {
   }
 
   mkdirSync(dirname(STAMP), { recursive: true });
-  writeFileSync(STAMP, String(latest), 'utf-8');
+  // Provenance (generation time) lives here in the gitignored stamp, not inside
+  // the committed JSON — keeps the artifact diff-free across rebuilds.
+  writeFileSync(STAMP, `${latest}|${new Date().toISOString()}`, 'utf-8');
   return 'regenerated';
 }
