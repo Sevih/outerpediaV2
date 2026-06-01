@@ -17,6 +17,11 @@ import strings from './strings.json';
 import defaultConfig from './config.json';
 import geasPool from '@data/geas.json';
 
+/* -- Version: 06-2026 ----------------------------------------- */
+import v06_2026Override from './versions/06-2026/config.json';
+import v06_2026Phase1 from './versions/06-2026/phase1.json';
+import v06_2026Phase2 from './versions/06-2026/phase2.json';
+
 /* -- Version: 12-2025 ----------------------------------------- */
 import v12_2025Override from './versions/12-2025/config.json';
 import v12_2025Phase1 from './versions/12-2025/phase1.json';
@@ -74,8 +79,14 @@ export default function PreventWorldAlterationGuide() {
       title={str.title}
       introduction={str.intro}
       pool={pool}
-      defaultVersion="dec2025"
+      updating
+      defaultVersion="jun2026"
       versions={{
+        jun2026: resolve(
+          v06_2026Override as GuildRaidVersionOverride,
+          v06_2026Phase1 as unknown as Phase1Data,
+          v06_2026Phase2 as unknown as GuildRaidPhase2Data,
+        ),
         dec2025: resolve(
           v12_2025Override as GuildRaidVersionOverride,
           v12_2025Phase1 as unknown as Phase1Data,
