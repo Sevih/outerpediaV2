@@ -1,9 +1,8 @@
 'use client';
 
+import { useState, useEffect, useCallback, type ReactNode } from 'react';
+import type { Route } from 'next';
 import GuideTemplate from '@/app/components/guides/GuideTemplate';
-import GuideSectionHeading from '@/app/components/guides/GuideSectionHeading';
-import ContentCard from '@/app/components/guides/ContentCard';
-import Callout from '@/app/components/guides/Callout';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { LangMap } from '@/types/common';
@@ -13,9 +12,6 @@ import CharacterInline from '@/app/components/inline/CharacterInline';
 import EffectInline from '@/app/components/inline/EffectInline';
 import SkillInline from '@/app/components/inline/SkillInline';
 import InlineIcon from '@/app/components/inline/InlineIcon';
-
-/* ── Helpers ────────────────────────────────────────────── */
-
 import { StarBadge } from '@/app/components/ui/StarIcons';
 
 /* ── Top-level LangMap constants ────────────────────────── */
@@ -214,512 +210,718 @@ const LABELS = {
   heroesGrowthDesc: { en: 'Leveling & progression systems', jp: 'レベリングと進行システム', kr: '레벨링과 진행 시스템', zh: '升级与进度系统', fr: 'Systèmes de leveling et progression' } satisfies LangMap,
 } as const;
 
-/* ── Component ──────────────────────────────────────────── */
+/* ── Redesign UI chrome strings (presentation only) ─────── */
+
+const UI_ON_THIS_PAGE: LangMap = {
+  en: 'On this page', jp: 'このページの内容', kr: '이 페이지에서', zh: '本页内容', fr: 'Sur cette page',
+};
+const UI_START_HERE: LangMap = {
+  en: 'Start here', jp: 'まずここから', kr: '여기부터', zh: '从这里开始', fr: 'Commencez ici',
+};
+
+/* ── Redesign presentation atoms ────────────────────────── */
+
+const FA = {
+  card: 'rgba(15,23,42,.55)',
+  cardHi: 'rgba(30,41,59,.55)',
+  border: '#27272a',
+  borderSoft: 'rgba(39,39,42,.55)',
+  divider: 'rgba(63,63,70,.5)',
+  text: '#fafafa',
+  text2: '#d4d4d8',
+  text3: '#a1a1aa',
+  text4: '#71717a',
+  text5: '#52525b',
+} as const;
+
+type AccentKey = 'sky' | 'violet' | 'emerald' | 'amber' | 'rose' | 'cyan';
+const FAQ_COLORS: Record<AccentKey, { base: string; soft: string; dim: string; line: string }> = {
+  sky:     { base: '#38bdf8', soft: 'rgba(56,189,248,.13)',  dim: 'rgba(56,189,248,.06)',  line: 'rgba(56,189,248,.35)' },
+  violet:  { base: '#a78bfa', soft: 'rgba(167,139,250,.13)', dim: 'rgba(167,139,250,.06)', line: 'rgba(167,139,250,.35)' },
+  emerald: { base: '#4ade80', soft: 'rgba(74,222,128,.13)',  dim: 'rgba(74,222,128,.06)',  line: 'rgba(74,222,128,.32)' },
+  amber:   { base: '#fbbf24', soft: 'rgba(251,191,36,.13)',  dim: 'rgba(251,191,36,.06)',  line: 'rgba(251,191,36,.32)' },
+  rose:    { base: '#fb7185', soft: 'rgba(251,113,133,.13)', dim: 'rgba(251,113,133,.06)', line: 'rgba(251,113,133,.34)' },
+  cyan:    { base: '#22d3ee', soft: 'rgba(34,211,238,.13)',  dim: 'rgba(34,211,238,.06)',  line: 'rgba(34,211,238,.32)' },
+};
+
+/* Item-rarity colors (shared OP tokens). */
+const RARITY: Record<string, string> = {
+  legendary: '#f87171',
+  epic:      '#93c5fd',
+  superior:  '#4ade80',
+};
+
+const monoFace = 'var(--font-geist-mono), ui-monospace, monospace';
+const titleFace = 'var(--font-geist-sans), system-ui, sans-serif';
+const bodyFace = 'var(--font-geist-sans), system-ui, sans-serif';
+
+/* Stable across renders — labels are localized, ids are not. */
+const SECTION_IDS = ['getting-started', 'heroes-pulling', 'gear-equipment', 'progression-resources', 'advanced-tips'] as const;
+
+/* ───────────────────────── scrollspy + progress ───────────────────────── */
+function useScrollSpy(ids: readonly string[]) {
+  const [activeId, setActiveId] = useState<string>(ids[0]);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const doc = document.documentElement;
+      const max = doc.scrollHeight - doc.clientHeight;
+      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0);
+      const trigger = window.scrollY + window.innerHeight * 0.28;
+      let current = ids[0];
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= trigger) current = id;
+      }
+      setActiveId(current);
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, [ids]);
+
+  const jump = useCallback((id: string) => {
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+  }, []);
+
+  return { activeId, progress, jump };
+}
+
+type TocSection = { id: string; n: string; color: AccentKey; label: string };
+
+/* ───────────────────────── TOC (desktop rail) ───────────────────────── */
+function TocRail({ sections, activeId, progress, onJump }: {
+  sections: readonly TocSection[]; activeId: string; progress: number; onJump: (id: string) => void;
+}) {
+  return (
+    <nav>
+      <div style={{
+        fontFamily: monoFace, fontSize: 10, fontWeight: 600,
+        letterSpacing: '0.16em', textTransform: 'uppercase', color: FA.text5, marginBottom: 14,
+      }}><TocTitle /></div>
+
+      <div style={{ height: 2, background: FA.border, borderRadius: 2, marginBottom: 18, overflow: 'hidden' }}>
+        <div style={{ height: '100%', width: `${Math.round(progress * 100)}%`, background: FAQ_COLORS.sky.base, transition: 'width .15s linear' }} />
+      </div>
+
+      <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 2 }}>
+        {sections.map((s) => {
+          const c = FAQ_COLORS[s.color];
+          const active = activeId === s.id;
+          return (
+            <li key={s.id}>
+              <a href={'#' + s.id}
+                 onClick={(e) => { e.preventDefault(); onJump(s.id); }}
+                 style={{
+                   display: 'flex', alignItems: 'center', gap: 11, padding: '8px 10px', borderRadius: 7,
+                   borderLeft: `2px solid ${active ? c.base : 'transparent'}`,
+                   background: active ? c.dim : 'transparent', transition: 'background .15s', cursor: 'pointer',
+                 }}>
+                <span style={{
+                  width: 8, height: 8, borderRadius: 999, flexShrink: 0,
+                  background: active ? c.base : 'transparent', border: `1.5px solid ${c.base}`,
+                  boxShadow: active ? `0 0 8px ${c.base}` : 'none', transition: 'background .15s, box-shadow .15s',
+                }} />
+                <span style={{ fontFamily: monoFace, fontSize: 10.5, fontWeight: 600, color: active ? c.base : FA.text5, letterSpacing: '0.06em' }}>{s.n}</span>
+                <span style={{ fontFamily: bodyFace, fontSize: 13.5, fontWeight: active ? 600 : 500, color: active ? FA.text : FA.text3, letterSpacing: '-0.005em', transition: 'color .15s' }}>{s.label}</span>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+}
+
+function TocTitle() {
+  const { lang } = useI18n();
+  return <>{lRec(UI_ON_THIS_PAGE, lang)}</>;
+}
+
+/* ───────────────────────── TOC (mobile accordion) ───────────────────────── */
+function TocMobile({ sections, activeId, progress, onJump }: {
+  sections: readonly TocSection[]; activeId: string; progress: number; onJump: (id: string) => void;
+}) {
+  const { lang } = useI18n();
+  const [open, setOpen] = useState(false);
+  const activeSection = sections.find((s) => s.id === activeId) || sections[0];
+  const ac = FAQ_COLORS[activeSection.color];
+  return (
+    <div className="md:hidden sticky top-2 z-20 mb-6" style={{ backdropFilter: 'blur(8px)' }}>
+      <button onClick={() => setOpen((o) => !o)} style={{
+        width: '100%', display: 'flex', alignItems: 'center', gap: 12, padding: '13px 16px', borderRadius: 11,
+        border: `1px solid ${FA.border}`, background: FA.card, cursor: 'pointer', color: FA.text,
+      }}>
+        <span style={{ width: 8, height: 8, borderRadius: 999, background: ac.base, boxShadow: `0 0 8px ${ac.base}`, flexShrink: 0 }} />
+        <span style={{ fontFamily: monoFace, fontSize: 10, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: FA.text5 }}>{lRec(UI_ON_THIS_PAGE, lang)}</span>
+        <span style={{ fontFamily: bodyFace, fontSize: 13.5, fontWeight: 600, color: FA.text2, flex: 1, textAlign: 'left' }}>
+          {activeSection.n} · {activeSection.label}
+        </span>
+        <span style={{ color: FA.text4, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform .2s', fontSize: 12 }}>▾</span>
+      </button>
+
+      <div style={{ height: 2, background: FA.border, borderRadius: 2, margin: '8px 2px 0', overflow: 'hidden' }}>
+        <div style={{ height: '100%', width: `${Math.round(progress * 100)}%`, background: ac.base, transition: 'width .15s linear' }} />
+      </div>
+
+      {open && (
+        <ul style={{
+          listStyle: 'none', margin: '8px 0 0', padding: 6, borderRadius: 11,
+          border: `1px solid ${FA.border}`, background: '#0b1120', display: 'flex', flexDirection: 'column', gap: 2,
+        }}>
+          {sections.map((s) => {
+            const c = FAQ_COLORS[s.color];
+            const active = activeId === s.id;
+            return (
+              <li key={s.id}>
+                <a href={'#' + s.id}
+                   onClick={(e) => { e.preventDefault(); onJump(s.id); setOpen(false); }}
+                   style={{ display: 'flex', alignItems: 'center', gap: 11, padding: '10px 11px', borderRadius: 7, background: active ? c.dim : 'transparent', cursor: 'pointer' }}>
+                  <span style={{ width: 8, height: 8, borderRadius: 999, background: active ? c.base : 'transparent', border: `1.5px solid ${c.base}`, flexShrink: 0 }} />
+                  <span style={{ fontFamily: monoFace, fontSize: 10.5, fontWeight: 600, color: active ? c.base : FA.text5 }}>{s.n}</span>
+                  <span style={{ fontFamily: bodyFace, fontSize: 14, fontWeight: active ? 600 : 500, color: active ? FA.text : FA.text3 }}>{s.label}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+/* ───────────────────────── Section heading ───────────────────────── */
+function SectionHeading({ n, color, title }: { n: string; color: AccentKey; title: string }) {
+  const c = FAQ_COLORS[color];
+  return (
+    <header style={{ marginBottom: 18 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+        <span style={{ fontFamily: monoFace, fontSize: 13, fontWeight: 600, color: c.base, letterSpacing: '0.1em' }}>{n}</span>
+        <span style={{ width: 7, height: 7, borderRadius: 999, flexShrink: 0, background: c.base, boxShadow: `0 0 10px ${c.base}` }} />
+        <h3 style={{ fontFamily: titleFace, fontSize: 25, fontWeight: 600, letterSpacing: '-0.02em', color: FA.text, margin: 0, lineHeight: 1.1 }}>{title}</h3>
+      </div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 10, paddingLeft: 1 }}>
+        <span style={{ height: 2, width: 30, borderRadius: 2, background: c.base, flexShrink: 0 }} />
+        <span style={{ height: 1, flex: 1, background: c.line, opacity: 0.5 }} />
+      </div>
+    </header>
+  );
+}
+
+/* ───────────────────────── Q→A card ───────────────────────── */
+function QACard({ color, featured, badge, q, children }: {
+  color: AccentKey; featured?: boolean; badge?: string; q: ReactNode; children: ReactNode;
+}) {
+  const c = FAQ_COLORS[color];
+  return (
+    <article style={{
+      position: 'relative', borderRadius: 12,
+      border: `1px solid ${featured ? c.line : FA.border}`,
+      background: featured ? `linear-gradient(180deg, ${c.dim}, transparent 70%), ${FA.card}` : FA.card,
+      padding: '20px 22px', overflow: 'hidden',
+    }}>
+      {featured && <span style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: c.base }} />}
+      <div style={{ display: 'flex', gap: 13, alignItems: 'flex-start' }}>
+        <span style={{
+          flexShrink: 0, width: 27, height: 27, borderRadius: 7, background: c.soft, border: `1px solid ${c.line}`,
+          color: c.base, fontFamily: monoFace, fontSize: 12, fontWeight: 700,
+          display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginTop: 1,
+        }}>Q</span>
+        <h4 style={{ fontFamily: titleFace, fontSize: 17.5, fontWeight: 600, letterSpacing: '-0.01em', color: FA.text, margin: 0, lineHeight: 1.35, paddingTop: 2 }}>
+          {featured && badge && (
+            <span style={{
+              display: 'inline-block', verticalAlign: 'middle', marginRight: 9,
+              fontFamily: monoFace, fontSize: 9.5, fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase',
+              color: c.base, background: c.soft, border: `1px solid ${c.line}`, borderRadius: 4, padding: '3px 7px', lineHeight: 1,
+            }}>{badge}</span>
+          )}
+          {q}
+        </h4>
+      </div>
+      <div className="faq-answer" style={{ marginTop: 11, display: 'flex', flexDirection: 'column', gap: 14 }}>
+        {children}
+      </div>
+    </article>
+  );
+}
+
+function Prose({ children }: { children: ReactNode }) {
+  return <p style={{ fontFamily: bodyFace, fontSize: 14.5, lineHeight: 1.72, color: FA.text3, margin: 0, textWrap: 'pretty' }}>{children}</p>;
+}
+
+/* Inline link, section-accent tinted. */
+function InlineA({ href: hrefTo, color, children }: { href: Route; color: AccentKey; children: ReactNode }) {
+  return <Link href={hrefTo} style={{ color: FAQ_COLORS[color].base, textDecoration: 'underline', textUnderlineOffset: 2 }}>{children}</Link>;
+}
+
+/* Harmonized callout — accent hex + optional label line. */
+function AccentCallout({ accent, label, children }: { accent: string; label?: ReactNode; children: ReactNode }) {
+  return (
+    <div style={{
+      borderRadius: 9, border: `1px solid ${accent}33`, borderLeft: `2px solid ${accent}`,
+      background: `${accent}0e`, padding: '12px 14px',
+    }}>
+      {label && (
+        <span style={{ fontFamily: monoFace, fontSize: 10.5, fontWeight: 700, letterSpacing: '0.06em', color: accent, display: 'block', marginBottom: 7 }}>{label}</span>
+      )}
+      <div style={{ fontFamily: bodyFace, fontSize: 13.5, lineHeight: 1.6, color: FA.text3 }}>{children}</div>
+    </div>
+  );
+}
+
+/* Accent-topped mini panel (who-to-pull columns, base order, etc.). */
+function MiniPanel({ accent, title, children }: { accent: string; title: ReactNode; children?: ReactNode }) {
+  return (
+    <div style={{ borderRadius: 9, border: `1px solid ${FA.border}`, background: FA.cardHi, padding: '13px 14px', borderTop: `2px solid ${accent}` }}>
+      <div style={{ fontFamily: titleFace, fontSize: 14.5, fontWeight: 600, color: FA.text, marginBottom: children ? 8 : 0 }}>{title}</div>
+      {children && <div style={{ fontFamily: bodyFace, fontSize: 13, lineHeight: 1.55, color: FA.text3 }}>{children}</div>}
+    </div>
+  );
+}
+
+/* Numbered, accent-keyed ordered list (reforge rules, skill-up, base order). */
+function NumberedList({ color, items }: { color: AccentKey; items: ReactNode[] }) {
+  const c = FAQ_COLORS[color];
+  return (
+    <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+      {items.map((it, i) => (
+        <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+          <span style={{
+            flexShrink: 0, width: 22, height: 22, borderRadius: 6, marginTop: 1, background: c.soft, border: `1px solid ${c.line}`,
+            color: c.base, fontFamily: monoFace, fontSize: 11, fontWeight: 700,
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+          }}>{i + 1}</span>
+          <span style={{ fontFamily: bodyFace, fontSize: 14, lineHeight: 1.55, color: FA.text2, paddingTop: 1 }}>{it}</span>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
+/* Accent-dot bullet list (where-to-go pointers). */
+function DotList({ color, items }: { color: AccentKey; items: ReactNode[] }) {
+  const c = FAQ_COLORS[color];
+  return (
+    <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+      {items.map((it, i) => (
+        <li key={i} style={{ display: 'flex', gap: 11, alignItems: 'flex-start' }}>
+          <span style={{ width: 6, height: 6, borderRadius: 999, marginTop: 8, flexShrink: 0, background: c.base, boxShadow: `0 0 8px ${c.base}` }} />
+          <span style={{ fontFamily: bodyFace, fontSize: 14, lineHeight: 1.6, color: FA.text2 }}>{it}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/* Compact "mode → when" row table (base upgrade order). */
+function StepRows({ items }: { items: { tone: AccentKey; n: string; label: ReactNode }[] }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 1, borderRadius: 9, overflow: 'hidden', border: `1px solid ${FA.border}` }}>
+      {items.map((it, i) => {
+        const c = FAQ_COLORS[it.tone];
+        return (
+          <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 14px', background: FA.cardHi }}>
+            <span style={{
+              fontFamily: monoFace, fontSize: 11, fontWeight: 700, color: c.base, background: c.soft,
+              border: `1px solid ${c.line}`, borderRadius: 5, padding: '3px 8px', flexShrink: 0,
+            }}>{it.n}</span>
+            <span style={{ fontFamily: bodyFace, fontSize: 14, fontWeight: 600, color: FA.text2 }}>{it.label}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+/* Gear rarity table — Rarity · Max substats · stars. */
+function GearRarityTable({ rows }: { rows: { rarity: string; rarityColor: keyof typeof RARITY; stars: number; ticks: ReactNode }[] }) {
+  return (
+    <div style={{ borderRadius: 10, border: `1px solid ${FA.border}`, overflow: 'hidden', background: FA.cardHi }}>
+      {rows.map((r, i) => {
+        const rc = RARITY[r.rarityColor];
+        return (
+          <div key={i} style={{
+            display: 'flex', alignItems: 'center', gap: 12, padding: '12px 14px',
+            borderBottom: i < rows.length - 1 ? `1px solid ${FA.borderSoft}` : 'none',
+          }}>
+            <span style={{ display: 'flex', flexDirection: 'column', gap: 3, minWidth: 116 }}>
+              <span style={{ fontFamily: titleFace, fontSize: 14, fontWeight: 600, color: rc }}>{r.rarity}</span>
+              <span style={{ display: 'inline-flex', gap: 1, color: rc, fontSize: 9, lineHeight: 1 }}>
+                {Array.from({ length: r.stars }).map((_, k) => <span key={k}>★</span>)}
+              </span>
+            </span>
+            <span style={{
+              fontFamily: monoFace, fontSize: 11, fontWeight: 600, color: rc, border: `1px solid ${rc}40`,
+              background: `${rc}12`, borderRadius: 5, padding: '4px 9px', lineHeight: 1.2,
+            }}>{r.ticks}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+/* Chip row wrapper for CharacterInline groups. */
+function ChipRow({ children }: { children: ReactNode }) {
+  return <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, alignItems: 'center', marginTop: 8 }}>{children}</div>;
+}
+
+/* ───────────────────────── Related grid ───────────────────────── */
+function RelatedGuides({ heading, items }: {
+  heading: string;
+  items: { href: Route; color: AccentKey; glyph: string; label: string; desc: string }[];
+}) {
+  return (
+    <section style={{ marginTop: 8 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 20 }}>
+        <h3 style={{ fontFamily: titleFace, fontSize: 20, fontWeight: 600, letterSpacing: '-0.01em', color: FA.text, margin: 0 }}>{heading}</h3>
+        <span style={{ height: 1, flex: 1, background: FA.divider }} />
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {items.map((g) => {
+          const c = FAQ_COLORS[g.color];
+          return (
+            <Link key={g.href} href={g.href} style={{
+              display: 'flex', alignItems: 'center', gap: 14, padding: '16px 18px', borderRadius: 11,
+              border: `1px solid ${FA.border}`, background: FA.card,
+            }}>
+              <span style={{
+                width: 42, height: 42, borderRadius: 9, flexShrink: 0,
+                background: `linear-gradient(135deg, ${c.soft}, ${c.dim})`, border: `1px solid ${c.line}`, color: c.base,
+                fontFamily: monoFace, fontSize: 14, fontWeight: 700, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', letterSpacing: '0.04em',
+              }}>{g.glyph}</span>
+              <span style={{ flex: 1, minWidth: 0 }}>
+                <span style={{ display: 'block', fontFamily: titleFace, fontSize: 15, fontWeight: 600, color: FA.text }}>{g.label}</span>
+                <span style={{ display: 'block', fontFamily: bodyFace, fontSize: 12.5, color: FA.text4, marginTop: 3, lineHeight: 1.4 }}>{g.desc}</span>
+              </span>
+              <span style={{ color: c.base, fontSize: 16, flexShrink: 0 }}>→</span>
+            </Link>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+/* ───────────────────────── Page ───────────────────────── */
 
 export default function BeginnerFAQGuide() {
   const { lang, href } = useI18n();
+  const L = (m: LangMap) => lRec(m, lang);
+  const { activeId, progress, jump } = useScrollSpy(SECTION_IDS);
+
+  const sections: readonly TocSection[] = [
+    { id: SECTION_IDS[0], n: '01', color: 'sky',     label: L(LABELS.sectionGettingStarted) },
+    { id: SECTION_IDS[1], n: '02', color: 'violet',  label: L(LABELS.sectionHeroesPulling) },
+    { id: SECTION_IDS[2], n: '03', color: 'amber',   label: L(LABELS.sectionGearEquipment) },
+    { id: SECTION_IDS[3], n: '04', color: 'emerald', label: L(LABELS.sectionProgressionResources) },
+    { id: SECTION_IDS[4], n: '05', color: 'rose',    label: L(LABELS.sectionAdvancedTips) },
+  ];
 
   return (
-    <GuideTemplate
-      title={lRec(title, lang)}
-      introduction={lRec(intro, lang)}
-    >
-      <div className="space-y-12">
-
-        {/* ═══ Getting Started ═══ */}
-        <section className="space-y-6">
-          <GuideSectionHeading color="sky">
-            {lRec(LABELS.sectionGettingStarted, lang)}
-          </GuideSectionHeading>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-sky-300 after:hidden">
-              {lRec(LABELS.rerollImportance, lang)}
-            </h4>
-            <p className="leading-relaxed">
-              {lRec(LABELS.rerollGettingA, lang)}
-              <Link href={href('/guides/general-guides/premium-limited')} className="text-blue-400 hover:text-blue-300 underline">
-                {lRec(LABELS.premiumLimitedHero, lang)}
-              </Link>
-              {lRec(LABELS.rerollNotRequired, lang)}
-            </p>
-            <p className="leading-relaxed">
-              {lRec(LABELS.thePrefix, lang)}
-              <Link href={href('/guides/general-guides/free-heroes-start-banner')} className="text-blue-400 hover:text-blue-300 underline">
-                {lRec(LABELS.freeHeroesLink, lang)}
-              </Link>
-              {lRec(LABELS.solidFoundation, lang)}
-            </p>
-            <p className="leading-relaxed">
-              {lRec(LABELS.doppelgangerFarm, lang)}
-            </p>
-          </ContentCard>
-        </section>
-
-        {/* ═══ Heroes & Pulling ═══ */}
-        <section className="space-y-6">
-          <GuideSectionHeading color="purple">
-            {lRec(LABELS.sectionHeroesPulling, lang)}
-          </GuideSectionHeading>
-
-          {/* Who do I pull for? */}
-          <ContentCard className="space-y-4!">
-            <h4 className="text-lg font-semibold text-purple-300 after:hidden">
-              {lRec(LABELS.whoPullFor, lang)}
-            </h4>
-            <p className="leading-relaxed">
-              {lRec(LABELS.wideRangeHeroes, lang)}
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-3 mt-4">
-              <div className="p-4 bg-purple-900/20 border border-purple-500/30 rounded-lg space-y-2">
-                <div className="flex items-center gap-2 font-semibold text-purple-300">
-                  <span>{lRec(LABELS.limited, lang)}</span>
-                </div>
-                <p className="text-sm">
-                  {parseText(lRec(LABELS.limitedDesc, lang))}
-                </p>
-              </div>
-
-              <div className="p-4 bg-amber-900/20 border border-amber-500/30 rounded-lg space-y-2">
-                <h5 className="font-semibold text-amber-300 after:hidden">
-                  {lRec(LABELS.premium, lang)}
-                </h5>
-                <p className="text-sm">
-                  {lRec(LABELS.premiumBannerDesc, lang)}
-                  <Link href={href('/guides/general-guides/premium-limited')} className="text-blue-400 underline">
-                    {lRec(LABELS.dedicatedGuide, lang)}
-                  </Link>
-                  {lRec(LABELS.periodSeeGuide, lang)}
-                </p>
-              </div>
-
-              <div className="p-4 bg-green-900/20 border border-green-500/30 rounded-lg space-y-2">
-                <h5 className="font-semibold text-green-300 after:hidden">
-                  {lRec(LABELS.regular, lang)}
-                </h5>
-                <p className="text-sm mb-2">
-                  {parseText(lRec(LABELS.regularHeroesDesc, lang))}
-                  <br />
-                  {lRec(LABELS.customRecruitGoal, lang)}
-                  <EffectInline name="BT_STAT|ST_CRITICAL_RATE" type="buff" />
-                  {lRec(LABELS.critBuff, lang)}
-                </p>
-                <div className="gap-1">
-                  <CharacterInline name="Valentine" />{' '}
-                  <CharacterInline name="Tamara" /><br />
-                  <CharacterInline name="Skadi" />{' '}
-                  <CharacterInline name="Charlotte" />
-                </div>
-              </div>
-            </div>
-          </ContentCard>
-
-          {/* Should I pull for dupes? */}
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-purple-300 after:hidden">
-              {lRec(LABELS.pullForDupes, lang)}
-            </h4>
-            <div className="space-y-4">
-              <div>
-                <p className="leading-relaxed mb-2">
-                  {lRec(LABELS.regularHeroesFarm, lang)}
-                </p>
-                <p className="text-xs text-gray-300 mb-4">
-                  {lRec(LABELS.transcendSteps, lang)}
-                </p>
-                <div className="ml-4 space-y-1 text-sm text-gray-400">
-                  <p>{'• '}<StarBadge level="4" />{lRec(LABELS.star4WeaknessGauge, lang)}</p>
-                  <p>{'• '}<StarBadge level="5" />{lRec(LABELS.star5Burst3, lang)}</p>
-                  <p>{'• '}<StarBadge level="6" />{lRec(LABELS.star6NotPriority, lang)}</p>
-                </div>
-              </div>
-              <div>
-                <p className="leading-relaxed">
-                  {lRec(LABELS.premiumLimitedLead, lang)}
-                  <strong className="text-amber-300">{lRec(LABELS.premium, lang)}</strong>
-                  {lRec(LABELS.andKwa, lang)}
-                  <strong className="text-purple-400">{lRec(LABELS.limited, lang)}</strong>
-                  {lRec(LABELS.premiumLimitedTranscend, lang)}
-                  <Link href={href('/guides/general-guides/premium-limited')} className="text-blue-400 underline">
-                    {lRec(LABELS.here, lang)}
-                  </Link>
-                  {lRec(LABELS.periodSeeGuide, lang)}
-                </p>
-              </div>
-            </div>
-          </ContentCard>
-
-          {/* What team do I start with? */}
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-purple-300 after:hidden">
-              {lRec(LABELS.whatTeam, lang)}
-            </h4>
-            <p className="leading-relaxed">
-              {lRec(LABELS.standardTeam, lang)}
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-3 mt-3">
-              <Callout variant="warning">
-                <p className="text-sm font-semibold text-red-300 mb-2">
-                  {lRec(LABELS.dpsFromStartDash, lang)}
-                </p>
-                <div className="gap-1">
-                  <CharacterInline name="Ame" />{' '}<CharacterInline name="Rey" />{' '}<CharacterInline name="Rin" />{' '}<CharacterInline name="Vlada" />
-                </div>
-              </Callout>
-              <Callout variant="note">
-                <p className="text-sm font-semibold text-blue-300 mb-2">
-                  {lRec(LABELS.critBuffFromCustom, lang)}
-                </p>
-                <div className="gap-1">
-                  <CharacterInline name="Valentine" />{' '}<CharacterInline name="Tamara" />{' '}<CharacterInline name="Skadi" />{' '}<CharacterInline name="Charlotte" />
-                </div>
-              </Callout>
-              <Callout variant="tip">
-                <p className="text-sm font-semibold text-green-300 mb-2">
-                  {lRec(LABELS.healers, lang)}
-                </p>
-                <div className="gap-1">
-                  {lRec(LABELS.youGet, lang)}
-                  <CharacterInline name="Mene" />
-                  {lRec(LABELS.meneForFree, lang)}
-                  <CharacterInline name="Dianne" />
-                  {lRec(LABELS.andWa, lang)}
-                  <CharacterInline name="Nella" />
-                  {lRec(LABELS.laterWith, lang)}
-                  <CharacterInline name="Monad Eva" />
-                  {lRec(LABELS.monadEvaRecommended, lang)}
-                  <EffectInline name="BT_CALL_BACKUP" type="buff" />
-                  {lRec(LABELS.monadEvaPeriod, lang)}
-                </div>
-              </Callout>
-              <Callout variant="warning">
-                <p className="text-sm font-semibold text-amber-300 mb-2">
-                  {lRec(LABELS.flexSupport, lang)}
-                </p>
-                <div className="gap-1">
-                  <CharacterInline name="Veronica" />{' '}<CharacterInline name="Eternal" />{' '}<CharacterInline name="Akari" />
-                  {lRec(LABELS.orAnotherHero, lang)}
-                </div>
-              </Callout>
-            </div>
-
-            <Callout variant="warning" className="mt-3">
-              <div className="text-sm">
-                <strong>{lRec(LABELS.firstBossPriorities, lang)}</strong>
-                <ul className="mt-2 space-y-1">
-                  <li>
-                    <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4034002.webp" label={lRec(LABELS.unidentifiedChimera, lang)} size={28} underline={false} />
-                    {' '}{parseText(lRec(LABELS.chimeraArmorSets, lang))}
-                  </li>
-                  <li>
-                    <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4076001.webp" label={lRec(LABELS.glicys, lang)} size={28} underline={false} />
-                    {' '}{lRec(LABELS.and, lang)}{' '}
-                    <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4076002.webp" label={lRec(LABELS.blazingKnightMeteos, lang)} size={28} underline={false} />
-                    {' '}{lRec(LABELS.forWeaponsAccessories, lang)}
-                  </li>
-                </ul>
-                <p className="mt-4">
-                  {parseText(lRec(LABELS.earthFireTeam, lang))}
-                </p>
-                <Callout variant="note" className="mt-2">
-                  <p className="text-sm">
-                    <strong>{lRec(LABELS.tip, lang)}</strong>{' '}
-                    {lRec(LABELS.friendSupportTip, lang)}
-                  </p>
-                </Callout>
-              </div>
-            </Callout>
-          </ContentCard>
-        </section>
-
-        {/* ═══ Where do I go first? ═══ */}
-        <section>
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-sky-300 after:hidden">
-              {lRec(LABELS.whereGoFirst, lang)}
-            </h4>
-            <p className="leading-relaxed">
-              {lRec(LABELS.evaGuideQuests, lang)}
-            </p>
-            <div className="space-y-2 mt-3">
-              <div className="flex items-start gap-2">
-                <span className="text-blue-400 mt-1">•</span>
-                <p className="leading-relaxed">
-                  {lRec(LABELS.underChallenges, lang)}
-                  <Link href={href('/guides/special-request')} className="text-blue-400 underline">{lRec(LABELS.specialRequests, lang)}</Link>
-                  {lRec(LABELS.specialRequestsDesc, lang)}
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-400 mt-1">•</span>
-                <p className="leading-relaxed">
-                  {lRec(LABELS.experienceSlow, lang)}
-                </p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-blue-400 mt-1">•</span>
-                <p className="leading-relaxed">
-                  <Link href={href('/guides/skyward-tower')} className="text-blue-400 underline">{lRec(LABELS.skywardTower, lang)}</Link>
-                  {lRec(LABELS.skywardTowerResets, lang)}
-                </p>
-              </div>
-            </div>
-          </ContentCard>
-        </section>
-
-        {/* ═══ Gear & Equipment ═══ */}
-        <section className="space-y-6">
-          <GuideSectionHeading color="amber">
-            {lRec(LABELS.sectionGearEquipment, lang)}
-          </GuideSectionHeading>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-amber-300 after:hidden">
-              {lRec(LABELS.howGetGear, lang)}
-            </h4>
-            <p className="leading-relaxed">
-              {lRec(LABELS.gearSourceDesc, lang)}
-            </p>
-            <div className="grid md:grid-cols-2 gap-3 mt-3">
-              <Callout variant="note">
-                <p className="text-sm font-semibold text-cyan-300 mb-1">{lRec(LABELS.armorPriority, lang)}</p>
-                <p className="text-sm">
-                  <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4034002.webp" label={lRec(LABELS.unidentifiedChimera, lang)} size={28} underline={false} />
-                  {' '}{lRec(LABELS.chimeraArmorDesc, lang)}
-                </p>
-              </Callout>
-              <Callout variant="warning">
-                <p className="text-sm font-semibold text-rose-300 mb-1">{lRec(LABELS.weaponsAccessories, lang)}</p>
-                <p className="text-sm">
-                  {lRec(LABELS.weaponAccessorySkills, lang)}
-                  <br />
-                  <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4076001.webp" label={lRec(LABELS.glicys, lang)} size={28} underline={false} />
-                  {' '}{lRec(LABELS.glicysAccessoryDesc, lang)}
-                  <br />
-                  <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4076002.webp" label={lRec(LABELS.meteos, lang)} size={28} underline={false} />
-                  {' '}{lRec(LABELS.meteosAccessoryDesc, lang)}
-                </p>
-              </Callout>
-            </div>
-          </ContentCard>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-amber-300 after:hidden">
-              {lRec(LABELS.howGetEETalismans, lang)}
-            </h4>
-            <div className="space-y-3">
-              <Callout variant="info">
-                <p className="text-sm font-semibold text-purple-300 mb-1">{lRec(LABELS.exclusiveEquipment, lang)}</p>
-                <p className="text-sm">
-                  {lRec(LABELS.exclusiveEquipmentDesc, lang)}
-                </p>
-              </Callout>
-              <Callout variant="info">
-                <p className="text-sm font-semibold text-indigo-300 mb-1">{lRec(LABELS.talismansAndCharms, lang)}</p>
-                <p className="text-sm">
-                  {lRec(LABELS.talismansDesc, lang)}
-                </p>
-              </Callout>
-            </div>
-          </ContentCard>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-amber-300 after:hidden">
-              {lRec(LABELS.gearWorthKeeping, lang)}
-            </h4>
-            <Callout variant="note" className="mb-3">
-              <p className="text-sm font-semibold text-red-300">
-                {lRec(LABELS.dontThrowBlues, lang)}
-              </p>
-            </Callout>
-            <p className="leading-relaxed">
-              {lRec(LABELS.epicGearStaple, lang)}
-            </p>
-            <p>{lRec(LABELS.gearReforge, lang)}</p>
-            <div className="grid grid-cols-3 gap-2 text-sm mt-2">
-              <div className="p-2 bg-red-900/20 rounded text-center">
-                <p className="text-red-300 font-semibold">{lRec(LABELS.sixStarLegendary, lang)}</p>
-                <p>{lRec(LABELS.eighteenTicks, lang)}</p>
-              </div>
-              <div className="p-2 bg-blue-900/20 rounded text-center">
-                <p className="text-blue-300 font-semibold">{lRec(LABELS.sixStarEpic, lang)}</p>
-                <p>{lRec(LABELS.seventeenTicks, lang)}</p>
-              </div>
-              <div className="p-2 bg-green-900/20 rounded text-center">
-                <p className="text-green-300 font-semibold">{lRec(LABELS.sixStarSuperior, lang)}</p>
-                <p>{lRec(LABELS.sixteenTicks, lang)}</p>
-              </div>
-            </div>
-            <p className="mt-2">
-              {lRec(LABELS.gearRarityMeaning, lang)}
-            </p>
-          </ContentCard>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-amber-300 after:hidden">
-              {lRec(LABELS.whenUpgradeGear, lang)}
-            </h4>
-            <div className="space-y-2">
-              <div className="flex items-start gap-2">
-                <span className="text-amber-400 mt-1">1.</span>
-                <p><strong>{lRec(LABELS.enhancingWeapons, lang)}</strong> {lRec(LABELS.enhancingWeaponsDesc, lang)}</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-amber-400 mt-1">2.</span>
-                <p><strong>{lRec(LABELS.accessories, lang)}</strong> {lRec(LABELS.accessoriesCritDesc, lang)}</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-amber-400 mt-1">3.</span>
-                <p><strong>{lRec(LABELS.armor, lang)}</strong> {lRec(LABELS.armorLaterChapters, lang)}</p>
-              </div>
-              <div className="flex items-start gap-2">
-                <span className="text-amber-400 mt-1">4.</span>
-                <p><strong>{lRec(LABELS.reforgeBreakthrough, lang)}</strong> {lRec(LABELS.reforgeNotImportant, lang)}</p>
-              </div>
-              <ul className="ml-4 space-y-1 text-sm">
-                <li>{lRec(LABELS.substatsAtSixStar, lang)}</li>
-                <li>{lRec(LABELS.breakthroughDesc, lang)}</li>
-                <li>{lRec(LABELS.gemsForSpecialGear, lang)}</li>
-              </ul>
-            </div>
-          </ContentCard>
-        </section>
-
-        {/* ═══ Progression & Resources ═══ */}
-        <section className="space-y-6">
-          <GuideSectionHeading color="green">
-            {lRec(LABELS.sectionProgressionResources, lang)}
-          </GuideSectionHeading>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-green-300 after:hidden">
-              {lRec(LABELS.skillManualsFirst, lang)}
-            </h4>
-            <Callout variant="warning">
-              <p className="text-sm font-semibold text-yellow-300">{lRec(LABELS.skillUpRule, lang)}</p>
-              <ol className="list-decimal list-inside text-sm space-y-1 mt-2 ml-2">
-                <li>{lRec(LABELS.skillLevel2Weakness, lang)}</li>
-                <li>{lRec(LABELS.effectChanceDuration, lang)}</li>
-                <li>{lRec(LABELS.damageIncreasesDps, lang)}</li>
-              </ol>
-            </Callout>
-            <p className="text-sm text-gray-300">
-              {lRec(LABELS.chainPassive, lang)}
-            </p>
-          </ContentCard>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-green-300 after:hidden">
-              {lRec(LABELS.baseUpgrades, lang)}
-            </h4>
-            <div className="space-y-2">
-              <p>{lRec(LABELS.baseUpgradeOrder, lang)}</p>
-              <Callout variant="warning">
-                <p className="text-sm font-semibold text-red-300">1. {lRec(LABELS.antiparticleGenerator, lang)} <span className="text-sm text-gray-400">{lRec(LABELS.maxThisFirst, lang)}</span></p>
-              </Callout>
-              <Callout variant="warning">
-                <p className="text-sm font-semibold text-orange-300">2. {lRec(LABELS.synchroRoom, lang)}</p>
-              </Callout>
-              <Callout variant="tip">
-                <p className="text-sm font-semibold text-yellow-300">3. {lRec(LABELS.katesWorkshop, lang)}</p>
-              </Callout>
-              <Callout variant="tip">
-                <p className="text-sm font-semibold text-lime-300">4. {lRec(LABELS.supplyModule, lang)}</p>
-              </Callout>
-              <p className="text-sm">{lRec(LABELS.unlockQuirks, lang)}</p>
-            </div>
-          </ContentCard>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-green-300 after:hidden">
-              {lRec(LABELS.quirksPriority, lang)}
-            </h4>
-            <p className="leading-relaxed">
-              {lRec(LABELS.quirksUpgradeOrder, lang)}
-            </p>
-            <p>{lRec(LABELS.dpsSubclassFirst, lang)}</p>
-            <p>{lRec(LABELS.quirkLevel5, lang)}</p>
-            <p>{lRec(LABELS.utilityQoL, lang)}</p>
-          </ContentCard>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-green-300 after:hidden">
-              {lRec(LABELS.guildImportance, lang)}
-            </h4>
-            <p>{lRec(LABELS.guildDesc, lang)}</p>
-          </ContentCard>
-        </section>
-
-        {/* ═══ Advanced Tips ═══ */}
-        <section className="space-y-6">
-          <GuideSectionHeading color="rose">
-            {lRec(LABELS.sectionAdvancedTips, lang)}
-          </GuideSectionHeading>
-
-          <ContentCard>
-            <h4 className="text-lg font-semibold text-rose-300 after:hidden">
-              {lRec(LABELS.heroScaleHealth, lang)}
-            </h4>
-            <p className="leading-relaxed">
-              {lRec(LABELS.keyWordsLookFor, lang)}
-              <strong className="underline">{lRec(LABELS.insteadOfAttack, lang)}</strong>
-              {lRec(LABELS.proportionalStat, lang)}
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-3 mt-3">
-              <div className="p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
-                <p className="text-sm font-semibold text-green-300 mb-2 flex items-center gap-2">
-                  <CharacterInline name="Delta" />
-                  <span className="text-xs">{lRec(LABELS.deltaHpInstead, lang)}</span>
-                </p>
-                <p className="text-sm"><SkillInline character="Delta" skill="S1" /><SkillInline character="Delta" skill="S2" /><SkillInline character="Delta" skill="S3" /></p>
-                <p>{parseText(lRec(LABELS.deltaScaleDesc, lang))}</p>
-              </div>
-              <div className="p-4 bg-amber-900/20 border border-amber-500/30 rounded-lg">
-                <p className="text-sm font-semibold text-amber-300 mb-2 flex items-center gap-2">
-                  <CharacterInline name="Demiurge Stella" />
-                  <span className="text-xs">{lRec(LABELS.stellaHpBonus, lang)}</span>
-                </p>
-                <p className="text-sm"><SkillInline character="Demiurge Stella" skill="S1" /><SkillInline character="Demiurge Stella" skill="S2" /><SkillInline character="Demiurge Stella" skill="S3" /></p>
-                <p className="text-sm">{parseText(lRec(LABELS.stellaScaleDesc, lang))}</p>
-              </div>
-            </div>
-
-            <Callout variant="info">
-              <p className="text-sm font-semibold text-purple-300 mb-1">
-                {parseText(lRec(LABELS.atkZeroBossExample, lang))}
-              </p>
-            </Callout>
-          </ContentCard>
-        </section>
-
-        {/* ═══ Related Guides ═══ */}
-        <div className="mt-12 p-6 bg-linear-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/30 rounded-xl">
-          <h2 className="text-lg font-semibold text-blue-300 mb-4 after:hidden">
-            {lRec(LABELS.sectionRelatedGuides, lang)}
-          </h2>
-          <div className="grid md:grid-cols-2 gap-3">
-            <Link href={href('/guides/general-guides/free-heroes-start-banner')} className="p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg transition border border-slate-600">
-              <p className="text-blue-400 font-medium">{lRec(LABELS.freeHeroesStartBanner, lang)}</p>
-              <p className="text-xs text-gray-400 mt-1">{lRec(LABELS.freeHeroesStartBannerDesc, lang)}</p>
-            </Link>
-            <Link href={href('/guides/general-guides/premium-limited')} className="p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg transition border border-slate-600">
-              <p className="text-purple-400 font-medium">{lRec(LABELS.premiumLimitedGuide, lang)}</p>
-              <p className="text-xs text-gray-400 mt-1">{lRec(LABELS.premiumLimitedGuideDesc, lang)}</p>
-            </Link>
-            <Link href={href('/guides/general-guides/gear')} className="p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg transition border border-slate-600">
-              <p className="text-amber-400 font-medium">{lRec(LABELS.gearGuide, lang)}</p>
-              <p className="text-xs text-gray-400 mt-1">{lRec(LABELS.gearGuideDesc, lang)}</p>
-            </Link>
-            <Link href={href('/guides/general-guides/heroes-growth')} className="p-3 bg-slate-800/50 hover:bg-slate-700/50 rounded-lg transition border border-slate-600">
-              <p className="text-green-400 font-medium">{lRec(LABELS.heroesGrowth, lang)}</p>
-              <p className="text-xs text-gray-400 mt-1">{lRec(LABELS.heroesGrowthDesc, lang)}</p>
-            </Link>
+    <GuideTemplate title={L(title)} introduction={L(intro)}>
+      <div className="grid grid-cols-1 md:grid-cols-[232px_1fr] gap-8 md:gap-14 items-start">
+        <aside className="hidden md:block">
+          <div className="sticky top-20">
+            <TocRail sections={sections} activeId={activeId} progress={progress} onJump={jump} />
           </div>
-        </div>
+        </aside>
 
+        <main className="min-w-0 flex flex-col gap-14">
+          <TocMobile sections={sections} activeId={activeId} progress={progress} onJump={jump} />
+
+          {/* ═══ 01 · Getting Started ═══ */}
+          <section id={SECTION_IDS[0]} style={{ scrollMarginTop: 90 }}>
+            <SectionHeading n="01" color="sky" title={L(LABELS.sectionGettingStarted)} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <QACard color="sky" q={L(LABELS.rerollImportance)}>
+                <Prose>
+                  {L(LABELS.rerollGettingA)}
+                  <InlineA href={href('/guides/general-guides/premium-limited')} color="sky">{L(LABELS.premiumLimitedHero)}</InlineA>
+                  {L(LABELS.rerollNotRequired)}
+                </Prose>
+                <Prose>
+                  {L(LABELS.thePrefix)}
+                  <InlineA href={href('/guides/general-guides/free-heroes-start-banner')} color="sky">{L(LABELS.freeHeroesLink)}</InlineA>
+                  {L(LABELS.solidFoundation)}
+                </Prose>
+                <Prose>{L(LABELS.doppelgangerFarm)}</Prose>
+              </QACard>
+
+              <QACard color="sky" featured badge={L(UI_START_HERE)} q={L(LABELS.whereGoFirst)}>
+                <Prose>{L(LABELS.evaGuideQuests)}</Prose>
+                <DotList color="sky" items={[
+                  <>
+                    {L(LABELS.underChallenges)}
+                    <InlineA href={href('/guides/special-request')} color="sky">{L(LABELS.specialRequests)}</InlineA>
+                    {L(LABELS.specialRequestsDesc)}
+                  </>,
+                  L(LABELS.experienceSlow),
+                  <>
+                    <InlineA href={href('/guides/skyward-tower')} color="sky">{L(LABELS.skywardTower)}</InlineA>
+                    {L(LABELS.skywardTowerResets)}
+                  </>,
+                ]} />
+              </QACard>
+            </div>
+          </section>
+
+          {/* ═══ 02 · Heroes & Pulling ═══ */}
+          <section id={SECTION_IDS[1]} style={{ scrollMarginTop: 90 }}>
+            <SectionHeading n="02" color="violet" title={L(LABELS.sectionHeroesPulling)} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <QACard color="violet" q={L(LABELS.whoPullFor)}>
+                <Prose>{L(LABELS.wideRangeHeroes)}</Prose>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <MiniPanel accent={FAQ_COLORS.violet.base} title={L(LABELS.limited)}>
+                    {parseText(L(LABELS.limitedDesc))}
+                  </MiniPanel>
+                  <MiniPanel accent={FAQ_COLORS.amber.base} title={L(LABELS.premium)}>
+                    {L(LABELS.premiumBannerDesc)}
+                    <InlineA href={href('/guides/general-guides/premium-limited')} color="amber">{L(LABELS.dedicatedGuide)}</InlineA>
+                    {L(LABELS.periodSeeGuide)}
+                  </MiniPanel>
+                  <MiniPanel accent={FAQ_COLORS.emerald.base} title={L(LABELS.regular)}>
+                    {parseText(L(LABELS.regularHeroesDesc))}
+                    <br />
+                    {L(LABELS.customRecruitGoal)}
+                    <EffectInline name="BT_STAT|ST_CRITICAL_RATE" type="buff" />
+                    {L(LABELS.critBuff)}
+                    <ChipRow>
+                      <CharacterInline name="Valentine" />
+                      <CharacterInline name="Tamara" />
+                      <CharacterInline name="Skadi" />
+                      <CharacterInline name="Charlotte" />
+                    </ChipRow>
+                  </MiniPanel>
+                </div>
+              </QACard>
+
+              <QACard color="violet" q={L(LABELS.pullForDupes)}>
+                <Prose>{L(LABELS.regularHeroesFarm)}</Prose>
+                <p style={{ fontFamily: bodyFace, fontSize: 12, color: FA.text4, margin: 0 }}>{L(LABELS.transcendSteps)}</p>
+                <DotList color="violet" items={[
+                  <><StarBadge level="4" />{L(LABELS.star4WeaknessGauge)}</>,
+                  <><StarBadge level="5" />{L(LABELS.star5Burst3)}</>,
+                  <><StarBadge level="6" />{L(LABELS.star6NotPriority)}</>,
+                ]} />
+                <Prose>
+                  {L(LABELS.premiumLimitedLead)}
+                  <strong style={{ color: FAQ_COLORS.amber.base, fontWeight: 600 }}>{L(LABELS.premium)}</strong>
+                  {L(LABELS.andKwa)}
+                  <strong style={{ color: FAQ_COLORS.violet.base, fontWeight: 600 }}>{L(LABELS.limited)}</strong>
+                  {L(LABELS.premiumLimitedTranscend)}
+                  <InlineA href={href('/guides/general-guides/premium-limited')} color="violet">{L(LABELS.here)}</InlineA>
+                  {L(LABELS.periodSeeGuide)}
+                </Prose>
+              </QACard>
+
+              <QACard color="violet" q={L(LABELS.whatTeam)}>
+                <Prose>{L(LABELS.standardTeam)}</Prose>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <AccentCallout accent={FAQ_COLORS.rose.base} label={L(LABELS.dpsFromStartDash)}>
+                    <ChipRow>
+                      <CharacterInline name="Ame" /><CharacterInline name="Rey" /><CharacterInline name="Rin" /><CharacterInline name="Vlada" />
+                    </ChipRow>
+                  </AccentCallout>
+                  <AccentCallout accent={FAQ_COLORS.sky.base} label={L(LABELS.critBuffFromCustom)}>
+                    <ChipRow>
+                      <CharacterInline name="Valentine" /><CharacterInline name="Tamara" /><CharacterInline name="Skadi" /><CharacterInline name="Charlotte" />
+                    </ChipRow>
+                  </AccentCallout>
+                  <AccentCallout accent={FAQ_COLORS.emerald.base} label={L(LABELS.healers)}>
+                    {L(LABELS.youGet)}
+                    <CharacterInline name="Mene" />
+                    {L(LABELS.meneForFree)}
+                    <CharacterInline name="Dianne" />
+                    {L(LABELS.andWa)}
+                    <CharacterInline name="Nella" />
+                    {L(LABELS.laterWith)}
+                    <CharacterInline name="Monad Eva" />
+                    {L(LABELS.monadEvaRecommended)}
+                    <EffectInline name="BT_CALL_BACKUP" type="buff" />
+                    {L(LABELS.monadEvaPeriod)}
+                  </AccentCallout>
+                  <AccentCallout accent={FAQ_COLORS.amber.base} label={L(LABELS.flexSupport)}>
+                    <CharacterInline name="Veronica" /><CharacterInline name="Eternal" /><CharacterInline name="Akari" />
+                    {L(LABELS.orAnotherHero)}
+                  </AccentCallout>
+                </div>
+                <AccentCallout accent={FAQ_COLORS.amber.base} label={L(LABELS.firstBossPriorities)}>
+                  <ul style={{ listStyle: 'none', margin: '2px 0 0', padding: 0, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                    <li>
+                      <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4034002.webp" label={L(LABELS.unidentifiedChimera)} size={28} underline={false} />
+                      {' '}{parseText(L(LABELS.chimeraArmorSets))}
+                    </li>
+                    <li>
+                      <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4076001.webp" label={L(LABELS.glicys)} size={28} underline={false} />
+                      {' '}{L(LABELS.and)}{' '}
+                      <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4076002.webp" label={L(LABELS.blazingKnightMeteos)} size={28} underline={false} />
+                      {' '}{L(LABELS.forWeaponsAccessories)}
+                    </li>
+                  </ul>
+                  <p style={{ margin: '12px 0 0' }}>{parseText(L(LABELS.earthFireTeam))}</p>
+                  <div style={{ marginTop: 12 }}>
+                    <AccentCallout accent={FAQ_COLORS.emerald.base} label={L(LABELS.tip)}>
+                      {L(LABELS.friendSupportTip)}
+                    </AccentCallout>
+                  </div>
+                </AccentCallout>
+              </QACard>
+            </div>
+          </section>
+
+          {/* ═══ 03 · Gear & Equipment ═══ */}
+          <section id={SECTION_IDS[2]} style={{ scrollMarginTop: 90 }}>
+            <SectionHeading n="03" color="amber" title={L(LABELS.sectionGearEquipment)} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <QACard color="amber" q={L(LABELS.howGetGear)}>
+                <Prose>{L(LABELS.gearSourceDesc)}</Prose>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <AccentCallout accent={FAQ_COLORS.cyan.base} label={L(LABELS.armorPriority)}>
+                    <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4034002.webp" label={L(LABELS.unidentifiedChimera)} size={28} underline={false} />
+                    {' '}{L(LABELS.chimeraArmorDesc)}
+                  </AccentCallout>
+                  <AccentCallout accent={FAQ_COLORS.rose.base} label={L(LABELS.weaponsAccessories)}>
+                    {L(LABELS.weaponAccessorySkills)}
+                    <br />
+                    <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4076001.webp" label={L(LABELS.glicys)} size={28} underline={false} />
+                    {' '}{L(LABELS.glicysAccessoryDesc)}
+                    <br />
+                    <InlineIcon icon="/images/characters/boss/atb/IG_Turn_4076002.webp" label={L(LABELS.meteos)} size={28} underline={false} />
+                    {' '}{L(LABELS.meteosAccessoryDesc)}
+                  </AccentCallout>
+                </div>
+              </QACard>
+
+              <QACard color="amber" q={L(LABELS.howGetEETalismans)}>
+                <AccentCallout accent={FAQ_COLORS.violet.base} label={L(LABELS.exclusiveEquipment)}>
+                  {L(LABELS.exclusiveEquipmentDesc)}
+                </AccentCallout>
+                <AccentCallout accent={FAQ_COLORS.sky.base} label={L(LABELS.talismansAndCharms)}>
+                  {L(LABELS.talismansDesc)}
+                </AccentCallout>
+              </QACard>
+
+              <QACard color="amber" q={L(LABELS.gearWorthKeeping)}>
+                <AccentCallout accent={FAQ_COLORS.rose.base}>
+                  <strong style={{ color: FAQ_COLORS.rose.base, fontWeight: 600 }}>{L(LABELS.dontThrowBlues)}</strong>
+                </AccentCallout>
+                <Prose>{L(LABELS.epicGearStaple)}</Prose>
+                <Prose>{L(LABELS.gearReforge)}</Prose>
+                <GearRarityTable rows={[
+                  { rarity: L(LABELS.sixStarLegendary), rarityColor: 'legendary', stars: 6, ticks: L(LABELS.eighteenTicks) },
+                  { rarity: L(LABELS.sixStarEpic),      rarityColor: 'epic',      stars: 6, ticks: L(LABELS.seventeenTicks) },
+                  { rarity: L(LABELS.sixStarSuperior),  rarityColor: 'superior',  stars: 6, ticks: L(LABELS.sixteenTicks) },
+                ]} />
+                <Prose>{L(LABELS.gearRarityMeaning)}</Prose>
+              </QACard>
+
+              <QACard color="amber" q={L(LABELS.whenUpgradeGear)}>
+                <NumberedList color="amber" items={[
+                  <><strong style={{ color: FA.text, fontWeight: 600 }}>{L(LABELS.enhancingWeapons)}</strong> {L(LABELS.enhancingWeaponsDesc)}</>,
+                  <><strong style={{ color: FA.text, fontWeight: 600 }}>{L(LABELS.accessories)}</strong> {L(LABELS.accessoriesCritDesc)}</>,
+                  <><strong style={{ color: FA.text, fontWeight: 600 }}>{L(LABELS.armor)}</strong> {L(LABELS.armorLaterChapters)}</>,
+                  <><strong style={{ color: FA.text, fontWeight: 600 }}>{L(LABELS.reforgeBreakthrough)}</strong> {L(LABELS.reforgeNotImportant)}</>,
+                ]} />
+                <DotList color="amber" items={[
+                  L(LABELS.substatsAtSixStar),
+                  L(LABELS.breakthroughDesc),
+                  L(LABELS.gemsForSpecialGear),
+                ]} />
+              </QACard>
+            </div>
+          </section>
+
+          {/* ═══ 04 · Progression & Resources ═══ */}
+          <section id={SECTION_IDS[3]} style={{ scrollMarginTop: 90 }}>
+            <SectionHeading n="04" color="emerald" title={L(LABELS.sectionProgressionResources)} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <QACard color="emerald" q={L(LABELS.skillManualsFirst)}>
+                <AccentCallout accent={FAQ_COLORS.amber.base} label={L(LABELS.skillUpRule)}>
+                  <div style={{ marginTop: 2 }}>
+                    <NumberedList color="amber" items={[
+                      L(LABELS.skillLevel2Weakness),
+                      L(LABELS.effectChanceDuration),
+                      L(LABELS.damageIncreasesDps),
+                    ]} />
+                  </div>
+                </AccentCallout>
+                <Prose>{L(LABELS.chainPassive)}</Prose>
+              </QACard>
+
+              <QACard color="emerald" q={L(LABELS.baseUpgrades)}>
+                <Prose>{L(LABELS.baseUpgradeOrder)}</Prose>
+                <StepRows items={[
+                  { tone: 'rose',    n: '01', label: <>{L(LABELS.antiparticleGenerator)} <span style={{ color: FA.text4, fontWeight: 400 }}>· {L(LABELS.maxThisFirst)}</span></> },
+                  { tone: 'amber',   n: '02', label: L(LABELS.synchroRoom) },
+                  { tone: 'emerald', n: '03', label: L(LABELS.katesWorkshop) },
+                  { tone: 'sky',     n: '04', label: L(LABELS.supplyModule) },
+                ]} />
+                <Prose>{L(LABELS.unlockQuirks)}</Prose>
+              </QACard>
+
+              <QACard color="emerald" q={L(LABELS.quirksPriority)}>
+                <Prose>{L(LABELS.quirksUpgradeOrder)}</Prose>
+                <Prose>{L(LABELS.dpsSubclassFirst)}</Prose>
+                <Prose>{L(LABELS.quirkLevel5)}</Prose>
+                <Prose>{L(LABELS.utilityQoL)}</Prose>
+              </QACard>
+
+              <QACard color="emerald" q={L(LABELS.guildImportance)}>
+                <Prose>{L(LABELS.guildDesc)}</Prose>
+              </QACard>
+            </div>
+          </section>
+
+          {/* ═══ 05 · Advanced Tips ═══ */}
+          <section id={SECTION_IDS[4]} style={{ scrollMarginTop: 90 }}>
+            <SectionHeading n="05" color="rose" title={L(LABELS.sectionAdvancedTips)} />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+              <QACard color="rose" q={L(LABELS.heroScaleHealth)}>
+                <Prose>
+                  {L(LABELS.keyWordsLookFor)}
+                  <strong style={{ color: FA.text, fontWeight: 600, textDecoration: 'underline' }}>{L(LABELS.insteadOfAttack)}</strong>
+                  {L(LABELS.proportionalStat)}
+                </Prose>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <MiniPanel accent={FAQ_COLORS.emerald.base} title={<span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}><CharacterInline name="Delta" /><span style={{ fontSize: 12, color: FA.text4 }}>{L(LABELS.deltaHpInstead)}</span></span>}>
+                    <div style={{ marginBottom: 6 }}>
+                      <SkillInline character="Delta" skill="S1" /><SkillInline character="Delta" skill="S2" /><SkillInline character="Delta" skill="S3" />
+                    </div>
+                    {parseText(L(LABELS.deltaScaleDesc))}
+                  </MiniPanel>
+                  <MiniPanel accent={FAQ_COLORS.amber.base} title={<span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}><CharacterInline name="Demiurge Stella" /><span style={{ fontSize: 12, color: FA.text4 }}>{L(LABELS.stellaHpBonus)}</span></span>}>
+                    <div style={{ marginBottom: 6 }}>
+                      <SkillInline character="Demiurge Stella" skill="S1" /><SkillInline character="Demiurge Stella" skill="S2" /><SkillInline character="Demiurge Stella" skill="S3" />
+                    </div>
+                    {parseText(L(LABELS.stellaScaleDesc))}
+                  </MiniPanel>
+                </div>
+                <AccentCallout accent={FAQ_COLORS.violet.base}>
+                  {parseText(L(LABELS.atkZeroBossExample))}
+                </AccentCallout>
+              </QACard>
+            </div>
+          </section>
+
+          {/* ═══ Related Guides ═══ */}
+          <RelatedGuides
+            heading={L(LABELS.sectionRelatedGuides)}
+            items={[
+              { href: href('/guides/general-guides/free-heroes-start-banner'), color: 'sky',     glyph: 'FH', label: L(LABELS.freeHeroesStartBanner), desc: L(LABELS.freeHeroesStartBannerDesc) },
+              { href: href('/guides/general-guides/premium-limited'),          color: 'violet',  glyph: 'PL', label: L(LABELS.premiumLimitedGuide),    desc: L(LABELS.premiumLimitedGuideDesc) },
+              { href: href('/guides/general-guides/gear'),                     color: 'amber',   glyph: 'GR', label: L(LABELS.gearGuide),               desc: L(LABELS.gearGuideDesc) },
+              { href: href('/guides/general-guides/heroes-growth'),            color: 'emerald', glyph: 'HG', label: L(LABELS.heroesGrowth),            desc: L(LABELS.heroesGrowthDesc) },
+            ]}
+          />
+        </main>
       </div>
     </GuideTemplate>
   );
