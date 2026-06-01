@@ -8,9 +8,8 @@ import { lRec } from '@/lib/i18n/localize';
 import type { LangMap } from '@/types/common';
 import parseText from '@/lib/parse-text';
 import Link from 'next/link';
-import CharacterInline from '@/app/components/inline/CharacterInline';
-import EffectInline from '@/app/components/inline/EffectInline';
-import SkillInline from '@/app/components/inline/SkillInline';
+import Image from 'next/image';
+import guidesIndex from '@data/guides/_index.json';
 import InlineIcon from '@/app/components/inline/InlineIcon';
 import { StarBadge } from '@/app/components/ui/StarIcons';
 
@@ -45,15 +44,11 @@ const LABELS = {
 
   /* ═══ Getting Started ═══ */
   rerollImportance: { en: 'How important is rerolling?', jp: 'リセマラはどれくらい重要ですか？', kr: '리세마라는 얼마나 중요한가요?', zh: '刷初始有多重要？', fr: 'À quel point le reroll est-il important ?' } satisfies LangMap,
-  rerollGettingA: { en: 'Getting a ', jp: '早い段階で', kr: '초반에 ', zh: '早期获得', fr: 'Obtenir un ' } satisfies LangMap,
-  premiumLimitedHero: { en: 'Premium/Limited hero', jp: 'プレミアム/限定ヒーロー', kr: '프리미엄/한정 영웅', zh: '精选/限定英雄', fr: 'Héros Premium/Limited' } satisfies LangMap,
-  rerollNotRequired: { en: ' early helps, but is not required.', jp: 'を入手すると有利ですが、必須ではありません。', kr: '을 얻으면 도움이 되지만, 필수는 아닙니다.', zh: '会有帮助，但不是必须的。', fr: ' tôt aide, mais n\'est pas obligatoire.' } satisfies LangMap,
-  thePrefix: { en: 'The ', jp: '', kr: '', zh: '', fr: 'Les ' } satisfies LangMap,
-  freeHeroesLink: { en: 'heroes you get for free', jp: '無料で入手できるヒーロー', kr: '무료로 얻을 수 있는 영웅', zh: '免费获得的英雄', fr: 'Héros obtenus gratuitement' } satisfies LangMap,
-  solidFoundation: { en: ' are a solid foundation to start off with.', jp: 'だけでも、序盤を進めるには十分な戦力になります。', kr: '만으로도 초반 진행에 충분한 전력이 됩니다.', zh: '足以作为良好的起步基础。', fr: ' constituent une base solide pour bien débuter.' } satisfies LangMap,
+  rerollAnswer: { en: 'Getting a {L/Premium/Limited hero|/guides/general-guides/premium-limited} early helps, but is not required.', jp: '早い段階で{L/プレミアム/限定ヒーロー|/guides/general-guides/premium-limited}を入手すると有利ですが、必須ではありません。', kr: '초반에 {L/프리미엄/한정 영웅|/guides/general-guides/premium-limited}을 얻으면 도움이 되지만, 필수는 아닙니다.', zh: '早期获得{L/精选/限定英雄|/guides/general-guides/premium-limited}会有帮助，但不是必须的。', fr: 'Obtenir un {L/Héros Premium/Limited|/guides/general-guides/premium-limited} tôt aide, mais n\'est pas obligatoire.' } satisfies LangMap,
+  freeHeroesFoundation: { en: 'The {L/heroes you get for free|/guides/general-guides/free-heroes-start-banner} are a solid foundation to start off with.', jp: '{L/無料で入手できるヒーロー|/guides/general-guides/free-heroes-start-banner}だけでも、序盤を進めるには十分な戦力になります。', kr: '{L/무료로 얻을 수 있는 영웅|/guides/general-guides/free-heroes-start-banner}만으로도 초반 진행에 충분한 전력이 됩니다.', zh: '{L/免费获得的英雄|/guides/general-guides/free-heroes-start-banner}足以作为良好的起步基础。', fr: 'Les {L/Héros obtenus gratuitement|/guides/general-guides/free-heroes-start-banner} constituent une base solide pour bien débuter.' } satisfies LangMap,
   doppelgangerFarm: { en: 'Aside from Recruiting, you can farm regular heroes you don\'t have in the Doppelgänger Challenge. It takes about 5 days to transcend a hero, or about 8 days to recruit one you don\'t own, and with gold you can work on two heroes at once.', jp: 'ガチャ以外にも、ドッペルゲンガーチャレンジで所持していない一般ヒーローを獲得できます。超越には約5日、未所持ヒーローの獲得には約8日かかり、ゴールドを使えば2体同時に進められます。', kr: '모집 외에도 도플갱어 챌린지에서 보유하지 않은 일반 영웅을 획득할 수 있습니다. 초월에는 약 5일, 미보유 영웅 획득에는 약 8일이 걸리며, 골드를 사용하면 두 명을 동시에 진행할 수 있습니다.', zh: '除了招募之外，你还可以在分身挑战中获得未拥有的普通英雄。超越约需5天，招募一名未拥有的英雄约需8天，使用金币可以同时培养两名英雄。', fr: 'En plus du Recruiting, vous pouvez farmer les Héros Réguliers que vous n\'avez pas via le Doppelganger Challenge. Il faut environ 5 jours pour transcender un Héros, ou environ 8 jours pour en recruter un que vous ne possédez pas, et avec du gold vous pouvez travailler deux Héros à la fois.' } satisfies LangMap,
 
-  newAccountStarters: { en: 'New accounts also get a Demiurge Contract and a Seasonal Limited Hero Selection Recruit. The Contract guarantees a 5★+ Premium hero ({P/Demiurge Luna} or {P/Monad Eva} are the recommended picks), and the Seasonal selection gives quick access to {P/Mystic Sage Ame}, one of the best supports in the game. On top of that you receive 1000 {I-I/Special Recruitment Ticket} to collect the regular roster, giving you a well-rounded lineup to work with right away.', jp: '新規アカウントにはデミウルゴス契約とシーズナル限定仲間選択スカウトも付与されます。契約では★5+のプレミアムヒーローが確定し（おすすめは{P/Demiurge Luna}または{P/Monad Eva}）、シーズナル選択ではゲーム屈指のサポーター{P/Mystic Sage Ame}を早期に入手できます。さらに一般ヒーローを集めるための{I-I/Special Recruitment Ticket}が1000枚もらえるので、序盤から充実したロスターを揃えられます。', kr: '신규 계정에는 데미우르고스 계약과 시즌 한정 동료 선택 영입도 제공됩니다. 계약으로 ★5+ 프리미엄 영웅이 확정되며(추천은 {P/Demiurge Luna} 또는 {P/Monad Eva}), 시즈널 선택으로 게임 최고의 서포터 중 하나인 {P/Mystic Sage Ame}를 빠르게 얻을 수 있습니다. 여기에 일반 영웅을 모으기 위한 {I-I/Special Recruitment Ticket} 1000장도 받으므로, 초반부터 다양한 로스터를 갖출 수 있습니다.', zh: '新账号还会获得迪米乌哥斯合约和季节限定同伴选择招募。合约保证一名★5+精选英雄（推荐{P/Demiurge Luna}或{P/Monad Eva}），季节选择则能快速获得游戏中最强辅助之一的{P/Mystic Sage Ame}。此外你还会获得1000张{I-I/Special Recruitment Ticket}用于收集常规英雄阵容，因此一开始就能组建丰富的阵容。', fr: 'Les nouveaux comptes reçoivent aussi un Demiurge Contract et une Seasonal Limited Hero Selection Recruit. Le Contract garantit un Héros Premium ★5+ ({P/Demiurge Luna} ou {P/Monad Eva} sont les choix recommandés), et la sélection Seasonal donne un accès rapide à {P/Mystic Sage Ame}, l\'un des meilleurs supports du jeu. En plus, vous recevez 1000 {I-I/Special Recruitment Ticket} pour collecter le roster régulier, de quoi disposer d\'un roster varié dès le départ.' } satisfies LangMap,
+  newAccountStarters: { en: 'New accounts also get a {L/Demiurge Contract and a Seasonal Limited Hero Selection Recruit|/guides/general-guides/premium-limited}. The Contract guarantees a 5★+ Premium hero ({P/Demiurge Luna} or {P/Monad Eva} are the recommended picks), and the Seasonal selection gives quick access to {P/Mystic Sage Ame}, one of the best supports in the game. On top of that you receive 1000 {I-I/Special Recruitment Ticket} to collect the regular roster, giving you a well-rounded lineup to work with right away.', jp: '新規アカウントには{L/デミウルゴス契約とシーズナル限定仲間選択スカウト|/guides/general-guides/premium-limited}も付与されます。契約では★5+のプレミアムヒーローが確定し（おすすめは{P/Demiurge Luna}または{P/Monad Eva}）、シーズナル選択ではゲーム屈指のサポーター{P/Mystic Sage Ame}を早期に入手できます。さらに一般ヒーローを集めるための{I-I/Special Recruitment Ticket}が1000枚もらえるので、序盤から充実したロスターを揃えられます。', kr: '신규 계정에는 {L/데미우르고스 계약과 시즌 한정 동료 선택 영입|/guides/general-guides/premium-limited}도 제공됩니다. 계약으로 ★5+ 프리미엄 영웅이 확정되며(추천은 {P/Demiurge Luna} 또는 {P/Monad Eva}), 시즈널 선택으로 게임 최고의 서포터 중 하나인 {P/Mystic Sage Ame}를 빠르게 얻을 수 있습니다. 여기에 일반 영웅을 모으기 위한 {I-I/Special Recruitment Ticket} 1000장도 받으므로, 초반부터 다양한 로스터를 갖출 수 있습니다.', zh: '新账号还会获得{L/迪米乌哥斯合约和季节限定同伴选择招募|/guides/general-guides/premium-limited}。合约保证一名★5+精选英雄（推荐{P/Demiurge Luna}或{P/Monad Eva}），季节选择则能快速获得游戏中最强辅助之一的{P/Mystic Sage Ame}。此外你还会获得1000张{I-I/Special Recruitment Ticket}用于收集常规英雄阵容，因此一开始就能组建丰富的阵容。', fr: 'Les nouveaux comptes reçoivent aussi un {L/Demiurge Contract et une Seasonal Limited Hero Selection Recruit|/guides/general-guides/premium-limited}. Le Contract garantit un Héros Premium ★5+ ({P/Demiurge Luna} ou {P/Monad Eva} sont les choix recommandés), et la sélection Seasonal donne un accès rapide à {P/Mystic Sage Ame}, l\'un des meilleurs supports du jeu. En plus, vous recevez 1000 {I-I/Special Recruitment Ticket} pour collecter le roster régulier, de quoi disposer d\'un roster varié dès le départ.' } satisfies LangMap,
 
   /* ═══ Heroes & Pulling ═══ */
   whoPullFor: { en: 'Who do I pull for?', jp: '誰を引くべきですか？', kr: '누구를 뽑아야 하나요?', zh: '应该抽谁？', fr: 'Pour qui faut-il pull ?' } satisfies LangMap,
@@ -66,8 +61,7 @@ const LABELS = {
   periodSeeGuide: { en: '.', jp: 'をご覧ください。', kr: '를 참고하세요.', zh: '。', fr: '.' } satisfies LangMap,
   regular: { en: 'Regular', jp: '一般', kr: '일반', zh: '常规', fr: 'Réguliers' } satisfies LangMap,
   regularHeroesDesc: { en: 'For Regular heroes in Rate Up Recruit and Custom Recruit we recommend only using {I-I/Special Recruitment Ticket} {I-I/Special Recruitment Ticket (Event)}.', jp: 'ピックアップ募集とカスタム募集の一般ヒーローには、{I-I/Special Recruitment Ticket} {I-I/Special Recruitment Ticket (Event)}のみを使用することをおすすめします。', kr: '픽업 모집과 커스텀 모집의 일반 영웅에는 {I-I/Special Recruitment Ticket} {I-I/Special Recruitment Ticket (Event)}만 사용하는 것을 권장합니다.', zh: '对于UP招募和定向招募的常规英雄，建议只使用{I-I/Special Recruitment Ticket} {I-I/Special Recruitment Ticket (Event)}。', fr: 'Pour les Héros Réguliers sur Rate Up Recruit et Custom Recruit, nous recommandons d\'utiliser uniquement {I-I/Special Recruitment Ticket} {I-I/Special Recruitment Ticket (Event)}.' } satisfies LangMap,
-  customRecruitGoal: { en: 'The first goal in Custom Recruit when starting out is a hero that gives ', jp: 'カスタム募集での最初の目標は、', kr: '커스텀 모집에서의 첫 번째 목표는 ', zh: '定向招募的首要目标是能提供', fr: 'Le premier objectif sur le Custom Recruit en débutant est un Héros qui donné le buff ' } satisfies LangMap,
-  critBuff: { en: ' buff.', jp: 'バフを付与できるヒーローです。', kr: ' 버프를 부여하는 영웅입니다.', zh: '增益的英雄。', fr: '.' } satisfies LangMap,
+  customRecruitGoal: { en: 'The first goal in Custom Recruit when starting out is a hero that gives the {B/BT_STAT|ST_CRITICAL_RATE} buff.', jp: 'カスタム募集での最初の目標は、{B/BT_STAT|ST_CRITICAL_RATE}バフを付与できるヒーローです。', kr: '커스텀 모집에서의 첫 번째 목표는 {B/BT_STAT|ST_CRITICAL_RATE} 버프를 부여하는 영웅입니다.', zh: '定向招募的首要目标是能提供{B/BT_STAT|ST_CRITICAL_RATE}增益的英雄。', fr: 'Le premier objectif sur le Custom Recruit en débutant est un Héros qui donné le buff {B/BT_STAT|ST_CRITICAL_RATE}.' } satisfies LangMap,
 
   /* Should I pull for dupes? */
   pullForDupes: { en: 'Should I pull for dupes?', jp: '重ね引きするべきですか？', kr: '중복으로 뽑아야 하나요?', zh: '需要抽重复吗？', fr: 'Faut-il pull pour les dupes ?' } satisfies LangMap,
@@ -87,14 +81,9 @@ const LABELS = {
   dpsFromStartDash: { en: 'DPS (from Start Dash banner)', jp: 'DPS（スタートダッシュバナーから）', kr: 'DPS (스타트 대시 배너에서)', zh: 'DPS（来自新手冲刺卡池）', fr: 'DPS (depuis la Start Dash Banner)' } satisfies LangMap,
   critBuffFromCustom: { en: 'Crit Buff (from Custom Recruit banner)', jp: 'クリティカルバフ（カスタム募集バナーから）', kr: '치명타 버프 (커스텀 모집 배너에서)', zh: '暴击增益（来自定向招募卡池）', fr: 'Crit Buff (depuis la Custom Recruit Banner)' } satisfies LangMap,
   healers: { en: 'Healers', jp: 'ヒーラー', kr: '힐러', zh: '奶妈', fr: 'Healers' } satisfies LangMap,
-  youGet: { en: 'You get ', jp: '', kr: '', zh: '', fr: 'Vous obtenez ' } satisfies LangMap,
-  meneForFree: { en: ' for free and can choose between ', jp: 'は無料で入手でき、後から', kr: '는 무료로 획득할 수 있고, 나중에 ', zh: '免费获得，之后可以在', fr: ' gratuitement et pouvez choisir entre ' } satisfies LangMap,
-  andWa: { en: ' and ', jp: 'と', kr: '와 ', zh: '和', fr: ' et ' } satisfies LangMap,
-  laterWith: { en: ' later, with ', jp: 'のどちらかを選べます。', kr: ' 중 하나를 선택할 수 있습니다. ', zh: '中选择一个。', fr: ' plus tard, avec ' } satisfies LangMap,
-  monadEvaRecommended: { en: ' also being highly recommended from Premium banner due to her unconditional ', jp: 'も無条件の', kr: '도 무조건적인 ', zh: '因为有无条件的', fr: ' également fortement recommandée depuis la Premium Banner grâce à son ' } satisfies LangMap,
-  monadEvaPeriod: { en: '.', jp: 'があるため、プレミアムバナーからのおすすめです。', kr: '이 있어 프리미엄 배너에서 추천합니다.', zh: '，也推荐从精选卡池获取。', fr: ' inconditionnel.' } satisfies LangMap,
+  healersLine: { en: 'You get {P/Mene} for free and can choose between {P/Dianne} and {P/Nella} later, with {P/Monad Eva} also being highly recommended from Premium banner due to her unconditional {B/BT_CALL_BACKUP}.', jp: '{P/Mene}は無料で入手でき、後から{P/Dianne}と{P/Nella}のどちらかを選べます。{P/Monad Eva}も無条件の{B/BT_CALL_BACKUP}があるため、プレミアムバナーからのおすすめです。', kr: '{P/Mene}는 무료로 획득할 수 있고, 나중에 {P/Dianne}와 {P/Nella} 중 하나를 선택할 수 있습니다. {P/Monad Eva}도 무조건적인 {B/BT_CALL_BACKUP}이 있어 프리미엄 배너에서 추천합니다.', zh: '{P/Mene}免费获得，之后可以在{P/Dianne}和{P/Nella}中选择一个。{P/Monad Eva}因为有无条件的{B/BT_CALL_BACKUP}，也推荐从精选卡池获取。', fr: 'Vous obtenez {P/Mene} gratuitement et pouvez choisir entre {P/Dianne} et {P/Nella} plus tard, avec {P/Monad Eva} également fortement recommandée depuis la Premium Banner grâce à son {B/BT_CALL_BACKUP} inconditionnel.' } satisfies LangMap,
   flexSupport: { en: 'Flex/Support', jp: 'フレックス/サポート', kr: '플렉스/서포트', zh: '自由位/辅助', fr: 'Flex/Support' } satisfies LangMap,
-  orAnotherHero: { en: ' or another hero you picked up along the way.', jp: 'や、途中で入手した他のヒーロー。', kr: ' 또는 진행 중 획득한 다른 영웅.', zh: '或途中获得的其他英雄。', fr: ' ou un autre Héros récupéré en chemin.' } satisfies LangMap,
+  flexLine: { en: '{P/Veronica} {P/Eternal} {P/Akari} or another hero you picked up along the way.', jp: '{P/Veronica} {P/Eternal} {P/Akari}や、途中で入手した他のヒーロー。', kr: '{P/Veronica} {P/Eternal} {P/Akari} 또는 진행 중 획득한 다른 영웅.', zh: '{P/Veronica} {P/Eternal} {P/Akari}或途中获得的其他英雄。', fr: '{P/Veronica} {P/Eternal} {P/Akari} ou un autre Héros récupéré en chemin.' } satisfies LangMap,
   firstBossPriorities: { en: 'First boss priorities are:', jp: '最初のボス優先順位：', kr: '첫 보스 우선순위:', zh: '首要BOSS优先级：', fr: 'Les premières priorités Boss sont :' } satisfies LangMap,
   unidentifiedChimera: { en: 'Unidentified Chimera', jp: '正体不明のキメラ', kr: '정체불명의 키메라', zh: '不明嵌合体', fr: 'Unidentified Chimera' } satisfies LangMap,
   chimeraArmorSets: { en: 'for armor set like {S/SPD} and {S/CHD}.', jp: '：{S/SPD}や{S/CHD}などの防具セット。', kr: ': {S/SPD}와 {S/CHD} 등의 방어구 세트.', zh: '：{S/SPD}和{S/CHD}等防具套装。', fr: 'pour les armor sets comme {S/SPD} et {S/CHD}.' } satisfies LangMap,
@@ -109,12 +98,9 @@ const LABELS = {
   /* ═══ Where do I go first? ═══ */
   whereGoFirst: { en: 'Where do I go first?', jp: '最初にどこに行くべきですか？', kr: '처음에 어디로 가야 하나요?', zh: '首先应该去哪里？', fr: 'Où aller en premier ?' } satisfies LangMap,
   evaGuideQuests: { en: 'Eva\'s Guide Quests in game will point you around the various gamemodes while clearing Story.', jp: 'ゲーム内のエヴァのガイドクエストがストーリーをクリアしながら様々なゲームモードを案内してくれます。', kr: '게임 내 에바의 가이드 퀘스트가 스토리를 클리어하면서 다양한 게임 모드를 안내해 줍니다.', zh: '游戏内的艾娃引导任务会在推进故事的同时引导你了解各种游戏模式。', fr: 'Les Eva\'s Guide Quests in-game vous orienteront vers les différents modes de jeu pendant que vous avancez dans la Story.' } satisfies LangMap,
-  underChallenges: { en: 'Under Challenges, the ', jp: 'チャレンジの', kr: '챌린지의 ', zh: '在挑战的', fr: 'Dans Challenges, les ' } satisfies LangMap,
-  specialRequests: { en: 'Special Requests', jp: 'スペシャルリクエスト', kr: '스페셜 리퀘스트', zh: '特别委托', fr: 'Special Requests' } satisfies LangMap,
-  specialRequestsDesc: { en: ' will let you unlock a strong starter pack of 6 heroes, along with gear and upgrade materials for them.', jp: 'で、強力なスターターパックとして6体のヒーロー、装備、強化素材を解放できます。', kr: '에서 강력한 스타터 팩으로 6명의 영웅, 장비, 강화 재료를 해금할 수 있습니다.', zh: '中，可以解锁强力新手包：6名英雄、装备和升级材料。', fr: ' vous permettent de débloquer un pack starter solide de 6 Héros, avec leur équipement et leurs matériaux d\'upgrade.' } satisfies LangMap,
+  underChallengesLine: { en: 'Under Challenges, the {L/Special Requests|/guides/special-request} will let you unlock a strong starter pack of 6 heroes, along with gear and upgrade materials for them.', jp: 'チャレンジの{L/スペシャルリクエスト|/guides/special-request}で、強力なスターターパックとして6体のヒーロー、装備、強化素材を解放できます。', kr: '챌린지의 {L/스페셜 리퀘스트|/guides/special-request}에서 강력한 스타터 팩으로 6명의 영웅, 장비, 강화 재료를 해금할 수 있습니다.', zh: '在挑战的{L/特别委托|/guides/special-request}中，可以解锁强力新手包：6名英雄、装备和升级材料。', fr: 'Dans Challenges, les {L/Special Requests|/guides/special-request} vous permettent de débloquer un pack starter solide de 6 Héros, avec leur équipement et leurs matériaux d\'upgrade.' } satisfies LangMap,
   experienceSlow: { en: 'Experience is slow at the start, progress through the Bandit Chase stages to get more food daily.', jp: '序盤は経験値獲得が遅いです。バンディットチェイスのステージを進めて、毎日より多くの食糧を獲得しましょう。', kr: '초반에는 경험치 획득이 느립니다. 밴디트 체이스 스테이지를 진행해서 매일 더 많은 식량을 획득하세요.', zh: '初期经验获取较慢。推进悬赏追击关卡来每天获得更多食物。', fr: 'L\'expérience est lente au début ; progressez dans les stages Bandit Chase pour obtenir plus de food quotidiennement.' } satisfies LangMap,
-  skywardTower: { en: 'Skyward Tower', jp: '昇天の塔', kr: '승천의 탑', zh: '升天之塔', fr: 'Skyward Tower' } satisfies LangMap,
-  skywardTowerResets: { en: ' resets monthly, try to get as high as you can.', jp: 'は毎月リセットされます。できるだけ高い階層を目指しましょう。', kr: '은 매월 리셋됩니다. 최대한 높은 층까지 올라가세요.', zh: '每月重置，尽可能爬到更高层。', fr: ' se réinitialise tous les mois ; essayez de monter le plus haut possible.' } satisfies LangMap,
+  skywardTowerLine: { en: '{L/Skyward Tower|/guides/skyward-tower} resets monthly, try to get as high as you can.', jp: '{L/昇天の塔|/guides/skyward-tower}は毎月リセットされます。できるだけ高い階層を目指しましょう。', kr: '{L/승천의 탑|/guides/skyward-tower}은 매월 리셋됩니다. 최대한 높은 층까지 올라가세요.', zh: '{L/升天之塔|/guides/skyward-tower}每月重置，尽可能爬到更高层。', fr: 'La {L/Skyward Tower|/guides/skyward-tower} se réinitialise tous les mois ; essayez de monter le plus haut possible.' } satisfies LangMap,
 
   /* ═══ Gear & Equipment ═══ */
   howGetGear: { en: 'How do I get gear?', jp: '装備はどうやって入手しますか？', kr: '장비는 어떻게 얻나요?', zh: '如何获得装备？', fr: 'Comment obtenir de l\'équipement ?' } satisfies LangMap,
@@ -200,16 +186,6 @@ const LABELS = {
   stellaHpBonus: { en: '(HP bonus)', jp: '（HPボーナス）', kr: '(HP 보너스)', zh: '（生命加成）', fr: '(bonus HP)' } satisfies LangMap,
   stellaScaleDesc: { en: '{P/Demiurge Stella}\'s skills scale proportional to Max Health: Still goes for {S/ATK} to increase damage, {S/HP} is a bonus.', jp: '{P/Demiurge Stella}のスキルは最大HPに比例：ダメージを増やすには{S/ATK}を重視、{S/HP}はボーナス。', kr: '{P/Demiurge Stella}의 스킬은 최대 HP에 비례: 데미지를 늘리려면 {S/ATK}에 집중, {S/HP}는 보너스.', zh: '{P/Demiurge Stella}的技能按最大生命等比增加：仍然堆{S/ATK}来增加伤害，{S/HP}是加成。', fr: 'Les skills de {P/Demiurge Stella} scalent proportionnellement au Max HP : on vise quand même {S/ATK} pour augmenter les dégâts, {S/HP} reste un bonus.' } satisfies LangMap,
   atkZeroBossExample: { en: 'Against bosses that set your {S/ATK} to 0 (Like Shichifuja\'s Shadow in Skyward Tower Hard): {P/Delta} can deal damage normally. {P/Demiurge Stella}\'s damage will reduce to single digits.', jp: '{S/ATK}を0にするボス（昇天の塔ハードのシチフジャの影など）に対して：{P/Delta}は通常通りダメージを与えられます。{P/Demiurge Stella}のダメージは一桁まで減少します。', kr: '{S/ATK}를 0으로 만드는 보스(승천의 탑 하드의 시치후자의 그림자 등)에 대해: {P/Delta}는 정상적으로 데미지를 줄 수 있습니다. {P/Demiurge Stella}의 데미지는 한 자릿수까지 감소합니다.', zh: '对于将{S/ATK}设为0的BOSS（如升天之塔困难的七伏影）：{P/Delta}可以正常造成伤害。{P/Demiurge Stella}的伤害会降到个位数。', fr: 'Contre les bosses qui mettent votre {S/ATK} à 0 (comme Shichifuja\'s Shadow dans Skyward Tower Hard) : {P/Delta} peut infliger des dégâts normalement. Les dégâts de {P/Demiurge Stella} tombent à un chiffre.' } satisfies LangMap,
-
-  /* ═══ Related Guides ═══ */
-  freeHeroesStartBanner: { en: 'Free Heroes & Start Banner', jp: '無料ヒーロー＆スタートバナー', kr: '무료 영웅 & 스타트 배너', zh: '免费英雄与新手卡池', fr: 'Free Heroes & Start Banner' } satisfies LangMap,
-  freeHeroesStartBannerDesc: { en: 'Maximize your free roster', jp: '無料キャラを最大限活用', kr: '무료 캐릭터 최대한 활용', zh: '最大化利用免费角色', fr: 'Maximisez votre roster gratuit' } satisfies LangMap,
-  premiumLimitedGuide: { en: 'Premium & Limited Guide', jp: 'プレミアム＆限定ガイド', kr: '프리미엄 & 한정 가이드', zh: '精选与限定指南', fr: 'Guide Premium & Limited' } satisfies LangMap,
-  premiumLimitedGuideDesc: { en: 'Pulling priorities & transcendence', jp: 'ガチャ優先度と超越', kr: '모집 우선순위와 초월', zh: '抽卡优先级与超越', fr: 'Priorités de pull et transcendance' } satisfies LangMap,
-  gearGuide: { en: 'Gear Guide', jp: '装備ガイド', kr: '장비 가이드', zh: '装备指南', fr: 'Guide Équipement' } satisfies LangMap,
-  gearGuideDesc: { en: 'Deep dive into equipment', jp: '装備の詳細解説', kr: '장비 상세 해설', zh: '装备详细解说', fr: 'Plongée dans l\'équipement' } satisfies LangMap,
-  heroesGrowth: { en: 'Heroes Growth', jp: 'ヒーロー育成', kr: '영웅 육성', zh: '英雄培养', fr: 'Croissance des Héros' } satisfies LangMap,
-  heroesGrowthDesc: { en: 'Leveling & progression systems', jp: 'レベリングと進行システム', kr: '레벨링과 진행 시스템', zh: '升级与进度系统', fr: 'Systèmes de leveling et progression' } satisfies LangMap,
 } as const;
 
 /* ── Redesign UI chrome strings (presentation only) ─────── */
@@ -495,16 +471,17 @@ function GearRarityTable({ rows }: { rows: { rarity: string; rarityColor: keyof 
   );
 }
 
-/* Chip row wrapper for CharacterInline groups. */
-function ChipRow({ children }: { children: ReactNode }) {
-  return <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, alignItems: 'center', marginTop: 8 }}>{children}</div>;
-}
-
 /* ───────────────────────── Related grid ───────────────────────── */
+/* icon / title / description are sourced from data/guides/_index.json — single
+ * source of truth, so editing a guide there updates these cards automatically. */
+type GuideIndexEntry = { icon?: string; title?: LangMap; description?: LangMap };
+const GUIDES_INDEX = guidesIndex as Record<string, GuideIndexEntry>;
+
 function RelatedGuides({ heading, items }: {
   heading: string;
-  items: { href: Route; color: AccentKey; glyph: string; label: string; desc: string }[];
+  items: { slug: string; href: Route; color: AccentKey }[];
 }) {
+  const { lang } = useI18n();
   return (
     <section style={{ marginTop: 8 }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 20 }}>
@@ -514,19 +491,24 @@ function RelatedGuides({ heading, items }: {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {items.map((g) => {
           const c = FAQ_COLORS[g.color];
+          const meta = GUIDES_INDEX[g.slug] ?? {};
+          const label = meta.title ? lRec(meta.title, lang) : g.slug;
+          const desc = meta.description ? lRec(meta.description, lang) : '';
           return (
-            <Link key={g.href} href={g.href} style={{
+            <Link key={g.slug} href={g.href} style={{
               display: 'flex', alignItems: 'center', gap: 14, padding: '16px 18px', borderRadius: 11,
               border: `1px solid ${FA.border}`, background: FA.card,
             }}>
               <span style={{
                 width: 42, height: 42, borderRadius: 9, flexShrink: 0,
-                background: `linear-gradient(135deg, ${c.soft}, ${c.dim})`, border: `1px solid ${c.line}`, color: c.base,
-                fontFamily: monoFace, fontSize: 14, fontWeight: 700, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', letterSpacing: '0.04em',
-              }}>{g.glyph}</span>
+                background: `linear-gradient(135deg, ${c.soft}, ${c.dim})`, border: `1px solid ${c.line}`,
+                display: 'inline-flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden',
+              }}>
+                {meta.icon && <Image src={`/images/guides/${meta.icon}.webp`} alt="" width={32} height={32} className="object-contain" />}
+              </span>
               <span style={{ flex: 1, minWidth: 0 }}>
-                <span style={{ display: 'block', fontFamily: titleFace, fontSize: 15, fontWeight: 600, color: FA.text }}>{g.label}</span>
-                <span style={{ display: 'block', fontFamily: bodyFace, fontSize: 12.5, color: FA.text4, marginTop: 3, lineHeight: 1.4 }}>{g.desc}</span>
+                <span style={{ display: 'block', fontFamily: titleFace, fontSize: 15, fontWeight: 600, color: FA.text }}>{label}</span>
+                <span style={{ display: 'block', fontFamily: bodyFace, fontSize: 12.5, color: FA.text4, marginTop: 3, lineHeight: 1.4 }}>{desc}</span>
               </span>
               <span style={{ color: c.base, fontSize: 16, flexShrink: 0 }}>→</span>
             </Link>
@@ -563,16 +545,8 @@ export default function BeginnerFAQGuide() {
             <SectionHeading color="sky" title={L(LABELS.sectionGettingStarted)} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <QACard color="sky" q={L(LABELS.rerollImportance)}>
-                <Prose>
-                  {L(LABELS.rerollGettingA)}
-                  <InlineA href={href('/guides/general-guides/premium-limited')} color="sky">{L(LABELS.premiumLimitedHero)}</InlineA>
-                  {L(LABELS.rerollNotRequired)}
-                </Prose>
-                <Prose>
-                  {L(LABELS.thePrefix)}
-                  <InlineA href={href('/guides/general-guides/free-heroes-start-banner')} color="sky">{L(LABELS.freeHeroesLink)}</InlineA>
-                  {L(LABELS.solidFoundation)}
-                </Prose>
+                <Prose>{parseText(L(LABELS.rerollAnswer))}</Prose>
+                <Prose>{parseText(L(LABELS.freeHeroesFoundation))}</Prose>
                 <Prose>{parseText(L(LABELS.newAccountStarters))}</Prose>
                 <Prose>{L(LABELS.doppelgangerFarm)}</Prose>
               </QACard>
@@ -580,16 +554,9 @@ export default function BeginnerFAQGuide() {
               <QACard color="sky" featured badge={L(UI_START_HERE)} q={L(LABELS.whereGoFirst)}>
                 <Prose>{L(LABELS.evaGuideQuests)}</Prose>
                 <DotList color="sky" items={[
-                  <>
-                    {L(LABELS.underChallenges)}
-                    <InlineA href={href('/guides/special-request')} color="sky">{L(LABELS.specialRequests)}</InlineA>
-                    {L(LABELS.specialRequestsDesc)}
-                  </>,
+                  parseText(L(LABELS.underChallengesLine)),
                   L(LABELS.experienceSlow),
-                  <>
-                    <InlineA href={href('/guides/skyward-tower')} color="sky">{L(LABELS.skywardTower)}</InlineA>
-                    {L(LABELS.skywardTowerResets)}
-                  </>,
+                  parseText(L(LABELS.skywardTowerLine)),
                 ]} />
               </QACard>
             </div>
@@ -613,15 +580,8 @@ export default function BeginnerFAQGuide() {
                   <MiniPanel accent={FAQ_COLORS.emerald.base} title={L(LABELS.regular)}>
                     {parseText(L(LABELS.regularHeroesDesc))}
                     <br />
-                    {L(LABELS.customRecruitGoal)}
-                    <EffectInline name="BT_STAT|ST_CRITICAL_RATE" type="buff" />
-                    {L(LABELS.critBuff)}
-                    <ChipRow>
-                      <CharacterInline name="Valentine" />
-                      <CharacterInline name="Tamara" />
-                      <CharacterInline name="Skadi" />
-                      <CharacterInline name="Charlotte" />
-                    </ChipRow>
+                    {parseText(L(LABELS.customRecruitGoal))}
+                    <div style={{ marginTop: 8 }}>{parseText('{P/Valentine} {P/Tamara} {P/Skadi} {P/Charlotte}')}</div>
                   </MiniPanel>
                 </div>
               </QACard>
@@ -649,31 +609,16 @@ export default function BeginnerFAQGuide() {
                 <Prose>{L(LABELS.standardTeam)}</Prose>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <AccentCallout accent={FAQ_COLORS.rose.base} label={L(LABELS.dpsFromStartDash)}>
-                    <ChipRow>
-                      <CharacterInline name="Ame" /><CharacterInline name="Rey" /><CharacterInline name="Rin" /><CharacterInline name="Vlada" />
-                    </ChipRow>
+                    {parseText('{P/Ame} {P/Rey} {P/Rin} {P/Vlada}')}
                   </AccentCallout>
                   <AccentCallout accent={FAQ_COLORS.sky.base} label={L(LABELS.critBuffFromCustom)}>
-                    <ChipRow>
-                      <CharacterInline name="Valentine" /><CharacterInline name="Tamara" /><CharacterInline name="Skadi" /><CharacterInline name="Charlotte" />
-                    </ChipRow>
+                    {parseText('{P/Valentine} {P/Tamara} {P/Skadi} {P/Charlotte}')}
                   </AccentCallout>
                   <AccentCallout accent={FAQ_COLORS.emerald.base} label={L(LABELS.healers)}>
-                    {L(LABELS.youGet)}
-                    <CharacterInline name="Mene" />
-                    {L(LABELS.meneForFree)}
-                    <CharacterInline name="Dianne" />
-                    {L(LABELS.andWa)}
-                    <CharacterInline name="Nella" />
-                    {L(LABELS.laterWith)}
-                    <CharacterInline name="Monad Eva" />
-                    {L(LABELS.monadEvaRecommended)}
-                    <EffectInline name="BT_CALL_BACKUP" type="buff" />
-                    {L(LABELS.monadEvaPeriod)}
+                    {parseText(L(LABELS.healersLine))}
                   </AccentCallout>
                   <AccentCallout accent={FAQ_COLORS.amber.base} label={L(LABELS.flexSupport)}>
-                    <CharacterInline name="Veronica" /><CharacterInline name="Eternal" /><CharacterInline name="Akari" />
-                    {L(LABELS.orAnotherHero)}
+                    {parseText(L(LABELS.flexLine))}
                   </AccentCallout>
                 </div>
                 <AccentCallout accent={FAQ_COLORS.amber.base} label={L(LABELS.firstBossPriorities)}>
@@ -814,15 +759,15 @@ export default function BeginnerFAQGuide() {
                   {L(LABELS.proportionalStat)}
                 </Prose>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  <MiniPanel accent={FAQ_COLORS.emerald.base} title={<span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}><CharacterInline name="Delta" /><span style={{ fontSize: 12, color: FA.text4 }}>{L(LABELS.deltaHpInstead)}</span></span>}>
+                  <MiniPanel accent={FAQ_COLORS.emerald.base} title={<span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>{parseText('{P/Delta}')}<span style={{ fontSize: 12, color: FA.text4 }}>{L(LABELS.deltaHpInstead)}</span></span>}>
                     <div style={{ marginBottom: 6 }}>
-                      <SkillInline character="Delta" skill="S1" /><SkillInline character="Delta" skill="S2" /><SkillInline character="Delta" skill="S3" />
+                      {parseText('{SK/Delta|S1} {SK/Delta|S2} {SK/Delta|S3}')}
                     </div>
                     {parseText(L(LABELS.deltaScaleDesc))}
                   </MiniPanel>
-                  <MiniPanel accent={FAQ_COLORS.amber.base} title={<span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}><CharacterInline name="Demiurge Stella" /><span style={{ fontSize: 12, color: FA.text4 }}>{L(LABELS.stellaHpBonus)}</span></span>}>
+                  <MiniPanel accent={FAQ_COLORS.amber.base} title={<span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>{parseText('{P/Demiurge Stella}')}<span style={{ fontSize: 12, color: FA.text4 }}>{L(LABELS.stellaHpBonus)}</span></span>}>
                     <div style={{ marginBottom: 6 }}>
-                      <SkillInline character="Demiurge Stella" skill="S1" /><SkillInline character="Demiurge Stella" skill="S2" /><SkillInline character="Demiurge Stella" skill="S3" />
+                      {parseText('{SK/Demiurge Stella|S1} {SK/Demiurge Stella|S2} {SK/Demiurge Stella|S3}')}
                     </div>
                     {parseText(L(LABELS.stellaScaleDesc))}
                   </MiniPanel>
@@ -838,10 +783,10 @@ export default function BeginnerFAQGuide() {
           <RelatedGuides
             heading={L(LABELS.sectionRelatedGuides)}
             items={[
-              { href: href('/guides/general-guides/free-heroes-start-banner'), color: 'sky',     glyph: 'FH', label: L(LABELS.freeHeroesStartBanner), desc: L(LABELS.freeHeroesStartBannerDesc) },
-              { href: href('/guides/general-guides/premium-limited'),          color: 'violet',  glyph: 'PL', label: L(LABELS.premiumLimitedGuide),    desc: L(LABELS.premiumLimitedGuideDesc) },
-              { href: href('/guides/general-guides/gear'),                     color: 'amber',   glyph: 'GR', label: L(LABELS.gearGuide),               desc: L(LABELS.gearGuideDesc) },
-              { href: href('/guides/general-guides/heroes-growth'),            color: 'emerald', glyph: 'HG', label: L(LABELS.heroesGrowth),            desc: L(LABELS.heroesGrowthDesc) },
+              { slug: 'free-heroes-start-banner', href: href('/guides/general-guides/free-heroes-start-banner'), color: 'sky' },
+              { slug: 'premium-limited',          href: href('/guides/general-guides/premium-limited'),          color: 'violet' },
+              { slug: 'gear',                     href: href('/guides/general-guides/gear'),                     color: 'amber' },
+              { slug: 'heroes-growth',            href: href('/guides/general-guides/heroes-growth'),            color: 'emerald' },
             ]}
           />
       </div>

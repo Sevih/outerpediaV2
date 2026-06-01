@@ -11,6 +11,7 @@ import SetInline from '@/app/components/inline/SetInline';
 import EeInline from '@/app/components/inline/EeInline';
 import ItemInline from '@/app/components/inline/ItemInline';
 import SkillInline from '@/app/components/inline/SkillInline';
+import LinkInline from '@/app/components/inline/LinkInline';
 
 type SkillShorthand = 'S1' | 'S2' | 'S3' | 'Passive' | 'Chain';
 
@@ -25,6 +26,12 @@ const TAG_MAP: Record<string, (value: string, key: number) => React.ReactNode> =
   },
   S: (v, k) => <StatInline key={k} name={v} />,
   P: (v, k) => <CharacterInline key={k} name={v} />,
+  L: (v, k) => {
+    const sep = v.indexOf('|');
+    const label = sep === -1 ? v : v.slice(0, sep);
+    const href = sep === -1 ? '' : v.slice(sep + 1);
+    return <LinkInline key={k} label={label} href={href} />;
+  },
   EE: (v, k) => <EeInline key={k} name={v} />,
   AS: (v, k) => <SetInline key={k} name={v} />,
   SK: (v, k) => {
@@ -39,16 +46,17 @@ const TAG_MAP: Record<string, (value: string, key: number) => React.ReactNode> =
 
 /**
  * Tag regex: matches {TYPE/value} patterns.
- * Supported: B, D, E, C, S, P, EE, AS, SK, I-W, I-A, I-T, I-I
+ * Supported: B, D, E, C, S, P, L, EE, AS, SK, I-W, I-A, I-T, I-I
  */
-const TAG_REGEX = /\{((?:[BDSCEP])|EE|AS|SK|I-(?:W|A|T|I))\/([^}]+)\}/g;
+const TAG_REGEX = /\{((?:[BDSCEPL])|EE|AS|SK|I-(?:W|A|T|I))\/([^}]+)\}/g;
 
 /**
  * Parse text containing inline tags and line breaks into React nodes.
  *
  * Tags: {B/name}, {D/name}, {E/element}, {C/class}, {C/class|subclass},
- *       {S/stat}, {P/character}, {EE/character}, {AS/setname},
- *       {SK/character|S1}, {I-W/weapon}, {I-A/amulet}, {I-T/talisman}, {I-I/item}
+ *       {S/stat}, {P/character}, {L/label|/internal/path}, {EE/character},
+ *       {AS/setname}, {SK/character|S1}, {I-W/weapon}, {I-A/amulet},
+ *       {I-T/talisman}, {I-I/item}
  */
 export default function parseText(text: string): React.ReactNode {
   if (!text) return null;

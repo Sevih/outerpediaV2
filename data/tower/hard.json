@@ -341,6 +341,67 @@
       "restrictions": [
         "AtLeast1_2Star",
         "BanMage"
+      ],
+      "recommended": [
+        {
+          "names": [
+            "2000001",
+            "2000036"
+          ],
+          "reason": {
+            "en": "2-star units that fulfill the restriction",
+            "jp": "制限を満たす2★ユニット",
+            "kr": "제한 조건을 충족하는 2성 유닛",
+            "zh": "满足限制条件的2星单位",
+            "fr": "Unités 2★ qui valident la restriction"
+          }
+        },
+        {
+          "names": [
+            "2000020",
+            "2000064",
+            "2000103",
+            "2000061"
+          ],
+          "reason": {
+            "en": "Source of {D/BT_SEALED}",
+            "jp": "{D/BT_SEALED}付与源",
+            "kr": "{D/BT_SEALED} 부여원",
+            "zh": "{D/BT_SEALED}来源",
+            "fr": "Source de {D/BT_SEALED}"
+          }
+        },
+        {
+          "names": [
+            "2000083",
+            "2000074",
+            "2000113",
+            "2000058",
+            "2000108"
+          ],
+          "reason": {
+            "en": "Source of {B/BT_IMMUNE}",
+            "jp": "{B/BT_IMMUNE}付与源",
+            "kr": "{B/BT_IMMUNE} 부여원",
+            "zh": "{B/BT_IMMUNE}来源",
+            "fr": "Source d'{B/BT_IMMUNE}"
+          }
+        },
+        {
+          "names": [
+            "2000089",
+            "2000039",
+            "2000072",
+            "2000085"
+          ],
+          "reason": {
+            "en": "Source of {D/BT_STEAL_BUFF}",
+            "jp": "{D/BT_STEAL_BUFF}付与源",
+            "kr": "{D/BT_STEAL_BUFF} 부여원",
+            "zh": "{D/BT_STEAL_BUFF}来源",
+            "fr": "Source de {D/BT_STEAL_BUFF}"
+          }
+        }
       ]
     },
     {
@@ -349,6 +410,64 @@
       "restrictions": [
         "BanLight",
         "BanDark"
+      ],
+      "recommended": [
+        {
+          "names": [
+            "2000058",
+            "2000113",
+            "2000108"
+          ],
+          "reason": {
+            "en": "Source of {B/BT_IMMUNE}",
+            "jp": "{B/BT_IMMUNE}付与源",
+            "kr": "{B/BT_IMMUNE} 부여원",
+            "zh": "{B/BT_IMMUNE}来源",
+            "fr": "Source d'{B/BT_IMMUNE}"
+          }
+        },
+        {
+          "names": [
+            "2000105",
+            "2000099"
+          ],
+          "reason": {
+            "en": "{E/Earth} unit with {B/BT_STAT|ST_COUNTER_RATE}",
+            "jp": "{B/BT_STAT|ST_COUNTER_RATE}を持つ{E/Earth}ユニット",
+            "kr": "{B/BT_STAT|ST_COUNTER_RATE}을 가진 {E/Earth} 유닛",
+            "zh": "拥有{B/BT_STAT|ST_COUNTER_RATE}的{E/Earth}单位",
+            "fr": "Unité {E/Earth} avec {B/BT_STAT|ST_COUNTER_RATE}"
+          }
+        },
+        {
+          "names": [
+            "2000065",
+            "2000087",
+            "2000022",
+            "2000008",
+            "2000086",
+            "2000097"
+          ],
+          "reason": {
+            "en": "{E/Earth} DPS",
+            "jp": "{E/Earth}DPS",
+            "kr": "{E/Earth} DPS",
+            "zh": "{E/Earth}DPS",
+            "fr": "DPS {E/Earth}"
+          }
+        },
+        {
+          "names": [
+            "2000077"
+          ],
+          "reason": {
+            "en": "Tank that increases damage of {E/Earth} allies",
+            "jp": "{E/Earth}の味方のダメージを上げるタンク",
+            "kr": "{E/Earth} 아군의 피해량을 증가시키는 탱커",
+            "zh": "提升{E/Earth}队友伤害的坦克",
+            "fr": "Tank qui augmente les dégâts des alliés {E/Earth}"
+          }
+        }
       ]
     },
     {
@@ -356,6 +475,34 @@
       "boss_id": "5203501@40102035",
       "minions": [
         "5203502@40102035"
+      ],
+      "recommended": [
+        {
+          "names": [
+            "2000062",
+            "2000086",
+            "2000014"
+          ],
+          "reason": {
+            "en": "Source of {D/BT_DOT_CURSE}",
+            "jp": "{D/BT_DOT_CURSE}付与源",
+            "kr": "{D/BT_DOT_CURSE} 부여원",
+            "zh": "{D/BT_DOT_CURSE}来源",
+            "fr": "Source de {D/BT_DOT_CURSE}"
+          }
+        },
+        {
+          "names": [
+            "2000084"
+          ],
+          "reason": {
+            "en": "{B/BT_CALL_BACKUP}",
+            "jp": "{B/BT_CALL_BACKUP}",
+            "kr": "{B/BT_CALL_BACKUP}",
+            "zh": "{B/BT_CALL_BACKUP}",
+            "fr": "{B/BT_CALL_BACKUP}"
+          }
+        }
       ]
     },
     {
@@ -367,6 +514,64 @@
       "restrictions": [
         "AtLeast1_2Star",
         "BanLight"
+      ],
+      "recommended": [
+        {
+          "names": [
+            "2000036",
+            "2000001"
+          ],
+          "reason": {
+            "en": "2-star units that fulfill the restriction",
+            "jp": "制限を満たす2★ユニット",
+            "kr": "제한 조건을 충족하는 2성 유닛",
+            "zh": "满足限制条件的2星单位",
+            "fr": "Unités 2★ qui valident la restriction"
+          }
+        },
+        {
+          "names": [
+            "2000072",
+            "2000089",
+            "2000085",
+            "2000112"
+          ],
+          "reason": {
+            "en": "Source of {D/BT_STEAL_BUFF} or {D/BT_REDISTRIBUTE_BUFF}",
+            "jp": "{D/BT_STEAL_BUFF}または{D/BT_REDISTRIBUTE_BUFF}付与源",
+            "kr": "{D/BT_STEAL_BUFF} 또는 {D/BT_REDISTRIBUTE_BUFF} 부여원",
+            "zh": "{D/BT_STEAL_BUFF}或{D/BT_REDISTRIBUTE_BUFF}来源",
+            "fr": "Source de {D/BT_STEAL_BUFF} ou {D/BT_REDISTRIBUTE_BUFF}"
+          }
+        },
+        {
+          "names": [
+            "2000069",
+            "2000082",
+            "2000114",
+            "2000102"
+          ],
+          "reason": {
+            "en": "Source of {D/BT_ACTION_GAUGE}",
+            "jp": "{D/BT_ACTION_GAUGE}付与源",
+            "kr": "{D/BT_ACTION_GAUGE} 부여원",
+            "zh": "{D/BT_ACTION_GAUGE}来源",
+            "fr": "Source de {D/BT_ACTION_GAUGE}"
+          }
+        },
+        {
+          "names": [
+            "2000108",
+            "2000113"
+          ],
+          "reason": {
+            "en": "Cleanse and {B/BT_IMMUNE}",
+            "jp": "デバフ解除と{B/BT_IMMUNE}",
+            "kr": "디버프 해제와 {B/BT_IMMUNE}",
+            "zh": "清除Debuff并提供{B/BT_IMMUNE}",
+            "fr": "Purge des debuffs et {B/BT_IMMUNE}"
+          }
+        }
       ]
     },
     {
@@ -476,6 +681,62 @@
       "restrictions": [
         "ForceWater",
         "BanRanger"
+      ],
+      "recommended": [
+        {
+          "names": [
+            "2000113",
+            "2000054"
+          ],
+          "reason": {
+            "en": "{E/Water} healer",
+            "jp": "{E/Water}ヒーラー",
+            "kr": "{E/Water} 힐러",
+            "zh": "{E/Water}治疗",
+            "fr": "Healer {E/Water}"
+          }
+        },
+        {
+          "names": [
+            "2000106",
+            "2000037",
+            "2700037",
+            "2000103"
+          ],
+          "reason": {
+            "en": "{E/Water} tank with utility",
+            "jp": "ユーティリティを持つ{E/Water}タンク",
+            "kr": "유틸성을 갖춘 {E/Water} 탱커",
+            "zh": "提供辅助效果的{E/Water}坦克",
+            "fr": "Tank {E/Water} avec de l'utilité"
+          }
+        },
+        {
+          "names": [
+            "2000089",
+            "2000085",
+            "2000082"
+          ],
+          "reason": {
+            "en": "{E/Water} DPS",
+            "jp": "{E/Water}DPS",
+            "kr": "{E/Water} DPS",
+            "zh": "{E/Water}DPS",
+            "fr": "DPS {E/Water}"
+          }
+        },
+        {
+          "names": [
+            "2000019"
+          ],
+          "reason": {
+            "en": "{E/Water} AoE DPS",
+            "jp": "{E/Water}AoE DPS",
+            "kr": "{E/Water} 광역 DPS",
+            "zh": "{E/Water}AoE DPS",
+            "fr": "DPS {E/Water} AoE"
+          }
+        }
       ]
     },
     {
@@ -486,6 +747,77 @@
       ],
       "restrictions": [
         "ForceLight"
+      ],
+      "reason": [
+        {
+          "en": "Put {P/Demiurge Stella} or {P/Stella} in the first slot since they cannot be {D/BT_STUN}.",
+          "jp": "{P/Demiurge Stella}または{P/Stella}は{D/BT_STUN}を受けないため、最初のスロットに配置してください。",
+          "kr": "{P/Demiurge Stella} 또는 {P/Stella}는 {D/BT_STUN}을 받지 않으므로 첫 번째 슬롯에 배치하세요.",
+          "zh": "将{P/Demiurge Stella}或{P/Stella}放在第一格，因为她们不会被{D/BT_STUN}。",
+          "fr": "Place {P/Demiurge Stella} ou {P/Stella} en première position car elles sont immunisées au {D/BT_STUN}."
+        },
+        {
+          "en": "Make sure to break the boss before its Enraged state ends.",
+          "jp": "ボスのEnragedが終わる前に必ずブレイクしてください。",
+          "kr": "보스의 Enraged 상태가 끝나기 전에 반드시 브레이크하세요.",
+          "zh": "务必在Boss的Enraged状态结束前将其Break。",
+          "fr": "Pense à break le boss avant la fin de son Enraged."
+        }
+      ],
+      "recommended": [
+        {
+          "names": [
+            "2000053",
+            "2000039"
+          ],
+          "reason": {
+            "en": "{B/BT_REVENGE} and immune to {D/BT_STUN}",
+            "jp": "{B/BT_REVENGE}を持ち、{D/BT_STUN}を無効化",
+            "kr": "{B/BT_REVENGE} 보유, {D/BT_STUN} 면역",
+            "zh": "拥有{B/BT_REVENGE}且免疫{D/BT_STUN}",
+            "fr": "{B/BT_REVENGE} et immunisée à {D/BT_STUN}"
+          }
+        },
+        {
+          "names": [
+            "2000084"
+          ],
+          "reason": {
+            "en": "{B/BT_CALL_BACKUP} and can cleanse",
+            "jp": "{B/BT_CALL_BACKUP}持ちでデバフ解除可能",
+            "kr": "{B/BT_CALL_BACKUP} 보유, 디버프 해제 가능",
+            "zh": "拥有{B/BT_CALL_BACKUP}且可清除Debuff",
+            "fr": "{B/BT_CALL_BACKUP} et peut purger les debuffs"
+          }
+        },
+        {
+          "names": [
+            "2000064",
+            "2000091"
+          ],
+          "reason": {
+            "en": "Multiple useful debuffs",
+            "jp": "複数の有用なデバフ",
+            "kr": "유용한 다수의 디버프",
+            "zh": "提供多种实用Debuff",
+            "fr": "Plusieurs debuffs utiles"
+          }
+        },
+        {
+          "names": [
+            "2000062",
+            "2000110",
+            "2000079",
+            "2000067"
+          ],
+          "reason": {
+            "en": "Good DPS option",
+            "jp": "優秀なDPS選択肢",
+            "kr": "우수한 DPS 선택지",
+            "zh": "优秀的DPS选择",
+            "fr": "Bonne option DPS"
+          }
+        }
       ]
     },
     {

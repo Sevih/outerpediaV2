@@ -2316,6 +2316,54 @@
               }
             }
           ]
+        },
+        {
+          "restrictions": [
+            "AtLeast1_1Star"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000046"
+              ],
+              "reason": {
+                "en": "Validate restriction and have either hard CC or good priority manipulation.",
+                "jp": "制限を満たし、強力なCCか優れた行動順操作のいずれかを持つこと。",
+                "kr": "제한을 충족하고 강력한 CC 또는 뛰어난 행동 우선도 조작 중 하나를 보유.",
+                "zh": "满足限制,并拥有强控或出色的行动顺序操控。",
+                "fr": "Valide la restriction et possède soit du hard CC, soit une bonne manipulation de priority."
+              }
+            },
+            {
+              "names": [
+                "2000039",
+                "2000012"
+              ],
+              "reason": {
+                "en": "Priority war machines.",
+                "jp": "行動順操作の要となるキャラ。",
+                "kr": "행동 우선도 조작 핵심 유닛.",
+                "zh": "行动顺序操控核心角色。",
+                "fr": "Machines de guerre à priority."
+              }
+            },
+            {
+              "names": [
+                "2000069",
+                "2000109",
+                "2000091",
+                "2000111",
+                "2700003"
+              ],
+              "reason": {
+                "en": "Hard CC options.",
+                "jp": "強力なCCオプション。",
+                "kr": "강력한 CC 옵션.",
+                "zh": "强控选项。",
+                "fr": "Options de hard CC."
+              }
+            }
+          ]
         }
       ]
     },
@@ -3292,7 +3340,8 @@
               "names": [
                 "2000099",
                 "2000080",
-                "2000108"
+                "2000108",
+                "2000114"
               ],
               "reason": {
                 "en": "Units with {B/BT_STAT|ST_COUNTER_RATE} in their kits",
@@ -3342,7 +3391,8 @@
               "names": [
                 "2000099",
                 "2000080",
-                "2000108"
+                "2000108",
+                "2000114"
               ],
               "reason": {
                 "en": "Units with {B/BT_STAT|ST_COUNTER_RATE} in their kits",
@@ -3409,7 +3459,8 @@
                 "2000099",
                 "2000080",
                 "2000108",
-                "2000040"
+                "2000040",
+                "2000114"
               ],
               "reason": {
                 "en": "Units with {B/BT_STAT|ST_COUNTER_RATE} in their kits",
@@ -3473,7 +3524,8 @@
                 "2000108",
                 "2000105",
                 "2000039",
-                "2000040"
+                "2000040",
+                "2000114"
               ],
               "reason": {
                 "en": "Units with {B/BT_STAT|ST_COUNTER_RATE} in their kits",
@@ -3523,7 +3575,8 @@
               "names": [
                 "2000080",
                 "2000039",
-                "2000040"
+                "2000040",
+                "2000114"
               ],
               "reason": {
                 "en": "Units with {B/BT_STAT|ST_COUNTER_RATE} in their kits",
@@ -3576,7 +3629,8 @@
                 "2000040",
                 "2000108",
                 "2000099",
-                "2000105"
+                "2000105",
+                "2000114"
               ],
               "reason": {
                 "en": "Units with {B/BT_STAT|ST_COUNTER_RATE} in their kits",
@@ -3590,6 +3644,59 @@
               "names": [
                 "2000053",
                 "2000089",
+                "2000071",
+                "2000119"
+              ],
+              "reason": {
+                "en": "Sturdy DPS units",
+                "jp": "耐久力のあるDPSユニット",
+                "kr": "내구성 있는 DPS 유닛",
+                "zh": "坚韧的 DPS 角色",
+                "fr": "Unités DPS résistantes"
+              }
+            },
+            {
+              "names": [
+                "2000061",
+                "2000063",
+                "2000088"
+              ],
+              "reason": {
+                "en": "Units that will help your team to survive",
+                "jp": "チームの生存に役立つユニット",
+                "kr": "팀의 생존에 도움이 되는 유닛",
+                "zh": "有助于队伍生存的角色",
+                "fr": "Unités qui aideront votre équipe à survivre"
+              }
+            }
+          ]
+        },
+        {
+          "restrictions": [
+            "BanWater"
+          ],
+          "recommended": [
+            {
+              "names": [
+                "2000080",
+                "2000039",
+                "2000040",
+                "2000108",
+                "2000099",
+                "2000105",
+                "2000114"
+              ],
+              "reason": {
+                "en": "Units with {B/BT_STAT|ST_COUNTER_RATE} in their kits",
+                "jp": "スキルに{B/BT_STAT|ST_COUNTER_RATE}を持つユニット",
+                "kr": "스킬에 {B/BT_STAT|ST_COUNTER_RATE}를 가진 유닛",
+                "zh": "技能组中带有{B/BT_STAT|ST_COUNTER_RATE}的角色",
+                "fr": "Unités avec {B/BT_STAT|ST_COUNTER_RATE} dans leur kit"
+              }
+            },
+            {
+              "names": [
+                "2000053",
                 "2000071",
                 "2000119"
               ],
