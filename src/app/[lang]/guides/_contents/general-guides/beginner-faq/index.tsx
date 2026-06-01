@@ -51,7 +51,9 @@ const LABELS = {
   thePrefix: { en: 'The ', jp: '', kr: '', zh: '', fr: 'Les ' } satisfies LangMap,
   freeHeroesLink: { en: 'heroes you get for free', jp: '無料で入手できるヒーロー', kr: '무료로 얻을 수 있는 영웅', zh: '免费获得的英雄', fr: 'Héros obtenus gratuitement' } satisfies LangMap,
   solidFoundation: { en: ' are a solid foundation to start off with.', jp: 'だけでも、序盤を進めるには十分な戦力になります。', kr: '만으로도 초반 진행에 충분한 전력이 됩니다.', zh: '足以作为良好的起步基础。', fr: ' constituent une base solide pour bien débuter.' } satisfies LangMap,
-  doppelgangerFarm: { en: 'Aside from Recruiting, you can farm regular heroes you don\'t have in the Doppelgänger Challenge too, given enough time (8 days each after completing their Side Story).', jp: 'ガチャ以外にも、ドッペルゲンガーチャレンジで一般ヒーローを獲得できます（サイドストーリークリア後、各キャラ8日かかります）。', kr: '모집 외에도 도플갱어 챌린지에서 일반 영웅을 획득할 수 있습니다 (사이드 스토리 클리어 후 각 캐릭터당 8일 소요).', zh: '除了招募之外，你还可以在分身挑战中获得普通英雄（完成支线故事后，每个角色需要8天）。', fr: 'En plus du Recruiting, vous pouvez aussi farmer les Héros Réguliers que vous n\'avez pas via le Doppelganger Challenge, avec assez de temps (8 jours chacun après avoir terminé leur Side Story).' } satisfies LangMap,
+  doppelgangerFarm: { en: 'Aside from Recruiting, you can farm regular heroes you don\'t have in the Doppelgänger Challenge. It takes about 5 days to transcend a hero, or about 8 days to recruit one you don\'t own, and with gold you can work on two heroes at once.', jp: 'ガチャ以外にも、ドッペルゲンガーチャレンジで所持していない一般ヒーローを獲得できます。超越には約5日、未所持ヒーローの獲得には約8日かかり、ゴールドを使えば2体同時に進められます。', kr: '모집 외에도 도플갱어 챌린지에서 보유하지 않은 일반 영웅을 획득할 수 있습니다. 초월에는 약 5일, 미보유 영웅 획득에는 약 8일이 걸리며, 골드를 사용하면 두 명을 동시에 진행할 수 있습니다.', zh: '除了招募之外，你还可以在分身挑战中获得未拥有的普通英雄。超越约需5天，招募一名未拥有的英雄约需8天，使用金币可以同时培养两名英雄。', fr: 'En plus du Recruiting, vous pouvez farmer les Héros Réguliers que vous n\'avez pas via le Doppelganger Challenge. Il faut environ 5 jours pour transcender un Héros, ou environ 8 jours pour en recruter un que vous ne possédez pas, et avec du gold vous pouvez travailler deux Héros à la fois.' } satisfies LangMap,
+
+  newAccountStarters: { en: 'New accounts also get a Demiurge Contract and a Seasonal Limited Hero Selection Recruit. The Contract guarantees a 5★+ Premium hero ({P/Demiurge Luna} or {P/Monad Eva} are the recommended picks), and the Seasonal selection gives quick access to {P/Mystic Sage Ame}, one of the best supports in the game. On top of that you receive 1000 {I-I/Special Recruitment Ticket} to collect the regular roster, giving you a well-rounded lineup to work with right away.', jp: '新規アカウントにはデミウルゴス契約とシーズナル限定仲間選択スカウトも付与されます。契約では★5+のプレミアムヒーローが確定し（おすすめは{P/Demiurge Luna}または{P/Monad Eva}）、シーズナル選択ではゲーム屈指のサポーター{P/Mystic Sage Ame}を早期に入手できます。さらに一般ヒーローを集めるための{I-I/Special Recruitment Ticket}が1000枚もらえるので、序盤から充実したロスターを揃えられます。', kr: '신규 계정에는 데미우르고스 계약과 시즌 한정 동료 선택 영입도 제공됩니다. 계약으로 ★5+ 프리미엄 영웅이 확정되며(추천은 {P/Demiurge Luna} 또는 {P/Monad Eva}), 시즈널 선택으로 게임 최고의 서포터 중 하나인 {P/Mystic Sage Ame}를 빠르게 얻을 수 있습니다. 여기에 일반 영웅을 모으기 위한 {I-I/Special Recruitment Ticket} 1000장도 받으므로, 초반부터 다양한 로스터를 갖출 수 있습니다.', zh: '新账号还会获得迪米乌哥斯合约和季节限定同伴选择招募。合约保证一名★5+精选英雄（推荐{P/Demiurge Luna}或{P/Monad Eva}），季节选择则能快速获得游戏中最强辅助之一的{P/Mystic Sage Ame}。此外你还会获得1000张{I-I/Special Recruitment Ticket}用于收集常规英雄阵容，因此一开始就能组建丰富的阵容。', fr: 'Les nouveaux comptes reçoivent aussi un Demiurge Contract et une Seasonal Limited Hero Selection Recruit. Le Contract garantit un Héros Premium ★5+ ({P/Demiurge Luna} ou {P/Monad Eva} sont les choix recommandés), et la sélection Seasonal donne un accès rapide à {P/Mystic Sage Ame}, l\'un des meilleurs supports du jeu. En plus, vous recevez 1000 {I-I/Special Recruitment Ticket} pour collecter le roster régulier, de quoi disposer d\'un roster varié dès le départ.' } satisfies LangMap,
 
   /* ═══ Heroes & Pulling ═══ */
   whoPullFor: { en: 'Who do I pull for?', jp: '誰を引くべきですか？', kr: '누구를 뽑아야 하나요?', zh: '应该抽谁？', fr: 'Pour qui faut-il pull ?' } satisfies LangMap,
@@ -258,16 +260,12 @@ const bodyFace = 'var(--font-geist-sans), system-ui, sans-serif';
 /* Stable across renders — labels are localized, ids are not. */
 const SECTION_IDS = ['getting-started', 'heroes-pulling', 'gear-equipment', 'progression-resources', 'advanced-tips'] as const;
 
-/* ───────────────────────── scrollspy + progress ───────────────────────── */
+/* ───────────────────────── scrollspy ───────────────────────── */
 function useScrollSpy(ids: readonly string[]) {
   const [activeId, setActiveId] = useState<string>(ids[0]);
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const onScroll = () => {
-      const doc = document.documentElement;
-      const max = doc.scrollHeight - doc.clientHeight;
-      setProgress(max > 0 ? Math.min(1, window.scrollY / max) : 0);
       const trigger = window.scrollY + window.innerHeight * 0.28;
       let current = ids[0];
       for (const id of ids) {
@@ -290,46 +288,37 @@ function useScrollSpy(ids: readonly string[]) {
     if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
   }, []);
 
-  return { activeId, progress, jump };
+  return { activeId, jump };
 }
 
-type TocSection = { id: string; n: string; color: AccentKey; label: string };
+type TocSection = { id: string; color: AccentKey; label: string };
 
-/* ───────────────────────── TOC (desktop rail) ───────────────────────── */
-function TocRail({ sections, activeId, progress, onJump }: {
-  sections: readonly TocSection[]; activeId: string; progress: number; onJump: (id: string) => void;
+/* ───────────────────────── TOC (horizontal sticky bar) ───────────────────────── */
+function TocBar({ sections, activeId, onJump }: {
+  sections: readonly TocSection[]; activeId: string; onJump: (id: string) => void;
 }) {
+  const { lang } = useI18n();
   return (
-    <nav>
-      <div style={{
-        fontFamily: monoFace, fontSize: 10, fontWeight: 600,
-        letterSpacing: '0.16em', textTransform: 'uppercase', color: FA.text5, marginBottom: 14,
-      }}><TocTitle /></div>
-
-      <div style={{ height: 2, background: FA.border, borderRadius: 2, marginBottom: 18, overflow: 'hidden' }}>
-        <div style={{ height: '100%', width: `${Math.round(progress * 100)}%`, background: FAQ_COLORS.sky.base, transition: 'width .15s linear' }} />
-      </div>
-
-      <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: 2 }}>
+    <nav
+      aria-label={lRec(UI_ON_THIS_PAGE, lang)}
+      className="sticky top-14 z-30 -mx-4 mb-8 border-y border-white/6 bg-slate-950/85 px-4 backdrop-blur md:-mx-6 md:px-6"
+    >
+      <ul className="flex flex-wrap justify-center gap-1.5 py-2.5">
         {sections.map((s) => {
           const c = FAQ_COLORS[s.color];
-          const active = activeId === s.id;
+          const on = s.id === activeId;
           return (
             <li key={s.id}>
-              <a href={'#' + s.id}
-                 onClick={(e) => { e.preventDefault(); onJump(s.id); }}
-                 style={{
-                   display: 'flex', alignItems: 'center', gap: 11, padding: '8px 10px', borderRadius: 7,
-                   borderLeft: `2px solid ${active ? c.base : 'transparent'}`,
-                   background: active ? c.dim : 'transparent', transition: 'background .15s', cursor: 'pointer',
-                 }}>
-                <span style={{
-                  width: 8, height: 8, borderRadius: 999, flexShrink: 0,
-                  background: active ? c.base : 'transparent', border: `1.5px solid ${c.base}`,
-                  boxShadow: active ? `0 0 8px ${c.base}` : 'none', transition: 'background .15s, box-shadow .15s',
-                }} />
-                <span style={{ fontFamily: monoFace, fontSize: 10.5, fontWeight: 600, color: active ? c.base : FA.text5, letterSpacing: '0.06em' }}>{s.n}</span>
-                <span style={{ fontFamily: bodyFace, fontSize: 13.5, fontWeight: active ? 600 : 500, color: active ? FA.text : FA.text3, letterSpacing: '-0.005em', transition: 'color .15s' }}>{s.label}</span>
+              <a
+                href={'#' + s.id}
+                onClick={(e) => { e.preventDefault(); onJump(s.id); }}
+                style={on ? { color: c.base, backgroundColor: c.soft, borderColor: c.line } : undefined}
+                className={[
+                  'inline-flex items-center rounded-full border px-3 py-1 text-[12.5px] transition-colors',
+                  on ? 'font-medium' : 'border-transparent text-zinc-400 hover:bg-white/5 hover:text-zinc-200',
+                ].join(' ')}
+              >
+                {s.label}
               </a>
             </li>
           );
@@ -339,74 +328,13 @@ function TocRail({ sections, activeId, progress, onJump }: {
   );
 }
 
-function TocTitle() {
-  const { lang } = useI18n();
-  return <>{lRec(UI_ON_THIS_PAGE, lang)}</>;
-}
-
-/* ───────────────────────── TOC (mobile accordion) ───────────────────────── */
-function TocMobile({ sections, activeId, progress, onJump }: {
-  sections: readonly TocSection[]; activeId: string; progress: number; onJump: (id: string) => void;
-}) {
-  const { lang } = useI18n();
-  const [open, setOpen] = useState(false);
-  const activeSection = sections.find((s) => s.id === activeId) || sections[0];
-  const ac = FAQ_COLORS[activeSection.color];
-  return (
-    <div className="md:hidden sticky top-2 z-20 mb-6" style={{ backdropFilter: 'blur(8px)' }}>
-      <button onClick={() => setOpen((o) => !o)} style={{
-        width: '100%', display: 'flex', alignItems: 'center', gap: 12, padding: '13px 16px', borderRadius: 11,
-        border: `1px solid ${FA.border}`, background: FA.card, cursor: 'pointer', color: FA.text,
-      }}>
-        <span style={{ width: 8, height: 8, borderRadius: 999, background: ac.base, boxShadow: `0 0 8px ${ac.base}`, flexShrink: 0 }} />
-        <span style={{ fontFamily: monoFace, fontSize: 10, fontWeight: 600, letterSpacing: '0.14em', textTransform: 'uppercase', color: FA.text5 }}>{lRec(UI_ON_THIS_PAGE, lang)}</span>
-        <span style={{ fontFamily: bodyFace, fontSize: 13.5, fontWeight: 600, color: FA.text2, flex: 1, textAlign: 'left' }}>
-          {activeSection.n} · {activeSection.label}
-        </span>
-        <span style={{ color: FA.text4, transform: open ? 'rotate(180deg)' : 'none', transition: 'transform .2s', fontSize: 12 }}>▾</span>
-      </button>
-
-      <div style={{ height: 2, background: FA.border, borderRadius: 2, margin: '8px 2px 0', overflow: 'hidden' }}>
-        <div style={{ height: '100%', width: `${Math.round(progress * 100)}%`, background: ac.base, transition: 'width .15s linear' }} />
-      </div>
-
-      {open && (
-        <ul style={{
-          listStyle: 'none', margin: '8px 0 0', padding: 6, borderRadius: 11,
-          border: `1px solid ${FA.border}`, background: '#0b1120', display: 'flex', flexDirection: 'column', gap: 2,
-        }}>
-          {sections.map((s) => {
-            const c = FAQ_COLORS[s.color];
-            const active = activeId === s.id;
-            return (
-              <li key={s.id}>
-                <a href={'#' + s.id}
-                   onClick={(e) => { e.preventDefault(); onJump(s.id); setOpen(false); }}
-                   style={{ display: 'flex', alignItems: 'center', gap: 11, padding: '10px 11px', borderRadius: 7, background: active ? c.dim : 'transparent', cursor: 'pointer' }}>
-                  <span style={{ width: 8, height: 8, borderRadius: 999, background: active ? c.base : 'transparent', border: `1.5px solid ${c.base}`, flexShrink: 0 }} />
-                  <span style={{ fontFamily: monoFace, fontSize: 10.5, fontWeight: 600, color: active ? c.base : FA.text5 }}>{s.n}</span>
-                  <span style={{ fontFamily: bodyFace, fontSize: 14, fontWeight: active ? 600 : 500, color: active ? FA.text : FA.text3 }}>{s.label}</span>
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      )}
-    </div>
-  );
-}
-
 /* ───────────────────────── Section heading ───────────────────────── */
-function SectionHeading({ n, color, title }: { n: string; color: AccentKey; title: string }) {
+function SectionHeading({ color, title }: { color: AccentKey; title: string }) {
   const c = FAQ_COLORS[color];
   return (
     <header style={{ marginBottom: 18 }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-        <span style={{ fontFamily: monoFace, fontSize: 13, fontWeight: 600, color: c.base, letterSpacing: '0.1em' }}>{n}</span>
-        <span style={{ width: 7, height: 7, borderRadius: 999, flexShrink: 0, background: c.base, boxShadow: `0 0 10px ${c.base}` }} />
-        <h3 style={{ fontFamily: titleFace, fontSize: 25, fontWeight: 600, letterSpacing: '-0.02em', color: FA.text, margin: 0, lineHeight: 1.1 }}>{title}</h3>
-      </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 10, paddingLeft: 1 }}>
+      <h3 style={{ fontFamily: titleFace, fontSize: 25, fontWeight: 600, letterSpacing: '-0.02em', color: FA.text, margin: 0, lineHeight: 1.1 }}>{title}</h3>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginTop: 10 }}>
         <span style={{ height: 2, width: 30, borderRadius: 2, background: c.base, flexShrink: 0 }} />
         <span style={{ height: 1, flex: 1, background: c.line, opacity: 0.5 }} />
       </div>
@@ -614,31 +542,25 @@ function RelatedGuides({ heading, items }: {
 export default function BeginnerFAQGuide() {
   const { lang, href } = useI18n();
   const L = (m: LangMap) => lRec(m, lang);
-  const { activeId, progress, jump } = useScrollSpy(SECTION_IDS);
+  const { activeId, jump } = useScrollSpy(SECTION_IDS);
 
   const sections: readonly TocSection[] = [
-    { id: SECTION_IDS[0], n: '01', color: 'sky',     label: L(LABELS.sectionGettingStarted) },
-    { id: SECTION_IDS[1], n: '02', color: 'violet',  label: L(LABELS.sectionHeroesPulling) },
-    { id: SECTION_IDS[2], n: '03', color: 'amber',   label: L(LABELS.sectionGearEquipment) },
-    { id: SECTION_IDS[3], n: '04', color: 'emerald', label: L(LABELS.sectionProgressionResources) },
-    { id: SECTION_IDS[4], n: '05', color: 'rose',    label: L(LABELS.sectionAdvancedTips) },
+    { id: SECTION_IDS[0], color: 'sky',     label: L(LABELS.sectionGettingStarted) },
+    { id: SECTION_IDS[1], color: 'violet',  label: L(LABELS.sectionHeroesPulling) },
+    { id: SECTION_IDS[2], color: 'amber',   label: L(LABELS.sectionGearEquipment) },
+    { id: SECTION_IDS[3], color: 'emerald', label: L(LABELS.sectionProgressionResources) },
+    { id: SECTION_IDS[4], color: 'rose',    label: L(LABELS.sectionAdvancedTips) },
   ];
 
   return (
     <GuideTemplate title={L(title)} introduction={L(intro)}>
-      <div className="grid grid-cols-1 md:grid-cols-[232px_1fr] gap-8 md:gap-14 items-start">
-        <aside className="hidden md:block">
-          <div className="sticky top-20">
-            <TocRail sections={sections} activeId={activeId} progress={progress} onJump={jump} />
-          </div>
-        </aside>
+      <TocBar sections={sections} activeId={activeId} onJump={jump} />
 
-        <main className="min-w-0 flex flex-col gap-14">
-          <TocMobile sections={sections} activeId={activeId} progress={progress} onJump={jump} />
+      <div className="flex flex-col gap-14">
 
-          {/* ═══ 01 · Getting Started ═══ */}
+          {/* ═══ Getting Started ═══ */}
           <section id={SECTION_IDS[0]} style={{ scrollMarginTop: 90 }}>
-            <SectionHeading n="01" color="sky" title={L(LABELS.sectionGettingStarted)} />
+            <SectionHeading color="sky" title={L(LABELS.sectionGettingStarted)} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <QACard color="sky" q={L(LABELS.rerollImportance)}>
                 <Prose>
@@ -651,6 +573,7 @@ export default function BeginnerFAQGuide() {
                   <InlineA href={href('/guides/general-guides/free-heroes-start-banner')} color="sky">{L(LABELS.freeHeroesLink)}</InlineA>
                   {L(LABELS.solidFoundation)}
                 </Prose>
+                <Prose>{parseText(L(LABELS.newAccountStarters))}</Prose>
                 <Prose>{L(LABELS.doppelgangerFarm)}</Prose>
               </QACard>
 
@@ -674,7 +597,7 @@ export default function BeginnerFAQGuide() {
 
           {/* ═══ 02 · Heroes & Pulling ═══ */}
           <section id={SECTION_IDS[1]} style={{ scrollMarginTop: 90 }}>
-            <SectionHeading n="02" color="violet" title={L(LABELS.sectionHeroesPulling)} />
+            <SectionHeading color="violet" title={L(LABELS.sectionHeroesPulling)} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <QACard color="violet" q={L(LABELS.whoPullFor)}>
                 <Prose>{L(LABELS.wideRangeHeroes)}</Prose>
@@ -779,7 +702,7 @@ export default function BeginnerFAQGuide() {
 
           {/* ═══ 03 · Gear & Equipment ═══ */}
           <section id={SECTION_IDS[2]} style={{ scrollMarginTop: 90 }}>
-            <SectionHeading n="03" color="amber" title={L(LABELS.sectionGearEquipment)} />
+            <SectionHeading color="amber" title={L(LABELS.sectionGearEquipment)} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <QACard color="amber" q={L(LABELS.howGetGear)}>
                 <Prose>{L(LABELS.gearSourceDesc)}</Prose>
@@ -841,7 +764,7 @@ export default function BeginnerFAQGuide() {
 
           {/* ═══ 04 · Progression & Resources ═══ */}
           <section id={SECTION_IDS[3]} style={{ scrollMarginTop: 90 }}>
-            <SectionHeading n="04" color="emerald" title={L(LABELS.sectionProgressionResources)} />
+            <SectionHeading color="emerald" title={L(LABELS.sectionProgressionResources)} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <QACard color="emerald" q={L(LABELS.skillManualsFirst)}>
                 <AccentCallout accent={FAQ_COLORS.amber.base} label={L(LABELS.skillUpRule)}>
@@ -882,7 +805,7 @@ export default function BeginnerFAQGuide() {
 
           {/* ═══ 05 · Advanced Tips ═══ */}
           <section id={SECTION_IDS[4]} style={{ scrollMarginTop: 90 }}>
-            <SectionHeading n="05" color="rose" title={L(LABELS.sectionAdvancedTips)} />
+            <SectionHeading color="rose" title={L(LABELS.sectionAdvancedTips)} />
             <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
               <QACard color="rose" q={L(LABELS.heroScaleHealth)}>
                 <Prose>
@@ -921,7 +844,6 @@ export default function BeginnerFAQGuide() {
               { href: href('/guides/general-guides/heroes-growth'),            color: 'emerald', glyph: 'HG', label: L(LABELS.heroesGrowth),            desc: L(LABELS.heroesGrowthDesc) },
             ]}
           />
-        </main>
       </div>
     </GuideTemplate>
   );
