@@ -1390,13 +1390,13 @@
       "rarity": "legendary",
       "2pc": {
         "base": {
-          "en": "Debuff Immunity for 1 turn at the start of battle",
+          "en": "Gain Immunity to Debuffs for 1 turn at the start of battle",
           "jp": "戦闘開始後、弱体効果免疫を1ターン間付与する。",
           "kr": "전투 시작 후 1턴간 약화 효과 면역",
           "zh": "开始战斗后，对弱化效果免疫，持续1回合"
         },
         "bt4": {
-          "en": "Debuff Immunity for 1 turn at the start of battle",
+          "en": "Gain Immunity to Debuffs for 1 turn at the start of battle",
           "jp": "戦闘開始後、弱体効果免疫を1ターン間付与する。",
           "kr": "전투 시작 후 1턴간 약화 효과 면역",
           "zh": "开始战斗后，对弱化效果免疫，持续1回合"
@@ -31910,6 +31910,74 @@
               "values": {
                 "[+Value]": "+50%"
               }
+            }
+          ]
+        }
+      },
+      "2700070": {
+        "name": "Annual Defense Budget",
+        "slot": "ee",
+        "characterId": "2700070",
+        "rarity": "legendary",
+        "star": 6,
+        "scalesVia": "enhanceLevels",
+        "mainStats": [
+          {
+            "key": "DMG UP%",
+            "label": {
+              "en": "DMG Increase vs Light",
+              "jp": "光属性対象の ダメージUP",
+              "kr": "명속성 대상 피해 증가",
+              "zh": "对光属性目标造成 伤害提升"
+            },
+            "percent": true,
+            "conditional": true,
+            "levels": [17, 17.5, 18, 18.5, 19.1, 19.7, 20.3, 20.9, 21.6, 22.3, 23]
+          },
+          {
+            "key": "KILL_AP",
+            "label": {
+              "en": "Gains AP when an enemy dies",
+              "jp": "敵が倒れた時、AP獲得",
+              "kr": "적 사망 시 AP획득",
+              "zh": "敌人死亡时获得AP"
+            },
+            "percent": false,
+            "conditional": false,
+            "levels": [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 20]
+          }
+        ],
+        "passive": {
+          "name": {
+            "en": "Annual Defense Budget",
+            "jp": "年間国防予算",
+            "kr": "1년치 국방 예산",
+            "zh": "一年的国防预算"
+          },
+          "tiers": [
+            {
+              "unlockLevel": 1,
+              "isAdd": false,
+              "desc": {
+                "en": "Priority [+Value] when hit by an AoE attack (Activates once per turn)",
+                "jp": "敵から全体攻撃を受けた場合、行動ゲージ[+Value] (1ターンに1回のみ発動)",
+                "kr": "전체 공격 피격 시 행동 게이지 [+Value] (1턴에 1회만 발동)",
+                "zh": "被全体攻击命中时行动值[+Value]（每回合仅发动1次）"
+              },
+              "values": {
+                "[+Value]": "+50%"
+              }
+            },
+            {
+              "unlockLevel": 10,
+              "isAdd": true,
+              "desc": {
+                "en": "When attacking a Dimensional Singularity Boss, grants increased Defense to the caster for 2 turns before using the skill (Activates once every 3 turns)",
+                "jp": "次元特異点ボス対象にスキル使用する前、自分の防御力+2ターン (3ターンに1回のみ発動)",
+                "kr": "차원 특이점 보스 공격 시 스킬 사용 전 자신의 방어력 증가 +2턴 (3턴에 1회만 발동)",
+                "zh": "攻击次元奇点首领时，使用技能前自身防御力提升+2回合（每3回合仅发动1次）"
+              },
+              "values": {}
             }
           ]
         }
