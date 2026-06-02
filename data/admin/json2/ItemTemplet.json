@@ -60891,7 +60891,7 @@
     "CanDissolve": "False",
     "MaterialValue": "30285",
     "IsCustomCraft": "False",
-    "PreviewUse": "TRUE"
+    "PreviewUse": "False"
   },
   {
     "ID": "30286",
@@ -64749,6 +64749,22 @@
     "CanSell": "False",
     "CanDissolve": "False",
     "MaterialValue": "30534",
+    "IsCustomCraft": "False",
+    "PreviewUse": "TRUE"
+  },
+  {
+    "ID": "30535",
+    "NameID": "ITEM_BOX_RANDOM_30535_NAME",
+    "DescID": "ITEM_BOX_RANDOM_30535_DESC",
+    "IconName": "TI_Accessary_Box02",
+    "ItemType": "IT_BOX",
+    "ItemSubType": "ITS_BOX_TYPE_CHOICE_ITEM",
+    "ItemGrade": "IG_UNIQUE",
+    "ClassLimit": "CCT_NONE",
+    "CanStack": "True",
+    "CanSell": "False",
+    "CanDissolve": "False",
+    "MaterialValue": "30535",
     "IsCustomCraft": "False",
     "PreviewUse": "TRUE"
   },
@@ -69493,6 +69509,25 @@
     "CanDissolve": "False",
     "MainOptionGroupID": "2000070",
     "UniqueOptionID": "2000070,2100070",
+    "IsCustomCraft": "False",
+    "PreviewUse": "FALSE"
+  },
+  {
+    "ID": "2700070",
+    "NameID": "ITEM_C_EQUIP_2700070_NAME",
+    "IconName": "TI_Equipment_EX_2700070",
+    "ItemType": "IT_EQUIP",
+    "ItemSubType": "ITS_EQUIP_EXCLUSIVE",
+    "ItemGrade": "IG_UNIQUE",
+    "BasicStar": "6",
+    "ClassLimit": "CCT_NONE",
+    "CharacterLimit": "2700070",
+    "TrustLevelLimit": "10",
+    "CanStack": "False",
+    "CanSell": "False",
+    "CanDissolve": "False",
+    "MainOptionGroupID": "2700070",
+    "UniqueOptionID": "2700070,2710070",
     "IsCustomCraft": "False",
     "PreviewUse": "FALSE"
   },

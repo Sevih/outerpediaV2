@@ -1489,11 +1489,11 @@
   },
   {
     "ID": "SYS_BUFF_DESC_2000035",
-    "Korean": "행동 종료한 적이 출혈 보유 시 아군의 행동 게이지가 10% 증가합니다.\\n엘리제가 사망하기 전까지 해제되지 않습니다.",
-    "English": "When an enemy inflicted with Bleeding performs an action, increases Priority of an ally by 10%. Cannot be removed until Eliza is defeated.",
-    "Japanese": "出血状態の敵が行動終了時、\\n味方の行動ゲージが10%UPする。\\nこの効果は【エリーゼ】が倒れるまで\\n解除されない。",
-    "China_Simplified": "行动结束的敌人处于出血状态时，\\n使友军行动值提升10%。\\n在伊莉莎死亡之前无法被解除。",
-    "China_Traditional": "結束行動的敵人具有出血時，\\n我軍的速攻值增加10%。\\n伊莉莎死亡之前不會被解除。"
+    "Korean": "행동 종료한 적이 출혈 보유 시 아군의 행동 게이지가 10% 증가합니다.\\n아군이 받는 피해가 30% 감소합니다.\\n엘리제가 사망하기 전까지 해제되지 않습니다.",
+    "English": "When an enemy inflicted with Bleeding ends their action, increases all allies' Priority by 10%.\\nDecreases damage taken by allies by 30%.\\nThis effect is removed when the caster dies.",
+    "Japanese": "出血状態の敵が行動終了時、\\n味方の行動ゲージが10%UPする。\\n味方が受けるダメージが30%減少する。\\nこの効果は【エリーゼ】が倒れるまで\\n解除されない。",
+    "China_Simplified": "行动结束的敌人处于出血状态时，\\n使友军行动值提升10%。\\n我方受到的伤害减少30%。\\n在伊莉莎死亡之前无法被解除。",
+    "China_Traditional": "結束行動的敵人具有出血時，\\n我軍的速攻值增加10%。\\n我方受到的傷害減少30%。\\n伊莉莎死亡之前不會被解除。"
   },
   {
     "ID": "SYS_BUFF_NAME_2000053",
@@ -7857,19 +7857,19 @@
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_1",
-    "Korean": "수상한 수정",
-    "English": "Suspicious Crystal",
-    "Japanese": "あやしい水晶",
-    "China_Simplified": "可疑水晶",
-    "China_Traditional": "可疑的水晶"
+    "Korean": "불의 결정",
+    "English": "Fire Crystal",
+    "Japanese": "火の結晶",
+    "China_Simplified": "火之结晶",
+    "China_Traditional": "火的結晶"
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_2",
-    "Korean": "드레드노트의 우상",
-    "English": "Dreadnought Totem",
-    "Japanese": "ドレッドノートの神像",
-    "China_Simplified": "无畏族神像",
-    "China_Traditional": "無畏族神像"
+    "Korean": "저주받은 각본 조각",
+    "English": "Cursed Script Piece",
+    "Japanese": "呪われた脚本の紙切れ",
+    "China_Simplified": "受诅咒的剧本碎片",
+    "China_Traditional": "受詛咒的劇本碎片"
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_3",
@@ -7897,11 +7897,11 @@
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_6",
-    "Korean": "악성",
-    "English": "Malevolence",
-    "Japanese": "悪性",
-    "China_Simplified": "恶性",
-    "China_Traditional": "惡性"
+    "Korean": "촬영 도구",
+    "English": "Filming Tool",
+    "Japanese": "撮影機材",
+    "China_Simplified": "摄影道具",
+    "China_Traditional": "攝影器材"
   },
   {
     "ID": "SYS_ASSET_DEMIURGE",
@@ -8089,24 +8089,24 @@
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_1",
-    "Korean": "텅 비어있는 수상한 수정 조각. 용도를 알 수 없어서 더욱 불길하다. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
-    "English": "A suspiciously empty crystal fragment. Nobody knows what it's used for, making it even more ominous. You can exchange it for a variety of items in the Event Shop.",
-    "Japanese": "中身のないあやしい水晶のかけら。使い方も検討がつかず、不吉な気配が漂う。イベントショップでアイテムと交換できる。",
-    "China_Simplified": "空荡荡的可疑水晶碎片。用途不明，更不吉利。可于活动商店中兑换多种商品。",
-    "China_Traditional": "中空的可疑水晶碎片。用途不明，更顯它的不祥之氣。可在活動商店中兌換各式商品。"
+    "Korean": "타마모노마에가 만든 정체불명의 연료. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
+    "English": "A mysterious fuel of unknown origin crafted by Tamamo-no-Mae. Exchange it for various items in the Event Shop.",
+    "Japanese": "タマモノマエが生み出した正体不明の燃料。\\nイベントショップでアイテムと交換できる。",
+    "China_Simplified": "玉藻前制作的未知燃料。\\n可于活动商店兑换各种商品。",
+    "China_Traditional": "玉藻前創造的不明燃料。\\n可在活動商店中兌換各式商品。"
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_2",
-    "Korean": "용의 마력이 담겨 있는 드레드노트들의 우상. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
-    "English": "A totem of Dreadnoughts infused with the mana of dragons. You can exchange it for a variety of items in the Event Shop.",
-    "Japanese": "竜の魔力が秘められたドレッドノートの神像。イベントショップでアイテムと交換できる。",
-    "China_Simplified": "蕴含着龙之魔力的无畏族神像。可于活动商店中兑换多种商品。",
-    "China_Traditional": "富含龍之魔力的無畏族神像。可在活動商店中兌換各式商品。"
+    "Korean": "음습한 불길이 타오르는 각본의 조각. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
+    "English": "A script piece burning with sinister flames. You can exchange it for a variety of items in the Event Shop.",
+    "Japanese": "うす気味悪く燃え盛る脚本の紙切れ。イベントショップでアイテムと交換できる。",
+    "China_Simplified": "燃烧阴森火焰的剧本碎片。\\n可于活动商店兑换各种商品。",
+    "China_Traditional": "燃燒著陰森之火的劇本碎片。\\n可在活動商店中兌換各式商品。"
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_3",
     "Korean": "비밀 창고의 열쇠, 특정한 보안 카드만 그 두꺼운 문을 연다. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
-    "English": "The key to the secret vault — only a specific Security Card can open its thick door. Can be exchanged for various items in the Event Shop.",
+    "English": "A key to the secret vault. Only a specific Security Card can open its heavy door. You can exchange it for a variety of items in the Event Shop.",
     "Japanese": "秘密倉庫の鍵、特定のセキュリティカードだけがその厚い扉を開ける。イベントショップでさまざまな商品と交換できます。",
     "China_Simplified": "秘密仓库的钥匙，只有特定的安全卡才能打开那扇厚重的门。可在活动商店中兑换各种商品。",
     "China_Traditional": "秘密倉庫的鑰匙，只有特定的安全卡才能打開那扇厚重的門。可在活動商店中兌換各種商品。"
@@ -8129,11 +8129,11 @@
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_6",
-    "Korean": "인간이 가지고 있는 악한 믿음, 가지고자 하는 끝없는 갈망, 모든 것을 파괴하는 추악한 사념. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
-    "English": "The wicked faith held by humanity, the endless desire to possess, the ugly obsession that destroys all things. You can exchange it for a variety of items in the Event Shop.",
-    "Japanese": "人間が持つ悪なる信仰、手に入れようとする果てしない渇望、全てを破壊する醜悪な邪念。イベントショップでアイテムと交換できる。",
-    "China_Simplified": "人类所拥有的邪恶信念、永无止境的贪婪渴望、毁灭一切的丑陋杂念。可于活动商店兑换各种商品。",
-    "China_Traditional": "人類所擁有的邪惡信念、永無止境的貪婪渴望、毀滅一切的醜陋雜念。可在活動商店中兌換各式商品。"
+    "Korean": "메로의 영화 촬영용 도구. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
+    "English": "Mero's Filming Tool. You can exchange it for a variety of items in the Event Shop.",
+    "Japanese": "映画の撮影に使われる道具。イベントショップでアイテムと交換できる。",
+    "China_Simplified": "电影摄影道具。可于活动商店兑换各种商品。",
+    "China_Traditional": "電影拍攝器材。可在活動商店中兌換各式商品。"
   },
   {
     "ID": "SYS_DISC_ASSET_DEMIURGE",
@@ -12746,7 +12746,7 @@
   {
     "ID": "SYS_ATTENDANCE_CHECK_EVENT_TITLE",
     "Korean": "출석 이벤트",
-    "English": "Check-in Event",
+    "English": "Login Event",
     "Japanese": "ログインイベント",
     "China_Simplified": "签到活动",
     "China_Traditional": "簽到活動"
@@ -12762,7 +12762,7 @@
   {
     "ID": "SYS_ATTENDANCE_NORMAL_TITLE",
     "Korean": "출석 체크",
-    "English": "Check-in",
+    "English": "Login",
     "Japanese": "ログインボーナス",
     "China_Simplified": "签到",
     "China_Traditional": "簽到"
@@ -22410,7 +22410,7 @@
   {
     "ID": "SYS_GUILD_ATTENDANCE_PROGRESS",
     "Korean": "출석 진행도 ({0}/{1})",
-    "English": "Check-in Progress ({0}/{1})",
+    "English": "Login Progress ({0}/{1})",
     "Japanese": "ログイン日数({0}/{1})",
     "China_Simplified": "签到进度({0}/{1})",
     "China_Traditional": "簽到進度({0}/{1})"
@@ -27674,7 +27674,7 @@
   {
     "ID": "SYS_ATTENDANCE_GUILD_TITLE",
     "Korean": "길드 출석",
-    "English": "Guild Check-in",
+    "English": "Guild Login",
     "Japanese": "ギルドログイン",
     "China_Simplified": "公会签到",
     "China_Traditional": "公會簽到"
@@ -27882,7 +27882,7 @@
   {
     "ID": "SYS_MENU_ATTENDANCE",
     "Korean": "출석",
-    "English": "Check-in",
+    "English": "Login",
     "Japanese": "ログイン",
     "China_Simplified": "签到",
     "China_Traditional": "簽到"
@@ -33578,7 +33578,7 @@
   {
     "ID": "SYS_ATTENDANCE_NEW_TITLE_02 ",
     "Korean": "출석",
-    "English": "Check-in",
+    "English": "Login",
     "Japanese": "ログイン",
     "China_Simplified": "签到",
     "China_Traditional": "簽到"
@@ -35026,7 +35026,7 @@
   {
     "ID": "SYS_EVENT_ATTENDANCE_OPEN_TITLE_2",
     "Korean": "한정 출석 이벤트",
-    "English": "Limited Check-in Event",
+    "English": "Limited Login Event",
     "Japanese": "限定ログインイベント",
     "China_Simplified": "限定签到活动",
     "China_Traditional": "限定簽到活動"
@@ -35058,7 +35058,7 @@
   {
     "ID": "SYS_ATTENDANCE_NEW_TITLE_TOOL",
     "Korean": "신규 유저 출석 이벤트",
-    "English": "New User Check-in Event",
+    "English": "New User Login Event",
     "Japanese": "新規ユーザーログインボーナス",
     "China_Simplified": "新手玩家签到活动",
     "China_Traditional": "新手玩家簽到活動"
@@ -35066,7 +35066,7 @@
   {
     "ID": "SYS_ATTENDANCE_RETURN_TITLE_TOOL",
     "Korean": "복귀 유저 출석 이벤트",
-    "English": "Returning User Check-in Event",
+    "English": "Returning User Login Event",
     "Japanese": "復帰ユーザー ログイン ボーナス",
     "China_Simplified": "回归玩家签到活动",
     "China_Traditional": "回歸玩家簽到活動"
@@ -35074,7 +35074,7 @@
   {
     "ID": "SYS_EVENT_ATTENDANCE_OPEN_TITLE_TOOL",
     "Korean": "런칭 기념 한정 출석 이벤트",
-    "English": "Launch Celebration Limited Check-in Event",
+    "English": "Launch Celebration Limited Login Event",
     "Japanese": "リリース記念限定 ログインボーナス",
     "China_Simplified": "上线纪念限定签到活动",
     "China_Traditional": "上線紀念限定簽到活動"
@@ -41155,7 +41155,7 @@
     "ID": "SYS_TITLE_SIDE_STORY_NOTIA_11",
     "Korean": "마족 소탕 (1)",
     "English": "Vanquishing Fiends (1)",
-    "Japanese": "魔族掃討 (1)",
+    "Japanese": "魔族スキップ (1)",
     "China_Simplified": "横扫魔族（1）",
     "China_Traditional": "掃蕩魔族(1)"
   },
@@ -41163,7 +41163,7 @@
     "ID": "SYS_TITLE_SIDE_STORY_NOTIA_12",
     "Korean": "마족 소탕 (2)",
     "English": "Vanquishing Fiends (2)",
-    "Japanese": "魔族掃討 (2)",
+    "Japanese": "魔族スキップ (2)",
     "China_Simplified": "横扫魔族（2）",
     "China_Traditional": "掃蕩魔族(2)"
   },
@@ -42922,7 +42922,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_4",
     "Korean": "[출석] 잊힌 낙원의 정원사",
-    "English": "Gardener of a Forgotten Paradise Check-In",
+    "English": "Gardener of a Forgotten Paradise Login",
     "Japanese": "忘却の造園士ログイン",
     "China_Simplified": "被遗忘乐园的园丁签到",
     "China_Traditional": "被遺忘的樂園園丁簽到"
@@ -47378,7 +47378,7 @@
   {
     "ID": "SYS_EVENT_FULL_MOON_ATTENDENCE",
     "Korean": "달토끼 깃든 출석",
-    "English": "Moon Bunny's Blessing Check-In",
+    "English": "Moon Bunny's Blessing Login",
     "Japanese": "月うさぎのログイン",
     "China_Simplified": "月兔祝福之签到",
     "China_Traditional": "月兔簽到"
@@ -47410,7 +47410,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_5",
     "Korean": "새벽녘의 태양과 달 출석",
-    "English": "The Sun and Moon at Dawn Check-In",
+    "English": "The Sun and Moon at Dawn Login",
     "Japanese": "【ログイン】真夜中に並ぶ月と太陽",
     "China_Simplified": "黎明日月签到",
     "China_Traditional": "破曉日月簽到"
@@ -47971,7 +47971,7 @@
     "ID": "SYS_EVENT_S06_NAME",
     "Korean": "<color=#99ffff>살아있는</color> <color=#ff8000>영참사</color>의 <color=#0080ff>밤</color>",
     "English": "<color=#0080ff>Night</color> of the <color=#99ffff>Living</color> <color=#ff8000>Soulslayer</color>",
-    "Japanese": "<color=#0080ff>ナイト</color><color=#99ffff>オブ・ザ</color><color=#ff8000>霊斬士</color>",
+    "Japanese": "<color=#0080ff>ナイト</color>・<color=#99ffff>オブ</color>・ザ・<color=#ff8000>霊斬士</color>",
     "China_Simplified": "<color=#99ffff>非凡</color><color=#ff8000>灵斩师</color>之<color=#0080ff>夜</color>",
     "China_Traditional": "<color=#99ffff>在世</color><color=#ff8000>靈斬師</color>之<color=#0080ff>夜</color>"
   },
@@ -52937,7 +52937,7 @@
   },
   {
     "ID": "SYS_GUIDE_FRIENDSHIP_PVP_02_DESC",
-    "Korean": "1. 프리 밴 : 친선 대전 시작 후 [프리 밴]을 진행하게 되며, 이때 자신과 대전 상대가 각각 1명의 동료를 밴하게 됩니다.\\n[프리 밴]에서 제외된 2명의 동료는 전투 팀 편성이 불가능합니다. \\n2. 동료 선택 : 자신과 대전 상대가 번갈아가며, 전투에 참여할 동료를 5명 선택하게 됩니다.\\n3. 라스트 밴 : 5명의 동료가 모두 결정되면, 상대방 동료 5명 중 1명을 제외하는 [라스트 밴]이 진행됩니다.\\n4. 편성 및 리더 지정 : 편성 화면에서 편성 동료의 위치를 수정하고, [리더]를 지정하여 [리더 버프 효과]를 결정할 수 있습니다.\\n6. 자신과 대전 상대 모두 준비가 끝나면, 3초의 대기 시간 이후에 친선 대전 결투장에 입장합니다.",
+    "Korean": "1. 프리 밴 : 친선 대전 시작 후 [프리 밴]을 진행하게 되며, 이때 자신과 대전 상대가 각각 1명의 동료를 밴하게 됩니다.\\n[프리 밴]에서 제외된 2명의 동료는 전투 팀 편성이 불가능합니다. \\n2. 동료 선택 : 자신과 대전 상대가 번갈아가며, 전투에 참여할 동료를 5명 선택하게 됩니다.\\n3. 라스트 밴 : 5명의 동료가 모두 결정되면, 상대방 동료 5명 중 1명을 제외하는 [라스트 밴]이 진행됩니다.\\n4. 편성 및 리더 지정 : 편성 화면에서 편성 동료의 위치를 수정하고, [리더]를 지정하여 [리더 버프 효과]를 결정할 수 있습니다.\\n5. 자신과 대전 상대 모두 준비가 끝나면, 3초의 대기 시간 이후에 친선 대전 결투장에 입장합니다.",
     "English": "1. Pre-Ban : After the Friendly Match begins, a [Pre-Ban] is conducted, where you and your opponent each ban 1 hero.\\nThe 2 heroes excluded in the [Pre-Ban] cannot be used in battle.\\n2. Hero Selection : You and your opponent take turns selecting 5 heroes to participate in battle.\\n3. Last Ban : Once all 5 heroes are decided, a [Last Ban] is conducted to exclude 1 of the opponent's 5 heroes.\\n4. Team & Leader Selection : On the lineup screen, you can adjust the positions of your heroes and select a [Leader] to determine the [Leader Buff Effect].\\n6. Once both you and your opponent are ready, you will enter the Friendly Match Arena after a 3-second countdown.",
     "Japanese": "1. プリバン：フレンド対戦開始後、[プリバン]を行い、自分と対戦相手がそれぞれ1名の仲間をバンします。\\n[プリバン]で除外された2名の仲間は戦闘チームの編成が不可能です。\\n2. 仲間選択：自分と対戦相手が交互に、戦闘に参加する仲間を5名選択します。\\n3. ラストバン：5名の仲間がすべて決定されると、相手の仲間5名のうち1名を除外する[ラストバン]が行われます。\\n4. 編成およびリーダー指定：編成画面で編成した仲間の位置を修正し、[リーダー]を指定して[リーダーバフ効果]を決定できます。\\n6. 自分と対戦相手の準備が整ったら、3秒の待機時間後にフレンド対戦アリーナに入場します。",
     "China_Simplified": "1. 预禁用：友谊赛开始后进行[预禁用]，此时自己与对战对手各禁用1名同伴。\\n[预禁用]中被排除的2名同伴无法加入战斗队伍。\\n2. 同伴选择：自己与对战对手交替选择5名参与战斗的同伴。\\n3. 最终禁用：5名同伴全部确定后，进行从对手5名同伴中排除1名的[最终禁用]。\\n4. 编成及队长指定：在编成界面调整编成同伴的位置，并指定[队长]以决定[队长增益效果]。\\n6. 自己与对战对手均准备完毕后，经过3秒等待时间后进入友谊赛竞技场。",
@@ -53330,15 +53330,15 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_06_TITLE",
     "Korean": "살아있는 영참사의 밤 출석",
-    "English": "Night of the Living Soulslayer Check-in",
-    "Japanese": "生ける霊斬士の夜 ログイン",
+    "English": "Night of the Living Soulslayer Login",
+    "Japanese": "ナイト・オブ・ザ・霊斬士 ログイン",
     "China_Simplified": "活着的灵斩师之夜签到",
     "China_Traditional": "活著的靈斬師之夜簽到"
   },
   {
     "ID": "SYS_ATTENDANCE_EVENT_07_TITLE",
     "Korean": "마왕과 함께 크리스마스 출석",
-    "English": "Christmas with the Archdemon Check-in",
+    "English": "Christmas with the Archdemon Login",
     "Japanese": "魔王と共にクリスマス ログイン",
     "China_Simplified": "与魔王共度圣诞签到",
     "China_Traditional": "與魔王共度聖誕簽到"
@@ -53346,7 +53346,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_03_TITLE",
     "Korean": "떠나자 여름캠프 출석",
-    "English": "Off to Summer Camp! Check-In",
+    "English": "Off to Summer Camp! Login",
     "Japanese": "ノティアのキャンプ大作戦ログイン",
     "China_Simplified": "出发！夏令营签到",
     "China_Traditional": "前進夏令營簽到"
@@ -53354,7 +53354,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_04_TITLE",
     "Korean": "잊혀진 낙원의 정원사 출석",
-    "English": "Gardener of a Forgotten Paradise Check-in",
+    "English": "Gardener of a Forgotten Paradise Login",
     "Japanese": "忘却の造園士ログイン",
     "China_Simplified": "被遗忘乐园的园丁签到",
     "China_Traditional": "被遺忘的樂園園丁簽到"
@@ -53362,7 +53362,7 @@
   {
     "ID": "SYS_EVENT_NEW_YEAR_ATTENDENCE",
     "Korean": "신년 출석 이벤트",
-    "English": "New Year's Check-in Event",
+    "English": "New Year's Login Event",
     "Japanese": "新年ログインイベント",
     "China_Simplified": "新年签到活动",
     "China_Traditional": "新年簽到活動"
@@ -53538,7 +53538,7 @@
   {
     "ID": "SYS_ATTENDANCE_NEW_YEAR_TITLE",
     "Korean": "<color=#FCDE00>새해맞이</color> 출석 이벤트",
-    "English": "<color=#FCDE00>New Year's</color> Check-in Event",
+    "English": "<color=#FCDE00>New Year's</color> Login Event",
     "Japanese": "<color=#FCDE00>新年記念</color>ログインイベント",
     "China_Simplified": "<color=#FCDE00>迎新年</color>签到活动",
     "China_Traditional": "<color=#FCDE00>迎接新年</color>簽到活動"
@@ -55290,7 +55290,7 @@
   {
     "ID": "SYS_EVENT_NEW_YEAR_2_ATTENDENCE",
     "Korean": "<Color=#FF9933>행운을 부르는 출석</Color> 이벤트",
-    "English": "<Color=#FF9933>Lucky Check-in</Color> Event",
+    "English": "<Color=#FF9933>Lucky Login</Color> Event",
     "Japanese": "<Color=#FF9933>幸運をもたらすログイン</Color> ボーナス",
     "China_Simplified": "<Color=#FF9933>幸运召唤签到</Color> 活动",
     "China_Traditional": "<Color=#FF9933>招福簽到</Color>活動"
@@ -55810,7 +55810,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_08_TITLE",
     "Korean": "로봇은 초콜릿의 맛을 모른다 출석",
-    "English": "A Robot Does Not Know the Taste of Chocolate Check-In",
+    "English": "A Robot Does Not Know the Taste of Chocolate Login",
     "Japanese": "オートマタはチョコの味を知らない ログイン",
     "China_Simplified": "机器人不知道巧克力的味道签到",
     "China_Traditional": "機器人不懂巧克力的滋味簽到"
@@ -56178,7 +56178,7 @@
   {
     "ID": "SYS_EVENT_FEBRUARY_ATTENDENCE",
     "Korean": "<color=#FCDE00>이엑스플로</color> 출석 이벤트",
-    "English": "<color=#FCDE00>Ful.Mi.NATION</color> Check-In Event",
+    "English": "<color=#FCDE00>Ful.Mi.NATION</color> Login Event",
     "Japanese": "<color=#FCDE00>イエクスプロー</color>ログインボーナス",
     "China_Simplified": "<color=#FCDE00>伊克斯普洛</color>签到活动",
     "China_Traditional": "<color=#FCDE00>伊克斯普洛</color>簽到活動"
@@ -56354,7 +56354,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_09_TITLE",
     "Korean": "매그놀리아 페스티벌 출석",
-    "English": "Magnolia Festival Check-In",
+    "English": "Magnolia Festival Login",
     "Japanese": "【ログイン】マグノリアフェス",
     "China_Simplified": "麦格诺里亚庆典签到",
     "China_Traditional": "麥格諾里亞慶典簽到"
@@ -56370,7 +56370,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_9",
     "Korean": "매그놀리아 페스티벌 출석",
-    "English": "Magnolia Festival Check-In",
+    "English": "Magnolia Festival Login",
     "Japanese": "【ログイン】マグノリア\\nフェス",
     "China_Simplified": "麦格诺里亚庆典签到",
     "China_Traditional": "麥格諾里亞慶典簽到"
@@ -57282,7 +57282,7 @@
   {
     "ID": "SYS_RETURN_UESER_ATTENDANCE",
     "Korean": "복귀 출석",
-    "English": "Return Check-in",
+    "English": "Return Login",
     "Japanese": "復帰ログイン",
     "China_Simplified": "回归签到",
     "China_Traditional": "回歸簽到"
@@ -57562,7 +57562,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_10",
     "Korean": "달려라! 선상 체육대회 출석",
-    "English": "Full Speed Ahead! Shipbound Sports Festival Check-in",
+    "English": "Full Speed Ahead! Shipbound Sports Festival Login",
     "Japanese": "走れ! 船上体育祭ログイン",
     "China_Simplified": "奔跑吧！海上体育大会签到",
     "China_Traditional": "跑吧！海上運動會簽到"
@@ -62594,7 +62594,7 @@
   {
     "ID": "SYS_NEW_UESER_ATTENDANCE",
     "Korean": "신규 출석",
-    "English": "New User Check-in",
+    "English": "New User Login",
     "Japanese": "新規ログイン",
     "China_Simplified": "新手签到",
     "China_Traditional": "新手簽到活動"
@@ -63538,7 +63538,7 @@
   {
     "ID": "SYS_NEW_UESER_PACKAGE_TOOLTIP",
     "Korean": "신규 출석 최종 완료 시점부터 14일까지 구매 가능합니다.",
-    "English": "Available for purchase for 14 days following completion of New User Check-in.",
+    "English": "Available for purchase for 14 days following completion of New User Login.",
     "Japanese": "新規ログインをすべて達成してから14日間、購入が可能になります。",
     "China_Simplified": "可在新手签到结束时刻的起14天内进行购买。",
     "China_Traditional": "最終完成新手簽到起14天內可購買。"
@@ -64122,65 +64122,65 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_11_TITLE",
     "Korean": "겨울 나라의 온천 여관",
-    "English": "Hot Spring Inn in a Winter Country",
+    "English": "Hot Spring Inn in the Winter Land",
     "Japanese": "冬の国の温泉旅館",
-    "China_Simplified": "冬日王国温泉旅店",
+    "China_Simplified": "冬日王国溫泉旅館",
     "China_Traditional": "冬之國的溫泉旅館"
   },
   {
     "ID": "SYS_EVENT_DUNGEON_TITLE_11",
     "Korean": "겨울 나라의 <color=#92ffdf>온천 여관</color>",
-    "English": "<color=#92ffdf>Hot Spring Inn</color> in a Winter Country",
+    "English": "<color=#92ffdf>Hot Spring Inn</color> in the Winter Land",
     "Japanese": "冬の国の<color=#92ffdf>温泉旅館</color>",
-    "China_Simplified": "冬日王国<color=#92ffdf>温泉旅店</color>",
+    "China_Simplified": "冬日王国<color=#92ffdf>溫泉旅館</color>",
     "China_Traditional": "冬之國的<color=#92ffdf>溫泉旅館</color>"
   },
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_11",
     "Korean": "겨울 나라의 <color=#92ffdf>온천 여관 출석</color>",
-    "English": "<color=#92ffdf>Hot Spring Inn</color> in a Winter Country Check-in",
+    "English": "<color=#92ffdf>Hot Spring Inn</color> in the Winter Land Login",
     "Japanese": "冬の国の<color=#92ffdf>温泉旅館ログイン</color>",
-    "China_Simplified": "冬日王国<color=#92ffdf>温泉旅店签到</color>",
+    "China_Simplified": "冬日王国<color=#92ffdf>溫泉旅館签到</color>",
     "China_Traditional": "冬之國的<color=#92ffdf>溫泉旅館簽到</color>"
   },
   {
     "ID": "SYS_AREA_NAME_EVENT_11_1",
     "Korean": "겨울 나라의 온천 여관 - 1주차",
-    "English": "Hot Spring Inn in a Winter Country: Week 1",
+    "English": "Hot Spring Inn in the Winter Land: Week 1",
     "Japanese": "冬の国の温泉旅館 - 1週目",
-    "China_Simplified": "冬日王国温泉旅店 - 第1周",
+    "China_Simplified": "冬日王国溫泉旅館 - 第1周",
     "China_Traditional": "冬之國的溫泉旅館 - 第1週"
   },
   {
     "ID": "SYS_AREA_NAME_EVENT_11_HARD",
     "Korean": "겨울 나라의 온천 여관 - 1주차 하드",
-    "English": "Hot Spring Inn in a Winter Country: Week 1 Hard",
+    "English": "Hot Spring Inn in the Winter Land: Week 1 Hard",
     "Japanese": "冬の国の温泉旅館 - 1週目(ハード)",
-    "China_Simplified": "冬日王国温泉旅店 - 第1周困难",
+    "China_Simplified": "冬日王国溫泉旅館 - 第1周困难",
     "China_Traditional": "冬之國的溫泉旅館 - 第1週困難"
   },
   {
     "ID": "SYS_AREA_NAME_EVENT_11_2",
     "Korean": "겨울 나라의 온천 여관 - 2주차",
-    "English": "Hot Spring Inn in a Winter Country: Week 2",
+    "English": "Hot Spring Inn in the Winter Land: Week 2",
     "Japanese": "冬の国の温泉旅館 - 2週目",
-    "China_Simplified": "冬日王国温泉旅店 - 第2周",
+    "China_Simplified": "冬日王国溫泉旅館 - 第2周",
     "China_Traditional": "冬之國的溫泉旅館 - 第2週"
   },
   {
     "ID": "SYS_AREA_NAME_EVENT_11_HARD_2",
     "Korean": "겨울 나라의 온천 여관 - 2주차 하드",
-    "English": "Hot Spring Inn in a Winter Country: Week 2 Hard",
+    "English": "Hot Spring Inn in the Winter Land: Week 2 Hard",
     "Japanese": "冬の国の温泉旅館 - 2週目(ハード)",
-    "China_Simplified": "冬日王国温泉旅店 - 第2周困难",
+    "China_Simplified": "冬日王国溫泉旅館 - 第2周困难",
     "China_Traditional": "冬之國的溫泉旅館 - 第2週困難"
   },
   {
     "ID": "SYS_EVENT_S011_NAME",
     "Korean": "겨울 나라의 <color=#92ffdf>온천 여관</color>",
-    "English": "<color=#92ffdf>Hot Spring Inn</color> in a Winter Country",
+    "English": "<color=#92ffdf>Hot Spring Inn</color> in the Winter Land",
     "Japanese": "冬の国の<color=#92ffdf>温泉旅館</color>",
-    "China_Simplified": "冬日王国<color=#92ffdf>温泉旅店</color>",
+    "China_Simplified": "冬日王国<color=#92ffdf>溫泉旅館</color>",
     "China_Traditional": "冬之國的<color=#92ffdf>溫泉旅館</color>"
   },
   {
@@ -64458,9 +64458,9 @@
   {
     "ID": "SYS_EVENT_DUNGEON_SEASON11_HARD_21",
     "Korean": "겨울 나라의 온천 여관 - 랭크 챌린지",
-    "English": "Hot Spring Inn in a Winter Country: Ranked Challenge",
+    "English": "Hot Spring Inn in the Winter Land: Ranked Challenge",
     "Japanese": "冬の国の温泉旅館 - ランクチャレンジ",
-    "China_Simplified": "冬日温泉旅店 - 排名挑战",
+    "China_Simplified": "冬日溫泉旅館 - 排名挑战",
     "China_Traditional": "冬之國的溫泉旅館 - 等級挑戰"
   },
   {
@@ -64890,9 +64890,9 @@
   {
     "ID": "SYS_ACCOUNT_FRAME_DES_38",
     "Korean": "겨울 나라의 온천 여관 이벤트 던전 보상으로 지급되는 프로필 테두리입니다.",
-    "English": "A profile frame given out as a reward for the Hot Spring Inn in a Winter Country event dungeon.",
+    "English": "A profile frame given out as a reward for the Hot Spring Inn in the Winter Land event dungeon.",
     "Japanese": "イベント【冬の国の温泉旅館】の報酬で獲得できるフレーム。",
-    "China_Simplified": "作为冬日王国温泉旅店活动副本奖励发放的边框。",
+    "China_Simplified": "作为冬日王国溫泉旅館活动副本奖励发放的边框。",
     "China_Traditional": "冬之國的溫泉旅館活動副本發放的獎勵外框。"
   },
   {
@@ -66434,7 +66434,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_2",
     "Korean": "<color=#40E2FF>서머</color> <color=#FFCE26>아일랜드</color> <color=#FFFFFF>대소동 출석</color>",
-    "English": "<color=#40E2FF>Summer</color> <color=#FFCE26>Island</color> <color=#FFFFFF>Mayhem Check-in</color>",
+    "English": "<color=#40E2FF>Summer</color> <color=#FFCE26>Island</color> <color=#FFFFFF>Mayhem Login</color>",
     "Japanese": "<color=#40E2FF>50日記念! 大騒動!</color><color=#FFCE26>サマー</color><color=#FFFFFF>アイランドログイン</color>",
     "China_Simplified": "<color=#40E2FF>夏日</color> <color=#FFCE26>海岛</color> <color=#FFFFFF>大骚乱签到</color>",
     "China_Traditional": "<color=#40E2FF>夏日</color> <color=#FFCE26>島嶼</color> <color=#FFFFFF>大騷動簽到</color>"
@@ -67290,7 +67290,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_12",
     "Korean": "첨벙첨벙 <color=#fecd64>천공의 요타월드 출석</color>",
-    "English": "Splashing <color=#fecd64>in the Sky, Iota World Check-in</color>",
+    "English": "Splashing <color=#fecd64>in the Sky, Iota World Login</color>",
     "Japanese": "じゃぶじゃぶ<color=#fecd64>天空のイオータワールドログイン</color>",
     "China_Simplified": "哗啦哗啦<color=#fecd64>空中的佑妲世界签到</color>",
     "China_Traditional": "水花四濺的<color=#fecd64>佑妲空中樂園簽到</color>"
@@ -67898,7 +67898,7 @@
   {
     "ID": "SYS_ATTENDANCE_FESTIVAL_TITLE",
     "Korean": "아우터플레인 페스티벌 출석 이벤트",
-    "English": "OUTERPLANE Festival Check-in Event",
+    "English": "OUTERPLANE Festival Login Event",
     "Japanese": "アウプレフェスログインボーナス",
     "China_Simplified": "异域战记庆典签到活动",
     "China_Traditional": "異域戰記慶典簽到活動"
@@ -68058,7 +68058,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_13",
     "Korean": "오아시스의 <color=#fecd64>수수께끼 출석</color>",
-    "English": "<color=#fecd64>Mystery</color> of the Oasis! Check-in",
+    "English": "<color=#fecd64>Mystery</color> of the Oasis! Login",
     "Japanese": "解き明かせ!<color=#fecd64>オアシスの謎ログイン</color>",
     "China_Simplified": "绿洲<color=#fecd64>谜题签到</color>",
     "China_Traditional": "綠洲的<color=#fecd64>謎團簽到</color>"
@@ -72297,19 +72297,19 @@
   },
   {
     "ID": "SYS_EVENT_DUNGEON_TITLE_6",
-    "Korean": "[이벤트] 살아있는 영참사의 밤",
-    "English": "[Event] Night of the Living Soulslayer",
-    "Japanese": "【イベント】ナイト・オブ・ザ・霊斬士",
-    "China_Simplified": "【活动】非凡灵斩师之夜",
-    "China_Traditional": "【活動】在世靈斬師之夜"
+    "Korean": "살아있는 <color=#FF8080>영참사의 밤</color>",
+    "English": "Night of the Living <color=#FF8080>Soulslayer</color>",
+    "Japanese": "ナイト・オブ・ザ・<color=#FF8080>霊斬士</color>",
+    "China_Simplified": "活死<color=#FF8080>灵斩师之夜</color>",
+    "China_Traditional": "活死<color=#FF8080>靈斬師之夜</color>"
   },
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_6",
-    "Korean": "[출석] 살아있는 영참사의 밤",
-    "English": "[Check-in] Night of the Living Soulslayer",
-    "Japanese": "【ログイン】ナイト・オブ・ザ・霊斬士",
-    "China_Simplified": "【签到】非凡灵斩师之夜",
-    "China_Traditional": "【簽到】在世靈斬師之夜"
+    "Korean": "살아있는 <color=#FF8080>영참사의 밤</color> 출석",
+    "English": "Night of the Living <color=#FF8080>Soulslayer</color> Login Bonus",
+    "Japanese": "ナイト・オブ・ザ・<color=#FF8080>霊斬士</color> ログインボーナス",
+    "China_Simplified": "活死<color=#FF8080>灵斩师之夜</color>签到",
+    "China_Traditional": "活死<color=#FF8080>靈斬師之夜</color>簽到"
   },
   {
     "ID": "SYS_ADVENTURE_LICENSE_ALL_CLEAR",
@@ -72434,7 +72434,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_15",
     "Korean": "영참사를 멈추면 <color=#FF8080>안 돼!</color> 출석",
-    "English": "<color=#FF8080>Never</color> Stop Soulslayers! Check-in",
+    "English": "<color=#FF8080>Never</color> Stop Soulslayers! Login",
     "Japanese": "霊斬士を<color=#FF8080>止めるな!</color>ログイン",
     "China_Simplified": "<color=#FF8080>不能</color>阻挡灵斩师！签到",
     "China_Traditional": "靈斬師<color=#FF8080>不能</color>停下腳步！簽到"
@@ -72442,7 +72442,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_15_02",
     "Korean": "영참사를 멈추면 <color=#FF8080>안 돼!</color> 출석 ll",
-    "English": "<color=#FF8080>Never Stop</color> Soulslayers! Check-in II",
+    "English": "<color=#FF8080>Never Stop</color> Soulslayers! Login II",
     "Japanese": "霊斬士を<color=#FF8080>止めるな!</color>ログイン II",
     "China_Simplified": "<color=#FF8080>不能阻挡</color>灵斩师！签到 II",
     "China_Traditional": "靈斬師<color=#FF8080>不能停下腳步！</color>簽到 II"
@@ -74970,7 +74970,7 @@
   {
     "ID": "SYS_IRR_CHASE_41",
     "Korean": "대상의 체력이 일정 이하가 되면 다른 모험가들에게 도움을 요청하여 함께 공략할 수 있습니다.\\n참여 시 참여 보상을 획득하며, 섬멸전 성공/실패에 따라 보상이 달라집니다.",
-    "English": "When the target’s Health falls below a certain level, you can request help from other adventurers to tackle it together.\\nBy participating, you can earn rewards that vary based on the operation's success or failure.",
+    "English": "When the target's Health drops below a certain threshold, you can request help from other adventurers to defeat it together.\\nYou will receive participation rewards upon joining, and rewards vary depending on whether the operation succeeds or fails.",
     "Japanese": "敵のHPが一定以下になると、他のプレイヤーに救援依頼ができます。\\n救援に応じ殲滅戦に参加すると参加報酬を獲得でき、殲滅戦の成功/失敗によって受け取る報酬も追加で獲得できます。",
     "China_Simplified": "当目标生命值降至一定程度时，可以向其他冒险家请求帮助共同攻略。\\n参与时可获得奖励，根据歼灭战成功/失败情况奖励有所不同。",
     "China_Traditional": "當目標生命力低於一定值時，可向其他冒險家請求協助，共同進行攻掠。\\n參與時可獲得參與獎勵，且根據殲滅戰的成功/失敗，獎勵內容會有所不同。"
@@ -76106,7 +76106,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_16_TITLE",
     "Korean": "멋진 <color=#FFB266>신세계에서</color> 출석",
-    "English": "In the Great <color=#FFB266>New World</color> Check-In",
+    "English": "In the Great <color=#FFB266>New World</color> Login",
     "Japanese": "すばらしい<color=#FFB266>新世界で</color>ログイン",
     "China_Simplified": "美丽<color=#FFB266>新世界</color>签到",
     "China_Traditional": "璀璨<color=#FFB266>新世界</color>簽到"
@@ -76122,7 +76122,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_16",
     "Korean": "멋진 <color=#FFB266>신세계에서</color> 출석",
-    "English": "In the Great <color=#FFB266>New World</color> Check-In",
+    "English": "In the Great <color=#FFB266>New World</color> Login",
     "Japanese": "すばらしい<color=#FFB266>新世界で</color>ログイン",
     "China_Simplified": "美丽<color=#FFB266>新世界</color>签到",
     "China_Traditional": "璀璨<color=#FFB266>新世界</color>簽到"
@@ -77402,7 +77402,7 @@
   {
     "ID": "SYS_ATTENDANCE_FESTIVAL_TITLE_3",
     "Korean": "아우터 플레인 페스티벌 출석",
-    "English": "OUTERPLANE Festival Check-in",
+    "English": "OUTERPLANE Festival Login",
     "Japanese": "アウプレフェスログイン",
     "China_Simplified": "异域战记庆典签到",
     "China_Traditional": "異域戰記慶典簽到"
@@ -79954,7 +79954,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_19_TITLE",
     "Korean": "신년! <color=#FFB266>행운의 여신님</color> 출석",
-    "English": "New Year! <color=#FFB266>Goddess of Fortune!</color> Check-In",
+    "English": "New Year! <color=#FFB266>Goddess of Fortune!</color> Login",
     "Japanese": "新年!<color=#FFB266>幸運の女神様</color>ログイン",
     "China_Simplified": "新年！<color=#FFB266>幸运女神</color>签到",
     "China_Traditional": "新年！<color=#FFB266>幸運女神</color>簽到"
@@ -79970,7 +79970,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_19",
     "Korean": "신년! <color=#FFB266>행운의 여신님</color> 출석",
-    "English": "New Year! <color=#FFB266>Goddess of Fortune!</color> Check-In",
+    "English": "New Year! <color=#FFB266>Goddess of Fortune!</color> Login",
     "Japanese": "新年!<color=#FFB266>幸運の女神様</color>ログイン",
     "China_Simplified": "新年！<color=#FFB266>幸运女神</color>签到",
     "China_Traditional": "新年！<color=#FFB266>幸運女神</color>簽到"
@@ -80922,7 +80922,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_08",
     "Korean": "로봇은<color=#fecd64>초콜릿의 맛을 모른다</color> 출석",
-    "English": "A Robot Does Not Know the Taste of <color=#fecd64>Chocolate</color> Check-In",
+    "English": "A Robot Does Not Know the Taste of <color=#fecd64>Chocolate</color> Login",
     "Japanese": "オートマタは<color=#fecd64>チョコの味を知らない</color>ログイン",
     "China_Simplified": "机器人<color=#fecd64>不知道巧克力的味道</color>签到",
     "China_Traditional": "機器人<color=#fecd64>不懂巧克力的滋味</color>簽到"
@@ -81194,7 +81194,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_NEWYEAR2_TITLE",
     "Korean": "푸른 뱀의 해 출석 이벤트",
-    "English": "Year of the Blue Snake Check-In Event",
+    "English": "Year of the Blue Snake Login Event",
     "Japanese": "青蛇年のログインイベント",
     "China_Simplified": "灵蛇贺岁签到活动",
     "China_Traditional": "青蛇年簽到活動"
@@ -81410,7 +81410,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_RERUN_01_TITLE",
     "Korean": "부활한 오만의 마왕 출석",
-    "English": "Revived Archdemon of Hubris Check-In",
+    "English": "Revived Archdemon of Hubris Login",
     "Japanese": "蘇った傲慢の魔王ログイン",
     "China_Simplified": "复生傲慢魔王签到",
     "China_Traditional": "復活的傲慢魔王簽到"
@@ -81418,7 +81418,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_RERUN_02_TITLE",
     "Korean": "세이크리드 초콜릿 축제 출석",
-    "English": "Sacreed's Chocolate Festival Check-In",
+    "English": "Sacreed's Chocolate Festival Login",
     "Japanese": "セイクリッドチョコ祭りログイン",
     "China_Simplified": "圣科利德巧克力庆典签到",
     "China_Traditional": "聖科利德巧克力慶典簽到"
@@ -81658,7 +81658,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_20",
     "Korean": "엣셉흐 <color=#FFB266>초코 스쿼드</color> 출석",
-    "English": "Eseph <color=#FFB266>Chocolate Squad</color> Check-In",
+    "English": "Eseph <color=#FFB266>Chocolate Squad</color> Login",
     "Japanese": "エッセプ<color=#FFB266>チョコスクワッド</color>\\nログイン",
     "China_Simplified": "埃瑟夫赫<color=#FFB266>巧克力战队</color>签到",
     "China_Traditional": "約瑟夫<color=#FFB266>巧克小隊</color>簽到"
@@ -82314,7 +82314,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_23",
     "Korean": "던전에서 만남을 <color=#FFB266>추구하면 안 되는 걸까</color> 출석[상]",
-    "English": "<color=#FFB266>Is It Wrong</color> to Try to Pick Up Girls in a Dungeon? Check-In [Part 1]",
+    "English": "<color=#FFB266>Is It Wrong</color> to Try to Pick Up Girls in a Dungeon? Login [Part 1]",
     "Japanese": "ダンジョンに出会いを<color=#FFB266>求めるのは間違っているだろうか</color>ログイン【上】",
     "China_Simplified": "在地下城寻求邂逅<color=#FFB266>是否搞错了什么</color>签到【上】",
     "China_Traditional": "在地下城<color=#FFB266>尋求邂逅是否搞錯了什麼</color>簽到【上】"
@@ -82322,7 +82322,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_23_2",
     "Korean": "던전에서 만남을 <color=#FFB266>추구하면 안 되는 걸까</color> 출석[하]",
-    "English": "<color=#FFB266>Is It Wrong</color> to Try to Pick Up Girls in a Dungeon? Check-In [Part 2]",
+    "English": "<color=#FFB266>Is It Wrong</color> to Try to Pick Up Girls in a Dungeon? Login [Part 2]",
     "Japanese": "ダンジョンに出会いを<color=#FFB266>求めるのは間違っているだろうか</color>ログイン【下】",
     "China_Simplified": "在地下城寻求邂逅<color=#FFB266>是否搞错了什么</color>签到【下】",
     "China_Traditional": "在地下城<color=#FFB266>尋求邂逅是否搞錯了什麼</color>簽到【下】"
@@ -82418,7 +82418,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_GNOSIS_DELTA",
     "Korean": "밀랍 날개의 비상 이벤트 출석",
-    "English": "Flight of Wax Wings Event Check-In",
+    "English": "Flight of Wax Wings Event Login",
     "Japanese": "蝋の翼の飛翔ログイン",
     "China_Simplified": "蜡翼飞翔活动签到",
     "China_Traditional": "蜜蠟羽翼的飛翔活動簽到"
@@ -82426,7 +82426,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_DELTA",
     "Korean": "자칭 자동인형 업데이트 완료 이벤트 출석",
-    "English": "Self-Styled Automaton Update Complete Event Check-In",
+    "English": "Self-Styled Automaton Update Complete Event Login",
     "Japanese": "自称オートマタアップデート\\n完了ログイン",
     "China_Simplified": "自称机械人偶更新完成活动签到",
     "China_Traditional": "自稱自動人偶更新完成活動簽到"
@@ -83322,7 +83322,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_25_TITLE",
     "Korean": "골든 브레이크 <color=#FFB266>대소동</color> 출석[상]",
-    "English": "Golden Break <color=#FFB266>Mayhem</color> Check-In [Part 1]",
+    "English": "Golden Break <color=#FFB266>Mayhem</color> Login [Part 1]",
     "Japanese": "ゴールデンブレイク<color=#FFB266>大騒動</color> ログイン【上】",
     "China_Simplified": "黄金假期<color=#FFB266>大骚动</color>签到【上】",
     "China_Traditional": "黃金假期<color=#FFB266>大騷動</color>簽到【上】"
@@ -83330,7 +83330,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_25_2_TITLE",
     "Korean": "골든 브레이크 <color=#FFB266>대소동</color> 출석[하]",
-    "English": "Golden Break <color=#FFB266>Mayhem</color> Check-In [Part 2]",
+    "English": "Golden Break <color=#FFB266>Mayhem</color> Login [Part 2]",
     "Japanese": "ゴールデンブレイク<color=#FFB266>大騒動</color> ログイン【下】",
     "China_Simplified": "黄金假期<color=#FFB266>大骚动</color>签到【下】",
     "China_Traditional": "黃金假期<color=#FFB266>大騷動</color>簽到【下】"
@@ -83346,7 +83346,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_25",
     "Korean": "골든 브레이크 <color=#FFB266>대소동</color> 출석[상]",
-    "English": "Golden Break <color=#FFB266>Mayhem</color> Check-In [Part 1]",
+    "English": "Golden Break <color=#FFB266>Mayhem</color> Login [Part 1]",
     "Japanese": "ゴールデンブレイク<color=#FFB266>大騒動</color> ログイン【上】",
     "China_Simplified": "黄金假期<color=#FFB266>大骚动</color>签到【上】",
     "China_Traditional": "黃金假期<color=#FFB266>大騷動</color>簽到【上】"
@@ -83354,7 +83354,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_25_2",
     "Korean": "골든 브레이크 <color=#FFB266>대소동</color> 출석[하]",
-    "English": "Golden Break <color=#FFB266>Mayhem</color> Check-In [Part 2]",
+    "English": "Golden Break <color=#FFB266>Mayhem</color> Login [Part 2]",
     "Japanese": "ゴールデンブレイク<color=#FFB266>大騒動</color> ログイン【下】",
     "China_Simplified": "黄金假期<color=#FFB266>大骚动</color>签到【下】",
     "China_Traditional": "黃金假期<color=#FFB266>大騷動</color>簽到【下】"
@@ -84282,7 +84282,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_26_TITLE",
     "Korean": "황혼 <color=#FFB266>프로젝트</color> 출석",
-    "English": "Project <color=#FFB266>Twilight</color> Check-in",
+    "English": "Project <color=#FFB266>Twilight</color> Login",
     "Japanese": "黄昏<color=#FFB266>プロジェクト</color>ログイン",
     "China_Simplified": "黄昏<color=#FFB266>计划</color>签到",
     "China_Traditional": "黃昏<color=#FFB266>專案</color>簽到"
@@ -84298,7 +84298,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_26",
     "Korean": "황혼 <color=#FFB266>프로젝트</color> 출석",
-    "English": "Project <color=#FFB266>Twilight</color> Check-in",
+    "English": "Project <color=#FFB266>Twilight</color> Login",
     "Japanese": "黄昏<color=#FFB266>プロジェクト</color>ログイン",
     "China_Simplified": "黄昏<color=#FFB266>计划</color>签到",
     "China_Traditional": "黃昏<color=#FFB266>專案</color>簽到"
@@ -84498,7 +84498,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_27_TITLE",
     "Korean": "소중한 당신에게, <color=#FFB266>축하를!</color> 출석",
-    "English": "To my dear, <color=#FFB266>Congratulations!</color> Check-in",
+    "English": "To my dear, <color=#FFB266>Congratulations!</color> Login",
     "Japanese": "大切な貴方に<color=#FFB266>お祝いを!</color>ログイン",
     "China_Simplified": "为珍视的你，<color=#FFB266>庆祝！</color>签到",
     "China_Traditional": "獻給珍貴的你，<color=#FFB266>誠摯地祝福！</color>簽到"
@@ -84514,7 +84514,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_27",
     "Korean": "소중한 당신에게, <color=#FFB266>축하를!</color> 출석",
-    "English": "To my dear, <color=#FFB266>Congratulations!</color> Check-in",
+    "English": "To my dear, <color=#FFB266>Congratulations!</color> Login",
     "Japanese": "大切な貴方に<color=#FFB266>お祝いを!</color>ログイン",
     "China_Simplified": "为珍视的你，<color=#FFB266>庆祝！</color>签到",
     "China_Traditional": "獻給珍貴的你，<color=#FFB266>誠摯地祝福！</color>簽到"
@@ -84938,7 +84938,7 @@
   {
     "ID": "SYS_DEMIURGE_CONTRACT_ATTENDANCE",
     "Korean": "계약출석 : 현재 {0}주차 진행 중",
-    "English": "Contract Check-in: Currently on Week {0}",
+    "English": "Contract Login: Currently on Week {0}",
     "Japanese": "契約ログイン : 現在{0}週目進行中",
     "China_Simplified": "签约签到：目前正在进行第{0}周",
     "China_Traditional": "簽約簽到：目前正在進行第{0}週"
@@ -84979,7 +84979,7 @@
     "ID": "SYS_MERSHA_FES_ELF_DESC_2",
     "Korean": "강력한 데미우르고스 동료로 첫 클리어 후\\n소탕을 통해 장비를 모아보세요!",
     "English": "After your first clear with powerful Demiurge Hero,\\nuse Sweep to collect equipment!",
-    "Japanese": "強力なデミウルゴスの仲間で初回クリア後、\\n掃討を通じて装備を集めましょう！",
+    "Japanese": "強力なデミウルゴスの仲間で初回クリア後、\\nスキップを通じて装備を集めましょう！",
     "China_Simplified": "使用强力的创世之神同伴完成首次通关后，\\n通过扫荡来收集装备吧！",
     "China_Traditional": "使用強力的迪米烏哥斯伴完成首次通關後，\\n透過掃蕩來收集裝備吧！"
   },
@@ -85658,7 +85658,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_MIRSHA_FESTIVAL_01",
     "Korean": "메르샤 페스티벌 출석 l",
-    "English": "Mirsha Festival Check-in I",
+    "English": "Mirsha Festival Login I",
     "Japanese": "メルシャフェスログイン l",
     "China_Simplified": "弥乐沙庆典签到I",
     "China_Traditional": "美洛沙慶典簽到 I"
@@ -85666,7 +85666,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_MIRSHA_FESTIVAL_02",
     "Korean": "메르샤 페스티벌 출석 ll",
-    "English": "Mirsha Festival Check-in II",
+    "English": "Mirsha Festival Login II",
     "Japanese": "メルシャフェスログイン ll",
     "China_Simplified": "弥乐沙庆典签到II",
     "China_Traditional": "美洛沙慶典簽到 II"
@@ -86978,7 +86978,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_28_TITLE",
     "Korean": "종말을 쫓는 <color=#FFB266>달빛</color> 출석",
-    "English": "<color=#FFB266>Moonlight</color> at World’s End Check-in",
+    "English": "<color=#FFB266>Moonlight</color> at World’s End Login",
     "Japanese": "終末を追う<color=#FFB266>月光</color>ログイン",
     "China_Simplified": "追逐末日的<color=#FFB266>月光</color>签到",
     "China_Traditional": "追逐終焉的<color=#FFB266>月光</color>簽到"
@@ -86994,7 +86994,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_28",
     "Korean": "종말을 쫓는 <color=#FFB266>달빛</color> 출석",
-    "English": "<color=#FFB266>Moonlight</color> at World’s End Check-in",
+    "English": "<color=#FFB266>Moonlight</color> at World’s End Login",
     "Japanese": "終末を追う<color=#FFB266>月光</color>ログイン",
     "China_Simplified": "追逐末日的<color=#FFB266>月光</color>签到",
     "China_Traditional": "追逐終焉的<color=#FFB266>月光</color>簽到"
@@ -92122,7 +92122,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_12_1_TITLE",
     "Korean": "첨벙첨벙 <color=#fecd64>천공의 요타월드 출석 l</color>",
-    "English": "Splashing in the Sky, <color=#fecd64>Iota World Check-In l</color>",
+    "English": "Splashing in the Sky, <color=#fecd64>Iota World Login l</color>",
     "Japanese": "じゃぶじゃぶ<color=#fecd64>天空のイオータワールドログインⅠ</color>",
     "China_Simplified": "哗啦哗啦<color=#fecd64>空中的佑妲世界签到l</color>",
     "China_Traditional": "水花四濺的<color=#fecd64>佑妲空中樂園簽到l</color>"
@@ -92130,7 +92130,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_12_2_TITLE",
     "Korean": "첨벙첨벙 <color=#fecd64>천공의 요타월드 출석 ll</color>",
-    "English": "Splashing in the Sky, <color=#fecd64>Iota World Check-In ll</color>",
+    "English": "Splashing in the Sky, <color=#fecd64>Iota World Login ll</color>",
     "Japanese": "じゃぶじゃぶ<color=#fecd64>天空のイオータワールドログインⅡ</color>",
     "China_Simplified": "哗啦哗啦<color=#fecd64>空中的佑妲世界签到ll</color>",
     "China_Traditional": "水花四濺的<color=#fecd64>佑妲空中樂園簽到ll</color>"
@@ -92138,7 +92138,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_12_1",
     "Korean": "첨벙첨벙 <color=#fecd64>천공의 요타월드 출석 l</color>",
-    "English": "Splashing in the Sky, <color=#fecd64>Iota World Check-In l</color>",
+    "English": "Splashing in the Sky, <color=#fecd64>Iota World Login l</color>",
     "Japanese": "じゃぶじゃぶ<color=#fecd64>天空のイオータワールドログインⅠ</color>",
     "China_Simplified": "哗啦哗啦<color=#fecd64>空中的佑妲世界签到l</color>",
     "China_Traditional": "水花四濺的<color=#fecd64>佑妲空中樂園簽到l</color>"
@@ -92146,7 +92146,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_12_2",
     "Korean": "첨벙첨벙 <color=#fecd64>천공의 요타월드 출석 ll</color>",
-    "English": "Splashing in the Sky, <color=#fecd64>Iota World Check-In ll</color>",
+    "English": "Splashing in the Sky, <color=#fecd64>Iota World Login ll</color>",
     "Japanese": "じゃぶじゃぶ<color=#fecd64>天空のイオータワールドログインⅡ</color>",
     "China_Simplified": "哗啦哗啦<color=#fecd64>空中的佑妲世界签到ll</color>",
     "China_Traditional": "水花四濺的<color=#fecd64>佑妲空中樂園簽到ll</color>"
@@ -96513,11 +96513,11 @@
   },
   {
     "ID": "SYS_MONAD_GATE_CUBE_ACTIVATE_COUNT_EMPTY",
-    "Korean": "모든 횟수 사용",
-    "English": "All Attempts Used",
-    "Japanese": "すべての回数を使用済み",
-    "China_Simplified": "所有次数已用完",
-    "China_Traditional": "所有次數已用完"
+    "Korean": "큐브 분석 횟수를 모두 사용하셨습니다. 완료 버튼을 눌러 분석을 종료하실 수 있습니다.",
+    "English": "You have used all Cube Analysis attempts. Tap Complete to end the analysis.",
+    "Japanese": "キューブ分析回数をすべて使用されました。完了ボタンを押して分析を終了することができます。",
+    "China_Simplified": "您已使用完所有魔方分析次数。可以按下完成按钮结束分析。",
+    "China_Traditional": "您已使用完所有魔方分析次數。可以按下完成按鈕結束分析。"
   },
   {
     "ID": "SYS_MONAD_GATE_CUBE_BATTLE_FAIL_1",
@@ -96986,7 +96986,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_58_01",
     "Korean": "해적 선장 카논 출석 이벤트 l ",
-    "English": "Pirate Captain Kanon Check-in Event I ",
+    "English": "Pirate Captain Kanon Login Event I ",
     "Japanese": "海賊船長カノンログインイベント l ",
     "China_Simplified": "海盗船长卡农签到活动I ",
     "China_Traditional": "海盜船長卡農簽到活動 l "
@@ -96994,7 +96994,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_58_02",
     "Korean": "해적 선장 카논 출석 이벤트 ll",
-    "English": "Pirate Captain Kanon Check-in Event II",
+    "English": "Pirate Captain Kanon Login Event II",
     "Japanese": "海賊船長カノンログインイベント ll",
     "China_Simplified": "海盗船长卡农签到活动II",
     "China_Traditional": "海盜船長卡農簽到活動 ll"
@@ -97018,7 +97018,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_62_01",
     "Korean": "포르투나의 패밀리 출석 이벤트 l ",
-    "English": "Fortuna's Family Check-in Event I",
+    "English": "Fortuna's Family Login Event I",
     "Japanese": "フォルトゥナのファミリー ログインボーナス I",
     "China_Simplified": "福耳图娜家族签到活动I",
     "China_Traditional": "福耳圖娜家族簽到活動 I"
@@ -97026,7 +97026,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_62_02",
     "Korean": "포르투나의 패밀리 출석 이벤트 ll ",
-    "English": "Fortuna's Family Check-in Event II",
+    "English": "Fortuna's Family Login Event II",
     "Japanese": "フォルトゥナのファミリー ログインボーナス II",
     "China_Simplified": "福耳图娜家族签到活动II",
     "China_Traditional": "福耳圖娜家族簽到活動 II"
@@ -99083,7 +99083,7 @@
     "ID": "SYS_CONTENS_LOCK_BATTLE_SWEEP",
     "Korean": "소탕",
     "English": "Sweep",
-    "Japanese": "掃討",
+    "Japanese": "スキップ",
     "China_Simplified": "扫荡",
     "China_Traditional": "掃蕩"
   },
@@ -100074,7 +100074,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_02_1",
     "Korean": "<color=#fecd64>서머 아일랜드</color> 출석 l",
-    "English": "<Color=#fecd64>Summer Island</color> Check-in I",
+    "English": "<Color=#fecd64>Summer Island</color> Login I",
     "Japanese": "<color=#fecd64>サマーアイランド</color> ログイン l",
     "China_Simplified": "<color=#fecd64>夏日海岛</color>签到I",
     "China_Traditional": "<color=#fecd64>夏日島嶼</color>簽到l"
@@ -100082,7 +100082,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_02_2",
     "Korean": "<color=#fecd64>서머 아일랜드</color> 출석 ll",
-    "English": "<Color=#fecd64>Summer Island</color> Check-in II",
+    "English": "<Color=#fecd64>Summer Island</color> Login II",
     "Japanese": "<color=#fecd64>サマーアイランド</color> ログイン ll",
     "China_Simplified": "<color=#fecd64>夏日海岛</color>签到II",
     "China_Traditional": "<color=#fecd64>夏日島嶼</color>簽到ll"
@@ -100138,7 +100138,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_03",
     "Korean": "떠나자 <color=#FFB266>여름캠프</color> 출석",
-    "English": "Off to <color=#FFB266>Summer Camp</color> Check-in",
+    "English": "Off to <color=#FFB266>Summer Camp</color> Login",
     "Japanese": "さあ！ <color=#FFB266>サマーキャンプ</color> ログイン",
     "China_Simplified": "出发！<color=#FFB266>夏令营</color>签到",
     "China_Traditional": "前進<color=#FFB266>夏令營</color>簽到"
@@ -100665,7 +100665,7 @@
   },
   {
     "ID": "SYS_ARCADE_EVENT_RPS_DESC_2",
-    "Korean": "보유 코인은  매일 오전 9시에 초기화됩니다.",
+    "Korean": "보유하신 코인은 이벤트 기간 동안 유지됩니다.",
     "English": "Held coins reset daily at 9:00 a.m.",
     "Japanese": "所持コインは毎日9時にリセットされます。",
     "China_Simplified": "持有的硬币每日9:00重置。",
@@ -100859,7 +100859,7 @@
     "ID": "SYS_PIECE_DUNGEON_REWARD_WARNNING",
     "Korean": "{0} 동료의 최대 초월까지 필요한 조각은 {1}개 입니다. 소탕을 진행하실 경우, 여분의 조각 {2}개는 소멸됩니다. 계속 하시겠습니까?",
     "English": "{0} requires {1} pieces to reach max Transcendence. Proceeding with Sweep will discard the extra {2} pieces. Continue?",
-    "Japanese": "{0}の最大超越までに必要なピースは{1}個です。掃討を実行すると、余分な{2}個は消滅します。続行しますか？",
+    "Japanese": "{0}の最大超越までに必要なピースは{1}個です。スキップを実行すると、余分な{2}個は消滅します。続行しますか？",
     "China_Simplified": "{0}的最大超越还需要{1}个碎片。若继续扫荡，多余的{2}个将会消失。要继续吗？",
     "China_Traditional": "{0}的最大超越還需要{1}個碎片。若繼續掃蕩，多餘的{2}個將會消失。要繼續嗎？"
   },
@@ -100962,7 +100962,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_36_TITLE_1",
     "Korean": "이상한 교도소의 <color=#FFB266>비엘라</color> 출석 l",
-    "English": "<color=#FFB266>Viella</color> of the Strange Prison Check-in I",
+    "English": "<color=#FFB266>Viella</color> of the Strange Prison Login I",
     "Japanese": "不思議な監獄の<color=#FFB266>ビエラ</color> ログインI",
     "China_Simplified": "奇怪的监狱的<color=#FFB266>比埃拉</color> 签到I",
     "China_Traditional": "奇怪監獄的<color=#FFB266>碧耶拉</color> 簽到I"
@@ -100970,7 +100970,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_36_TITLE_2",
     "Korean": "이상한 교도소의 <color=#FFB266>비엘라</color> 출석 ll",
-    "English": "<color=#FFB266>Viella</color> of the Strange Prison Check-in II",
+    "English": "<color=#FFB266>Viella</color> of the Strange Prison Login II",
     "Japanese": "不思議な監獄の<color=#FFB266>ビエラ</color> ログインII",
     "China_Simplified": "奇怪的监狱的<color=#FFB266>维艾拉</color> 签到II",
     "China_Traditional": "奇怪監獄的<color=#FFB266>碧耶拉</color> 簽到II"
@@ -102097,11 +102097,11 @@
   },
   {
     "ID": "SYS_PVE_SWEEP_DESC",
-    "Korean": "각 속성별로 가장 높은 클리어 단계의 던전을 자동 선택 합니다.\\n각 선택한 던전을 일괄적으로 1회씩 소탕합니다.",
-    "English": "Automatically selects the highest cleared dungeon of each element.\\nSweeps each selected dungeon once.",
-    "Japanese": "各属性で最も高いクリア段階のダンジョンを自動で選択します。\\n選択されたダンジョンをそれぞれ1回ずつスキップします。",
-    "China_Simplified": "自动选择各属性中最高通关阶段的地下城。\\n将所选地下城各扫荡1次。",
-    "China_Traditional": "自動選擇各屬性中最高通關階段的地下城。\\n將所選地下城各掃蕩1次。"
+    "Korean": "각 속성별로 가장 높은 클리어 단계의 던전을 자동 선택 합니다.\\n선택한 던전을 각각 1회 또는 6회씩 일괄 소탕합니다.",
+    "English": "Automatically selects the highest cleared dungeon for each element.\\nSweeps the selected dungeons 1 or 6 times each.",
+    "Japanese": "各属性ごとに最もクリアした段階のダンジョンを自動選択します。\\n選択したダンジョンをそれぞれ1回または6回ずつまとめてスキップします。",
+    "China_Simplified": "自动选择各属性中通关阶段最高的地下城。\\n对选择的地下城分别进行1次或6次一键扫荡。",
+    "China_Traditional": "自動選擇各屬性中通關階段最高的地下城。\\n對選擇的地下城分別進行1次或6次一鍵掃蕩。"
   },
   {
     "ID": "SYS_PVE_SWEEP_SELL_DESOLVE",
@@ -102110,6 +102110,30 @@
     "Japanese": "売却／分解",
     "China_Simplified": "出售／分解",
     "China_Traditional": "販賣／分解"
+  },
+  {
+    "ID": "SYS_SWEEP_1",
+    "Korean": "소탕 1회",
+    "English": "Sweep x1",
+    "Japanese": "スキップ1回",
+    "China_Simplified": "扫荡1次",
+    "China_Traditional": "掃蕩1次"
+  },
+  {
+    "ID": "SYS_SWEEP_6",
+    "Korean": "소탕 6회",
+    "English": "Sweep x6",
+    "Japanese": "スキップ6回",
+    "China_Simplified": "扫荡6次",
+    "China_Traditional": "掃蕩6次"
+  },
+  {
+    "ID": "SYS_PVE_SWEEP_6_CONFIRM",
+    "Korean": "선택한 던전을 6회씩 소탕합니다.\\n참여 횟수 제한 던전은 남은 참여 횟수만큼만 소탕됩니다.",
+    "English": "Sweep the selected dungeons 6 times each.\\nDungeons with entry limits will only be swept for their remaining entries.",
+    "Japanese": "選択したダンジョンを6回ずつスキップします。\\n参加回数制限のあるダンジョンは、残りの参加回数分だけスキップされます。",
+    "China_Simplified": "将对所选地下城进行6次扫荡。\\n有参与次数限制的地下城，仅扫荡剩余的参与次数。",
+    "China_Traditional": "將對所選地下城進行6次掃蕩。\\n有參與次數限制的地下城，僅掃蕩剩餘的參與次數。"
   },
   {
     "ID": "SYS_EVENT_GAME_FIREWORKS_TITLE_02",
@@ -102122,7 +102146,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_63",
     "Korean": "<color=#FCE1B2>모나드 마츠리</color>출석",
-    "English": "<color=#FCE1B2>Monad Festival</color> Check-In",
+    "English": "<color=#FCE1B2>Monad Festival</color> Login",
     "Japanese": "<color=#FCE1B2>モナド祭り</color>ログイン",
     "China_Simplified": "<color=#FCE1B2>单子祭典</color>登录",
     "China_Traditional": "<color=#FCE1B2>單體祭典</color>登入"
@@ -102850,7 +102874,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_38_TITLE_1",
     "Korean": "<color=#FFB266>축제,</color> 그리고 비밀의 레시피 출석 l",
-    "English": "<color=#FFB266>Festival</color> and the Secret Recipe Check-in I",
+    "English": "<color=#FFB266>Festival</color> and the Secret Recipe Login I",
     "Japanese": "<color=#FFB266>フェス、</color>そして秘密のレシピログインI",
     "China_Simplified": "<color=#FFB266>庆典</color>，与秘密食谱签到 I",
     "China_Traditional": "<color=#FFB266>慶典</color>，與秘密食譜簽到 I"
@@ -102858,7 +102882,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_38_TITLE_2",
     "Korean": "<color=#FFB266>축제,</color> 그리고 비밀의 레시피 출석 ll",
-    "English": "<color=#FFB266>Festival</color> and the Secret Recipe Check-in II",
+    "English": "<color=#FFB266>Festival</color> and the Secret Recipe Login II",
     "Japanese": "<color=#FFB266>フェス、</color>そして秘密のレシピログインII",
     "China_Simplified": "<color=#FFB266>庆典</color>，与秘密食谱签到 II",
     "China_Traditional": "<color=#FFB266>慶典</color>，與秘密食譜簽到 II"
@@ -102930,7 +102954,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_38_1",
     "Korean": "축제, 그리고 비밀의 레시피 출석 l",
-    "English": "Festival and the Secret Recipe Check-in I",
+    "English": "Festival and the Secret Recipe Login I",
     "Japanese": "フェス、そして秘密のレシピログインI",
     "China_Simplified": "庆典与秘密食谱 签到 I",
     "China_Traditional": "慶典，與秘密食譜 簽到 I"
@@ -102938,7 +102962,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_38_2",
     "Korean": "축제, 그리고 비밀의 레시피 출석 ll",
-    "English": "Festival and the Secret Recipe Check-in II",
+    "English": "Festival and the Secret Recipe Login II",
     "Japanese": "フェス、そして秘密のレシピログインII",
     "China_Simplified": "庆典与秘密食谱 签到 II",
     "China_Traditional": "慶典，與秘密食譜 簽到 II"
@@ -103954,7 +103978,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_64",
     "Korean": "<color=#FCE1B2>2.5 주년!</color>출석",
-    "English": "<color=#FCE1B2>2.5 Anniversary!</color> Check-in",
+    "English": "<color=#FCE1B2>2.5 Anniversary!</color> Login",
     "Japanese": "<color=#FCE1B2>フェス記念!</color>ログインイベント",
     "China_Simplified": "<color=#FCE1B2>2.5周年！</color>签到",
     "China_Traditional": "<color=#FCE1B2>2.5周年！</color>簽到"
@@ -104004,40 +104028,40 @@
     "Korean": "베로니카 코어 융합 Lv1",
     "English": "Veronica Core Fusion Lv.1",
     "Japanese": "ヴェロニカ コアフュージョン Lv1",
-    "China_Simplified": "维罗妮卡核心融合 Lv.1",
-    "China_Traditional": "維羅妮卡核心融合 Lv.1"
+    "China_Simplified": "维罗妮卡核心融合 Lv1",
+    "China_Traditional": "維羅妮卡核心融合 Lv1"
   },
   {
     "ID": "SYS_FUSION_LEVEL_NAME_2700037_02",
     "Korean": "베로니카 코어 융합 Lv2",
     "English": "Veronica Core Fusion Lv.2",
     "Japanese": "ヴェロニカ コアフュージョン Lv2",
-    "China_Simplified": "维罗妮卡核心融合 Lv.2",
-    "China_Traditional": "維羅妮卡核心融合 Lv.2"
+    "China_Simplified": "维罗妮卡核心融合 Lv2",
+    "China_Traditional": "維羅妮卡核心融合 Lv2"
   },
   {
     "ID": "SYS_FUSION_LEVEL_NAME_2700037_03",
     "Korean": "베로니카 코어 융합 Lv3",
     "English": "Veronica Core Fusion Lv.3",
     "Japanese": "ヴェロニカ コアフュージョン Lv3",
-    "China_Simplified": "维罗妮卡核心融合 Lv.3",
-    "China_Traditional": "維羅妮卡核心融合 Lv.3"
+    "China_Simplified": "维罗妮卡核心融合 Lv3",
+    "China_Traditional": "維羅妮卡核心融合 Lv3"
   },
   {
     "ID": "SYS_FUSION_LEVEL_NAME_2700037_04",
     "Korean": "베로니카 코어 융합 Lv4",
     "English": "Veronica Core Fusion Lv.4",
     "Japanese": "ヴェロニカ コアフュージョン Lv4",
-    "China_Simplified": "维罗妮卡核心融合 Lv.4",
-    "China_Traditional": "維羅妮卡核心融合 Lv.4"
+    "China_Simplified": "维罗妮卡核心融合 Lv4",
+    "China_Traditional": "維羅妮卡核心融合 Lv4"
   },
   {
     "ID": "SYS_FUSION_LEVEL_NAME_2700037_05",
     "Korean": "베로니카 코어 융합 Lv5",
     "English": "Veronica Core Fusion Lv.5",
     "Japanese": "ヴェロニカ コアフュージョン Lv5",
-    "China_Simplified": "维罗妮卡核心融合 Lv.5",
-    "China_Traditional": "維羅妮卡核心融合 Lv.5"
+    "China_Simplified": "维罗妮卡核心融合 Lv5",
+    "China_Traditional": "維羅妮卡核心融合 Lv5"
   },
   {
     "ID": "SYS_FUSION_LEVEL_DESC_2700037_01",
@@ -104266,7 +104290,7 @@
   {
     "ID": "SYS_ATTENDANCE_EVENT_65_02",
     "Korean": "<color=#FCE1B2>2.5 주년!</color>출석 ll",
-    "English": "<color=#FCE1B2>Thanksgiving </color> Check-in Event",
+    "English": "<color=#FCE1B2>Thanksgiving </color> Login Event",
     "Japanese": "<color=#FCE1B2>フェス記念!</color> ログイン",
     "China_Simplified": "<color=#FCE1B2>2.5周年！</color> 出席 II",
     "China_Traditional": "<color=#FCE1B2>2.5週年！</color> 出席 II"
@@ -104602,7 +104626,7 @@
   {
     "ID": "SYS_GEAR_RESET_DESC_02",
     "Korean": "장비의 강화, 돌파를 초기화하시겠습니까?\\n성장에 사용된 각종 재료가 모두 환원됩니다.",
-    "English": "Reset the enhancement and breakthrough of this equipment?\\nAll materials used for growth will be refunded.",
+    "English": "Reset this equipment's enhancement and breakthrough?\\nAll materials used for growth will be refunded.",
     "Japanese": "装備の強化・突破をリセットしますか？\\n強化に使用した素材はすべて返還されます。",
     "China_Simplified": "要重置该装备的强化与突破吗？\\n所有用于成长的材料将被返还。",
     "China_Traditional": "要重置該裝備的強化與突破嗎？\\n所有用於成長的材料將被返還。"
@@ -107171,7 +107195,7 @@
     "ID": "SYS_IRR_SWEEP_TITLE",
     "Korean": "추격 섬멸전 소탕",
     "English": "Sweep Chase Battle",
-    "Japanese": "追撃殲滅戦掃討",
+    "Japanese": "追撃殲滅戦スキップ",
     "China_Simplified": "扫荡追击歼灭战",
     "China_Traditional": "掃蕩追擊殲滅戰"
   },
@@ -107203,7 +107227,7 @@
     "ID": "SYS_IRR_SWEEP_DESC_2",
     "Korean": "소탕을 위해서는 해당 보스의 처치 기록이 있어야 합니다.",
     "English": "You must have a record of defeating the Boss to Sweep.",
-    "Japanese": "掃討を行うには、該当ボスの討伐記録が必要です。",
+    "Japanese": "スキップを行うには、該当ボスの討伐記録が必要です。",
     "China_Simplified": "需有该首领的击杀记录才可扫荡。",
     "China_Traditional": "需有該首領的擊殺記錄才可掃蕩。"
   },
@@ -107211,7 +107235,7 @@
     "ID": "SYS_IRR_SWEEP_DESC_3",
     "Korean": "소탕을 위해서는 매일 해당 보스와 1회 이상 전투가 진행되어야 합니다.",
     "English": "You must battle the Boss at least once daily to Sweep.",
-    "Japanese": "掃討を行うには、毎日該当ボスと1回以上戦闘を行う必要があります。",
+    "Japanese": "スキップを行うには、毎日該当ボスと1回以上戦闘を行う必要があります。",
     "China_Simplified": "每天需与该首领进行1次以上的战斗才可扫荡。",
     "China_Traditional": "每天需與該首領進行1次以上的戰鬥才可掃蕩。"
   },
@@ -109683,7 +109707,7 @@
     "ID": "SYS_ALL_CLEAR_SPECIAL_STORY_DUNGEON_01",
     "Korean": "포인트를 획득할 수 있는 가장 높은 단계까지의 던전을 자동 선택합니다.\\n각 선택한 던전을 일괄적으로 최대 소탕 가능 횟수만큼 소탕합니다.",
     "English": "Automatically selects the highest stages that grant points.\\nSweeps all selected dungeons up to the maximum number of available sweeps.",
-    "Japanese": "ポイントを獲得できる最も高い段階までのダンジョンを自動選択します。\\n選択した各ダンジョンを一括で最大掃討可能回数分、掃討します。",
+    "Japanese": "ポイントを獲得できる最も高い段階までのダンジョンを自動選択します。\\n選択した各ダンジョンを一括で最大スキップ可能回数分、スキップします。",
     "China_Simplified": "自动选择可获得点数的最高阶段副本。\\n将按最大可扫荡次数一键扫荡所选副本。",
     "China_Traditional": "自動選擇可獲得點數的最高階段副本。\\n將按最大可掃蕩次數一鍵掃蕩所選副本。"
   },
@@ -109858,7 +109882,7 @@
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_43",
     "Korean": "태양, 그 빛은 <color=#FFB266>영원하리</color> 출석",
-    "English": "The Sun, <color=#FFB266>Everlasting Light</color> Check-in",
+    "English": "The Sun, <color=#FFB266>Everlasting Light</color> Login",
     "Japanese": "太陽、その光は<color=#FFB266>永遠なれ</color> ログイン",
     "China_Simplified": "太阳，光辉<color=#FFB266>永恒</color> 签到",
     "China_Traditional": "太陽，那道光將直到<color=#FFB266>永遠</color> 簽到"
@@ -111274,7 +111298,7 @@
   {
     "ID": "SYS_NEW_USER_NEW_USER_ATTENDENCE",
     "Korean": "신규 유저 출석",
-    "English": "New Master Check-in",
+    "English": "New Master Login",
     "Japanese": "新規マスターログイン\\nボーナス",
     "China_Simplified": "新主人签到",
     "China_Traditional": "新主人簽到"
@@ -113275,7 +113299,7 @@
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_02",
     "Korean": "리더로 설정한 동료의 직업에 따라 이로운 효과를 얻습니다.\\n\\n<color=#ffd732>공격형</color>\\n아군 전체 체력, 공격력 <color=#28d9ed>20%</color> 증가\\n피격 시 행동게이지 <color=#28d9ed>15%</color> 증가 (리더 본인)\\n\\n<color=#ffd732>마법형</color>\\n아군 전체 주는 피해, 공격력 <color=#28d9ed>20%</color> 증가\\n턴 획득 시 피해량 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>10%</color> 증가 (리더 본인)\\n\\n<color=#ffd732>속도형</color>\\n아군 전체 효과 적중, 효과 저항 <color=#28d9ed>30%</color> 증가\\n자신의 필살기 피해량 <color=#28d9ed>30%</color> 증가 (리더 본인)\\n\\n<color=#ffd732>방어형</color>\\n아군 전체 체력, 방어력 <color=#28d9ed>30%</color> 증가\\n자신이 받는 최종 피해 <color=#28d9ed>10%</color> 감소 (리더 본인)\\n\\n<color=#ffd732>회복형</color>\\n아군 전체 받는 피해, 받는 치명 피해 <color=#28d9ed>30%</color> 감소\\n피격 시 아군 전체 행동 게이지 <color=#28d9ed>5%</color> 증가 (리더 본인)",
     "English": "Gain beneficial effects based on the class of the hero set as Leader.\\n\\n<color=#ffd732>Striker</color>\\nAll heroes' Health, Attack increase by <color=#28d9ed>20%</color>\\nPriority increases by <color=#28d9ed>15%</color> when hit (Leader only)\\n\\n<color=#ffd732>Mage</color>\\nAll heroes' DMG dealt, Attack increase by <color=#28d9ed>20%</color>\\nDMG increases by <color=#28d9ed>10%</color> for <color=#28d9ed>1 turn</color> when a turn is gained (Leader only)\\n\\n<color=#ffd732>Ranger</color>\\nAll heroes' Effectiveness, Resilience increase by <color=#28d9ed>30%</color>\\nOwn Ultimate Skill damage <color=#28d9ed>+30%</color> (Leader only)\\n\\n<color=#ffd732>Defender</color>\\nAll heroes' Health, Defense increase by <color=#28d9ed>30%</color>\\nFinal DMG taken decreases by <color=#28d9ed>10%</color> (Leader only)\\n\\n<color=#ffd732>Healer</color>\\nAll heroes' DMG taken, Crit DMG taken decrease by <color=#28d9ed>30%</color>\\nAll heroes' Priority increases by <color=#28d9ed>5%</color> when hit (Leader only)",
-    "Japanese": "リーダーに設定した仲間のクラスに応じて有益な効果を得る。\\n\\n<color=#ffd732>攻撃型</color>\\n味方全体のHP、攻撃力<color=#28d9ed>20%</color>UP\\n被撃時、行動ゲージ<color=#28d9ed>15%</color>UP（リーダー本人）\\n\\n<color=#ffd732>魔法型</color>\\n味方全体の与ダメージ、攻撃力<color=#28d9ed>20%</color>UP\\nターン獲得時、ダメージ<color=#28d9ed>1ターン</color>間<color=#28d9ed>10%</color>UP（リーダー本人）\\n\\n<color=#ffd732>スピード型</color>\\n味方全体の効果命中、効果抵抗<color=#28d9ed>30%</color>UP\\n自分の必殺スキルダメージ<color=#28d9ed>30%</color>UP（リーダー本人）\\n\\n<color=#ffd732>防御型</color>\\n味方全体のHP、防御力<color=#28d9ed>30%</color>UP\\n自分が受ける最終ダメージ<color=#28d9ed>10%</color>DOWN（リーダー本人）\\n\\n<color=#ffd732>回復型</color>\\n味方全体の被ダメージ、被会心ダメージ<color=#28d9ed>30%</color>DOWN\\n被撃時、味方全体の行動ゲージ<color=#28d9ed>5%</color>UP（リーダー本人）",
+    "Japanese": "リーダーに設定した仲間のクラスに応じて強化効果を得る。\\n\\n<color=#ffd732>攻撃型</color>\\n味方全体のHP、攻撃力<color=#28d9ed>20%</color>UP\\nダメージを受けた場合、行動ゲージ<color=#28d9ed>15%</color>UP（リーダー本人）\\n\\n<color=#ffd732>魔法型</color>\\n味方全体の与ダメージ、攻撃力<color=#28d9ed>20%</color>UP\\nターン獲得時、ダメージ<color=#28d9ed>1ターン</color>間<color=#28d9ed>10%</color>UP（リーダー本人）\\n\\n<color=#ffd732>スピード型</color>\\n味方全体の効果命中、効果抵抗<color=#28d9ed>30%</color>UP\\n自分の必殺スキルダメージ<color=#28d9ed>30%</color>UP（リーダー本人）\\n\\n<color=#ffd732>防御型</color>\\n味方全体のHP、防御力<color=#28d9ed>30%</color>UP\\n自分が受ける最終ダメージ<color=#28d9ed>10%</color>DOWN（リーダー本人）\\n\\n<color=#ffd732>回復型</color>\\n味方全体が受けるダメージまたは会心ダメージ<color=#28d9ed>30%</color>DOWN\\nダメージを受けた場合、味方全体の行動ゲージ<color=#28d9ed>5%</color>UP（リーダー本人）",
     "China_Simplified": "根据设置为队长的同伴职业，获得有益效果。\\n\\n<color=#ffd732>攻击型</color>\\n我方全体生命值、攻击力提升<color=#28d9ed>20%</color>\\n被攻击时，行动值提升<color=#28d9ed>15%</color>（队长本人）\\n\\n<color=#ffd732>魔法型</color>\\n我方全体造成伤害、攻击力提升<color=#28d9ed>20%</color>\\n获得回合时，伤害量在<color=#28d9ed>1回合</color>内提升<color=#28d9ed>10%</color>（队长本人）\\n\\n<color=#ffd732>速度型</color>\\n我方全体效果命中、效果抵抗提升<color=#28d9ed>30%</color>\\n必杀技伤害量<color=#28d9ed>30%</color>（队长本人）\\n\\n<color=#ffd732>防御型</color>\\n我方全体生命值、防御力提升<color=#28d9ed>30%</color>\\n自身受到的最终伤害降低<color=#28d9ed>10%</color>（队长本人）\\n\\n<color=#ffd732>恢复型</color>\\n我方全体受到伤害、受到暴击伤害降低<color=#28d9ed>30%</color>\\n被攻击时，我方全体行动值提升<color=#28d9ed>5%</color>（队长本人）",
     "China_Traditional": "根據設置為隊長的同伴職業，獲得有益效果。\\n\\n<color=#ffd732>攻擊型</color>\\n我方全體生命值、攻擊力提升<color=#28d9ed>20%</color>\\n被攻擊時，速攻值提升<color=#28d9ed>15%</color>（隊長本人）\\n\\n<color=#ffd732>魔法型</color>\\n我方全體造成傷害、攻擊力提升<color=#28d9ed>20%</color>\\n獲得回合時，傷害量在<color=#28d9ed>1回合</color>內提升<color=#28d9ed>10%</color>（隊長本人）\\n\\n<color=#ffd732>速度型</color>\\n我方全體效果命中、效果抵抗提升<color=#28d9ed>30%</color>\\n必殺技傷害量<color=#28d9ed>30%</color>（隊長本人）\\n\\n<color=#ffd732>防禦型</color>\\n我方全體生命值、防禦力提升<color=#28d9ed>30%</color>\\n自身受到的最終傷害降低<color=#28d9ed>10%</color>（隊長本人）\\n\\n<color=#ffd732>恢復型</color>\\n我方全體受到傷害、受到暴擊傷害降低<color=#28d9ed>30%</color>\\n被攻擊時，我方全體速攻值提升<color=#28d9ed>5%</color>（隊長本人）"
   },
@@ -113400,6 +113424,30 @@
     "China_Traditional": "編成<color=#28d9ed>3名</color>以上<color=#28d9ed>迪米烏哥斯或限定</color>同伴時，所有編成同伴均會產生一定的懲罰。\\n\\n<color=#ffd732>不和 第2階段 適用中</color>\\n所有編成同伴攻擊力/生命值/速度降低<color=#28d9ed>60%</color>"
   },
   {
+    "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_11",
+    "Korean": "이번 시즌에는 [불협화음] 효과가 적용되지 않습니다.\\n다양한 조합의 덱을 자유롭게 운용해보세요.",
+    "English": "The [Discord] effect will not apply this season.\\nTry out a variety of team compositions.",
+    "Japanese": "今シーズンは【不協和音】効果が適用されません。\\nさまざまな組み合わせのデッキを自由にお楽しみください。",
+    "China_Simplified": "本赛季不适用【不和】效果。\\n请自由搭配各种组合的阵容。",
+    "China_Traditional": "本賽季不適用【不和】效果。\\n請自由搭配各種組合的陣容。"
+  },
+  {
+    "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G01_01",
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n필살기 피해량 <color=#28d9ed>-50%</color>\\n받는 피해 <color=#28d9ed>-50%</color>\\n체력 <color=#28d9ed>+50%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 무적 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420) / 받는 고정 피해(5000)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nUltimate Skill DMG <color=#28d9ed>-50%</color>\\nDMG taken <color=#28d9ed>-50%</color>\\nHealth <color=#28d9ed>+50%</color>\\nUpon revival, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects Applied as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: A Challenge for the Strong!</color> The <color=#28d9ed>1</color> member on each team with the highest Attack has their Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be removed)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: A Chance for the Weak!</color> The <color=#28d9ed>1</color> member on each team with the lowest Health gains Invulnerability / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs are removed\\n<color=#28d9ed>Turn 24</color>: All buffs are removed, and Unbuffable is applied (Ignores Immunity / Cannot be removed)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420) / Fixed DMG taken(5000)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n必殺スキルダメージ<color=#28d9ed>-50%</color>\\n受けるダメージ<color=#28d9ed>-50%</color>\\nHP<color=#28d9ed>+50%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>に無敵 / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 会心率(80%) / 会心ダメージ(280%) / 貫通力(50%) / 効果命中(420) / 受ける固定ダメージ(5000)",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n必杀技伤害量<color=#28d9ed>-50%</color>\\n受到的伤害<color=#28d9ed>-50%</color>\\n生命值<color=#28d9ed>+50%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用无敌 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 暴击率(80%) / 暴击伤害(280%) / 穿透力(50%) / 效果命中(420) / 受到的固定伤害(5000)",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n必殺技傷害量<color=#28d9ed>-50%</color>\\n受到的傷害<color=#28d9ed>-50%</color>\\n生命力<color=#28d9ed>+50%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用無敵 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 暴擊率(80%) / 暴擊傷害(280%) / 貫穿力(50%) / 效果命中(420) / 受到的固定傷害(5000)"
+  },
+  {
+    "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G01_02",
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n필살기 피해량 <color=#28d9ed>-30%</color>\\n받는 피해 <color=#28d9ed>-30%</color>\\n체력 <color=#28d9ed>+30%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nUltimate Skill DMG <color=#28d9ed>-30%</color>\\nDMG taken <color=#28d9ed>-30%</color>\\nHealth <color=#28d9ed>+30%</color>\\nUpon Revive, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects that Occur as Battle Progresses</color>\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 16</color>: All buffs dispelled\\n<color=#28d9ed>Turn 24</color>: All buffs dispelled, Unbuffable applied (Ignores Immunity / Cannot be dispelled)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n必殺スキルダメージ<color=#28d9ed>-30%</color>\\n受けるダメージ<color=#28d9ed>-30%</color>\\nHP<color=#28d9ed>+30%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n必杀技伤害量<color=#28d9ed>-30%</color>\\n受到的伤害<color=#28d9ed>-30%</color>\\n生命值<color=#28d9ed>+30%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n必殺技傷害量<color=#28d9ed>-30%</color>\\n受到的傷害<color=#28d9ed>-30%</color>\\n生命力<color=#28d9ed>+30%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）"
+  },
+  {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_01",
     "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n전투 시작 시, 공간 왜곡 <color=#28d9ed>1회</color> 적용\\n모든 행동 게이지 증가 효율 <color=#28d9ed>-50%</color>\\n효과 저항 <color=#28d9ed>+200</color> / 체력 <color=#28d9ed>+30%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 무적 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420) / 받는 고정 피해(5000)",
     "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nAt the start of battle, Spatial Distortion applied <color=#28d9ed>1</color> time\\nAll Priority increase efficiency <color=#28d9ed>-50%</color>\\nResilience <color=#28d9ed>+200</color> / Health <color=#28d9ed>+30%</color>\\nPriority recovery upon Revive <color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>Effects that Occur as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: Hardship for the Strong!</color> <color=#28d9ed>1</color> member per team with the highest Attack has Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: Chance for the Weak!</color> <color=#28d9ed>1</color> member per team with the lowest Health gains Invincible / Continuous Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs dispelled\\n<color=#28d9ed>Turn 24</color>: All buffs dispelled, Unbuffable applied (Ignores Immunity / Cannot be dispelled)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420) / Fixed DMG taken(5000)",
@@ -113454,6 +113502,22 @@
     "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n受ける継続ダメージ<color=#28d9ed>-30%</color>\\nシールド保有対象の与ダメージ<color=#28d9ed>+20%</color>\\n戦闘開始時、防御型仲間のスピードを<color=#28d9ed>1ターン</color>増加（解除不可）\\n復活時の行動ゲージ回復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>に無敵 / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）",
     "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n受到的持续伤害<color=#28d9ed>-30%</color>\\n持有护盾目标造成的伤害<color=#28d9ed>+20%</color>\\n战斗开始时，防御型同伴速度增加<color=#28d9ed>1回合</color>（无法解除）\\n复活时行动值恢复<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用无敌 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）",
     "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n受到的持續傷害<color=#28d9ed>-30%</color>\\n持有護盾目標造成的傷害<color=#28d9ed>+20%</color>\\n戰鬥開始時，防禦型同伴速度增加<color=#28d9ed>1回合</color>（無法解除）\\n復活時速攻值恢復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用無敵 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）"
+  },
+  {
+    "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G04_01",
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n받는 지속 피해 <color=#28d9ed>-50%</color>\\n받는 피해 <color=#28d9ed>-50%</color>\\n체력 <color=#28d9ed>+50%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 무적 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 효과 적중(420) / 받는 고정 피해(5000)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\DoT taken <color=#28d9ed>-50%</color>\\nDMG taken <color=#28d9ed>-50%</color>\\nHealth <color=#28d9ed>+50%</color>\\nUpon revival, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects Applied as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: A Challenge for the Strong!</color> The <color=#28d9ed>1</color> member on each team with the highest Attack has their Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be removed)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: A Chance for the Weak!</color> The <color=#28d9ed>1</color> member on each team with the lowest Health gains Invulnerability / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs are removed\\n<color=#28d9ed>Turn 24</color>: All buffs are removed, and Unbuffable is applied (Ignores Immunity / Cannot be removed)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Effectiveness(420) / Fixed DMG taken(5000)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n受ける継続ダメージ<color=#28d9ed>-50%</color>\\n受けるダメージ<color=#28d9ed>-50%</color>\\nHP<color=#28d9ed>+50%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>に無敵 / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 効果命中(420) / 受ける固定ダメージ(5000)",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n受到的持续伤害<color=#28d9ed>-50%</color>\\n受到的伤害<color=#28d9ed>-50%</color>\\n生命值<color=#28d9ed>+50%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用无敌 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 效果命中(420) / 受到的固定伤害(5000)",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n受到的持續傷害<color=#28d9ed>-50%</color>\\n受到的傷害<color=#28d9ed>-50%</color>\\n生命力<color=#28d9ed>+50%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用無敵 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 效果命中(420) / 受到的固定傷害(5000)"
+  },
+  {
+    "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G04_02",
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n받는 지속 피해 <color=#28d9ed>-30%</color>\\n받는 피해 <color=#28d9ed>-30%</color>\\n체력 <color=#28d9ed>+30%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nUltimate Skill DMG <color=#28d9ed>-30%</color>\\nDMG taken <color=#28d9ed>-30%</color>\\nHealth <color=#28d9ed>+30%</color>\\nUpon revival, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects Applied as Battle Progresses</color>\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 16</color>: All buffs are removed\\n<color=#28d9ed>Turn 24</color>: All buffs are removed, and Unbuffable is applied (Ignores Immunity / Cannot be removed)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n受ける継続ダメージ<color=#28d9ed>-30%</color>\\n受けるダメージ<color=#28d9ed>-30%</color>\\nHP<color=#28d9ed>+30%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n受到的持续伤害<color=#28d9ed>-30%</color>\\n受到的伤害<color=#28d9ed>-30%</color>\\n生命值<color=#28d9ed>+30%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n受到的持續傷害<color=#28d9ed>-30%</color>\\n受到的傷害<color=#28d9ed>-30%</color>\\n生命力<color=#28d9ed>+30%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RECORD_WIN",
@@ -113998,6 +114062,14 @@
     "Japanese": "使用不可の仲間およびアリーナスキルが変更されました。",
     "China_Simplified": "不可使用同伴及竞技场技能已更新。",
     "China_Traditional": "不可使用同伴及決鬥場技能已更新。"
+  },
+  {
+    "ID": "SYS_REALTIME_ARENA_REFRESH_MSG_02",
+    "Korean": "주간 시즌이 종료되어 결투장 로비로 이동합니다.",
+    "English": "The weekly season has ended and you will be moved to the Arena lobby.",
+    "Japanese": "週間シーズンが終了し、アリーナロビーに移動します。",
+    "China_Simplified": "本周赛季已结束，即将移至竞技场大厅。",
+    "China_Traditional": "本週賽季已結束，即將移至決鬥場大廳。"
   },
   {
     "ID": "SYS_MONAD_GATE_MY_TEAM_INFO_1",
@@ -117282,7 +117354,7 @@
   {
     "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_03_1_DESC",
     "Korean": "스토리, 특별의뢰 컨텐츠 진행 시 소모 행동력 -1",
-    "English": "Stamina consumed -1 when playing Story or Special Request content",
+    "English": "Reduces Stamina cost by 1 when playing Story or Special Request content",
     "Japanese": "ストーリー、特別依頼コンテンツ進行時、消費活力-1",
     "China_Simplified": "进行故事、特别委托内容时，消耗行动力-1",
     "China_Traditional": "進行故事、特別委託內容時，消耗行動力-1"
@@ -117298,7 +117370,7 @@
   {
     "ID": "SYS_BUFF_USERNICKNAME_ACHIEVE_04_1_DESC",
     "Korean": "스토리, 특별의뢰 컨텐츠 진행 시 소모 행동력 -1",
-    "English": "Stamina consumed -1 when playing Story or Special Request content",
+    "English": "Reduces Stamina cost by 1 when playing Story or Special Request content",
     "Japanese": "ストーリー、特別依頼コンテンツ進行時、消費活力-1",
     "China_Simplified": "进行故事、特别委托内容时，消耗行动力-1",
     "China_Traditional": "進行故事、特別委託內容時，消耗行動力-1"
@@ -117354,7 +117426,7 @@
   {
     "ID": "SYS_INTERACT_STAND_108",
     "Korean": "구, 구힛… 나, 날 괴롭히고 싶어졌어?",
-    "English": "Ku,Kuhit... D-Did you come because you wanted to torment me again?",
+    "English": "Ku-Kuhit... D-Did you come because you wanted to torment me?",
     "Japanese": "ぐ、ぐひっ……ア、アタシをいじめたくなったの?",
     "China_Simplified": "嘻嘻…想、想欺负我了吗？",
     "China_Traditional": "嗚、嗚嘻…想、想欺負我嗎？"
@@ -117362,7 +117434,7 @@
   {
     "ID": "SYS_INTERACT_STAND_109",
     "Korean": "여가 주는 고통이 그리웠니? 히힛.",
-    "English": "Did you miss the pain I give you? Hehe.",
+    "English": "Did you miss the pain Our poison brings? Hehe.",
     "Japanese": "余が与える苦痛が恋しかったのか? ひひっ。",
     "China_Simplified": "怀念我给你的痛苦了？嘻嘻。",
     "China_Traditional": "想念我給予的痛苦了嗎？嘻嘻。"
@@ -117370,7 +117442,7 @@
   {
     "ID": "SYS_INTERACT_STAND_114",
     "Korean": "안녕, 파트너. 좋은 의뢰라도 생겼어?",
-    "English": "Hey, Partner. Got a good job for us?",
+    "English": "Hey, Partner. Did a good job come up?",
     "Japanese": "やあ、パートナー。いい依頼でも入ったのか?",
     "China_Simplified": "你好啊，合伙人。有新委托了吗？",
     "China_Traditional": "嗨，搭檔。有什麼不錯的委託嗎？"
@@ -117435,7 +117507,7 @@
     "ID": "SYS_INTERACT_STAND_111",
     "Korean": "당신의 태양을 숭배하러 오셨군요.",
     "English": "You've come to worship your sun.",
-    "Japanese": "貴方の太陽を崇めに来られたのですね。",
+    "Japanese": "貴方の太陽を崇めにいらしたのですね。",
     "China_Simplified": "来膜拜你的太阳吗。",
     "China_Traditional": "您是來膜拜您的太陽的吧。"
   },
@@ -117483,14 +117555,14 @@
     "ID": "SYS_INTERACT_READY_109_03",
     "Korean": "감히 여의 머, 머리를 쓰다듬으려고!?",
     "English": "How dare you try to pat my h-head!?",
-    "Japanese": "よ、よくも余の頭を、な、なでようとするな！？",
+    "Japanese": "よ、よくも余の頭を、な、なでようとしたな！？",
     "China_Simplified": "竟敢抚摸本尊的、的、的头！？",
     "China_Traditional": "竟敢撫摸本尊的、的、的頭！？"
   },
   {
     "ID": "SYS_INTERACT_READY_114_01",
     "Korean": "이 미녀의 손을, 특별히 허락해 줄게~",
-    "English": "I'll specially permit you to hold this beauty's hand~",
+    "English": "I'll make a special exception and let you hold this beauty's hand~",
     "Japanese": "この美女の手を、特別に許してあげる～",
     "China_Simplified": "特别允许你握住这位美人的手哦～",
     "China_Traditional": "特別允許你握住這位美人的手哦～"
@@ -117554,7 +117626,7 @@
   {
     "ID": "SYS_INTERACT_READY_100_01",
     "Korean": "주인의 온기… 따스합니다.",
-    "English": "Master's warmth… it's warm.",
+    "English": "Master's warmth… so warm.",
     "Japanese": "主人の温もり…温かいです。",
     "China_Simplified": "主人的温暖……暖和。",
     "China_Traditional": "主人的溫暖……暖和。"
@@ -117690,7 +117762,7 @@
   {
     "ID": "SYS_INTERACT_RESULT_109_02",
     "Korean": "비웠는데, 어째서 더 채워진 거지?",
-    "English": "I emptied it, so why is it even more full?",
+    "English": "We emptied it, so why is it even more full?",
     "Japanese": "絞ったのに、なぜもっと満たされてるんだ？",
     "China_Simplified": "明明已经挤空了，为什么反而更满了？",
     "China_Traditional": "明明已經擠空了，為什麼反而更滿了？"
@@ -117706,7 +117778,7 @@
   {
     "ID": "SYS_INTERACT_RESULT_114_01",
     "Korean": "서로 Win―Win하는 기분이네.",
-    "English": "Feels like a mutual Win-Win.",
+    "English": "Feels like a Win-Win for both of us.",
     "Japanese": "お互いWin―Winな気分だね。",
     "China_Simplified": "感觉双方都赢了呢。",
     "China_Traditional": "感覺雙方都贏了呢。"
@@ -117763,7 +117835,7 @@
     "ID": "SYS_INTERACT_RESULT_099_01",
     "Korean": "델타, 한층 더 강해진 것임.",
     "English": "Delta has become even stronger.",
-    "Japanese": "デルタ、一層強くなったこと。",
+    "Japanese": "デルタ、一層強くなった。",
     "China_Simplified": "德尔塔，更强了。",
     "China_Traditional": "戴爾塔，更強了。"
   },
@@ -117859,7 +117931,7 @@
     "ID": "SYS_INTERACT_RESULT_111_02",
     "Korean": "한 번으로는 모르겠군요. 다음에 또 해 주시길.",
     "English": "Once isn't enough to know. Please do it again next time.",
-    "Japanese": "一度ではわかりませんね。次回もやっていただけますよう。",
+    "Japanese": "一度ではわかりませんね。次回もお願いします。",
     "China_Simplified": "一次还不够了解呢。下次也请再来一次。",
     "China_Traditional": "一次還不夠了解呢。下次也請再來一次。"
   },
@@ -118283,7 +118355,7 @@
     "ID": "SYS_INTERACTION_2000109_01",
     "Korean": "예를 표하기",
     "English": "Showing Respect",
-    "Japanese": "礼を表す",
+    "Japanese": "敬意を示す",
     "China_Simplified": "表示礼敬",
     "China_Traditional": "表示禮敬"
   },
@@ -118330,7 +118402,7 @@
   {
     "ID": "SYS_INTERACTION_2000103_01",
     "Korean": "악수 당하기",
-    "English": "Being Handshook",
+    "English": "Receiving a Handshake",
     "Japanese": "握手される",
     "China_Simplified": "被握手",
     "China_Traditional": "被握手"
@@ -118411,7 +118483,7 @@
     "ID": "SYS_INTERACTION_2000084_03",
     "Korean": "체온 나누기",
     "English": "Sharing Warmth",
-    "Japanese": "体温を分かち合う",
+    "Japanese": "温もりを分かち合う",
     "China_Simplified": "分享体温",
     "China_Traditional": "分享體溫"
   },
@@ -118458,7 +118530,7 @@
   {
     "ID": "SYS_INTERACTION_2000111_02",
     "Korean": "기체 경량화",
-    "English": "Chassis Lightening",
+    "English": "Chassis Weight Reduction",
     "Japanese": "機体軽量化",
     "China_Simplified": "机体轻量化",
     "China_Traditional": "機體輕量化"
@@ -118774,5 +118846,229 @@
     "Japanese": "（PVPコンテンツには適用されません）",
     "China_Simplified": "（不适用于PVP内容）",
     "China_Traditional": "（不適用於PVP內容）"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_107",
+    "Korean": "프로필 테두리 -  창조주 ll",
+    "English": "Profile Frame: Creator II",
+    "Japanese": "プロフィールフレーム - クリエイターII",
+    "China_Simplified": "头像边框 - 创造者II",
+    "China_Traditional": "頭像外框 - 創造者II"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_DES_107",
+    "Korean": "황혼 프로젝트 이벤트 상점에서 구매할 수 있는 프로필 테두리입니다.",
+    "English": "A Profile Frame that can be purchased from the Project Twilight Event Shop.",
+    "Japanese": "黄昏プロジェクトイベントショップで購入できるプロフィールフレームです。",
+    "China_Simplified": "可在黄昏计划活动商店中购买的头像边框。",
+    "China_Traditional": "可在黃昏計劃活動商店中購買的頭像外框。"
+  },
+  {
+    "ID": "SYS_TRUST_MAX_DIALOGUE_CHECK",
+    "Korean": "선택한 동료의 애정도 레벨이 최대입니다.\\n더 이상 애정도를 획득할 수 없습니다.\\n\\n그래도 대화를 진행하시겠습니까?",
+    "English": "The selected Hero's Affinity level is already at maximum.\\nNo more Affinity can be obtained.\\n\\nDo you still want to continue the conversation?",
+    "Japanese": "選択した仲間の親密度レベルが最大です。\\nこれ以上親密度を獲得できません。\\n\\nそれでも会話を進めますか？",
+    "China_Simplified": "所选同伴的好感度等级已达最大值。\\n无法再获得好感度。\\n\\n是否仍要继续对话？",
+    "China_Traditional": "所選同伴的好感度等級已達最大值。\\n無法再獲得好感度。\\n\\n是否仍要繼續對話？"
+  },
+  {
+    "ID": "SYS_PRESENT_TO_SPECIAL_EQUIP",
+    "Korean": "애정도 {0}레벨 달성 전까지 선물 등록 개수가 조정됩니다.",
+    "English": "The number of gifts that can be registered will be adjusted until Affinity Level {0} is reached.",
+    "Japanese": "親密度{0}レベル達成前まで、プレゼント登録数が調整されます。",
+    "China_Simplified": "在达到好感度{0}级之前，礼物注册数量将进行调整。",
+    "China_Traditional": "在達到好感度{0}級之前，禮物登錄數量將進行調整。"
+  },
+  {
+    "ID": "SYS_CHARACTER_FUSION_NAME_06",
+    "Korean": "코어 융합 : 앱실론",
+    "English": "Core Fusion: Epsilon",
+    "Japanese": "コアフュージョン：イプシロン",
+    "China_Simplified": "核心融合：埃普西隆",
+    "China_Traditional": "核心融合：艾普西隆"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700070_01",
+    "Korean": "앱실론 코어 융합 Lv1",
+    "English": "Epsilon Core Fusion Lv1",
+    "Japanese": "イプシロンコアフュージョンLv1",
+    "China_Simplified": "埃普西隆核心融合Lv1",
+    "China_Traditional": "艾普西隆核心融合Lv1"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700070_02",
+    "Korean": "앱실론 코어 융합 Lv2",
+    "English": "Epsilon Core Fusion Lv2",
+    "Japanese": "イプシロンコアフュージョンLv2",
+    "China_Simplified": "埃普西隆核心融合Lv2",
+    "China_Traditional": "艾普西隆核心融合Lv2"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700070_03",
+    "Korean": "앱실론 코어 융합 Lv3",
+    "English": "Epsilon Core Fusion Lv3",
+    "Japanese": "イプシロンコアフュージョンLv3",
+    "China_Simplified": "埃普西隆核心融合Lv3",
+    "China_Traditional": "艾普西隆核心融合Lv3"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700070_04",
+    "Korean": "앱실론 코어 융합 Lv4",
+    "English": "Epsilon Core Fusion Lv4",
+    "Japanese": "イプシロンコアフュージョンLv4",
+    "China_Simplified": "埃普西隆核心融合Lv4",
+    "China_Traditional": "艾普西隆核心融合Lv4"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_NAME_2700070_05",
+    "Korean": "앱실론 코어 융합 Lv5",
+    "English": "Epsilon Core Fusion Lv5",
+    "Japanese": "イプシロンコアフュージョンLv5",
+    "China_Simplified": "埃普西隆核心融合Lv5",
+    "China_Traditional": "艾普西隆核心融合Lv5"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700070_01",
+    "Korean": "<size=19>앱실론의 코어 융합 완료. 융합 패시브 추가</size>",
+    "English": "<size=19>Epsilon's Core Fusion complete. Fusion Passive unlocked.</size>",
+    "Japanese": "<size=19>イプシロンのコアフュージョン完了。フュージョンパッシブ追加</size>",
+    "China_Simplified": "<size=19>艾普西隆的核心融合完成。追加融合被动</size>",
+    "China_Traditional": "<size=19>艾普西隆的核心融合完成。追加融合被動</size>"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700070_02",
+    "Korean": "<size=19>모든 스킬의 <color=#3494ca>Lv 2</color></size> (융합 패시브 제외)",
+    "English": "<size=19>All skills at <color=#3494ca>Lv 2</color></size> (Excluding Fusion Passive)",
+    "Japanese": "<size=19>すべてのスキルが<color=#3494ca>Lv 2</color></size>（フュージョンパッシブを除く）",
+    "China_Simplified": "<size=19>所有技能<color=#3494ca>Lv 2</color></size>（融合被动除外）",
+    "China_Traditional": "<size=19>所有技能<color=#3494ca>Lv 2</color></size>（融合被動除外）"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700070_03",
+    "Korean": "<size=19>모든 스킬의 <color=#3494ca>Lv 3</color></size> (융합 패시브 제외)",
+    "English": "<size=19>All skills at <color=#3494ca>Lv 3</color></size> (Excluding Fusion Passive)",
+    "Japanese": "<size=19>すべてのスキルが<color=#3494ca>Lv 3</color></size>（フュージョンパッシブを除く）",
+    "China_Simplified": "<size=19>所有技能<color=#3494ca>Lv 3</color></size>（融合被动除外）",
+    "China_Traditional": "<size=19>所有技能<color=#3494ca>Lv 3</color></size>（融合被動除外）"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700070_04",
+    "Korean": "<size=19>모든 스킬의 <color=#3494ca>Lv 4</color></size> (융합 패시브 제외)",
+    "English": "<size=19>All skills at <color=#3494ca>Lv 4</color></size> (Excluding Fusion Passive)",
+    "Japanese": "<size=19>すべてのスキルが<color=#3494ca>Lv 4</color></size>（フュージョンパッシブを除く）",
+    "China_Simplified": "<size=19>所有技能<color=#3494ca>Lv 4</color></size>（融合被动除外）",
+    "China_Traditional": "<size=19>所有技能<color=#3494ca>Lv 4</color></size>（融合被動除外）"
+  },
+  {
+    "ID": "SYS_FUSION_LEVEL_DESC_2700070_05",
+    "Korean": "<size=19>모든 스킬의 <color=#3494ca>Lv Max</color>\\n융합 패시브 <color=#3494ca>Lv Max</color></size>",
+    "English": "<size=19>All skills at <color=#3494ca>Lv Max</color>\\nFusion Passive <color=#3494ca>Lv Max</color></size>",
+    "Japanese": "<size=19>すべてのスキルが<color=#3494ca>Lv Max</color>\\nフュージョンパッシブ<color=#3494ca>Lv Max</color></size>",
+    "China_Simplified": "<size=19>所有技能<color=#3494ca>Lv Max</color>\\n融合被动<color=#3494ca>Lv Max</color></size>",
+    "China_Traditional": "<size=19>所有技能<color=#3494ca>Lv Max</color>\\n融合被動<color=#3494ca>Lv Max</color></size>"
+  },
+  {
+    "ID": "SYS_EVENT_SEASON_06",
+    "Korean": "촬영 도구 상점",
+    "English": "Filming Tool Shop",
+    "Japanese": "撮影機材ショップ",
+    "China_Simplified": "拍摄道具商店",
+    "China_Traditional": "拍攝道具商店"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_EVENT_06",
+    "Korean": "[크랭크 업]",
+    "English": "[That's a Wrap]",
+    "Japanese": "【クランクアップ】",
+    "China_Simplified": "[杀青]",
+    "China_Traditional": "[殺青]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_EVENT_GET_ROUTE_06",
+    "Korean": "영참사를 멈추면 안 돼 이벤트 미션 올 클리어 보상",
+    "English": "Never Stop Soulslayers! Event Mission Full Clear Reward",
+    "Japanese": "霊斬士を止めるな!イベントミッション全クリア報酬",
+    "China_Simplified": "不能阻挡灵斩师！活动任务全通关奖励",
+    "China_Traditional": "靈斬師不能停下腳步！活動任務全通關獎勵"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_EVENT_REWARD_06",
+    "Korean": "칭호 [크랭크 업]",
+    "English": "Title [That's a Wrap]",
+    "Japanese": "称号【クランクアップ】",
+    "China_Simplified": "称号[杀青]",
+    "China_Traditional": "稱號[殺青]"
+  },
+  {
+    "ID": "SYS_USERNICKNAME_EVENT_REWARD_DESC_06",
+    "Korean": "칭호 [크랭크 업]을 얻습니다.",
+    "English": "Obtain the title [That's a Wrap].",
+    "Japanese": "称号【クランクアップ】を獲得する。",
+    "China_Simplified": "获得称号[杀青]。",
+    "China_Traditional": "獲得稱號[殺青]。"
+  },
+  {
+    "ID": "SYS_SINGULARITY_ADJUSTMENT",
+    "Korean": "특이점 내의 정보를 정산중입니다. 해당 절차는 최대 5분까지 소요될 수 있습니다.",
+    "English": "Singularity data is being processed. This may take up to 5 minutes.",
+    "Japanese": "特異点内の情報を精算中です。この手続きは最大5分かかる場合があります。",
+    "China_Simplified": "正在结算奇点内的信息。该流程最多可能需要5分钟。",
+    "China_Traditional": "正在結算奇點內的信息。該流程最多可能需要5分鐘。"
+  },
+  {
+    "ID": "SYS_EVENT_DUNGEON_HARD_CLEAR_WEEK_01",
+    "Korean": "영참사를 멈추면 안돼\\n1주차 하드 챕터3 100회 클리어 ",
+    "English": "Never Stop Soulslayers!\\nClear Week 1 Hard Chapter 3 100 times",
+    "Japanese": "霊斬士を止めるな!\\n1週目ハードチャプター3を100回クリア",
+    "China_Simplified": "不能阻挡灵斩师！\\n第1周困难第3章通关100次",
+    "China_Traditional": "靈斬師不能停下腳步！\\n第1週困難第3章通關100次"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_108",
+    "Korean": "프로필 테두리 -  애드리브",
+    "English": "Profile Frame: Ad-Lib",
+    "Japanese": "プロフィールフレーム - アドリブ",
+    "China_Simplified": "头像边框 - 即兴",
+    "China_Traditional": "頭像外框 - 即興"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_DES_108",
+    "Korean": "각본 조각 이벤트 상점에서 구매할 수 있는 프로필 테두리입니다.",
+    "English": "A Profile Frame that can be purchased from the Script Piece Event Shop.",
+    "Japanese": "脚本のかけらイベントショップで購入できるプロフィールフレームです。",
+    "China_Simplified": "可在剧本碎片活动商店中购买的头像边框。",
+    "China_Traditional": "可在劇本碎片活動商店中購買的頭像外框。"
+  },
+  {
+    "ID": "SYS_PRODUCT_HAS_NOT_ENDDATE",
+    "Korean": "상시",
+    "English": "Permanent",
+    "Japanese": "常時",
+    "China_Simplified": "常驻",
+    "China_Traditional": "常駐"
+  },
+  {
+    "ID": "SYS_ARCADE_EVENT_SHOP_MISSION_01",
+    "Korean": "웹이벤트 - 교환 상점 일일미션",
+    "English": "3rd Anniversary Daily Mission",
+    "Japanese": "3周年デイリーミッション",
+    "China_Simplified": "3周年每日任务",
+    "China_Traditional": "3週年每日任務"
+  },
+  {
+    "ID": "SYS_ARCADE_EVENT_SHOP",
+    "Korean": "웹이벤트 - 교환 상점",
+    "English": "3rd Anniversary Coin Exchange",
+    "Japanese": "3周年コイン交換所",
+    "China_Simplified": "3周年代币兑换所",
+    "China_Traditional": "3週年代幣兌換所"
+  },
+  {
+    "ID": "SYS_ARCADE_EVENT_SHOP_MISSION_02",
+    "Korean": "웹이벤트 - 교환 상점 누적미션",
+    "English": "Cumulative Coin Spending Reward",
+    "Japanese": "コイン累積消費報酬",
+    "China_Simplified": "代币累积消耗奖励",
+    "China_Traditional": "代幣累積消耗獎勵"
   }
 ]

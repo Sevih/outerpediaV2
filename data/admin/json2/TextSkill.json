@@ -1313,11 +1313,11 @@
   },
   {
     "ID": "SKILL_DESC_2000015_Skill01_LV1",
-    "Korean": "적을 공격하고 <color=#28d9ed>[Buff_C_2000015_1_1]</color> 확률로 <color=#28d9ed>[Buff_T_2000015_1_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. (2회 적용)",
-    "English": "Attacks an enemy and has a <color=#28d9ed>[Buff_C_2000015_1_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000015_1_1] turn(s)</color>. (Applied 2 times)",
-    "Japanese": "敵単体にダメージを与え、<color=#28d9ed>[Buff_C_2000015_1_1]</color>の確率で<color=#28d9ed>出血</color>2個を<color=#28d9ed>[Buff_T_2000015_1_1]ターン</color>の間付与する。",
-    "China_Simplified": "攻击敌人，并有<color=#28d9ed>[Buff_C_2000015_1_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>。(可叠加2次)",
-    "China_Traditional": "攻擊敵人，以<color=#28d9ed>[Buff_C_2000015_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>內賦予<color=#28d9ed>出血</color>。(作用2次)"
+    "Korean": "적을 공격합니다. 대상에게 <color=#28d9ed>[Buff_C_2000015_1_1]</color> 확률로 <color=#28d9ed>[Buff_T_2000015_1_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여하고 대상이 보스라면 <color=#28d9ed>1회</color> 추가 부여합니다. (효과 저항 무시)\\n공격 후 대상이 <color=#28d9ed>출혈</color> 상태라면 자신의 <color=#28d9ed>행동 게이지</color>가 <color=#28d9ed>[Buff_V_2000015_1_3]</color> 증가합니다.",
+    "English": "Attacks an enemy. With a <color=#28d9ed>[Buff_C_2000015_1_1]</color> chance, inflicts <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000015_1_1] turns</color>, and if the target is a Boss, inflicts <color=#28d9ed>Bleeding</color> <color=#28d9ed>1</color> additional time. (Ignores Resilience)\\nAfter attacking, if the target is in <color=#28d9ed>Bleeding</color> state, own <color=#28d9ed>Priority</color> increases by <color=#28d9ed>[Buff_V_2000015_1_3]</color>.",
+    "Japanese": "敵にダメージを与える。対象に<color=#28d9ed>[Buff_C_2000015_1_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000015_1_1]ターン</color>の間付与し、対象がボスなら<color=#28d9ed>1回</color>追加付与する。（効果抵抗無視）\\n攻撃後、対象が<color=#28d9ed>出血</color>状態の場合、自分の<color=#28d9ed>行動ゲージ</color>が<color=#28d9ed>[Buff_V_2000015_1_3]</color>UPする。",
+    "China_Simplified": "攻击敌人。以<color=#28d9ed>[Buff_C_2000015_1_1]</color>的概率对目标附加<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>的<color=#28d9ed>出血</color>，若目标为首领，则额外附加<color=#28d9ed>1次</color>。（无视效果抵抗）\\n攻击后若目标处于<color=#28d9ed>出血</color>状态，自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>[Buff_V_2000015_1_3]</color>。",
+    "China_Traditional": "攻擊敵人。以<color=#28d9ed>[Buff_C_2000015_1_1]</color>的概率對目標附加<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>的<color=#28d9ed>出血</color>，若目標為首領，則額外附加<color=#28d9ed>1次</color>。（無視效果抵抗）\\n攻擊後若目標處於<color=#28d9ed>出血</color>狀態，自身<color=#28d9ed>速攻值</color>增加<color=#28d9ed>[Buff_V_2000015_1_3]</color>。"
   },
   {
     "ID": "SKILL_NAME_2000015_Skill02",
@@ -1329,11 +1329,11 @@
   },
   {
     "ID": "SKILL_DESC_2000015_Skill02_LV1",
-    "Korean": "적을 공격하고 <color=#28d9ed>[Buff_C_2000015_2_1]</color> 확률로 <color=#28d9ed>[Buff_T_2000015_2_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 동일한 대상에게 <color=#28d9ed>추가 공격</color>을 사용합니다.",
-    "English": "Attacks an enemy and has a <color=#28d9ed>[Buff_C_2000015_2_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000015_2_1] turn(s)</color>. Performs an <color=#28d9ed>additional attack</color> if the target is successfully inflicted with <color=#28d9ed>Bleeding</color>.",
-    "Japanese": "敵単体にダメージを与え、対象に<color=#28d9ed>[Buff_C_2000015_2_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000015_2_1]ターン</color>の間付与する。対象が<color=#28d9ed>出血</color>状態の場合、同じ対象に<color=#28d9ed>追加攻撃</color>を与える。",
-    "China_Simplified": "攻击敌人，并有<color=#28d9ed>[Buff_C_2000015_2_1]</color>的几率造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000015_2_1]回合</color>。若目标处于<color=#28d9ed>出血</color>状态，则对该目标发动<color=#28d9ed>额外攻击</color>。",
-    "China_Traditional": "攻擊敵人，以<color=#28d9ed>[Buff_C_2000015_2_1]</color>的機率在<color=#28d9ed>[Buff_T_2000015_2_1]回合</color>內賦予<color=#28d9ed>出血</color>。若目標處於<color=#28d9ed>出血</color>狀態，對相同目標發動<color=#28d9ed>追加攻擊</color>。"
+    "Korean": "적을 공격하고 <color=#28d9ed>[Buff_T_2000015_2_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. (효과 저항 무시)\\n대상이 <color=#28d9ed>출혈</color> 상태라면 피해량이 증가하고 동일한 대상에게 <color=#28d9ed>추가 공격</color>을 사용합니다.\\n공격 후 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>[Buff_T_2000015_2_4]턴</color> 동안 증가시키고 대상이 출혈 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>[Buff_V_2000015_2_3]</color> 증가시킵니다.",
+    "English": "Attacks an enemy and inflicts <color=#28d9ed>Bleeding</color> for <color=#28d9ed>[Buff_T_2000015_2_1] turns</color>. (Ignores Resilience)\\nIf the target is <color=#28d9ed>Bleeding</color> , DMG increases and performs an <color=#28d9ed>Additional Attack</color> on the same target.\\nAfter attacking, increases own <color=#28d9ed>Penetration</color> for <color=#28d9ed>[Buff_T_2000015_2_4] turns</color> and if the target is Bleeding, increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>[Buff_V_2000015_2_3]</color>.",
+    "Japanese": "敵単体にダメージを与え、<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000015_2_1]ターン</color>の間付与する。（効果抵抗無視）\\n対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPし、同じ対象に<color=#28d9ed>追加攻撃</color>を与える。\\n攻撃後、自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>[Buff_T_2000015_2_4]ターン</color>の間UPさせ、対象が出血状態の場合、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>[Buff_V_2000015_2_3]</color>UPさせる。",
+    "China_Simplified": "攻击敌人并附加<color=#28d9ed>[Buff_T_2000015_2_1]回合</color>的<color=#28d9ed>出血</color>。（无视效果抵抗）\\n若目标处于<color=#28d9ed>出血</color>状态，伤害增加并对同一目标使用<color=#28d9ed>额外攻击</color>。\\n攻击后使自身<color=#28d9ed>穿透力</color>在<color=#28d9ed>[Buff_T_2000015_2_4]回合</color>内提升，若目标处于出血状态，自身<color=#28d9ed>行动值</color>增加<color=#28d9ed>[Buff_V_2000015_2_3]</color>。",
+    "China_Traditional": "攻擊敵人並附加<color=#28d9ed>[Buff_T_2000015_2_1]回合</color>的<color=#28d9ed>出血</color>。（無視效果抵抗）\\n若目標處於<color=#28d9ed>出血</color>狀態，傷害增加並對同一目標使用<color=#28d9ed>額外攻擊</color>。\\n攻擊後使自身<color=#28d9ed>貫穿力</color>在<color=#28d9ed>[Buff_T_2000015_2_4]回合</color>內提升，若目標處於出血狀態，自身<color=#28d9ed>速攻值</color>增加<color=#28d9ed>[Buff_V_2000015_2_3]</color>。"
   },
   {
     "ID": "SKILL_NAME_2000015_Skill03",
@@ -1345,11 +1345,11 @@
   },
   {
     "ID": "SKILL_DESC_2000015_Skill03_LV1",
-    "Korean": "스킬 사용 시 <color=#28d9ed>[Buff_C_2000015_3_1]</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가합니다.",
-    "English": "When using this skill, has a <color=#28d9ed>[Buff_C_2000015_3_1]</color> chance to <color=#28d9ed>remove all</color> <color=#28d9ed>buffs</color> from a target, then attacks that target.\\nThe damage is increased if the target has been inflicted with <color=#28d9ed>Bleeding</color>.",
-    "Japanese": "スキル使用時、<color=#28d9ed>[Buff_C_2000015_3_1]</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、敵単体にダメージを与える。\\n対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPする。",
-    "China_Simplified": "使用技能时，有<color=#28d9ed>[Buff_C_2000015_3_1]</color>的几率使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>，并攻击敌人。\\n若目标处于<color=#28d9ed>出血</color>状态，则伤害提升。",
-    "China_Traditional": "使用技能時，以<color=#28d9ed>[Buff_C_2000015_3_1]</color>的機率將目標的<color=#28d9ed>強化效果</color><color=#28d9ed>全部解除</color>並攻擊敵人。\\n若目標處於<color=#28d9ed>出血</color>狀態，傷害增加。"
+    "Korean": "스킬 사용 시 <color=#28d9ed>[Buff_C_2000015_3_1]</color> 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두 해제</color>하고 적을 공격합니다.\\n대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가합니다.\\n대상의 <color=#28d9ed>출혈</color>을 모두 <color=#28d9ed>폭발</color>시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다.",
+    "English": "When using this skill, has a <color=#28d9ed>[Buff_C_2000015_3_1]</color> chance to <color=#28d9ed>remove all</color> <color=#28d9ed>buffs</color> from a target, then attacks that target.\\nThe damage is increased if the target has been inflicted with <color=#28d9ed>Bleeding</color>.\\nDetonates all <color=#28d9ed>Bleeding</color> stacks on the target. Damage dealt by detonation increases by <color=#28d9ed>50%</color>.",
+    "Japanese": "スキル使用時、<color=#28d9ed>[Buff_C_2000015_3_1]</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて解除</color>し、敵単体にダメージを与える。\\n対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPする。対象が保有する<color=#28d9ed>出血</color>をすべて<color=#28d9ed>破裂</color>させ、破裂によるダメージが<color=#28d9ed>50%</color>UPする。",
+    "China_Simplified": "使用技能时，有<color=#28d9ed>[Buff_C_2000015_3_1]</color>的几率使目标的<color=#28d9ed>强化效果</color><color=#28d9ed>全部解除</color>，并攻击敌人。\\n若目标处于<color=#28d9ed>出血</color>状态，则伤害提升。대상의 <color=#28d9ed>출혈</color>을 모두 <color=#28d9ed>폭발</color>시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다.",
+    "China_Traditional": "使用技能時，以<color=#28d9ed>[Buff_C_2000015_3_1]</color>的機率將目標的<color=#28d9ed>強化效果</color><color=#28d9ed>全部解除</color>並攻擊敵人。\\n若目標處於<color=#28d9ed>出血</color>狀態，傷害增加。대상의 <color=#28d9ed>출혈</color>을 모두 <color=#28d9ed>폭발</color>시키며, 폭발에 의한 피해는 <color=#28d9ed>50%</color> 증가합니다."
   },
   {
     "ID": "SKILL_NAME_2000015_Skill08",
@@ -3057,11 +3057,11 @@
   },
   {
     "ID": "SKILL_DESC_2000035_Skill01_LV1",
-    "Korean": "적을 공격하고 <color=#28d9ed>[Buff_C_2000035_1_1]</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>[Buff_T_2000035_1_1]턴</color> 동안 부여합니다.",
-    "English": "Attacks an enemy and has a <color=#28d9ed>[Buff_C_2000035_1_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000035_1_1] turn(s)</color>.",
-    "Japanese": "敵単体にダメージを与え、対象に<color=#28d9ed>[Buff_C_2000035_1_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000035_1_1]ターン</color>の間付与する。",
-    "China_Simplified": "攻击敌人，并有<color=#28d9ed>[Buff_C_2000035_1_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000035_1_1]回合</color>。",
-    "China_Traditional": "攻擊敵人，以<color=#28d9ed>[Buff_C_2000035_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000035_1_1]回合</color>內賦予目標<color=#28d9ed>出血</color>。"
+    "Korean": "적을 공격하고 <color=#28d9ed>[Buff_C_2000035_1_1]</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>[Buff_T_2000035_1_1]턴</color> 동안 부여합니다. (효과 저항 무시)",
+    "English": "Attacks an enemy and has a <color=#28d9ed>[Buff_C_2000035_1_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000035_1_1] turn(s)</color>. (Ignores Resilience)",
+    "Japanese": "敵単体にダメージを与え、対象に<color=#28d9ed>[Buff_C_2000035_1_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000035_1_1]ターン</color>の間付与する。(効果抵抗無視)",
+    "China_Simplified": "攻击敌人，并有<color=#28d9ed>[Buff_C_2000035_1_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000035_1_1]回合</color>。(无视效果抵抗)",
+    "China_Traditional": "攻擊敵人，以<color=#28d9ed>[Buff_C_2000035_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000035_1_1]回合</color>內賦予目標<color=#28d9ed>出血</color>。(無視效果抵抗)"
   },
   {
     "ID": "SKILL_NAME_2000035_Skill02",
@@ -3073,11 +3073,11 @@
   },
   {
     "ID": "SKILL_DESC_2000035_Skill02_LV1",
-    "Korean": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>[Buff_T_2000035_2_4]턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>[Buff_C_2000035_2_1]</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>[Buff_T_2000035_2_1]턴</color> 동안 부여합니다.",
-    "English": "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>[Buff_T_2000035_2_4] turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>[Buff_C_2000035_2_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000035_2_1] turn(s)</color>.",
-    "Japanese": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000035_2_4]ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、<color=#28d9ed>[Buff_C_2000035_2_1]</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000035_2_1]ターン</color>の間付与する。",
-    "China_Simplified": "(被动效果) 战斗开始时，使速度最高的1名敌人无视目标的效果抵抗，并造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会\\n被解除。\\n\\n(主动效果) 攻击全体敌人，并有<color=#28d9ed>[Buff_C_2000035_2_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000035_2_1]回合</color>。",
-    "China_Traditional": "(被動效果)戰鬥開始時，使一名速度最快的敵人無視目標的效果抵抗，在<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>內賦予<color=#28d9ed>出血</color>。賦予全體我軍<color=#28d9ed>鮮血的領域</color>。這些效果不會被解除。\\n\\n(主動效果)攻擊全體敵人，以<color=#28d9ed>[Buff_C_2000035_2_1]</color>的機率在<color=#28d9ed>[Buff_T_2000035_2_1]回合</color>內賦予目標<color=#28d9ed>出血</color>。"
+    "Korean": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 <color=#28d9ed>[Buff_T_2000035_2_4]턴</color> 동안 해제되지 않는 <color=#28d9ed>출혈</color>을 부여합니다. (효과 저항 무시)\\n추가로 아군 전체에게 <color=#28d9ed>선혈의 영역</color>을 부여합니다.\\n\\n아군의 출혈 피해가 <color=#28d9ed>50%</color> 증가합니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>[Buff_C_2000035_2_1]</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>[Buff_T_2000035_2_1]턴</color> 동안 부여합니다. (효과 저항 무시)",
+    "English": "(Passive Effect) At the start of battle, inflicts irremovable <color=#28d9ed>Bleeding</color> on the fastest enemy for <color=#28d9ed>[Buff_T_2000035_2_4] turns</color>. (Ignores Resilience)\\nAdditionally, grants <color=#28d9ed>Pureblood's Domain</color> to all allies.\\n\\nAllies' Bleeding DMG increases by <color=#28d9ed>50%</color>.\\n\\n(Active Effect) Attacks all enemies and with a <color=#28d9ed>[Buff_C_2000035_2_1]</color> chance, inflicts <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000035_2_1] turns</color>. (Ignores Resilience)",
+    "Japanese": "(パッシブ効果) 戦闘開始時、最もスピードが速い敵単体に解除されない<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000035_2_4]ターン</color>の間付与する。（効果抵抗無視）\\nさらに味方全体に<color=#28d9ed>【鮮血の領域】</color>を付与する。\\n\\n味方の出血ダメージが<color=#28d9ed>50%</color>UPする。\\n\\n(アクティブ効果) 敵全体にダメージを与え、<color=#28d9ed>[Buff_C_2000035_2_1]</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000035_2_1]ターン</color>の間付与する。（効果抵抗無視）",
+    "China_Simplified": "(被动效果) 战斗开始时，对速度最快的敌人1名附加<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>无法解除的<color=#28d9ed>出血</color>。（无视效果抵抗）\\n追加对我方全体附加<color=#28d9ed>鲜血领域</color>。\\n\\n我方出血伤害增加<color=#28d9ed>50%</color>。\\n\\n(主动效果) 攻击全体敌人，以<color=#28d9ed>[Buff_C_2000035_2_1]</color>的概率对目标附加<color=#28d9ed>[Buff_T_2000035_2_1]回合</color>的<color=#28d9ed>出血</color>。（无视效果抵抗）",
+    "China_Traditional": "(被動效果) 戰鬥開始時，對速度最快的敵人1名附加<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>無法解除的<color=#28d9ed>出血</color>。（無視效果抵抗）\\n追加對我方全體附加<color=#28d9ed>鮮血領域</color>。\\n\\n我方出血傷害增加<color=#28d9ed>50%</color>。\\n\\n(主動效果) 攻擊全體敵人，以<color=#28d9ed>[Buff_C_2000035_2_1]</color>的概率對目標附加<color=#28d9ed>[Buff_T_2000035_2_1]回合</color>的<color=#28d9ed>出血</color>。（無視效果抵抗）"
   },
   {
     "ID": "SKILL_NAME_2000035_Skill03",
@@ -3089,11 +3089,11 @@
   },
   {
     "ID": "SKILL_DESC_2000035_Skill03_LV1",
-    "Korean": "스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>[Buff_V_2000035_3_3]개</color> 해제하고 적 전체를 공격합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 증가하고 스킬 사용 후 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[Buff_T_2000035_3_2]턴</color> 동안 감소시킵니다.",
-    "English": "When using this skill, removes <color=#28d9ed>[Buff_V_2000035_3_3]</color> <color=#28d9ed>buff(s)</color> from all enemies, then attacks them. Deals increased damage and inflicts <color=#28d9ed>Reduced Defense</color> for <color=#28d9ed>[Buff_T_2000035_3_2] turn(s)</color> if the target is inflicted with <color=#28d9ed>Bleeding</color>.",
-    "Japanese": "スキル使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>[Buff_V_2000035_3_3]個</color>解除し、敵全体にダメージを与える。対象が<color=#28d9ed>出血</color>状態の場合、ダメージがUPし、スキル使用後<color=#28d9ed>防御力</color>を<color=#28d9ed>[Buff_T_2000035_3_2]ターン</color>の間DOWNさせる。",
-    "China_Simplified": "使用技能时，解除全体敌人的<color=#28d9ed>[Buff_V_2000035_3_3]个</color><color=#28d9ed>强化效果</color>，并攻击全体敌人。若目标处于<color=#28d9ed>出血</color>状态，则使伤害提升，且使用技能后<color=#28d9ed>防御力</color>降低，持续<color=#28d9ed>[Buff_T_2000035_3_2]回合</color>。",
-    "China_Traditional": "使用技能時，解除全體敵人的<color=#28d9ed>[Buff_V_2000035_3_3]個</color><color=#28d9ed>強化效果</color>，攻擊全體敵人。若目標處於<color=#28d9ed>出血</color>狀態，傷害增加，且使用技能後，在<color=#28d9ed>[Buff_T_2000035_3_2]回合</color>內使<color=#28d9ed>防禦力</color>減少。"
+    "Korean": "스킬 사용 시 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>[Buff_V_2000035_3_3]개</color> 해제하고 적 전체를 공격합니다. 대상이 <color=#28d9ed>출혈</color> 상태라면 피해가 <color=#28d9ed>50%</color> 증가하고 스킬 사용 후 <color=#28d9ed>방어력</color>을 <color=#28d9ed>[Buff_T_2000035_3_2]턴</color> 동안 감소시킵니다. (효과 저항 무시)",
+    "English": "When using this skill, removes <color=#28d9ed>[Buff_V_2000035_3_3]</color> <color=#28d9ed>buff(s)</color> from all enemies and attacks all enemies. If the target is <color=#28d9ed>Bleeding</color> , DMG increases by <color=#28d9ed>50%</color>. After using the skill, decreases the target's <color=#28d9ed>Defense</color> for <color=#28d9ed>[Buff_T_2000035_3_2] turns</color>. (Ignores Resilience)",
+    "Japanese": "スキル使用時、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>[Buff_V_2000035_3_3]個</color>解除し、敵全体にダメージを与える。対象が<color=#28d9ed>出血</color>状態の場合、ダメージが<color=#28d9ed>50%</color>UPし、スキル使用後<color=#28d9ed>防御力</color>を<color=#28d9ed>[Buff_T_2000035_3_2]ターン</color>の間DOWNさせる。（効果抵抗無視）",
+    "China_Simplified": "使用技能时，解除全体敌人<color=#28d9ed>[Buff_V_2000035_3_3]个</color><color=#28d9ed>强化效果</color>并攻击全体敌人。若目标处于<color=#28d9ed>出血</color>状态，伤害增加<color=#28d9ed>50%</color>，技能使用后使目标<color=#28d9ed>防御力</color>在<color=#28d9ed>[Buff_T_2000035_3_2]回合</color>内减少。（无视效果抵抗）",
+    "China_Traditional": "使用技能時，解除全體敵人<color=#28d9ed>[Buff_V_2000035_3_3]個</color><color=#28d9ed>強化效果</color>並攻擊全體敵人。若目標處於<color=#28d9ed>出血</color>狀態，傷害增加<color=#28d9ed>50%</color>，技能使用後使目標<color=#28d9ed>防禦力</color>在<color=#28d9ed>[Buff_T_2000035_3_2]回合</color>內減少。（無視效果抵抗）"
   },
   {
     "ID": "SKILL_NAME_2000035_Skill08",
@@ -6219,7 +6219,7 @@
     "ID": "SKILL_DESC_2000086_Skill01_LV1",
     "Korean": "적을 강격으로 공격합니다. \n대상에게 <color=#28d9ed>[Buff_C_2000086_1_1]</color> 확률로 <color=#28d9ed>[Buff_T_2000086_1_1]턴</color> 동안 저주를 부여합니다. (해제 불가)",
     "English": "Attacks an enemy with Heavy Strike.\nHas a <color=#28d9ed>[Buff_C_2000086_1_1]</color> chance to inflict Cursed on the target for <color=#28d9ed>[Buff_T_2000086_1_1] turn(s)</color>. (Irremovable)",
-    "Japanese": "敵単体に強撃でダメージを与える。\n対象に<color=#28d9ed>[Buff_C_2000086_1_1]</color>の確率で呪いを<color=#28d9ed>[Buff_T_2000086_1_1]ターン</color>の間付与する。(解除不可)",
+    "Japanese": "敵単体に強撃でダメージを与える。\\n対象に<color=#28d9ed>[Buff_C_2000086_1_1]</color>の確率で呪いを<color=#28d9ed>[Buff_T_2000086_1_1]ターン</color>の間付与する。(解除不可)",
     "China_Simplified": "强击敌人。\n并有<color=#28d9ed>[Buff_C_2000086_1_1]</color>的几率对目标造成诅咒效果，持续<color=#28d9ed>[Buff_T_2000086_1_1]</color>回合。(无法解除)",
     "China_Traditional": "強擊敵人。\n以<color=#28d9ed>[Buff_C_2000086_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000086_1_1]回合</color>內賦予目標詛咒。(無法解除)"
   },
@@ -6249,11 +6249,11 @@
   },
   {
     "ID": "SKILL_DESC_2000086_Skill03_LV1",
-    "Korean": "적 전체를 강격으로 공격하고 CP를 <color=#28d9ed>[Buff_V_2000086_3_1]</color> 회복합니다.\n공격 후 대상의 저주를 모두 폭발시키고, AP를 <color=#28d9ed>80</color> 감소시킵니다.",
-    "English": "Attacks all enemies with Heavy Strike and recovers Chain Points by <color=#28d9ed>[Buff_V_2000086_3_1]</color>.\nAfter attacking, detonates all Cursed stacks on the target and reduces Action Points by <color=#28d9ed>80</color>.",
-    "Japanese": "敵全体に強撃でダメージを与え、CPを<color=#28d9ed>[Buff_V_2000086_3_1]</color>獲得する。\n攻撃後、対象の呪いをすべて破裂させ、APを<color=#28d9ed>80</color>DOWNさせる。",
-    "China_Simplified": "强击全体敌人，恢复<color=#28d9ed>[Buff_V_2000086_3_1]</color>的CP。\n攻击后，使目标受到的所有诅咒效果爆炸，AP减少<color=#28d9ed>80</color>。",
-    "China_Traditional": "強擊全體敵人，並恢復<color=#28d9ed>[Buff_V_2000086_3_1]</color>CP。\n攻擊後，使目標的詛咒全部引爆，使AP減少\\n<color=#28d9ed>80</color>。"
+    "Korean": "스킬 사용 전 적 전체에게 <color=#28d9ed>저주</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n적 전체를 강격으로 공격하고 CP를 <color=#28d9ed>[Buff_V_2000086_3_1]</color> 회복 한뒤 대상의 저주를 모두 폭발시키고, AP를 <color=#28d9ed>80</color> 감소시킵니다.",
+    "English": "Before using this skill, inflicts <color=#28d9ed>Cursed</color> on all enemies for <color=#28d9ed>2 turns</color>.\\nAttacks all enemies with Heavy Strike and recovers CP by <color=#28d9ed>[Buff_V_2000086_3_1]</color>. Then detonates all Cursed stacks on the targets and decreases their AP by <color=#28d9ed>80</color>.",
+    "Japanese": "スキル使用前、敵全体に<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n敵全体に強撃でダメージを与え、CPを<color=#28d9ed>[Buff_V_2000086_3_1]</color>獲得した後、対象の呪いをすべて破裂させ、APを<color=#28d9ed>80</color>DOWNさせる。",
+    "China_Simplified": "使用技能前，对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>诅咒</color>。\\n强击全体敌人，恢复<color=#28d9ed>[Buff_V_2000086_3_1]</color>的CP。\\n攻击后，使目标受到的所有诅咒效果爆炸，AP减少<color=#28d9ed>80</color>。",
+    "China_Traditional": "使用技能前，對全體敵人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>詛咒</color>。\\n強擊全體敵人，並恢復<color=#28d9ed>[Buff_V_2000086_3_1]</color>CP。\\n攻擊後，使目標的詛咒全部引爆，使AP減少\\n<color=#28d9ed>80</color>。"
   },
   {
     "ID": "SKILL_NAME_2000087_Skill01",
@@ -8273,11 +8273,11 @@
   },
   {
     "ID": "SKILL_DESC_2000035_Skill04_LV1",
-    "Korean": "<color=#ffd732>체인 컴패니언 효과</color> : <color=#28d9ed>[Buff_C_2000035_chain_1_1]</color>의 확률로 <color=#28d9ed>[Buff_T_2000035_chain_1_1]턴</color> 동안 적 전체에게 출혈을 부여합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>[Buff_C_2000035_backup_1_1]</color> 확률로 <color=#28d9ed>[Buff_T_2000035_backup_1_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
-    "English": "<color=#ffd732>Chain Companion Effect</color>: Has a <color=#28d9ed>[Buff_C_2000035_chain_1_1]</color> chance to inflict Bleeding on all enemies for <color=#28d9ed>[Buff_T_2000035_chain_1_1] turn(s)</color>.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>[Buff_C_2000035_backup_1_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> for <color=#28d9ed>[Buff_T_2000035_backup_1_1] turn(s)</color>.",
-    "Japanese": "<color=#ffd732>チェーン効果(汎用)</color>：敵全体に<color=#28d9ed>[Buff_C_2000035_chain_1_1]</color>の確率で出血を<color=#28d9ed>[Buff_T_2000035_chain_1_1]ターン</color>の間付与する。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>[Buff_C_2000035_backup_1_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000035_backup_1_1]ターン</color>の間付与する。",
-    "China_Simplified": "<color=#ffd732>连携技能自由顺序效果</color>：有<color=#28d9ed>[Buff_C_2000035_chain_1_1]</color>的几率对全体敌人造成出血效果，持续<color=#28d9ed>[Buff_T_2000035_chain_1_1]回合</color>。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>[Buff_C_2000035_backup_1_1]</color>的几率造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000035_backup_1_1]回合</color>。",
-    "China_Traditional": "<color=#ffd732>連鎖技能同行效果</color>：以<color=#28d9ed>[Buff_C_2000035_chain_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000035_chain_1_1]回合</color>內賦予全體敵人出血。\\n\\n<color=#ffd732>夾攻效果</color>：攻擊後，以<color=#28d9ed>[Buff_C_2000035_backup_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000035_backup_1_1]回合</color>內賦予<color=#28d9ed>出血</color>。"
+    "Korean": "<color=#ffd732>체인 컴패니언 효과</color> : <color=#28d9ed>[Buff_C_2000035_chain_1_1]</color>의 확률로 <color=#28d9ed>[Buff_T_2000035_chain_1_1]턴</color> 동안 적 전체에게 출혈을 부여합니다. (효과 저항 무시)\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 <color=#28d9ed>[Buff_C_2000035_backup_1_1]</color> 확률로 <color=#28d9ed>[Buff_T_2000035_backup_1_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. (효과 저항 무시)",
+    "English": "<color=#ffd732>Chain Companion Effect</color>: Has a <color=#28d9ed>[Buff_C_2000035_chain_1_1]</color> chance to inflict Bleeding on all enemies for <color=#28d9ed>[Buff_T_2000035_chain_1_1] turn(s)</color>. (Ignores Resilience)\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, has a <color=#28d9ed>[Buff_C_2000035_backup_1_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000035_backup_1_1] turn(s)</color>. (Ignores Resilience)",
+    "Japanese": "<color=#ffd732>チェーン効果(汎用)</color>：敵全体に<color=#28d9ed>[Buff_C_2000035_chain_1_1]</color>の確率で出血を<color=#28d9ed>[Buff_T_2000035_chain_1_1]ターン</color>の間付与する。(効果抵抗無視)\\n\\n<color=#ffd732>連携効果</color>：攻撃後、<color=#28d9ed>[Buff_C_2000035_backup_1_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000035_backup_1_1]ターン</color>の間付与する。(効果抵抗無視)",
+    "China_Simplified": "<color=#ffd732>连携技能自由顺序效果</color>：有<color=#28d9ed>[Buff_C_2000035_chain_1_1]</color>的几率对全体敌人造成出血效果，持续<color=#28d9ed>[Buff_T_2000035_chain_1_1]回合</color>。(无视效果抵抗)\\n\\n<color=#ffd732>夹攻效果</color>：攻击后，有<color=#28d9ed>[Buff_C_2000035_backup_1_1]</color>的几率造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000035_backup_1_1]回合</color>。(无视效果抵抗)",
+    "China_Traditional": "<color=#ffd732>連鎖技能同行效果</color>：以<color=#28d9ed>[Buff_C_2000035_chain_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000035_chain_1_1]回合</color>內賦予全體敵人出血。(無視效果抵抗)\\n\\n<color=#ffd732>夾攻效果</color>：攻擊後，以<color=#28d9ed>[Buff_C_2000035_backup_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000035_backup_1_1]回合</color>內賦予<color=#28d9ed>出血</color>。(無視效果抵抗)"
   },
   {
     "ID": "SKILL_DESC_2000036_Skill04_LV1",
@@ -12265,11 +12265,11 @@
   },
   {
     "ID": "SKILL_DESC_50021",
-    "Korean": "적을 공격하고 <color=#28d9ed>[Buff_C_2000015_1_1]</color> 확률로 대상에게 <color=#28d9ed>[Buff_T_2000015_1_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
-    "English": "Attacks an enemy and has a <color=#28d9ed>[Buff_C_2000015_1_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000015_1_1] turn(s)</color>.",
-    "Japanese": "敵単体にダメージを与え、対象に<color=#28d9ed>[Buff_C_2000015_1_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000015_1_1]ターン</color>の間付与する。",
-    "China_Simplified": "攻击敌人，并有<color=#28d9ed>[Buff_C_2000015_1_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>。",
-    "China_Traditional": "攻擊敵人，以<color=#28d9ed>[Buff_C_2000015_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>內賦予目標<color=#28d9ed>出血</color>。"
+    "Korean": "적을 공격하고 <color=#28d9ed>[Buff_C_2000015_1_1]</color> 확률로 대상에게 <color=#28d9ed>[Buff_T_2000015_1_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. (효과 저항 무시)",
+    "English": "Attacks an enemy and has a <color=#28d9ed>[Buff_C_2000015_1_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000015_1_1] turn(s)</color>. (Ignores Resilience)",
+    "Japanese": "敵単体にダメージを与え、対象に<color=#28d9ed>[Buff_C_2000015_1_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000015_1_1]ターン</color>の間付与する。 (効果抵抗無視)",
+    "China_Simplified": "攻击敌人，并有<color=#28d9ed>[Buff_C_2000015_1_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>。 (无视效果抵抗)",
+    "China_Traditional": "攻擊敵人，以<color=#28d9ed>[Buff_C_2000015_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>內賦予目標<color=#28d9ed>出血</color>。 (無視效果抵抗)"
   },
   {
     "ID": "SKILL_NAME_50023",
@@ -12297,11 +12297,11 @@
   },
   {
     "ID": "SKILL_DESC_51021",
-    "Korean": "정면의 적을 우선적으로 공격하고 <color=#28d9ed>[Buff_C_2000015_1_1]</color> 확률로 대상에게 <color=#28d9ed>[Buff_T_2000015_1_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
-    "English": "Attacks an enemy, prioritizing the enemy in front. Has a <color=#28d9ed>[Buff_C_2000015_1_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000015_1_1] turn(s)</color>.",
-    "Japanese": "このスキルは一番前の敵を優先的に攻撃する。敵単体に<color=#28d9ed>[Buff_C_2000015_1_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000015_1_1]ターン</color> の間付与する。",
-    "China_Simplified": "优先攻击最前方的敌人，并有<color=#28d9ed>[Buff_C_2000015_1_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>。",
-    "China_Traditional": "優先攻擊前方的敵人，以<color=#28d9ed>[Buff_C_2000015_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>內賦予目標<color=#28d9ed>出血</color>。"
+    "Korean": "정면의 적을 우선적으로 공격하고 <color=#28d9ed>[Buff_C_2000015_1_1]</color> 확률로 대상에게 <color=#28d9ed>[Buff_T_2000015_1_1]턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. (효과 저항 무시)",
+    "English": "Attacks an enemy, prioritizing the enemy in front. Has a <color=#28d9ed>[Buff_C_2000015_1_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_2000015_1_1] turn(s)</color>. (Ignores Resilience)",
+    "Japanese": "このスキルは一番前の敵を優先的に攻撃する。敵単体に<color=#28d9ed>[Buff_C_2000015_1_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000015_1_1]ターン</color> の間付与する。 (効果抵抗無視)",
+    "China_Simplified": "优先攻击最前方的敌人，并有<color=#28d9ed>[Buff_C_2000015_1_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>。 (无视效果抵抗)",
+    "China_Traditional": "優先攻擊前方的敵人，以<color=#28d9ed>[Buff_C_2000015_1_1]</color>的機率在<color=#28d9ed>[Buff_T_2000015_1_1]回合</color>內賦予目標<color=#28d9ed>出血</color>。 (無視效果抵抗)"
   },
   {
     "ID": "SKILL_DESC_51022",
@@ -15977,11 +15977,11 @@
   },
   {
     "ID": "UO_OOPARTS_06_NAME",
-    "Korean": "CP회복 - 강화 스킬",
-    "English": "Chain Point Generation: Enhancement Skills",
-    "Japanese": "CP獲得 - 強化スキル",
-    "China_Simplified": "CP恢复-强化技能",
-    "China_Traditional": "恢復CP－強化技能"
+    "Korean": "CP회복 - 강화 공격",
+    "English": "Chain Point Generation: Enhanced Attack",
+    "Japanese": "CP獲得 - 強化攻撃",
+    "China_Simplified": "CP恢复-强化攻击",
+    "China_Traditional": "恢復CP－強化攻擊"
   },
   {
     "ID": "UO_OOPARTS_06_DESC",
@@ -16194,7 +16194,7 @@
   {
     "ID": "UO_SET_18_DESC",
     "Korean": "전투 시작 후 1턴간 약화 효과 면역",
-    "English": "Debuff Immunity for 1 turn at the start of battle",
+    "English": "Gain Immunity to Debuffs for 1 turn at the start of battle",
     "Japanese": "戦闘開始後、弱体効果免疫を1ターン間付与する。",
     "China_Simplified": "开始战斗后，对弱化效果免疫，持续1回合",
     "China_Traditional": "戰鬥開始後，在1回合內弱化效果免疫"
@@ -16650,18 +16650,18 @@
   {
     "ID": "UO_CEQUIP_2000015_DESC",
     "Korean": "공격 후 [Value] 확률로 추가 턴 획득 (버스트 스킬 제외)",
-    "English": "Has a [Value] chance of gaining an extra turn, after attacking",
+    "English": "After attacking, has a [Value] chance to gain an Extra Turn. (Excludes Burst Skills)",
     "Japanese": "攻撃後、[Value]の確率で追加ターンを獲得する。(バーストスキルでの攻撃は除く)",
     "China_Simplified": "攻击后，有[Value]的几率获得额外回合\\n(爆发技能除外)",
     "China_Traditional": "攻擊後，以[Value]的機率獲得追加回合(爆發技\\n能除外)"
   },
   {
     "ID": "UO_CEQUIP_2000015_UPGRADE_DESC",
-    "Korean": "<color=#28d9ed>나인 인치 네얼스</color> 사용 후 대상의 <color=#28d9ed>출혈</color>을 모두 <color=#28d9ed>폭발</color>",
-    "English": "After using <color=#28d9ed>Nine Inch Nails</color>, <color=#28d9ed>detonates</color> all <color=#28d9ed>Bleeding</color> stacks on the target.",
-    "Japanese": "<color=#28d9ed>【ナイン・インチ・ネイルズ】</color>使用後、\\n対象の<color=#28d9ed>出血</color>をすべて<color=#28d9ed>爆破</color>させる。",
-    "China_Simplified": "<color=#28d9ed>九寸钉</color>使用后目标的<color=#28d9ed>出血</color>效果全部<color=#28d9ed>爆发</color>",
-    "China_Traditional": "使用<color=#28d9ed>九寸釘</color>後，目標的<color=#28d9ed>出血</color>全部<color=#28d9ed>引爆</color>。"
+    "Korean": "<color=#28d9ed>나인 인치 네얼스</color> 사용 시 대상이 보스라면 관통력 <color=#28d9ed>+30%</color>",
+    "English": "When using <color=#28d9ed>Nine Inch Nails</color>, if the target is a Boss, Penetration <color=#28d9ed>+30%</color>",
+    "Japanese": "<color=#28d9ed>【ナイン・インチ・ネイルズ】</color>使用時、対象がボスなら貫通力<color=#28d9ed>+30%</color>",
+    "China_Simplified": "使用<color=#28d9ed>九寸钉</color>时，若目标为首领，穿透力<color=#28d9ed>+30%</color>",
+    "China_Traditional": "使用<color=#28d9ed>九吋釘</color>時，若目標為首領，貫穿力<color=#28d9ed>+30%</color>"
   },
   {
     "ID": "UO_CEQUIP_2000016_NAME",
@@ -17129,19 +17129,19 @@
   },
   {
     "ID": "UO_CEQUIP_2000035_DESC",
-    "Korean": "출혈 보유 적에게 아군이 입히는 피해 증가",
-    "English": "Increases damage dealt to enemies with Bleeding",
-    "Japanese": "出血状態の敵に味方が与えるダメージがUPする。",
-    "China_Simplified": "提升友军对处于出血状态敌人造成的伤害",
-    "China_Traditional": "我軍對身上帶有出血的敵人所造成的傷害增加"
+    "Korean": "전체 공격 시 대상 전체에게 출혈 +[Turn]턴 (면역 및 효과 저항 무시, 해제 불가)",
+    "English": "When using an attack that targets all enemies, inflicts Bleeding on all targets for +[Turn] turn(s) (Ignores Immunity and Resilience, Irremovable)",
+    "Japanese": "全体攻撃時、対象全体に出血+[Turn]ターン(免疫および効果抵抗無視、解除不可)",
+    "China_Simplified": "全体攻击时，对全体目标附加出血+[Turn]回合（无视免疫及效果抵抗，无法解除）",
+    "China_Traditional": "全體攻擊時，對全體目標附加出血+[Turn]回合（無視免疫及效果抵抗，無法解除）"
   },
   {
     "ID": "UO_CEQUIP_2000035_UPGRADE_DESC",
-    "Korean": "전체 공격 시 대상 전체에게 출혈 +[Turn]턴 (면역 무시, 해제 불가)",
-    "English": "When using an attack that targets all enemies, inflicts Bleeding on the target for [Turn] turn(s) (Ignores Immunity, Irremovable)",
-    "Japanese": "全体攻撃を使用時、対象全体に出血を+[Turn]ターンの間付与する。(免疫無視、解除不可)",
-    "China_Simplified": "全体攻击时对所有目标造成出血+[Turn]回合(无视免疫、无法解除)",
-    "China_Traditional": "對全體目標攻擊時，使全體目標陷入出血+[Turn]回合(無視免疫、無法解除)"
+    "Korean": "공격 직후 적의 반격/복수/신속 대응 불가",
+    "English": "Right after attacking, does not trigger an enemy's Counterattack, Revenge, or Agile Response",
+    "Japanese": "攻撃直後、敵の反撃/復讐/迅速対応発動不可",
+    "China_Simplified": "攻击后敌人无法\\n反击/复仇/迅速应对",
+    "China_Traditional": "攻擊後，敵人不會發動\\n反擊/復仇/迅速應對"
   },
   {
     "ID": "UO_CEQUIP_2000036_NAME",
@@ -17995,7 +17995,7 @@
     "ID": "UO_CEQUIP_2000070_DESC",
     "Korean": "전체 공격 피격 시 행동 게이지 [+Value] (1턴에 1회만 발동)",
     "English": "When hit by an attack that targets all enemies, increases Priority by [Value] (Only once per turn)",
-    "Japanese": "敵から全体攻撃を受けた場合、行動ゲージが[+Value]UPする。\\n(1ターンに一度のみ発動)",
+    "Japanese": "敵から全体攻撃を受けた場合、行動ゲージが[+Value]UPする。\\n(1ターンに1回のみ発動)",
     "China_Simplified": "受到全体攻击时，行动值[+Value](1回合仅能发动1次)",
     "China_Traditional": "受到全體攻擊時，速攻值[+Value](1回合只會發動1次)"
   },
@@ -18385,11 +18385,11 @@
   },
   {
     "ID": "UO_CEQUIP_2000086_UPGRADE_DESC",
-    "Korean": "<color=#28d9ed>나비야, 물어!</color> 사용 시 AP [+Value]",
-    "English": "When using <color=#28d9ed>Bite ‘Em, Kitsu!</color>, increases Action Points by [Value]",
-    "Japanese": "<color=#28d9ed>【ポチ、好きにお食べ】</color>使用時、APを[+Value]獲得する。",
-    "China_Simplified": "使用<color=#28d9ed>蝴蝶啊，撕咬吧！</color>时，AP[+Value]",
-    "China_Traditional": "使用<color=#28d9ed>蝴蝶叮咬！</color>時，AP[+Value]"
+    "Korean": "저주 부여 대상 아군 전체 피해 증가 [+Value]",
+    "English": "All allies' DMG dealt to targets inflicted with Cursed increases by [+Value]",
+    "Japanese": "呪い付与対象に味方全体のダメージ[+Value]",
+    "China_Simplified": "对目标附加诅咒时，我方全体伤害增加[+Value]",
+    "China_Traditional": "對目標附加詛咒時，我方全體傷害增加[+Value]"
   },
   {
     "ID": "UO_CEQUIP_2000087_NAME",
@@ -31051,7 +31051,7 @@
     "ID": "SE_DESC_SKILL08_2000063_4",
     "Korean": "아군 치명 공격 시 자신 행동 게이지 +25% (1턴에 1회)\\n체인 패시브의 WG 감소량 +1",
     "English": "+25% caster Priority when an ally scores a critical hit (Only once per turn)\\nChain Passive Weakness Gauge reduction +1",
-    "Japanese": "味方が会心発生時、自分の行動ゲージ+25% (1ターンに一度のみ発動)\\nチェーンパッシブのWGダメージ+1",
+    "Japanese": "味方が会心発生時、自分の行動ゲージ+25% (1ターンに1回のみ発動)\\nチェーンパッシブのWGダメージ+1",
     "China_Simplified": "友军发动暴击时，自身行动值+25%(1回合1次)\\n连携被动的WG减少量+1",
     "China_Traditional": "我軍暴擊攻擊時，自身速攻值+25% (1回合1次)\\n連鎖被動的WG傷害量+1"
   },
@@ -31145,27 +31145,27 @@
   },
   {
     "ID": "SE_DESC_SKILL08_2000086_4",
-    "Korean": "턴 시작 시 무작위 적 2명에게 저주 +1턴 (해제 불가)\\n체인 패시브의 WG 감소량 +1",
-    "English": "At the start of the turn, inflicts Cursed on two random enemies for 1 turn (Irremovable)\\n+1 Chain Passive Weakness Gauge reduction",
-    "Japanese": "ターン開始時、ランダムの敵2体に呪いを+1ターン(解除不可)\\nチェーンパッシブのWGダメージ+1",
-    "China_Simplified": "回合开始时，\\n随机诅咒2名敌人+1回合(无法解除)\\n连携被动效果的WG降低量+1",
-    "China_Traditional": "回合開始時，\\n賦予隨機2名敵人詛咒+1回合(無法解除)\\n連鎖被動的WG減少量+1"
+    "Korean": "체인 패시브의 WG 감소량 +1\\n입장 시 AP +25\\n턴 시작 시 무작위 적 2명에게 저주 +1턴 (해제 불가)",
+    "English": "+1 Chain Passive Weakness Gauge reduction\\n+25 Action Points at battle start\\nAt the start of the turn, inflicts Cursed on two random enemies for 1 turn (Irremovable)",
+    "Japanese": "チェーンパッシブのWGダメージ+1\\n戦闘開始時、AP+25\\nターン開始時、ランダムの敵2体に呪い+1ターン (解除不可) ",
+    "China_Simplified": "连携被动效果的WG降低量+1\\n入场时AP+25\\n回合开始时，\\n随机诅咒2名敌人+1回合(无法解除)",
+    "China_Traditional": "連鎖被動的WG減少量+1\\n入場時AP+25\\n回合開始時，\\n賦予隨機2名敵人詛咒+1回合(無法解除)"
   },
   {
     "ID": "SE_DESC_SKILL08_2000086_5",
-    "Korean": "버스트 3단계 해금\\n입장 시 AP +25",
-    "English": "Burst Level 3 Unlocked\\n+25 Action Points at battle start",
-    "Japanese": "バーストスキル3段階解禁\\n戦闘開始時、AP+25",
-    "China_Simplified": "解锁3阶爆发\\n入场时AP+25",
-    "China_Traditional": "爆發第3階段解鎖\\n入場時AP+25"
+    "Korean": "버스트 3단계 해금\\n효과 적중 +100%\\n공격 직후 적의 반격/복수/신속 대응 불가",
+    "English": "Burst Level 3 Unlocked\\n+100% Effectiveness\\nRight after attacking, does not trigger an enemy's Counterattack, Revenge, or Agile Response",
+    "Japanese": "バーストスキル3段階解禁\\n効果命中+100%\\n攻撃直後、敵の反撃/復讐/迅速対応発動不可",
+    "China_Simplified": "解锁3阶爆发\\n效果命中+100%\\n攻击后敌人无法\\n反击/复仇/迅速应对",
+    "China_Traditional": "爆發第3階段解鎖\\n效果命中+100%\\n攻擊後，敵人不會發動\\n反擊/復仇/迅速應對"
   },
   {
     "ID": "SE_DESC_SKILL08_2000086_6",
-    "Korean": "효과 적중 +100%\\n공격 직후 적의 반격/복수/신속 대응 불가",
-    "English": "+100% Effectiveness\\nRight after attacking, does not trigger an enemy's Counterattack, Revenge, or Agile Response",
-    "Japanese": "効果命中+100%\\n攻撃後、敵の反撃/復讐/迅速対応発動不可",
-    "China_Simplified": "效果命中+100%\\n攻击后敌人无法\\n反击/复仇/迅速应对",
-    "China_Traditional": "效果命中+100%\\n攻擊後，敵人不會發動\\n反擊/復仇/迅速應對"
+    "Korean": "수속성 대상 <color=#28d9ed>나비야, 물어!</color> 사용 시 대상의 공격력 감소, 강화 불가 +3턴\\n자신이 혼자가 아닌 경우 받는 최종 피해 -30%",
+    "English": "When using <color=#28d9ed>Bite ‘Em, Kitsu!</color> on a Water-type target, inflicts Decreased Attack and Unbuffable on the target for 3 turns\\nIf there is at least 1 other ally, Final DMG taken -30%",
+    "Japanese": "水属性対象に<color=#28d9ed>【ポチ、好きにお食べ】</color>使用時、対象の攻撃力DOWN、強化不可+3ターン\\n自分が一人でない場合、受ける最終ダメージ-30%",
+    "China_Simplified": "对水属性目标使用<color=#28d9ed>小纳比，咬！</color>时，目标攻击力减少、强化不可+3回合\\n自身不是单独时，受到的最终伤害-30%",
+    "China_Traditional": "對水屬性目標使用<color=#28d9ed>小納比，咬！</color>時，目標攻擊力減少、強化不可+3回合\\n自身不是單獨時，受到的最終傷害-30%"
   },
   {
     "ID": "SE_DESC_SKILL08_2000090_4",
@@ -31211,7 +31211,7 @@
     "ID": "SE_DESC_SKILL08_2000091_6",
     "Korean": "자신 체력 증가 +35%\\n전체 공격 피격 시 자신 행동 게이지 +40% (1턴에 1회)",
     "English": "Increases caster's Health by 35%\\nIncreases Priority of the caster by 40% when hit by an attack that targets all enemies (Once per turn)",
-    "Japanese": "自分のHP+35%\\n全体攻撃を受けた場合、自分の行動ゲージ+40%\\n(1ターンに一度のみ発動)",
+    "Japanese": "自分のHP+35%\\n全体攻撃を受けた場合、自分の行動ゲージ+40%\\n(1ターンに1回のみ発動)",
     "China_Simplified": "自身生命值提升+35%\\n受到全体攻击时，\\n自身行动值+40%(1回合1次)",
     "China_Traditional": "自身生命力增加+35%\\n受到全體攻擊時，自身的速攻值+40%\\n(1回合1次)"
   },
@@ -31299,7 +31299,7 @@
     "ID": "SE_DESC_SKILL08_2000100_4",
     "Korean": "아군 효과 저항 시 자신 행동 게이지 +40%\\n(전투 입장 시 생성 효과 제외, 1턴당 1회)\\n체인 패시브의 WG 감소량 +1",
     "English": "+40% caster's Priority when an ally resists an effect\\n(Effects applied at the start of battle excluded, only once per turn)\\n+1 Chain Passive Weakness Gauge damage",
-    "Japanese": "味方が効果抵抗時、自分の行動ゲージ+40%\\n(戦闘開始時に付与される効果除外、1ターンに一度のみ発動)\\nチェーンパッシブのWGダメージ+1",
+    "Japanese": "味方が効果抵抗時、自分の行動ゲージ+40%\\n(戦闘開始時に付与される効果除外、1ターンに1回のみ発動)\\nチェーンパッシブのWGダメージ+1",
     "China_Simplified": "友军抵抗效果时，自身行动值+40%\\n(不包含战斗开始时生成的效果，每回合限1次)\\n连锁被动效果的WG降低量+1",
     "China_Traditional": "我軍效果抵抗時，自身速攻值+40%\\n (進入戰鬥時生成效果除外，每1回合1次)\\n連鎖被動的WG減少量+1"
   },
@@ -31409,11 +31409,11 @@
   },
   {
     "ID": "SE_DESC_SKILL08_2000110_6",
-    "Korean": "매 턴 아군 피해량 증가 +10% (최대 5회 누적)\\n공격 직후 적의 반격/복수/신속 대응 불가",
-    "English": "Ally Damage Dealt +10% every turn (Max 5 stacks)\\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
-    "Japanese": "毎ターン味方の与えるダメージ+10%(最大5回累積)\\n攻撃直後、敵は反撃/復讐/迅速対応不可",
-    "China_Simplified": "每回合友军伤害量+10%(最多叠加5次)\\n攻击后敌人无法进行反击/复仇/迅速应对",
-    "China_Traditional": "每回合我軍傷害量+10%(最多累積5次)\\n攻擊後敵人無法進行反擊/復仇/迅速應對"
+    "Korean": "매 턴 아군 피해량 증가 +10% (최대 5회 누적)\\n스킬 사용 직후 적의 반격/복수/신속 대응 불가",
+    "English": "Ally Damage Dealt +10% every turn (Max 5 stacks)\\nRight after using any skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+    "Japanese": "毎ターン味方の与えるダメージ+10%(最大5回累積)\\nスキル使用直後、敵は反撃/復讐/迅速対応不可",
+    "China_Simplified": "每回合友军伤害量+10%(最多叠加5次)\\使用技能后敌人无法进行反击/复仇/迅速应对",
+    "China_Traditional": "每回合我軍傷害量+10%(最多累積5次)\\n使用技能後敵人無法進行反擊/復仇/迅速應對"
   },
   {
     "ID": "SE_DESC_SKILL08_2000111_4",
@@ -33216,6 +33216,22 @@
     "China_Traditional": "AP傷害+10"
   },
   {
+    "ID": "SE_DESC_AP_DMG_20",
+    "Korean": "AP 피해 +20",
+    "English": "AP DMG +20",
+    "Japanese": "APダメージ+20",
+    "China_Simplified": "AP伤害+20",
+    "China_Traditional": "AP傷害+20"
+  },
+  {
+    "ID": "SE_DESC_CORE_ELEMENT_SUPER",
+    "Korean": "모든 공격이 유리한 상성으로 적용",
+    "English": "All attacks apply with elemental advantage",
+    "Japanese": "すべて有利属性の攻撃判定でダメージを与える。",
+    "China_Simplified": "所有攻击以克制属性生效",
+    "China_Traditional": "所有攻擊以克制屬性生效"
+  },
+  {
     "ID": "SE_DESC_REDUCE_COOL_V_1",
     "Korean": "아군 1명 쿨타임 -1턴",
     "English": "-1 turn cooldowns for 1 ally",
@@ -33593,9 +33609,9 @@
   },
   {
     "ID": "SKILL_DESC_B_CHANGE&PIERCE_V_30%_ALLY",
-    "Korean": "강화 스킬로 교체\\n스킬 사용 전 아군 전체 관통력 증가 +1턴",
-    "English": "Replace with Enhanced Skill\\nAll allies' Penetration increases +1 turn before skill use",
-    "Japanese": "強化スキルに変更\\nスキル使用前、味方全体の貫通力UP+1ターン",
+    "Korean": "강화 공격으로 교체\\n스킬 사용 전 아군 전체 관통력 증가 +1턴",
+    "English": "Changes to Enhanced Skill\\nAll allies' Penetration increases +1 turn before skill use",
+    "Japanese": "強化攻撃に変更\\nスキル使用前、味方全体の貫通力UP+1ターン",
     "China_Simplified": "替换为强化技能\\n使用技能前，我方全体穿透力提升+1回合",
     "China_Traditional": "替換為強化技能\\n使用技能前，我方全體貫穿力提升+1回合"
   },
@@ -34633,11 +34649,11 @@
   },
   {
     "ID": "SKILL_DESC_B_2000096_3",
-    "Korean": "강화 스킬로 교체\\n피해 증가\\n추가 턴",
+    "Korean": "강화 공격으로 교체\\n피해 증가\\n추가 턴",
     "English": "Changes to Enhanced Skill\\nIncreases damage\\nExtra turn",
-    "Japanese": "強化スキルに変更\\nダメージUP\\n追加ターン獲得",
-    "China_Simplified": "转化为强化技能\\n伤害提升\\n额外回合",
-    "China_Traditional": "替換成強化技能\\n傷害增加\\n追加回合"
+    "Japanese": "強化攻撃に変更\\nダメージUP\\n追加ターン獲得",
+    "China_Simplified": "替换为强化攻击\\n伤害提升\\n额外回合",
+    "China_Traditional": "替換為強化攻擊\\n傷害增加\\n追加回合"
   },
   {
     "ID": "SKILL_Name_B_2700037_1",
@@ -34721,9 +34737,9 @@
   },
   {
     "ID": "SKILL_NAME_B_2000112_3",
-    "Korean": "원점으로 돌아가리니 쿨타임 초기화\\n추가 턴\\n강화 스킬로 교체",
-    "English": "Return to Origin cooldown reset\\nExtra Turn\\nChanged to Enhanced Skill",
-    "Japanese": "【原点に戻れ】スキルターン初期化\\n追加ターン\\n強化スキルに変更",
+    "Korean": "원점으로 돌아가리니 쿨타임 초기화\\n추가 턴\\n강화 공격으로 교체",
+    "English": "Return to Origin cooldown reset\\nExtra Turn\\nChanged to Enhanced Attack",
+    "Japanese": "【原点に戻れ】スキルターン初期化\\n追加ターン\\n強化攻撃に変更",
     "China_Simplified": "回归原点冷却时间重置\\n额外回合",
     "China_Traditional": "回歸原點冷卻時間重置\\n額外回合"
   },
@@ -34745,9 +34761,9 @@
   },
   {
     "ID": "SKILL_DESC_B_2000112_3",
-    "Korean": "원점으로 돌아가리니 쿨타임 초기화\\n추가 턴\\n강화 스킬로 교체",
-    "English": "Return to Origin cooldown reset\\nExtra Turn\\nChanged to Enhanced Skill",
-    "Japanese": "【原点に戻れ】スキルターン初期化\\n追加ターン",
+    "Korean": "원점으로 돌아가리니 쿨타임 초기화\\n추가 턴\\n강화 공격으로 교체",
+    "English": "Return to Origin cooldown reset\\nExtra Turn\\nChanged to Enhanced Attack",
+    "Japanese": "【原点に戻れ】スキルターン初期化\\n追加ターン\\n強化攻撃に変更",
     "China_Simplified": "回归原点冷却时间重置\\n额外回合",
     "China_Traditional": "回歸原點冷卻時間重置\\n額外回合"
   },
@@ -34905,11 +34921,11 @@
   },
   {
     "ID": "SKILL_DESC_B_2000068_2",
-    "Korean": "강화 스킬로 교체\\n앱솔루트 제로의 모든 효과 발동",
-    "English": "Changed to Enhanced Skill\\nActivates all effects of Absolute Zero",
-    "Japanese": "強化スキルに変更\\n【絶対零度】の効果をすべて発動",
-    "China_Simplified": "转化为强化技能\\n触发绝对零度的所有效果",
-    "China_Traditional": "替換成強化技能\\n發動絕對零度的所有效果"
+    "Korean": "강화 공격으로 교체\\n앱솔루트 제로의 모든 효과 발동",
+    "English": "Changed to Enhanced Attack\\nActivates all effects of Absolute Zero",
+    "Japanese": "強化攻撃に変更\\n【絶対零度】の効果をすべて発動",
+    "China_Simplified": "替换为强化攻击\\n触发绝对零度的所有效果",
+    "China_Traditional": "替換為強化攻擊\\n發動絕對零度的所有效果"
   },
   {
     "ID": "SKILL_NAME_B_2000070_1",
@@ -34929,11 +34945,11 @@
   },
   {
     "ID": "SKILL_DESC_B_2000070_2",
-    "Korean": "강화 스킬로 교체\\n피해 증가\\n체력 20% 회복",
-    "English": "Changed to Enhanced Skill\\nIncreases damage\\nRecovers 20% Health",
-    "Japanese": "強化スキルに変更\\nダメージUP\\nHP20%回復",
-    "China_Simplified": "转化为强化技能\\n伤害提升\\n生命值恢复20%",
-    "China_Traditional": "替換成強化技能\\n傷害增加\\n生命力恢復20%"
+    "Korean": "강화 공격으로 교체\\n피해 증가\\n체력 20% 회복",
+    "English": "Changed to Enhanced Attack\\nIncreases damage\\nRecovers 20% Health",
+    "Japanese": "強化攻撃に変更\\nダメージUP\\nHP20%回復",
+    "China_Simplified": "替换为强化攻击\\n伤害提升\\n生命值恢复20%",
+    "China_Traditional": "替換為強化攻擊\\n傷害增加\\n生命力恢復20%"
   },
   {
     "ID": "SKILL_DESC_B_2000080_1",
@@ -34985,32 +35001,32 @@
   },
   {
     "ID": "SKILL_DESC_B_2000084",
-    "Korean": "강화 스킬로 교체\\n모든 약화 효과 해제\\n소생 +2턴",
+    "Korean": "강화 공격으로 교체\\n모든 약화 효과 해제\\n소생 +2턴",
     "English": "Changes to Enhanced Skill\\nRemoves all debuffs\\nIncreases Revival duration by 2 turns",
-    "Japanese": "強化スキルに変更\\nすべての弱体効果解除\\n蘇生+2ターン",
-    "China_Simplified": "转化为强化技能\\n解除所有弱化效果\\n苏醒+2回合",
+    "Japanese": "強化攻撃に変更\\nすべての弱体効果解除\\n蘇生+2ターン",
+    "China_Simplified": "替换为强化攻击\\n解除所有弱化效果\\n苏醒+2回合",
     "China_Traditional": "替換為強化技能\\n解除所有弱化效果\\n復甦+2回合"
   },
   {
     "ID": "SKILL_NAME_B_2000086_1",
-    "Korean": "저주 추가 및 발동 확률 증가",
-    "English": "Inflicts additional Cursed and increases activation chance",
-    "Japanese": "呪い追加および\\n発動確率UP",
-    "China_Simplified": "附加诅咒\\n及触发几率提升",
-    "China_Traditional": "追加詛咒\\n及發動機率增加"
+    "Korean": "저주 추가 및 WG 감소",
+    "English": "Additional Curse and WG Reduction",
+    "Japanese": "呪い追加およびWGダメージ",
+    "China_Simplified": "追加诅咒及WG减少",
+    "China_Traditional": "追加詛咒及WG減少"
   },
   {
     "ID": "SKILL_DESC_B_2000086_1",
-    "Korean": "저주 1개 추가 발생 (해제 불가)\\n효과 발동 확률 +20%",
-    "English": "Inflicts 1 additional Cursed (Irremovable)\\n+20% effect chance",
-    "Japanese": "呪い1個追加(解除不可)\\n効果発動確率+20%",
-    "China_Simplified": "额外触发1次诅咒(无法解除)\\n效果触发几率+20%",
-    "China_Traditional": "額外發生1個詛咒效果(無法解除)\\n效果發動機率+20%"
+    "Korean": "저주 1개 추가 발생 (해제 불가)\\nWG 감소량 +1",
+    "English": "Inflicts 1 additional stack of Cursed (Irremovable)\\nWG Reduction +1",
+    "Japanese": "呪い1個追加(解除不可)\\nWGダメージ+1",
+    "China_Simplified": "额外触发1次诅咒(无法解除)\\nWG减少量+1",
+    "China_Traditional": "額外發生1個詛咒效果(無法解除)\\nWG減少量+1"
   },
   {
     "ID": "SKILL_DESC_B_2000086_2",
     "Korean": "저주 1개 추가 발생 (해제 불가)",
-    "English": "Inflicts 1 additional Cursed (Irremovable)",
+    "English": "Inflicts 1 additional stack of Cursed (Irremovable)",
     "Japanese": "呪い1個追加(解除不可)",
     "China_Simplified": "额外触发1次诅咒(无法解除)",
     "China_Traditional": "額外發生1個詛咒效果(無法解除)"
@@ -35025,10 +35041,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000086_3",
-    "Korean": "강화 스킬로 교체\\n공격 범위 확대\\n자신의 모든 스킬 쿨타임 초기화\\n추가 턴",
-    "English": "Changes to Enhanced Skill\\nTargets all enemies\\nResets all skill cooldowns of the caster\\nExtra Turn",
-    "Japanese": "強化スキルに変更\\n攻撃範囲拡大\\n自分のすべてのスキルターン初期化\\n追加ターン",
-    "China_Simplified": "转化为强化技能\\n扩大攻击范围\\n自身的所有技能冷却时间重置\\n额外回合",
+    "Korean": "강화 공격으로 교체\\n공격 범위 확대\\n자신의 모든 스킬 쿨타임 초기화\\n추가 턴",
+    "English": "Changes to Enhanced Skill\\nTargets all enemies\\nResets all skill cooldowns\\nExtra Turn",
+    "Japanese": "強化攻撃に変更\\n攻撃範囲拡大\\n自分のすべてのスキルターン初期化\\n追加ターン",
+    "China_Simplified": "替换为强化攻击\\n扩大攻击范围\\n自身的所有技能冷却时间重置\\n额外回合",
     "China_Traditional": "替換為強化技能\\n攻擊範圍擴大\\n自身的所有技能冷卻時間重置\\n追加回合"
   },
   {
@@ -35057,10 +35073,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000087_3",
-    "Korean": "강화 스킬로 교체\\n공격 범위 확대\\n총알보다 빠르게! 쿨타임 초기화",
+    "Korean": "강화 공격으로 교체\\n공격 범위 확대\\n총알보다 빠르게! 쿨타임 초기화",
     "English": "Changes to Enhanced Skill\\nExpands attack range\\nResets skill cooldown of Faster than Bullets!",
-    "Japanese": "強化スキルに変更\\n攻撃範囲拡大\\n【弾丸よりも早く!】の\\nスキルターン初期化",
-    "China_Simplified": "转化为强化技能\\n扩大攻击范围\\n重置快如子弹！冷却时间",
+    "Japanese": "強化攻撃に変更\\n攻撃範囲拡大\\n【弾丸よりも早く!】の\\nスキルターン初期化",
+    "China_Simplified": "替换为强化攻击\\n扩大攻击范围\\n重置快如子弹！冷却时间",
     "China_Traditional": "替換為強化技能\\n攻擊範圍擴大\\n快於子彈！冷卻時間重置"
   },
   {
@@ -35113,26 +35129,26 @@
   },
   {
     "ID": "SKILL_DESC_B_2000035",
-    "Korean": "피해 증가\\n출혈 1개 추가 발생",
-    "English": "Increases damage\\nInflicts 1 Additional Bleeding effect",
-    "Japanese": "ダメージUP\\n出血1個追加発生",
-    "China_Simplified": "伤害提升\\n额外触发1次出血",
-    "China_Traditional": "傷害增加\\n額外發生1個出血效果"
+    "Korean": "피해 증가\\n출혈 1개 추가 발생 (효과 저항 무시)",
+    "English": "Increases damage\\nInflicts 1 additional stack of Bleeding (Ignores Resilience)",
+    "Japanese": "ダメージUP\\n出血1個追加発生 (効果抵抗無視)",
+    "China_Simplified": "伤害提升\\n额外触发1次出血 (无视效果抵抗)",
+    "China_Traditional": "傷害增加\\n額外發生1個出血效果 (無視效果抵抗)"
   },
   {
     "ID": "SKILL_DESC_B_2000035_2",
-    "Korean": "강화 스킬로 교체\\n피해 증가",
+    "Korean": "강화 공격으로 교체\\n피해 증가",
     "English": "Changes to Enhanced Skill\\nIncreases damage",
-    "Japanese": "強化スキルに変更\\nダメージUP",
-    "China_Simplified": "转化为强化技能\\n伤害提升",
-    "China_Traditional": "替換成強化技能\\n傷害增加"
+    "Japanese": "強化攻撃に変更\\nダメージUP",
+    "China_Simplified": "替换为强化攻击\\n伤害提升",
+    "China_Traditional": "替換為強化攻擊\\n傷害增加"
   },
   {
     "ID": "SKILL_DESC_B_2000057",
-    "Korean": "강화 스킬로 교체\\n신의 천벌 5회 누적",
+    "Korean": "강화 공격으로 교체\\n신의 천벌 5회 누적",
     "English": "Changes to Enhanced Skill\\n5 Stacks of Divine Retribution",
-    "Japanese": "強化スキルに変更\\n【神鳴り】5回累積",
-    "China_Simplified": "转化为强化技能\\n降下神罚叠加5次",
+    "Japanese": "強化攻撃に変更\\n【神鳴り】5回累積",
+    "China_Simplified": "替换为强化攻击\\n降下神罚叠加5次",
     "China_Traditional": "替換為強化技能\\n神之懲戒累積5次"
   },
   {
@@ -35153,11 +35169,11 @@
   },
   {
     "ID": "SKILL_DESC_B_2000008",
-    "Korean": "강화 스킬로 교체\\n<color=#FFBF00>엔드 오브 월드</color>의 쿨타임 -2\\nWG 피해 +2",
-    "English": "Changed to Enhanced Skill\\n-2 <color=#FFBF00>End of the World</color> Cooldown\\n+2 Weakness Gauge damage",
-    "Japanese": "強化スキルに変更\\n<color=#FFBF00>エンド・オブ・ワールド</color>のスキルターン減少-2\\nWGダメージ+2",
-    "China_Simplified": "转化为强化技能\\n减少<color=#FFBF00>世界末日</color>的冷却时间-2回合\\nWG伤害+2",
-    "China_Traditional": "替換成強化技能\\n減少<color=#FFBF00>世界末日</color>的冷卻時間-2回合\\nWG傷害+2"
+    "Korean": "강화 공격으로 교체\\n<color=#FFBF00>엔드 오브 월드</color>의 쿨타임 -2\\nWG 피해 +2",
+    "English": "Changed to Enhanced Attack\\n-2 <color=#FFBF00>End of the World</color> Cooldown\\n+2 Weakness Gauge damage",
+    "Japanese": "強化攻撃に変更\\n<color=#FFBF00>エンド・オブ・ワールド</color>のスキルターン減少-2\\nWGダメージ+2",
+    "China_Simplified": "替换为强化攻击\\n减少<color=#FFBF00>世界末日</color>的冷却时间-2回合\\nWG伤害+2",
+    "China_Traditional": "替換為強化攻擊\\n減少<color=#FFBF00>世界末日</color>的冷卻時間-2回合\\nWG傷害+2"
   },
   {
     "ID": "SKILL_NAME_B_2000083_2",
@@ -35217,10 +35233,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000076_3",
-    "Korean": "강화 스킬로 교체\\n브린 제외 아군과 적 모두 카리스마 +1턴",
-    "English": "Changed to Enhanced Skill\\nIncreases Charisma duration of all allies and enemies except for Bryn by 1 turn",
-    "Japanese": "強化スキルに変更\\nブリンを除く味方・敵全体に\\nカリスマ+1ターン",
-    "China_Simplified": "转化为强化技能\\n除布琳外的友军和全体敌人\\n气场+1回合",
+    "Korean": "강화 공격으로 교체\\n브린 제외 아군과 적 모두 카리스마 +1턴",
+    "English": "Changed to Enhanced Attack\\nIncreases Charisma duration of all allies and enemies except for Bryn by 1 turn",
+    "Japanese": "強化攻撃に変更\\nブリンを除く味方・敵全体に\\nカリスマ+1ターン",
+    "China_Simplified": "替换为强化攻击\\n除布琳外的友军和全体敌人\\n气场+1回合",
     "China_Traditional": "替換為強化技能\\n布林除外的我軍及敵人全部氣勢+1回合"
   },
   {
@@ -35265,10 +35281,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000091_3",
-    "Korean": "강화 스킬로 교체\\n대상 스턴 +1턴",
-    "English": "Changed to Enhanced Skill\\nInflicts Stunned on the target for 1 turn",
-    "Japanese": "強化スキルに変更\\n対象にスタン+1ターン",
-    "China_Simplified": "转化为强化技能\\n目标晕眩+1回合",
+    "Korean": "강화 공격으로 교체\\n대상 스턴 +1턴",
+    "English": "Changed to Enhanced Attack\\nInflicts Stunned on the target for 1 turn",
+    "Japanese": "強化攻撃に変更\\n対象にスタン+1ターン",
+    "China_Simplified": "替换为强化攻击\\n目标晕眩+1回合",
     "China_Traditional": "替換為強化技能\\n目標暈眩+1回合"
   },
   {
@@ -35297,10 +35313,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000092_3",
-    "Korean": "강화 스킬로 교체\\n공격 범위 확대\\n아군 전체 쿨타임 -1턴",
+    "Korean": "강화 공격으로 교체\\n공격 범위 확대\\n아군 전체 쿨타임 -1턴",
     "English": "Changes to Enhanced Skill\\nTargets all enemies\\nReduces cooldowns of all allies by 1 turn",
-    "Japanese": "強化スキルに変更\\n攻撃範囲拡大\\n味方全体のスキルターン-1ターン",
-    "China_Simplified": "转化为强化技能\\n扩大攻击范围\\n全体友军冷却时间-1回合",
+    "Japanese": "強化攻撃に変更\\n攻撃範囲拡大\\n味方全体のスキルターン-1ターン",
+    "China_Simplified": "替换为强化攻击\\n扩大攻击范围\\n全体友军冷却时间-1回合",
     "China_Traditional": "替換為強化技能\\n攻擊範圍擴大\\n全體我軍的冷卻時間-1回合"
   },
   {
@@ -35329,11 +35345,11 @@
   },
   {
     "ID": "SKILL_DESC_B_2000099",
-    "Korean": "강화 스킬로 교체\\n자신의 약화 효과 모두 해제\\n피해 증가",
+    "Korean": "강화 공격으로 교체\\n자신의 약화 효과 모두 해제\\n피해 증가",
     "English": "Changes to Enhanced Skill\\nRemoves all debuffs from the caster\\nIncreases damage",
-    "Japanese": "強化スキルに変更\\n自分の弱体効果をすべて解除\\nダメージUP",
-    "China_Simplified": "转化为强化技能\\n解除自身所有弱化效果\\n伤害提升",
-    "China_Traditional": "替換成強化技能\\n解除自身的所有弱化效果\\n傷害增加"
+    "Japanese": "強化攻撃に変更\\n自分の弱体効果をすべて解除\\nダメージUP",
+    "China_Simplified": "替换为强化攻击\\n解除自身所有弱化效果\\n伤害提升",
+    "China_Traditional": "替換為強化攻擊\\n解除自身的所有弱化效果\\n傷害增加"
   },
   {
     "ID": "SKILL_NAME_B_2700003_1",
@@ -35505,10 +35521,10 @@
   },
   {
     "ID": "SKILL_DESC_B_CHANGE&PIERCE_V_30%",
-    "Korean": "강화 스킬로 교체\\n관통력 증가",
-    "English": "Changed to Enhanced Skill\\nPenetration increased.",
-    "Japanese": "強化スキルに変更\\n貫通力UP",
-    "China_Simplified": "转化为强化技能\\n穿透力提升",
+    "Korean": "강화 공격으로 교체\\n관통력 증가",
+    "English": "Changed to Enhanced Attack\\nPenetration increased.",
+    "Japanese": "強化攻撃に変更\\n貫通力UP",
+    "China_Simplified": "替换为强化攻击\\n穿透力提升",
     "China_Traditional": "替換為強化技能\\n貫穿力增加"
   },
   {
@@ -35881,19 +35897,19 @@
   },
   {
     "ID": "SKILL_DESC_B_2000019_3",
-    "Korean": "강화 스킬로 교체\\n피해 증가 (화속성 적에게는 추가로 피해 증가)",
-    "English": "Changed to Enhanced Skill\\nIncreased damage (With additional increased damage against Fire enemies)",
-    "Japanese": "強化スキルに変更\\nダメージUP(火属性の敵には\\n追加でダメージUP)",
-    "China_Simplified": "转化为强化技能\\n伤害提升\\n(对火属性敌人造成的额外伤害提升)",
-    "China_Traditional": "替換成強化技能\\n傷害增加（對火屬性敵人的額外傷害增加）"
+    "Korean": "강화 공격으로 교체\\n피해 증가 (화속성 적에게는 추가로 피해 증가)",
+    "English": "Changed to Enhanced Attack\\nIncreased damage (With additional increased damage against Fire enemies)",
+    "Japanese": "強化攻撃に変更\\nダメージUP(火属性の敵には\\n追加でダメージUP)",
+    "China_Simplified": "替换为强化攻击\\n伤害提升\\n(对火属性敌人造成的额外伤害提升)",
+    "China_Traditional": "替換為強化攻擊\\n傷害增加（對火屬性敵人的額外傷害增加）"
   },
   {
     "ID": "SKILL_DESC_B_2000062",
-    "Korean": "강화 스킬로 교체\\n피해 증가 (암속성 적에게는 추가로 피해 증가)",
-    "English": "Changed to Enhanced Skill\\nIncreased damage (Additional increased damage dealt to Dark element enemies)",
-    "Japanese": "強化スキルに変更\\nダメージUP(闇属性の敵には\\n追加でダメージUP)",
-    "China_Simplified": "转化为强化技能\\n伤害提升(对暗属性敌人\\n造成的额外伤害提升)",
-    "China_Traditional": "替換成強化技能\\n傷害增加(對暗屬性敵人的額外傷害增加)"
+    "Korean": "강화 공격으로 교체\\n피해 증가 (암속성 적에게는 추가로 피해 증가)",
+    "English": "Changed to Enhanced Attack\\nIncreased damage (Additional increased damage dealt to Dark element enemies)",
+    "Japanese": "強化攻撃に変更\\nダメージUP(闇属性の敵には\\n追加でダメージUP)",
+    "China_Simplified": "替换为强化攻击\\n伤害提升(对暗属性敌人\\n造成的额外伤害提升)",
+    "China_Traditional": "替換為強化攻擊\\n傷害增加(對暗屬性敵人的額外傷害增加)"
   },
   {
     "ID": "SKILL_DESC_B_2000020_1",
@@ -35913,10 +35929,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000020_3",
-    "Korean": "강화 스킬로 교체\\n앨리스 인 원더랜드 쿨타임 초기화",
-    "English": "Changed to Enhanced Skill\\nResets Alice In Wonderland! Cooldown",
-    "Japanese": "強化スキルに変更\\n【アリス・イン・ワンダーランド】\\nスキルターン初期化",
-    "China_Simplified": "转化为强化技能\\n重置爱丽丝梦游仙境冷却时间",
+    "Korean": "강화 공격으로 교체\\n앨리스 인 원더랜드 쿨타임 초기화",
+    "English": "Changed to Enhanced Attack\\nResets Alice In Wonderland! Cooldown",
+    "Japanese": "強化攻撃に変更\\n【アリス・イン・ワンダーランド】\\nスキルターン初期化",
+    "China_Simplified": "替换为强化攻击\\n重置爱丽丝梦游仙境冷却时间",
     "China_Traditional": "替換為強化技能\\n愛麗絲夢遊仙境冷卻時間重置"
   },
   {
@@ -36009,10 +36025,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000055_2",
-    "Korean": "강화 스킬로 교체\\n다들 서핑하러 갔대! 쿨타임 초기화",
-    "English": "Changed to Enhanced Skill\\nResets Gone Surfing! cooldown",
-    "Japanese": "強化スキルに変更\\n【ハデに決めちゃうし!】\\nスキルターン初期化",
-    "China_Simplified": "转化为强化技能\\n大家都去冲浪了！的冷却时间重置",
+    "Korean": "강화 공격으로 교체\\n다들 서핑하러 갔대! 쿨타임 초기화",
+    "English": "Changed to Enhanced Attack\\nResets Gone Surfing! cooldown",
+    "Japanese": "強化攻撃に変更\\n【ハデに決めちゃうし!】\\nスキルターン初期化",
+    "China_Simplified": "替换为强化攻击\\n大家都去冲浪了！的冷却时间重置",
     "China_Traditional": "替換為強化技能\\n都去衝浪了呢！冷卻時間重置"
   },
   {
@@ -36025,10 +36041,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000056_2",
-    "Korean": "강화 스킬로 교체\\n공격 범위 확대 및 피해 증가",
+    "Korean": "강화 공격으로 교체\\n공격 범위 확대 및 피해 증가",
     "English": "Changes to Enhanced Skill\\nTargets all enemies and increases damage dealt",
-    "Japanese": "強化スキルに変更\\n攻撃範囲拡大およびダメージUP",
-    "China_Simplified": "转化为强化技能\\n扩大攻击范围，且伤害提升",
+    "Japanese": "強化攻撃に変更\\n攻撃範囲拡大およびダメージUP",
+    "China_Simplified": "替换为强化攻击\\n扩大攻击范围，且伤害提升",
     "China_Traditional": "替換為強化技能\\n攻擊範圍擴大及傷害增加"
   },
   {
@@ -36041,10 +36057,10 @@
   },
   {
     "ID": "SKILL_DESC_B_CHANGE&INVINCIBLE",
-    "Korean": "강화 스킬로 교체\\n무적 +1턴",
-    "English": "Changed to Enhanced Skill\\nIncreases Invulnerability duration by 1 turn",
-    "Japanese": "強化スキルに変更\\n無敵+1ターン",
-    "China_Simplified": "转化为强化技能\\n无敌+1回合",
+    "Korean": "강화 공격으로 교체\\n무적 +1턴",
+    "English": "Changed to Enhanced Attack\\nIncreases Invulnerability duration by 1 turn",
+    "Japanese": "強化攻撃に変更\\n無敵+1ターン",
+    "China_Simplified": "替换为强化攻击\\n无敌+1回合",
     "China_Traditional": "替換為強化技能\\n無敵+1回合"
   },
   {
@@ -36217,18 +36233,18 @@
   },
   {
     "ID": "SKILL_DESC_B_CHANGE&DMG_DEF",
-    "Korean": "강화 스킬로 교체\\n공격 범위 확대 및 방어 비례 피해 추가",
-    "English": "Changed to Enhanced Skill\\nTargets all enemies and deals additional damage proportional to Defense",
-    "Japanese": "強化スキルに変更\\n攻撃範囲拡大および防御が\\n高いほどダメージUP",
-    "China_Simplified": "转化为强化技能\\n扩大攻击范围，\\n且根据防御等比造成额外伤害",
+    "Korean": "강화 공격으로 교체\\n공격 범위 확대 및 방어 비례 피해 추가",
+    "English": "Changed to Enhanced Attack\\nTargets all enemies and deals additional damage proportional to Defense",
+    "Japanese": "強化攻撃に変更\\n攻撃範囲拡大および防御が\\n高いほどダメージUP",
+    "China_Simplified": "替换为强化攻击\\n扩大攻击范围，\\n且根据防御等比造成额外伤害",
     "China_Traditional": "替換為強化技能\\n攻擊範圍擴大及與防禦等比傷害追加"
   },
   {
     "ID": "SKILL_DESC_B_CHANGE",
-    "Korean": "강화 스킬로 교체\\n공격 범위 확대 및 피해 증가",
+    "Korean": "강화 공격으로 교체\\n공격 범위 확대 및 피해 증가",
     "English": "Changes to Enhanced Skill\\nTargets all enemies and increases damage dealt",
-    "Japanese": "強化スキルに変更\\n攻撃範囲拡大およびダメージUP",
-    "China_Simplified": "转化为强化技能\\n扩大攻击范围，且伤害提升",
+    "Japanese": "強化攻撃に変更\\n攻撃範囲拡大およびダメージUP",
+    "China_Simplified": "替换为强化攻击\\n扩大攻击范围，且伤害提升",
     "China_Traditional": "替換為強化技能\\n攻擊範圍擴大及傷害增加"
   },
   {
@@ -36265,10 +36281,10 @@
   },
   {
     "ID": "SKILL_DESC_B_CHANGE&BUFF_C_20%",
-    "Korean": "강화 스킬로 교체\\n버프 발동 확률 +20%",
-    "English": "Changed to Enhanced Skill\\nIncreases the chance to activate buffs by 20%",
-    "Japanese": "強化スキルに変更\\nバフ発生率+20%",
-    "China_Simplified": "转化为强化技能\\n增益触发几率+20%",
+    "Korean": "강화 공격으로 교체\\n버프 발동 확률 +20%",
+    "English": "Changed to Enhanced Attack\\nIncreases the chance to activate buffs by 20%",
+    "Japanese": "強化攻撃に変更\\nバフ発生率+20%",
+    "China_Simplified": "替换为强化攻击\\n增益触发几率+20%",
     "China_Traditional": "替換為強化技能\\n增益發動機率+20%"
   },
   {
@@ -36297,9 +36313,9 @@
   },
   {
     "ID": "SKILL_DESC_B_2000040",
-    "Korean": "강화 스킬로 교체\\n방어력 감소 강화 (저항 무시)",
+    "Korean": "강화 공격으로 교체\\n방어력 감소 강화 (저항 무시)",
     "English": "Replaced with Enhanced Skill\\nEnhanced Reduce Defense (Ignores Resilience)",
-    "Japanese": "強化スキルに入れ替え\\n防御力DOWN強化(抵抗無視)",
+    "Japanese": "強化攻撃に変更\\n防御力DOWN強化(抵抗無視)",
     "China_Simplified": "替换为强化技能\\n防御力降低强化 (无视抵抗)",
     "China_Traditional": "替換為強化技能\\n防禦力減少強化 (無視抵抗)"
   },
@@ -36313,10 +36329,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000044",
-    "Korean": "강화 스킬로 교체\\n실드 강화",
-    "English": "Changed to Enhanced Skill\\nEnhances Barrier strength",
-    "Japanese": "強化スキルに変更\\nシールド強化",
-    "China_Simplified": "转化为强化技能\\n护盾强化",
+    "Korean": "강화 공격으로 교체\\n실드 강화",
+    "English": "Changed to Enhanced Attack\\nEnhances Barrier strength",
+    "Japanese": "強化攻撃に変更\\nシールド強化",
+    "China_Simplified": "替换为强化攻击\\n护盾强化",
     "China_Traditional": "替換為強化技能\\n護盾強化"
   },
   {
@@ -36473,19 +36489,19 @@
   },
   {
     "ID": "SKILL_DESC_B_2000043_3_2",
-    "Korean": "강화 스킬로 교체\\n강화 해제 ▶ 강화 효과 강탈",
+    "Korean": "강화 공격으로 교체\\n강화 해제 ▶ 강화 효과 강탈",
     "English": "Changes to Enhanced Skill\\nRemoves Buffs ▶ Steals Buff",
-    "Japanese": "強化スキルに変更\\n強化効果を解除 ▶ 強化効果を奪う",
-    "China_Simplified": "转化为强化技能\\n强化解除 ▶ 夺取强化效果",
-    "China_Traditional": "替換成強化技能\\n强化解除▶奪取強化效果"
+    "Japanese": "強化攻撃に変更\\n強化効果を解除 ▶ 強化効果を奪う",
+    "China_Simplified": "替换为强化攻击\\n强化解除 ▶ 夺取强化效果",
+    "China_Traditional": "替換為強化攻擊\\n强化解除▶奪取強化效果"
   },
   {
     "ID": "SKILL_DESC_B_2000063",
-    "Korean": "강화 스킬로 교체\\n용왕의 숨결 쿨타임 초기화",
-    "English": "Changed to Enhanced Skill\\nResets cooldown of Dragon Ruler's Breath",
-    "Japanese": "強化スキルに変更\\n【竜王の息吹】スキルターン初期化",
-    "China_Simplified": "转化为强化技能\\n重置龙王吐息冷却时间",
-    "China_Traditional": "替換成強化技能\\n龍王之息冷卻時間重置"
+    "Korean": "강화 공격으로 교체\\n용왕의 숨결 쿨타임 초기화",
+    "English": "Changed to Enhanced Attack\\nResets cooldown of Dragon Ruler's Breath",
+    "Japanese": "強化攻撃に変更\\n【竜王の息吹】スキルターン初期化",
+    "China_Simplified": "替换为强化攻击\\n重置龙王吐息冷却时间",
+    "China_Traditional": "替換為強化攻擊\\n龍王之息冷卻時間重置"
   },
   {
     "ID": "SKILL_DESC_B_SELF_HEAL_15%",
@@ -36553,11 +36569,11 @@
   },
   {
     "ID": "SKILL_DESC_B_2000072_3",
-    "Korean": "강화 스킬로 교체\\n인법 용오름의 술 쿨타임 초기화",
-    "English": "Changed to Enhanced Skill\\nResets Ninjutsu, Waterspout Technique Cooldown",
-    "Japanese": "強化スキルに変更\\n【忍法・竜巻の術】の\\nスキルターン初期化",
-    "China_Simplified": "转化为强化技能\\n忍者龙卷风之术冷却时间重置",
-    "China_Traditional": "替換成強化技能\\n忍術龍捲風之術冷卻時間重置"
+    "Korean": "강화 공격으로 교체\\n인법 용오름의 술 쿨타임 초기화",
+    "English": "Changed to Enhanced Attack\\nResets Ninjutsu, Waterspout Technique Cooldown",
+    "Japanese": "強化攻撃に変更\\n【忍法・竜巻の術】の\\nスキルターン初期化",
+    "China_Simplified": "替换为强化攻击\\n忍者龙卷风之术冷却时间重置",
+    "China_Traditional": "替換為強化攻擊\\n忍術龍捲風之術冷卻時間重置"
   },
   {
     "ID": "SKILL_DESC_B_2000072_2",
@@ -36609,10 +36625,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000073_3",
-    "Korean": "강화 스킬로 교체\\n지옥의 묵시록 쿨타임 -2턴",
-    "English": "Changed to Enhanced Skill\\nReduces Apocalypse Now cooldown by 2 turns",
-    "Japanese": "強化スキルに変更\\n【地獄の黙示録】のスキルターン\\n-2ターン",
-    "China_Simplified": "转化为强化技能\\n地狱启示录冷却时间-2回合",
+    "Korean": "강화 공격으로 교체\\n지옥의 묵시록 쿨타임 -2턴",
+    "English": "Changed to Enhanced Attack\\nReduces Apocalypse Now cooldown by 2 turns",
+    "Japanese": "強化攻撃に変更\\n【地獄の黙示録】のスキルターン\\n-2ターン",
+    "China_Simplified": "替换为强化攻击\\n地狱启示录冷却时间-2回合",
     "China_Traditional": "替換為強化技能\\n地獄啟示錄冷卻時間-2回合"
   },
   {
@@ -36641,11 +36657,11 @@
   },
   {
     "ID": "SKILL_DESC_B_2000074_3",
-    "Korean": "강화 스킬로 교체\\nWG 피해량 +2\\n 아군 전체 AP +50",
-    "English": "Changed to Enhanced Skill\\n+2 Weakness Gauge Damage\\n+50 Action Points to all allies",
-    "Japanese": "強化スキルに変更\\nWGダメージ+2\\n味方全体のAP+50",
+    "Korean": "강화 공격으로 교체\\nWG 피해량 +2\\n 아군 전체 AP +50",
+    "English": "Changed to Enhanced Attack\\n+2 Weakness Gauge Damage\\n+50 Action Points to all allies",
+    "Japanese": "強化攻撃に変更\\nWGダメージ+2\\n味方全体のAP+50",
     "China_Simplified": "替换为强化技能\\nWG伤害量+2\\n全体友军AP+50",
-    "China_Traditional": "替換成強化技能\\nWG傷害量+2\\n全體我軍AP+50"
+    "China_Traditional": "替換為強化攻擊\\nWG傷害量+2\\n全體我軍AP+50"
   },
   {
     "ID": "SKILL_NAME_B_2000080_3",
@@ -36657,10 +36673,10 @@
   },
   {
     "ID": "SKILL_DESC_B_2000080_3",
-    "Korean": "강화 스킬로 교체\\n구경열반 삼세요호 쿨타임 -2턴",
-    "English": "Changed to Enhanced Skill\\nReduces Eternal Enlightenment cooldown by 2 turns",
-    "Japanese": "強化スキルに変更\\n【究竟涅槃三世妖狐】の\\nスキルターン-2ターン",
-    "China_Simplified": "转化为强化技能\\n究竟涅槃三世妖狐冷却时间-2回合",
+    "Korean": "강화 공격으로 교체\\n구경열반 삼세요호 쿨타임 -2턴",
+    "English": "Changed to Enhanced Attack\\nReduces Eternal Enlightenment cooldown by 2 turns",
+    "Japanese": "強化攻撃に変更\\n【究竟涅槃三世妖狐】の\\nスキルターン-2ターン",
+    "China_Simplified": "替换为强化攻击\\n究竟涅槃三世妖狐冷却时间-2回合",
     "China_Traditional": "替換為強化技能\\n究竟涅槃三世妖狐冷卻時間-2回合"
   },
   {
@@ -36777,11 +36793,11 @@
   },
   {
     "ID": "SKILL_DESC_B_2000105_3",
-    "Korean": "강화 스킬로 교체\\n방어력 감소 강화\\n(효과 저항 무시)",
+    "Korean": "강화 공격으로 교체\\n방어력 감소 강화\\n(효과 저항 무시)",
     "English": "Changes to Enhanced Skill\\nEnhanced Reduced Defense\\n(Ignores Resilience)",
-    "Japanese": "強化スキルに変更\\n防御力DOWN強化\\n(効果抵抗無視)",
+    "Japanese": "強化攻撃に変更\\n防御力DOWN強化\\n(効果抵抗無視)",
     "China_Simplified": "替换为强化技能\\n强化防御力降低\\n(无视效果抵抗)",
-    "China_Traditional": "替換成強化技能\\n強化防禦力減少\\n（無視效果抵抗）"
+    "China_Traditional": "替換為強化攻擊\\n強化防禦力減少\\n（無視效果抵抗）"
   },
   {
     "ID": "SKILL_NAME_B_2000106_3",
@@ -36793,9 +36809,9 @@
   },
   {
     "ID": "SKILL_DESC_B_2000106_3",
-    "Korean": "강화 스킬로 교체\\n공격 범위 확대\\n푸른 열정 +1",
-    "English": "Replaces with Empowered Skill\\nAttack range expanded\\nAzure Will +1",
-    "Japanese": "強化スキルに置換\\n攻撃範囲拡大\\n「青き情熱」+1",
+    "Korean": "강화 공격으로 교체\\n공격 범위 확대\\n푸른 열정 +1",
+    "English": "Changes to Enhanced Skill\\nAttack range expanded\\nAzure Will +1",
+    "Japanese": "強化攻撃に変更\\n攻撃範囲拡大\\n【青き情熱】+1",
     "China_Simplified": "替换为强化技能\\n攻击范围扩大\\n「蓝色热情」+1",
     "China_Traditional": "替換為強化技能\\n攻擊範圍擴大\\n「藍色熱情」+1"
   },
@@ -36825,9 +36841,9 @@
   },
   {
     "ID": "SKILL_DESC_B_2000109_2",
-    "Korean": "강화 스킬로 교체\\n적 전체 공격\\n공격 전 대상 강화 효과 1개 해제",
+    "Korean": "강화 공격으로 교체\\n적 전체 공격\\n공격 전 대상 강화 효과 1개 해제",
     "English": "Changes to Enhanced Skill\\nTargets all enemies\\nRemove 1 Buff from the target before Attack",
-    "Japanese": "強化スキルに変更 \\n敵全体攻撃\\n攻撃前、対象強化効果1個解除",
+    "Japanese": "強化攻撃に変更\\n敵全体攻撃\\n攻撃前、対象強化効果1個解除",
     "China_Simplified": "替换为强化技能\\n攻击范围扩大\\n攻击前，解除目标1个强化效果",
     "China_Traditional": "替換為強化技能\\n攻擊範圍擴大\\n攻擊前，解除目標1個強化效果"
   },
@@ -36961,9 +36977,9 @@
   },
   {
     "ID": "SKILL_DESC_B_2000107_3",
-    "Korean": "강화 스킬로 교체\\n추가 턴\\n적 전체 공격",
-    "English": "Replaced with an Enhanced Skill\\nExtra Turn\\nAttacks All Enemies",
-    "Japanese": "強化スキル変更\\n追加ターン\\n敵全体に攻撃",
+    "Korean": "강화 공격으로 교체\\n추가 턴\\n적 전체 공격",
+    "English": "Changes to Enhanced Skill\\nExtra Turn\\nAttacks All Enemies",
+    "Japanese": "強化攻撃に変更\\n追加ターン\\n敵全体に攻撃",
     "China_Simplified": "替换为强化技能\\n追加回合\\n攻击全体敌人",
     "China_Traditional": "替換為強化技能\\n追加回合\\n攻擊全體敵人"
   },
@@ -37089,11 +37105,35 @@
   },
   {
     "ID": "SKILL_DESC_B_2000119_3",
-    "Korean": "강화 스킬로 교체\\n피해 증가\\n공격 후 불사 +1턴\\n적 전체 공격",
+    "Korean": "강화 공격으로 교체\\n피해 증가\\n공격 후 불사 +1턴\\n적 전체 공격",
     "English": "Changes to Enhanced Skill\\nIncreases Damage\\nAfter Attack, Immortality for 1 turn\\nAttacks all enemies",
-    "Japanese": "強化スキルに変更\\nダメージUP\\n攻撃後、不死+1ターン\\n敵全体攻撃",
-    "China_Simplified": "转化为强化技能\\n伤害提升\\n攻击后不死+1回合\\n攻击全体敌人",
-    "China_Traditional": "替換成強化技能\\n傷害增加\\n攻擊後不死+1回合\\n攻擊全體敵人"
+    "Japanese": "強化攻撃に変更\\nダメージUP\\n攻撃後、不死+1ターン\\n敵全体攻撃",
+    "China_Simplified": "替换为强化攻击\\n伤害提升\\n攻击后不死+1回合\\n攻击全体敌人",
+    "China_Traditional": "替換為強化攻擊\\n傷害增加\\n攻擊後不死+1回合\\n攻擊全體敵人"
+  },
+  {
+    "ID": "SKILL_DESC_B_2000015",
+    "Korean": "추가 턴\\n공격 후 공격력 +1턴",
+    "English": "Extra Turn\\nAfter attacking, Attack +1 Turn",
+    "Japanese": "追加ターン\\n攻撃後、攻撃力+1ターン",
+    "China_Simplified": "额外回合\\n攻击后攻击力+1回合",
+    "China_Traditional": "追加回合\\n攻擊後攻擊力+1回合"
+  },
+  {
+    "ID": "SKILL_DESC_B_2000015_1",
+    "Korean": "출혈 +1턴(효과 저항 무시)",
+    "English": "Bleeding +1 turn (Ignores Resilience)",
+    "Japanese": "出血+1ターン（効果抵抗無視）",
+    "China_Simplified": "出血+1回合（无视效果抵抗）",
+    "China_Traditional": "出血+1回合（無視效果抵抗）"
+  },
+  {
+    "ID": "SKILL_NAME_B_2000015_1",
+    "Korean": "출혈 +1턴(저항 무시)",
+    "English": "Bleeding +1 turn (Ignores Resilience)",
+    "Japanese": "出血+1ターン（抵抗無視）",
+    "China_Simplified": "出血+1回合（无视抵抗）",
+    "China_Traditional": "出血+1回合（無視抵抗）"
   },
   {
     "ID": "SKILL_NAME_B_DMG_SKILL_NAME_B_FIRE_SPEED",
@@ -40353,11 +40393,11 @@
   },
   {
     "ID": "Geis_Desc_Only_Water",
-    "Korean": "편성 제한 (수속성 동료만 편성 가능)",
-    "English": "Team restriction (You can only use water heroes in your team)",
-    "Japanese": "編成制限(水属性の仲間のみ編成可能)",
-    "China_Simplified": "配置限制(仅限配置水属性同伴)",
-    "China_Traditional": "編制限制(只能編制水屬性同伴)"
+    "Korean": "편성 제한 (수속성 동료 4인으로만 편성 가능)",
+    "English": "Lineup Restriction (Can only be formed with 4 Water-type Heroes)",
+    "Japanese": "編成制限（水属性の仲間4人のみで編成可能）",
+    "China_Simplified": "编成限制（仅可编成4名水属性同伴）",
+    "China_Traditional": "編成限制（僅可編成4名水屬性同伴）"
   },
   {
     "ID": "Geis_Desc_Add_Rage",
@@ -46649,11 +46689,11 @@
   },
   {
     "ID": "SKILL_DESC_52342",
-    "Korean": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>[Buff_T_2000035_2_4]턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>[Buff_C_tower_element_52342_1]</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>[Buff_T_tower_element_52342_1]턴</color> 동안 부여합니다.",
-    "English": "(Passive Effect) Inflicts <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>[Buff_T_2000035_2_4] turn(s)</color> while ignoring Resilience, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies at the start of battle. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies and has a <color=#28d9ed>[Buff_C_tower_element_52342_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_tower_element_52342_1] turn(s)</color>.",
-    "Japanese": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_2000035_2_4]ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、対象に<color=#28d9ed>[Buff_C_tower_element_52342_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_tower_element_52342_1]ターン</color>の間付与する。",
-    "China_Simplified": "(被动效果) 战斗开始时，使速度最高的1名敌人无视目标的效果抵抗，并造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会被\\n解除。\\n\\n(主动效果) 攻击全体敌人，并有<color=#28d9ed>[Buff_C_tower_element_52342_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_tower_element_52342_1]回合</color>。",
-    "China_Traditional": "(被動效果)戰鬥開始時，使速度最快的一名敵人無視目標的效果抵抗，在<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>內賦予<color=#28d9ed>出血</color>。賦予全體我軍<color=#28d9ed>鮮血的領域</color>。這些效果不會被解除。\\n\\n(主動效果)攻擊全體敵人，以<color=#28d9ed>[Buff_C_tower_element_52342_1]</color>的機率在<color=#28d9ed>[Buff_T_tower_element_52342_1]回合</color>內賦予目標<color=#28d9ed>出血</color>。"
+    "Korean": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 <color=#28d9ed>[Buff_T_2000035_2_4]턴</color> 동안 해제되지 않는 <color=#28d9ed>출혈</color>을 부여합니다. (효과 저항 무시)\\n추가로 아군 전체에게 <color=#28d9ed>선혈의 영역</color>을 부여합니다.\\n\\n아군의 출혈 피해가 <color=#28d9ed>50%</color> 증가합니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>[Buff_C_tower_element_52342_1]</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>[Buff_T_tower_element_52342_1]턴</color> 동안 부여합니다.",
+    "English": "(Passive Effect) At the start of battle, inflicts irremovable <color=#28d9ed>Bleeding</color> on the fastest enemy for <color=#28d9ed>[Buff_T_2000035_2_4] turns</color>. (Ignores Resilience)\\nAdditionally, grants <color=#28d9ed>Pureblood's Domain</color> to all allies.\\n\\nAllies' Bleeding DMG increases by <color=#28d9ed>50%</color>.\\n\\n(Active Effect) Attacks all enemies and with a <color=#28d9ed>[Buff_C_tower_element_52342_1]</color> chance, inflicts <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_tower_element_52342_1] turns</color>.",
+    "Japanese": "(パッシブ効果) 戦闘開始時、最もスピードが速い敵単体に<color=#28d9ed>[Buff_T_2000035_2_4]ターン</color>の間解除されない<color=#28d9ed>出血</color>を付与する。（効果抵抗無視）\\nさらに味方全体に<color=#28d9ed>【鮮血の領域】</color>を付与する。\\n\\n味方の出血ダメージが<color=#28d9ed>50%</color>UPする。\\n\\n(アクティブ効果) 敵全体にダメージを与え、<color=#28d9ed>[Buff_C_tower_element_52342_1]</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_tower_element_52342_1]ターン</color>の間付与する。",
+    "China_Simplified": "(被动效果) 战斗开始时，对速度最快的敌人1名附加<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>无法解除的<color=#28d9ed>出血</color>。（无视效果抵抗）\\n追加对我方全体附加<color=#28d9ed>鲜血领域</color>。\\n\\n我方出血伤害增加<color=#28d9ed>50%</color>。\\n\\n(主动效果) 攻击全体敌人，以<color=#28d9ed>[Buff_C_tower_element_52342_1]</color>的概率对目标附加<color=#28d9ed>[Buff_T_tower_element_52342_1]回合</color>的<color=#28d9ed>出血</color>。",
+    "China_Traditional": "(被動效果) 戰鬥開始時，對速度最快的敵人1名附加<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>無法解除的<color=#28d9ed>出血</color>。（無視效果抵抗）\\n追加對我方全體附加<color=#28d9ed>鮮血領域</color>。\\n\\n我方出血傷害增加<color=#28d9ed>50%</color>。\\n\\n(主動效果) 攻擊全體敵人，以<color=#28d9ed>[Buff_C_tower_element_52342_1]</color>的概率對目標附加<color=#28d9ed>[Buff_T_tower_element_52342_1]回合</color>的<color=#28d9ed>出血</color>。"
   },
   {
     "ID": "SKILL_DESC_52343",
@@ -47482,7 +47522,7 @@
   {
     "ID": "SKILL_DESC_113652",
     "Korean": "적 전체를 공격합니다. 공격 후 적 전체의 <color=#28d9ed>치명 확률/치명 피해</color>를 <color=#28d9ed>[Buff_T_event_monster_buff_503]턴</color> 동안 감소시키고, <color=#28d9ed>회복형</color>이 아닌 적 전체의 <color=#28d9ed>행동 게이지</color>를 모두 감소시킵니다.",
-    "English": "Attacks all enemies. Upon attack, decreases all Enemies’ <color=#28d9ed>Critical Hit Chance/Critical Damage</color> for <color=#28d9ed>[Buff_T_event_monster_buff_503] turns,</color> and reduces the <color=#28d9ed>Priority Gauge</color> of all non-<color=#28d9ed>Healer</color> Enemies to zero.",
+    "English": "Attacks all enemies. After attacking, decreases all enemies' <color=#28d9ed>Critical Hit Chance/Critical Damage</color> for <color=#28d9ed>[Buff_T_event_monster_buff_503] turns</color>, and fully reduces the <color=#28d9ed>Priority</color> of all non-<color=#28d9ed>Healer</color> enemies.",
     "Japanese": "敵全体にダメージを与える。攻撃後、敵全体の<color=#28d9ed>会心率/会心ダメージ</color>を<color=#28d9ed>[Buff_T_event_monster_buff_503]ターン</color>の間DOWNさせ、<color=#28d9ed>回復型</color>以外の敵全体の<color=#28d9ed>行動ゲージ</color>を全てDOWNさせる。",
     "China_Simplified": "攻击全体敌人。攻击后，使全体敌人的<color=#28d9ed>暴击率/暴击伤害</color>降低，持续<color=#28d9ed>[Buff_T_event_monster_buff_503]回合</color>。使非<color=#28d9ed>恢复型</color>全体敌人的<color=#28d9ed>行动值</color>全部减少。",
     "China_Traditional": "攻擊全體敵人。攻擊後，使全體敵人的<color=#28d9ed>暴擊率/暴擊傷害</color>在<color=#28d9ed>[Buff_T_event_monster_buff_503]回合</color>內減少，使非<color=#28d9ed>恢復型</color>的全體敵人的<color=#28d9ed>速攻值</color>全部減少。"
@@ -47497,9 +47537,9 @@
   },
   {
     "ID": "SKILL_DESC_113654",
-    "Korean": "(패시브 효과)\\n모든 공격 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.\\n\\n단일 공격으로 피격 시 최종 피해가 <color=#28d9ed>[Buff_V_event_monster_buff_514]</color> 감소하고, WG 피해를 받지 않습니다. 추가로 WG를 <color=#28d9ed>[Buff_V_event_monster_buff_513]</color> 회복합니다. (최종 피해 감소는 가장 높은 값만 적용)\\n\\n적이 공격이 아닌 스킬 사용 시 <color=#28d9ed>[Buff_V_event_monster_buff_515]</color>의 고정 피해를 2회 입습니다.\\n\\n적이 <color=#28d9ed>버스트 스킬/협공/스킬 체인</color>을 제외한 행동을 할 때마다 암속성 적 전체의 피해가 <color=#28d9ed>[Buff_V_event_monster_buff_516_child]</color> 증가합니다.\\n\\n다른 AP 감소 효과를 방지하고 암속성이 아닌 적의 AP 소모량이 <color=#28d9ed>[Buff_V_event_monster_buff_517]</color> 증가합니다.\\n\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>[Buff_V_armor_common_3]</color>을 초과하지 않습니다.\\n\\n모든 공격은 대상이 적을 수록 피해가 증가합니다.",
-    "English": "(Passive Effect)\\nRight after all attacks, does not trigger an enemy's Counterattack, Revenge, or Agile Response.\\n\\nWhen hit by a single-target attack, final damage is reduced by <color=#28d9ed>[Buff_V_event_monster_buff_514]</color>, and Weakness Gauge damage is not taken. Additionally, Weakness Gauge is recovered by <color=#28d9ed>[Buff_V_event_monster_buff_513]</color>. (Only the highest final damage reduction value applies.)\\n\\nWhen an Enemy uses a skill that is not an attack, they take <color=#28d9ed>[Buff_V_event_monster_buff_515]</color> Fixed Damage twice.\\n\\nEach time an Enemy takes an action other than <color=#28d9ed>Burst Skill/Dual Attack/Skill Chain</color>, all Dark Enemies' damage increases by <color=#28d9ed>[Buff_V_event_monster_buff_516_child]</color>.\\n\\nPrevents other AP reduction effects, and the Action Point cost for non-Dark Enemies increases by <color=#28d9ed>[Buff_V_event_monster_buff_517]</color>.\\n\\nThe <color=#28d9ed>Cursed/Fixed Damage</color> the boss receives cannot exceed <color=#28d9ed>[Buff_V_armor_common_3]</color>.\\n\\nAll attacks deal more damage the fewer targets there are.",
-    "Japanese": "(パッシブ効果)\\nすべての攻撃直後には敵の反撃、復讐、迅速対応が発動しない。\\n\\n単体攻撃でダメージを受けた場合、最終ダメージが<color=#28d9ed>[Buff_V_event_monster_buff_514]</color>DOWNし、WGダメージを受けません。追加でWGを<color=#28d9ed>[Buff_V_event_monster_buff_513]</color>UPする。(最終ダメージDOWNは最も高い値のみ適用)\\n\\n敵が攻撃以外のスキルを使用した場合、<color=#28d9ed>[Buff_V_event_monster_buff_515]</color>の固定ダメージを2回受ける。\\n\\n敵が<color=#28d9ed>バーストスキル/連携/チェーンスキル</color>を除く行動をするたびにを除くの敵全体のダメージが<color=#28d9ed>[Buff_V_event_monster_buff_516_child]</color>増加する。\\n\\n他のAP減少効果を防ぎ、闇属性以外の敵のAP消費量が<color=#28d9ed>[Buff_V_event_monster_buff_517]</color>増加する。\\n\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>[Buff_V_armor_common_3]</color>を超えない。\\n\\nすべての攻撃は対象が少ないほどダメージがUPする。",
+    "Korean": "(패시브 효과)\\n모든 공격 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.\\n\\n단일 공격으로 피격 시 최종 피해가 <color=#28d9ed>[Buff_V_event_monster_buff_514]</color> 감소하고, WG 피해를 받지 않습니다. 추가로 WG를 <color=#28d9ed>[Buff_V_event_monster_buff_513]</color> 회복합니다. (최종 피해 감소는 가장 높은 값만 적용)\\n\\n적이 공격이 아닌 스킬 사용 시 <color=#28d9ed>[Buff_V_event_monster_buff_515]</color>의 고정 피해를 2회 입습니다.\\n\\n적이 <color=#28d9ed>버스트 스킬/협공/스킬 체인</color>을 제외한 행동을 할 때마다 암속성 적 전체의 피해가 <color=#28d9ed>[Buff_V_event_monster_buff_516_child]</color> 증가합니다.\\n\\n다른 AP 감소 스킬을 막고 암속성이 아닌 적의 AP 소모량이 <color=#28d9ed>[Buff_V_event_monster_buff_517]</color> 증가합니다.\\n\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>[Buff_V_armor_common_3]</color>을 초과하지 않습니다.\\n\\n모든 공격은 대상이 적을 수록 피해가 증가합니다.",
+    "English": "(Passive Effect)\\nAfter any attack, an enemy's Counterattack, Revenge, or Agile Response will not trigger.\\n\\nWhen hit by a single-target attack, final damage is reduced by <color=#28d9ed>[Buff_V_event_monster_buff_514]</color>, and Weakness Gauge damage is not taken. Additionally, recovers Weakness Gauge by <color=#28d9ed>[Buff_V_event_monster_buff_513]</color>. (Only the highest final damage reduction value applies.)\\n\\nWhen an enemy uses a skill that is not an attack, they take <color=#28d9ed>[Buff_V_event_monster_buff_515]</color> Fixed Damage twice.\\n\\nEach time an enemy takes an action other than <color=#28d9ed>Burst Skill/Dual Attack/Skill Chain</color>, DMG dealt by all Dark enemies increases by <color=#28d9ed>[Buff_V_event_monster_buff_516_child]</color>.\\n\\nPrevents other AP reduction skills, and AP cost for non-Dark enemies increases by <color=#28d9ed>[Buff_V_event_monster_buff_517]</color>.\\n\\nDamage from <color=#28d9ed>Curse/Fixed Damage</color> dealt to the Boss cannot exceed <color=#28d9ed>[Buff_V_armor_common_3]</color>.\\n\\nAll attacks deal more damage the fewer targets there are.",
+    "Japanese": "(パッシブ効果)\\nすべての攻撃直後には敵の反撃、復讐、迅速対応が発動しない。\\n\\n単体攻撃でダメージを受けた場合、最終ダメージが<color=#28d9ed>[Buff_V_event_monster_buff_514]</color>DOWNし、WGダメージを受けない。さらにWGを<color=#28d9ed>[Buff_V_event_monster_buff_513]</color>UPする。(最終ダメージDOWNは最も高い値のみ適用)\\n\\n敵が攻撃以外のスキルを使用した場合、<color=#28d9ed>[Buff_V_event_monster_buff_515]</color>の固定ダメージを2回受ける。\\n\\n敵が<color=#28d9ed>バーストスキル/連携/チェーンスキル</color>を除く行動をするたびにを除くの敵全体のダメージが<color=#28d9ed>[Buff_V_event_monster_buff_516_child]</color>増加する。\\n\\n他のAP減少効果を防ぎ、闇属性以外の敵のAPが<color=#28d9ed>[Buff_V_event_monster_buff_517]</color>UPする。\\n\\nボスが受ける<color=#28d9ed>呪い/固定ダメージ</color>のダメージは<color=#28d9ed>[Buff_V_armor_common_3]</color>を超えない。\\n\\nすべての攻撃は対象が少ないほどダメージがUPする。",
     "China_Simplified": "（被动效果）\\n所有攻击发动后，不会触发敌人的反击、复仇、迅速应对效果。\\n\\n受到单体攻击时，最终伤害量降低<color=#28d9ed>[Buff_V_event_monster_buff_514]</color>，不受到WG伤害。WG额外恢复<color=#28d9ed>[Buff_V_event_monster_buff_513]</color>。（降低最终伤害效果仅以最高值生效）\\n\\n敌人使用非攻击类技能时，受到2次<color=#28d9ed>[Buff_V_event_monster_buff_515]</color>固定伤害。\\n\\n敌人执行<color=#28d9ed>爆发技能/夹攻/连携技能</color>以外的行动时，暗属性全体敌人的伤害增加<color=#28d9ed>[Buff_V_event_monster_buff_516_child]</color>。\\n\\n阻止其他AP减少效果，非暗属性敌人的AP消耗量增加<color=#28d9ed>[Buff_V_event_monster_buff_517]</color>。\\n\\n首领受到的<color=#28d9ed>诅咒/固定伤害</color>的伤害量无法超过<color=#28d9ed>[Buff_V_armor_common_3]</color>。\\n\\n所有攻击若目标数量越少，则伤害越高。",
     "China_Traditional": "(被動效果)\\n所有攻擊後，敵人不會發動反擊、復仇、迅速應對。\\n\\n受到單一攻擊時，最終傷害減少<color=#28d9ed>[Buff_V_event_monster_buff_514]</color>，並且不會受到WG傷害。WG額外恢復<color=#28d9ed>[Buff_V_event_monster_buff_513]</color>。(最終傷害減少僅套用最高數值)\\n\\n敵人使用非攻擊技能時，造成<color=#28d9ed>[Buff_V_event_monster_buff_515]</color>的固定傷害2次。\\n\\n敵人進行<color=#28d9ed>爆發技能/夾攻/連鎖技能</color>以外的行動時，暗屬性全體敵人的傷害增加<color=#28d9ed>[Buff_V_event_monster_buff_516_child]</color>。\\n\\n阻止其他AP減少效果，非暗屬性敵人的AP消耗量增加<color=#28d9ed>[Buff_V_event_monster_buff_517]</color>。\\n\\n首領受到的<color=#28d9ed>詛咒/固定傷害</color>的傷害不會超過<color=#28d9ed>[Buff_V_armor_common_3]</color>。\\n\\n所有攻擊造成的傷害會隨目標數量減少而提升。"
   },
@@ -47929,11 +47969,11 @@
   },
   {
     "ID": "SKILL_DESC_13792",
-    "Korean": "적 전체를 공격하고 <color=#28d9ed>[Buff_T_event_monster_buff_349]턴</color> 동안 <color=#28d9ed>무적</color>을 획득합니다.",
-    "English": "Attacks all enemies, and grants <color=#28d9ed>Invulnerability</color> for <color=#28d9ed>[Buff_T_event_monster_buff_349] turn(s)</color>.",
-    "Japanese": "敵全体にダメージを与え、自分に<color=#28d9ed>無敵</color>を<color=#28d9ed>[Buff_T_event_monster_buff_349]ターン</color>の間付与する。",
-    "China_Simplified": "攻击全体敌人，获得<color=#28d9ed>无敌</color>效果，持续<color=#28d9ed>[Buff_T_event_monster_buff_349]回合</color>。",
-    "China_Traditional": "攻擊全體敵人，在<color=#28d9ed>[Buff_T_event_monster_buff_349]回合</color>內獲得<color=#28d9ed>無敵</color>。"
+    "Korean": "적 전체를 공격하고 대상에게 <color=#28d9ed>[Buff_T_event_monster_buff_349]턴</color> 동안 <color=#28d9ed>저주</color>을 부여합니다.",
+    "English": "Attacks all enemies and inflicts <color=#28d9ed>Curse</color> on the target for <color=#28d9ed>[Buff_T_event_monster_buff_349] turns</color>.",
+    "Japanese": "敵全体にダメージを与え、対象に<color=#28d9ed>呪い</color>を<color=#28d9ed>[Buff_T_event_monster_buff_349]ターン</color>の間付与する。",
+    "China_Simplified": "攻击全体敌人，并对目标附加<color=#28d9ed>[Buff_T_event_monster_buff_349]回合</color>的<color=#28d9ed>诅咒</color>。",
+    "China_Traditional": "攻擊全體敵人，並對目標附加<color=#28d9ed>[Buff_T_event_monster_buff_349]回合</color>的<color=#28d9ed>詛咒</color>。"
   },
   {
     "ID": "SKILL_DESC_13793",
@@ -49145,11 +49185,11 @@
   },
   {
     "ID": "SKILL_DESC_25262",
-    "Korean": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 대상의 효과 저항을 무시하고 <color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_4]턴</color>동안 <color=#28d9ed>출혈</color>을 부여합니다. 아군 전체에게는 <color=#28d9ed>선혈의 영역</color>을 부여합니다. 이 효과들은 해제되지 않습니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1]턴</color> 동안 부여합니다.",
-    "English": "(Passive Effect) At the start of battle, ignores Resilience to inflict <color=#28d9ed>Bleeding</color> on the enemy with the highest Speed for <color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_4] turn(s)</color>, and grants <color=#28d9ed>Pureblood's Dominion</color> to all allies. These effects cannot be removed.\\n\\n(Active Effect) Attacks all enemies, and has a <color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1] turn(s)</color>.",
-    "Japanese": "(パッシブ効果)戦闘開始時、最もスピードが高い敵単体に効果抵抗を無視する<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_4]ターン</color>の間付与する。味方全体には<color=#28d9ed>鮮血の領域</color>を付与する。これらの効果は解除されない。\\n\\n(アクティブ効果)敵全体にダメージを与え、対象に<color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1]ターン</color>の間付与する。",
-    "China_Simplified": "(被动效果)战斗开始时，使速度最高的一名敌人无视目标的效果抵抗，并造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_4]回合</color>。使全体友军获得<color=#28d9ed>鲜血领域</color>效果。这些效果不会被解除。\\n\\n(主动效果)攻击全体敌人，并有<color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1]回合</color>。",
-    "China_Traditional": "(被動效果)戰鬥開始時，使速度最快的一名敵人無視目標的效果抵抗，在<color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_4]回合</color>內賦予<color=#28d9ed>出血</color>。賦予全體我軍<color=#28d9ed>鮮血的領域</color>。這些效果不會被解除。\\n\\n(主動效果)攻擊全體敵人，以<color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color>的機率在<color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1]回合</color>內賦予目標<color=#28d9ed>出血</color>。"
+    "Korean": "(패시브 효과) 전투 시작 시 속도가 가장 빠른 적 한 명에게 <color=#28d9ed>[Buff_T_2000035_2_4]턴</color> 동안 해제되지 않는 <color=#28d9ed>출혈</color>을 부여합니다. (효과 저항 무시)\\n추가로 아군 전체에게 <color=#28d9ed>선혈의 영역</color>을 부여합니다.\\n\\n아군의 출혈 피해가 <color=#28d9ed>50%</color> 증가합니다.\\n\\n(액티브 효과) 적 전체를 공격하고 <color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color> 확률로 대상에게 <color=#28d9ed>출혈</color>을 <color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1]턴</color> 동안 부여합니다.",
+    "English": "(Passive Effect) At the start of battle, inflicts irremovable <color=#28d9ed>Bleeding</color> on the fastest enemy for <color=#28d9ed>[Buff_T_2000035_2_4] turns</color>. (Ignores Resilience)\\nAdditionally, grants <color=#28d9ed>Pureblood's Domain</color> to all allies.\\n\\nAllies' Bleeding DMG increases by <color=#28d9ed>50%</color>.\\n\\n(Active Effect) Attacks all enemies and with a <color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color> chance, inflicts <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1] turns</color>.",
+    "Japanese": "(パッシブ効果) 戦闘開始時、最もスピードが速い敵単体に<color=#28d9ed>[Buff_T_2000035_2_4]ターン</color>の間解除されない。<color=#28d9ed>出血</color>を付与する。（効果抵抗無視）\\nさらに味方全体に<color=#28d9ed>【鮮血の領域」</color>を付与する。\\n\\n味方の出血ダメージが<color=#28d9ed>50%</color>UPする。\\n\\n(アクティブ効果) 敵全体にダメージを与え、<color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color>の確率で対象に<color=#28d9ed>出血</color>を<color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1]ターン</color>の間付与する。",
+    "China_Simplified": "(被动效果) 战斗开始时，对速度最快的敌人1名附加<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>无法解除的<color=#28d9ed>出血</color>。（无视效果抵抗）\\n追加对我方全体附加<color=#28d9ed>鲜血领域</color>。\\n\\n我方出血伤害增加<color=#28d9ed>50%</color>。\\n\\n(主动效果) 攻击全体敌人，以<color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color>的概率对目标附加<color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1]回合</color>的<color=#28d9ed>出血</color>。",
+    "China_Traditional": "(被動效果) 戰鬥開始時，對速度最快的敵人1名附加<color=#28d9ed>[Buff_T_2000035_2_4]回合</color>無法解除的<color=#28d9ed>出血</color>。（無視效果抵抗）\\n追加對我方全體附加<color=#28d9ed>鮮血領域</color>。\\n\\n我方出血傷害增加<color=#28d9ed>50%</color>。\\n\\n(主動效果) 攻擊全體敵人，以<color=#28d9ed>[Buff_C_tower_very_hard_boss_2000035_2_1]</color>的概率對目標附加<color=#28d9ed>[Buff_T_tower_very_hard_boss_2000035_2_1]回合</color>的<color=#28d9ed>出血</color>。"
   },
   {
     "ID": "SKILL_DESC_25263",
@@ -51529,7 +51569,7 @@
   },
   {
     "ID": "SKILL_DESC_55106",
-    "Korean": "(패시브 효과)\\n자신 피격시 <color=#28d9ed>회피</color>가 <color=#28d9ed>1턴</color> 동안 증가합니다. (해제 불가)",
+    "Korean": "(패시브 효과)\\n자신 피격 시 <color=#28d9ed>회피</color>가 <color=#28d9ed>1턴</color> 동안 증가합니다. (해제 불가)",
     "English": "(Passive)\\nIncreases <color=#28d9ed>Evasion</color> for <color=#28d9ed>1 turn</color> when hit. (Irremovable)",
     "Japanese": "(パッシブ効果)\\n被撃時、<color=#28d9ed>回避</color>が<color=#28d9ed>1ターン</color>の間UPする。(解除不可)",
     "China_Simplified": "(被动效果)\\n受到攻击时，<color=#28d9ed>回避</color>增加，持续<color=#28d9ed>1回合</color>。(无法解除)",
@@ -51537,7 +51577,7 @@
   },
   {
     "ID": "SKILL_DESC_55107",
-    "Korean": "(패시브 효과)\\n자신 턴 종료시 랜덤한 대상에게 <color=#28d9ed>[Buff_T_tower_element_52732]턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.\\n적 처치 시 <color=#28d9ed>추가 턴</color>을 얻습니다.",
+    "Korean": "(패시브 효과)\\n자신 턴 종료 시 랜덤한 대상에게 <color=#28d9ed>[Buff_T_tower_element_52732]턴</color> 동안 <color=#28d9ed>감전</color>을 부여합니다.\\n적 처치 시 <color=#28d9ed>추가 턴</color>을 얻습니다.",
     "English": "(Passive)\\nInflicts <color=#28d9ed>Shock</color> on a random target for <color=#28d9ed>[Buff_T_tower_element_52732] turn(s)</color> at the end of the turn.\\nGrants an <color=#28d9ed>Extra Turn</color> upon defeating an enemy.",
     "Japanese": "(パッシブ効果)\\n自分のターン終了時、ランダムな対象に<color=#28d9ed>[Buff_T_tower_element_52732]ターン</color>の間<color=#28d9ed>感電</color>を付与する。\\n敵を倒した時、<color=#28d9ed>追加ターン</color>を獲得する。",
     "China_Simplified": "(被动效果)\\n自身回合结束时，对随机目标造成<color=#28d9ed>触电</color>效果，持续<color=#28d9ed>[Buff_T_tower_element_52732]回合</color>。\\n击杀敌人时，获得<color=#28d9ed>额外回合</color>。",
@@ -51561,7 +51601,7 @@
   },
   {
     "ID": "SKILL_DESC_55110",
-    "Korean": "(패시브 효과)\\n턴 시작 시 적 전체에게 <color=#28d9ed>[Buff_T_tower_element_52737]턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.(효과 저항 무시)\\n<color=#28d9ed>저주</color> 효과를 가진 대상을 공격하는 경우, 공격 후 자신의 <color=#28d9ed>치명타 확률</color>과 <color=#28d9ed>속도</color>를 <color=#28d9ed>[Buff_T_tower_element_52738]턴</color> 동안 증가시킵니다.(두 효과 모두 해제 불가)\\n약화 효과를 가진 적 행동 후 자신의 행동 게이지를 <color=#28d9ed>[Buff_V_tower_element_52740]</color> 증가시킵니다.",
+    "Korean": "(패시브 효과)\\n턴 시작 시 적 전체에게 <color=#28d9ed>[Buff_T_tower_element_52737]턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.(효과 저항 무시)\\n<color=#28d9ed>저주</color> 효과를 가진 대상을 공격하는 경우, 공격 후 자신의 <color=#28d9ed>치명 확률</color>과 <color=#28d9ed>속도</color>를 <color=#28d9ed>[Buff_T_tower_element_52738]턴</color> 동안 증가시킵니다.(두 효과 모두 해제 불가)\\n약화 효과를 가진 적 행동 후 자신의 행동 게이지를 <color=#28d9ed>[Buff_V_tower_element_52740]</color> 증가시킵니다.",
     "English": "(Passive)\\nAt the start of the turn, inflicts <color=#28d9ed>Curse</color> on all enemies for <color=#28d9ed>[Buff_T_tower_element_52737] turn(s)</color> (Ignores Resilience).\\nWhen attacking a target with <color=#28d9ed>Curse</color>, increases own <color=#28d9ed>Critical Hit Chance</color> and <color=#28d9ed>Speed</color> for <color=#28d9ed>[Buff_T_tower_element_52738] turn(s)</color> after attacking (Both Irremovable).\\nIncreases own Priority by <color=#28d9ed>[Buff_V_tower_element_52740]</color> after an enemy with a debuff takes an action.",
     "Japanese": "(パッシブ効果)\\nターン開始時、敵全体に<color=#28d9ed>[Buff_T_tower_element_52737]ターン</color>の間<color=#28d9ed>呪い</color>を付与する。(効果抵抗無視)\\n<color=#28d9ed>呪い</color>効果を持つ対象を攻撃する場合、攻撃後に自分の<color=#28d9ed>会心率</color>と<color=#28d9ed>スピード</color>を<color=#28d9ed>[Buff_T_tower_element_52738]ターン</color>の間UPさせる。(両方とも解除不可)\\n弱体効果を持つ敵の行動後、自分の行動ゲージを<color=#28d9ed>[Buff_V_tower_element_52740]</color>UPさせる。",
     "China_Simplified": "(被动效果)\\n回合开始时，对全体敌人造成<color=#28d9ed>诅咒</color>效果，持续<color=#28d9ed>[Buff_T_tower_element_52737]回合</color>(无视效果抵抗)。\\n攻击持有<color=#28d9ed>诅咒</color>效果的目标时，攻击后增加自身的<color=#28d9ed>暴击率</color>和<color=#28d9ed>速度</color>，持续<color=#28d9ed>[Buff_T_tower_element_52738]回合</color>(均无法解除)。\\n持有弱化效果的敌人行动后，自身行动值增加<color=#28d9ed>[Buff_V_tower_element_52740]</color>。",
@@ -51617,7 +51657,7 @@
   },
   {
     "ID": "SKILL_DESC_55117",
-    "Korean": "(패시브 효과)\\n<color=#28d9ed>마법형</color>으로 부터 받는 피해가 <color=#28d9ed>[Buff_V_tower_element_52751]</color> 만큼 감소 하고 <color=#28d9ed>공격형</color>으로 부터 받는 피해가 <color=#28d9ed>[Buff_V_tower_element_52752]</color> 만큼 증가합니다 .\\n 턴 시작 시, 각각 <color=#28d9ed>[Buff_C_tower_element_52753]</color> 확률로 <color=#28d9ed>방어력</color>,<color=#28d9ed>공격력</color>,<color=#28d9ed>속도</color>가\\n<color=#28d9ed>[Buff_T_tower_element_52753]턴</color> 동안 증가합니다.",
+    "Korean": "(패시브 효과)\\n<color=#28d9ed>마법형</color>으로 부터 받는 피해가 <color=#28d9ed>[Buff_V_tower_element_52751]</color> 만큼 감소 하고 <color=#28d9ed>공격형</color>으로 부터 받는 피해가 <color=#28d9ed>[Buff_V_tower_element_52752]</color> 만큼 증가합니다 .\\n턴 시작 시, 각각 <color=#28d9ed>[Buff_C_tower_element_52753]</color> 확률로 <color=#28d9ed>방어력</color>,<color=#28d9ed>공격력</color>,<color=#28d9ed>속도</color>가\\n<color=#28d9ed>[Buff_T_tower_element_52753]턴</color> 동안 증가합니다.",
     "English": "(Passive)\\nDecreases damage taken from <color=#28d9ed>Mages</color> by <color=#28d9ed>[Buff_V_tower_element_52751]</color> and increases damage taken from <color=#28d9ed>Strikers</color> by <color=#28d9ed>[Buff_V_tower_element_52752]</color>.\\nAt the start of the turn, has a <color=#28d9ed>[Buff_C_tower_element_52753]</color> chance each to increase <color=#28d9ed>Defense</color>, <color=#28d9ed>Attack</color>, and <color=#28d9ed>Speed</color> for <color=#28d9ed>[Buff_T_tower_element_52753] turn(s)</color>.",
     "Japanese": "(パッシブ効果)\\n<color=#28d9ed>魔法型</color>から受けるダメージが<color=#28d9ed>[Buff_V_tower_element_52751]</color>DOWNし、<color=#28d9ed>攻撃型</color>から受けるダメージが<color=#28d9ed>[Buff_V_tower_element_52752]</color>UPする。\\nターン開始時、それぞれ<color=#28d9ed>[Buff_C_tower_element_52753]</color>の確率で<color=#28d9ed>防御力</color>、<color=#28d9ed>攻撃力</color>、<color=#28d9ed>スピード</color>が<color=#28d9ed>[Buff_T_tower_element_52753]ターン</color>の間UPする。",
     "China_Simplified": "(被动效果)\\n受到的<color=#28d9ed>魔法型</color>伤害减少<color=#28d9ed>[Buff_V_tower_element_52751]</color>，受到的<color=#28d9ed>攻击型</color>伤害增加<color=#28d9ed>[Buff_V_tower_element_52752]</color>。\\n回合开始时，各有<color=#28d9ed>[Buff_C_tower_element_52753]</color>的几率使<color=#28d9ed>防御力</color>、<color=#28d9ed>攻击力</color>、<color=#28d9ed>速度</color>增加，持续<color=#28d9ed>[Buff_T_tower_element_52753]回合</color>。",
@@ -51953,7 +51993,7 @@
   },
   {
     "ID": "SKILL_DESC_31667",
-    "Korean": "(패시브 효과)\\n<color=#28d9ed>약화 효과</color>가 없는 상태라면 받는 WG 피해가 <color=#28d9ed>[Buff_V_4500350_4_2]</color> 감소하고, 받는 피해가 <color=#28d9ed>[Buff_V_4500350_4_1]</color> 감소합니다.\\n명속성 혹은 암속성 적의 행동 종료 시, 자신의 <color=#28d9ed>약화 효과</color>를 모두 제거하고 자신의 행동 게이지가 <color=#28d9ed>[Buff_V_4500350_4_3_3]</color> 증가합니다.\\n매 턴 시작 시 자신의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>치명타 확률</color>이 <color=#28d9ed>20%</color> 증가합니다. (최대 4회 누적)\\n\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>[Buff_V_armor_common_3]</color>을 초과하지 않습니다.",
+    "Korean": "(패시브 효과)\\n<color=#28d9ed>약화 효과</color>가 없는 상태라면 받는 WG 피해가 <color=#28d9ed>[Buff_V_4500350_4_2]</color> 감소하고, 받는 피해가 <color=#28d9ed>[Buff_V_4500350_4_1]</color> 감소합니다.\\n명속성 혹은 암속성 적의 행동 종료 시, 자신의 <color=#28d9ed>약화 효과</color>를 모두 제거하고 자신의 행동 게이지가 <color=#28d9ed>[Buff_V_4500350_4_3_3]</color> 증가합니다.\\n매 턴 시작 시 자신의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>20%</color> 증가합니다. (최대 4회 누적)\\n\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>[Buff_V_armor_common_3]</color>을 초과하지 않습니다.",
     "English": "(Passive)\\nIf the caster has no <color=#28d9ed>Debuffs</color>, WG damage taken is reduced by <color=#28d9ed>[Buff_V_4500350_4_2]</color> and damage taken is reduced by <color=#28d9ed>[Buff_V_4500350_4_1]</color>.\\nWhen a Light or Dark enemy ends its action, removes all <color=#28d9ed>Debuffs</color> from the caster and increases the caster’s Priority by <color=#28d9ed>[Buff_V_4500350_4_3_3]</color>.\\nAt the start of each turn, increases the caster’s <color=#28d9ed>Penetration</color> and <color=#28d9ed>Critical Hit Chance</color> by <color=#28d9ed>20%</color>. (Stacks up to 4 times)\\n\\nDamage from <color=#28d9ed>Curse/Fixed Damage</color> dealt to the boss cannot exceed <color=#28d9ed>[Buff_V_armor_common_3]</color>.",
     "Japanese": "（パッシブ効果）\\n<color=#28d9ed>弱体効果</color>がない場合、受けるWGダメージが<color=#28d9ed>[Buff_V_4500350_4_2]</color>と受けるダメージが<color=#28d9ed>[Buff_V_4500350_4_1]</color>DOWNされる。\\n光属性または闇属性の敵の行動終了時、自分の<color=#28d9ed>弱体効果</color>をすべて解除し、行動ゲージが<color=#28d9ed>[Buff_V_4500350_4_3_3]</color>UPする。\\n毎ターン開始時、自分の<color=#28d9ed>貫通力</color>と<color=#28d9ed>会心率</color>が<color=#28d9ed>20%</color>UPする。（最大4回累積）\\n\\nボスモンスターが受ける<color=#28d9ed>呪い/固定ダメージ</color>は<color=#28d9ed>[Buff_V_armor_common_3]</color>を超えない。",
     "China_Simplified": "（被动效果）\\n若自身没有<color=#28d9ed>弱化效果</color>，受到的WG伤害减少<color=#28d9ed>[Buff_V_4500350_4_2]</color>，受到的伤害减少<color=#28d9ed>[Buff_V_4500350_4_1]</color>。\\n光属性或暗属性敌人行动结束时，解除自身所有<color=#28d9ed>弱化效果</color>，并使自身行动条提升<color=#28d9ed>[Buff_V_4500350_4_3_3]</color>。\\n每回合开始时，自身<color=#28d9ed>穿透力</color>与<color=#28d9ed>暴击率</color>提升<color=#28d9ed>20%</color>。（最多叠加4次）\\n\\nBoss所受到的<color=#28d9ed>诅咒/固定伤害</color>不会超过<color=#28d9ed>[Buff_V_armor_common_3]</color>。",
@@ -52001,7 +52041,7 @@
   },
   {
     "ID": "SKILL_DESC_31674",
-    "Korean": "(패시브 효과)\\n<color=#28d9ed>약화 효과</color>가 없는 상태라면 받는 WG 피해가 <color=#28d9ed>[Buff_V_4500350_4_2]</color> 감소하고, 받는 피해가 <color=#28d9ed>[Buff_V_4500350_4_1]</color> 감소합니다.\\n명속성 혹은 암속성 적의 행동 종료 시, 자신의 <color=#28d9ed>약화 효과</color>를 모두 제거하고 자신의 행동 게이지가 <color=#28d9ed>[Buff_V_4500350_4_3_3]</color> 증가합니다.\\n매 턴 시작 시 자신의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>치명타 확률</color>이 <color=#28d9ed>20%</color> 증가합니다. (최대 4회 누적)\\n\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>[Buff_V_armor_common_3]</color>을 초과하지 않습니다.",
+    "Korean": "(패시브 효과)\\n<color=#28d9ed>약화 효과</color>가 없는 상태라면 받는 WG 피해가 <color=#28d9ed>[Buff_V_4500350_4_2]</color> 감소하고, 받는 피해가 <color=#28d9ed>[Buff_V_4500350_4_1]</color> 감소합니다.\\n명속성 혹은 암속성 적의 행동 종료 시, 자신의 <color=#28d9ed>약화 효과</color>를 모두 제거하고 자신의 행동 게이지가 <color=#28d9ed>[Buff_V_4500350_4_3_3]</color> 증가합니다.\\n매 턴 시작 시 자신의 <color=#28d9ed>관통력</color>과 <color=#28d9ed>치명 확률</color>이 <color=#28d9ed>20%</color> 증가합니다. (최대 4회 누적)\\n\\n보스가 입는 <color=#28d9ed>저주/고정 피해</color>의 피해는 <color=#28d9ed>[Buff_V_armor_common_3]</color>을 초과하지 않습니다.",
     "English": "(Passive Effect)\\nIf not affected by <color=#28d9ed>debuffs</color>, WG damage received is reduced by <color=#28d9ed>[Buff_V_4500350_4_2]</color>, and damage received is reduced by <color=#28d9ed>[Buff_V_4500350_4_1]</color>.\\nWhen a Light- or Dark-element enemy ends its action, removes all of the caster’s <color=#28d9ed>debuffs</color> and increases the caster’s Priority by <color=#28d9ed>[Buff_V_4500350_4_3_3]</color>.\\nAt the start of each turn, the caster’s <color=#28d9ed>Penetration</color> and <color=#28d9ed>Critical Hit Chance</color> increase by <color=#28d9ed>20%</color>. (Stacks up to 4 times)\\n\\n<color=#28d9ed>Curse/Fixed Damage</color> dealt to bosses cannot exceed <color=#28d9ed>[Buff_V_armor_common_3]</color>.",
     "Japanese": "（パッシブ効果）\\n<color=#28d9ed>弱体効果</color>がない場合、受けるWGダメージが<color=#28d9ed>[Buff_V_4500350_4_2]</color>DOWNし、受けるダメージが<color=#28d9ed>[Buff_V_4500350_4_1]</color>DOWNする。\\n光属性または闇属性の敵の行動終了時、自分の<color=#28d9ed>弱体効果</color>をすべて解除し、行動ゲージが<color=#28d9ed>[Buff_V_4500350_4_3_3]</color>UPする。\\n毎ターン開始時、自分の<color=#28d9ed>貫通力</color>と<color=#28d9ed>会心率</color>が<color=#28d9ed>20%</color>UPする。（最大4回累積）\\n\\nボスが受ける<color=#28d9ed>呪い／固定ダメージ</color>は<color=#28d9ed>[Buff_V_armor_common_3]</color>を超えない。",
     "China_Simplified": "（被动效果）\\n若未受到<color=#28d9ed>减益效果</color>影响，所受WG伤害减少<color=#28d9ed>[Buff_V_4500350_4_2]</color>，所受伤害减少<color=#28d9ed>[Buff_V_4500350_4_1]</color>。\\n光属性或暗属性敌人行动结束时，解除自身所有<color=#28d9ed>减益效果</color>，并使自身行动值提升<color=#28d9ed>[Buff_V_4500350_4_3_3]</color>。\\n每回合开始时，自身的<color=#28d9ed>贯穿力</color>与<color=#28d9ed>暴击率</color>提高<color=#28d9ed>20%</color>。（最多叠加4次）\\n\\nBoss所承受的<color=#28d9ed>诅咒／固定伤害</color>不会超过<color=#28d9ed>[Buff_V_armor_common_3]</color>。",
@@ -53250,7 +53290,7 @@
   {
     "ID": "SKILL_DESC_1120918",
     "Korean": "적을 공격하고, 대상에게 <color=#28d9ed>9턴</color> 동안 <color=#28d9ed>화상</color>을 부여합니다.\\n<color=#28d9ed>전열</color>에 있는 적을 우선적으로 공격합니다.",
-    "English": "Attacks an enemy and inflicts <color=#28d9ed>Burned</color>  on the target for <color=#28d9ed>9 turns</color>.\\nPrioritizes attacking enemies in the <color=#28d9ed>Front Row</color>.",
+    "English": "Attacks an enemy and inflicts <color=#28d9ed>Burned</color> on the target for <color=#28d9ed>9 turns</color>.\\nPrioritizes attacking enemies in the <color=#28d9ed>Front Row</color>.",
     "Japanese": "敵にダメージを与え、対象に<color=#28d9ed>9ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n<color=#28d9ed>前列</color>にいる敵を優先的に攻撃する。",
     "China_Simplified": "攻击敌人，对目标附加<color=#28d9ed>9回合</color>的<color=#28d9ed>烧伤</color>。\\n优先攻击位于<color=#28d9ed>前排</color>的敌人。",
     "China_Traditional": "攻擊敵人，對目標附加<color=#28d9ed>9回合</color>的<color=#28d9ed>燒傷</color>。\\n優先攻擊位於<color=#28d9ed>前排</color>的敵人。"
@@ -53787,7 +53827,7 @@
     "ID": "SKILL_DESC_900055",
     "Korean": "전투 입장 시 적 전체의 <color=#28d9ed>치명 확률</color>을 <color=#28d9ed>9턴</color> 동안 감소시킵니다.(효과 저항 무시 및 해제 불가)\\n자신이 받는 치명 피해가 <color=#28d9ed>100%</color> 감소합니다.\\n자신이 받는 모든 <color=#28d9ed>지속 피해</color>가 <color=#28d9ed>[Buff_V_Singularity_Passive_SPIDER_A_3_2]</color> 증가합니다. (저주 제외)",
     "English": "Upon entering battle, decreases all enemies' <color=#28d9ed>Critical Hit Chance</color> for <color=#28d9ed>9 turns</color>. (Ignores Resilience)\\nCritical Damage taken by self decreases by <color=#28d9ed>100%</color>.\\nAll <color=#28d9ed>DoT</color> taken by self increases by <color=#28d9ed>[Buff_V_Singularity_Passive_SPIDER_A_3_2]</color>. (Excluding Curse)",
-    "Japanese": "戦闘入場時、敵全体の<color=#28d9ed>会心率</color>を<color=#28d9ed>9ターン</color>の間減少させる。（効果抵抗無視）\\n自分が受ける会心ダメージが<color=#28d9ed>100%</color>減少する。\\n自分が受けるすべての<color=#28d9ed>継続ダメージ</color>が<color=#28d9ed>[Buff_V_Singularity_Passive_SPIDER_A_3_2]</color>増加する。（呪いを除く）",
+    "Japanese": "戦闘入場時、敵全体の<color=#28d9ed>会心率</color>を<color=#28d9ed>9ターン</color>の間減少させる。（効果抵抗無視）\\n自分が受ける会心ダメージが<color=#28d9ed>100%</color>DOWNする。\\n自分が受けるすべての<color=#28d9ed>継続ダメージ</color>が<color=#28d9ed>[Buff_V_Singularity_Passive_SPIDER_A_3_2]</color>UPする。（呪いを除く）",
     "China_Simplified": "进入战斗时，使全体敌人的<color=#28d9ed>暴击率</color>降低<color=#28d9ed>9回合</color>。（无视效果抵抗）\\n自身受到的暴击伤害减少<color=#28d9ed>100%</color>。\\n自身受到的所有<color=#28d9ed>持续伤害</color>增加<color=#28d9ed>[Buff_V_Singularity_Passive_SPIDER_A_3_2]</color>。（诅咒除外）",
     "China_Traditional": "進入戰鬥時，使全體敵人的<color=#28d9ed>暴擊率</color>降低<color=#28d9ed>9回合</color>。（無視效果抵抗）\\n自身受到的暴擊傷害減少<color=#28d9ed>100%</color>。\\n自身受到的所有<color=#28d9ed>持續傷害</color>增加<color=#28d9ed>[Buff_V_Singularity_Passive_SPIDER_A_3_2]</color>。（詛咒除外）"
   },
@@ -55505,179 +55545,179 @@
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_01",
-    "Korean": "<color=#27D054>C</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>15%</color> 감소",
-    "English": "<color=#27D054>C</color> DMG taken from Light-type targets decreases by <color=#0D99DA>15%</color>",
-    "Japanese": "<color=#27D054>C</color> 光属性対象からの被ダメージ<color=#0D99DA>15%</color>DOWN",
-    "China_Simplified": "<color=#27D054>C</color> 受到光属性目标的伤害量减少<color=#0D99DA>15%</color>",
-    "China_Traditional": "<color=#27D054>C</color> 受到光屬性目標的傷害量減少<color=#0D99DA>15%</color>"
+    "Korean": "<color=#27D054>C</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>20%</color> 감소",
+    "English": "<color=#27D054>C</color> DMG taken from Light-type targets decreases by <color=#0D99DA>20%</color>",
+    "Japanese": "<color=#27D054>C</color> 光属性対象から受けるダメージ<color=#0D99DA>20%</color>DOWN",
+    "China_Simplified": "<color=#27D054>C</color> 受到光属性目标的伤害量减少<color=#0D99DA>20%</color>",
+    "China_Traditional": "<color=#27D054>C</color> 受到光屬性目標的傷害量減少<color=#0D99DA>20%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_02",
-    "Korean": "<color=#27D054>C</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>16%</color> 감소",
-    "English": "<color=#27D054>C</color> DMG taken from Light-type targets decreases by <color=#0D99DA>16%</color>",
-    "Japanese": "<color=#27D054>C</color> 光属性対象からの被ダメージ<color=#0D99DA>16%</color>DOWN",
-    "China_Simplified": "<color=#27D054>C</color> 受到光属性目标的伤害量减少<color=#0D99DA>16%</color>",
-    "China_Traditional": "<color=#27D054>C</color> 受到光屬性目標的傷害量減少<color=#0D99DA>16%</color>"
+    "Korean": "<color=#27D054>C</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>23%</color> 감소",
+    "English": "<color=#27D054>C</color> DMG taken from Light-type targets decreases by <color=#0D99DA>23%</color>",
+    "Japanese": "<color=#27D054>C</color> 光属性対象から受けるダメージ<color=#0D99DA>23%</color>DOWN",
+    "China_Simplified": "<color=#27D054>C</color> 受到光属性目标的伤害量减少<color=#0D99DA>23%</color>",
+    "China_Traditional": "<color=#27D054>C</color> 受到光屬性目標的傷害量減少<color=#0D99DA>23%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_03",
-    "Korean": "<color=#27D054>C</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>17%</color> 감소",
-    "English": "<color=#27D054>C</color> DMG taken from Light-type targets decreases by <color=#0D99DA>17%</color>",
-    "Japanese": "<color=#27D054>C</color> 光属性対象からの被ダメージ<color=#0D99DA>17%</color>DOWN",
-    "China_Simplified": "<color=#27D054>C</color> 受到光属性目标的伤害量减少<color=#0D99DA>17%</color>",
-    "China_Traditional": "<color=#27D054>C</color> 受到光屬性目標的傷害量減少<color=#0D99DA>17%</color>"
+    "Korean": "<color=#27D054>C</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>26%</color> 감소",
+    "English": "<color=#27D054>C</color> DMG taken from Light-type targets decreases by <color=#0D99DA>26%</color>",
+    "Japanese": "<color=#27D054>C</color> 光属性対象から受けるダメージ<color=#0D99DA>26%</color>DOWN",
+    "China_Simplified": "<color=#27D054>C</color> 受到光属性目标的伤害量减少<color=#0D99DA>26%</color>",
+    "China_Traditional": "<color=#27D054>C</color> 受到光屬性目標的傷害量減少<color=#0D99DA>26%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_04",
-    "Korean": "<color=#0EA8F5>B</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>18%</color> 감소",
-    "English": "<color=#0EA8F5>B</color> DMG taken from Light-type targets decreases by <color=#0D99DA>18%</color>",
-    "Japanese": "<color=#0EA8F5>B</color> 光属性対象からの被ダメージ<color=#0D99DA>18%</color>DOWN",
-    "China_Simplified": "<color=#0EA8F5>B</color> 受到光属性目标的伤害量减少<color=#0D99DA>18%</color>",
-    "China_Traditional": "<color=#0EA8F5>B</color> 受到光屬性目標的傷害量減少<color=#0D99DA>18%</color>"
+    "Korean": "<color=#0EA8F5>B</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>29%</color> 감소",
+    "English": "<color=#0EA8F5>B</color> DMG taken from Light-type targets decreases by <color=#0D99DA>29%</color>",
+    "Japanese": "<color=#0EA8F5>B</color> 光属性対象から受けるダメージ<color=#0D99DA>29%</color>DOWN",
+    "China_Simplified": "<color=#0EA8F5>B</color> 受到光属性目标的伤害量减少<color=#0D99DA>29%</color>",
+    "China_Traditional": "<color=#0EA8F5>B</color> 受到光屬性目標的傷害量減少<color=#0D99DA>29%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_05",
-    "Korean": "<color=#0EA8F5>B</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>19%</color> 감소",
-    "English": "<color=#0EA8F5>B</color> DMG taken from Light-type targets decreases by <color=#0D99DA>19%</color>",
-    "Japanese": "<color=#0EA8F5>B</color> 光属性対象からの被ダメージ<color=#0D99DA>19%</color>DOWN",
-    "China_Simplified": "<color=#0EA8F5>B</color> 受到光属性目标的伤害量减少<color=#0D99DA>19%</color>",
-    "China_Traditional": "<color=#0EA8F5>B</color> 受到光屬性目標的傷害量減少<color=#0D99DA>19%</color>"
+    "Korean": "<color=#0EA8F5>B</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>32%</color> 감소",
+    "English": "<color=#0EA8F5>B</color> DMG taken from Light-type targets decreases by <color=#0D99DA>32%</color>",
+    "Japanese": "<color=#0EA8F5>B</color> 光属性対象から受けるダメージ<color=#0D99DA>32%</color>DOWN",
+    "China_Simplified": "<color=#0EA8F5>B</color> 受到光属性目标的伤害量减少<color=#0D99DA>32%</color>",
+    "China_Traditional": "<color=#0EA8F5>B</color> 受到光屬性目標的傷害量減少<color=#0D99DA>32%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_06",
-    "Korean": "<color=#0EA8F5>B</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>20%</color> 감소",
-    "English": "<color=#0EA8F5>B</color> DMG taken from Light-type targets decreases by <color=#0D99DA>20%</color>",
-    "Japanese": "<color=#0EA8F5>B</color> 光属性対象からの被ダメージ<color=#0D99DA>20%</color>DOWN",
-    "China_Simplified": "<color=#0EA8F5>B</color> 受到光属性目标的伤害量减少<color=#0D99DA>20%</color>",
-    "China_Traditional": "<color=#0EA8F5>B</color> 受到光屬性目標的傷害量減少<color=#0D99DA>20%</color>"
+    "Korean": "<color=#0EA8F5>B</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>35%</color> 감소",
+    "English": "<color=#0EA8F5>B</color> DMG taken from Light-type targets decreases by <color=#0D99DA>35%</color>",
+    "Japanese": "<color=#0EA8F5>B</color> 光属性対象から受けるダメージ<color=#0D99DA>35%</color>DOWN",
+    "China_Simplified": "<color=#0EA8F5>B</color> 受到光属性目标的伤害量减少<color=#0D99DA>35%</color>",
+    "China_Traditional": "<color=#0EA8F5>B</color> 受到光屬性目標的傷害量減少<color=#0D99DA>35%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_07",
-    "Korean": "<color=#F5340E>A</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>21%</color> 감소",
-    "English": "<color=#F5340E>A</color> DMG taken from Light-type targets decreases by <color=#0D99DA>21%</color>",
-    "Japanese": "<color=#F5340E>A</color> 光属性対象からの被ダメージ<color=#0D99DA>21%</color>DOWN",
-    "China_Simplified": "<color=#F5340E>A</color> 受到光属性目标的伤害量减少<color=#0D99DA>21%</color>",
-    "China_Traditional": "<color=#F5340E>A</color> 受到光屬性目標的傷害量減少<color=#0D99DA>21%</color>"
+    "Korean": "<color=#F5340E>A</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>38%</color> 감소",
+    "English": "<color=#F5340E>A</color> DMG taken from Light-type targets decreases by <color=#0D99DA>38%</color>",
+    "Japanese": "<color=#F5340E>A</color> 光属性対象から受けるダメージ<color=#0D99DA>38%</color>DOWN",
+    "China_Simplified": "<color=#F5340E>A</color> 受到光属性目标的伤害量减少<color=#0D99DA>38%</color>",
+    "China_Traditional": "<color=#F5340E>A</color> 受到光屬性目標的傷害量減少<color=#0D99DA>38%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_08",
-    "Korean": "<color=#F5340E>A</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>22%</color> 감소",
-    "English": "<color=#F5340E>A</color> DMG taken from Light-type targets decreases by <color=#0D99DA>22%</color>",
-    "Japanese": "<color=#F5340E>A</color> 光属性対象からの被ダメージ<color=#0D99DA>22%</color>DOWN",
-    "China_Simplified": "<color=#F5340E>A</color> 受到光属性目标的伤害量减少<color=#0D99DA>22%</color>",
-    "China_Traditional": "<color=#F5340E>A</color> 受到光屬性目標的傷害量減少<color=#0D99DA>22%</color>"
+    "Korean": "<color=#F5340E>A</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>41%</color> 감소",
+    "English": "<color=#F5340E>A</color> DMG taken from Light-type targets decreases by <color=#0D99DA>41%</color>",
+    "Japanese": "<color=#F5340E>A</color> 光属性対象から受けるダメージ<color=#0D99DA>41%</color>DOWN",
+    "China_Simplified": "<color=#F5340E>A</color> 受到光属性目标的伤害量减少<color=#0D99DA>41%</color>",
+    "China_Traditional": "<color=#F5340E>A</color> 受到光屬性目標的傷害量減少<color=#0D99DA>41%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_09",
-    "Korean": "<color=#b266ff>S</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>23%</color> 감소",
-    "English": "<color=#b266ff>S</color> DMG taken from Light-type targets decreases by <color=#0D99DA>23%</color>",
-    "Japanese": "<color=#b266ff>S</color> 光属性対象からの被ダメージ<color=#0D99DA>23%</color>DOWN",
-    "China_Simplified": "<color=#b266ff>S</color> 受到光属性目标的伤害量减少<color=#0D99DA>23%</color>",
-    "China_Traditional": "<color=#b266ff>S</color> 受到光屬性目標的傷害量減少<color=#0D99DA>23%</color>"
+    "Korean": "<color=#b266ff>S</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>44%</color> 감소",
+    "English": "<color=#b266ff>S</color> DMG taken from Light-type targets decreases by <color=#0D99DA>44%</color>",
+    "Japanese": "<color=#b266ff>S</color> 光属性対象から受けるダメージ<color=#0D99DA>44%</color>DOWN",
+    "China_Simplified": "<color=#b266ff>S</color> 受到光属性目标的伤害量减少<color=#0D99DA>44%</color>",
+    "China_Traditional": "<color=#b266ff>S</color> 受到光屬性目標的傷害量減少<color=#0D99DA>44%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_10",
-    "Korean": "<color=#b266ff>S</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>24%</color> 감소",
-    "English": "<color=#b266ff>S</color> DMG taken from Light-type targets decreases by <color=#0D99DA>24%</color>",
-    "Japanese": "<color=#b266ff>S</color> 光属性対象からの被ダメージ<color=#0D99DA>24%</color>DOWN",
-    "China_Simplified": "<color=#b266ff>S</color> 受到光属性目标的伤害量减少<color=#0D99DA>24%</color>",
-    "China_Traditional": "<color=#b266ff>S</color> 受到光屬性目標的傷害量減少<color=#0D99DA>24%</color>"
+    "Korean": "<color=#b266ff>S</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>47%</color> 감소",
+    "English": "<color=#b266ff>S</color> DMG taken from Light-type targets decreases by <color=#0D99DA>47%</color>",
+    "Japanese": "<color=#b266ff>S</color> 光属性対象から受けるダメージ<color=#0D99DA>47%</color>DOWN",
+    "China_Simplified": "<color=#b266ff>S</color> 受到光属性目标的伤害量减少<color=#0D99DA>47%</color>",
+    "China_Traditional": "<color=#b266ff>S</color> 受到光屬性目標的傷害量減少<color=#0D99DA>47%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_LIGHT_DESC_11",
-    "Korean": "<color=#ff00ff>S+</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>25%</color> 감소",
-    "English": "<color=#ff00ff>S+</color> DMG taken from Light-type targets decreases by <color=#0D99DA>25%</color>",
-    "Japanese": "<color=#ff00ff>S+</color> 光属性対象からの被ダメージ<color=#0D99DA>25%</color>DOWN",
-    "China_Simplified": "<color=#ff00ff>S+</color> 受到光属性目标的伤害量减少<color=#0D99DA>25%</color>",
-    "China_Traditional": "<color=#ff00ff>S+</color> 受到光屬性目標的傷害量減少<color=#0D99DA>25%</color>"
+    "Korean": "<color=#ff00ff>S+</color> 명속성 대상에게 받는 피해량 <color=#0D99DA>50%</color> 감소",
+    "English": "<color=#ff00ff>S+</color> DMG taken from Light-type targets decreases by <color=#0D99DA>50%</color>",
+    "Japanese": "<color=#ff00ff>S+</color> 光属性対象から受けるダメージ<color=#0D99DA>50%</color>DOWN",
+    "China_Simplified": "<color=#ff00ff>S+</color> 受到光属性目标的伤害量减少<color=#0D99DA>50%</color>",
+    "China_Traditional": "<color=#ff00ff>S+</color> 受到光屬性目標的傷害量減少<color=#0D99DA>50%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_01",
-    "Korean": "<color=#27D054>C</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>15%</color> 감소",
-    "English": "<color=#27D054>C</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>15%</color>",
-    "Japanese": "<color=#27D054>C</color> 闇属性対象からの被ダメージ<color=#0D99DA>15%</color>DOWN",
-    "China_Simplified": "<color=#27D054>C</color> 受到暗属性目标的伤害量减少<color=#0D99DA>15%</color>",
-    "China_Traditional": "<color=#27D054>C</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>15%</color>"
+    "Korean": "<color=#27D054>C</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>20%</color> 감소",
+    "English": "<color=#27D054>C</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>20%</color>",
+    "Japanese": "<color=#27D054>C</color> 闇属性対象から受けるダメージ<color=#0D99DA>20%</color>DOWN",
+    "China_Simplified": "<color=#27D054>C</color> 受到暗属性目标的伤害量减少<color=#0D99DA>20%</color>",
+    "China_Traditional": "<color=#27D054>C</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>20%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_02",
-    "Korean": "<color=#27D054>C</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>16%</color> 감소",
-    "English": "<color=#27D054>C</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>16%</color>",
-    "Japanese": "<color=#27D054>C</color> 闇属性対象からの被ダメージ<color=#0D99DA>16%</color>DOWN",
-    "China_Simplified": "<color=#27D054>C</color> 受到暗属性目标的伤害量减少<color=#0D99DA>16%</color>",
-    "China_Traditional": "<color=#27D054>C</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>16%</color>"
+    "Korean": "<color=#27D054>C</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>23%</color> 감소",
+    "English": "<color=#27D054>C</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>23%</color>",
+    "Japanese": "<color=#27D054>C</color> 闇属性対象から受けるダメージ<color=#0D99DA>23%</color>DOWN",
+    "China_Simplified": "<color=#27D054>C</color> 受到暗属性目标的伤害量减少<color=#0D99DA>23%</color>",
+    "China_Traditional": "<color=#27D054>C</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>23%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_03",
-    "Korean": "<color=#27D054>C</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>17%</color> 감소",
-    "English": "<color=#27D054>C</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>17%</color>",
-    "Japanese": "<color=#27D054>C</color> 闇属性対象からの被ダメージ<color=#0D99DA>17%</color>DOWN",
-    "China_Simplified": "<color=#27D054>C</color> 受到暗属性目标的伤害量减少<color=#0D99DA>17%</color>",
-    "China_Traditional": "<color=#27D054>C</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>17%</color>"
+    "Korean": "<color=#27D054>C</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>26%</color> 감소",
+    "English": "<color=#27D054>C</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>26%</color>",
+    "Japanese": "<color=#27D054>C</color> 闇属性対象から受けるダメージ<color=#0D99DA>26%</color>DOWN",
+    "China_Simplified": "<color=#27D054>C</color> 受到暗属性目标的伤害量减少<color=#0D99DA>26%</color>",
+    "China_Traditional": "<color=#27D054>C</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>26%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_04",
-    "Korean": "<color=#0EA8F5>B</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>18%</color> 감소",
-    "English": "<color=#0EA8F5>B</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>18%</color>",
-    "Japanese": "<color=#0EA8F5>B</color> 闇属性対象からの被ダメージ<color=#0D99DA>18%</color>DOWN",
-    "China_Simplified": "<color=#0EA8F5>B</color> 受到暗属性目标的伤害量减少<color=#0D99DA>18%</color>",
-    "China_Traditional": "<color=#0EA8F5>B</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>18%</color>"
+    "Korean": "<color=#0EA8F5>B</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>29%</color> 감소",
+    "English": "<color=#0EA8F5>B</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>29%</color>",
+    "Japanese": "<color=#0EA8F5>B</color> 闇属性対象から受けるダメージ<color=#0D99DA>29%</color>DOWN",
+    "China_Simplified": "<color=#0EA8F5>B</color> 受到暗属性目标的伤害量减少<color=#0D99DA>29%</color>",
+    "China_Traditional": "<color=#0EA8F5>B</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>29%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_05",
-    "Korean": "<color=#0EA8F5>B</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>19%</color> 감소",
-    "English": "<color=#0EA8F5>B</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>19%</color>",
-    "Japanese": "<color=#0EA8F5>B</color> 闇属性対象からの被ダメージ<color=#0D99DA>19%</color>DOWN",
-    "China_Simplified": "<color=#0EA8F5>B</color> 受到暗属性目标的伤害量减少<color=#0D99DA>19%</color>",
-    "China_Traditional": "<color=#0EA8F5>B</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>19%</color>"
+    "Korean": "<color=#0EA8F5>B</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>32%</color> 감소",
+    "English": "<color=#0EA8F5>B</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>32%</color>",
+    "Japanese": "<color=#0EA8F5>B</color> 闇属性対象から受けるダメージ<color=#0D99DA>32%</color>DOWN",
+    "China_Simplified": "<color=#0EA8F5>B</color> 受到暗属性目标的伤害量减少<color=#0D99DA>32%</color>",
+    "China_Traditional": "<color=#0EA8F5>B</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>32%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_06",
-    "Korean": "<color=#0EA8F5>B</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>20%</color> 감소",
-    "English": "<color=#0EA8F5>B</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>20%</color>",
-    "Japanese": "<color=#0EA8F5>B</color> 闇属性対象からの被ダメージ<color=#0D99DA>20%</color>DOWN",
-    "China_Simplified": "<color=#0EA8F5>B</color> 受到暗属性目标的伤害量减少<color=#0D99DA>20%</color>",
-    "China_Traditional": "<color=#0EA8F5>B</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>20%</color>"
+    "Korean": "<color=#0EA8F5>B</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>35%</color> 감소",
+    "English": "<color=#0EA8F5>B</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>35%</color>",
+    "Japanese": "<color=#0EA8F5>B</color> 闇属性対象から受けるダメージ<color=#0D99DA>35%</color>DOWN",
+    "China_Simplified": "<color=#0EA8F5>B</color> 受到暗属性目标的伤害量减少<color=#0D99DA>35%</color>",
+    "China_Traditional": "<color=#0EA8F5>B</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>35%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_07",
-    "Korean": "<color=#F5340E>A</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>21%</color> 감소",
-    "English": "<color=#F5340E>A</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>21%</color>",
-    "Japanese": "<color=#F5340E>A</color> 闇属性対象からの被ダメージ<color=#0D99DA>21%</color>DOWN",
-    "China_Simplified": "<color=#F5340E>A</color> 受到暗属性目标的伤害量减少<color=#0D99DA>21%</color>",
-    "China_Traditional": "<color=#F5340E>A</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>21%</color>"
+    "Korean": "<color=#F5340E>A</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>38%</color> 감소",
+    "English": "<color=#F5340E>A</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>38%</color>",
+    "Japanese": "<color=#F5340E>A</color> 闇属性対象から受けるダメージ<color=#0D99DA>38%</color>DOWN",
+    "China_Simplified": "<color=#F5340E>A</color> 受到暗属性目标的伤害量减少<color=#0D99DA>38%</color>",
+    "China_Traditional": "<color=#F5340E>A</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>38%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_08",
-    "Korean": "<color=#F5340E>A</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>22%</color> 감소",
-    "English": "<color=#F5340E>A</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>22%</color>",
-    "Japanese": "<color=#F5340E>A</color> 闇属性対象からの被ダメージ<color=#0D99DA>22%</color>DOWN",
-    "China_Simplified": "<color=#F5340E>A</color> 受到暗属性目标的伤害量减少<color=#0D99DA>22%</color>",
-    "China_Traditional": "<color=#F5340E>A</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>22%</color>"
+    "Korean": "<color=#F5340E>A</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>41%</color> 감소",
+    "English": "<color=#F5340E>A</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>41%</color>",
+    "Japanese": "<color=#F5340E>A</color> 闇属性対象から受けるダメージ<color=#0D99DA>41%</color>DOWN",
+    "China_Simplified": "<color=#F5340E>A</color> 受到暗属性目标的伤害量减少<color=#0D99DA>41%</color>",
+    "China_Traditional": "<color=#F5340E>A</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>41%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_09",
-    "Korean": "<color=#b266ff>S</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>23%</color> 감소",
-    "English": "<color=#b266ff>S</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>23%</color>",
-    "Japanese": "<color=#b266ff>S</color> 闇属性対象からの被ダメージ<color=#0D99DA>23%</color>DOWN",
-    "China_Simplified": "<color=#b266ff>S</color> 受到暗属性目标的伤害量减少<color=#0D99DA>23%</color>",
-    "China_Traditional": "<color=#b266ff>S</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>23%</color>"
+    "Korean": "<color=#b266ff>S</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>44%</color> 감소",
+    "English": "<color=#b266ff>S</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>44%</color>",
+    "Japanese": "<color=#b266ff>S</color> 闇属性対象から受けるダメージ<color=#0D99DA>44%</color>DOWN",
+    "China_Simplified": "<color=#b266ff>S</color> 受到暗属性目标的伤害量减少<color=#0D99DA>44%</color>",
+    "China_Traditional": "<color=#b266ff>S</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>44%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_10",
-    "Korean": "<color=#b266ff>S</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>24%</color> 감소",
-    "English": "<color=#b266ff>S</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>24%</color>",
-    "Japanese": "<color=#b266ff>S</color> 闇属性対象からの被ダメージ<color=#0D99DA>24%</color>DOWN",
-    "China_Simplified": "<color=#b266ff>S</color> 受到暗属性目标的伤害量减少<color=#0D99DA>24%</color>",
-    "China_Traditional": "<color=#b266ff>S</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>24%</color>"
+    "Korean": "<color=#b266ff>S</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>47%</color> 감소",
+    "English": "<color=#b266ff>S</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>47%</color>",
+    "Japanese": "<color=#b266ff>S</color> 闇属性対象から受けるダメージ<color=#0D99DA>47%</color>DOWN",
+    "China_Simplified": "<color=#b266ff>S</color> 受到暗属性目标的伤害量减少<color=#0D99DA>47%</color>",
+    "China_Traditional": "<color=#b266ff>S</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>47%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_BY_DARK_DESC_11",
-    "Korean": "<color=#ff00ff>S+</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>25%</color> 감소",
-    "English": "<color=#ff00ff>S+</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>25%</color>",
-    "Japanese": "<color=#ff00ff>S+</color> 闇属性対象からの被ダメージ<color=#0D99DA>25%</color>DOWN",
-    "China_Simplified": "<color=#ff00ff>S+</color> 受到暗属性目标的伤害量减少<color=#0D99DA>25%</color>",
-    "China_Traditional": "<color=#ff00ff>S+</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>25%</color>"
+    "Korean": "<color=#ff00ff>S+</color> 암속성 대상에게 받는 피해량 <color=#0D99DA>50%</color> 감소",
+    "English": "<color=#ff00ff>S+</color> DMG taken from Dark-type targets decreases by <color=#0D99DA>50%</color>",
+    "Japanese": "<color=#ff00ff>S+</color> 闇属性対象から受けるダメージ<color=#0D99DA>50%</color>DOWN",
+    "China_Simplified": "<color=#ff00ff>S+</color> 受到暗属性目标的伤害量减少<color=#0D99DA>50%</color>",
+    "China_Traditional": "<color=#ff00ff>S+</color> 受到暗屬性目標的傷害量減少<color=#0D99DA>50%</color>"
   },
   {
     "ID": "UO_SINGULAREQUIP_DMG_REDUCE_DESC_01",
@@ -56046,5 +56086,149 @@
     "Japanese": "最初のターン開始時、自分の弱体効果の持続ターン<color=#28d9ed>-1ターン</color>",
     "China_Simplified": "第一回合开始时，自身弱化效果持续时间<color=#28d9ed>-1回合</color>",
     "China_Traditional": "第一回合開始時，自身弱化效果持續時間<color=#28d9ed>-1回合</color>"
+  },
+  {
+    "ID": "SKILL_NAME_2700070_Skill01",
+    "Korean": "효율적인 청소활동",
+    "English": "Efficient Sweep",
+    "Japanese": "効率的な排除活動",
+    "China_Simplified": "高效清洁行动",
+    "China_Traditional": "高效清潔行動"
+  },
+  {
+    "ID": "SKILL_DESC_2700070_Skill01_LV1",
+    "Korean": "적 2인을 공격하고 <color=#28d9ed>[Buff_C_2700070_1_1]</color>확률로 자신의 <color=#28d9ed>방어력</color>이 <color=#28d9ed>1턴</color> 동안 증가합니다.\\n\\n이 스킬은 자신이 <color=#28d9ed>방어력</color> 증가를 보유하는 동안 피해가 <color=#28d9ed>50%</color> 증가하고 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+    "English": "Attacks 2 enemies and has a <color=#28d9ed>[Buff_C_2700070_1_1]</color> chance to increase own <color=#28d9ed>Defense</color> for <color=#28d9ed>1 turn</color>.\\n\\nWhen the caster has increased <color=#28d9ed>Defense</color>, this skill's DMG increases by <color=#28d9ed>50%</color>. Damage dealt increases proportional to Defense instead of Attack.",
+    "Japanese": "敵2体にダメージを与え、<color=#28d9ed>[Buff_C_2700070_1_1]</color>の確率で自分の<color=#28d9ed>防御力</color>が<color=#28d9ed>1ターン</color>の間UPする。\\n\\nこのスキルは自分が<color=#28d9ed>防御力UP</color>を保有している場合、ダメージが<color=#28d9ed>50%</color>UPし、防御力が高いほどダメージがUPする。",
+    "China_Simplified": "攻击2名敌人，以<color=#28d9ed>[Buff_C_2700070_1_1]</color>的概率使自身<color=#28d9ed>防御力</color>在<color=#28d9ed>1回合</color>内提升。\\n\\n持有<color=#28d9ed>防御力</color>提升期间，该技能伤害增加<color=#28d9ed>50%</color>，且伤害按防御力而非攻击力计算。",
+    "China_Traditional": "攻擊2名敵人，以<color=#28d9ed>[Buff_C_2700070_1_1]</color>的概率使自身<color=#28d9ed>防禦力</color>在<color=#28d9ed>1回合</color>內提升。\\n\\n持有<color=#28d9ed>防禦力</color>提升期間，該技能傷害增加<color=#28d9ed>50%</color>，且傷害按防禦力而非攻擊力計算。"
+  },
+  {
+    "ID": "SKILL_NAME_2700070_Skill02",
+    "Korean": "승리의 주문",
+    "English": "Victory Command",
+    "Japanese": "勝利の呪文",
+    "China_Simplified": "胜利的咒语",
+    "China_Traditional": "勝利的咒語"
+  },
+  {
+    "ID": "SKILL_DESC_2700070_Skill02_LV1",
+    "Korean": "적 전체를 공격합니다. 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>20</color> 감소시키고 대상의 강화 효과를 <color=#28d9ed>[Buff_V_2700070_2_2]개</color> 빼앗습니다.\\n\\n이 스킬은 자신이 <color=#28d9ed>방어력</color> 증가를 보유하는 동안 피해가 <color=#28d9ed>50%</color> 증가하고 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+    "English": "Attacks all enemies. Decreases all enemies' <color=#28d9ed>AP</color> by <color=#28d9ed>20</color> and steals <color=#28d9ed>[Buff_V_2700070_2_2]</color> buff(s) from the target.\\n\\nWhen the caster has increased <color=#28d9ed>Defense</color>, this skill's DMG increases by <color=#28d9ed>50%</color>. Damage dealt increases proportional to Defense instead of Attack.",
+    "Japanese": "敵全体にダメージを与える。敵全体の<color=#28d9ed>AP</color>を<color=#28d9ed>20</color>DOWNさせ、対象の強化効果を<color=#28d9ed>[Buff_V_2700070_2_2]個</color>奪う。\\n\\nこのスキルは自分が<color=#28d9ed>防御力UP</color>を保有している場合、ダメージが<color=#28d9ed>50%</color>UPし、防御力が高いほどダメージがUPする。",
+    "China_Simplified": "攻击全体敌人。使全体敌人<color=#28d9ed>AP</color>减少<color=#28d9ed>20</color>，并夺取目标<color=#28d9ed>[Buff_V_2700070_2_2]个</color>强化效果。\\n\\n持有<color=#28d9ed>防御力</color>提升期间，该技能伤害增加<color=#28d9ed>50%</color>，且伤害按防御力而非攻击力计算。",
+    "China_Traditional": "攻擊全體敵人。使全體敵人<color=#28d9ed>AP</color>減少<color=#28d9ed>20</color>，並奪取目標<color=#28d9ed>[Buff_V_2700070_2_2]個</color>強化效果。\\n\\n持有<color=#28d9ed>防禦力</color>提升期間，該技能傷害增加<color=#28d9ed>50%</color>，且傷害按防禦力而非攻擊力計算。"
+  },
+  {
+    "ID": "SKILL_DESC_2700070_Skill02_LV5",
+    "Korean": "적 전체를 공격합니다. 적 전체의 <color=#28d9ed>AP</color>를 <color=#28d9ed>40</color> 감소시키고 대상의 강화 효과를 <color=#28d9ed>[Buff_V_2700070_2_2]개</color> 빼앗습니다.\\n\\n이 스킬은 자신이 <color=#28d9ed>방어력</color> 증가를 보유하는 동안 피해가 <color=#28d9ed>50%</color> 증가하고 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+    "English": "Attacks all enemies. Decreases all enemies' <color=#28d9ed>AP</color> by <color=#28d9ed>40</color> and steals <color=#28d9ed>[Buff_V_2700070_2_2]</color> buff(s) from the target.\\n\\nWhen the caster has increased <color=#28d9ed>Defense</color>, this skill's DMG increases by <color=#28d9ed>50%</color>. Damage dealt increases proportional to Defense instead of Attack.",
+    "Japanese": "敵全体にダメージを与える。敵全体の<color=#28d9ed>AP</color>を<color=#28d9ed>40</color>DOWNさせ、対象の強化効果を<color=#28d9ed>[Buff_V_2700070_2_2]個</color>奪う。\\n\\nこのスキルは自分が<color=#28d9ed>防御力UP</color>を保有している場合、ダメージが<color=#28d9ed>50%</color>UPし、防御力が高いほどダメージがUPする。",
+    "China_Simplified": "攻击全体敌人。使全体敌人<color=#28d9ed>AP</color>减少<color=#28d9ed>40</color>，并夺取目标<color=#28d9ed>[Buff_V_2700070_2_2]个</color>强化效果。\\n\\n持有<color=#28d9ed>防御力</color>提升期间，该技能伤害增加<color=#28d9ed>50%</color>，且伤害按防御力而非攻击力计算。",
+    "China_Traditional": "攻擊全體敵人。使全體敵人<color=#28d9ed>AP</color>減少<color=#28d9ed>40</color>，並奪取目標<color=#28d9ed>[Buff_V_2700070_2_2]個</color>強化效果。\\n\\n持有<color=#28d9ed>防禦力</color>提升期間，該技能傷害增加<color=#28d9ed>50%</color>，且傷害按防禦力而非攻擊力計算。"
+  },
+  {
+    "ID": "SKILL_NAME_2700070_Skill03",
+    "Korean": "행성 정화 프로토콜",
+    "English": "Planetary Purification Protocol",
+    "Japanese": "惑星浄化プロトコル",
+    "China_Simplified": "星球净化协议",
+    "China_Traditional": "星球淨化協議"
+  },
+  {
+    "ID": "SKILL_DESC_2700070_Skill03_LV1",
+    "Korean": "적을 공격하고 대상의 <color=#28d9ed>AP</color>를 <color=#28d9ed>모두</color> 제거합니다.\\n공격 후 아군 전체의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n이 스킬은 자신이 <color=#28d9ed>방어력</color> 증가를 보유하는 동안 피해가 <color=#28d9ed>50%</color> 증가하고 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+    "English": "Attacks an enemy and removes <color=#28d9ed>all</color> of the target's <color=#28d9ed>AP</color>.\\nAfter attacking, increases all allies' <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>2 turns</color>.\\n\\nWhen the caster has increased <color=#28d9ed>Defense</color>, this skill's DMG increases by <color=#28d9ed>50%</color>. Damage dealt increases proportional to Defense instead of Attack.",
+    "Japanese": "敵にダメージを与え、対象の<color=#28d9ed>AP</color>を<color=#28d9ed>すべて</color>除去する。\\n攻撃後、味方全体の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\nこのスキルは自分が<color=#28d9ed>防御力UP</color>を保有している場合、ダメージが<color=#28d9ed>50%</color>UPし、防御力が高いほどダメージがUPする。",
+    "China_Simplified": "攻击敌人并清除目标<color=#28d9ed>所有</color><color=#28d9ed>AP</color>。\\n攻击后使我方全体<color=#28d9ed>暴击伤害</color>在<color=#28d9ed>2回合</color>内提升。\\n\\n持有<color=#28d9ed>防御力</color>提升期间，该技能伤害增加<color=#28d9ed>50%</color>，且伤害按防御力而非攻击力计算。",
+    "China_Traditional": "攻擊敵人並清除目標<color=#28d9ed>所有</color><color=#28d9ed>AP</color>。\\n攻擊後使我方全體<color=#28d9ed>暴擊傷害</color>在<color=#28d9ed>2回合</color>內提升。\\n\\n持有<color=#28d9ed>防禦力</color>提升期間，該技能傷害增加<color=#28d9ed>50%</color>，且傷害按防禦力而非攻擊力計算。"
+  },
+  {
+    "ID": "SKILL_DESC_2700070_Skill03_LV5",
+    "Korean": "적을 공격하고 대상의 <color=#28d9ed>AP</color>를 <color=#28d9ed>모두</color> 제거합니다.\\n공격 후 자신에게 <color=#28d9ed>무적</color>을 <color=#28d9ed>1턴</color> 동안 부여하고 아군 전체의 <color=#28d9ed>치명 피해</color>를 <color=#28d9ed>2턴</color> 동안 증가시킵니다.\\n\\n이 스킬은 자신이 <color=#28d9ed>방어력</color> 증가를 보유하는 동안 피해가 <color=#28d9ed>50%</color> 증가하고 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+    "English": "Attacks an enemy and removes <color=#28d9ed>all</color> of the target's <color=#28d9ed>AP</color>.\\nAfter attacking, grants <color=#28d9ed>Invulnerability</color> to the caster for <color=#28d9ed>1 turn</color> and increases all allies' <color=#28d9ed>Critical Damage</color> for <color=#28d9ed>2 turns</color>.\\n\\nWhen the caster has increased <color=#28d9ed>Defense</color>, this skill's DMG increases by <color=#28d9ed>50%</color>. Damage dealt increases proportional to Defense instead of Attack.",
+    "Japanese": "敵にダメージを与え、対象の<color=#28d9ed>AP</color>を<color=#28d9ed>すべて</color>除去する。\\n攻撃後、自分に<color=#28d9ed>無敵</color>を<color=#28d9ed>1ターン</color>の間付与し、味方全体の<color=#28d9ed>会心ダメージ</color>を<color=#28d9ed>2ターン</color>の間UPさせる。\\n\\nこのスキルは自分が<color=#28d9ed>防御力UP</color>を保有している 場合、ダメージが<color=#28d9ed>50%</color>UPし、防御力が高いほどダメージがUPする。",
+    "China_Simplified": "攻击敌人并清除目标<color=#28d9ed>所有</color><color=#28d9ed>AP</color>。\\n攻击后对自身附加<color=#28d9ed>1回合</color>的<color=#28d9ed>无敌</color>，并使我方全体<color=#28d9ed>暴击伤害</color>在<color=#28d9ed>2回合</color>内提升。\\n\\n持有<color=#28d9ed>防御力</color>提升期间，该技能伤害增加<color=#28d9ed>50%</color>，且伤害按防御力而非攻击力计算。",
+    "China_Traditional": "攻擊敵人並清除目標<color=#28d9ed>所有</color><color=#28d9ed>AP</color>。\\n攻擊後對自身附加<color=#28d9ed>1回合</color>的<color=#28d9ed>無敵</color>，並使我方全體<color=#28d9ed>暴擊傷害</color>在<color=#28d9ed>2回合</color>內提升。\\n\\n持有<color=#28d9ed>防禦力</color>提升期間，該技能傷害增加<color=#28d9ed>50%</color>，且傷害按防禦力而非攻擊力計算。"
+  },
+  {
+    "ID": "SKILL_DESC_2700070_Skill04_LV1",
+    "Korean": "<color=#ffd732>체인 컴패니언 효과</color> : 자신의 스킬 쿨타임이 <color=#28d9ed>1턴</color> 감소합니다.\\n이 스킬은 자신이 <color=#28d9ed>방어력</color> 증가를 보유하는 동안 피해가 <color=#28d9ed>50%</color> 증가하고 공격력 대신 방어력에 비례하여 피해가 증가합니다.\\n\\n<color=#ffd732>협공 효과</color> : 공격 후 대상의 강화 효과를 <color=#28d9ed>1개</color> 빼았습니다.(효과 저항 무시)\\n이 스킬은 자신이 <color=#28d9ed>방어력</color> 증가를 보유하는 동안 피해가 <color=#28d9ed>50%</color> 증가하고 공격력 대신 방어력에 비례하여 피해가 증가합니다.",
+    "English": "<color=#ffd732>Chain Companion Effect</color>: Own skill cooldown decreases by <color=#28d9ed>1 turn</color>.\\nWhen the caster has increased <color=#28d9ed>Defense</color>, this skill's DMG increases by <color=#28d9ed>50%</color>. Damage dealt increases proportional to Defense instead of Attack.\\n\\n<color=#ffd732>Dual Attack Effect</color>: After attacking, steals <color=#28d9ed>1</color> buff from the target. (Ignores Resilience)\\nWhen the caster has increased <color=#28d9ed>Defense</color>, this skill's DMG increases by <color=#28d9ed>50%</color>. Damage dealt increases proportional to Defense instead of Attack.",
+    "Japanese": "<color=#ffd732>チェーン効果(汎用)</color>：自分のスキルターンが<color=#28d9ed>1ターン</color>減少する。\\nこのスキルは自分が<color=#28d9ed>防御力UP</color>を保有している場合、ダメージが<color=#28d9ed>50%</color>UPし、防御力が高いほどダメージがUPする。\\n\\n<color=#ffd732>連携効果</color>：攻撃後、対象の強化効果を<color=#28d9ed>1個</color>奪う。（効果抵抗無視）\\nこのスキルは自分が<color=#28d9ed>防御力UP</color>を保有している場合、ダメージが<color=#28d9ed>50%</color>UPし、防御力が高いほどダメージがUPする",
+    "China_Simplified": "<color=#ffd732>连锁效果(通用)</color>：自身技能冷却时间减少<color=#28d9ed>1回合</color>。\\n持有<color=#28d9ed>防御力</color>提升期间，该技能伤害增加<color=#28d9ed>50%</color>，且伤害按防御力而非攻击力计算。\\n\\n<color=#ffd732>夹攻效果</color>：攻击后夺取目标<color=#28d9ed>1个</color>强化效果。（无视效果抵抗）\\n持有<color=#28d9ed>防御力</color>提升期间，该技能伤害增加<color=#28d9ed>50%</color>，且伤害按防御力而非攻击力计算。",
+    "China_Traditional": "<color=#ffd732>連鎖效果(通用)</color>：自身技能冷卻時間減少<color=#28d9ed>1回合</color>。\\n持有<color=#28d9ed>防禦力</color>提升期間，該技能傷害增加<color=#28d9ed>50%</color>，且傷害按防禦力而非攻擊力計算。\\n\\n<color=#ffd732>夾攻效果</color>：攻擊後奪取目標<color=#28d9ed>1個</color>強化效果。（無視效果抵抗）\\n持有<color=#28d9ed>防禦力</color>提升期間，該技能傷害增加<color=#28d9ed>50%</color>，且傷害按防禦力而非攻擊力計算。"
+  },
+  {
+    "ID": "SKILL_DESC_2700070_Skill23_LV1",
+    "Korean": "유리한 상성의 적에게 주는 피해가 <color=#28d9ed>[Buff_V_core_passive_element_dmg]</color> 증가합니다.",
+    "English": "Increases DMG dealt by <color=#28d9ed>[Buff_V_core_passive_element_dmg]</color> when the caster has an elemental advantage.",
+    "Japanese": "有利属性の攻撃判定で敵に与えるダメージが<color=#28d9ed>[Buff_V_core_passive_element_dmg]</color>UPする。",
+    "China_Simplified": "对属性不利的敌人造成的伤害增加<color=#28d9ed>[Buff_V_core_passive_element_dmg]</color>。",
+    "China_Traditional": "對屬性不利的敵人造成的傷害增加<color=#28d9ed>[Buff_V_core_passive_element_dmg]</color>。"
+  },
+  {
+    "ID": "SKILL_DESC_2700070_Skill23_LV2",
+    "Korean": "유리한 상성의 적에게 주는 피해가 <color=#28d9ed>[Buff_V_core_passive_element_dmg]</color> 증가합니다.\\n자신의 모든 공격이 유리한 상성으로 적용됩니다.",
+    "English": "Increases DMG dealt by <color=#28d9ed>[Buff_V_core_passive_element_dmg]</color> when the caster has an elemental advantage.\\nAll of the caster's attacks are treated as having elemental advantage.",
+    "Japanese": "有利属性の敵に与えるダメージが<color=#28d9ed>[Buff_V_core_passive_element_dmg]</color>UPする。\\nすべての攻撃が有利属性の攻撃判定でダメージを与える。",
+    "China_Simplified": "对属性不利的敌人造成的伤害增加<color=#28d9ed>[Buff_V_core_passive_element_dmg]</color>。\\n自身所有攻击以克制属性生效。",
+    "China_Traditional": "對屬性不利的敵人造成的傷害增加<color=#28d9ed>[Buff_V_core_passive_element_dmg]</color>。\\n自身所有攻擊以克制屬性生效。"
+  },
+  {
+    "ID": "SE_DESC_SKILL08_2700070_1",
+    "Korean": "버스트 3단계 해금\\n차원 특이점 보스 대상 관통력 +30%",
+    "English": "Burst Level 3 Unlocked\\nPenetration +30% against Dimensional Singularity Boss",
+    "Japanese": "バーストスキル３段階解禁 \\n次元特異点ボス対象貫通力+30%",
+    "China_Simplified": "爆发第3阶段解锁\\n对次元奇点首领穿透力+30%",
+    "China_Traditional": "爆發第3階段解鎖\\n對次元奇點首領貫穿力+30%"
+  },
+  {
+    "ID": "SKILL_NAME_B_2700070_1",
+    "Korean": "강화 강탈 강화(효과 저항 무시)\\nWG 감소량 +1",
+    "English": "Enhances Steals Buff (Ignores Resilience)\\nWG Reduction +1",
+    "Japanese": "強化奪取強化(効果抵抗無視) \\nWGダメージ+1",
+    "China_Simplified": "强力抢夺强化(无视效果抵抗)\\nWG减少量+1",
+    "China_Traditional": "強化奪取強化(無視效果抵抗)\\nWG減少量+1"
+  },
+  {
+    "ID": "SKILL_NAME_B_2700070_2",
+    "Korean": "피해 증가",
+    "English": "DMG Increase",
+    "Japanese": "ダメージUP",
+    "China_Simplified": "伤害提升",
+    "China_Traditional": "傷害提升"
+  },
+  {
+    "ID": "SKILL_NAME_B_2700070_3",
+    "Korean": "강화 공격으로 교체\\n피해 증가\\n체력 20% 회복",
+    "English": "Changed to Enhanced Attack\\nDMG Increase\\nHealth Recovery 20%",
+    "Japanese": "強化攻撃に変更\\nダメージUP\\nHP20%回復",
+    "China_Simplified": "替换为强化攻击\\n伤害提升\\n生命值恢复20%",
+    "China_Traditional": "替換為強化攻擊\\n傷害提升\\n生命力恢復20%"
+  },
+  {
+    "ID": "UO_CEQUIP_2700070_NAME",
+    "Korean": "1년치 국방 예산",
+    "English": "Annual Defense Budget",
+    "Japanese": "年間国防予算",
+    "China_Simplified": "一年的国防预算",
+    "China_Traditional": "一年的國防預算"
+  },
+  {
+    "ID": "UO_CEQUIP_2700070_DESC",
+    "Korean": "전체 공격 피격 시 행동 게이지 [+Value] (1턴에 1회만 발동)",
+    "English": "Priority [+Value] when hit by an AoE attack (Activates once per turn)",
+    "Japanese": "敵から全体攻撃を受けた場合、行動ゲージ[+Value] (1ターンに1回のみ発動)",
+    "China_Simplified": "被全体攻击命中时行动值[+Value]（每回合仅发动1次）",
+    "China_Traditional": "被全體攻擊命中時速攻值[+Value]（每回合僅發動1次）"
+  },
+  {
+    "ID": "UO_CEQUIP_2700070_UPGRADE_DESC",
+    "Korean": "차원 특이점 보스 공격 시 스킬 사용 전 자신의 방어력 증가 +2턴 (3턴에 1회만 발동)",
+    "English": "When attacking a Dimensional Singularity Boss, grants increased Defense to the caster for 2 turns before using the skill (Activates once every 3 turns)",
+    "Japanese": "次元特異点ボス対象にスキル使用する前、自分の防御力+2ターン (3ターンに1回のみ発動)",
+    "China_Simplified": "攻击次元奇点首领时，使用技能前自身防御力提升+2回合（每3回合仅发动1次）",
+    "China_Traditional": "攻擊次元奇點首領時，使用技能前自身防禦力提升+2回合（每3回合僅發動1次）"
   }
 ]

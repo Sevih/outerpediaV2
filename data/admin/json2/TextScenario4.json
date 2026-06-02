@@ -22979,7 +22979,7 @@
     "ID": "MF02A05E05S_004",
     "Korean": "아니, 마음만 받아두지. \\n그냥 잠이 안 오는 것 뿐이니 신경쓰지 마.",
     "English": "No, I appreciate the thought.\\nThere's no need to worry. I was just having trouble sleeping.",
-    "Japanese": "いや、気持ちだけで十分だ。\\nただ眠れないだけだから、気にしにでくれ。",
+    "Japanese": "いや、気持ちだけで十分だ。\\nただ眠れないだけだから、気にしないでくれ。",
     "China_Simplified": "不用了，好意我心领了。\\n不用为我费心了，我只是睡不着而已。",
     "China_Traditional": "不了，好意我心領了。\\n我只是睡不著而已，不勞費心。"
   },
@@ -112681,7 +112681,7 @@
   },
   {
     "ID": "SF04C117E01C_026",
-    "Korean": "방금 전까지 목숨 걸고 괴뢰군과 싸운 사람 맞아?\\n식량배급같은 하찮은 일은, 다른사람에게 맡겨도 될텐데……",
+    "Korean": "방금 전까지 목숨 걸고 괴뢰군과 싸운 사람 맞아?\\n식량배급같은 하찮은 일은, 다른 사람에게 맡겨도 될텐데……",
     "English": "Wasn't she just risking her life fighting the puppet army a moment ago?\\nSomething trivial like food distribution could've been left to someone else...",
     "Japanese": "さっきまで命懸けで傀儡軍と戦っていた人だろう?\\n食糧配給なんて些細な仕事、誰かに任せればいいのに……",
     "China_Simplified": "那是刚才还在和傀儡军浴血奋战的人吗？\\n像粮食配给这种琐事，完全可以交给别人……",
@@ -116790,5 +116790,837 @@
     "Japanese": "<Color=#FFBF00>裏切りの代償</Color>、だから。",
     "China_Simplified": "<Color=#FFBF00>背叛的代价</Color>啊。",
     "China_Traditional": "<Color=#FFBF00>背叛的代價。</Color>。"
+  },
+  {
+    "ID": "CF06C07000S_001",
+    "Korean": "엡실론, 혹시 <Color=#FFBF00>[돈까스]</Color>라는 걸 들어봤나?",
+    "English": "Epsilon, have you ever heard of <Color=#FFBF00>[tonkatsu]</Color>?",
+    "Japanese": "イプシロン、<Color=#FFBF00>【トンカツ】</Color>って知ってるか?",
+    "China_Simplified": "埃普西隆，你听说过<Color=#FFBF00>[炸猪排]</Color>吗？",
+    "China_Traditional": "艾普西隆，你聽說過<Color=#FFBF00>「炸豬排」</Color>這種東西嗎？"
+  },
+  {
+    "ID": "CF06C07000S_002",
+    "Korean": "마스터, 발언의 의도를 파악할 수 없습니다.\\n이레귤러의 침공이 코앞인데, 갑자기 그게 무슨 질문입니까?",
+    "English": "Master, I'm unable to determine the intent of your question.\\nThe Irregular invasion is imminent—why ask that now?",
+    "Japanese": "マスター、発言の意図を理解できまセン。\\nイレギュラーの侵攻が目前だというのに、なぜそのような質問をするのデスカ?",
+    "China_Simplified": "主人，我无法理解您的意图。\\n异型怪的入侵迫在眉睫，您突然问这个做什么？",
+    "China_Traditional": "主人，我無法理解你這句話的意圖。\\n異形怪即將進攻，為什麼突然問這種問題？"
+  },
+  {
+    "ID": "CF06C07000S_003",
+    "Korean": "……네 녀석에게 그런 멀쩡한 지적을 받으니,\\n쥐구멍에라도 기어들어 가고 싶은 심정이군.",
+    "English": "...Getting a perfectly reasonable response like that from you\\nalmost makes me want to crawl into a hole.",
+    "Japanese": "……お前みたいなのにまともな指摘をされると、\\n穴があったら入りたくなる気分だな。",
+    "China_Simplified": "……被你这家伙一本正经地说教，\\n真让我想找个地缝钻进去。",
+    "China_Traditional": "……被你這種傢伙正經八百地吐嘈，\\n我真是想找個地洞鑽進去。"
+  },
+  {
+    "ID": "CF06C07000S_004",
+    "Korean": "분명 크리스티나 중위가,\\n그 돈까스인지 뭔지라면 엡실론이 반응할 거라고 했다만……",
+    "English": "Lieutenant Christina said mentioning\\n\"tonkatsu\" would get a reaction out of Epsilon...",
+    "Japanese": "確かクリスティーナ中尉が、\\nトンカツとかいうものならイプシロンが反応するって言ってたが……",
+    "China_Simplified": "克莉丝提娜中尉明明说过，\\n一提炸猪排埃普西隆就会来劲的……",
+    "China_Traditional": "克莉絲提娜中尉明明說過，\\n要是提到那什麼炸豬排，艾普西隆就會有反應……"
+  },
+  {
+    "ID": "CF06C07000S_005",
+    "Korean": "역시 <Color=#FFBF00>평화적으로</Color>는 어려운 건가……?",
+    "English": "So I guess the <Color=#FFBF00>peaceful</Color> approach won't work after all...",
+    "Japanese": "やはり<Color=#FFBF00>平和的</Color>にことを運ぶのは難しいか……?",
+    "China_Simplified": "果然还是没法<Color=#FFBF00>和平解决</Color>吗……？",
+    "China_Traditional": "果然還是無法<Color=#FFBF00>和平</Color>解決嗎……？"
+  },
+  {
+    "ID": "CF06C07000S_006",
+    "Korean": "……마스터, 왜 총을 장전하시는 겁니까?",
+    "English": "...Master, why are you loading your weapon?",
+    "Japanese": "……マスター、なぜ銃を装填しているのデスカ?",
+    "China_Simplified": "……主人，您为什么给枪上膛？",
+    "China_Traditional": "……主人，為什麼要裝填子彈？"
+  },
+  {
+    "ID": "CF06C07000S_007",
+    "Korean": "지금 당장 그 부당한 위협 행위를 멈춰 주십시오, 마스터.\\n돈까스를 모른다는 이유로 총까지 쏘는 건 너무하지 않습니까?",
+    "English": "Please cease this unjust threat immediately, Master.\\nIsn't pulling a gun just because I don't know what tonkatsu is a bit much?",
+    "Japanese": "その不当な威嚇行為は即刻中止するべきデス、マスター。\\nトンカツを知らないという理由で発砲するのは、あまりにも理不尽ではありませんカ?",
+    "China_Simplified": "请您立刻停止这种不当的威胁行为，主人。\\n就因为不知道炸猪排就开枪，这也太过分了吧？",
+    "China_Traditional": "請立即停止這種不當的威脅行為，主人。\\n只因為不知道炸豬排就動用槍械，這不是太過分了嗎？"
+  },
+  {
+    "ID": "CF06C07000S_008",
+    "Korean": "물론 알고 있습니다!\\n지구인들이 가져온 튀김 요리 아닙니까!?",
+    "English": "Of course I know!\\nIt's a fried dish brought over by Earthlings, isn't it!?",
+    "Japanese": "もちろんトンカツを知っていマス!\\n地球人が持ち込んだ揚げ物料理ではありませんカ!?",
+    "China_Simplified": "我当然知道！\\n不就是地球人带来的油炸食品吗！？",
+    "China_Traditional": "我當然知道！\\n不就是地球人帶來的油炸料理嗎！？"
+  },
+  {
+    "ID": "CF06C07000S_009",
+    "Korean": "<Color=#50bcdf><size=20>(※본 화상은 이해를 돕기 위한 가상의 이미지입니다.)</size></Color>\\n분명 돼지, 라는 지구의 가축 품종을 메르샤에 구현해……",
+    "English": "<Color=#50bcdf><size=20>(*This image is for illustrative purposes only.)</size></Color>\\nIt's made by recreating a livestock species from Earth called a \"pig\" here in Mirsha...",
+    "Japanese": "<Color=#50bcdf><size=20>(※本画像は理解を助けるためのイメージデス)</size></Color>\\n確かブタという地球の家畜をメルシャに再現し……",
+    "China_Simplified": "<Color=#50bcdf><size=20>（※本图片为帮助理解的虚拟图片。）</size></Color>\\n明明在弥乐沙成功培育了“猪”这种地球家畜品种……",
+    "China_Traditional": "<Color=#50bcdf><size=20>（※本畫像為示意用虛擬影像。）</size></Color>\\n將被稱為豬的地球家畜品種帶到美洛沙……"
+  },
+  {
+    "ID": "CF06C07000S_010",
+    "Korean": "<Color=#50bcdf><size=20>(※본 화상은 이해를 돕기 위한 가상의 이미지입니다.)</size></Color>\\n그 고기를 튀겨 새콤달콤한 소스를 끼얹은……",
+    "English": "<Color=#50bcdf><size=20>(*This image is for illustrative purposes only.)</size></Color>\\nThen deep-frying the meat and covering it in a sweet and tangy sauce...",
+    "Japanese": "<Color=#50bcdf><size=20>(※本画像は理解を助けるためのイメージデス)</size></Color>\\nそれを揚げて甘酸っぱいソースをかけた……",
+    "China_Simplified": "<Color=#50bcdf><size=20>（※本图片为帮助理解的虚拟图片。）</size></Color>\\n将猪肉油炸，再淋上酸甜酱汁……",
+    "China_Traditional": "<Color=#50bcdf><size=20>（※本畫像為示意用虛擬影像。）</size></Color>\\n油炸那種肉後，淋上酸甜醬汁的……"
+  },
+  {
+    "ID": "CF06C07000S_011",
+    "Korean": "그 도박광 엘프의 카지노에서만 먹을 수 있는,\\n없어서 못 먹는 환상의 요리라고 하도 홍보를 하기에……",
+    "English": "It's that legendary dish said to be available only at that gambling elf's casino—\\nso hyped up that it's impossible to actually get a bite...",
+    "Japanese": "あのギャンブル狂エルフのカジノでしか食べられない、\\n入手困難な幻の料理と聞いていマス。",
+    "China_Simplified": "那家赌场拼命宣传说，\\n是只有那个嗜赌如命的精灵开的赌场才能吃到的、千金难求的梦幻料理……",
+    "China_Traditional": "因其大肆宣傳，說是那位博徒精靈的賭場\\n才吃得到、供不應求的夢幻料理……"
+  },
+  {
+    "ID": "CF06C07000S_012",
+    "Korean": "삼 일 밤낮 줄 서서 결국 못 먹은 기억이 있습니다.\\n그런데 그게 왜……",
+    "English": "I even stood in line for three days and nights and still couldn't try it.\\nBut why are you bringing it up...?",
+    "Japanese": "三日三晩並んだ末に結局食べられなかった記憶がありマス。\\nですが、なぜ今トンカツの話を……?",
+    "China_Simplified": "我还记得自己排了三天三夜的队，最后也没吃上。\\n可现在提这个做什么……",
+    "China_Traditional": "我記得我排了三天三夜結果還是沒吃到。\\n不過那又怎麼了……"
+  },
+  {
+    "ID": "CF06C07000S_013",
+    "Korean": "……카지노?",
+    "English": "...Casino?",
+    "Japanese": "……カジノ?",
+    "China_Simplified": "……赌场？",
+    "China_Traditional": "……賭場？"
+  },
+  {
+    "ID": "CF06C07000S_014",
+    "Korean": "엑, 아니, 그, 저기……",
+    "English": "Uh—no, I mean—well...",
+    "Japanese": "え、あ、そ、その……",
+    "China_Simplified": "啊，不是，那个，这个……",
+    "China_Traditional": "欸，不是，那、那個……"
+  },
+  {
+    "ID": "CF06C07000S_015",
+    "Korean": "……<Color=#50bcdf>안티매터 잔량을 모두 소진하였습니다.</Color>\\n<Color=#50bcdf>시스템 절전 모드로 전환합니다.</Color>",
+    "English": "...<Color=#50bcdf>Antimatter reserves depleted.</Color>\\n<Color=#50bcdf>Switching to low-power mode.</Color>",
+    "Japanese": "……<Color=#50bcdf>アンチマター残量をすべて消費しまシタ。</Color>\\n<Color=#50bcdf>システムを省電力モードへ移行しマス。</Color>",
+    "China_Simplified": "……<Color=#50bcdf>反物质已耗尽。</Color>\\n<Color=#50bcdf>系统进入省电模式。</Color>",
+    "China_Traditional": "……<Color=#50bcdf>反物質殘量已耗盡。</Color>\\n<Color=#50bcdf>系統轉入省電模式。</Color>"
+  },
+  {
+    "ID": "CF06C07000S_016",
+    "Korean": "<size=40>아야!</size>",
+    "English": "<size=40>Ow!</size>",
+    "Japanese": "<size=40>痛いデス!</size>",
+    "China_Simplified": "<size=40>啊呀！？</size>",
+    "China_Traditional": "<size=40>哎呀！</size>"
+  },
+  {
+    "ID": "CF06C07000S_017",
+    "Korean": "무, 물론 카지노를 간 것은 시찰을 위해서입니다.\\n본 개체를 믿지 못하시는 겁니까, 마스터!?",
+    "English": "O-Of course, I only went to the casino for inspection purposes.\\nYou don't doubt me, do you, Master!?",
+    "Japanese": "も、もちろんカジノに行ったのは視察のためデス。\\nワタシを疑うのデスカ、マスター!?",
+    "China_Simplified": "当、当然是为了视察才去的！\\n您连本个体都不相信吗，主人！？",
+    "China_Traditional": "當、當然去賭場是為了視察。\\n主人難道不相信本個體嗎！？"
+  },
+  {
+    "ID": "CF06C07000S_018",
+    "Korean": "너를 믿느니 차라리 알파 재상을 믿도록 하지.",
+    "English": "I'd sooner trust Premier Alpha than you.",
+    "Japanese": "お前を信じるくらいならアルファ宰相を信じる。",
+    "China_Simplified": "信你？我还不如信阿尔法宰相呢。",
+    "China_Traditional": "與其相信你，我還不如相信阿爾法宰相。"
+  },
+  {
+    "ID": "CF06C07000S_019",
+    "Korean": "너무합니다! 본 개체는 방금 발언으로,\\n섬세한 연산회로에 치명적인 손상을 입었습니다!",
+    "English": "That's harsh! That statement just caused\\ncritical damage to my delicate processing circuits!",
+    "Japanese": "ひどいデス! ワタシは今の発言で\\n繊細な演算回路に重大な損傷を負いまシタ!",
+    "China_Simplified": "太过分了！您刚才那句话，\\n对本个体的精密演算回路造成了致命打击！",
+    "China_Traditional": "太過分了！本個體因為剛才的發言，\\n細緻的運算迴路遭受了致命的損傷！"
+  },
+  {
+    "ID": "CF06C07000S_020",
+    "Korean": "알면 좀, 욕먹을 짓을 하지 말도록.",
+    "English": "Then maybe try not to do things that deserve criticism.",
+    "Japanese": "嫌なら、叩かれるような真似はするな。",
+    "China_Simplified": "知道就好，以后少做欠骂的事。",
+    "China_Traditional": "知道的話就別做那些會被罵的事。"
+  },
+  {
+    "ID": "CF06C07000S_021",
+    "Korean": "……하여튼, 알기는 안다는 뜻이군?",
+    "English": "...Anyway, so you do know what it is.",
+    "Japanese": "……まあいい、知ってはいるんだな?",
+    "China_Simplified": "……总之，你意思是你知道炸猪排，对吧？",
+    "China_Traditional": "……總之，你是知道的意思囉？"
+  },
+  {
+    "ID": "CF06C07000S_022",
+    "Korean": "그렇긴 합니다만…… 의외입니다?\\n마스터가 음식, 그것도 지구의 것에 관심을 가지시다니요?",
+    "English": "I do, but... I'm surprised.\\nI didn't expect you to take an interest in food—especially Earth food, Master.",
+    "Japanese": "そうではありマスが……意外デスネ?\\nマスターが食事、それも地球のものに興味を持つトハ。",
+    "China_Simplified": "是知道没错……不过真意外啊。\\n主人居然会对食物——而且还是地球的食物感兴趣？",
+    "China_Traditional": "是這樣沒錯……但真意外呢？\\n主人竟然會對食物，而且還是地球的東西感興趣？"
+  },
+  {
+    "ID": "CF06C07000S_023",
+    "Korean": "본 개체는 마스터가 삼시세끼 단백질 블록만 섭취하는,\\n미각의 생물학적 가치에 대한 모독 그 자체라고 생각했습니다.",
+    "English": "This unit assumed you subsisted on nothing but protein blocks for all three meals,\\na complete insult to the biological value of taste.",
+    "Japanese": "ワタシはマスターが三食すべてタンパク質ブロックで済ませる、\\n味覚の生物学的価値を否定する存在だと認識していまシタ。",
+    "China_Simplified": "本个体一直以为，主人一日三餐只吃蛋白质块，\\n简直是对味觉这一生物学价值的彻底亵渎。",
+    "China_Traditional": "本個體一直以為主人是那種三餐只吃蛋白質塊、\\n對味覺的生物學價值充滿侮辱的存在。"
+  },
+  {
+    "ID": "CF06C07000S_024",
+    "Korean": "……로봇 주제에, 인간인 나를 대체 뭐라고 생각하는 거냐.\\n나도 그저, 조국의 사정을 생각해 식욕을 절제하고 있을 뿐이다.",
+    "English": "...For a machine, you sure have a lot to say about a human.\\nI simply restrain my appetite for the sake of my country.",
+    "Japanese": "……ロボットの分際で、人間の私をどう見ているんだ。\\n私だって事情があって食欲を抑えているだけだ。",
+    "China_Simplified": "……区区一个机器人，把身为人类的我当什么了。\\n我只是在为祖国考虑，克制食欲而已。",
+    "China_Traditional": "……區區機器人，到底是把身為人類的我當成什麼了。\\n我也只是考慮到國家的情況，在節制食慾而已。"
+  },
+  {
+    "ID": "CF06C07000S_025",
+    "Korean": "물론 지금의 단백질 블록은 맛도 영양소도\\n계량할 필요 없는 완전식품이라 생각은 한다만……",
+    "English": "Of course, I do consider protein blocks to be a perfectly balanced food\\nthat requires no measurement of taste or nutrients...",
+    "Japanese": "今のタンパク質ブロックは味も栄養も\\n計算不要の完全食だとは思っているが……",
+    "China_Simplified": "当然，我也觉得现在的蛋白质块无论味道还是营养，\\n都是无可挑剔的完美食品……",
+    "China_Traditional": "雖然我確實認為現在的蛋白質塊\\n是口味與營養都無須計量的完全食品……"
+  },
+  {
+    "ID": "CF06C07000S_026",
+    "Korean": "……그런 점이, 미각에 대한 모독이라고 하는 겁니다.",
+    "English": "...And that's exactly what makes it an insult to taste.",
+    "Japanese": "……その点こそが味覚への冒涜だと言っているのデス。",
+    "China_Simplified": "……正是这一点，才叫对味觉的亵渎。",
+    "China_Traditional": "……那種言論，就是對味覺的侮辱。"
+  },
+  {
+    "ID": "CF06C07000S_027",
+    "Korean": "하여튼, 내가 이걸 너에게 물어보는 이유는……",
+    "English": "Anyway, the reason I'm asking you this is...",
+    "Japanese": "まあいい。私が質問した理由だが……",
+    "China_Simplified": "总之，我问你这个的原因……",
+    "China_Traditional": "總之，我問你這個的原因是……"
+  },
+  {
+    "ID": "CF06C07000S_028",
+    "Korean": "그건, 엡실론……",
+    "English": "That's because, Epsilon...",
+    "Japanese": "イプシロン。",
+    "China_Simplified": "那个，埃普西隆啊……",
+    "China_Traditional": "就是，艾普西隆……"
+  },
+  {
+    "ID": "CF06C07000S_029",
+    "Korean": "<size=40>너와, 꼭 가고 싶은 돈까스 맛집이 있기 때문이다!</size>",
+    "English": "<size=40>There's a tonkatsu place I very much want to visit with you!</size>",
+    "Japanese": "<size=40>お前と行きたいトンカツ屋があるからだ!</size>",
+    "China_Simplified": "<size=40>有家超好吃的炸猪排店，我特别想带你去！</size>",
+    "China_Traditional": "<size=40>有間一定要跟你一起去的炸豬排美食店！</size>"
+  },
+  {
+    "ID": "CF06C07000S_030",
+    "Korean": "해독 불가능한 미지의 언어를 감지.\\n데이터베이스에서 설치되지 않은 언어 팩을 검색합니다.",
+    "English": "Unknown language detected.\\nSearching for an uninstalled language pack in the database.",
+    "Japanese": "解読不能の未知の言語を検出。\\nデータベースから未インストールの言語パックを検索しマス。",
+    "China_Simplified": "检测到无法解析的未知语言。\\n正在数据库中检索缺失的语言包。",
+    "China_Traditional": "偵測到無法解讀的未知語言。\\n在資料庫中搜尋未安裝的語言包。"
+  },
+  {
+    "ID": "CF06C07000S_031",
+    "Korean": "……그러니까, 너와 같이 가고 싶은 식당이 있다는 거다!\\n그간의 노고도 위로할 겸, 그리고 그, 으음……",
+    "English": "...I mean, there's a restaurant I want to go to with you!\\nAs a reward for all your hard work, and, well... um...",
+    "Japanese": "……つまり、お前と一緒に行きたい店があるってことだ!\\nこれまでの働きの慰労も兼ねて、その……うむ……",
+    "China_Simplified": "……就是说，我想和你一起去一家餐厅！\\n就当犒劳你最近的辛苦，还有那个，唔……",
+    "China_Traditional": "……也就是說，我有間想跟你一起去的餐廳啦！\\n既是為了慰勞你這陣子的辛勞，還有那個，嗯……"
+  },
+  {
+    "ID": "CF06C07000S_032",
+    "Korean": "젠장! 내가 대체 왜 이런,\\n마음에도 없는 말까지 하면서 저 녀석을 설득해야……",
+    "English": "Damn it! Why do I have to go this far\\nsaying things I do not even mean just to persuade her...",
+    "Japanese": "くそっ! なぜ私はこんな、\\n心にもないことまで言ってこいつを説得しているんだ……",
+    "China_Simplified": "该死！我到底为什么要说这些\\n违心的话来哄这家伙……",
+    "China_Traditional": "可惡！我為什麼非得說\\n這種違心的話來說服這傢伙……"
+  },
+  {
+    "ID": "CF06C07000S_033",
+    "Korean": "마스터의 고조되는 감정 상태를 확인.\\n…………스테이터스 : 두근♥",
+    "English": "Detecting elevated emotional state in Master.\\n...Status: Thump♥",
+    "Japanese": "マスターの感情上昇を確認。\\n…………ステータス: ドキドキ♥",
+    "China_Simplified": "检测到主人情绪波动加剧。\\n…………状态：小鹿乱撞♥",
+    "China_Traditional": "確認主人高漲的情緒狀態。\\n…………狀態：心動♥"
+  },
+  {
+    "ID": "CF06C07000S_034",
+    "Korean": "에이, 뭡니까~\\n그런 거면 솔직하게 명령하셔도 되었을 텐데요.",
+    "English": "Oh, come on!\\nIf that's what you wanted, you could've just said it honestly.",
+    "Japanese": "もう～\\nそういうことなら最初から命令すればよかったのではありませんカ。",
+    "China_Simplified": "哎呀，真是的~\\n想约我就直说嘛，直接下命令不就好了。",
+    "China_Traditional": "唉唷，什麼嘛～\\n如果是那樣的話，直接誠實地下令就好了呀。"
+  },
+  {
+    "ID": "CF06C07000S_035",
+    "Korean": "데이터베이스에서 음흉한 웃음소리를 재생.\\n으흐흐흐. 아주 좋습니다, 마스터. 드디어 솔직해지셨군요?",
+    "English": "Playing mischievous laughter from database.\\nHeh heh heh. Very nice, Master. Finally being honest, are we?",
+    "Japanese": "データベースより不穏な笑い声を再生。\\nククク……実に良いデス、マスター。ついに素直になりまシタネ?",
+    "China_Simplified": "正在播放数据库中的阴险笑声。\\n嘻嘻嘻嘻。非常好，主人。您终于肯说实话了？",
+    "China_Traditional": "播放資料庫中的陰險笑聲。\\n呵呵呵呵。非常好，主人。您終於變得誠實了呢？"
+  },
+  {
+    "ID": "CF06C07000S_036",
+    "Korean": "마스터의 노력을 봐서 오늘만 특·별·히 데이트를 해드리겠습니다.",
+    "English": "In recognition of your effort, I will specially grant you a date today.",
+    "Japanese": "マスターの頑張りを買って、本日限定で特・別・にデートして差し上げマス。",
+    "China_Simplified": "看在主人这么卖力的份上，今天就特、别、地陪您去吧。",
+    "China_Traditional": "看在主人這麼努力的份上，今天就特．別陪您約會吧。"
+  },
+  {
+    "ID": "CF06C07000S_037",
+    "Korean": "영광으로 아십시오. 이래뵈도 본 개체는,\\n이엑스플로에서 신부로 삼고 싶은 자동인형 1위입니다.",
+    "English": "You should feel honored. After all,\\nI rank number one in Ful.Mi.NATION among automatons people would most like to marry.",
+    "Japanese": "光栄に思うといいデス。こう見えてワタシは\\nイエクスプローで花嫁にしたいオートマタ第1位デス。",
+    "China_Simplified": "您该感到荣幸。别看我这样，本个体可是伊克斯普洛\\n年度最想娶回家的机械人偶排行榜冠军。",
+    "China_Traditional": "這是您的榮幸。本個體在伊克斯普洛\\n可是想娶回家的自動人偶第一名呢。"
+  },
+  {
+    "ID": "CF06C07000S_038",
+    "Korean": "이엑스플로에 자동인형은 네 녀석 하나뿐이라는……\\n……나쁜 말은 하면 안 되겠지, 크흠.",
+    "English": "There's only one automaton in Ful.Mi.NATION anyway—\\n...Never mind, I shouldn't say that. Ahem.",
+    "Japanese": "イエクスプローにオートマタはお前一体しか……\\n……余計なことは言わない方がいいな、コホン。",
+    "China_Simplified": "伊克斯普洛的机械人偶不就你一个吗……\\n……不能说扫兴的话，咳咳。",
+    "China_Traditional": "伊克斯普洛裡的自動人偶明明就只有你一個……\\n……還是別說難聽話比較好，咳咳。"
+  },
+  {
+    "ID": "CF06C07000S_039",
+    "Korean": "……뭐, 좋다. 이해했다고 하면 다행이군.",
+    "English": "...Fine. As long as you understand, that's enough.",
+    "Japanese": "……まあいい、理解したならそれでいい。",
+    "China_Simplified": "……算了，好吧。你能明白就好。",
+    "China_Traditional": "……好吧。你能理解就好。"
+  },
+  {
+    "ID": "CF06C07000S_040",
+    "Korean": "그럼 얼른 준비해라.\\n<Color=#FFBF00>한시가 급하니까</Color> 말이지.",
+    "English": "Then get ready.\\n<Color=#FFBF00>We don't have time to waste</Color>.",
+    "Japanese": "さっさと準備しろ。\\n<Color=#FFBF00>時間がない</Color>からな。",
+    "China_Simplified": "那就快去准备。\\n毕竟<Color=#FFBF00>时间紧迫</Color>嘛。",
+    "China_Traditional": "那就趕快準備吧。\\n<Color=#FFBF00>因為時間很趕</Color>。"
+  },
+  {
+    "ID": "CF06C07000S_041",
+    "Korean": "정말 마스터의 인격 모듈이 급한건 알아줘야합니다.\\n서두른다고 돈까스가 사라지거나 그러지 않는데……",
+    "English": "You really ought to acknowledge how urgently your personality module needs attention, Master.\\nIt's not like the tonkatsu is going to disappear if we take our time...",
+    "Japanese": "本当に、マスターの人格モジュールは緊急性の判断を見直すべきデス。\\n急がなければトンカツが消えるわけではないのデスガ……",
+    "China_Simplified": "主人的人格模块真是个急性子。\\n炸猪排又不会因为您着急就卖光……",
+    "China_Traditional": "主人的人格模組急躁這點真的是沒救了。\\n炸豬排又不會因為您趕時間就消失……"
+  },
+  {
+    "ID": "CF06C07000S_042",
+    "Korean": "안녕, 엡실론. 오늘은 내가 돈까스 요리사야.",
+    "English": "Hello, Epsilon. Today, I'm your tonkatsu chef.",
+    "Japanese": "やあ、イプシロン。今日はあたしがトンカツ担当だよ。",
+    "China_Simplified": "你好啊，埃普西隆。今天我是炸猪排厨师。",
+    "China_Traditional": "你好，艾普西隆。今天我是炸豬排主廚。"
+  },
+  {
+    "ID": "CF06C07000S_043",
+    "Korean": "알파 재상이 만든 기술을 적용하기 싫다고,\\n난동을 부리며 실험실을 부수고 도망친 뒤로, 한 달이나 지났나?",
+    "English": "Has it already been a month since you caused a scene,\\nsmashed up the lab, and ran away just because you didn't want to use Premier Alpha's technology?",
+    "Japanese": "イプシロンが、アルファ宰相の技術を拒否して\\n暴れて研究室を壊して逃げてから、もう1か月くらい経ったかな?",
+    "China_Simplified": "自从你拒绝接受阿尔法宰相的技术，\\n大闹一场砸了实验室逃走之后，已经过了一个月了吧？",
+    "China_Traditional": "因為不想套用阿爾法宰相研發的技術，\\n大吵大鬧著拆了實驗室逃跑後，已經過了一個月了嗎？"
+  },
+  {
+    "ID": "CF06C07000S_044",
+    "Korean": "그래서 이번엔, 만반의 준비를 하고 널 기다리고 있었어.",
+    "English": "So this time, I've come fully prepared and have been waiting for you.",
+    "Japanese": "だから今回は万全の準備をして待ってたんだ。",
+    "China_Simplified": "所以这次，我做好了万全的准备，就等你来。",
+    "China_Traditional": "所以這次，我做好了萬全準備等著你。"
+  },
+  {
+    "ID": "CF06C07000S_045",
+    "Korean": "한번 활성화 된 융합형 코어는, 시간이 지날수록 성능이 떨어니까.\\n오늘까지는 반드시 너에게 이걸 이식해야할 필요가 있었거든.",
+    "English": "Once activated, a Fusion-Type Core's performance gradually declines over time.\\nSo we needed to implant this into you today, no matter what.",
+    "Japanese": "一度起動したフュージョン型コアは時間が経つほど性能が落ちる。\\n今日中に君にこれを移植する必要があったんだよ。",
+    "China_Simplified": "融合型核心一旦激活，性能就会随时间衰减。\\n所以我必须在今天之内把它移植给你。",
+    "China_Traditional": "一旦活化的融合型核心，時間拖越久性能就越是下降。\\n我必須在今天之內幫你完成移植。"
+  },
+  {
+    "ID": "CF06C07000S_046",
+    "Korean": "마, 마스터……?\\n이게 대체 어떻게 된 일입니까?",
+    "English": "M-Master...?\\nWhat exactly is going on here?",
+    "Japanese": "マ、マスター……?\\nこれは一体どういう状況デスカ?",
+    "China_Simplified": "主、主人……？\\n这到底是怎么回事？",
+    "China_Traditional": "主、主人……？\\n這是怎麼回事？"
+  },
+  {
+    "ID": "CF06C07000S_047",
+    "Korean": "……그렇게 됐다, 엡실론.\\n아무리 찾아도 융합형 코어에 적합한 자가 없어서 말이야.",
+    "English": "...It had to be done, Epsilon.\\nNo matter how hard we looked, we couldn't find anyone else suitable for the Fusion-Type Core.",
+    "Japanese": "……そういうことだ、イプシロン。\\nどれだけ探してもフュージョン型コアの適合者が見つからなくてな。",
+    "China_Simplified": "……如你所见，埃普西隆。\\n因为无论如何都找不到适合融合型核心的人。",
+    "China_Traditional": "……事情就是這樣，艾普西隆。\\n怎麼找都找不到適合融合型核心的人選。"
+  },
+  {
+    "ID": "CF06C07000S_048",
+    "Korean": "이 실험이 끝나면,\\n그 돈까스인지 뭔지는 원 없이 먹게 해주지.",
+    "English": "Once this experiment is over,\\nI'll let you eat as much of that tonkatsu as you want.",
+    "Japanese": "この実験が終わったら、\\nトンカツでも何でも好きなだけ食わせてやる。",
+    "China_Simplified": "等这个实验结束，\\n不管是炸猪排，还是别的什么，都让你吃个痛快。",
+    "China_Traditional": "等這項實驗結束後，\\n炸豬排什麼的我會讓你吃到膩為止。"
+  },
+  {
+    "ID": "CF06C07001S_001",
+    "Korean": "실험은 성공적이네.",
+    "English": "The experiment was a success.",
+    "Japanese": "実験は成功だね。",
+    "China_Simplified": "实验很成功呢。",
+    "China_Traditional": "實驗很成功。"
+  },
+  {
+    "ID": "CF06C07001S_002",
+    "Korean": "융합형 코어가 안정적으로 동체에 안착했어.\\n그것이 앞으로 너의 메인 코어를 대체할 거야.",
+    "English": "The Fusion-Type Core has stabilized and fully integrated into your frame.\\nFrom now on, it'll replace your main core.",
+    "Japanese": "フュージョン型コアは安定して定着した。\\nこれからはそれがメインコアになる。",
+    "China_Simplified": "融合型核心已经稳定嵌入你的机体。\\n从今往后，它会取代你的主核心。",
+    "China_Traditional": "融合型核心穩定地安放在機體內了。\\n它以後會取代你的主核心。"
+  },
+  {
+    "ID": "CF06C07001S_003",
+    "Korean": "카탈로그 스펙의 50%까지 연산력이 상승한 것을 확인.\\n안티매터 효율 상승으로, 직전 버전 대비 작전 수행 시간이 획기적으로 증가.",
+    "English": "Processing power confirmed to have increased to 50% of catalog specs.\\nWith improved antimatter efficiency, operational time has increased dramatically compared to the previous version.",
+    "Japanese": "カタログスペックの50%まで演算能力の向上を確認。\\nアンチマター効率の上昇により作戦時間も大幅に増加していマス。",
+    "China_Simplified": "演算力已提升至机体规格的50%。\\n反物质利用率提高，作战时长较之前版本大幅延长。",
+    "China_Traditional": "確認運算力提升至規格的50%。\\n由於反物質效率提升，作戰執行時間較前一版本大幅增加。"
+  },
+  {
+    "ID": "CF06C07001S_004",
+    "Korean": "날 믿으라고 했잖아, 엡실론.",
+    "English": "I told you to trust me, Epsilon.",
+    "Japanese": "悪いことにはならなかったでしょ、イプシロン。",
+    "China_Simplified": "我说过让你相信我吧，埃普西隆。",
+    "China_Traditional": "我說過要相信我的吧，艾普西隆。"
+  },
+  {
+    "ID": "CF06C07001S_005",
+    "Korean": "알파 같은 소리 하지 마십시오, 개체명 카렌.\\n온 세상이 본 개체를 속이는데, 대체 누굴 믿습니까.",
+    "English": "Unit Caren, don't start sounding like Alpha.\\nWhen the whole world's out to deceive me, who exactly am I supposed to trust?",
+    "Japanese": "アルファの言葉など信用できまセン、個体名カレン。\\n全世界がワタシを欺いている状況で、誰を信じろというのデスカ。",
+    "China_Simplified": "别说这种跟阿尔法一样的话，个体名卡伦。\\n全世界都在骗本个体，本个体还能信谁？",
+    "China_Traditional": "請別說阿爾法會說的那種話，個體名凱倫。\\n全世界都在騙本個體，我到底該相信誰？"
+  },
+  {
+    "ID": "CF06C07001S_006",
+    "Korean": "마스터. 한 가지 묻고 싶은 게 있습니다만……\\n본 개체를 돈까스로 꿰어낼 수 있다고 말한 자는 대체 누구입니까?",
+    "English": "Master, there's something I'd like to ask...\\nWho exactly told you that tonkatsu would work on me?",
+    "Japanese": "マスター、1つ質問がありマス。\\nワタシをトンカツで釣れると言ったのは誰デスカ?",
+    "China_Simplified": "主人，本个体有个问题……\\n那个说用炸猪排就能钓到本个体的人，到底是谁？",
+    "China_Traditional": "主人，本個體有一件事想問……\\n到底是誰說能用炸豬排釣到本個體的？"
+  },
+  {
+    "ID": "CF06C07001S_007",
+    "Korean": "그 얄팍하고 빈약한 내용하며, 묘하게 본 개체를 낮잡아보는……\\n도저히 마스터의 사고방식으로는 나올 수 없는 계략입니다.",
+    "English": "That shallow, flimsy idea, and the way it subtly looks down on me...\\nThere's no way that plan came from you, Master.",
+    "Japanese": "あの浅薄で粗雑な、妙にワタシを見下しているかのような……\\nマスターの思考から導き出されるとは到底思えまセン。",
+    "China_Simplified": "那破绽百出的计划，还透着股瞧不起本个体的劲儿……\\n这馊主意绝对不可能是主人想出来的。",
+    "China_Traditional": "那種內容膚淺、貧乏，又微妙地看扁本個體的……\\n絕對不是主人的思考方式能想出的策略。"
+  },
+  {
+    "ID": "CF06C07001S_008",
+    "Korean": "……크리스티나 중위다.\\n사치의 끝인 돈까스라면, 반드시 낚일 거라고 말이지.",
+    "English": "...Lieutenant Christina.\\nShe said something as extravagant as tonkatsu would definitely hook you.",
+    "Japanese": "……クリスティーナ中尉だ。\\nトンカツなら確実に釣れると言っていた。",
+    "China_Simplified": "……是克莉丝提娜中尉。\\n她说用炸猪排这种终极奢侈的东西，肯定能钓到你。",
+    "China_Traditional": "……是克莉絲提娜中尉。\\n她說如果是那種極致奢華的炸豬排，你一定會上鉤。"
+  },
+  {
+    "ID": "CF06C07001S_009",
+    "Korean": "그 고깃덩어리, 감히 본 개체를 초등학생 취급했겠다?\\n관저로 돌아가면 곧바로 튀겨버리겠습니다!",
+    "English": "That meatbag really had the nerve to treat me like a child?\\nThe moment we get back to the residence, I'm frying her!",
+    "Japanese": "あの肉塊……ワタシを子供扱いしたのデスカ?\\n戻ったら即座に揚げてやりマス!",
+    "China_Simplified": "那个肉团子，居然敢把本个体当小学生哄？\\n等本个体回总部就把她给炸了！",
+    "China_Traditional": "那個肉塊，竟敢把本個體當成小學生看待？\\n回官邸後我馬上把她炸了！"
+  },
+  {
+    "ID": "CF06C07001S_010",
+    "Korean": "……낚인 주제에 말이 많군.",
+    "English": "...Says the one who took the bait.",
+    "Japanese": "……釣られた側がよく言えたな。",
+    "China_Simplified": "……被钓到了还这么多话。",
+    "China_Traditional": "……上鉤的人沒資格說話。"
+  },
+  {
+    "ID": "CF06C07001S_011",
+    "Korean": "<size=30>본 개체는 그깟 사치스러운 튀김이 아니라,</size>\\n<size=30>마스터의 플러팅에 넘어간 겁니다!</size>",
+    "English": "<size=30>I didn't fall for some cheap fried food—</size>\\n<size=30>I fell for your flirting, Master!</size>",
+    "Japanese": "<size=30>ワタシはあんな低俗な揚げ物ではなく、</size>\\n<size=30>マスターの誘いに応じただけデス!</size>",
+    "China_Simplified": "<size=30>本个体才不是被那种奢侈的油炸食品骗的，</size>\\n<size=30>是被主人的花言巧语给骗了！</size>",
+    "China_Traditional": "<size=30>本個體才不是被區區奢侈的炸物吸引，</size>\\n<size=30>而是被主人的撩人手段給騙了！</size>"
+  },
+  {
+    "ID": "CF06C07001S_012",
+    "Korean": "……그래, 알았다.",
+    "English": "...Yeah, sure.",
+    "Japanese": "……ああ、わかった。",
+    "China_Simplified": "……行，知道了。",
+    "China_Traditional": "……好，知道了。"
+  },
+  {
+    "ID": "CF06C07001S_013",
+    "Korean": "그나저나, 엡실론.\\n무언가 <Color=#FFBF00>달라진</Color> 것은 느껴지지 않아?",
+    "English": "By the way, Epsilon.\\nDon't you feel like something's <Color=#FFBF00>different</Color>?",
+    "Japanese": "ところでイプシロン。\\n何か<Color=#FFBF00>変化</Color>を感じない?",
+    "China_Simplified": "对了，埃普西隆。\\n你有没有觉得哪里<Color=#FFBF00>不一样</Color>了？",
+    "China_Traditional": "話說回來，艾普西隆。\\n你有沒有感覺到什麼<Color=#FFBF00>改變</Color>？"
+  },
+  {
+    "ID": "CF06C07001S_014",
+    "Korean": "달라진……?",
+    "English": "Different...?",
+    "Japanese": "変化……?",
+    "China_Simplified": "不一样……？",
+    "China_Traditional": "改變……？"
+  },
+  {
+    "ID": "CF06C07001S_015",
+    "Korean": "개체명 카렌, 질문의 의도를 인식하지 못했습니다.\\n외형과 무장, 외의 것을 말씀하시는 겁니까? 아니면……",
+    "English": "Unit Caren, I do not understand the intent of your question.\\nAre you referring to something other than my appearance and armaments, or...",
+    "Japanese": "個体名カレン、質問の意図を理解できまセン。\\n外見や装備以外のことを指しているのデスカ? それとも……",
+    "China_Simplified": "个体名卡伦，本个体不明白你的意思。\\n你是指外表和武装之外的东西？还是说……",
+    "China_Traditional": "個體名凱倫，無法辨識提問意圖。\\n您是指外型和武裝以外的事嗎？還是……"
+  },
+  {
+    "ID": "CF06C07001S_016",
+    "Korean": "……………………크사이?",
+    "English": "...Ksai?",
+    "Japanese": "……………………ザイ?",
+    "China_Simplified": "……………………科赛？",
+    "China_Traditional": "……………………科賽？"
+  },
+  {
+    "ID": "CF06C07001S_017",
+    "Korean": "……눈치챘네.",
+    "English": "...You noticed.",
+    "Japanese": "……気づいたね。",
+    "China_Simplified": "……被你发现了啊。",
+    "China_Traditional": "……察覺到了呢。"
+  },
+  {
+    "ID": "CF06C07001S_018",
+    "Korean": "융합형 코어가 너에게 적용되는 과정에서,\\n놀랍게도 <Color=#FFBF00>크사이의 코어가 일정 부분 복구 되었어</Color>.",
+    "English": "During the process of integrating the Fusion-Type Core,\\n<Color=#FFBF00>a portion of Ksai's core was restored</Color>.",
+    "Japanese": "フュージョン型コアの適用過程で、\\n驚くべきことに<Color=#FFBF00>ザイのコアが一部修復された</Color>んだ。",
+    "China_Simplified": "在融合型核心与你适配的过程中，\\n没想到<Color=#FFBF00>科赛的核心竟然被修复了一部分</Color>。",
+    "China_Traditional": "融合型核心應用在你身上的過程中，\\n令人驚訝地是<Color=#FFBF00>科賽的核心得到了部分修復</Color>。"
+  },
+  {
+    "ID": "CF06C07001S_019",
+    "Korean": "하지만 복구된 크사이의 분석으로는,\\n지금의 낡은 동체가 두 개의 메인 코어를 감당할 수 없을 거라더군.",
+    "English": "But according to Ksai's analysis,\\nyour current frame can't handle two main cores.",
+    "Japanese": "だが修復されたザイの解析によると、\\n今の老朽化したボディではメインコアを2つ維持できないらしい。",
+    "China_Simplified": "但根据修复后的科赛的分析，\\n你这具旧机体无法承受两个主核心。",
+    "China_Traditional": "但根據修復後的科賽分析，\\n你現在這副老舊機體無法負擔兩顆主核心。"
+  },
+  {
+    "ID": "CF06C07001S_020",
+    "Korean": "그래서, 너의 동체에서 <Color=#FFBF00>크사이의 코어를 분리</Color>했다.\\n기껏 업그레이드까지 했는데, 네가 망가지는 건 본의가 아니니 말이지.",
+    "English": "So we <Color=#FFBF00>separated Ksai's core</Color> from your body.\\nWe just upgraded you, we're not about to let you break down.",
+    "Japanese": "だからお前のボディから<Color=#FFBF00>ザイのコアを分離</Color>した。\\nせっかく強化したのに壊れるのは困るからな。",
+    "China_Simplified": "所以我把<Color=#FFBF00>科赛的核心从你体内分离</Color>出来了。\\n好不容易才给你升级，总不能让你报废。",
+    "China_Traditional": "所以，我從你的機體中<Color=#FFBF00>分離了科賽的核心</Color>。\\n畢竟都升級了，我不希望你壞掉。"
+  },
+  {
+    "ID": "CF06C07001S_021",
+    "Korean": "그럼, 크사이는 어디에 있습니까?\\n설마 그 아이를 또 병기로 활용하실 생각은……",
+    "English": "Then where is Ksai?\\nDon't tell me you plan to use her as a weapon again...",
+    "Japanese": "では、ザイはどこにいるのデスカ?\\nまさかまた兵器として利用するつもりでは……",
+    "China_Simplified": "那科赛现在在哪儿？\\n您该不会又想把她当兵器使吧……",
+    "China_Traditional": "那麼，科賽在哪裡？\\n該不會又想把那孩子當成兵器利用吧……"
+  },
+  {
+    "ID": "CF06C07001S_022",
+    "Korean": "여러모로 일손이 부족다하만……\\n그런 짓을 하면, 네가 가만히 있겠나.",
+    "English": "We are short-handed in all sorts of ways...\\nbut if we did that, you wouldn't stay quiet, would you?",
+    "Japanese": "確かに人手は足りないが……\\nそんなことをしたら、お前が黙っていないだろう。",
+    "China_Simplified": "虽然到处都缺人手……\\n但我要真那么做，你能答应吗。",
+    "China_Traditional": "雖然到處都缺人手……\\n但如果我那麼做，你會坐視不管嗎？"
+  },
+  {
+    "ID": "CF06C07001S_023",
+    "Korean": "크사이는 지금 <Color=#FFBF00>새로운 동체</Color>를 만드는 중이다.\\n그녀가 재가동하기까지 얼마나 걸릴지는 모르지만……",
+    "English": "Ksai is currently being fitted into a <Color=#FFBF00>new body</Color>.\\nNo telling how long it'll take before she's fully operational, but...",
+    "Japanese": "ザイは今、<Color=#FFBF00>新しいボディ</Color>を作っている。\\n再起動までどれくらいかかるかはわからんが……",
+    "China_Simplified": "科赛现在正在打造<Color=#FFBF00>新机体</Color>。\\n虽然不知道她什么时候才能重新启动……",
+    "China_Traditional": "科賽現在正在製作<Color=#FFBF00>新機體</Color>。\\n雖然不知道她重新啟動需要多久……"
+  },
+  {
+    "ID": "CF06C07001S_024",
+    "Korean": "\"너와 재회할 날을 위해 힘내겠다.\"\\n……그렇게 전해달라는군.",
+    "English": "\"I'll do my best... for the day I can see you again.\"\\n...That's what she wanted me to tell you.",
+    "Japanese": "「お前と再会する日まで頑張る」\\nと伝えてほしいそうだ。",
+    "China_Simplified": "“为了能再见到你，我会加油的。”\\n……她让我带话给你。",
+    "China_Traditional": "她要我告訴你……\\n「為了與你重逢的那天，我會加油的。」"
+  },
+  {
+    "ID": "CF06C07001S_025",
+    "Korean": "……………………………………",
+    "English": "...",
+    "Japanese": "……………………………………",
+    "China_Simplified": "……………………………………",
+    "China_Traditional": "……………………………………"
+  },
+  {
+    "ID": "CF06C07001S_026",
+    "Korean": "촉새 같은 입이, 이럴 때는 조용하군.",
+    "English": "Huh. For once, you're quiet.",
+    "Japanese": "さっきまでうるさかったのに、こういう時は静かだな。",
+    "China_Simplified": "平时话那么多，这时候倒安静了。",
+    "China_Traditional": "那張麻雀似愛說話的嘴，這種時候倒是很安靜。"
+  },
+  {
+    "ID": "CF06C07001S_027",
+    "Korean": "……출력할 메시지를 데이터베이스에서 찾는 중입니다.\\n솔직히 이런 상황에선 무슨 발언을 해야 할지 모르겠습니다.",
+    "English": "...Searching database for an appropriate response.\\nHonestly, I'm not sure what I'm supposed to say in a situation like this.",
+    "Japanese": "……出力メッセージをデータベースから検索中デス。\\n正直、この状況で何を言うべきか判断できまセン。",
+    "China_Simplified": "……正在数据库中检索该输出的语句。\\n说实话，这种时候我真不知道该说什么好。",
+    "China_Traditional": "……正在資料庫搜尋要輸出的訊息。\\n坦白說，在這種情況下我不知道該說什麼。"
+  },
+  {
+    "ID": "CF06C07001S_028",
+    "Korean": "하지만…… 감사합니다, 마스터.\\n돈까스 따위보다 훨씬 값진 선물이었습니다.",
+    "English": "But... thank you, Master.\\nThis means far more than any tonkatsu ever could.",
+    "Japanese": "ですが……ありがとうございマス、マスター。\\nトンカツなどより遥かに価値のある贈り物デシタ。",
+    "China_Simplified": "不过……谢谢您，主人。\\n这比炸猪排什么的珍贵多了。",
+    "China_Traditional": "但是……謝謝你，主人。\\n這是比炸豬排珍貴得多的禮物。"
+  },
+  {
+    "ID": "CF06C07001S_029",
+    "Korean": "감사할 것 없다.\\n그저 우연의 산물이었을 뿐이니까.",
+    "English": "No need to thank me.\\nIt was just a coincidence.",
+    "Japanese": "礼は要らん。\\nただの結果に過ぎない。",
+    "China_Simplified": "不用谢我。\\n只不过是运气好而已。",
+    "China_Traditional": "不用謝。\\n那只是偶然的產物而已。"
+  },
+  {
+    "ID": "CF06C07001S_030",
+    "Korean": "……그나저나,\\n설마 융합형 코어가 자동인형에게도 효과가 있을 줄이야.",
+    "English": "...Still,\\nI didn't expect the Fusion-Type Core to work on an automaton too.",
+    "Japanese": "……それにしても、\\nフュージョン型コアがオートマタにも効果があるとはな。",
+    "China_Simplified": "……话说回来，\\n没想到融合型核心连机械人偶都能适配。",
+    "China_Traditional": "……話說回來，\\n沒想到融合型核心對自動人偶也有效果。"
+  },
+  {
+    "ID": "CF06C07001S_031",
+    "Korean": "알파 재상은 이것까지 예상한 건가?\\n그녀가 보내온 적합자 목록에 엡실론이 있는 걸 보고 의아해했는데.",
+    "English": "Did Premier Alpha anticipate even this?\\nI did wonder why Epsilon was on the compatibility list she sent.",
+    "Japanese": "アルファ宰相はここまで見越していたのか?\\n適合者リストにお前が入っていたのを不思議に思っていたが。",
+    "China_Simplified": "阿尔法宰相连这都算到了？\\n之前看到她给的适配者名单里有埃普西隆，我还纳闷呢。",
+    "China_Traditional": "阿爾法宰相連這點都預測到了嗎？\\n看到她送來的合適人選名單上有艾普西隆時我還很納悶。"
+  },
+  {
+    "ID": "CF06C07001S_032",
+    "Korean": "이론적으로는 무기물에도 작용하니까 말이야.\\n사용자의 장비나 의복을 변형시키는 것, 봤잖아?",
+    "English": "In theory, it works on inorganic matter too.\\nYou've seen how it alters the user's gear and clothing, right?",
+    "Japanese": "理論上は無機物にも作用するからね。\\nユーザーの装備や衣服が変化するのを見たでしょ?",
+    "China_Simplified": "因为理论上它对无机物也起作用。\\n你不是见过它改变使用者的装备和衣服吗？",
+    "China_Traditional": "理論上對無機物也會起作用。\\n你看過它改變使用者的裝備或衣服吧？"
+  },
+  {
+    "ID": "CF06C07001S_033",
+    "Korean": "다른 말로 바꾸자면,\\n이레귤러가 과학 유산에 기생할 수도 있다는 뜻 아닌가.",
+    "English": "In other words...\\ndoesn't that mean Irregulars could parasitize Scientific Inheritances as well?",
+    "Japanese": "言い換えれば、\\nイレギュラーが科学遺産に寄生する可能性もあるということか。",
+    "China_Simplified": "换句话说，\\n那异型怪岂不是也能寄生在科学遗产上？",
+    "China_Traditional": "換句話說，\\n這不代表異形怪也能寄生在科學遺產上嗎？"
+  },
+  {
+    "ID": "CF06C07001S_034",
+    "Korean": "네 말대로라면, 이 코어가 사용자를 변화시키는 방법은……\\n<Color=#FFBF00>이레귤러가 숙주를 변이시키는 과정</Color>과 매우 유사하니까.",
+    "English": "If that's the case, then the way this core alters its user... is very similar to\\n<Color=#FFBF00>how Irregulars mutate their hosts</Color>.",
+    "Japanese": "そうだとすれば、このコアの変化の仕組みは……\\n<Color=#FFBF00>イレギュラーが宿主を変異させる過程</Color>と極めて近い。",
+    "China_Simplified": "照你这么说，这个核心改变使用者的方式……\\n与<Color=#FFBF00>异型怪使宿主变异的过程</Color>很像啊。",
+    "China_Traditional": "照你所說，這核心改變使用者的方法……\\n<Color=#FFBF00>與異形怪變異宿主的過程</Color>非常相似。"
+  },
+  {
+    "ID": "CF06C07001S_035",
+    "Korean": "아직 그러한 변이를 이룬 개체는 발견되지 않았지만,\\n충분히 가능한 이야기겠지. 아니 <Color=#FFBF00>오히려 반대일 수도</Color>……",
+    "English": "We haven't found any cases like that yet, but it's entirely possible.\\nIn fact... <Color=#FFBF00>it might even be the opposite</Color>...",
+    "Japanese": "まだ確認された個体はいないけど、\\n十分あり得る話だよ。むしろ<Color=#FFBF00>逆</Color>の可能性も……",
+    "China_Simplified": "虽然目前尚未发现呈现这种变异的个体，\\n但也不是完全没可能。不，<Color=#FFBF00>说不定刚好相反</Color>……",
+    "China_Traditional": "雖然尚未發現達成那種變異的個體，\\n但確實很有可能。不，<Color=#FFBF00>說不定反而是相反</Color>……"
+  },
+  {
+    "ID": "CF06C07001S_036",
+    "Korean": "……미안해, 잊어줘.\\n이 뒷이야기는 검증되지 않은 <Color=#FFBF00>망상의 영역</Color>이야.",
+    "English": "...Sorry, forget I said that.\\nThat line of thought isn't anything more than <Color=#FFBF00>unproven speculation</Color>.",
+    "Japanese": "……ごめん、今のは忘れて。\\nこれはまだ検証されていない<Color=#FFBF00>仮説</Color>だから。",
+    "China_Simplified": "……抱歉，当我没说。\\n这后面的猜测都只是未经证实的<Color=#FFBF00>胡思乱想</Color>。",
+    "China_Traditional": "……抱歉，忘了我說的話吧。\\n後面的話是未經證實的<Color=#FFBF00>妄想</Color>。"
+  },
+  {
+    "ID": "CF06C07001S_037",
+    "Korean": "그것보단, 한 가지 <Color=#FFBF00>명확한 의문</Color>에 집중해 볼까?",
+    "English": "Instead, let's focus on one <Color=#FFBF00>clear question</Color>.",
+    "Japanese": "それより、1つ<Color=#FFBF00>はっきりした疑問</Color>に集中しよう。",
+    "China_Simplified": "比起这个，我们不妨来想想那个<Color=#FFBF00>明确的问题</Color>？",
+    "China_Traditional": "比起那個，我們就專注於一個<Color=#FFBF00>明確的疑問</Color>上吧？"
+  },
+  {
+    "ID": "CF06C07001S_038",
+    "Korean": "알파 재상은 어째서,\\n<Color=#FFBF00>엡실론에게 융합형 코어를 적용하고 싶어 했</Color>을까?",
+    "English": "Why did Premier Alpha want to\\n<Color=#FFBF00>apply the Fusion-Type Core to Epsilon</Color> in the first place?",
+    "Japanese": "アルファ宰相はなぜ、\\n<Color=#FFBF00>イプシロンにフュージョン型コアを使わせたかったのか</Color>?",
+    "China_Simplified": "阿尔法宰相为什么\\n<Color=#FFBF00>非要让埃普西隆使用融合型核心</Color>呢？",
+    "China_Traditional": "阿爾法宰相為什麼\\n<Color=#FFBF00>會想對艾普西隆套用融合型核心</Color>呢？"
+  },
+  {
+    "ID": "CF06C07001S_039",
+    "Korean": "단순히 업그레이드를 위해, 라기엔 의문점이 있군.\\n가장 좋은 방법은 던전 코어를 이식하는 거니까.",
+    "English": "If it was just for an upgrade, that doesn't quite add up.\\nThe best method would've been implanting a Dungeon Core.",
+    "Japanese": "単なる強化が目的とは思えないな。\\n最適解ならダンジョンコアを使うはずだ。",
+    "China_Simplified": "如果只是为了升级，未免有些奇怪。\\n毕竟最好的方案是移植暗堡核心。",
+    "China_Traditional": "如果只是為了升級，這點確實令人質疑。\\n因為最好的方法是移植地城核心。"
+  },
+  {
+    "ID": "CF06C07001S_040",
+    "Korean": "호환되는 코어를 찾아야 해서 고생하겠지만,\\n그럼에도 이런 정체불명의 신기술보단 훨씬 안전하겠지.",
+    "English": "Finding a compatible one would be difficult,\\nbut it'd still be far safer than this unknown tech.",
+    "Japanese": "互換性の問題はあるけど、\\nそれでもこんな未知の新技術よりは、はるかに安全だしね。",
+    "China_Simplified": "虽然要找兼容的核心是麻烦点，\\n但总比这种来路不明的新技术安全多了。",
+    "China_Traditional": "雖然尋找相容的核心會很辛苦，\\n但那還是比這種不明的新技術安全得多。"
+  },
+  {
+    "ID": "CF06C07001S_041",
+    "Korean": "왠지, 단순한 전력의 보충을 위해서는 아니라는 생각이 들어.",
+    "English": "I have a feeling... this wasn't just about boosting combat power.",
+    "Japanese": "どうも単なる戦力補強とは思えない。",
+    "China_Simplified": "我总觉得，这不像是单纯为了增强战力。",
+    "China_Traditional": "總覺得，並非只是單純為了補充戰力。"
+  },
+  {
+    "ID": "CF06C07001S_042",
+    "Korean": "……이 실험 결과는, 당분간 우리들만의 비밀로 하지.\\n적어도 알파 재상의 의도가 명확해지기 까지는……",
+    "English": "...Let's keep the results of this experiment between us for now.\\nAt least until we understand Premier Alpha's intentions...",
+    "Japanese": "……この実験結果は当分秘密にしておこう。\\n少なくともアルファ宰相の意図が明らかになるまではな。",
+    "China_Simplified": "……这次的实验结果，暂时保密。\\n至少得先弄清楚阿尔法宰相的意图……",
+    "China_Traditional": "……這實驗結果，暫時作為我們之間的祕密吧。\\n至少在阿爾法宰相的意圖明確之前……"
+  },
+  {
+    "ID": "CF06C07001S_043",
+    "Korean": "헤이헤이헤이, 스탑입니다.\\n너무 알파에 대해 뭐라 그러지 마십시오.",
+    "English": "Hey, hey, hey, enough of that.\\nDon't go badmouthing Alpha too much.",
+    "Japanese": "ヘイヘイヘイ、ストップデス。\\nあまりアルファを悪く言うべきではありまセン。",
+    "China_Simplified": "嘿、嘿、嘿，打住。\\n别这么说阿尔法的坏话。",
+    "China_Traditional": "嘿嘿嘿，暫停。\\n請不要對阿爾法有太多微詞。"
+  },
+  {
+    "ID": "CF06C07001S_044",
+    "Korean": "물론 알파가 이번엔 또 무슨 꿍꿍이인지는 알 수 없지만……",
+    "English": "Sure, I don't know what she's plotting this time either, but...",
+    "Japanese": "今回も何か企んでいる可能性はありマスガ……",
+    "China_Simplified": "当然，阿尔法这次又在打什么主意本个体也不知道……",
+    "China_Traditional": "雖然不知道阿爾法這次又在動什麼歪腦筋……"
+  },
+  {
+    "ID": "CF06C07001S_045",
+    "Korean": "알파도 어쨌든 자동인형입니다.\\n본 개체가 의심하면 알파도 연산할 것 같습니다.",
+    "English": "Alpha's still an automaton, just like me.\\nIf I start doubting her, she'll probably run the numbers too.",
+    "Japanese": "アルファも同じオートマタデス。\\nワタシが疑えば、あちらも計算するはずデス。",
+    "China_Simplified": "说到底阿尔法也是机械人偶。\\n本个体要是怀疑她，她一定也会进行演算。",
+    "China_Traditional": "阿爾法終究也是自動人偶。\\n如果個體起疑，阿爾法也會跟著運算。"
+  },
+  {
+    "ID": "CF06C07001S_046",
+    "Korean": "이유가 있어서 창조주, 엡실론, 크사이, 델타, 시그마,\\n화이트팔콘, 세이크리드, 메그놀리아, 이엑스플로, 엣셉흐, 마족, 용족……",
+    "English": "There's got to be a reason she's gone behind the backs of her creator, Epsilon, Ksai, Delta, Sigma,\\nWhite Falcon, Sacreed, Magnolia, Ful.Mi.NATION, Eseph, fiends, dragons...",
+    "Japanese": "創造主、イプシロン、ザイ、デルタ、シグマ、\\nホワイトファルコン、セイクリッド、マグノリア、イエクスプロー、エッセプ、魔族、竜族……",
+    "China_Simplified": "她肯定有她的道理，才会把造物主、埃普西隆、科赛、德尔塔、西格玛、\\n白鹰王国、圣科利德、麦格诺里亚、伊克斯普洛、埃瑟夫赫、魔族、龙族……",
+    "China_Traditional": "一定是有原因，才會像家常便飯一樣\\n背叛創造主、艾普西隆、科賽、戴爾塔、西格瑪、"
+  },
+  {
+    "ID": "CF06C07001S_047",
+    "Korean": "……기타 등등의 뒷통수를 밥먹듯 쳤을 텐데, 원인이 있겠죠.",
+    "English": "...well, pretty much everyone. There has to be a reason.",
+    "Japanese": "……数え切れないほど裏切ってきたのなら、それなりの理由があるはずデス。",
+    "China_Simplified": "……以及其他所有人的后脑勺挨个敲了个遍，肯定有原因的吧。",
+    "China_Traditional": "白鷹王國、聖科利德、麥格諾里亞、伊克斯普洛、約瑟夫、魔族、龍族以及其他的人。"
+  },
+  {
+    "ID": "CF06C07001S_048",
+    "Korean": "이 세상, 잘난 엡실론만 살아가야 하는 거 아니듯이 같이 지내보려고요.",
+    "English": "This world is not one where only a splendid Epsilon deserves to live. I intend to try living alongside others.",
+    "Japanese": "この世界で価値あるものはワタシだけではありまセン。共存を試みるべきデス。",
+    "China_Simplified": "这世上又不是只有了不起的本个体埃普西隆能活，大家得互相照应啊。",
+    "China_Traditional": "就像這個世界不能只有了不起的艾普西隆活著一樣，我們試著共處看看吧。"
+  },
+  {
+    "ID": "CF06C07001S_049",
+    "Korean": "나 살자고 창조주 잘못으로 생긴,\\n자동인형 알파를 죽이는 짓 안 하겠……",
+    "English": "I'm not going to kill Alpha, an automaton created\\nbecause of my creator's mistake, just to save myself...",
+    "Japanese": "自己を守るために、創造主の失敗で生まれた\\nオートマタアルファを排除するつもりはありまマセ……",
+    "China_Simplified": "本个体不会为了自己活命，就去杀因为造物主的过错\\n而诞生的机械人偶阿尔法……",
+    "China_Traditional": "我不會為了保命，而殺掉那個因為創造主的錯\\n而產生的自動人偶阿爾法的……"
+  },
+  {
+    "ID": "CF06C07001S_050",
+    "Korean": "……?\\n…………?",
+    "English": "...?\\n......?",
+    "Japanese": "……?\\n…………?",
+    "China_Simplified": "……？\\n…………？",
+    "China_Traditional": "……？\\n…………？"
+  },
+  {
+    "ID": "CF06C07001S_051",
+    "Korean": "뭡니까, 이거? 제 의도와는 상관없이,\\n알파에게 우호적인 메시지가 자꾸 출력됩니다?",
+    "English": "What is this? Messages favorable to Alpha\\nkeep getting output regardless of my intent.",
+    "Japanese": "これは何デスカ? 意図とは無関係に\\nアルファ擁護の発言が出力されていマス。",
+    "China_Simplified": "这是什么情况？怎么老是不由自主地\\n输出对阿尔法友善的语句？",
+    "China_Traditional": "這是什麼？與我的意圖無關，\\n為什麼一直輸出對阿爾法友善的訊息？"
+  },
+  {
+    "ID": "CF06C07001S_052",
+    "Korean": "……인격 패치다.",
+    "English": "...It's a personality patch.",
+    "Japanese": "……人格パッチだ。",
+    "China_Simplified": "……是人格补丁。",
+    "China_Traditional": "……是人格更新檔。"
+  },
+  {
+    "ID": "CF06C07001S_053",
+    "Korean": "정확히는, 크사이가 말이지…… \\n<Color=#FFBF00>네가 걱정된다</Color>고 우리에게 제공한 거야.",
+    "English": "More specifically, Ksai... \\ngave it to us because she said she was <Color=#FFBF00>worried about you</Color>.",
+    "Japanese": "正確にはザイがね……\\n<Color=#FFBF00>君を心配して</Color>用意してくれたの。",
+    "China_Simplified": "准确地说，是科赛……\\n她说<Color=#FFBF00>担心你</Color>，所以给我们的。",
+    "China_Traditional": "準確來說，是科賽……\\n<Color=#FFBF00>因為擔心你</Color>而提供給我們的。"
+  },
+  {
+    "ID": "CF06C07001S_054",
+    "Korean": "<Color=#FFBF00>마음에도 없는 나쁜 말을 착한 말로 변환</Color>하는 기능이라더라.",
+    "English": "Apparently it <Color=#FFBF00>converts cruel things you don't truly mean into kind ones</Color>.",
+    "Japanese": "<Color=#FFBF00>悪い言葉を良い言葉に変換する</Color>機能なんだって。",
+    "China_Simplified": "据说这功能可以把你<Color=#FFBF00>无意间说出来的坏话自动转化成好话</Color>。",
+    "China_Traditional": "功能是<Color=#FFBF00>將那些言不由衷的壞話，轉換成好聽的話</Color>。"
+  },
+  {
+    "ID": "CF06C07001S_055",
+    "Korean": "정말 분에 차지 않는 착한 동생을 두었구나, 엡실론.",
+    "English": "You've got quite the frustratingly kind little sister, don't you, Epsilon?",
+    "Japanese": "まったく……生意気で優しい妹を持ったものだな、イプシロン。",
+    "China_Simplified": "你有个让人羡慕的好妹妹啊，埃普西隆。",
+    "China_Traditional": "你還真是有個好到讓人覺得配不上的妹妹呢，艾普西隆。"
+  },
+  {
+    "ID": "CF06C07001S_056",
+    "Korean": "<size=40>……Fuck!</size>",
+    "English": "<size=40>...Curses.</size>",
+    "Japanese": "<size=40>……クソッ。</size>",
+    "China_Simplified": "<size=40>……Fuck！</size>",
+    "China_Traditional": "<size=40>……Fuck！</size>"
   }
 ]

@@ -290,6 +290,26 @@
     "BGImage": "T_Event_Banner_Full_033.png"
   },
   {
+    "ID": "61",
+    "EventType": "ET_DUNGEON",
+    "EventValue": "12",
+    "GroupID": "53",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_EVENT_DUNGEON_TITLE_6",
+    "EventDescID": "",
+    "BGImage": "T_Event_Banner_Full_017.png"
+  },
+  {
+    "ID": "62",
+    "EventType": "ET_ATTENDANCE",
+    "EventValue": "16",
+    "GroupID": "90",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_6",
+    "EventDescID": "",
+    "BGImage": "T_Event_Banner_Full_017.png"
+  },
+  {
     "ID": "63",
     "EventType": "ET_DUNGEON",
     "EventValue": "12",
@@ -952,8 +972,8 @@
   {
     "ID": "140",
     "EventType": "ET_ATTENDANCE",
-    "EventValue": "13",
-    "GroupID": "68",
+    "EventValue": "11",
+    "GroupID": "91",
     "ShortCutShopSubCategoryID": "0",
     "EventNameID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_11",
     "EventDescID": "",
@@ -972,8 +992,8 @@
   {
     "ID": "142",
     "EventType": "ET_ATTENDANCE",
-    "EventValue": "15",
-    "GroupID": "69",
+    "EventValue": "12",
+    "GroupID": "92",
     "ShortCutShopSubCategoryID": "0",
     "EventNameID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_15",
     "EventDescID": "",
@@ -1908,5 +1928,35 @@
     "EventNameID": "SYS_EVENT_REALTIMEPVP_TITLE_2",
     "EventDescID": "",
     "BGImage": "T_Event_Banner_Full_069.png"
+  },
+  {
+    "ID": "234",
+    "EventType": "ET_MISSION",
+    "EventValue": "44",
+    "GroupID": "2026",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_ARCADE_EVENT_SHOP_MISSION_01",
+    "EventDescID": "",
+    "BGImage": "T_Web_Event_Banner_01.png"
+  },
+  {
+    "ID": "235",
+    "EventType": "ET_ARCADE_SHOP",
+    "EventValue": "39",
+    "GroupID": "21300",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_ARCADE_EVENT_SHOP",
+    "EventDescID": "",
+    "BGImage": "T_Web_Event_Banner_02.png"
+  },
+  {
+    "ID": "236",
+    "EventType": "ET_MISSION",
+    "EventValue": "43",
+    "GroupID": "2027",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_ARCADE_EVENT_SHOP_MISSION_02",
+    "EventDescID": "",
+    "BGImage": "T_Web_Event_Banner_03.png"
   }
 ]

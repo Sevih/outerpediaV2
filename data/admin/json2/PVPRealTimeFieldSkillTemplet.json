@@ -700,8 +700,8 @@
     "ReduceReceiveHeal": "0",
     "_unknown_0": "0",
     "BuffChance": "0",
-    "BuffID": "RealTime_Field_Group1_01,RealTime_Field_Group1_02,RealTime_Field_Group1_03,RealTime_Field_Common_03",
-    "BuffDesc": "베타 2차 1주차 효과 설명 1 // 버프 데이터는 동일"
+    "BuffID": "RealTime_Field_Group1_01,RealTime_Field_Group1_02,RealTime_Field_Group1_03,RealTime_Field_Common_03,RealTime_Field_Common_11",
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_03"
   },
   {
     "ID": "65",
@@ -717,16 +717,27 @@
   {
     "ID": "66",
     "FieldSkillGroupID": "31",
+    "Turn": "9",
+    "DMG": "250",
+    "ReduceReceiveHeal": "200",
+    "_unknown_0": "0",
+    "BuffChance": "30",
+    "BuffID": "RealTime_Field_Common_12,RealTime_Field_Common_13",
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_04"
+  },
+  {
+    "ID": "67",
+    "FieldSkillGroupID": "31",
     "Turn": "16",
     "DMG": "450",
     "ReduceReceiveHeal": "400",
     "_unknown_0": "0",
     "BuffChance": "60",
     "BuffID": "RealTime_Field_Common_01",
-    "BuffDesc": "베타 2차 1주차 효과 설명 2 // 버프 데이터는 동일"
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_07"
   },
   {
-    "ID": "67",
+    "ID": "68",
     "FieldSkillGroupID": "31",
     "Turn": "24",
     "DMG": "650",
@@ -734,10 +745,10 @@
     "_unknown_0": "0",
     "BuffChance": "90",
     "BuffID": "RealTime_Field_Common_01,RealTime_Field_Common_02",
-    "BuffDesc": "베타 2차 1주차 효과 설명 3 // 버프 데이터는 동일"
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_08"
   },
   {
-    "ID": "68",
+    "ID": "69",
     "FieldSkillGroupID": "31",
     "Turn": "32",
     "DMG": "850",
@@ -748,7 +759,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "69",
+    "ID": "70",
     "FieldSkillGroupID": "31",
     "Turn": "40",
     "DMG": "1250",
@@ -759,7 +770,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "70",
+    "ID": "71",
     "FieldSkillGroupID": "31",
     "Turn": "48",
     "DMG": "1650",
@@ -770,7 +781,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "71",
+    "ID": "72",
     "FieldSkillGroupID": "31",
     "Turn": "56",
     "DMG": "2050",
@@ -781,7 +792,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "72",
+    "ID": "73",
     "FieldSkillGroupID": "31",
     "Turn": "64",
     "DMG": "2450",
@@ -792,7 +803,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "73",
+    "ID": "74",
     "FieldSkillGroupID": "31",
     "Turn": "72",
     "DMG": "2850",
@@ -803,7 +814,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "74",
+    "ID": "75",
     "FieldSkillGroupID": "32",
     "Turn": "0",
     "DMG": "0",
@@ -811,10 +822,10 @@
     "_unknown_0": "0",
     "BuffChance": "0",
     "BuffID": "RealTime_Field_Group1_11,RealTime_Field_Group1_12,RealTime_Field_Group1_13",
-    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_06"
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_05"
   },
   {
-    "ID": "75",
+    "ID": "76",
     "FieldSkillGroupID": "32",
     "Turn": "8",
     "DMG": "100",
@@ -825,7 +836,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "76",
+    "ID": "77",
     "FieldSkillGroupID": "32",
     "Turn": "16",
     "DMG": "200",
@@ -836,7 +847,7 @@
     "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_07"
   },
   {
-    "ID": "77",
+    "ID": "78",
     "FieldSkillGroupID": "32",
     "Turn": "24",
     "DMG": "300",
@@ -847,7 +858,7 @@
     "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_08"
   },
   {
-    "ID": "78",
+    "ID": "79",
     "FieldSkillGroupID": "32",
     "Turn": "32",
     "DMG": "400",
@@ -858,7 +869,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "79",
+    "ID": "80",
     "FieldSkillGroupID": "32",
     "Turn": "40",
     "DMG": "500",
@@ -869,7 +880,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "80",
+    "ID": "81",
     "FieldSkillGroupID": "32",
     "Turn": "48",
     "DMG": "600",
@@ -880,7 +891,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "81",
+    "ID": "82",
     "FieldSkillGroupID": "32",
     "Turn": "56",
     "DMG": "700",
@@ -891,7 +902,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "82",
+    "ID": "83",
     "FieldSkillGroupID": "32",
     "Turn": "64",
     "DMG": "800",
@@ -902,7 +913,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "83",
+    "ID": "84",
     "FieldSkillGroupID": "32",
     "Turn": "72",
     "DMG": "900",
@@ -913,18 +924,18 @@
     "BuffDesc": ""
   },
   {
-    "ID": "84",
+    "ID": "85",
     "FieldSkillGroupID": "41",
     "Turn": "0",
     "DMG": "0",
     "ReduceReceiveHeal": "0",
     "_unknown_0": "0",
     "BuffChance": "0",
-    "BuffID": "RealTime_Field_Group4_01,RealTime_Field_Group4_02,RealTime_Field_Group4_03,RealTime_Field_Common_04",
-    "BuffDesc": "베타 2차 1주차 효과 설명 1 // 버프 데이터는 동일"
+    "BuffID": "RealTime_Field_Group4_01,RealTime_Field_Group4_02,RealTime_Field_Group4_03,RealTime_Field_Common_03,RealTime_Field_Common_11",
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_03"
   },
   {
-    "ID": "85",
+    "ID": "86",
     "FieldSkillGroupID": "41",
     "Turn": "8",
     "DMG": "250",
@@ -935,7 +946,18 @@
     "BuffDesc": ""
   },
   {
-    "ID": "86",
+    "ID": "87",
+    "FieldSkillGroupID": "41",
+    "Turn": "9",
+    "DMG": "250",
+    "ReduceReceiveHeal": "200",
+    "_unknown_0": "0",
+    "BuffChance": "30",
+    "BuffID": "RealTime_Field_Common_12,RealTime_Field_Common_13",
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_04"
+  },
+  {
+    "ID": "88",
     "FieldSkillGroupID": "41",
     "Turn": "16",
     "DMG": "450",
@@ -943,10 +965,10 @@
     "_unknown_0": "0",
     "BuffChance": "60",
     "BuffID": "RealTime_Field_Common_01",
-    "BuffDesc": "베타 2차 1주차 효과 설명 2 // 버프 데이터는 동일"
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_07"
   },
   {
-    "ID": "87",
+    "ID": "89",
     "FieldSkillGroupID": "41",
     "Turn": "24",
     "DMG": "650",
@@ -954,10 +976,10 @@
     "_unknown_0": "0",
     "BuffChance": "90",
     "BuffID": "RealTime_Field_Common_01,RealTime_Field_Common_02",
-    "BuffDesc": "베타 2차 1주차 효과 설명 3 // 버프 데이터는 동일"
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_08"
   },
   {
-    "ID": "88",
+    "ID": "90",
     "FieldSkillGroupID": "41",
     "Turn": "32",
     "DMG": "850",
@@ -968,7 +990,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "89",
+    "ID": "91",
     "FieldSkillGroupID": "41",
     "Turn": "40",
     "DMG": "1250",
@@ -979,7 +1001,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "90",
+    "ID": "92",
     "FieldSkillGroupID": "41",
     "Turn": "48",
     "DMG": "1650",
@@ -990,7 +1012,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "91",
+    "ID": "93",
     "FieldSkillGroupID": "41",
     "Turn": "56",
     "DMG": "2050",
@@ -1001,7 +1023,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "92",
+    "ID": "94",
     "FieldSkillGroupID": "41",
     "Turn": "64",
     "DMG": "2450",
@@ -1012,7 +1034,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "93",
+    "ID": "95",
     "FieldSkillGroupID": "41",
     "Turn": "72",
     "DMG": "2850",
@@ -1023,7 +1045,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "94",
+    "ID": "96",
     "FieldSkillGroupID": "42",
     "Turn": "0",
     "DMG": "0",
@@ -1031,10 +1053,10 @@
     "_unknown_0": "0",
     "BuffChance": "0",
     "BuffID": "RealTime_Field_Group4_11,RealTime_Field_Group4_12,RealTime_Field_Group4_13",
-    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_06"
+    "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_05"
   },
   {
-    "ID": "95",
+    "ID": "97",
     "FieldSkillGroupID": "42",
     "Turn": "8",
     "DMG": "100",
@@ -1045,7 +1067,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "96",
+    "ID": "98",
     "FieldSkillGroupID": "42",
     "Turn": "16",
     "DMG": "200",
@@ -1056,7 +1078,7 @@
     "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_07"
   },
   {
-    "ID": "97",
+    "ID": "99",
     "FieldSkillGroupID": "42",
     "Turn": "24",
     "DMG": "300",
@@ -1067,7 +1089,7 @@
     "BuffDesc": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_08"
   },
   {
-    "ID": "98",
+    "ID": "100",
     "FieldSkillGroupID": "42",
     "Turn": "32",
     "DMG": "400",
@@ -1078,7 +1100,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "99",
+    "ID": "101",
     "FieldSkillGroupID": "42",
     "Turn": "40",
     "DMG": "500",
@@ -1089,7 +1111,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "100",
+    "ID": "102",
     "FieldSkillGroupID": "42",
     "Turn": "48",
     "DMG": "600",
@@ -1100,7 +1122,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "101",
+    "ID": "103",
     "FieldSkillGroupID": "42",
     "Turn": "56",
     "DMG": "700",
@@ -1111,7 +1133,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "102",
+    "ID": "104",
     "FieldSkillGroupID": "42",
     "Turn": "64",
     "DMG": "800",
@@ -1122,7 +1144,7 @@
     "BuffDesc": ""
   },
   {
-    "ID": "103",
+    "ID": "105",
     "FieldSkillGroupID": "42",
     "Turn": "72",
     "DMG": "900",

@@ -19590,5 +19590,160 @@
         "statModifier": 700
       }
     ]
+  },
+  "2700070": {
+    "info": {
+      "id": "2700070",
+      "class": "CCT_ATTACKER",
+      "subclass": "BRUISER",
+      "element": "CET_DARK",
+      "star": "3"
+    },
+    "premium": {
+      "skill_23": "7072",
+      "buffID": null,
+      "stat": null,
+      "applyingType": null,
+      "rawValue": null
+    },
+    "steps": {
+      "lv1_ev0": {
+        "ATK": 87,
+        "DEF": 35,
+        "HP": 541,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 19,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv20_ev1": {
+        "ATK": 237,
+        "DEF": 106,
+        "HP": 1301,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 51,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv40_ev2": {
+        "ATK": 396,
+        "DEF": 181,
+        "HP": 2101,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 86,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv60_ev3": {
+        "ATK": 554,
+        "DEF": 257,
+        "HP": 2902,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 120,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv80_ev4": {
+        "ATK": 713,
+        "DEF": 332,
+        "HP": 3702,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 155,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv100_ev5": {
+        "ATK": 872,
+        "DEF": 408,
+        "HP": 4503,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 190,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv105_ev6": {
+        "ATK": 911,
+        "DEF": 426,
+        "HP": 4703,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 198,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv110_ev7": {
+        "ATK": 951,
+        "DEF": 445,
+        "HP": 4903,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 207,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      },
+      "lv120_ev8": {
+        "ATK": 1030,
+        "DEF": 483,
+        "HP": 5303,
+        "SPD": 94,
+        "EFF": 10,
+        "RES": 224,
+        "CHC": 5,
+        "CHD": 150,
+        "DMG_RED": 0,
+        "DMG_INC": 0
+      }
+    },
+    "limitBreak": [
+      {
+        "step": 1,
+        "requireLevel": 100,
+        "maxLevel": 105,
+        "factors": 50,
+        "recallItemId": "30516",
+        "gold": 500000,
+        "statModifier": 200
+      },
+      {
+        "step": 2,
+        "requireLevel": 105,
+        "maxLevel": 110,
+        "factors": 100,
+        "recallItemId": "30516",
+        "gold": 1000000,
+        "statModifier": 400
+      },
+      {
+        "step": 3,
+        "requireLevel": 110,
+        "maxLevel": 120,
+        "factors": 250,
+        "recallItemId": "30516",
+        "gold": 2000000,
+        "statModifier": 700
+      }
+    ]
   }
 }

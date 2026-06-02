@@ -10555,10 +10555,10 @@
         ],
         "passive": {
           "name": {
-            "en": "Chain Point Generation: Enhancement Skills",
-            "jp": "CP獲得 - 強化スキル",
-            "kr": "CP회복 - 강화 스킬",
-            "zh": "CP恢复-强化技能"
+            "en": "Chain Point Generation: Enhanced Attack",
+            "jp": "CP獲得 - 強化攻撃",
+            "kr": "CP회복 - 강화 공격",
+            "zh": "CP恢复-强化攻击"
           },
           "tiers": [
             {
@@ -24616,7 +24616,7 @@
               "unlockLevel": 1,
               "isAdd": false,
               "desc": {
-                "en": "Has a [Value] chance of gaining an extra turn, after attacking",
+                "en": "After attacking, has a [Value] chance to gain an Extra Turn. (Excludes Burst Skills)",
                 "jp": "攻撃後、[Value]の確率で追加ターンを獲得する。(バーストスキルでの攻撃は除く)",
                 "kr": "공격 후 [Value] 확률로 추가 턴 획득 (버스트 스킬 제외)",
                 "zh": "攻击后，有[Value]的几率获得额外回合\\n(爆发技能除外)"
@@ -24629,10 +24629,10 @@
               "unlockLevel": 10,
               "isAdd": true,
               "desc": {
-                "en": "After using <color=#28d9ed>Nine Inch Nails</color>, <color=#28d9ed>detonates</color> all <color=#28d9ed>Bleeding</color> stacks on the target.",
-                "jp": "<color=#28d9ed>【ナイン・インチ・ネイルズ】</color>使用後、\\n対象の<color=#28d9ed>出血</color>をすべて<color=#28d9ed>爆破</color>させる。",
-                "kr": "<color=#28d9ed>나인 인치 네얼스</color> 사용 후 대상의 <color=#28d9ed>출혈</color>을 모두 <color=#28d9ed>폭발</color>",
-                "zh": "<color=#28d9ed>九寸钉</color>使用后目标的<color=#28d9ed>出血</color>效果全部<color=#28d9ed>爆发</color>"
+                "en": "When using <color=#28d9ed>Nine Inch Nails</color>, if the target is a Boss, Penetration <color=#28d9ed>+30%</color>",
+                "jp": "<color=#28d9ed>【ナイン・インチ・ネイルズ】</color>使用時、対象がボスなら貫通力<color=#28d9ed>+30%</color>",
+                "kr": "<color=#28d9ed>나인 인치 네얼스</color> 사용 시 대상이 보스라면 관통력 <color=#28d9ed>+30%</color>",
+                "zh": "使用<color=#28d9ed>九寸钉</color>时，若目标为首领，穿透力<color=#28d9ed>+30%</color>"
               },
               "values": {}
             }
@@ -26000,25 +26000,25 @@
               "unlockLevel": 1,
               "isAdd": false,
               "desc": {
-                "en": "Increases damage dealt to enemies with Bleeding",
-                "jp": "出血状態の敵に味方が与えるダメージがUPする。",
-                "kr": "출혈 보유 적에게 아군이 입히는 피해 증가",
-                "zh": "提升友军对处于出血状态敌人造成的伤害"
+                "en": "When using an attack that targets all enemies, inflicts Bleeding on all targets for +[Turn] turn(s) (Ignores Immunity and Resilience, Irremovable)",
+                "jp": "全体攻撃時、対象全体に出血+[Turn]ターン(免疫および効果抵抗無視、解除不可)",
+                "kr": "전체 공격 시 대상 전체에게 출혈 +[Turn]턴 (면역 및 효과 저항 무시, 해제 불가)",
+                "zh": "全体攻击时，对全体目标附加出血+[Turn]回合（无视免疫及效果抵抗，无法解除）"
               },
-              "values": {}
+              "values": {
+                "[Turn]": "2"
+              }
             },
             {
               "unlockLevel": 10,
               "isAdd": true,
               "desc": {
-                "en": "When using an attack that targets all enemies, inflicts Bleeding on the target for [Turn] turn(s) (Ignores Immunity, Irremovable)",
-                "jp": "全体攻撃を使用時、対象全体に出血を+[Turn]ターンの間付与する。(免疫無視、解除不可)",
-                "kr": "전체 공격 시 대상 전체에게 출혈 +[Turn]턴 (면역 무시, 해제 불가)",
-                "zh": "全体攻击时对所有目标造成出血+[Turn]回合(无视免疫、无法解除)"
+                "en": "Right after attacking, does not trigger an enemy's Counterattack, Revenge, or Agile Response",
+                "jp": "攻撃直後、敵の反撃/復讐/迅速対応発動不可",
+                "kr": "공격 직후 적의 반격/복수/신속 대응 불가",
+                "zh": "攻击后敌人无法\\n反击/复仇/迅速应对"
               },
-              "values": {
-                "[Turn]": "2"
-              }
+              "values": {}
             }
           ]
         }
@@ -28455,7 +28455,7 @@
               "isAdd": false,
               "desc": {
                 "en": "When hit by an attack that targets all enemies, increases Priority by [Value] (Only once per turn)",
-                "jp": "敵から全体攻撃を受けた場合、行動ゲージが[+Value]UPする。\\n(1ターンに一度のみ発動)",
+                "jp": "敵から全体攻撃を受けた場合、行動ゲージが[+Value]UPする。\\n(1ターンに1回のみ発動)",
                 "kr": "전체 공격 피격 시 행동 게이지 [+Value] (1턴에 1회만 발동)",
                 "zh": "受到全体攻击时，行动值[+Value](1回合仅能发动1次)"
               },
@@ -29565,14 +29565,13 @@
               "unlockLevel": 10,
               "isAdd": true,
               "desc": {
-                "en": "When using <color=#28d9ed>Bite 'Em, Kitsu!</color>, increases Action Points by [Value]",
-                "jp": "<color=#28d9ed>【ポチ、好きにお食べ】</color>使用時、APを[+Value]獲得する。",
-                "kr": "<color=#28d9ed>나비야, 물어!</color> 사용 시 AP [+Value]",
-                "zh": "使用<color=#28d9ed>蝴蝶啊，撕咬吧！</color>时，AP[+Value]"
+                "en": "All allies' DMG dealt to targets inflicted with Cursed increases by [+Value]",
+                "jp": "呪い付与対象に味方全体のダメージ[+Value]",
+                "kr": "저주 부여 대상 아군 전체 피해 증가 [+Value]",
+                "zh": "对目标附加诅咒时，我方全体伤害增加[+Value]"
               },
               "values": {
-                "[+Value]": "+20",
-                "[Value]": "20"
+                "[+Value]": "+50%"
               }
             }
           ]
