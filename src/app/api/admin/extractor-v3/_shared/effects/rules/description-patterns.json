@@ -54,8 +54,8 @@
     "add_buff": ["COURAGE_AGAINST_DESPAIR"]
   },
   {
-    "_comment": "Matches both 'does not trigger ... Counterattack/Revenge/Agile Response' and 'Counterattack, Revenge, and Agile Response cannot activate' phrasings.",
-    "pattern": "(does not|cannot|will not|won't|unable to|avoid)\\s+(trigger(s|ing)?|activat(e|ing)).*?Counterattack|Counterattack.*?(does not|cannot|will not|won't|unable to)\\s+(trigger(s|ing)?|activat(e|ing))",
+    "_comment": "Matches 'does not trigger ... Counterattack', 'Counterattack ... cannot activate', and 'cannot Counterattack' (verb form) phrasings.",
+    "pattern": "(does not|cannot|will not|won't|unable to|avoid)\\s+(trigger(s|ing)?|activat(e|ing)).*?Counterattack|Counterattack.*?(does not|cannot|will not|won't|unable to)\\s+(trigger(s|ing)?|activat(e|ing))|(does not|cannot|will not|won't|unable to)\\s+Counterattack",
     "flags": "is",
     "add_buff": ["BT_SEAL_COUNTER"]
   },
