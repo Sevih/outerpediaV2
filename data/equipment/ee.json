@@ -2937,5 +2937,31 @@
     "debuff": [],
     "rank": "A",
     "rank10": "B"
+  },
+  "2700070": {
+    "name": "Annual Defense Budget",
+    "name_jp": "年間国防予算",
+    "name_kr": "1년치 국방 예산",
+    "name_zh": "一年的国防预算",
+    "mainStat": "DMG Increase vs Light",
+    "mainStat_jp": "光属性対象の ダメージUP",
+    "mainStat_kr": "명속성 대상 피해 증가",
+    "mainStat_zh": "对光属性目标造成 伤害提升",
+    "effect": "Priority <color=#28d9ed>+50%</color> when hit by an AoE attack (Activates once per turn)",
+    "effect_jp": "敵から全体攻撃を受けた場合、行動ゲージ<color=#28d9ed>+50%</color> (1ターンに1回のみ発動)",
+    "effect_kr": "전체 공격 피격 시 행동 게이지 <color=#28d9ed>+50%</color> (1턴에 1회만 발동)",
+    "effect_zh": "被全体攻击命中时行动值<color=#28d9ed>+50%</color>（每回合仅发动1次）",
+    "effect10": "When attacking a Dimensional Singularity Boss, grants increased Defense to the caster for 2 turns before using the skill (Activates once every 3 turns)",
+    "effect10_jp": "次元特異点ボス対象にスキル使用する前、自分の防御力+2ターン (3ターンに1回のみ発動)",
+    "effect10_kr": "차원 특이점 보스 공격 시 스킬 사용 전 자신의 방어력 증가 +2턴 (3턴에 1회만 발동)",
+    "effect10_zh": "攻击次元奇点首领时，使用技能前自身防御力提升+2回合（每3回合仅发动1次）",
+    "icon_effect": "TI_Icon_UO_Accessary_07",
+    "buff": [
+      "BT_ACTION_GAUGE",
+      "BT_STAT|ST_DEF"
+    ],
+    "debuff": [],
+    "rank": "",
+    "rank10": ""
   }
 }
