@@ -4,6 +4,10 @@
       {
         "name": "Noblewoman's Guile",
         "mainStat": "ATK%"
+      },
+      {
+        "name": "Briareos's Recklessness [Mage]",
+        "mainStat": "ATK%"
       }
     ],
     "Amulet": [
@@ -15,10 +19,34 @@
     "Set": [
       "s4"
     ],
-    "SubstatPrio": "SPD>ATK>EFF",
-    "Note": "PvP : {I-T/Mage's Charm}",
+    "SubstatPrio": "SPD>ATK>EFF>HP=DEF>DMG UP%>DMG RED%",
     "Talisman": [
-      "$elemcritAP"
+      "$sme"
+    ]
+  },
+    "Mix Speed": {
+    "Weapon": [
+      {
+        "name": "Noblewoman's Guile",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Briareos's Recklessness [Mage]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Dies Irae",
+        "mainStat": "ATK%/SPD"
+      }
+    ],
+    "Set": [
+      "s2sw2"
+    ],
+    "SubstatPrio": "SPD>ATK>EFF>HP=DEF>DMG UP%>DMG RED%",
+    "Talisman": [
+      "$sme"
     ]
   }
 }

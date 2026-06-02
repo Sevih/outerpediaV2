@@ -2,11 +2,27 @@
   "Speed": {
     "Weapon": [
       {
+        "name": "Bloody Edge",
+        "mainStat": "ATK%"
+      },
+      {
         "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Heartunder's Blade",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Gorgon's Wrath [Ranger]",
         "mainStat": "ATK%"
       }
     ],
     "Amulet": [
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      },
       {
         "name": "Combination Simulator",
         "mainStat": "SPD"
@@ -15,7 +31,45 @@
     "Set": [
       "s4"
     ],
-    "SubstatPrio": "$speedEff",
+    "SubstatPrio": "SPD>ATK>CHC>CHD>DMG UP%",
+    "Note": "",
+    "Talisman": [
+      "$CPdps"
+    ]
+  },
+    "Swift Mix": {
+    "Weapon": [
+      {
+        "name": "Bloody Edge",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Rampaging Caracal",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Heartunder's Blade",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Gorgon's Wrath [Ranger]",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      "s2sw2","sw2a2"
+    ],
+    "SubstatPrio": "SPD>ATK>CHC>CHD>DMG UP%",
     "Note": "",
     "Talisman": [
       "$CPdps"
