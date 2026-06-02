@@ -49,10 +49,10 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy, prioritizing the enemy in front. Has a <color=#28d9ed>35%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>.",
-        "jp": "このスキルは一番前の敵を優先的に攻撃する。敵単体に<color=#28d9ed>35%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color> の間付与する。",
-        "kr": "정면의 적을 우선적으로 공격하고 <color=#28d9ed>35%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다.",
-        "zh": "优先攻击最前方的敌人，并有<color=#28d9ed>35%</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>2回合</color>。"
+        "en": "Attacks an enemy, prioritizing the enemy in front. Has a <color=#28d9ed>85%</color> chance to inflict <color=#28d9ed>Bleeding</color> on the target for <color=#28d9ed>2 turn(s)</color>. (Ignores Resilience)",
+        "jp": "このスキルは一番前の敵を優先的に攻撃する。敵単体に<color=#28d9ed>85%</color>の確率で<color=#28d9ed>出血</color>を<color=#28d9ed>2ターン</color> の間付与する。 (効果抵抗無視)",
+        "kr": "정면의 적을 우선적으로 공격하고 <color=#28d9ed>85%</color> 확률로 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>출혈</color>을 부여합니다. (효과 저항 무시)",
+        "zh": "优先攻击最前方的敌人，并有<color=#28d9ed>85%</color>的几率对目标造成<color=#28d9ed>出血</color>效果，持续<color=#28d9ed>2回合</color>。 (无视效果抵抗)"
       },
       "icon": "Skill_First_2000015",
       "debuff": [
@@ -75,7 +75,10 @@
       },
       "icon": "Skill_Second_2000015",
       "buff": [
-        "BT_ADDITIVE_ATTACK"
+        "BT_ADDITIVE_ATTACK",
+        "BT_ACTION_GAUGE",
+        "BT_STAT|ST_PIERCE_POWER_RATE",
+        "BT_ADDITIONAL_ATTACK"
       ],
       "debuff": [
         "BT_DOT_BLEED"

@@ -104,5 +104,10 @@
     "pattern": "grants?[^.\\n]{0,40}caster[^.\\n]{0,40}increased <[^>]+>Penetration<[^>]+>",
     "flags": "i",
     "add_buff": ["BT_STAT|ST_PIERCE_POWER_RATE"]
-  }
+  },
+  {
+  "pattern": "performs?\\s+an?\\s+(<[^>]+>)?\\s*Additional Attack(<[^>]+>)?",
+  "flags": "i",
+  "add_buff": ["BT_ADDITIONAL_ATTACK"]
+}
 ]
