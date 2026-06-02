@@ -55,7 +55,7 @@
   },
   {
     "_comment": "Matches both 'does not trigger ... Counterattack/Revenge/Agile Response' and 'Counterattack, Revenge, and Agile Response cannot activate' phrasings.",
-    "pattern": "(does not trigger|avoid triggering|cannot activate|will not activate|Unable to|\\bcannot\\b).*?Counterattack|Counterattack.*?(does not trigger|cannot activate|will not activate)",
+    "pattern": "(does not|cannot|will not|won't|unable to|avoid)\\s+(trigger(s|ing)?|activat(e|ing)).*?Counterattack|Counterattack.*?(does not|cannot|will not|won't|unable to)\\s+(trigger(s|ing)?|activat(e|ing))",
     "flags": "is",
     "add_buff": ["BT_SEAL_COUNTER"]
   },
