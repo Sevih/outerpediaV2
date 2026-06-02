@@ -32,6 +32,8 @@
   "VoiceActor_jp": "CV. 五十嵐裕美",
   "VoiceActor_kr": "CV. 유영",
   "VoiceActor_zh": "CV. 五十岚裕美",
+  "hasCoreFusion": true,
+  "coreFusionId": "2700070",
   "transcend": {
     "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
     "6": "ATK DEF HP +30%\n+5% Ally Team Defense\n+25 Action Points at battle start",
@@ -270,10 +272,10 @@
           "target": "multi"
         },
         "SKT_BURST_3": {
-          "effect": "Changed to Enhanced Skill\\nIncreases damage\\nRecovers 20% Health",
-          "effect_jp": "強化スキルに変更\\nダメージUP\\nHP20%回復",
-          "effect_kr": "강화 스킬로 교체\\n피해 증가\\n체력 20% 회복",
-          "effect_zh": "转化为强化技能\\n伤害提升\\n生命值恢复20%",
+          "effect": "Changed to Enhanced Attack\\nIncreases damage\\nRecovers 20% Health",
+          "effect_jp": "強化攻撃に変更\\nダメージUP\\nHP20%回復",
+          "effect_kr": "강화 공격으로 교체\\n피해 증가\\n체력 20% 회복",
+          "effect_zh": "替换为强化攻击\\n伤害提升\\n生命值恢复20%",
           "cost": 180,
           "level": 3,
           "offensive": true,

@@ -45,7 +45,7 @@
     "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n味方の効果命中+6%\nチェーンパッシブのWGダメージ+1\n効果命中が高いほどダメージUP(最大100%までUP)",
     "5_1_jp": "ATK DEF HP +22%\nバーストスキル3段階解禁\n戦闘開始時、AP+50、CP+20\n効果命中が高いほどダメージUP(最大100%までUP)",
-    "6_jp": "ATK DEF HP +30%\n自分のHP+35%\n全体攻撃を受けた場合、自分の行動ゲージ+40%\n(1ターンに一度のみ発動)",
+    "6_jp": "ATK DEF HP +30%\n自分のHP+35%\n全体攻撃を受けた場合、自分の行動ゲージ+40%\n(1ターンに1回のみ発動)",
     "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n아군 효과 적중 +6%\n체인 패시브의 WG 감소량 +1\n효과 적중 비례 피해 증가 (최대 100%)",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 AP +50 , CP +20\n효과 적중 비례 피해 증가 (최대 +100%)",
@@ -282,10 +282,10 @@
           "target": "multi"
         },
         "SKT_BURST_3": {
-          "effect": "Changed to Enhanced Skill\\nInflicts Stunned on the target for 1 turn",
-          "effect_jp": "強化スキルに変更\\n対象にスタン+1ターン",
-          "effect_kr": "강화 스킬로 교체\\n대상 스턴 +1턴",
-          "effect_zh": "转化为强化技能\\n目标晕眩+1回合",
+          "effect": "Changed to Enhanced Attack\\nInflicts Stunned on the target for 1 turn",
+          "effect_jp": "強化攻撃に変更\\n対象にスタン+1ターン",
+          "effect_kr": "강화 공격으로 교체\\n대상 스턴 +1턴",
+          "effect_zh": "替换为强化攻击\\n目标晕眩+1回合",
           "cost": 160,
           "level": 3,
           "offensive": true,

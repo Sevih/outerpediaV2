@@ -42,7 +42,7 @@
   "VoiceActor_zh": "CV. 前田玲奈",
   "transcend": {
     "3": "ATK DEF HP +10%\nBurst Level 2 Unlocked",
-    "6": "ATK DEF HP +30%\nAlly Damage Dealt +10% every turn (Max 5 stacks)\nRight after using this skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
+    "6": "ATK DEF HP +30%\nAlly Damage Dealt +10% every turn (Max 5 stacks)\nRight after using any skill, does not trigger an enemy's Counterattack, Revenge, or Agile Response.",
     "4_1": "ATK DEF HP +16%\nAlly Speed +2 every turn (Max 5 stacks, same effect cannot stack)\nReduces Skill Cooldown of the ally with the highest Attack by 1 turn after using Repent! in Mandala state\nChain Passive WG Reduction +1",
     "4_2": "ATK DEF HP +19%",
     "5_1": "ATK DEF HP +22%\nUnlocks Burst Stage 3\nAP +50 upon entry\nAlly Attack +7% every turn (Max 5 stacks)",
@@ -51,15 +51,15 @@
     "3_jp": "ATK DEF HP +10%\nバーストスキル2段階解禁",
     "4_1_jp": "ATK DEF HP +16%\n毎ターン味方のスピード+2\n(最大5回累積、同じ効果重複不可)\n曼荼羅状態で懺悔なさい！使用後、攻撃力が最も高い味方のスキルターン-1ターン\nチェーンパッシブのWGダメージ+1",
     "5_1_jp": "ATK DEF HP +22%\nバースト3段階解禁\n入場時AP+50\n毎ターン味方の攻撃力+7%(最大5回累積)",
-    "6_jp": "ATK DEF HP +30%\n毎ターン味方の与えるダメージ+10%(最大5回累積)\n攻撃直後、敵は反撃/復讐/迅速対応不可",
+    "6_jp": "ATK DEF HP +30%\n毎ターン味方の与えるダメージ+10%(最大5回累積)\nスキル使用直後、敵は反撃/復讐/迅速対応不可",
     "3_kr": "ATK DEF HP +10%\n버스트 2단계 해금",
     "4_1_kr": "ATK DEF HP +16%\n매 턴 아군 속도 +2 (최대 5회 누적, 같은 효과 중첩 불가)\n만다라 상태에서 참회하세요! 사용 후 공격력 가장 높은 아군 스킬 쿨타임 -1턴\n체인 패시브의 WG 감소량 +1",
     "5_1_kr": "ATK DEF HP +22%\n버스트 3단계 해금\n입장 시 AP +50\n매 턴 아군 공격력 +7% (최대 5회 누적)",
-    "6_kr": "ATK DEF HP +30%\n매 턴 아군 피해량 증가 +10% (최대 5회 누적)\n공격 직후 적의 반격/복수/신속 대응 불가",
+    "6_kr": "ATK DEF HP +30%\n매 턴 아군 피해량 증가 +10% (최대 5회 누적)\n스킬 사용 직후 적의 반격/복수/신속 대응 불가",
     "3_zh": "ATK DEF HP +10%\n解锁2阶爆发",
     "4_1_zh": "ATK DEF HP +16%\n每回合友军速度+2(最多叠加5次/相同效果不可叠加)\n曼荼罗状态下使用忏悔吧！后，攻击力最高的友军技能冷却时间-1回合\n连锁被动的WG减少量+1",
     "5_1_zh": "ATK DEF HP +22%\n解锁爆发第3阶段\n入场时AP+50\n每回合友军攻击力+7%(最多叠加5次)",
-    "6_zh": "ATK DEF HP +30%\n每回合友军伤害量+10%(最多叠加5次)\n攻击后敌人无法进行反击/复仇/迅速应对"
+    "6_zh": "ATK DEF HP +30%\n每回合友军伤害量+10%(最多叠加5次)\\使用技能后敌人无法进行反击/复仇/迅速应对"
   },
   "skills": {
     "SKT_FIRST": {
