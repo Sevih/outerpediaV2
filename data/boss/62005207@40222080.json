@@ -89,10 +89,10 @@
       },
       "type": "SKT_ULTIMATE",
       "description": {
-        "en": "Attacks all enemies with Heavy Strike and recovers Chain Points by <color=#28d9ed>15</color>.\nAfter attacking, detonates all Cursed stacks on the target and reduces Action Points by <color=#28d9ed>80</color>.",
-        "jp": "敵全体に強撃でダメージを与え、CPを<color=#28d9ed>15</color>獲得する。\n攻撃後、対象の呪いをすべて破裂させ、APを<color=#28d9ed>80</color>DOWNさせる。",
-        "kr": "적 전체를 강격으로 공격하고 CP를 <color=#28d9ed>15</color> 회복합니다.\n공격 후 대상의 저주를 모두 폭발시키고, AP를 <color=#28d9ed>80</color> 감소시킵니다.",
-        "zh": "强击全体敌人，恢复<color=#28d9ed>15</color>的CP。\n攻击后，使目标受到的所有诅咒效果爆炸，AP减少<color=#28d9ed>80</color>。"
+        "en": "Before using this skill, inflicts <color=#28d9ed>Cursed</color> on all enemies for <color=#28d9ed>2 turns</color>.\\nAttacks all enemies with Heavy Strike and recovers CP by <color=#28d9ed>15</color>. Then detonates all Cursed stacks on the targets and decreases their AP by <color=#28d9ed>80</color>.",
+        "jp": "スキル使用前、敵全体に<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>の間付与する。\\n敵全体に強撃でダメージを与え、CPを<color=#28d9ed>15</color>獲得した後、対象の呪いをすべて破裂させ、APを<color=#28d9ed>80</color>DOWNさせる。",
+        "kr": "스킬 사용 전 적 전체에게 <color=#28d9ed>저주</color>를 <color=#28d9ed>2턴</color> 동안 부여합니다.\\n적 전체를 강격으로 공격하고 CP를 <color=#28d9ed>15</color> 회복 한뒤 대상의 저주를 모두 폭발시키고, AP를 <color=#28d9ed>80</color> 감소시킵니다.",
+        "zh": "使用技能前，对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>诅咒</color>。\\n强击全体敌人，恢复<color=#28d9ed>15</color>的CP。\\n攻击后，使目标受到的所有诅咒效果爆炸，AP减少<color=#28d9ed>80</color>。"
       },
       "icon": "Skill_Ultimate_2000086",
       "buff": [
@@ -101,7 +101,8 @@
       ],
       "debuff": [
         "DETONATE",
-        "BT_AP_CHARGE"
+        "BT_AP_CHARGE",
+        "BT_DOT_CURSE_IR"
       ]
     },
     {

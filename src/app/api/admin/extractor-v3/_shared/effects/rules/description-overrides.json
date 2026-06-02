@@ -244,10 +244,16 @@
     "remove_debuff": ["BT_SEALED_RESURRECTION"],
     "add_debuff": ["BT_STAT|ST_ATK_IR", "BT_STAT|ST_DEF_IR"]
   },
-  "Attacks all enemies.\\n\\nAfter attacking, inflicts <color=#28d9ed>Bane's Domain</color> on all allies and enemy <color=#28d9ed>Magic</color> units for <color=#28d9ed>1 turn(s)</color>. (Ignores Resilience and Immunity)\\n\\nDamage dealt increases proportional to Max Health instead of Attack.":{
+  "Attacks all enemies.\\n\\nAfter attacking, inflicts <color=#28d9ed>Bane's Domain</color> on all allies and enemy <color=#28d9ed>Magic</color> units for <color=#28d9ed>1 turn(s)</color>. (Ignores Resilience and Immunity)\\n\\nDamage dealt increases proportional to Max Health instead of Attack.": {
     "remove_buff": ["BT_STAT|ST_DEF"]
   },
-  "(Triggered Effect) When Demiurge Drakhan attacks, if granted a dispellable <color=#28d9ed>buff</color>, reduces Health of all enemies by <color=#28d9ed>30%</color>.":{
+  "(Triggered Effect) When Demiurge Drakhan attacks, if granted a dispellable <color=#28d9ed>buff</color>, reduces Health of all enemies by <color=#28d9ed>30%</color>.": {
     "remove_buff": ["BT_REMOVE_BUFF"]
+  },
+  "(Passive Effect) Increases ally damage dealt to targets inflicted with <color=#28d9ed>Bleeding</color>.": {
+    "remove_debuff": ["BT_DOT_BLEED_IR"]
+  },
+  "Before using this skill, inflicts <color=#28d9ed>Cursed</color> on all enemies for <color=#28d9ed>2 turns</color>.\nAttacks all enemies with Heavy Strike and recovers CP by <color=#28d9ed>15</color>. Then detonates all Cursed stacks on the targets and decreases their AP by <color=#28d9ed>80</color>.": {
+    "add_debuff": ["BT_DOT_CURSE_IR"]
   }
 }
