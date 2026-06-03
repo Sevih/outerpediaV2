@@ -52,9 +52,15 @@ export default function HeaderClient({ guideCategorySlugs }: Props) {
     return () => window.removeEventListener('op:open-search', open);
   }, []);
 
-  // Scrolled state — collapses header padding once scrolled past threshold
+  // Scrolled state — collapses header padding once scrolled past threshold.
+  // Hysteresis (collapse at >40, expand at <10) creates a dead zone wider than
+  // the header's height change, so the browser's scroll anchoring can't bounce
+  // scrollY back across a single threshold and loop the two states near the top.
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled((prev) => (prev ? y > 10 : y > 40));
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
