@@ -1,5 +1,5 @@
 {
-  "Speed": {
+  "Pen Def": {
     "Weapon": [
       {
         "name": "Snow-white Embrace",
@@ -29,12 +29,12 @@
       }
     ],
     "Set": [
-      "s4"
+      "p2def2"
     ],
-    "SubstatPrio": "$dpsDef",
+    "SubstatPrio": "CHC>DEF>CHD>SPD>DMG UP%>DMG RED%>HP",
     "Note": "",
     "Talisman": [
-      "$emrsv"
+      "$CPplusVang"
     ]
   },
   "Pen": {
@@ -69,10 +69,10 @@
     "Set": [
       "p4"
     ],
-    "SubstatPrio": "$dpsDef",
+    "SubstatPrio": "CHC>DEF>CHD>SPD>DMG UP%>DMG RED%>HP",
     "Note": "",
     "Talisman": [
-      "$emrsv"
+      "$CPplusVang"
     ]
   },
   "Def": {
@@ -107,13 +107,13 @@
     "Set": [
       "def4"
     ],
-    "SubstatPrio": "$dpsDef",
+    "SubstatPrio": "CHC>DEF>CHD>SPD>DMG UP%>DMG RED%>HP",
     "Note": "",
     "Talisman": [
-      "$emrsv"
+      "$CPplusVang"
     ]
   },
-  "Speed/Immu": {
+  "Patience": {
     "Weapon": [
       {
         "name": "Snow-white Embrace",
@@ -143,15 +143,15 @@
       }
     ],
     "Set": [
-      "s2i2"
+      "pat4"
     ],
-    "SubstatPrio": "$dpsDef",
+    "SubstatPrio": "CHC>DEF>CHD>SPD>DMG UP%>DMG RED%>HP",
     "Note": "",
     "Talisman": [
-      "$emrsv"
+      "$CPplusVang"
     ]
   },
-  "Def/Immu": {
+  "Immu Mix (PvP)": {
     "Weapon": [
       {
         "name": "Snow-white Embrace",
@@ -181,12 +181,12 @@
       }
     ],
     "Set": [
-      "i2def2"
+      "i2def2","s2i2","p2i2","i2sw2"
     ],
-    "SubstatPrio": "$dpsDef",
+    "SubstatPrio": "CHC>DEF>CHD>SPD>DMG UP%>DMG RED%>HP",
     "Note": "",
     "Talisman": [
-      "$emrsv"
+      "$CPplusVang"
     ]
   }
 }
