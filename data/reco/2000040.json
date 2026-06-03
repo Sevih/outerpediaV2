@@ -84,5 +84,35 @@
     "Talisman": [
       "$rsv"
     ]
+  },
+  "Dimensional Singularity": {
+    "Weapon": [
+      {
+        "name": "Heartunder's Blade",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Briareos's Ambition [Ranger]",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      "r4"
+    ],
+    "SubstatPrio": "CHC>ATK>CHD>DMG UP%",
+    "Note": "You don't want speed.",
+    "Talisman": [
+      "$v"
+    ]
   }
 }
