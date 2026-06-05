@@ -288,6 +288,19 @@
       ]
     }
   },
+    "skill:Enraged|60000011": {
+    "*": {
+      "clear_debuff": true,
+      "clear_buff": true,
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ],
+      "debuff": [
+          "BT_REMOVE_BUFF"
+      ]
+    }
+  },
   "skill:Enraged|60000012": {
     "*": {
       "clear_debuff": true,

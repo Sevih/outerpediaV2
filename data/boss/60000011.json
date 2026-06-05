@@ -1,0 +1,182 @@
+{
+  "id": "60000011",
+  "Name": {
+    "en": "Verdandi",
+    "jp": "ヴェルダンディ",
+    "kr": "베르단디",
+    "zh": "贝尔丹迪"
+  },
+  "Surname": {
+    "en": "Imposed Present",
+    "jp": "強いられた現在",
+    "kr": "강요된 현재",
+    "zh": "被强加的现在"
+  },
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Light",
+  "level": 100,
+  "icons": "4004008",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO,BT_ACTION_GAUGE",
+  "StatBuffImmune": "ST_SPEED",
+  "location": {
+    "dungeon": {
+      "en": "[Singularity] - Verdandi",
+      "jp": "[特異点] - ヴェルダンディ",
+      "kr": "[특이점] - 베르단디",
+      "zh": "[奇点] - 贝尔丹迪"
+    },
+    "mode": {
+      "en": "Dimensional Singularity",
+      "jp": "次元特異点",
+      "kr": "차원 특이점",
+      "zh": "次元奇点"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Establish : Incineration Plan",
+        "jp": "策定：焼却計画",
+        "kr": "수립 : 소각 계획",
+        "zh": "制定：焚烧计划"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks an enemy and inflicts <color=#28d9ed>Curse</color> for <color=#28d9ed>3 turns</color>.",
+        "jp": "敵にダメージを与え、<color=#28d9ed>3ターン</color>の間<color=#28d9ed>呪い</color>を付与する。",
+        "kr": "적을 공격하고 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.",
+        "zh": "攻击敌人，附加<color=#28d9ed>3回合</color>的<color=#28d9ed>诅咒</color>。"
+      },
+      "icon": "Skill_First_4004008_L",
+      "debuff": [
+        "BT_DOT_CURSE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Measure : Variant Elimination",
+        "jp": "措置：変種の除去",
+        "kr": "조치 : 변종 제거",
+        "zh": "措施：变种清除"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks an enemy and deals <color=#28d9ed>50%</color> bonus DMG if the target does not hold <color=#28d9ed>Curse</color>.",
+        "jp": "敵にダメージを与え、対象に<color=#28d9ed>呪い</color>が付与されていない場合、<color=#28d9ed>50%</color>の追加ダメージを与える。",
+        "kr": "적을 공격하고 대상에게 <color=#28d9ed>저주</color>가 부여되지 않은 경우 <color=#28d9ed>50%</color>추가 피해를 줍니다.",
+        "zh": "攻击敌人，若目标未持有<color=#28d9ed>诅咒</color>，则造成<color=#28d9ed>50%</color>额外伤害。"
+      },
+      "icon": "Skill_Second_4004008_L"
+    },
+    {
+      "name": {
+        "en": "Execute : Dimensional Incineration",
+        "jp": "執行：次元焼却",
+        "kr": "집행 : 차원 소각",
+        "zh": "执行：次元焚烧"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and inflicts <color=#28d9ed>Curse</color> on targets for <color=#28d9ed>3 turns</color>.\\nGains an <color=#28d9ed>Extra Turn</color> when an enemy is defeated.",
+        "jp": "敵全体にダメージを与え、対象に<color=#28d9ed>3ターン</color>の間<color=#28d9ed>呪い</color>を付与する。\\n敵を撃破すると<color=#28d9ed>追加ターン</color>を獲得する。",
+        "kr": "적 전체를 공격하고 대상에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>저주</color>를 부여합니다.\\n적 처치 시 <color=#28d9ed>추가 턴</color>을 획득합니다.",
+        "zh": "攻击全体敌人，对目标附加<color=#28d9ed>3回合</color>的<color=#28d9ed>诅咒</color>。\\n击败敌人时获得<color=#28d9ed>额外回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4004008_L",
+      "buff": [
+        "BT_ADDITIVE_TURN"
+      ],
+      "debuff": [
+        "BT_DOT_CURSE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Objective : Present Collapse",
+        "jp": "目標：現在の崩壊",
+        "kr": "목표 : 현재 붕괴",
+        "zh": "目标：现在崩塌"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "At the start of every turn, inflicts <color=#28d9ed>Curse</color> on all enemies for <color=#28d9ed>2 turns</color>.\\nCurse DMG dealt to enemies decreases by <color=#28d9ed>50%</color>.",
+        "jp": "毎ターン開始時、敵全体に<color=#28d9ed>呪い</color>を<color=#28d9ed>2ターン</color>付与する。\\n敵に与える呪いダメージが<color=#28d9ed>50%</color>減少する。",
+        "kr": "매 턴 시작 시 적 전체에게 <color=#28d9ed>저주</color>를 <color=#28d9ed>2턴</color> 부여합니다.\\n적에게 입히는 저주 피해가 <color=#28d9ed>50%</color> 감소합니다.",
+        "zh": "每回合开始时对全体敌人附加<color=#28d9ed>2回合</color>的<color=#28d9ed>诅咒</color>。\\n对敌人造成的诅咒伤害减少<color=#28d9ed>50%</color>。"
+      },
+      "icon": "MT_Passive_1_Light"
+    },
+    {
+      "name": {
+        "en": "Factor : Event Overlap",
+        "jp": "要因：事象の重畳",
+        "kr": "요인 : 사건의 중첩",
+        "zh": "要因：事件的叠加"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "DMG dealt by all enemies increases by <color=#28d9ed>10%</color> per <color=#28d9ed>debuff</color> they hold.\\n(The more debuffs held, the more DMG dealt to Verdandi increases.)\\nWhen a target with <color=#28d9ed>Immunity</color> ends their turn, recovers WG by <color=#28d9ed>2</color>.\\nCurse and Fixed DMG taken by the boss cannot exceed <color=#28d9ed>50000</color>.",
+        "jp": "敵全体は自分が保有する<color=#28d9ed>弱体効果1個</color>あたり、ダメージが<color=#28d9ed>10%</color>増加する。\\n（弱体効果を多く保有するほど、ヴェルダンディへの与ダメージが増加する）\\n<color=#28d9ed>免疫</color>を保有する対象の行動終了時、WGを<color=#28d9ed>2</color>回復する。\\nボスが受ける呪いおよび固定ダメージは<color=#28d9ed>50000</color>を超えない。",
+        "kr": "적 전체는 자신이 보유한 <color=#28d9ed>약화 효과 1개</color> 마다 피해가 <color=#28d9ed>10%</color> 증가합니다.\\n(약화 효과를 많이 보유할 수록 베르단디에게 입히는 피해가 증가합니다)\\n<color=#28d9ed>면역</color> 보유 대상 행동 종료 시 WG를 <color=#28d9ed>2</color> 회복합니다.\\n보스가 받는 저주 및 고정 피해의 피해는 <color=#28d9ed>50000</color>을 초과하지 않습니다.",
+        "zh": "全体敌人每持有1个<color=#28d9ed>弱化效果</color>，造成的伤害增加<color=#28d9ed>10%</color>。\\n（持有的弱化效果越多，对贝尔丹迪造成的伤害越高）\\n持有<color=#28d9ed>免疫</color>的目标行动结束时，恢复WG<color=#28d9ed>2</color>点。\\n首领受到的诅咒及固定伤害不超过<color=#28d9ed>50000</color>。"
+      },
+      "icon": "MT_Passive_1_Light",
+      "debuff": [
+        "BT_DOT_CURSE",
+        "BT_CURSE_ENHANCE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dimensional Rift",
+        "jp": "次元の亀裂",
+        "kr": "차원의 균열",
+        "zh": "次元裂缝"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Boss monsters' Priority increases upon entering Berserk. Additional effects are added based on rank as follows.\\n\\n<color=#ffd732>Applied from RANK D:</color> DMG dealt increases and DMG taken decreases for all attacks. The values increase as rank rises, maxing out at SSS. (Max 300%/200% respectively)\\n\\n<color=#ffd732>Applied from RANK B:</color> Final DMG and WG DMG taken from targets without elemental advantage decrease by <color=#28d9ed>70%/50%</color> respectively.\\n\\n<color=#ffd732>Applied from RANK S:</color> Increases own <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color> and decreases all enemies' <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color>.",
+        "jp": "(パッシブ効果) ボスモンスターは狂暴化突入後、行動ゲージが増加する。またランクに応じて以下の効果が追加される。\\n\\n<color=#ffd732>RANK D から適用：</color>すべての攻撃に対して与ダメージが増加し、受けるダメージが減少する。ランクが上がるほど数値が増加し、SSSで最大となる。（各最大300%/200%）\\n\\n<color=#ffd732>RANK B から適用：</color>有利な相性でない対象から受ける最終ダメージとWGダメージがそれぞれ<color=#28d9ed>70%/50%</color>減少する。\\n\\n<color=#ffd732>RANK S から適用：</color>自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>増加させ、敵全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>減少させる。",
+        "kr": "(패시브 효과) 보스 몬스터는 광폭화 진입 후 행동게이지가 증가합니다. 또한 랭크에 따라 아래 효과가 추가합니다.\\n\\n<color=#ffd732>RANK D 부터 적용:</color> 모든 공격에 대해 주는 피해가 증가하고 받는 피해가 감소합니다. 랭크가 오를수록 수치가 증가하여 SSS에서 최대가 됩니다.(각각 최대 300%/200%)\\n\\n<color=#ffd732>RANK B 부터 적용:</color> 유리한 상성이 아닌 대상에게 받는 최종 피해와 WG피해가 각각 <color=#28d9ed>70%/50%</color> 감소합니다.\\n\\n<color=#ffd732>RANK S 부터 적용:</color> 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 증가시키고 적 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "(被动效果) 首领怪物进入狂暴化后行动值提升。同时根据等级追加以下效果。\\n\\n<color=#ffd732>从RANK D开始适用：</color>所有攻击的造成伤害提升，受到伤害减少。等级越高数值越大，在SSS达到最大。（各最大300%/200%）\\n\\n<color=#ffd732>从RANK B开始适用：</color>受到非克制属性目标的最终伤害和WG伤害分别减少<color=#28d9ed>70%/50%</color>。\\n\\n<color=#ffd732>从RANK S开始适用：</color>使自身<color=#28d9ed>穿透力</color>增加<color=#28d9ed>30%</color>，使全体敌人<color=#28d9ed>穿透力</color>减少<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Passive_1_Singularity",
+      "buff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ],
+      "debuff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "jp": "狂暴化",
+        "kr": "광폭화",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state every time enemies take 6 actions.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Attacks all enemies, then grants self an irremovable Speed Increase/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nBefore using the skill, dispels <color=#28d9ed>2</color> of all enemies' <color=#28d9ed>buffs</color>.",
+        "jp": "敵が6回行動するたびに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体にダメージを与えた後、自分に解除されないスピードUP/ダメージ減少効果を1ターンの間付与し、WGを10%回復する。\\nスキル使用前、敵全体の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2個</color>解除する。",
+        "kr": "적이 6회 행동할 때 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> :적 전체를 공격 후 자신에게 해제되지 않는 속도 증가/피해 감소 효과를 1턴 동안 부여하고 WG를 10% 회복합니다.\\n스킬 사용 전 적 전체의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2개</color> 해제합니다.",
+        "zh": "敌人每行动6次进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化突入与必杀技</color>：攻击全体敌人后，对自身附加无法解除的速度提升/伤害减少效果1回合，并恢复WG10%。\\n使用技能前解除全体敌人<color=#28d9ed>2个</color><color=#28d9ed>强化效果</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ],
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
+    }
+  ]
+}

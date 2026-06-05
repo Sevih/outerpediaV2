@@ -9,7 +9,9 @@ interface CompareResult {
   total: number;
   withDiffs: number;
   ok: number;
-  results?: { id: string; name: string; diffs: unknown[] }[];
+  /** Set by endpoints that classify typos separately (e.g. Characters) */
+  typo?: number;
+  results?: { id: string; name: string; diffs: { type?: string }[] }[];
 }
 
 interface DiffCheck {
@@ -19,6 +21,27 @@ interface DiffCheck {
   status: 'idle' | 'loading' | 'done' | 'error';
   result?: CompareResult;
   newCount?: number;
+}
+
+/**
+ * Derive changed-vs-typo entity counts from a compare response.
+ * - Characters exposes `typo` (and `withDiffs` = changed) directly.
+ * - EE / equipment return `results[]` whose diffs are typed 'changed' | 'typo'.
+ * - Items / bosses have no typo concept → typos === null (rendered as "—").
+ */
+function deriveCounts(r?: CompareResult): { diffs: number; typos: number | null } {
+  if (!r) return { diffs: 0, typos: 0 };
+  if (typeof r.typo === 'number') return { diffs: r.withDiffs ?? 0, typos: r.typo };
+  if (Array.isArray(r.results)) {
+    let diffs = 0;
+    let typos = 0;
+    for (const res of r.results) {
+      if (res.diffs?.some((d) => d.type === 'changed')) diffs++;
+      if (res.diffs?.some((d) => d.type === 'typo')) typos++;
+    }
+    return { diffs, typos };
+  }
+  return { diffs: r.withDiffs ?? 0, typos: null };
 }
 
 interface BossModeEntry {
@@ -88,7 +111,8 @@ export default function AdminDashboard() {
     });
   }, []);
 
-  const totalDiffs = checks.reduce((sum, c) => sum + (c.result?.withDiffs ?? 0), 0);
+  const totalDiffs = checks.reduce((sum, c) => sum + deriveCounts(c.result).diffs, 0);
+  const totalTypos = checks.reduce((sum, c) => sum + (deriveCounts(c.result).typos ?? 0), 0);
   const totalNew = checks.reduce((sum, c) => sum + (c.newCount ?? 0), 0);
   const bossDiffs = Object.values(bossModes).reduce((sum, m) => sum + m.withDiffs, 0);
   const allDone = checks.every(c => c.status === 'done' || c.status === 'error') && bossStatus !== 'loading';
@@ -98,12 +122,13 @@ export default function AdminDashboard() {
       <div className="flex items-center gap-4">
         <h1 className="text-2xl font-bold">Dashboard</h1>
         {!allDone && <span className="text-sm text-zinc-500 animate-pulse">Checking for updates...</span>}
-        {allDone && totalDiffs === 0 && totalNew === 0 && bossDiffs === 0 && (
+        {allDone && totalDiffs === 0 && totalTypos === 0 && totalNew === 0 && bossDiffs === 0 && (
           <span className="rounded bg-green-900/30 px-2.5 py-1 text-xs font-semibold text-green-400">All up to date</span>
         )}
-        {allDone && (totalDiffs > 0 || totalNew > 0 || bossDiffs > 0) && (
+        {allDone && (totalDiffs > 0 || totalTypos > 0 || totalNew > 0 || bossDiffs > 0) && (
           <div className="flex gap-2">
             {(totalDiffs + bossDiffs) > 0 && <span className="rounded bg-amber-900/30 px-2.5 py-1 text-xs font-semibold text-amber-400">{totalDiffs + bossDiffs} diff(s)</span>}
+            {totalTypos > 0 && <span className="rounded bg-zinc-700/50 px-2.5 py-1 text-xs font-semibold text-zinc-300">{totalTypos} typo(s)</span>}
             {totalNew > 0 && <span className="rounded bg-blue-900/30 px-2.5 py-1 text-xs font-semibold text-blue-400">{totalNew} new</span>}
           </div>
         )}
@@ -116,12 +141,15 @@ export default function AdminDashboard() {
             <th className="py-2 pr-3 font-medium w-16 text-right">Total</th>
             <th className="py-2 pr-3 font-medium w-14 text-right">OK</th>
             <th className="py-2 pr-3 font-medium w-14 text-right">Diffs</th>
+            <th className="py-2 pr-3 font-medium w-14 text-right">Typo</th>
             <th className="py-2 pr-3 font-medium w-14 text-right">New</th>
             <th className="py-2 font-medium w-16 text-right">Status</th>
           </tr>
         </thead>
         <tbody>
-          {checks.map(check => (
+          {checks.map(check => {
+            const { diffs, typos } = deriveCounts(check.result);
+            return (
             <tr key={check.api} className="border-b border-zinc-800/50 hover:bg-zinc-800/30">
               <td className="py-1.5 pr-3">
                 <Link href={check.href as never} className="text-zinc-300 hover:text-blue-400 transition-colors">
@@ -131,14 +159,18 @@ export default function AdminDashboard() {
               <td className="py-1.5 pr-3 text-right text-zinc-500">{check.result?.total ?? '—'}</td>
               <td className="py-1.5 pr-3 text-right text-green-500">{check.result?.ok ?? '—'}</td>
               <td className="py-1.5 pr-3 text-right">
-                {check.result?.withDiffs ? <span className="text-amber-400">{check.result.withDiffs}</span> : <span className="text-zinc-600">0</span>}
+                {diffs ? <span className="text-amber-400">{diffs}</span> : <span className="text-zinc-600">0</span>}
+              </td>
+              <td className="py-1.5 pr-3 text-right">
+                {typos === null ? <span className="text-zinc-600">—</span> : typos > 0 ? <span className="text-zinc-300">{typos}</span> : <span className="text-zinc-600">0</span>}
               </td>
               <td className="py-1.5 pr-3 text-right">
                 {(check.newCount ?? 0) > 0 ? <span className="text-blue-400">{check.newCount}</span> : <span className="text-zinc-600">0</span>}
               </td>
               <td className="py-1.5 text-right"><StatusBadge check={check} /></td>
             </tr>
-          ))}
+            );
+          })}
           {Object.entries(bossModes)
             .sort(([a], [b]) => a.localeCompare(b))
             .map(([mode, entry]) => (
@@ -157,6 +189,7 @@ export default function AdminDashboard() {
                   {entry.withDiffs > 0 ? <span className="text-amber-400">{entry.withDiffs}</span> : <span className="text-zinc-600">0</span>}
                 </td>
                 <td className="py-1.5 pr-3 text-right text-zinc-600">—</td>
+                <td className="py-1.5 pr-3 text-right text-zinc-600">—</td>
                 <td className="py-1.5 text-right">
                   {entry.withDiffs === 0
                     ? <span className="rounded bg-green-900/30 px-1.5 py-0.5 text-[10px] text-green-400">OK</span>
@@ -166,10 +199,10 @@ export default function AdminDashboard() {
               </tr>
             ))}
           {bossStatus === 'loading' && (
-            <tr><td colSpan={6} className="py-1.5 text-zinc-600 animate-pulse">Loading boss status...</td></tr>
+            <tr><td colSpan={7} className="py-1.5 text-zinc-600 animate-pulse">Loading boss status...</td></tr>
           )}
           {bossStatus === 'error' && (
-            <tr><td colSpan={6} className="py-1.5 text-red-400 text-xs">Failed to load boss status</td></tr>
+            <tr><td colSpan={7} className="py-1.5 text-red-400 text-xs">Failed to load boss status</td></tr>
           )}
         </tbody>
       </table>
@@ -188,7 +221,8 @@ function StatusBadge({ check }: { check: DiffCheck }) {
   const r = check.result;
   if (!r) return null;
   const hasNew = (check.newCount ?? 0) > 0;
-  if (r.withDiffs === 0 && !hasNew) {
+  const { diffs, typos } = deriveCounts(r);
+  if (diffs === 0 && (typos ?? 0) === 0 && !hasNew) {
     return <span className="rounded bg-green-900/30 px-1.5 py-0.5 text-[10px] text-green-400">OK</span>;
   }
   return <span className="rounded bg-amber-900/30 px-1.5 py-0.5 text-[10px] text-amber-400">updates</span>;

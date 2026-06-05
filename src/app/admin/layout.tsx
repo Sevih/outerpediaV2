@@ -186,6 +186,20 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               ))
           }
         </nav>
+
+        {/* Back to site */}
+        <div className="border-t border-zinc-800 p-2">
+          <Link
+            href="/"
+            title="Back to homepage"
+            className={`flex items-center gap-2 rounded text-sm text-zinc-400 transition-colors hover:bg-zinc-800/50 hover:text-zinc-200 ${
+              collapsed ? 'h-8 w-8 justify-center mx-auto' : 'px-3 py-1.5'
+            }`}
+          >
+            <span aria-hidden>←</span>
+            {!collapsed && <span>Back to site</span>}
+          </Link>
+        </div>
       </aside>
 
       {/* Content */}

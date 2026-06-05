@@ -174,6 +174,15 @@ export default function HeaderClient({ guideCategorySlugs }: Props) {
 
         {/* Desktop right side: search + lang */}
         <div className="ml-auto hidden items-center gap-2 md:flex">
+          {process.env.NODE_ENV === 'development' && (
+            <Link
+              href="/admin"
+              className="rounded-md border border-amber-700/60 bg-amber-900/30 px-2.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-amber-300 transition hover:bg-amber-800/40"
+              title="Admin (dev only)"
+            >
+              Admin
+            </Link>
+          )}
           <SearchTrigger onClick={() => setSearchOpen(true)} />
           <LanguageSwitcher />
         </div>

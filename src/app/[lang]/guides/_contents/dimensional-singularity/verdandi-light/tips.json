@@ -1,0 +1,32 @@
+{
+  "general": [
+    {
+      "en": "Curse-themed boss: it applies {D/BT_DOT_CURSE} every turn but the Curse damage it deals is halved. Curse is a poor damage source against Verdandi — Curse / Fixed damage it takes is capped at 50,000 and its HP bar is segmented per rank, so even a ~4,250k HP bar only takes ~15k from Curse.",
+      "jp": "呪いテーマのボス：毎ターン{D/BT_DOT_CURSE}を付与するが、自身が与える呪いダメージは半減する。呪いはヴェルダンディへのダメージ源としては不向き — ボスが受ける呪い・固定ダメージは50,000で頭打ちで、HPバーはランクごとに分割されるため、約4,250k HPでも呪いから受けるのは約15kにとどまる。",
+      "kr": "저주 테마 보스: 매 턴 {D/BT_DOT_CURSE}를 부여하지만 자신이 주는 저주 피해는 절반으로 감소합니다. 저주는 베르단디에게 피해 수단으로 부적합합니다 — 보스가 받는 저주 / 고정 피해는 50,000으로 제한되고 HP 바가 랭크별로 분할되어, 약 4,250k HP라도 저주로는 약 15k만 입힙니다.",
+      "zh": "诅咒主题Boss：每回合附加{D/BT_DOT_CURSE}，但自身造成的诅咒伤害减半。诅咒不适合作为对贝尔丹迪的伤害来源 — Boss受到的诅咒/固定伤害上限为50,000，且其血条按评级分段，因此即便约4,250k最大生命值也只受到约15k的诅咒伤害。",
+      "fr": "Boss à thème malédiction : il applique {D/BT_DOT_CURSE} chaque tour mais les dégâts de malédiction qu'il inflige sont réduits de moitié. La malédiction est une mauvaise source de dégâts contre Verdandi — les dégâts de malédiction / fixes qu'il subit sont plafonnés à 50 000 et sa barre de vie est segmentée par rang, si bien que même une barre de ~4 250k PV ne subit que ~15k de la malédiction."
+    },
+    {
+      "en": "Your team deals +10% damage per debuff its members hold — the boss's constant Curse application actually fuels your damage output.",
+      "jp": "味方は保有する弱体効果1個あたり与ダメージ+10% — ボスの絶え間ない呪い付与がむしろ自軍の火力を伸ばす。",
+      "kr": "아군은 보유한 약화 효과 1개당 주는 피해 +10% — 보스의 끊임없는 저주 부여가 오히려 아군의 화력을 높여줍니다.",
+      "zh": "我方每持有1个弱化效果，造成的伤害+10% — Boss不断附加的诅咒反而会提升我方输出。",
+      "fr": "Votre équipe inflige +10% de dégâts par debuff porté par ses membres — l'application constante de malédiction par le Boss alimente en réalité vos dégâts."
+    },
+    {
+      "en": "A target holding {B/BT_IMMUNE} restores 2 WG for the boss on turn end — avoid blanket Immunity.",
+      "jp": "{B/BT_IMMUNE}を保有する対象は行動終了時にボスのWGを2回復させる — 無闇な免疫付与は避ける。",
+      "kr": "{B/BT_IMMUNE}을 보유한 대상은 행동 종료 시 보스의 WG를 2 회복시킵니다 — 무분별한 면역 부여는 피하세요.",
+      "zh": "持有{B/BT_IMMUNE}的目标在行动结束时为Boss恢复2点WG — 避免无差别地附加免疫。",
+      "fr": "Une cible dotée de {B/BT_IMMUNE} restaure 2 de WG au Boss en fin de tour — évitez l'Immunité généralisée."
+    },
+    {
+      "en": "Berserk triggers every 6 enemy actions; before its skill the boss dispels 2 buffs from all enemies.",
+      "jp": "狂暴化は敵が6回行動するたびに発動し、スキル使用前に敵全体の強化効果を2個解除する。",
+      "kr": "광폭화는 적이 6회 행동할 때마다 발동하며, 스킬 사용 전 적 전체의 강화 효과를 2개 해제합니다.",
+      "zh": "狂暴化由敌方每6次行动触发；使用技能前Boss解除全体敌人2个强化效果。",
+      "fr": "Berserk se déclenche toutes les 6 actions ennemies ; avant sa compétence, le Boss retire 2 buffs à tous les ennemis."
+    }
+  ]
+}
