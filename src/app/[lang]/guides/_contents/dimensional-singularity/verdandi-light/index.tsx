@@ -32,6 +32,14 @@ const GDAHLIA_TITLE: LangMap = {
   fr: 'Strategie equipe GDahlia',
 };
 
+const DARK_TITLE: LangMap = {
+  en: 'Dark team strategy',
+  jp: '闇属性編成戦略',
+  kr: '암속성 구성 전략',
+  zh: '暗属性队伍策略',
+  fr: 'Strategie equipe Dark',
+};
+
 export default function VerdandiLightGuide() {
   const { lang } = useI18n();
 
@@ -53,6 +61,8 @@ export default function VerdandiLightGuide() {
       ]} />
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={GDAHLIA_TITLE} entries={RECOMMENDED.gdahlia} />
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={DARK_TITLE} entries={RECOMMENDED.dark} />
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
         hashPrefix="verdandi-light-video"

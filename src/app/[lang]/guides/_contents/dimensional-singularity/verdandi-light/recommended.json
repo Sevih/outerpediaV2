@@ -60,5 +60,77 @@
         "fr": "Support sacrificiel (en choisir 3). L'EE octroie +30% de dégâts tant qu'elle a {B/BT_BARRIER} (60% à EE+10). Laissez-la mourir avant son premier tour."
       }
     }
+  ],
+  "dark": [
+    {
+      "names": ["Gnosis Dahlia", "Core Fusion Epsilon", "Midnight Rush Skadi", "Demiurge Astei", "Maxwell", "Francesca"],
+      "reason": {
+        "en": "Damage options.",
+        "jp": "ダメージ選択肢。",
+        "kr": "딜링 선택지.",
+        "zh": "输出选项。",
+        "fr": "Options de dégâts."
+      }
+    },
+    {
+      "names": ["Gnosis Domine"],
+      "reason": {
+        "en": "Damage option that also brings {B/SPATIAL_DISTORTION_SELF} and {D/SPATIAL_DISTORTION_ENEMY}.",
+        "jp": "{B/SPATIAL_DISTORTION_SELF}と{D/SPATIAL_DISTORTION_ENEMY}も持つダメージ選択肢。",
+        "kr": "{B/SPATIAL_DISTORTION_SELF}과 {D/SPATIAL_DISTORTION_ENEMY}도 보유한 딜링 선택지.",
+        "zh": "兼具{B/SPATIAL_DISTORTION_SELF}与{D/SPATIAL_DISTORTION_ENEMY}的输出选项。",
+        "fr": "Option de dégâts qui apporte aussi {B/SPATIAL_DISTORTION_SELF} et {D/SPATIAL_DISTORTION_ENEMY}."
+      }
+    },
+    {
+      "names": ["Gnosis Viella"],
+      "reason": {
+        "en": "Damage option that also brings {B/BANES_DOMAIN} and {D/BANES_DOMAIN}.",
+        "jp": "{B/BANES_DOMAIN}と{D/BANES_DOMAIN}も持つダメージ選択肢。",
+        "kr": "{B/BANES_DOMAIN}과 {D/BANES_DOMAIN}도 보유한 딜링 선택지.",
+        "zh": "兼具{B/BANES_DOMAIN}与{D/BANES_DOMAIN}的输出选项。",
+        "fr": "Option de dégâts qui apporte aussi {B/BANES_DOMAIN} et {D/BANES_DOMAIN}."
+      }
+    },
+    {
+      "names": ["Monad Iota"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} dual attacks and buff support.",
+        "jp": "{B/BT_CALL_BACKUP}による連携攻撃とバフサポート。",
+        "kr": "{B/BT_CALL_BACKUP} 연계 공격과 버프 지원.",
+        "zh": "{B/BT_CALL_BACKUP}连携攻击与增益支援。",
+        "fr": "Attaques doubles {B/BT_CALL_BACKUP} et support de buffs."
+      }
+    },
+    {
+      "names": ["Monad Eva"],
+      "reason": {
+        "en": "{B/BT_CALL_BACKUP} dual attacks, AP battery and {B/BT_REVIVAL} once damage ramps up.",
+        "jp": "{B/BT_CALL_BACKUP}による連携攻撃、APバッテリー、ダメージが上昇してからの{B/BT_REVIVAL}。",
+        "kr": "{B/BT_CALL_BACKUP} 연계 공격, AP 배터리, 피해가 증가할 때의 {B/BT_REVIVAL}.",
+        "zh": "{B/BT_CALL_BACKUP}连携攻击、AP电池，以及伤害递增后的{B/BT_REVIVAL}。",
+        "fr": "Attaques doubles {B/BT_CALL_BACKUP}, batterie d'AP et {B/BT_REVIVAL} une fois que les dégâts montent."
+      }
+    },
+    {
+      "names": ["Nella"],
+      "reason": {
+        "en": "AP battery — avoid using her S3 or burst 3.",
+        "jp": "APバッテリー — S3やバースト3の使用は避ける。",
+        "kr": "AP 배터리 — S3나 버스트 3 사용은 피하세요.",
+        "zh": "AP电池 — 避免使用她的S3或爆发3阶。",
+        "fr": "Batterie d'AP — évitez son S3 et le burst 3."
+      }
+    },
+    {
+      "names": ["Omega Nadja"],
+      "reason": {
+        "en": "{C/Defender} providing strong teamwide damage mitigation; {D/IRREGULAR_INFECTION} also shortens the boss's buff durations.",
+        "jp": "{C/Defender}。チーム全体に高いダメージ軽減を提供し、{D/IRREGULAR_INFECTION}でボスの強化効果の持続も短縮する。",
+        "kr": "{C/Defender}로 팀 전체에 강력한 피해 감소를 제공하며, {D/IRREGULAR_INFECTION}으로 보스의 강화 효과 지속시간도 단축합니다.",
+        "zh": "{C/Defender}，为全队提供高额伤害减免；{D/IRREGULAR_INFECTION}还能缩短Boss强化效果的持续时间。",
+        "fr": "{C/Defender} apportant une forte mitigation de dégâts à toute l'équipe ; {D/IRREGULAR_INFECTION} raccourcit aussi les durées des buffs du Boss."
+      }
+    }
   ]
 }
