@@ -79,7 +79,6 @@ export default function PreventWorldAlterationGuide() {
       title={str.title}
       introduction={str.intro}
       pool={pool}
-      updating
       defaultVersion="jun2026"
       versions={{
         jun2026: resolve(
