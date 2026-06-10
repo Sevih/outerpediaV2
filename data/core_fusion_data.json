@@ -228,5 +228,58 @@
         "review_fr": "Self {B/BT_STAT|ST_SPEED} (1 tour) en début de combat."
       }
     }
+  },
+  {
+    "name": "Core Fusion Epsilon",
+    "review": "Full rework into a DEF-scaling DPS: every skill gains +50% DMG and scales on Defense instead of Attack while {B/BT_STAT|ST_DEF} is active (all Barrier-conditional bonuses removed). Gains buff steal across the kit and a team {B/BT_STAT|ST_CRITICAL_DMG_RATE} buff on S3.",
+    "review_jp": "防御力依存DPSに完全リワーク。{B/BT_STAT|ST_DEF}保有中、全スキルのダメージが+50%UPし、攻撃力の代わりに防御力に比例（シールド条件ボーナスは全て削除）。キット全体で強化効果奪取を獲得し、S3で味方全体に{B/BT_STAT|ST_CRITICAL_DMG_RATE}を付与。",
+    "review_kr": "방어력 비례 딜러로 완전 리워크. {B/BT_STAT|ST_DEF} 보유 중 모든 스킬 피해 +50% 증가 & 공격력 대신 방어력에 비례 (실드 조건 보너스 전부 삭제). 킷 전체에 강화 효과 강탈 획득, S3로 아군 전체 {B/BT_STAT|ST_CRITICAL_DMG_RATE} 부여.",
+    "review_zh": "完全重做为防御力成长型输出。持有{B/BT_STAT|ST_DEF}期间所有技能伤害+50%，且按防御力而非攻击力计算（护盾条件加成全部移除）。整套技能获得夺取强化效果，S3为全队提供{B/BT_STAT|ST_CRITICAL_DMG_RATE}。",
+    "review_fr": "Rework complet en DPS au scaling DEF : tous les skills gagnent +50% de DMG et scalent sur la DEF au lieu de l'ATK tant que {B/BT_STAT|ST_DEF} est actif (tous les bonus conditionnés au Barrier sont supprimés). Gagne du vol de buffs sur tout le kit et un buff {B/BT_STAT|ST_CRITICAL_DMG_RATE} d'équipe sur le S3.",
+    "recommended_level": "3 or 5",
+    "changes": {
+      "s1": {
+        "review": "Chance to gain {B/BT_STAT|ST_DEF} increased: 20/35/50% → 50/75/100% (guaranteed at Lv5).",
+        "review_jp": "{B/BT_STAT|ST_DEF}の獲得確率がUP：20/35/50% → 50/75/100%（Lv5で確定）。",
+        "review_kr": "{B/BT_STAT|ST_DEF} 획득 확률 증가: 20/35/50% → 50/75/100% (Lv5에서 확정).",
+        "review_zh": "获得{B/BT_STAT|ST_DEF}的概率提升：20/35/50% → 50/75/100%（Lv5时必定触发）。",
+        "review_fr": "Chance d'obtenir {B/BT_STAT|ST_DEF} augmentée : 20/35/50% → 50/75/100% (garanti au Lv5)."
+      },
+      "s2": {
+        "review": "Gains {D/BT_STEAL_BUFF} (1 buff, 2 at Lv4).\nBurst 1: enhanced steal (ignores Resilience) + 1 WGD (was DMG increase + 1 buff removed).\nBurst 2: DMG increase (was +1 buff removed).",
+        "review_jp": "{D/BT_STEAL_BUFF}を獲得（1個、Lv4で2個）。\nバースト1：強化奪取強化（効果抵抗無視）＋WGダメージ+1（以前はダメージUP＋強化効果解除+1）。\nバースト2：ダメージUP（以前は強化効果解除+1）。",
+        "review_kr": "{D/BT_STEAL_BUFF} 획득 (1개, Lv4에서 2개).\n버스트 1: 강화 강탈 강화 (효과 저항 무시) + WG 감소량 +1 (이전 피해 증가 + 강화 효과 해제 +1).\n버스트 2: 피해 증가 (이전 강화 효과 해제 +1).",
+        "review_zh": "获得{D/BT_STEAL_BUFF}（1个，Lv4时2个）。\n爆发1：强化夺取强化（无视效果抵抗）+WG降低量+1（原伤害提升+解除强化效果+1）。\n爆发2：伤害提升（原解除强化效果+1）。",
+        "review_fr": "Gagne {D/BT_STEAL_BUFF} (1 buff, 2 au Lv4).\nBurst 1 : vol de buff amélioré (ignore la RES) + 1 WGD (avant : DMG increase + 1 buff retiré).\nBurst 2 : DMG increase (avant : +1 buff retiré)."
+      },
+      "s3": {
+        "review": "Changed from AoE to single-target. AP self-recovery (35 per target) replaced by removing all of the target's AP. After attacking, grants team {B/BT_STAT|ST_CRITICAL_DMG_RATE} (2 turns). {B/BT_INVINCIBLE} at Lv5 unchanged.",
+        "review_jp": "全体から単体に変更。自分のAP回復（対象ごとに35）が対象のAP全除去に置き換え。攻撃後、味方全体に{B/BT_STAT|ST_CRITICAL_DMG_RATE}（2ターン）を付与。Lv5の{B/BT_INVINCIBLE}は変わらず。",
+        "review_kr": "전체에서 단일 대상으로 변경. 자신 AP 회복 (대상당 35)이 대상의 AP 전부 제거로 교체. 공격 후 아군 전체에 {B/BT_STAT|ST_CRITICAL_DMG_RATE} (2턴) 부여. Lv5의 {B/BT_INVINCIBLE}은 유지.",
+        "review_zh": "从全体改为单体。自身AP恢复（每目标35）替换为清除目标所有AP。攻击后为全队附加{B/BT_STAT|ST_CRITICAL_DMG_RATE}（2回合）。Lv5的{B/BT_INVINCIBLE}保留。",
+        "review_fr": "Passe d'AoE à monocible. La récupération d'AP (35 par cible) est remplacée par le retrait de toute l'AP de la cible. Après l'attaque, accorde {B/BT_STAT|ST_CRITICAL_DMG_RATE} à l'équipe (2 tours). {B/BT_INVINCIBLE} au Lv5 conservé."
+      },
+      "chain": {
+        "review": "Chain: Starter → Companion. Team {B/BT_DMG_TARGET_BREAK} replaced by own skill cooldown -1.\nDual: Barrier-conditional DMG replaced by {D/BT_STEAL_BUFF} (1 buff, ignores Resilience).",
+        "review_jp": "チェーン：スターター→コンパニオン。味方全体{B/BT_DMG_TARGET_BREAK}が自分のスキルターン-1に置き換え。\n連携攻撃：シールド条件ダメージが{D/BT_STEAL_BUFF}（1個、効果抵抗無視）に置き換え。",
+        "review_kr": "체인: 스타터 → 컴패니언. 아군 전체 {B/BT_DMG_TARGET_BREAK}이 자신 스킬 쿨타임 -1로 교체.\n협공: 실드 조건 피해가 {D/BT_STEAL_BUFF} (1개, 효과 저항 무시)로 교체.",
+        "review_zh": "连锁：开启者→同伴。全队{B/BT_DMG_TARGET_BREAK}替换为自身技能冷却-1。\n协攻：护盾条件伤害替换为{D/BT_STEAL_BUFF}（1个，无视效果抵抗）。",
+        "review_fr": "Chain : Starter → Companion. Le {B/BT_DMG_TARGET_BREAK} d'équipe est remplacé par cooldown de ses propres skills -1.\nDual : le DMG conditionné au Barrier est remplacé par {D/BT_STEAL_BUFF} (1 buff, ignore la RES)."
+      },
+      "passive": {
+        "review": "+50% DMG vs elemental advantage. Enhanced (Lv5): all attacks count as elemental advantage.",
+        "review_jp": "属性有利に+50%ダメージ。強化（Lv5）：すべての攻撃が有利属性判定に。",
+        "review_kr": "속성 유리 시 +50% 피해. 강화 (Lv5): 모든 공격이 유리한 상성으로 적용.",
+        "review_zh": "属性克制时+50%伤害。强化（Lv5）：所有攻击以克制属性生效。",
+        "review_fr": "+50% DMG en avantage élémentaire. Amélioré (Lv5) : toutes les attaques comptent comme avantage élémentaire."
+      },
+      "transcendence": {
+        "review": "5★: +30% Penetration against Dimensional Singularity bosses.",
+        "review_jp": "5★：次元特異点ボス対象に貫通力+30%。",
+        "review_kr": "5★: 차원 특이점 보스 대상 관통력 +30%.",
+        "review_zh": "5★：对次元奇点首领穿透力+30%。",
+        "review_fr": "5★ : +30% de Penetration vs boss Dimensional Singularity."
+      }
+    }
   }
 ]

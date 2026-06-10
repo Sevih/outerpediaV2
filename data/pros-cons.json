@@ -1648,5 +1648,323 @@
         "zh": "缺乏Mene或Nella等治疗角色所拥有的复活机制或即时爆发减免（如护盾），因此在高端PvP中略逊一筹"
       }
     ]
+  },
+  "midnight-rush-skadi": {
+    "pros": [
+      {
+        "en": "perpetually attacks with {B/BT_DMG_ELEMENT_SUPERIORITY} against all enemies due to her {SK/Midnight Rush Skadi|S2} passive",
+        "jp": "{SK/Midnight Rush Skadi|S2}のパッシブにより、全敵に対して常に{B/BT_DMG_ELEMENT_SUPERIORITY}で攻撃する",
+        "kr": "{SK/Midnight Rush Skadi|S2} 패시브로 인해 모든 적에게 항상 {B/BT_DMG_ELEMENT_SUPERIORITY}로 공격함",
+        "zh": "凭借{SK/Midnight Rush Skadi|S2}被动，始终以{B/BT_DMG_ELEMENT_SUPERIORITY}攻击所有敌人"
+      },
+      {
+        "en": "incredibly durable for a damage dealer, taking 50% reduced damage from damage-over-time effects and possessing innate immunity to {D/BT_SILENCE} and {D/BT_ACTION_GAUGE} debuffs",
+        "jp": "アタッカーとしては非常に耐久力が高く、継続ダメージ効果から受けるダメージを50%軽減し、{D/BT_SILENCE}と{D/BT_ACTION_GAUGE}デバフへの生来の耐性を持つ",
+        "kr": "딜러치고는 매우 단단하여, 지속 피해 효과로 받는 피해를 50% 감소시키고 {D/BT_SILENCE}와 {D/BT_ACTION_GAUGE} 디버프에 대한 선천적 면역을 보유함",
+        "zh": "作为输出角色却异常坚韧，受到的持续伤害降低50%，并天生免疫{D/BT_SILENCE}与{D/BT_ACTION_GAUGE}减益"
+      },
+      {
+        "en": "grants herself the irremovable {B/RUSH} buff before using {SK/Midnight Rush Skadi|S3}, which halves her incoming damage and boosts the skill's damage by an immense 100%",
+        "jp": "{SK/Midnight Rush Skadi|S3}を使用する前に解除不可の{B/RUSH}バフを自身に付与し、被ダメージを半減させつつ、そのスキルのダメージを膨大な100%上昇させる",
+        "kr": "{SK/Midnight Rush Skadi|S3}을 사용하기 전에 해제 불가능한 {B/RUSH} 버프를 자신에게 부여하여, 받는 피해를 절반으로 줄이고 해당 스킬의 피해를 무려 100% 증가시킴",
+        "zh": "在使用{SK/Midnight Rush Skadi|S3}前为自身赋予不可移除的{B/RUSH}增益，使受到的伤害减半，并将该技能伤害大幅提升100%"
+      },
+      {
+        "en": "safely bypasses enemy reaction mechanics (like counterattacks and agile responses) with {SK/Midnight Rush Skadi|S1} while {B/RUSH} is active, while also unconditionally ignoring {S/RES} to inflict {D/BT_ACTION_GAUGE}",
+        "jp": "{B/RUSH}が有効な間、{SK/Midnight Rush Skadi|S1}で敵の反応系メカニクス（反撃や俊敏な対応など）を安全に回避し、さらに無条件で{S/RES}を無視して{D/BT_ACTION_GAUGE}を付与する",
+        "kr": "{B/RUSH}가 활성화된 동안 {SK/Midnight Rush Skadi|S1}로 적의 반응 메커니즘(반격 및 민첩 대응 등)을 안전하게 우회하며, 추가로 무조건적으로 {S/RES}를 무시하고 {D/BT_ACTION_GAUGE}를 부여함",
+        "zh": "在{B/RUSH}生效期间，通过{SK/Midnight Rush Skadi|S1}安全规避敌方的反应机制（如反击与敏捷应对），同时无条件无视{S/RES}施加{D/BT_ACTION_GAUGE}"
+      },
+      {
+        "en": "{SK/Midnight Rush Skadi|S2} provides excellent self-protection by granting an AoE attack that gives her a {B/BT_BARRIER} scaling with {S/HP} and a {B/BT_STAT|ST_COUNTER_RATE} buff",
+        "jp": "{SK/Midnight Rush Skadi|S2}は、{S/HP}に比例する{B/BT_BARRIER}と{B/BT_STAT|ST_COUNTER_RATE}バフを付与する範囲攻撃を提供し、優れた自己防衛手段となる",
+        "kr": "{SK/Midnight Rush Skadi|S2}는 {S/HP}에 비례하는 {B/BT_BARRIER}와 {B/BT_STAT|ST_COUNTER_RATE} 버프를 부여하는 광역 공격을 제공하여 뛰어난 자기 보호 수단이 됨",
+        "zh": "{SK/Midnight Rush Skadi|S2}提供一次范围攻击，为她赋予随{S/HP}成长的{B/BT_BARRIER}及{B/BT_STAT|ST_COUNTER_RATE}增益，具备出色的自我保护能力"
+      }
+    ],
+    "cons": [
+      {
+        "en": "the {D/BT_EXTEND_BUFF} effect on her {SK/Midnight Rush Skadi|S3} requires her to have higher Max {S/HP} than the target, making it difficult to strip buffs from tanky bosses or Defenders without heavy stat investment",
+        "jp": "{SK/Midnight Rush Skadi|S3}の{D/BT_EXTEND_BUFF}効果は対象より高い最大{S/HP}を必要とするため、大規模なステータス投資なしでは耐久型ボスやディフェンダーからバフを剥がすのが難しい",
+        "kr": "{SK/Midnight Rush Skadi|S3}의 {D/BT_EXTEND_BUFF} 효과는 대상보다 높은 최대 {S/HP}를 요구하므로, 대규모 스탯 투자 없이는 탱키한 보스나 디펜더의 버프를 제거하기 어려움",
+        "zh": "{SK/Midnight Rush Skadi|S3}的{D/BT_EXTEND_BUFF}效果要求她的最大{S/HP}高于目标，因此在缺乏大量属性投资时，难以驱散坦度较高的Boss或防御型角色的增益"
+      },
+      {
+        "en": "heavily reliant on her {B/RUSH} state to maximize her damage multiplier and safely use her basic attack, punishing poor cooldown management",
+        "jp": "ダメージ倍率を最大化し基本攻撃を安全に使用するには{B/RUSH}状態に大きく依存しており、クールダウン管理が下手だと痛手となる",
+        "kr": "피해 배율을 극대화하고 기본 공격을 안전하게 사용하려면 {B/RUSH} 상태에 크게 의존하므로, 쿨다운 관리가 미흡하면 불이익을 받음",
+        "zh": "高度依赖{B/RUSH}状态来最大化伤害倍率并安全使用普通攻击，冷却管理不当会受到惩罚"
+      }
+    ]
+  },
+  "bell-cranel": {
+    "pros": [
+      {
+        "en": "exceptional {E/Fire} {C/Mage} damage dealer who excels in PvE, acting as a core unit for mono-Fire or Burn team compositions",
+        "jp": "PvEで優れた性能を発揮する卓越した{E/Fire}{C/Mage}アタッカーで、単一火属性または火傷編成の中核ユニットとして機能する",
+        "kr": "PvE에서 뛰어난 활약을 보이는 탁월한 {E/Fire} {C/Mage} 딜러로, 단일 화속성 또는 화상 편성의 핵심 유닛 역할을 함",
+        "zh": "在PvE中表现出色的顶尖{E/Fire}{C/Mage}输出角色，是纯火或灼烧队伍编成的核心单位"
+      },
+      {
+        "en": "his 4-star transcendence provides a team-wide 50% damage boost against enemies afflicted by {D/BT_DOT_BURN}",
+        "jp": "4凸の超越により、{D/BT_DOT_BURN}に侵された敵に対してチーム全体のダメージを50%上昇させる",
+        "kr": "4성 초월을 통해 {D/BT_DOT_BURN}에 걸린 적에게 팀 전체 피해를 50% 증가시킴",
+        "zh": "其4星超越为全队提供对处于{D/BT_DOT_BURN}状态敌人的50%伤害提升"
+      },
+      {
+        "en": "benefits immensely from team support at 6-stars, as it doubles the effectiveness of any stat buffs granted to him",
+        "jp": "6凸ではチームサポートから絶大な恩恵を受け、自身に付与されたあらゆるステータスバフの効果が2倍になる",
+        "kr": "6성에서는 자신에게 부여된 모든 스탯 버프의 효과가 2배가 되어 팀 지원에서 막대한 이득을 얻음",
+        "zh": "在6星时能从队伍支援中获益极大，因为它会使他获得的任何属性增益效果翻倍"
+      },
+      {
+        "en": "his {EE/Bell Cranel} allows his {SK/Bell Cranel|S3} to completely ignore enemy {S/RES}, extending this capability to his {SK/Bell Cranel|S1} when upgraded to Level 10",
+        "jp": "{EE/Bell Cranel}により{SK/Bell Cranel|S3}が敵の{S/RES}を完全に無視できるようになり、レベル10まで強化すると{SK/Bell Cranel|S1}にもこの効果が拡張される",
+        "kr": "{EE/Bell Cranel}를 통해 {SK/Bell Cranel|S3}이 적의 {S/RES}를 완전히 무시할 수 있으며, 10레벨까지 강화하면 {SK/Bell Cranel|S1}에도 이 효과가 확장됨",
+        "zh": "{EE/Bell Cranel}使其{SK/Bell Cranel|S3}能够完全无视敌方{S/RES}，升至10级后此效果还会延伸至{SK/Bell Cranel|S1}"
+      }
+    ],
+    "cons": [
+      {
+        "en": "relies heavily on enemies being afflicted with {D/BT_DOT_BURN} to maximize his team-wide damage utility",
+        "jp": "チーム全体へのダメージ補助を最大化するには、敵が{D/BT_DOT_BURN}に侵されていることに大きく依存する",
+        "kr": "팀 전체 피해 유틸리티를 극대화하려면 적이 {D/BT_DOT_BURN}에 걸려 있는 것에 크게 의존함",
+        "zh": "高度依赖敌人处于{D/BT_DOT_BURN}状态来最大化其全队伤害增益"
+      },
+      {
+        "en": "his 5-star transcendence provides minimal value, making the investment gap between his 4-star and 6-star power spikes awkward",
+        "jp": "5凸の超越の価値は最小限で、4凸と6凸のパワースパイク間の投資ギャップが扱いづらくなっている",
+        "kr": "5성 초월의 가치가 미미하여, 4성과 6성 파워 스파이크 사이의 투자 공백이 어색함",
+        "zh": "其5星超越提供的价值极低，使得4星与6星强度爆发之间的投资空档显得尴尬"
+      }
+    ]
+  },
+  "claire": {
+    "pros": [
+      {
+        "en": "excellent 1-star healer who provides strong offensive support alongside her utility",
+        "jp": "ユーティリティに加えて強力な攻撃サポートを提供する優れた1星ヒーラー",
+        "kr": "유틸리티와 더불어 강력한 공격 지원을 제공하는 뛰어난 1성 힐러",
+        "zh": "出色的1星治疗角色，在提供功能性的同时还能带来强力的进攻支援"
+      },
+      {
+        "en": "grants the team a {B/BT_CONTINU_HEAL} with her {SK/Claire|S2} and a team-wide {B/BT_BARRIER} with her {SK/Claire|S3}",
+        "jp": "{SK/Claire|S2}でチームに{B/BT_CONTINU_HEAL}を、{SK/Claire|S3}でチーム全体に{B/BT_BARRIER}を付与する",
+        "kr": "{SK/Claire|S2}로 팀에 {B/BT_CONTINU_HEAL}을, {SK/Claire|S3}으로 팀 전체에 {B/BT_BARRIER}를 부여함",
+        "zh": "通过{SK/Claire|S2}为队伍提供{B/BT_CONTINU_HEAL}，并通过{SK/Claire|S3}为全队提供{B/BT_BARRIER}"
+      },
+      {
+        "en": "her {B/BT_BARRIER} scales with her {S/ATK}, allowing her to contribute to team damage while protecting allies",
+        "jp": "{B/BT_BARRIER}は{S/ATK}に比例するため、味方を守りながらチームのダメージにも貢献できる",
+        "kr": "{B/BT_BARRIER}가 {S/ATK}에 비례하므로, 아군을 보호하면서 팀 피해에도 기여할 수 있음",
+        "zh": "其{B/BT_BARRIER}随{S/ATK}成长，使她在保护友军的同时也能贡献队伍伤害"
+      },
+      {
+        "en": "her {EE/Claire} is exceptionally powerful, reducing her skill cooldowns by 1 whenever she lands a critical hit, enabling nearly infinite uptime on her buffs",
+        "jp": "{EE/Claire}は非常に強力で、クリティカルヒットを与えるたびにスキルのクールダウンを1短縮し、バフをほぼ無限に維持できる",
+        "kr": "{EE/Claire}는 매우 강력하여, 치명타를 적중시킬 때마다 스킬 쿨다운을 1 감소시켜 버프를 거의 무한히 유지할 수 있게 함",
+        "zh": "{EE/Claire}极为强力，每当她打出暴击时便使技能冷却减少1，使其增益几乎能够无限维持"
+      }
+    ],
+    "cons": [
+      {
+        "en": "has a highly unusual stat requirement for a healer, needing heavy investment in {S/ATK} and {S/CHC} to maximize her barrier and trigger her {EE/Claire}",
+        "jp": "ヒーラーとしては非常に珍しいステータス要求を持ち、バリアを最大化し{EE/Claire}を発動させるには{S/ATK}と{S/CHC}への大規模な投資が必要",
+        "kr": "힐러치고는 매우 이례적인 스탯 요구치를 가지며, 보호막을 극대화하고 {EE/Claire}를 발동시키려면 {S/ATK}와 {S/CHC}에 대한 대규모 투자가 필요함",
+        "zh": "作为治疗角色却有着极不寻常的属性需求，需要在{S/ATK}与{S/CHC}上大量投资才能最大化护盾并触发{EE/Claire}"
+      },
+      {
+        "en": "relies on continuous healing and barriers rather than burst healing, which may not be enough to save a critically low ally in an emergency",
+        "jp": "バースト回復ではなく継続回復とバリアに依存しているため、緊急時に瀕死の味方を救うには不十分な場合がある",
+        "kr": "폭발적인 회복이 아닌 지속 회복과 보호막에 의존하므로, 긴급 상황에서 빈사 상태의 아군을 구하기에는 부족할 수 있음",
+        "zh": "依赖持续治疗与护盾而非爆发治疗，在紧急情况下可能不足以挽救濒死的友军"
+      },
+      {
+        "en": "as a 1-star unit, her base stats are generally lower compared to 3-star healers, requiring more gear investment to reach her full potential",
+        "jp": "1星ユニットであるため、基礎ステータスは3星ヒーラーと比べて全般的に低く、本来の力を発揮するにはより多くの装備投資が必要",
+        "kr": "1성 유닛이기 때문에 기본 스탯이 3성 힐러에 비해 전반적으로 낮아, 잠재력을 온전히 발휘하려면 더 많은 장비 투자가 필요함",
+        "zh": "作为1星单位，其基础属性普遍低于3星治疗角色，需要更多装备投资才能发挥全部潜力"
+      }
+    ]
+  },
+  "core-fusion-lisha": {
+    "pros": [
+      {
+        "en": "highly self-sufficient 2-star damage dealer who independently buffs herself with {B/BT_STAT|ST_ATK}, {B/BT_STAT|ST_PIERCE_POWER_RATE}, and {B/BT_STAT|ST_CRITICAL_DMG_RATE}",
+        "jp": "{B/BT_STAT|ST_ATK}、{B/BT_STAT|ST_PIERCE_POWER_RATE}、{B/BT_STAT|ST_CRITICAL_DMG_RATE}を自力で自身に付与する、非常に自己完結した2星アタッカー",
+        "kr": "{B/BT_STAT|ST_ATK}, {B/BT_STAT|ST_PIERCE_POWER_RATE}, {B/BT_STAT|ST_CRITICAL_DMG_RATE}를 스스로에게 부여하는 매우 자급자족적인 2성 딜러",
+        "zh": "高度自给自足的2星输出角色，可独立为自身赋予{B/BT_STAT|ST_ATK}、{B/BT_STAT|ST_PIERCE_POWER_RATE}与{B/BT_STAT|ST_CRITICAL_DMG_RATE}"
+      },
+      {
+        "en": "acts as a devastating counter to {E/Earth} units, gaining a 30% {B/BT_ACTION_GAUGE} push from {SK/Core Fusion Lisha|S2} and ignoring an additional 30% of their Defense with {SK/Core Fusion Lisha|S3}",
+        "jp": "{E/Earth}ユニットに対する強力なカウンターとして機能し、{SK/Core Fusion Lisha|S2}で30%の{B/BT_ACTION_GAUGE}増加を得て、{SK/Core Fusion Lisha|S3}でさらに30%の防御を無視する",
+        "kr": "{E/Earth} 유닛에 대한 강력한 카운터로 작용하여, {SK/Core Fusion Lisha|S2}로 30%의 {B/BT_ACTION_GAUGE} 상승을 얻고 {SK/Core Fusion Lisha|S3}으로 추가로 30%의 방어력을 무시함",
+        "zh": "对{E/Earth}单位是毁灭性的克制者，通过{SK/Core Fusion Lisha|S2}获得30%的{B/BT_ACTION_GAUGE}推进，并以{SK/Core Fusion Lisha|S3}额外无视其30%防御"
+      },
+      {
+        "en": "can ignore up to 50% of enemy Defense with her {SK/Core Fusion Lisha|S3} when attacking an {E/Earth} enemy while possessing a {B/BT_STAT|ST_PIERCE_POWER_RATE} buff",
+        "jp": "{B/BT_STAT|ST_PIERCE_POWER_RATE}バフを所持した状態で{E/Earth}の敵を攻撃する際、{SK/Core Fusion Lisha|S3}で最大50%の敵防御を無視できる",
+        "kr": "{B/BT_STAT|ST_PIERCE_POWER_RATE} 버프를 보유한 상태로 {E/Earth} 적을 공격할 때, {SK/Core Fusion Lisha|S3}으로 최대 50%의 적 방어력을 무시할 수 있음",
+        "zh": "在持有{B/BT_STAT|ST_PIERCE_POWER_RATE}增益时攻击{E/Earth}敌人，可通过{SK/Core Fusion Lisha|S3}无视最多50%的敌方防御"
+      },
+      {
+        "en": "Core-Fused Passive grants a massive 50% damage boost when attacking with elemental advantage, which is further enhanced against bosses at Level 5",
+        "jp": "コア融合パッシブは、属性有利で攻撃する際に50%という大きなダメージ上昇を付与し、レベル5ではボスに対してさらに強化される",
+        "kr": "코어 융합 패시브는 속성 우위로 공격할 때 50%의 막대한 피해 증가를 부여하며, 5레벨에서는 보스에게 추가로 강화됨",
+        "zh": "核心融合被动在以属性优势攻击时提供高达50%的伤害提升，5级时对Boss的效果会进一步增强"
+      },
+      {
+        "en": "{EE/Core Fusion Lisha} provides incredible utility for Mage compositions, boosting allied Mage damage by 50% and scaling her own Attack whenever they take a turn",
+        "jp": "{EE/Core Fusion Lisha}はメイジ編成に絶大なユーティリティを提供し、味方メイジのダメージを50%上昇させ、彼らがターンを得るたびに自身の攻撃力を増加させる",
+        "kr": "{EE/Core Fusion Lisha}는 메이지 편성에 엄청난 유틸리티를 제공하여, 아군 메이지의 피해를 50% 증가시키고 그들이 턴을 가질 때마다 자신의 공격력을 증가시킴",
+        "zh": "{EE/Core Fusion Lisha}为法师编成提供极强的功能性，将友方法师伤害提升50%，并在他们行动时提升自身攻击力"
+      }
+    ],
+    "cons": [
+      {
+        "en": "requires a massive investment of up to 900 fusion cores to fully upgrade her skills and unlock her Level 5 Core-Fused passive, which takes considerable time to farm from the Monad Gate",
+        "jp": "スキルを完全に強化しレベル5のコア融合パッシブを解放するには最大900個の融合コアという膨大な投資が必要で、モナドゲートから集めるにはかなりの時間がかかる",
+        "kr": "스킬을 완전히 강화하고 5레벨 코어 융합 패시브를 해금하려면 최대 900개의 융합 코어라는 막대한 투자가 필요하며, 모나드 게이트에서 파밍하는 데 상당한 시간이 걸림",
+        "zh": "完全升级技能并解锁5级核心融合被动需要多达900个融合核心的庞大投资，从莫纳德之门刷取需要相当长的时间"
+      },
+      {
+        "en": "upgrading to her Core Fusion form replaces her base version, preventing its further use",
+        "jp": "コア融合形態にアップグレードすると基本版が置き換えられ、以降は使用できなくなる",
+        "kr": "코어 융합 형태로 업그레이드하면 기본 버전이 대체되어 더 이상 사용할 수 없게 됨",
+        "zh": "升级为核心融合形态会替换其基础版本，使其无法再被使用"
+      },
+      {
+        "en": "her maximum damage potential and 50% Defense penetration on {SK/Core Fusion Lisha|S3} are strictly conditional, requiring specific buffs and targeting {E/Earth} enemies to fully activate",
+        "jp": "最大ダメージ性能と{SK/Core Fusion Lisha|S3}の50%防御貫通は厳しく条件付きで、完全に発動させるには特定のバフと{E/Earth}の敵を対象にする必要がある",
+        "kr": "최대 피해 잠재력과 {SK/Core Fusion Lisha|S3}의 50% 방어 관통은 엄격하게 조건부이며, 완전히 발동시키려면 특정 버프와 {E/Earth} 적을 대상으로 해야 함",
+        "zh": "其最大伤害潜力与{SK/Core Fusion Lisha|S3}的50%防御穿透有着严格的条件限制，需要特定增益并以{E/Earth}敌人为目标才能完全发挥"
+      }
+    ]
+  },
+  "ember": {
+    "pros": [
+      {
+        "en": "dedicated {E/Fire} {C/Defender} who acts as the premier enabler for burn-focused team compositions",
+        "jp": "火傷重視の編成における最高の起点役として機能する、専門的な{E/Fire}{C/Defender}",
+        "kr": "화상 중심 편성에서 최고의 기점 역할을 하는 전문적인 {E/Fire} {C/Defender}",
+        "zh": "专精的{E/Fire}{C/Defender}，是灼烧流队伍编成的顶级触发者"
+      },
+      {
+        "en": "her unique {B/RADIANT_WILL} buff increases the {D/BT_DOT_BURN} damage dealt by all allies by a massive 50%, significantly boosting team DPS",
+        "jp": "固有の{B/RADIANT_WILL}バフは、全味方が与える{D/BT_DOT_BURN}ダメージを50%も増加させ、チームのDPSを大幅に高める",
+        "kr": "고유 {B/RADIANT_WILL} 버프는 모든 아군이 입히는 {D/BT_DOT_BURN} 피해를 무려 50% 증가시켜 팀 DPS를 크게 높임",
+        "zh": "其专属的{B/RADIANT_WILL}增益将所有友军造成的{D/BT_DOT_BURN}伤害大幅提升50%，显著提高队伍DPS"
+      },
+      {
+        "en": "highly disruptive passive via {SK/Ember|S2}, which has a high chance to inflict {D/BT_DOT_BURN} on all enemies whenever she is attacked",
+        "jp": "{SK/Ember|S2}による非常に妨害的なパッシブを持ち、攻撃を受けるたびに高確率で全敵に{D/BT_DOT_BURN}を付与する",
+        "kr": "{SK/Ember|S2}를 통한 매우 방해적인 패시브를 지녀, 공격받을 때마다 높은 확률로 모든 적에게 {D/BT_DOT_BURN}을 부여함",
+        "zh": "通过{SK/Ember|S2}拥有极具干扰性的被动，每当她受到攻击时都有高几率对所有敌人施加{D/BT_DOT_BURN}"
+      },
+      {
+        "en": "her {SK/Ember|S3} is a safe AoE initiation tool that grants {B/RADIANT_WILL}, applies {D/BT_DOT_BURN}, and safely bypasses enemy reaction mechanics like counterattacks or agile responses",
+        "jp": "{SK/Ember|S3}は{B/RADIANT_WILL}を付与し{D/BT_DOT_BURN}を適用する安全な範囲開始手段で、反撃や俊敏な対応などの敵の反応系メカニクスを安全に回避する",
+        "kr": "{SK/Ember|S3}은 {B/RADIANT_WILL}을 부여하고 {D/BT_DOT_BURN}을 적용하는 안전한 광역 시작 수단으로, 반격이나 민첩 대응 같은 적의 반응 메커니즘을 안전하게 우회함",
+        "zh": "{SK/Ember|S3}是一项安全的范围起手技能，可赋予{B/RADIANT_WILL}、施加{D/BT_DOT_BURN}，并安全规避反击或敏捷应对等敌方反应机制"
+      },
+      {
+        "en": "excels at manipulating enemy aggro, as her Dual Attack inflicts {D/BT_MARKING} on herself to force enemies to attack her and trigger her passive burns",
+        "jp": "デュアルアタックが自身に{D/BT_MARKING}を付与して敵に自分を攻撃させ、パッシブの火傷を誘発するため、敵のヘイト操作に長けている",
+        "kr": "듀얼 어택이 자신에게 {D/BT_MARKING}을 부여하여 적이 자신을 공격하도록 유도하고 패시브 화상을 유발하므로, 적의 어그로 조작에 능함",
+        "zh": "擅长操控敌方仇恨，其协同攻击会为自身施加{D/BT_MARKING}以迫使敌人攻击她，从而触发其被动灼烧"
+      }
+    ],
+    "cons": [
+      {
+        "en": "her entire kit revolves around applying and amplifying {D/BT_DOT_BURN}, making her completely ineffective against enemies with high {S/RES} or team-wide {B/BT_IMMUNE}",
+        "jp": "彼女のキット全体が{D/BT_DOT_BURN}の付与と増幅を中心に構成されているため、高い{S/RES}を持つ敵やチーム全体の{B/BT_IMMUNE}に対しては全く効果がない",
+        "kr": "그녀의 전체 스킬셋이 {D/BT_DOT_BURN}의 부여와 증폭을 중심으로 구성되어 있어, 높은 {S/RES}를 가진 적이나 팀 전체 {B/BT_IMMUNE}에 대해서는 전혀 효과가 없음",
+        "zh": "她的整套技能都围绕施加与增幅{D/BT_DOT_BURN}展开，因此面对高{S/RES}敌人或全队{B/BT_IMMUNE}时完全无效"
+      },
+      {
+        "en": "relies heavily on taking hits to maximize her burn application, requiring her to consistently maintain {D/BT_MARKING} or face AoE-heavy enemies",
+        "jp": "火傷の付与を最大化するには被弾に大きく依存しており、{D/BT_MARKING}を継続的に維持するか、範囲攻撃の多い敵と対峙する必要がある",
+        "kr": "화상 부여를 극대화하려면 피격에 크게 의존하므로, {D/BT_MARKING}을 지속적으로 유지하거나 광역 공격이 많은 적과 맞서야 함",
+        "zh": "高度依赖受到攻击来最大化其灼烧施加，需要持续维持{D/BT_MARKING}或面对范围攻击较多的敌人"
+      },
+      {
+        "en": "needs specific team synergies to fully capitalize on her burn amplification, making her less versatile in standard cleave or pure raw damage setups",
+        "jp": "火傷増幅を完全に活かすには特定のチームシナジーが必要で、標準的なクリーブや純粋な火力編成では汎用性に欠ける",
+        "kr": "화상 증폭을 온전히 활용하려면 특정 팀 시너지가 필요하여, 일반적인 클리브나 순수 화력 편성에서는 범용성이 떨어짐",
+        "zh": "需要特定的队伍协同才能充分发挥其灼烧增幅，因此在标准群攻或纯粹爆发伤害的配置中通用性较低"
+      }
+    ]
+  },
+  "fenrir": {
+    "pros": [
+      {
+        "en": "a durable bruiser whose combat effectiveness scales as she takes damage",
+        "jp": "ダメージを受けるほど戦闘効果が高まる、耐久力のあるブルーザー",
+        "kr": "피해를 받을수록 전투 효율이 증가하는 단단한 브루저",
+        "zh": "一名坚韧的格斗型角色，其战斗效能会随着受到伤害而提升"
+      },
+      {
+        "en": "provides excellent self-sustain with her S1, which recovers her {S/HP} proportional to the damage dealt",
+        "jp": "与えたダメージに比例して{S/HP}を回復するS1により、優れた自己回復力を発揮する",
+        "kr": "입힌 피해에 비례하여 {S/HP}를 회복하는 S1로 뛰어난 자가 생존력을 제공함",
+        "zh": "凭借S1提供出色的自我续航，该技能会按造成的伤害比例回复其{S/HP}"
+      },
+      {
+        "en": "{EE/Fenrir} perfectly complements her bruiser playstyle by increasing her {B/BT_STAT|ST_SPEED} as her {S/HP} decreases, and at Level 10, additionally boosts her {S/ATK} at low health",
+        "jp": "{EE/Fenrir}は{S/HP}が減少するにつれて{B/BT_STAT|ST_SPEED}を上昇させ、レベル10では低HP時にさらに{S/ATK}を上昇させることで、彼女のブルーザーとしての立ち回りを完璧に補完する",
+        "kr": "{EE/Fenrir}는 {S/HP}가 감소할수록 {B/BT_STAT|ST_SPEED}를 증가시키고, 10레벨에서는 낮은 체력일 때 추가로 {S/ATK}를 높여주어 그녀의 브루저 플레이스타일을 완벽하게 보완함",
+        "zh": "{EE/Fenrir}会随着其{S/HP}降低而提升{B/BT_STAT|ST_SPEED}，并在10级时于低血量下额外提升其{S/ATK}，完美契合她的格斗型打法"
+      }
+    ],
+    "cons": [
+      {
+        "en": "heavily reliant on taking damage to maximize the benefits of her {EE/Fenrir}, which can be risky if not properly mitigated by team support",
+        "jp": "{EE/Fenrir}の恩恵を最大化するには被ダメージに大きく依存しており、チームサポートで適切に軽減されないと危険になり得る",
+        "kr": "{EE/Fenrir}의 이점을 극대화하려면 피해를 받는 것에 크게 의존하므로, 팀 지원으로 적절히 완화되지 않으면 위험할 수 있음",
+        "zh": "高度依赖受到伤害来最大化{EE/Fenrir}的收益，若没有队伍支援妥善减伤则可能存在风险"
+      },
+      {
+        "en": "has low base stats due to being a 2-star unit, requires heavy gear investment to function",
+        "jp": "2星ユニットのため基礎ステータスが低く、機能させるには大規模な装備投資が必要",
+        "kr": "2성 유닛이라 기본 스탯이 낮아, 제 역할을 하려면 많은 장비 투자가 필요함",
+        "zh": "由于是2星单位，基础属性较低，需要大量装备投资才能发挥作用"
+      }
+    ]
+  },
+  "guizam": {
+    "pros": [
+      {
+        "en": "capable of applying {D/BT_DOT_BLEED} to all enemies, making him a enabler when built with high effectiveness",
+        "jp": "全敵に{D/BT_DOT_BLEED}を付与でき、効果命中を高く積むことで起点役として機能する",
+        "kr": "모든 적에게 {D/BT_DOT_BLEED}을 부여할 수 있어, 효과 적중을 높게 세팅하면 기점 역할을 함",
+        "zh": "能够对所有敌人施加{D/BT_DOT_BLEED}，在堆叠高效果命中后可作为触发者"
+      },
+      {
+        "en": "synergizes perfectly with dark element bleed-focused characters like Eliza and Francesca, allowing the team to efficiently spam chain combos",
+        "jp": "ElizaやFrancescaのような闇属性の出血特化キャラクターと完璧に噛み合い、チームが効率的にチェインコンボを連発できるようにする",
+        "kr": "Eliza나 Francesca 같은 어둠 속성 출혈 특화 캐릭터와 완벽하게 시너지를 이루어, 팀이 효율적으로 체인 콤보를 연발할 수 있게 함",
+        "zh": "与Eliza、Francesca等暗属性流血专精角色完美协同，让队伍能够高效地连续触发连锁连招"
+      }
+    ],
+    "cons": [
+      {
+        "en": "{SK/Guizam|S3} suffers from a risky kit design, as he requires having low {S/HP} to maximize his {B/BT_STAT|ST_ATK} scaling damage",
+        "jp": "{SK/Guizam|S3}は{B/BT_STAT|ST_ATK}依存のダメージを最大化するために低{S/HP}を必要とする、リスクの高いキット設計になっている",
+        "kr": "{SK/Guizam|S3}은 {B/BT_STAT|ST_ATK} 비례 피해를 극대화하려면 낮은 {S/HP}를 요구하는 위험한 스킬 설계를 지님",
+        "zh": "{SK/Guizam|S3}的技能设计存在风险，因为他需要保持低{S/HP}才能最大化其{B/BT_STAT|ST_ATK}加成的伤害"
+      },
+      {
+        "en": "his reliance on staying at low health to deal damage makes him incredibly fragile and difficult to keep alive in harder content due to having low base stats as a 1-star unit",
+        "jp": "ダメージを与えるために低HPを維持する必要があることから非常に脆く、1星ユニットとして基礎ステータスが低いため、難易度の高いコンテンツで生存させるのが難しい",
+        "kr": "피해를 입히기 위해 낮은 체력을 유지해야 하므로 매우 약하며, 1성 유닛으로서 기본 스탯이 낮아 고난도 콘텐츠에서 생존시키기 어려움",
+        "zh": "由于需要保持低血量来造成伤害，他极其脆弱，加之作为1星单位基础属性偏低，在高难度内容中难以存活"
+      },
+      {
+        "en": "cant reliably land his {D/BT_DOT_BLEED} debuffs due to it only having a 50% chance of landing at max skill level",
+        "jp": "最大スキルレベルでも付与確率が50%しかないため、{D/BT_DOT_BLEED}デバフを安定して付与できない",
+        "kr": "최대 스킬 레벨에서도 부여 확률이 50%에 불과하여, {D/BT_DOT_BLEED} 디버프를 안정적으로 적중시키지 못함",
+        "zh": "由于即便在最高技能等级下命中几率也仅有50%，无法稳定施加其{D/BT_DOT_BLEED}减益"
+      }
+    ]
   }
 }

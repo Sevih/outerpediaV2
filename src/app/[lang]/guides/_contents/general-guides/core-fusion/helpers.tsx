@@ -19,12 +19,7 @@ import cfSkillNames from '@data/generated/cf-skill-names.json';
 
 /* ===================== Types ===================== */
 
-interface SkillChange {
-  review: string;
-  review_jp?: string;
-  review_kr?: string;
-  review_zh?: string;
-}
+type SkillChange = WithLocalizedFields<{ review: string }, 'review'>;
 
 interface HeroChanges {
   s1?: SkillChange;
@@ -315,7 +310,7 @@ function SkillChangeRow({ label, skillKey, cfCharId, change, lang }: {
   change: SkillChange;
   lang: Lang;
 }) {
-  const review = l(change as unknown as Record<string, unknown>, 'review', lang);
+  const review = l(change, 'review', lang);
   const names = cfCharId ? cfSkillNamesMap[cfCharId]?.[skillKey] : undefined;
   const langSuffix = lang === 'en' ? '' : `_${lang}`;
   const oldName = names?.[`old${langSuffix}`];
@@ -340,7 +335,7 @@ function SkillChangeRow({ label, skillKey, cfCharId, change, lang }: {
 /* ===================== PassiveSection ===================== */
 
 function PassiveSection({ change, lang }: { change: SkillChange; lang: Lang }) {
-  const review = l(change as unknown as Record<string, unknown>, 'review', lang);
+  const review = l(change, 'review', lang);
 
   return (
     <div className="space-y-2">
@@ -353,7 +348,7 @@ function PassiveSection({ change, lang }: { change: SkillChange; lang: Lang }) {
 }
 
 function TranscendenceSection({ change, lang }: { change: SkillChange; lang: Lang }) {
-  const review = l(change as unknown as Record<string, unknown>, 'review', lang);
+  const review = l(change, 'review', lang);
 
   return (
     <div className="space-y-2">
