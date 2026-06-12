@@ -1,0 +1,39 @@
+{
+  "strategy": [
+    {
+      "en": "Be slower than the boss. Heroes with lower {S/SPD} than Skuld deal +50% damage to her, while heroes faster than her take +50% damage. She increases your whole team's {S/SPD} by 5% at the start of every turn (max +25%), so leave a wide speed margin.",
+      "jp": "ボスより遅く保つ。スクルドより{S/SPD}が低い味方は彼女に+50%ダメージを与え、速い味方は+50%のダメージを受ける。彼女は毎ターン開始時に味方全体の{S/SPD}を5%増加させる（最大+25%）ため、十分なスピード差を確保する。",
+      "kr": "보스보다 느리게 유지하세요. 스쿨드보다 {S/SPD}가 낮은 아군은 그녀에게 +50% 피해를 주고, 빠른 아군은 +50% 피해를 받습니다. 그녀는 매 턴 시작 시 아군 전체의 {S/SPD}를 5%씩 증가시키므로(최대 +25%), 충분한 속도 차이를 확보하세요.",
+      "zh": "保持比Boss慢。{S/SPD}低于斯库尔德的友军对她造成+50%伤害，而比她快的友军受到+50%伤害。她在每回合开始时使全队{S/SPD}增加5%（最多+25%），因此要留出足够的速度差。",
+      "fr": "Restez plus lent que le Boss. Les héros dont la {S/SPD} est inférieure à celle de Skuld lui infligent +50% de dégâts, tandis que les héros plus rapides subissent +50% de dégâts. Elle augmente la {S/SPD} de toute l'équipe de 5% au début de chaque tour (max +25%) — gardez une large marge de vitesse."
+    },
+    {
+      "en": "As a {E/Dark} boss, her Berserk passive reduces Final DMG and WG DMG taken from non-advantage targets by 70% / 50% (from Rank B). Build around {E/Light} heroes for elemental advantage.",
+      "jp": "{E/Dark}属性ボスのため、狂暴化パッシブは有利相性でない対象から受ける最終ダメージとWGダメージをそれぞれ70%／50%減少させる（RANK B から）。属性有利を取れる{E/Light}属性の味方を中心に編成する。",
+      "kr": "{E/Dark} 속성 보스이므로 광폭화 패시브는 유리 상성이 아닌 대상에게 받는 최종 피해와 WG 피해를 각각 70%/50% 감소시킵니다(RANK B 부터). 속성 유리를 가지는 {E/Light} 속성 아군을 중심으로 편성하세요.",
+      "zh": "作为{E/Dark}属性Boss，她的狂暴化被动会使受到非克制属性目标的最终伤害和WG伤害分别减少70%/50%（从RANK B开始）。请以拥有属性克制的{E/Light}属性友军为核心进行编成。",
+      "fr": "En tant que boss {E/Dark}, son passif de Berserk réduit les dégâts finaux et les dégâts de WG subis des cibles sans avantage de 70% / 50% (à partir du Rang B). Construisez autour de héros {E/Light} pour l'avantage élémentaire."
+    },
+    {
+      "en": "The boss takes +50% damage from heroes at 90% current HP or less — avoid over-healing your damage dealers.",
+      "jp": "ボスは現在HPが90%以下の味方から受けるダメージが+50%増加する — アタッカーを過剰回復しない。",
+      "kr": "보스는 현재 체력이 90% 이하인 아군에게 받는 피해가 +50% 증가합니다 — 딜러를 과도하게 회복하지 마세요.",
+      "zh": "Boss受到当前生命值90%及以下友军的伤害+50% — 不要过度治疗你的输出。",
+      "fr": "Le Boss subit +50% de dégâts des héros à 90% PV actuels ou moins — évitez de sursoigner vos DPS."
+    },
+    {
+      "en": "Her S2 inflicts {D/BT_SEALED} on the whole team for 2 turns and ignores {B/BT_IMMUNE} — buffs applied during that window are blocked, so favor self-sufficient kits over buff-stacking.",
+      "jp": "S2は味方全体に2ターンの{D/BT_SEALED}を付与し、{B/BT_IMMUNE}を無視する — その間に付与したバフは無効化されるため、バフ依存より自己完結型のキットを優先する。",
+      "kr": "S2는 아군 전체에게 2턴 동안 {D/BT_SEALED}을 부여하고 {B/BT_IMMUNE}을 무시합니다 — 그동안 부여한 버프는 차단되므로, 버프 의존보다 자급자족형 캐릭터를 우선하세요.",
+      "zh": "她的S2对全队附加2回合的{D/BT_SEALED}并无视{B/BT_IMMUNE} — 此期间施加的增益会被阻挡，因此优先选择自给自足的角色而非堆叠增益。",
+      "fr": "Son S2 inflige {D/BT_SEALED} à toute l'équipe pendant 2 tours en ignorant {B/BT_IMMUNE} — les buffs appliqués durant cette fenêtre sont bloqués, privilégiez des kits autonomes plutôt que l'empilement de buffs."
+    },
+    {
+      "en": "Curse and Fixed damage dealt to the boss cannot exceed 50000. She is also immune to crowd control (Stun, Freeze, Petrify, Silence, Provoke) and to {B/BT_ACTION_GAUGE} manipulation, and she heavily manipulates priority (S1 +20%, Ultimate +30% to herself / -30% to all enemies).",
+      "jp": "ボスに与える呪い・固定ダメージは50000を超えない。さらに行動妨害（スタン、凍結、石化、沈黙、挑発）と{B/BT_ACTION_GAUGE}操作に免疫で、行動順を大きく操作する（S1で+20%、必殺技で自分+30%／敵全体-30%）。",
+      "kr": "보스에게 주는 저주·고정 피해는 50000을 초과할 수 없습니다. 또한 행동 방해(기절, 빙결, 석화, 침묵, 도발)와 {B/BT_ACTION_GAUGE} 조작에 면역이며, 행동 순서를 크게 조작합니다(S1 +20%, 필살기 자신 +30%/적 전체 -30%).",
+      "zh": "对Boss造成的诅咒及固定伤害不超过50000。她还免疫控制（眩晕、冰冻、石化、沉默、挑衅）与{B/BT_ACTION_GAUGE}操控，并大幅操控行动顺序（S1 +20%，必杀技自身+30%／全体敌人-30%）。",
+      "fr": "Les dégâts de Malédiction et Fixes infligés au Boss ne peuvent pas dépasser 50000. Elle est aussi immunisée au contrôle (Étourdissement, Gel, Pétrification, Silence, Provocation) et à la manipulation de {B/BT_ACTION_GAUGE}, et elle manipule fortement l'ordre d'action (S1 +20%, Ultime +30% pour elle / -30% à tous les ennemis)."
+    }
+  ]
+}
