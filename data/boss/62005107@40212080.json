@@ -49,10 +49,10 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks all enemies. When an enemy is killed on the caster's turn, has a <color=#28d9ed>60%</color> chance to grant an <color=#28d9ed>extra turn</color> to the caster.",
-        "jp": "敵全体にダメージを与える。自分のターンに敵を倒した時、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。",
-        "kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.",
-        "zh": "攻击全体敌人。自身回合击杀敌人时，有<color=#28d9ed>60%</color>几率获得<color=#28d9ed>额外回合</color>。"
+        "en": "Attacks all enemies. When an enemy is killed on the caster's turn, has a <color=#28d9ed>60%</color> chance to grant an <color=#28d9ed>extra turn</color> to the caster.\\nEnemies defeated by this skill cannot be revived or resurrected.",
+        "jp": "敵全体にダメージを与える。自分のターンに敵を倒した時、<color=#28d9ed>60%</color>の確率で<color=#28d9ed>追加ターン</color>を獲得する。\\nこのスキルで倒れた敵は復活および蘇生できない。",
+        "kr": "적 전체를 공격합니다. 자신의 턴에 적을 처치하면 <color=#28d9ed>60%</color> 확률로 <color=#28d9ed>추가 턴</color>을 획득합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "zh": "攻击全体敌人。自身回合击杀敌人时，有<color=#28d9ed>60%</color>几率获得<color=#28d9ed>额外回合</color>。\\n因该技能死亡的敌人无法复活或重生。"
       },
       "icon": "Skill_First_2000085",
       "buff": [
@@ -68,10 +68,10 @@
       },
       "type": "SKT_SECOND",
       "description": {
-        "en": "Attacks an enemy, then steals <color=#28d9ed>all</color> <color=#28d9ed>buffs</color> of the target.\\nWhen the target is a <color=#28d9ed>Boss</color> or is not granted a <color=#28d9ed>buff</color>, activates an additional attack.",
-        "jp": "敵単体にダメージを与えた後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪う。\\n対象が<color=#28d9ed>ボス</color>か、<color=#28d9ed>強化効果</color>がない場合、追加攻撃を与える。",
-        "kr": "적을 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗습니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
-        "zh": "攻击敌人后，夺取目标的<color=#28d9ed>所有</color><color=#28d9ed>强化效果</color>。\\n若目标为<color=#28d9ed>首领</color>或未附带<color=#28d9ed>强化效果</color>，则造成额外攻击。"
+        "en": "(Passive Effect) At the start of battle, if all allies are <color=#28d9ed>Water</color>, increases the caster's <color=#28d9ed>Attack</color> by <color=#28d9ed>30%</color>.\\n\\n(Active Effect) After attacking an enemy, steals <color=#28d9ed>all</color> of the target's <color=#28d9ed>buffs</color> and increases the caster's Priority by <color=#28d9ed>20%</color>.\\nIf the target is a <color=#28d9ed>Boss</color> or has no <color=#28d9ed>buffs</color>, activates an additional attack.",
+        "jp": "（パッシブ効果）戦闘開始時、味方全員が<color=#28d9ed>水属性</color>なら自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>30%</color>UPさせる。\\n\\n（アクティブ効果）敵単体のダメージを与えた後、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>すべて</color>奪い、自分の行動ゲージを<color=#28d9ed>20%</color>UPさせる。対象が<color=#28d9ed>ボス</color>か、<color=#28d9ed>強化効果</color>がない場合、追加攻撃を与える。",
+        "kr": "(패시브 효과) 전투 시작 시 아군 전원이 <color=#28d9ed>수속성</color>이면 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>30%</color> 증가시킵니다.\\n\\n(액티브 효과) 적을 공격 후 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>모두</color> 빼앗고 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.\\n대상이 <color=#28d9ed>보스</color>이거나 보유한 <color=#28d9ed>강화 효과</color>가 없으면 추가 공격을 입힙니다.",
+        "zh": "（被动效果）战斗开始时，若全体友军均为<color=#28d9ed>水属性</color>，则使自身<color=#28d9ed>攻击力</color>提升<color=#28d9ed>30%</color>。\\n\\n（主动效果）攻击敌人后，夺取目标<color=#28d9ed>全部</color><color=#28d9ed>强化效果</color>，并使自身行动值提升<color=#28d9ed>20%</color>。\\n若目标为<color=#28d9ed>首领</color>或未持有<color=#28d9ed>强化效果</color>，则造成追加攻击。"
       },
       "icon": "Skill_Second_2000085",
       "buff": [

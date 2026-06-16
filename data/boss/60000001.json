@@ -161,10 +161,10 @@
       },
       "type": "SKT_RAGE_ENTER1",
       "description": {
-        "en": "Enters <color=#28d9ed>Berserk</color> state every time HP decreases by <color=#28d9ed>400,000</color>.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color> : Deals DMG to all enemies, then grants self an irremovable Speed Increase/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nGrants self Immunity for 2 turns.",
-        "jp": "HPが<color=#28d9ed>400,000</color>減少するたびに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体にダメージを与えた後、自分に解除されないスピードUP/ダメージ減少効果を1ターンの間付与し、WGを10%回復する。\\n敵全体に2ターンの間火傷を付与する。",
-        "kr": "체력이 <color=#28d9ed>400,000</color> 감소할 때마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체를 공격 후 자신에게 해제되지 않는 속도 증가/피해 감소 효과를 1턴 동안 부여하고 WG를 10% 회복합니다.\\n적 전체에게 2턴 동안 화상을 부여합니다.",
-        "zh": "每当HP减少<color=#28d9ed>400,000</color>时进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化突入与必杀技</color>：攻击全体敌人后，对自身附加无法解除的速度提升/伤害减少效果1回合，并恢复WG10%。\\n对全体敌人附加2回合的烧伤。"
+        "en": "Enters <color=#28d9ed>Berserk</color> state every time enemies take 7 actions.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color>: Attacks all enemies, then grants the caster an irremovable Speed Increase/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nInflicts Burned on all enemies for 2 turns.",
+        "jp": "敵が7回行動するたびに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体を攻撃後、自分に解除されないスピードUP/被ダメDOWN効果を1ターン付与し、WGを10%回復する。\\n敵全体に2ターンの間<color=#28d9ed>火傷</color>を付与する。",
+        "kr": "적이 7회 행동할 때 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체를 공격 후 자신에게 해제되지 않는 속도 증가/피해 감소 효과를 1턴 동안 부여하고 WG를 10% 회복합니다.\\n적 전체에게 2턴 동안 화상을 부여합니다.",
+        "zh": "敌人每行动7次进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化冲入与必杀技</color>：攻击全体敌人后，为自身附加无法解除的速度提升/受伤害降低效果持续1回合，并恢复10% WG。\\n为全体敌人附加<color=#28d9ed>烧伤</color>持续2回合。"
       },
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
