@@ -66,7 +66,7 @@
       "type": "SKT_SECOND",
       "description": {
         "en": "(Passive Effect) Deals increased damage if the target is inflicted with <color=#28d9ed>Frozen</color>.\\n(Triggered Effect) When attacking a Frozen target, performs an additional attack on all enemies and reduces their <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>. This attack ignores the target's Defense.",
-        "jp": "（パッシブ効果）対象が<color=#28d9ed>凍結</color>状態の場合、与えるダメージがUPする。\\n(パッシブ効果)凍結状態の対象を攻撃時、敵全体に追加攻撃を行い、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。この攻撃は対象の防御力を無視する。",
+        "jp": "(パッシブ効果)対象が<color=#28d9ed>凍結</color>状態の場合、与えるダメージがUPする。\\n(パッシブ効果)凍結状態の対象を攻撃時、敵全体に追加攻撃を行い、<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>DOWNさせる。この攻撃は対象の防御力を無視する。",
         "kr": "(패시브 효과) 대상이 <color=#28d9ed>빙결</color> 상태라면 피해량이 증가합니다.\\n(발동 효과) 빙결 대상 공격 시 적 전체에게 추가 공격을 사용하고, 행동 게이지를 <color=#28d9ed>20%</color> 감소시킵니다. 해당 공격은 대상의 방어력을 무시합니다.",
         "zh": "（被动效果）当目标处于<color=#28d9ed>冰冻</color>状态时，造成的伤害提升。\\n（触发效果）攻击冰冻目标时，对全体敌人发动追加攻击，并使其<color=#28d9ed>行动值</color>降低<color=#28d9ed>20%</color>。该攻击无视目标防御力。"
       },
@@ -107,7 +107,7 @@
       "type": "SKT_MONSTER_1",
       "description": {
         "en": "(Passive Effect)\\nIf none of Glicys's Servants are present, damage taken is reduced by <color=#28d9ed>300%</color>.\\nAt the start of the turn, <color=#28d9ed>Freezes</color> the leftmost enemy for <color=#28d9ed>1</color> turn(s). If the leftmost enemy is dead or absent, this effect does not activate.\\nWhile a Servant is alive, when Glicys is hit by a single-target attack, recovers <color=#28d9ed>3</color> Weakness Gauge after being hit.\\nReduces Weakness Gauge damage taken from non-Earth enemies by <color=#28d9ed>50%</color>, increases damage dealt to them, and reduces damage taken from them.\\nReduces damage dealt to Earth enemies and increases damage taken from them.",
-        "jp": "（パッシブ効果）\\nグリシスの従者がいない場合、グリシスが受けるダメージが<color=#28d9ed>300%</color>DOWNする。\\nターン開始時、最も左の敵を<color=#28d9ed>1</color>ターンの間<color=#28d9ed>凍結</color>させる。最左の敵が死亡または不在の場合、この効果は発動しない。\\n従者が生存中にグリシスが単体攻撃を受けた場合、被弾後に<color=#28d9ed>3</color>のWGを回復する。\\n地属性以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNし、与えるダメージがUP、受けるダメージがDOWNする。地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
+        "jp": "(パッシブ効果)\\nグリシスの従者がいない場合、グリシスが受けるダメージが<color=#28d9ed>300%</color>DOWNする。\\nターン開始時、最も左の敵を<color=#28d9ed>1</color>ターンの間<color=#28d9ed>凍結</color>させる。最左の敵が死亡または不在の場合、この効果は発動しない。\\n従者が生存中にグリシスが単体攻撃を受けた場合、被弾後に<color=#28d9ed>3</color>のWGを回復する。\\n地属性以外の敵から受けるWGダメージが<color=#28d9ed>50%</color>DOWNし、与えるダメージがUP、受けるダメージがDOWNする。地属性の敵に与えるダメージがDOWNし、受けるダメージがUPする。",
         "kr": "(패시브 효과)\\n글리시스의 하수인들이 존재하지 않는다면, 글리시스가 받는 피해가 <color=#28d9ed>300%</color> 감소합니다.\\n\\n턴 시작 시 <color=#28d9ed>1턴</color> 동안 가장 좌측의 적을 <color=#28d9ed>빙결</color> 시킵니다. 가장 좌측의 적이 사망하거나 없다면 해당 효과는 작동하지 않습니다.\\n\\n하수인이 생존 중 글리시스가 단일 공격을 받으면, 피격 후 <color=#28d9ed>3</color>의 WG를 회복합니다.\\n\\n지속성이 아닌 적에게 받는 WG 피해량이 <color=#28d9ed>50%</color> 감소하며 입히는 피해가 증가하고, 받는 피해가 감소합니다.\\n지속성 적에게 입히는 피해가 감소하고, 받는 피해가 증가합니다.",
         "zh": "（被动效果）\\n若场上不存在格里西丝的仆从，则其所受伤害降低<color=#28d9ed>300%</color>。\\n回合开始时，使最左侧敌人陷入<color=#28d9ed>冰冻</color>状态，持续<color=#28d9ed>1</color>回合。若最左侧敌人已死亡或不存在，则不生效。\\n仆从存活期间，格里西丝受到单体攻击时，受击后恢复<color=#28d9ed>3</color>点WG。\\n来自非土属性敌人的WG伤害量降低<color=#28d9ed>50%</color>，对其造成的伤害提升且所受伤害降低；对土属性敌人造成的伤害降低且所受伤害提升。"
       },

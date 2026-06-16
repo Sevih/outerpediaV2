@@ -18,7 +18,10 @@
     "5": "S",
     "6": "S"
   },
-  "tags": ["limited", "ignore-defense"],
+  "tags": [
+    "limited",
+    "ignore-defense"
+  ],
   "skill_priority": {
     "First": {
       "prio": 3
@@ -90,27 +93,79 @@
         "5_zh": "攻击敌人。\\n攻击后使目标行动值减少<color=#28d9ed>20%</color>（无视效果抵抗），并使<color=#28d9ed>【追上我啊】</color>的伤害提升<color=#28d9ed>30%</color>。（最多叠加3次）\\n持有<color=#28d9ed>【疾驰】</color>时，该技能发动后敌方反击/复仇/迅速应对不会发动。\\n该技能伤害按最大生命值而非攻击力计算。"
       },
       "enhancement": {
-        "2": ["+10% damage", "+1 Weakness Gauge damage"],
-        "3": ["+10% damage", "-5% Priority"],
-        "4": ["+10% damage", "+1 Weakness Gauge damage"],
-        "5": ["+20% damage", "-5% Priority"],
-        "2_jp": ["ダメージ+10%", "WGダメージ+1"],
-        "3_jp": ["ダメージ+10%", "行動ゲージ5%DOWN"],
-        "4_jp": ["ダメージ+10%", "WGダメージ+1"],
-        "5_jp": ["ダメージ+20%", "行動ゲージ5%DOWN"],
-        "2_kr": ["피해량 +10%", "WG 감소량 +1"],
-        "3_kr": ["피해량 +10%", "행동 게이지 -5%"],
-        "4_kr": ["피해량 +10%", "WG 감소량 +1"],
-        "5_kr": ["피해량 +20%", "행동 게이지 -5%"],
-        "2_zh": ["伤害量+10%", "WG降低量+1"],
-        "3_zh": ["伤害量+10%", "行动值-5%"],
-        "4_zh": ["伤害量+10%", "WG降低量+1"],
-        "5_zh": ["伤害量+20%", "行动值-5%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "+10% damage",
+          "-5% Priority"
+        ],
+        "4": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5": [
+          "+20% damage",
+          "-5% Priority"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "ダメージ+10%",
+          "行動ゲージ5%DOWN"
+        ],
+        "4_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "5_jp": [
+          "ダメージ+20%",
+          "行動ゲージ5%DOWN"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "피해량 +10%",
+          "행동 게이지 -5%"
+        ],
+        "4_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "5_kr": [
+          "피해량 +20%",
+          "행동 게이지 -5%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "伤害量+10%",
+          "行动值-5%"
+        ],
+        "4_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "5_zh": [
+          "伤害量+20%",
+          "行动值-5%"
+        ]
       },
       "wgr": 1,
       "cd": null,
-      "buff": ["BT_SEAL_COUNTER"],
-      "debuff": ["BT_ACTION_GAUGE"],
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ],
       "offensive": true,
       "target": "mono"
     },
@@ -123,21 +178,21 @@
       "name_kr": "스위티 드라이버",
       "name_zh": "甜蜜驾驶员",
       "true_desc_levels": {
-        "1": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turn</color>.\\nThe Barrier amount scales with own <color=#28d9ed>Max Health</color>.\\nAdditionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience)\\nThis skill deals damage proportional to Max Health instead of Attack.",
-        "2": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turn</color>.\\nThe Barrier amount scales with own <color=#28d9ed>Max Health</color>.\\nAdditionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience)\\nThis skill deals damage proportional to Max Health instead of Attack.",
-        "3": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turn</color>.\\nThe Barrier amount scales with own <color=#28d9ed>Max Health</color>.\\nAdditionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience)\\nThis skill deals damage proportional to Max Health instead of Attack.",
-        "4": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turn</color>.\\nThe Barrier amount scales with own <color=#28d9ed>Max Health</color>.\\nAdditionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience)\\nThis skill deals damage proportional to Max Health instead of Attack.",
-        "5": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>3 turn</color>.\\nThe Barrier amount scales with own <color=#28d9ed>Max Health</color>.\\nAdditionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience)\\nThis skill deals damage proportional to Max Health instead of Attack.",
-        "1_jp": "(パッシブ効果) 自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果) 敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>2ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "2_jp": "(パッシブ効果) 自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果) 敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>2ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "3_jp": "(パッシブ効果) 自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果) 敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>2ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "4_jp": "(パッシブ効果) 自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果) 敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>2ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "5_jp": "(パッシブ効果) 自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果) 敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>3ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。\\nこのスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
-        "1_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(엑티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "2_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(엑티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "3_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(엑티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "4_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(엑티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
-        "5_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(엑티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "1": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turn</color>.The Barrier amount scales with own <color=#28d9ed>Max Health</color>. Additionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience). This skill deals damage proportional to Max Health instead of Attack.",
+        "2": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turn</color>.The Barrier amount scales with own <color=#28d9ed>Max Health</color>. Additionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience). This skill deals damage proportional to Max Health instead of Attack.",
+        "3": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turn</color>.The Barrier amount scales with own <color=#28d9ed>Max Health</color>. Additionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience). This skill deals damage proportional to Max Health instead of Attack.",
+        "4": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>2 turn</color>.The Barrier amount scales with own <color=#28d9ed>Max Health</color>. Additionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience). This skill deals damage proportional to Max Health instead of Attack.",
+        "5": "(Passive Effect) DoT taken decreases by <color=#28d9ed>50%</color>, grants immunity to <color=#28d9ed>Silence</color> and <color=#28d9ed>Priority Reduction</color>, and all attacks always apply with an elemental advantage.\\n\\n(Active Effect) Attacks all enemies and grants self a <color=#28d9ed>Barrier</color> and <color=#28d9ed>Counterattack</color> for <color=#28d9ed>3 turn</color>.The Barrier amount scales with own <color=#28d9ed>Max Health</color>. Additionally, decreases the target's Priority by <color=#28d9ed>20%</color>, or <color=#28d9ed>40%</color> if <color=#28d9ed>Rush</color> is active. (Ignores Resilience). This skill deals damage proportional to Max Health instead of Attack.",
+        "1_jp": "(パッシブ効果)自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果)敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>2ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。このスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "2_jp": "(パッシブ効果)自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果)敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>2ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。このスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "3_jp": "(パッシブ効果)自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果)敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>2ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。このスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "4_jp": "(パッシブ効果)自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果)敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>2ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。このスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "5_jp": "(パッシブ効果)自分が受ける持続ダメージが<color=#28d9ed>50%</color>DOWNし、<color=#28d9ed>沈黙</color>および<color=#28d9ed>行動ゲージ減少</color>に免疫となり、すべての攻撃が有利属性の攻撃判定になる。\\n\\n(アクティブ効果)敵全体にダメージを与え、自分にシールドと反撃を<color=#28d9ed>3ターン</color>の間付与する。\\nシールド量は自分の<color=#28d9ed>最大HP</color>が高いほどUPする。\\nさらに、対象の行動ゲージを<color=#28d9ed>20%</color>減少させ、【疾走】がある場合は<color=#28d9ed>40%</color>減少させる。この効果は対象の効果抵抗を無視する。このスキルは攻撃力の代わりに最大HPが高いほどダメージがUPする。",
+        "1_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(액티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "2_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(액티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "3_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(액티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "4_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(액티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
+        "5_kr": "(패시브 효과) 자신이 입는 지속 피해가 <color=#28d9ed>50%</color> 감소하고 <color=#28d9ed>침묵</color> 및 <color=#28d9ed>행동 게이지 감소</color>에 면역이며 모든 공격이 항상 유리한 상성으로 적용됩니다.\\n\\n(액티브 효과) 적 전체를 공격하고 자신에게 <color=#28d9ed>3턴</color> 동안 <color=#28d9ed>실드</color>와 <color=#28d9ed>반격</color>을 부여합니다.\\n실드량은 자신의 <color=#28d9ed>최대 체력</color>에 비례하여 증가합니다.\\n또한 대상의 행동 게이지를 <color=#28d9ed>20%</color> 감소시키고 질주 보유 시 <color=#28d9ed>40%</color> 감소시킵니다. (효과 저항 무시)\\n이 스킬은 공격력 대신 최대 체력에 비례하여 피해가 증가합니다.",
         "1_zh": "(被动效果) 自身受到的持续伤害减少<color=#28d9ed>50%</color>，免疫<color=#28d9ed>沉默</color>和<color=#28d9ed>行动值减少</color>，且所有攻击始终以克制属性生效。\\n\\n(主动效果) 攻击全体敌人，对自身附加<color=#28d9ed>2回合</color>的<color=#28d9ed>护盾</color>和<color=#28d9ed>反击</color>。\\n护盾量按自身<color=#28d9ed>最大生命值</color>比例增加。\\n同时使目标行动值减少<color=#28d9ed>20%</color>，持有【疾驰】时减少<color=#28d9ed>40%</color>。（无视效果抵抗）\\n该技能伤害按最大生命值而非攻击力计算。",
         "2_zh": "(被动效果) 自身受到的持续伤害减少<color=#28d9ed>50%</color>，免疫<color=#28d9ed>沉默</color>和<color=#28d9ed>行动值减少</color>，且所有攻击始终以克制属性生效。\\n\\n(主动效果) 攻击全体敌人，对自身附加<color=#28d9ed>2回合</color>的<color=#28d9ed>护盾</color>和<color=#28d9ed>反击</color>。\\n护盾量按自身<color=#28d9ed>最大生命值</color>比例增加。\\n同时使目标行动值减少<color=#28d9ed>20%</color>，持有【疾驰】时减少<color=#28d9ed>40%</color>。（无视效果抵抗）\\n该技能伤害按最大生命值而非攻击力计算。",
         "3_zh": "(被动效果) 自身受到的持续伤害减少<color=#28d9ed>50%</color>，免疫<color=#28d9ed>沉默</color>和<color=#28d9ed>行动值减少</color>，且所有攻击始终以克制属性生效。\\n\\n(主动效果) 攻击全体敌人，对自身附加<color=#28d9ed>2回合</color>的<color=#28d9ed>护盾</color>和<color=#28d9ed>反击</color>。\\n护盾量按自身<color=#28d9ed>最大生命值</color>比例增加。\\n同时使目标行动值减少<color=#28d9ed>20%</color>，持有【疾驰】时减少<color=#28d9ed>40%</color>。（无视效果抵抗）\\n该技能伤害按最大生命值而非攻击力计算。",
@@ -145,22 +200,66 @@
         "5_zh": "(被动效果) 自身受到的持续伤害减少<color=#28d9ed>50%</color>，免疫<color=#28d9ed>沉默</color>和<color=#28d9ed>行动值减少</color>，且所有攻击始终以克制属性生效。\\n\\n(主动效果) 攻击全体敌人，对自身附加<color=#28d9ed>3回合</color>的<color=#28d9ed>护盾</color>和<color=#28d9ed>反击</color>。\\n护盾量按自身<color=#28d9ed>最大生命值</color>比例增加。\\n同时使目标行动值减少<color=#28d9ed>20%</color>，持有【疾驰】时减少<color=#28d9ed>40%</color>。（无视效果抵抗）\\n该技能伤害按最大生命值而非攻击力计算。"
       },
       "enhancement": {
-        "2": ["+10% damage", "+1 Weakness Gauge damage"],
-        "3": ["-1 turn Skill Cooldown"],
-        "4": ["+10% damage", "+1 Weakness Gauge damage"],
-        "5": ["+1 turn effect duration", "+20% damage"],
-        "2_jp": ["ダメージ+10%", "WGダメージ+1"],
-        "3_jp": ["スキルターン-1ターン"],
-        "4_jp": ["ダメージ+10%", "WGダメージ+1"],
-        "5_jp": ["効果ターン+1ターン", "ダメージ+20%"],
-        "2_kr": ["피해량 +10%", "WG 감소량 +1"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "4_kr": ["피해량 +10%", "WG 감소량 +1"],
-        "5_kr": ["효과 지속 +1턴", "피해량 +20%"],
-        "2_zh": ["伤害量+10%", "WG降低量+1"],
-        "3_zh": ["冷却时间-1回合"],
-        "4_zh": ["伤害量+10%", "WG降低量+1"],
-        "5_zh": ["效果持续时间+1回合", "伤害量+20%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "5": [
+          "+1 turn effect duration",
+          "+20% damage"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "5_jp": [
+          "効果ターン+1ターン",
+          "ダメージ+20%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "5_kr": [
+          "효과 지속 +1턴",
+          "피해량 +20%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "5_zh": [
+          "效果持续时间+1回合",
+          "伤害量+20%"
+        ]
       },
       "wgr": 1,
       "cd": 4,
@@ -171,7 +270,9 @@
         "BT_COOL3_CHARGE",
         "BT_ADDITIVE_TURN"
       ],
-      "debuff": ["BT_ACTION_GAUGE"],
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ],
       "offensive": true,
       "target": "multi",
       "burnEffect": {
@@ -238,27 +339,76 @@
         "5_zh": "技能使用前，对自身附加<color=#28d9ed>【疾驰】</color><color=#28d9ed>3回合</color>（无法解除），并使最大生命值低于自身的目标强化效果持续时间减少<color=#28d9ed>1回合</color>，然后攻击敌人。（无视效果抵抗）\\n持有<color=#28d9ed>【疾驰】</color>时，伤害增加<color=#28d9ed>100%</color>，若目标为首领，伤害进一步增加<color=#28d9ed>50%</color>。\\n攻击后对<color=#28d9ed>当前生命值最低的敌人</color>使用<color=#28d9ed>【连打连打】</color>。\\n该技能伤害按最大生命值而非攻击力计算。\\n\\n攻击<color=#ffd732>异形怪怪物</color>或<color=#ffd732>次元奇点首领</color>时，伤害增加<color=#28d9ed>100%</color>。"
       },
       "enhancement": {
-        "2": ["+10% damage", "+1 Weakness Gauge damage"],
-        "3": ["-1 turn Skill Cooldown"],
-        "4": ["+10% damage", "+1 turn effect duration"],
-        "5": ["+20% damage", "+20% damage to Bosses"],
-        "2_jp": ["ダメージ+10%", "WGダメージ+1"],
-        "3_jp": ["スキルターン-1ターン"],
-        "4_jp": ["ダメージ+10%", "効果ターン+1ターン"],
-        "5_jp": ["ダメージ+20%", "ボスモンスターに与えるダメージ+20%"],
-        "2_kr": ["피해량 +10%", "WG 감소량 +1"],
-        "3_kr": ["스킬 쿨타임 -1턴"],
-        "4_kr": ["피해량 +10%", "효과 지속 +1턴"],
-        "5_kr": ["피해량 +20%", "보스에게 입히는 피해량 +20%"],
-        "2_zh": ["伤害量+10%", "WG降低量+1"],
-        "3_zh": ["冷却时间-1回合"],
-        "4_zh": ["伤害量+10%", "效果持续时间+1回合"],
-        "5_zh": ["伤害量+20%", "对首领造成的伤害量+20%"]
+        "2": [
+          "+10% damage",
+          "+1 Weakness Gauge damage"
+        ],
+        "3": [
+          "-1 turn Skill Cooldown"
+        ],
+        "4": [
+          "+10% damage",
+          "+1 turn effect duration"
+        ],
+        "5": [
+          "+20% damage",
+          "+20% damage to Bosses"
+        ],
+        "2_jp": [
+          "ダメージ+10%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "スキルターン-1ターン"
+        ],
+        "4_jp": [
+          "ダメージ+10%",
+          "効果ターン+1ターン"
+        ],
+        "5_jp": [
+          "ダメージ+20%",
+          "ボスモンスターに与えるダメージ+20%"
+        ],
+        "2_kr": [
+          "피해량 +10%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "스킬 쿨타임 -1턴"
+        ],
+        "4_kr": [
+          "피해량 +10%",
+          "효과 지속 +1턴"
+        ],
+        "5_kr": [
+          "피해량 +20%",
+          "보스에게 입히는 피해량 +20%"
+        ],
+        "2_zh": [
+          "伤害量+10%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "冷却时间-1回合"
+        ],
+        "4_zh": [
+          "伤害量+10%",
+          "效果持续时间+1回合"
+        ],
+        "5_zh": [
+          "伤害量+20%",
+          "对首领造成的伤害量+20%"
+        ]
       },
       "wgr": 2,
       "cd": 5,
-      "buff": ["RUSH", "BT_ADDITIVE_ATTACK"],
-      "debuff": ["BT_EXTEND_BUFF"],
+      "buff": [
+        "RUSH",
+        "BT_ADDITIVE_ATTACK"
+      ],
+      "debuff": [
+        "BT_EXTEND_BUFF"
+      ],
       "offensive": true,
       "target": "mono"
     },
@@ -297,35 +447,73 @@
           "+5% Dual Attack and Skill Chain damage",
           "+1 Weakness Gauge damage"
         ],
-        "3": ["+5% Dual Attack and Skill Chain damage"],
-        "4": ["+5% Dual Attack and Skill Chain damage"],
+        "3": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
+        "4": [
+          "+5% Dual Attack and Skill Chain damage"
+        ],
         "5": [
           "+5% Dual Attack and Skill Chain damage",
           "+1 Weakness Gauge damage"
         ],
-        "2_jp": ["チェーンスキルと連携ダメージ+5%", "WGダメージ+1"],
-        "3_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "4_jp": ["チェーンスキルと連携ダメージ+5%"],
-        "5_jp": ["チェーンスキルと連携ダメージ+5%", "WGダメージ+1"],
-        "2_kr": ["협공/스킬 체인 피해량 +5%", "WG 감소량 +1"],
-        "3_kr": ["협공/스킬 체인 피해량 +5%"],
-        "4_kr": ["협공/스킬 체인 피해량 +5%"],
-        "5_kr": ["협공/스킬 체인 피해량 +5%", "WG 감소량 +1"],
-        "2_zh": ["夹攻/连携技能伤害量+5%", "WG降低量+1"],
-        "3_zh": ["夹攻/连携技能伤害量+5%"],
-        "4_zh": ["夹攻/连携技能伤害量+5%"],
-        "5_zh": ["夹攻/连携技能伤害量+5%", "WG降低量+1"]
+        "2_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "3_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "4_jp": [
+          "チェーンスキルと連携ダメージ+5%"
+        ],
+        "5_jp": [
+          "チェーンスキルと連携ダメージ+5%",
+          "WGダメージ+1"
+        ],
+        "2_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "3_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "4_kr": [
+          "협공/스킬 체인 피해량 +5%"
+        ],
+        "5_kr": [
+          "협공/스킬 체인 피해량 +5%",
+          "WG 감소량 +1"
+        ],
+        "2_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ],
+        "3_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "4_zh": [
+          "夹攻/连携技能伤害量+5%"
+        ],
+        "5_zh": [
+          "夹攻/连携技能伤害量+5%",
+          "WG降低量+1"
+        ]
       },
       "wgr": 3,
       "cd": null,
       "buff": [],
-      "debuff": ["BT_FIXED_DAMAGE"],
+      "debuff": [
+        "BT_FIXED_DAMAGE"
+      ],
       "offensive": true,
       "target": "multi",
       "wgr_dual": 1,
       "dual_offensive": true,
       "dual_target": "mono",
-      "dual_buff": ["BT_ACTION_GAUGE"],
+      "dual_buff": [
+        "BT_ACTION_GAUGE"
+      ],
       "dual_debuff": []
     }
   }
