@@ -137,21 +137,33 @@ function parseBuffDate(cell: string, postDate: string): string | null {
  */
 function deriveBuffEvents(posts: PatchNotePost[]): BuffScheduleEntry[] {
   const buffPosts = posts
-    .filter(p => p.lang === 'en' && /In-game Buff Event/i.test(p.title))
+    // Title was "[In-game Buff Event]" then became "[In-game Buff & Push Event]";
+    // match both by not pinning the words between "Buff" and "Event".
+    .filter(p => p.lang === 'en' && /In-game Buff.*Event/i.test(p.title))
     .sort((a, b) => a.date.localeCompare(b.date));
 
   const byDate = new Map<string, BuffScheduleEntry>();
 
   for (const post of buffPosts) {
     const $ = cheerio.load(post.content);
-    $('table').first().find('tr').each((_i, tr) => {
+    const $table = $('table').first();
+
+    // The buff is the "Buff" column. Older posts are Date|UTC|Buff (buff last);
+    // newer "Buff & Push" posts append a Push column (Date|UTC|Buff|Push), so we
+    // can't assume it's the last cell — locate it by header, default to index 2.
+    let buffCol = 2;
+    $table.find('tr').first().find('td, th').each((i, c) => {
+      if (/^buff$/i.test($(c).text().trim())) buffCol = i;
+    });
+
+    $table.find('tr').each((_i, tr) => {
       const cells = $(tr).find('td, th');
-      if (cells.length < 3) return;
+      if (cells.length <= buffCol) return;
       const first = $(cells[0]).text().trim();
       if (/^date$/i.test(first)) return; // header row
       const date = parseBuffDate(first, post.date);
       if (!date) return;
-      const raw = $(cells[cells.length - 1]).text().trim();
+      const raw = $(cells[buffCol]).text().trim();
       if (!raw) return;
       byDate.set(date, { date, type: matchBuffType(raw), raw });
     });
