@@ -29497,14 +29497,12 @@
               "unlockLevel": 10,
               "isAdd": true,
               "desc": {
-                "en": "When defeating an enemy, increases Critical Damage by [Value] (Max 3 stacks)",
-                "jp": "敵を倒した時、会心ダメージが[Value]UPする。(最大3回まで累積)",
-                "kr": "적 처치 시 치명 피해 [Value] 증가 (최대 3회 누적)",
-                "zh": "击杀敌人时，暴击伤害提升[Value](最多可叠加3次)"
+                "en": "After attacking a Boss, increases Crit DMG by <color=#28d9ed>+30%</color> (max 3 stacks)",
+                "jp": "ボス攻撃後、自分の会心ダメージ <color=#28d9ed>+30%</color>（最大3回まで累積）",
+                "kr": "보스 공격 후 자신 치명 피해 <color=#28d9ed>+30%</color>  (최대 3회 누적)",
+                "zh": "攻击首领后，自身暴击伤害 <color=#28d9ed>+30%</color>（最多叠加3次）"
               },
-              "values": {
-                "[Value]": "5%"
-              }
+              "values": {}
             }
           ]
         }

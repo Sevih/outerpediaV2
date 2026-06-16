@@ -793,9 +793,9 @@
     "ID": "115",
     "EventType": "ET_ATTENDANCE",
     "EventValue": "14",
-    "GroupID": "58",
+    "GroupID": "94",
     "ShortCutShopSubCategoryID": "0",
-    "EventNameID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_12_1",
+    "EventNameID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_12",
     "EventDescID": "",
     "BGImage": "T_Event_Banner_Full_028.png"
   },
@@ -1958,5 +1958,45 @@
     "EventNameID": "SYS_ARCADE_EVENT_SHOP_MISSION_02",
     "EventDescID": "",
     "BGImage": "T_Web_Event_Banner_03.png"
+  },
+  {
+    "ID": "237",
+    "EventType": "ET_MISSION",
+    "EventValue": "44",
+    "GroupID": "2020",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_ARCADE_EVENT_GACHA_MISSION_01",
+    "EventDescID": "",
+    "BGImage": "T_Web_Event_Banner_01.png"
+  },
+  {
+    "ID": "238",
+    "EventType": "ET_MINI_GAME",
+    "EventValue": "7",
+    "GroupID": "11",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_ARCADE_EVENT_GACHA",
+    "EventDescID": "",
+    "BGImage": "T_Web_Event_Banner_06.png"
+  },
+  {
+    "ID": "239",
+    "EventType": "ET_MISSION",
+    "EventValue": "43",
+    "GroupID": "2021",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_ARCADE_EVENT_GACHA_MISSION_02",
+    "EventDescID": "",
+    "BGImage": "T_Web_Event_Banner_03.png"
+  },
+  {
+    "ID": "240",
+    "EventType": "ET_MISSION",
+    "EventValue": "15",
+    "GroupID": "0",
+    "ShortCutShopSubCategoryID": "0",
+    "EventNameID": "SYS_EVENT_REALTIMEPVP_TITLE_1",
+    "EventDescID": "",
+    "BGImage": "T_Event_Banner_Full_068.png"
   }
 ]

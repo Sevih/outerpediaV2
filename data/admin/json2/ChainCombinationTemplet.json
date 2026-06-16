@@ -791,6 +791,13 @@
     "IconName": "SC_Buff_Effect_True_Dmg"
   },
   {
+    "ID": "2000116",
+    "Sequence": "1",
+    "ShowBuffID": "2000116_chain_1_1",
+    "BuffIconType": "ALL_BUFF",
+    "IconName": "SC_Buff_Cool_Charge"
+  },
+  {
     "ID": "2000117",
     "Sequence": "0",
     "ShowBuffID": "2000117_chain_1_1",
@@ -1062,5 +1069,12 @@
     "ShowBuffID": "2000114_chain_1_1",
     "BuffIconType": "ALL_DUBUFF",
     "IconName": "SC_Buff_Effect_True_Dmg"
+  },
+  {
+    "ID": "2010116",
+    "Sequence": "0",
+    "ShowBuffID": "2000116_chain_1_1",
+    "BuffIconType": "ALL_DUBUFF",
+    "IconName": "SC_Buff_Effect_WG_Dmg"
   }
 ]

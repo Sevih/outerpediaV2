@@ -7659,7 +7659,7 @@
     "ID": "SYS_GACHA_RECRUIT_POPUP_NOTICE",
     "Korean": "우선 순위에 따라 위의 재화를 소모합니다.\\n우선 소모되는 재화가 부족한 경우, 다음 우선순위의 재화가 소모됩니다. \\n(이벤트)가 붙은 영입 재화는 마일리지가 적립되지 않습니다.",
     "English": "The resources above are used based on priority.\\nIf there is an insufficient amount of the current resource being used, the next resource available according to priority will be used.\\nUsing (Event) resources does not provide any mileage rewards.",
-    "Japanese": "上記のアイテムを消費します。\\n無償アイテムが足りない場合は、有償アイテムが代わりに消費されます。\\n(イベント)と書かれたスカウトチケットは仲間交換Ｐｔに変換されません。",
+    "Japanese": "上記のアイテムを消費します。\\n無償アイテムが足りない場合は、有償アイテムが代わりに消費されます。\\n(イベント)と書かれたスカウトチケットは交換Ptに変換されません。",
     "China_Simplified": "将按优先顺序消耗货币。\\n优先消耗的货币不足时，将按照顺序消耗下一种货币。\\n使用有(活动)标记的招募货币时无法获得积分。",
     "China_Traditional": "將按照優先順序消耗財物。\\n優先消耗的財物不足時，將按照以下順序來消耗財物。\\n招募財物若有標示(活動)字樣時，將無法累積積分。"
   },
@@ -7881,11 +7881,11 @@
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_4",
-    "Korean": "연료통",
-    "English": "Fuel Tank",
-    "Japanese": "燃料タンク",
-    "China_Simplified": "燃料桶",
-    "China_Traditional": "燃料桶"
+    "Korean": "요타월드 기념주화",
+    "English": "Iota World Commemorative Coin",
+    "Japanese": "イオータワールド記念コイン",
+    "China_Simplified": "佑妲世界纪念币",
+    "China_Traditional": "受詛咒的小號"
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_5",
@@ -8113,11 +8113,11 @@
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_4",
-    "Korean": "운송 수단으로 연료를 옮기는 도구. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
-    "English": "A canister used to transport fuel. Can be exchanged for various items in the Event Shop.",
-    "Japanese": "輸送手段で燃料を運ぶための道具。イベントショップでさまざまな商品と交換できます。",
-    "China_Simplified": "用运输工具搬运燃料的器具。可在活动商店中兑换各种商品。",
-    "China_Traditional": "用運輸工具搬運燃料的器具。可在活動商店中兌換各種商品。"
+    "Korean": "요타월드의 개장을 축하하여 제작된 기념 주화. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
+    "English": "Commemorative coin minted to celebrate the opening of Iota World. You can exchange it for a variety of items in the Event Shop.",
+    "Japanese": "イオータワールドのオープンを記念して作られた硬貨。イベントショップでアイテムと交換できる。",
+    "China_Simplified": "为庆祝佑妲世界开张而制作的纪念币。可在活动商店中兑换各式商品。",
+    "China_Traditional": "麥西和蘿西從阿瑪迪斯偷來的小號。可在活動商店中兌換各式商品。"
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_5",
@@ -21584,6 +21584,14 @@
     "China_Traditional": "首次達成獎勵"
   },
   {
+    "ID": "SYS_PVP_WEEK_REWARD",
+    "Korean": "주간 보상",
+    "English": "Weekly Reward",
+    "Japanese": "ウィークリー報酬",
+    "China_Simplified": "每周奖励",
+    "China_Traditional": "每週獎勵"
+  },
+  {
     "ID": "SYS_PVP_GRADE_CHANGE",
     "Korean": "결투장 등급 변경",
     "English": "Change Arena Tier",
@@ -24094,6 +24102,14 @@
     "Japanese": "もうみんな揃ってるみたいだね? 作戦会議を始める前に…まずは自己紹介といこうか。\\nアタシからいくよ。名前はスカディ。金さえ積めばどこへでも行って、弓を撃つ、そんな仕事してる。で、今回はちょっと特別な依頼を受けてね。デカいレッドダイヤ…通称「赤い秘密」って呼ばれてる宝石を、盗んでほしいんだとさ。だから情報屋を通して、各分野のトップって呼ばれてるアンタたちを集めたってわけ。\\n……どう? ワクワクしてきたでしょ? これからアタシたちは義賊になって、腐った金持ちどものパーティーをいただくってわけよ。\\n\\nちょ、ちょっと待って! そこのアタシのバイク、勝手に触らないで! まだ改造の途中なんだからさ!",
     "China_Simplified": "看来人都已经到齐了？在作战会议开始之前……先来个自我介绍吧？\\n我先开个头，我叫斯卡蒂。只要价钱到位，不管什么地方都能替人放箭，这次我接到的委托倒是有点不一般。目标是一颗巨大的红钻……也就是所谓的【红色秘密】的宝石，对方委托我把它弄到手。所以这次我才通过情报商，把你们这些各领域的顶尖人物全都召集了过来。\\n怎么样……是不是有点心跳加速了？从现在起，我们就是正义的怪盗，要狠狠干一票那些为富不仁的富豪宴会。\\n\\n喂，等等！别动我的摩托车！还在改装阶段呢！",
     "China_Traditional": "選手們都已經到齊了啊？在開始作戰會議之前…先來做個自我介紹吧？\\n那我先開始。我叫斯卡蒂。只要有錢，不管哪裡我都會去幫忙射幾箭的人，不過這次接到的委託有點特別。有顆巨大的紅鑽石…也就是所謂的「紅色秘密」，有人要我把它偷過來。所以我才透過情報商，把站在各領域頂點的各位召集過來。\\n怎麼樣……是不是開始心跳加速了？從現在開始，我們要化身為正義的怪盜，狠狠地教訓那些不道德富豪的宴會現場！\\n\\n等、等一下！不要碰那邊那台我的摩托車！我還在改裝中啦！"
+  },
+  {
+    "ID": "SYS_ACHIEVE_PROFILE_2000116",
+    "Korean": "<Color=#FFBF00>자칭</Color>, 뒷골목의 다빈치. <Color=#FFBF00>일단은</Color> 자신을 예술계의 이단이라 주장하시는 지구인 모험가, 아나키 님입니다.\\n억압과 공포로 물든 세상을 자유와 사랑으로 다시 그리겠다. 좋은 취지로 아우터시티에서 <Color=#FFBF00>자칭</Color> 예술 활동하고 계시긴 합니다만......\\n......결론적으로는 공공시설 훼손 혐의, 체포 불응과 공무 집행 방해, 탈옥 등의 각종 혐의로 전과 17범, 막대한 피해 보상금 폭탄까지 맞고 현재는 소속과 거주지 불명의 노숙자 신세입니다.\\n\\n이번에 갱생관에서 출소하시면, 의식주부터 해결하는 게 좋아 보이네요.\\n아나키 님에게 일자리라도 소개해 주는 게 어떨까요?",
+    "English": "A <Color=#FFBF00>self-proclaimed</Color> back-alley Da Vinci. <Color=#FFBF00>At least for now,</Color> she is Anarky, an Earthling Adventurer who claims to be an art-world maverick.\\nShe says she will repaint a world stained by oppression and fear with freedom and love. Her intentions are good, and she is pursuing <Color=#FFBF00>self-proclaimed</Color> artistic activities in Outer City, but...\\n...in the end, she has 17 prior convictions for charges including damage to public property, refusing arrest, obstruction of official duties, and jailbreak. She has also been hit with a massive damages bill, and is currently homeless with no known affiliation or residence.\\n\\nOnce she is released from the Rehabilitation Center, she should probably secure food, clothing, and shelter first.\\nPerhaps someone should introduce Anarky to a job?",
+    "Japanese": "<Color=#FFBF00>自称</color>路地裏のダ・ヴィンチ。<Color=#FFBF00>一応は</color>自身のことを芸術界の異端児だと主張なさっている地球人冒険家、アナーキ様です。\\n抑圧と恐怖に染まった世界を自由と愛で描き直す。良い趣旨でアウターシティにて<Color=#FFBF00>自称</color>芸術活動をしていらっしゃいますが……\\n……結論から申し上げますと、公共施設毀損の容疑、逮捕不応および公務執行妨害、脱獄などの各種容疑で前科17犯、莫大な損害賠償金まで抱え、現在は所属と居住地不明のホームレスの身でいらっしゃいます。\\n\\n今回、更生館から出所されたら、まずは衣食住から解決するのが良さそうですね。\\nアナーキ様に仕事でも紹介してみてはいかがでしょうか？",
+    "China_Simplified": "<Color=#FFBF00>自称</Color>，后街的达芬奇。<Color=#FFBF00>姑且</Color>自称为艺术界异端的地球人冒险者，阿娜奇大人。\\n要用自由与爱重新描绘这个充满压迫与恐惧的世界。出发点是好的，在外围城市<Color=#FFBF00>自称</Color>从事艺术活动……\\n……但结果是公共设施损毁、拒捕及妨碍公务、越狱等各种嫌疑累计17次前科，还背负巨额赔偿金，目前是所属与住址不明的流浪者。\\n\\n这次从感化院出来后，先解决衣食住的问题比较好。\\n要不要给阿娜奇介绍份工作呢？",
+    "China_Traditional": "<Color=#FFBF00>自稱</Color>，後街的達文西。<Color=#FFBF00>姑且</Color>自稱為藝術界異端的地球人冒險者，阿娜奇大人。\\n要用自由與愛重新描繪這個充滿壓迫與恐懼的世界。出發點是好的，在外圍城市<Color=#FFBF00>自稱</Color>從事藝術活動……\\n……但結果是公共設施損毀、拒捕及妨礙公務、越獄等各種嫌疑累計17次前科，還背負巨額賠償金，目前是所屬與住址不明的流浪者。\\n\\n這次從感化院出來後，先解決衣食住的問題比較好。\\n要不要給阿娜奇介紹份工作呢？"
   },
   {
     "ID": "SYS_ACHIEVE_PROFILE_2000117",
@@ -40185,11 +40201,11 @@
   },
   {
     "ID": "SYS_LRT_BACKGROUND_07_NAME",
-    "Korean": "[이벤트] 사신과 갱스터 - 카지노",
-    "English": "[Event] The Reaper and the Gangster - Casino",
-    "Japanese": "【イベント】死神とギャンブラー - カジノ",
-    "China_Simplified": "【活动】 死神与赌棍之首 - 赌场",
-    "China_Traditional": "【活動】死神與黑幫 - 賭場"
+    "Korean": "[이벤트] 카지노",
+    "English": "[Event] Casino",
+    "Japanese": "【イベント】カジノ",
+    "China_Simplified": "【活动】赌场",
+    "China_Traditional": "【活動】賭場"
   },
   {
     "ID": "SYS_GUILD_RAID_START_MSG",
@@ -42177,11 +42193,11 @@
   },
   {
     "ID": "SYS_LRT_BACKGROUND_09_NAME",
-    "Korean": "[이벤트] 서머 아일랜드",
-    "English": "[Event] Summer Island",
-    "Japanese": "【イベント】サマーアイランド",
-    "China_Simplified": "【活动】夏日海岛",
-    "China_Traditional": "【活動】夏日島嶼"
+    "Korean": "[이벤트] 해변",
+    "English": "[Event] Beach",
+    "Japanese": "【イベント】ビーチ",
+    "China_Simplified": "【活动】海边",
+    "China_Traditional": "【活動】海邊"
   },
   {
     "ID": "SYS_EVENT_MISSION_DES_01",
@@ -42265,11 +42281,11 @@
   },
   {
     "ID": "SYS_LRT_BACKGROUND_10_NAME",
-    "Korean": "[이벤트] 노을지는 서머 아일랜드",
-    "English": "[Event] Summer Island Sunset",
-    "Japanese": "【イベント】サンセットサマーアイランド",
-    "China_Simplified": "【活动】霞光落日海岛",
-    "China_Traditional": "【活動】日落景點夏日島嶼"
+    "Korean": "[이벤트] 노을지는 해변",
+    "English": "[Event] Sunset Beach",
+    "Japanese": "【イベント】サンセットビーチ",
+    "China_Simplified": "【活动】夕阳下的海边",
+    "China_Traditional": "【活動】日落景點海邊"
   },
   {
     "ID": "SYS_CRAFT_TITLE_01",
@@ -52938,10 +52954,10 @@
   {
     "ID": "SYS_GUIDE_FRIENDSHIP_PVP_02_DESC",
     "Korean": "1. 프리 밴 : 친선 대전 시작 후 [프리 밴]을 진행하게 되며, 이때 자신과 대전 상대가 각각 1명의 동료를 밴하게 됩니다.\\n[프리 밴]에서 제외된 2명의 동료는 전투 팀 편성이 불가능합니다. \\n2. 동료 선택 : 자신과 대전 상대가 번갈아가며, 전투에 참여할 동료를 5명 선택하게 됩니다.\\n3. 라스트 밴 : 5명의 동료가 모두 결정되면, 상대방 동료 5명 중 1명을 제외하는 [라스트 밴]이 진행됩니다.\\n4. 편성 및 리더 지정 : 편성 화면에서 편성 동료의 위치를 수정하고, [리더]를 지정하여 [리더 버프 효과]를 결정할 수 있습니다.\\n5. 자신과 대전 상대 모두 준비가 끝나면, 3초의 대기 시간 이후에 친선 대전 결투장에 입장합니다.",
-    "English": "1. Pre-Ban : After the Friendly Match begins, a [Pre-Ban] is conducted, where you and your opponent each ban 1 hero.\\nThe 2 heroes excluded in the [Pre-Ban] cannot be used in battle.\\n2. Hero Selection : You and your opponent take turns selecting 5 heroes to participate in battle.\\n3. Last Ban : Once all 5 heroes are decided, a [Last Ban] is conducted to exclude 1 of the opponent's 5 heroes.\\n4. Team & Leader Selection : On the lineup screen, you can adjust the positions of your heroes and select a [Leader] to determine the [Leader Buff Effect].\\n6. Once both you and your opponent are ready, you will enter the Friendly Match Arena after a 3-second countdown.",
-    "Japanese": "1. プリバン：フレンド対戦開始後、[プリバン]を行い、自分と対戦相手がそれぞれ1名の仲間をバンします。\\n[プリバン]で除外された2名の仲間は戦闘チームの編成が不可能です。\\n2. 仲間選択：自分と対戦相手が交互に、戦闘に参加する仲間を5名選択します。\\n3. ラストバン：5名の仲間がすべて決定されると、相手の仲間5名のうち1名を除外する[ラストバン]が行われます。\\n4. 編成およびリーダー指定：編成画面で編成した仲間の位置を修正し、[リーダー]を指定して[リーダーバフ効果]を決定できます。\\n6. 自分と対戦相手の準備が整ったら、3秒の待機時間後にフレンド対戦アリーナに入場します。",
-    "China_Simplified": "1. 预禁用：友谊赛开始后进行[预禁用]，此时自己与对战对手各禁用1名同伴。\\n[预禁用]中被排除的2名同伴无法加入战斗队伍。\\n2. 同伴选择：自己与对战对手交替选择5名参与战斗的同伴。\\n3. 最终禁用：5名同伴全部确定后，进行从对手5名同伴中排除1名的[最终禁用]。\\n4. 编成及队长指定：在编成界面调整编成同伴的位置，并指定[队长]以决定[队长增益效果]。\\n6. 自己与对战对手均准备完毕后，经过3秒等待时间后进入友谊赛竞技场。",
-    "China_Traditional": "1. 預禁用：友誼賽開始後進行[預禁用]，此時自己與對戰對手各禁用1名同伴。\\n[預禁用]中被排除的2名同伴無法加入戰鬥隊伍。\\n2. 同伴選擇：自己與對戰對手交替選擇5名參與戰鬥的同伴。\\n3. 最終禁用：5名同伴全部確定後，進行從對手5名同伴中排除1名的[最終禁用]。\\n4. 編成及隊長指定：在編成介面調整編成同伴的位置，並指定[隊長]以決定[隊長增益效果]。\\n6. 自己與對戰對手均準備完畢後，經過3秒等待時間後進入友誼賽決鬥場。"
+    "English": "1. Pre-Ban : After the Friendly Match begins, a [Pre-Ban] is conducted, where you and your opponent each ban 1 hero.\\nThe 2 heroes excluded in the [Pre-Ban] cannot be used in battle.\\n2. Hero Selection : You and your opponent take turns selecting 5 heroes to participate in battle.\\n3. Last Ban : Once all 5 heroes are decided, a [Last Ban] is conducted to exclude 1 of the opponent's 5 heroes.\\n4. Team & Leader Selection : On the lineup screen, you can adjust the positions of your heroes and select a [Leader] to determine the [Leader Buff Effect].\\n5. Once both you and your opponent are ready, you will enter the Friendly Match Arena after a 3-second countdown.",
+    "Japanese": "1. プリバン：フレンド対戦開始後、[プリバン]を行い、自分と対戦相手がそれぞれ1名の仲間をバンします。\\n[プリバン]で除外された2名の仲間は戦闘チームの編成が不可能です。\\n2. 仲間選択：自分と対戦相手が交互に、戦闘に参加する仲間を5名選択します。\\n3. ラストバン：5名の仲間がすべて決定されると、相手の仲間5名のうち1名を除外する[ラストバン]が行われます。\\n4. 編成およびリーダー指定：編成画面で編成した仲間の位置を修正し、[リーダー]を指定して[リーダーバフ効果]を決定できます。\\n5. 自分と対戦相手の準備が整ったら、3秒の待機時間後にフレンド対戦アリーナに入場します。",
+    "China_Simplified": "1. 预禁用：友谊赛开始后进行[预禁用]，此时自己与对战对手各禁用1名同伴。\\n[预禁用]中被排除的2名同伴无法加入战斗队伍。\\n2. 同伴选择：自己与对战对手交替选择5名参与战斗的同伴。\\n3. 最终禁用：5名同伴全部确定后，进行从对手5名同伴中排除1名的[最终禁用]。\\n4. 编成及队长指定：在编成界面调整编成同伴的位置，并指定[队长]以决定[队长增益效果]。\\n5. 自己与对战对手均准备完毕后，经过3秒等待时间后进入友谊赛竞技场。",
+    "China_Traditional": "1. 預禁用：友誼賽開始後進行[預禁用]，此時自己與對戰對手各禁用1名同伴。\\n[預禁用]中被排除的2名同伴無法加入戰鬥隊伍。\\n2. 同伴選擇：自己與對戰對手交替選擇5名參與戰鬥的同伴。\\n3. 最終禁用：5名同伴全部確定後，進行從對手5名同伴中排除1名的[最終禁用]。\\n4. 編成及隊長指定：在編成介面調整編成同伴的位置，並指定[隊長]以決定[隊長增益效果]。\\n5. 自己與對戰對手均準備完畢後，經過3秒等待時間後進入友誼賽決鬥場。"
   },
   {
     "ID": "SYS_GUIDE_FRIENDSHIP_PVP_03_NAME",
@@ -55185,7 +55201,7 @@
   },
   {
     "ID": "SYS_LRT_BACKGROUND_SIDE_1033_NAME",
-    "Korean": "로비 배경 - 앱실론 외전",
+    "Korean": "로비 배경 - 엡실론 외전",
     "English": "Lobby Background - Epsilon Side Story",
     "Japanese": "ロビー背景 - イプシロン外伝",
     "China_Simplified": "大厅背景 - 埃普西隆外传",
@@ -95170,50 +95186,50 @@
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_1_02",
     "Korean": "전투 중 아군 피해량<color=#f17609> 3%</color> 증가",
+    "English": "Increases damage taken by allies during battle by<color=#f17609> 3%</color>",
+    "Japanese": "戦闘中、味方のダメージ<color=#f17609>3％</color>UP",
+    "China_Simplified": "战斗中友军伤害量提升<color=#f17609>3%</color>",
+    "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17609>3%</color>"
+  },
+  {
+    "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_1_03",
+    "Korean": "전투 중 아군 피해량<color=#f17609> 4%</color> 증가",
     "English": "Increases damage taken by allies during battle by<color=#f17609> 4%</color>",
     "Japanese": "戦闘中、味方のダメージ<color=#f17609>4％</color>UP",
     "China_Simplified": "战斗中友军伤害量提升<color=#f17609>4%</color>",
     "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17609>4%</color>"
   },
   {
-    "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_1_03",
-    "Korean": "전투 중 아군 피해량<color=#f17609> 4%</color> 증가",
-    "English": "Increases damage taken by allies during battle by<color=#f17609> 5%</color>",
-    "Japanese": "戦闘中、味方のダメージ<color=#f17609>5％</color>UP",
-    "China_Simplified": "战斗中友军伤害量提升<color=#f17609>5%</color>",
-    "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17609>5%</color>"
-  },
-  {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_1_04",
     "Korean": "전투 중 아군 피해량<color=#f17609> 5%</color> 증가",
+    "English": "Increases damage taken by allies during battle by<color=#f17509> 5%</color>",
+    "Japanese": "戦闘中、味方のダメージ<color=#f17509>5％</color>UP",
+    "China_Simplified": "战斗中友军伤害量提升<color=#f17509>5%</color>",
+    "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17509>5%</color>"
+  },
+  {
+    "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_1_05",
+    "Korean": "전투 중 아군 피해량<color=#f17609> 6%</color> 증가",
     "English": "Increases damage taken by allies during battle by<color=#f17609> 6%</color>",
     "Japanese": "戦闘中、味方のダメージ<color=#f17609>6％</color>UP",
     "China_Simplified": "战斗中友军伤害量提升<color=#f17609>6%</color>",
     "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17609>6%</color>"
   },
   {
-    "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_1_05",
-    "Korean": "전투 중 아군 피해량<color=#f17609> 6%</color> 증가",
-    "English": "Increases damage taken by allies during battle by<color=#f17609> 10%</color>",
-    "Japanese": "戦闘中、味方のダメージ<color=#f17609>10％</color>UP",
-    "China_Simplified": "战斗中友军伤害量提升<color=#f17609>10%</color>",
-    "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17609>10%</color>"
-  },
-  {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_1_06",
     "Korean": "전투 중 아군 피해량<color=#f17609> 7%</color> 증가",
-    "English": "Increases damage taken by allies during battle by<color=#f17609> 15%</color>",
-    "Japanese": "戦闘中、味方のダメージ<color=#f17609>15％</color>UP",
-    "China_Simplified": "战斗中友军伤害量提升<color=#f17609>15%</color>",
-    "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17609>15%</color>"
+    "English": "Increases damage taken by allies during battle by<color=#f17609> 7%</color>",
+    "Japanese": "戦闘中、味方のダメージ<color=#f17609>7％</color>UP",
+    "China_Simplified": "战斗中友军伤害量提升<color=#f17609>7%</color>",
+    "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17609>7%</color>"
   },
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_1_07",
     "Korean": "전투 중 아군 피해량<color=#f17609> 8%</color> 증가",
-    "English": "Increases damage taken by allies during battle by<color=#f17609> 20%</color>",
-    "Japanese": "戦闘中、味方のダメージ<color=#f17609>20％</color>UP",
-    "China_Simplified": "战斗中友军伤害量提升<color=#f17609>20%</color>",
-    "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17609>20%</color>"
+    "English": "Increases damage taken by allies during battle by<color=#f17609> 8%</color>",
+    "Japanese": "戦闘中、味方のダメージ<color=#f17609>8％</color>UP",
+    "China_Simplified": "战斗中友军伤害量提升<color=#f17609>8%</color>",
+    "China_Traditional": "戰鬥中我軍傷害量增加<color=#f17609>8%</color>"
   },
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_1_08",
@@ -95242,58 +95258,58 @@
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_2_01",
     "Korean": "전투 중 매 턴 체력<color=#FF0000> 2%</color> 피해",
-    "English": "Decreases allies’ Speed by<color=#FF0000> 3%</color> during battle.",
-    "Japanese": "戦闘中、味方のスピード<color=#FF0000>3%</color>DOWN",
-    "China_Simplified": "战斗中友军速度降低<color=#FF0000>3%</color>",
-    "China_Traditional": "戰鬥中我軍速度減少<color=#FF0000>3%</color>"
+    "English": "Health takes<color=#FF0000> 2%</color> damage every turn during battle",
+    "Japanese": "戦闘中、毎ターンHP<color=#FF0000> 2%</color>ダメージ",
+    "China_Simplified": "战斗中每回合生命值受到<color=#FF0000> 2%</color>伤害",
+    "China_Traditional": "戰鬥中每回合生命力受到<color=#FF0000> 2%</color>傷害"
   },
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_2_02",
     "Korean": "전투 중 매 턴 체력<color=#FF0000> 3%</color> 피해",
-    "English": "Decreases allies’ Speed by<color=#FF0000> 4%</color> during battle.",
-    "Japanese": "戦闘中、味方のスピード<color=#FF0000>4%</color>DOWN",
-    "China_Simplified": "战斗中友军速度降低<color=#FF0000>4%</color>",
-    "China_Traditional": "戰鬥中我軍速度減少<color=#FF0000>4%</color>"
+    "English": "Health takes<color=#FF0000> 3%</color> damage every turn during battle",
+    "Japanese": "戦闘中、毎ターンHP<color=#FF0000> 3%</color>ダメージ",
+    "China_Simplified": "战斗中每回合生命值受到<color=#FF0000> 3%</color>伤害",
+    "China_Traditional": "戰鬥中每回合生命力受到<color=#FF0000> 3%</color>傷害"
   },
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_2_03",
     "Korean": "전투 중 매 턴 체력<color=#FF0000> 4%</color> 피해",
-    "English": "Decreases allies’ Speed by<color=#FF0000> 5%</color> during battle.",
-    "Japanese": "戦闘中、味方のスピード<color=#FF0000>5%</color>DOWN",
-    "China_Simplified": "战斗中友军速度降低<color=#FF0000>5%</color>",
-    "China_Traditional": "戰鬥中我軍速度減少<color=#FF0000>5%</color>"
+    "English": "Health takes<color=#FF0000> 4%</color> damage every turn during battle",
+    "Japanese": "戦闘中、毎ターンHP<color=#FF0000> 4%</color>ダメージ",
+    "China_Simplified": "战斗中每回合生命值受到<color=#FF0000> 4%</color>伤害",
+    "China_Traditional": "戰鬥中每回合生命力受到<color=#FF0000> 4%</color>傷害"
   },
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_2_04",
     "Korean": "전투 중 매 턴 체력<color=#FF0000> 5%</color> 피해",
-    "English": "Decreases allies’ Speed by<color=#FF0000> 6%</color> during battle.",
-    "Japanese": "戦闘中、味方のスピード<color=#FF0000>6%</color>DOWN",
-    "China_Simplified": "战斗中友军速度降低<color=#FF0000>6%</color>",
-    "China_Traditional": "戰鬥中我軍速度減少<color=#FF0000>6%</color>"
+    "English": "Health takes<color=#FF0000> 5%</color> damage every turn during battle",
+    "Japanese": "戦闘中、毎ターンHP<color=#FF0000> 5%</color>ダメージ",
+    "China_Simplified": "战斗中每回合生命值受到<color=#FF0000> 5%</color>伤害",
+    "China_Traditional": "戰鬥中每回合生命力受到<color=#FF0000> 5%</color>傷害"
   },
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_2_05",
     "Korean": "전투 중 매 턴 체력<color=#FF0000> 6%</color> 피해",
-    "English": "Decreases allies’ Speed by<color=#FF0000> 10%</color> during battle.",
-    "Japanese": "戦闘中、味方のスピード<color=#FF0000>10%</color>DOWN",
-    "China_Simplified": "战斗中友军速度降低<color=#FF0000>10%</color>",
-    "China_Traditional": "戰鬥中我軍速度減少<color=#FF0000>10%</color>"
+    "English": "Health takes<color=#FF0000> 6%</color> damage every turn during battle",
+    "Japanese": "戦闘中、毎ターンHP<color=#FF0000> 6%</color>ダメージ",
+    "China_Simplified": "战斗中每回合生命值受到<color=#FF0000> 6%</color>伤害",
+    "China_Traditional": "戰鬥中每回合生命力受到<color=#FF0000> 6%</color>傷害"
   },
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_2_06",
     "Korean": "전투 중 매 턴 체력<color=#FF0000> 7%</color> 피해",
-    "English": "Decreases allies’ Speed by<color=#FF0000> 15%</color> during battle.",
-    "Japanese": "戦闘中、味方のスピード<color=#FF0000>15%</color>DOWN",
-    "China_Simplified": "战斗中友军速度降低<color=#FF0000>15%</color>",
-    "China_Traditional": "戰鬥中我軍速度減少<color=#FF0000>15%</color>"
+    "English": "Health takes<color=#FF0000> 7%</color> damage every turn during battle",
+    "Japanese": "戦闘中、毎ターンHP<color=#FF0000> 7%</color>ダメージ",
+    "China_Simplified": "战斗中每回合生命值受到<color=#FF0000> 7%</color>伤害",
+    "China_Traditional": "戰鬥中每回合生命力受到<color=#FF0000> 7%</color>傷害"
   },
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_2_07",
     "Korean": "전투 중 매 턴 체력<color=#FF0000> 8%</color> 피해",
-    "English": "Decreases allies’ Speed by<color=#FF0000> 20%</color> during battle.",
-    "Japanese": "戦闘中、味方のスピード<color=#FF0000>20%</color>DOWN",
-    "China_Simplified": "战斗中友军速度降低<color=#FF0000>20%</color>",
-    "China_Traditional": "戰鬥中我軍速度減少<color=#FF0000>20%</color>"
+    "English": "Health takes<color=#FF0000> 8%</color> damage every turn during battle",
+    "Japanese": "戦闘中、毎ターンHP<color=#FF0000> 8%</color>ダメージ",
+    "China_Simplified": "战斗中每回合生命值受到<color=#FF0000> 8%</color>伤害",
+    "China_Traditional": "戰鬥中每回合生命力受到<color=#FF0000> 8%</color>傷害"
   },
   {
     "ID": "SYS_MONADGATE_RULE_GAUGE_BUFF_DESC_2_08",
@@ -100665,11 +100681,11 @@
   },
   {
     "ID": "SYS_ARCADE_EVENT_RPS_DESC_2",
-    "Korean": "보유하신 코인은 이벤트 기간 동안 유지됩니다.",
-    "English": "Held coins reset daily at 9:00 a.m.",
+    "Korean": "보유 코인은 매일 오전 9시에 초기화됩니다.",
+    "English": "Held coins reset daily at 00:00 UTC",
     "Japanese": "所持コインは毎日9時にリセットされます。",
-    "China_Simplified": "持有的硬币每日9:00重置。",
-    "China_Traditional": "持有的硬幣每日9:00重置。"
+    "China_Simplified": "持有的硬币每日0:00(UTC)重置。",
+    "China_Traditional": "持有的硬幣每日0:00(UTC)重置。"
   },
   {
     "ID": "SYS_ARCADE_EVENT_ACTIVE_COUNT",
@@ -104602,7 +104618,7 @@
   {
     "ID": "SYS_RESET_SMELTING_ERROR_02",
     "Korean": "최대 재련한 장비에만 사용할 수 있습니다.",
-    "English": "Can only be used on fully reforged equipment.",
+    "English": "Can only be used on fully reforged gear.",
     "Japanese": "最大まで再錬した装備にのみ使用できます。",
     "China_Simplified": "只能用于已重铸至最高等级的装备。",
     "China_Traditional": "只能用於已再鍊至最高等級的裝備。"
@@ -104618,7 +104634,7 @@
   {
     "ID": "SYS_GEAR_RESET_DESC_01",
     "Korean": "성장되지 않은 장비는 초기화를 진행할 수 없습니다.",
-    "English": "Equipment that has not been enhanced cannot be reset.",
+    "English": "Gear that has not been enhanced cannot be reset.",
     "Japanese": "未強化装備はリセットできません。",
     "China_Simplified": "未强化过的装备无法初始化。",
     "China_Traditional": "未強化的裝備無法初始化。"
@@ -106075,7 +106091,7 @@
     "ID": "SYS_GEM_FREE_USE",
     "Korean": "<color=#cf1c1c>무료 에테르 개수 부족으로 인해 유료 에테르 {0}개가 추가로 소모됩니다.</color>",
     "English": "Insufficient Free Ether. {0} Paid Ether will be consumed instead.",
-    "Japanese": "無料エーテル不足のため、有償エーテル{0}個が追加で消費されます。",
+    "Japanese": "無償エーテル不足のため、有償エーテル{0}個が追加で消費されます。",
     "China_Simplified": "因免费以太数量不足，将额外消耗{0}个付费以太。",
     "China_Traditional": "因免費乙太數量不足，將額外消耗{0}個付費乙太。"
   },
@@ -109370,7 +109386,7 @@
   {
     "ID": "SYS_SMELTING_ITME_SELL_05",
     "Korean": "방어팀에 편성된 장비는 판매/분해 기능을 이용할 수 없습니다.",
-    "English": "Equipment equipped by the Defense Team cannot be sold or dismantled.",
+    "English": "Gear equipped by the Defense Team cannot be sold or dismantled.",
     "Japanese": "防御チームに編成されている装備は、売却/分解機能を利用できません。",
     "China_Simplified": "防御队已装备的装备无法出售/分解。",
     "China_Traditional": "防禦隊已裝備的裝備無法出售/分解。"
@@ -113433,11 +113449,11 @@
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G01_01",
-    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n필살기 피해량 <color=#28d9ed>-50%</color>\\n받는 피해 <color=#28d9ed>-50%</color>\\n체력 <color=#28d9ed>+50%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 무적 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420) / 받는 고정 피해(5000)",
-    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nUltimate Skill DMG <color=#28d9ed>-50%</color>\\nDMG taken <color=#28d9ed>-50%</color>\\nHealth <color=#28d9ed>+50%</color>\\nUpon revival, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects Applied as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: A Challenge for the Strong!</color> The <color=#28d9ed>1</color> member on each team with the highest Attack has their Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be removed)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: A Chance for the Weak!</color> The <color=#28d9ed>1</color> member on each team with the lowest Health gains Invulnerability / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs are removed\\n<color=#28d9ed>Turn 24</color>: All buffs are removed, and Unbuffable is applied (Ignores Immunity / Cannot be removed)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420) / Fixed DMG taken(5000)",
-    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n必殺スキルダメージ<color=#28d9ed>-50%</color>\\n受けるダメージ<color=#28d9ed>-50%</color>\\nHP<color=#28d9ed>+50%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>に無敵 / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 会心率(80%) / 会心ダメージ(280%) / 貫通力(50%) / 効果命中(420) / 受ける固定ダメージ(5000)",
-    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n必杀技伤害量<color=#28d9ed>-50%</color>\\n受到的伤害<color=#28d9ed>-50%</color>\\n生命值<color=#28d9ed>+50%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用无敌 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 暴击率(80%) / 暴击伤害(280%) / 穿透力(50%) / 效果命中(420) / 受到的固定伤害(5000)",
-    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n必殺技傷害量<color=#28d9ed>-50%</color>\\n受到的傷害<color=#28d9ed>-50%</color>\\n生命力<color=#28d9ed>+50%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用無敵 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 暴擊率(80%) / 暴擊傷害(280%) / 貫穿力(50%) / 效果命中(420) / 受到的固定傷害(5000)"
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n필살기 피해량 <color=#28d9ed>-50%</color>\\n받는 피해 <color=#28d9ed>-50%</color>\\n체력 <color=#28d9ed>+50%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 실드 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420) / 받는 고정 피해(5000)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nUltimate Skill DMG <color=#28d9ed>-50%</color>\\nDMG taken <color=#28d9ed>-50%</color>\\nHealth <color=#28d9ed>+50%</color>\\nUpon revival, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects Applied as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: A Challenge for the Strong!</color> The <color=#28d9ed>1</color> member on each team with the highest Attack has their Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be removed)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: A Chance for the Weak!</color> The <color=#28d9ed>1</color> member on each team with the lowest Health gains Barrier / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs are removed\\n<color=#28d9ed>Turn 24</color>: All buffs are removed, and Unbuffable is applied (Ignores Immunity / Cannot be removed)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420) / Fixed DMG taken(5000)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n必殺スキルダメージ<color=#28d9ed>-50%</color>\\n受けるダメージ<color=#28d9ed>-50%</color>\\nHP<color=#28d9ed>+50%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>にシールド / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 会心率(80%) / 会心ダメージ(280%) / 貫通力(50%) / 効果命中(420) / 受ける固定ダメージ(5000)",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n必杀技伤害量<color=#28d9ed>-50%</color>\\n受到的伤害<color=#28d9ed>-50%</color>\\n生命值<color=#28d9ed>+50%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用护盾 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 暴击率(80%) / 暴击伤害(280%) / 穿透力(50%) / 效果命中(420) / 受到的固定伤害(5000)",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n必殺技傷害量<color=#28d9ed>-50%</color>\\n受到的傷害<color=#28d9ed>-50%</color>\\n生命力<color=#28d9ed>+50%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用護盾 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 暴擊率(80%) / 暴擊傷害(280%) / 貫穿力(50%) / 效果命中(420) / 受到的固定傷害(5000)"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G01_02",
@@ -113449,11 +113465,11 @@
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_01",
-    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n전투 시작 시, 공간 왜곡 <color=#28d9ed>1회</color> 적용\\n모든 행동 게이지 증가 효율 <color=#28d9ed>-50%</color>\\n효과 저항 <color=#28d9ed>+200</color> / 체력 <color=#28d9ed>+30%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 무적 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420) / 받는 고정 피해(5000)",
-    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nAt the start of battle, Spatial Distortion applied <color=#28d9ed>1</color> time\\nAll Priority increase efficiency <color=#28d9ed>-50%</color>\\nResilience <color=#28d9ed>+200</color> / Health <color=#28d9ed>+30%</color>\\nPriority recovery upon Revive <color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>Effects that Occur as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: Hardship for the Strong!</color> <color=#28d9ed>1</color> member per team with the highest Attack has Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: Chance for the Weak!</color> <color=#28d9ed>1</color> member per team with the lowest Health gains Invincible / Continuous Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs dispelled\\n<color=#28d9ed>Turn 24</color>: All buffs dispelled, Unbuffable applied (Ignores Immunity / Cannot be dispelled)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420) / Fixed DMG taken(5000)",
-    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（持続効果、全員）</color>\\n戦闘開始時、空間歪曲を<color=#28d9ed>1回</color>適用\\nすべての行動ゲージ増加効率<color=#28d9ed>-50%</color>\\n効果抵抗<color=#28d9ed>+200</color> / HP<color=#28d9ed>+30%</color>\\n復活時の行動ゲージ回復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>に無敵 / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 会心率(80%) / 会心ダメージ(280%) / 貫通力(50%) / 効果命中(420) / 受ける固定ダメージ(5000)",
-    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n战斗开始时，适用空间扭曲<color=#28d9ed>1次</color>\\n所有行动值增加效率<color=#28d9ed>-50%</color>\\n效果抵抗<color=#28d9ed>+200</color> / 生命值<color=#28d9ed>+30%</color>\\n复活时行动值恢复<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用无敌 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 暴击率(80%) / 暴击伤害(280%) / 穿透力(50%) / 效果命中(420) / 受到的固定伤害(5000)",
-    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n戰鬥開始時，適用空間扭曲<color=#28d9ed>1次</color>\\n所有速攻值增加效率<color=#28d9ed>-50%</color>\\n效果抵抗<color=#28d9ed>+200</color> / 生命力<color=#28d9ed>+30%</color>\\n復活時速攻值恢復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用無敵 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 暴擊率(80%) / 暴擊傷害(280%) / 貫穿力(50%) / 效果命中(420) / 受到的固定傷害(5000)"
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n전투 시작 시, 공간 왜곡 <color=#28d9ed>1회</color> 적용\\n모든 행동 게이지 증가 효율 <color=#28d9ed>-50%</color>\\n효과 저항 <color=#28d9ed>+200</color> / 체력 <color=#28d9ed>+30%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 실드 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420) / 받는 고정 피해(5000)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nAt the start of battle, Spatial Distortion applied <color=#28d9ed>1</color> time\\nAll Priority increase efficiency <color=#28d9ed>-50%</color>\\nResilience <color=#28d9ed>+200</color> / Health <color=#28d9ed>+30%</color>\\nPriority recovery upon Revive <color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>Effects that Occur as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: Hardship for the Strong!</color> <color=#28d9ed>1</color> member per team with the highest Attack has Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: Chance for the Weak!</color> <color=#28d9ed>1</color> member per team with the lowest Health gains Invincible / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs dispelled\\n<color=#28d9ed>Turn 24</color>: All buffs dispelled, Unbuffable applied (Ignores Immunity / Cannot be dispelled)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420) / Fixed DMG taken(5000)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（持続効果、全員）</color>\\n戦闘開始時、空間歪曲を<color=#28d9ed>1回</color>適用\\nすべての行動ゲージ増加効率<color=#28d9ed>-50%</color>\\n効果抵抗<color=#28d9ed>+200</color> / HP<color=#28d9ed>+30%</color>\\n復活時の行動ゲージ回復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>にシールド / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 会心率(80%) / 会心ダメージ(280%) / 貫通力(50%) / 効果命中(420) / 受ける固定ダメージ(5000)",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n战斗开始时，适用空间扭曲<color=#28d9ed>1次</color>\\n所有行动值增加效率<color=#28d9ed>-50%</color>\\n效果抵抗<color=#28d9ed>+200</color> / 生命值<color=#28d9ed>+30%</color>\\n复活时行动值恢复<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用护盾 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 暴击率(80%) / 暴击伤害(280%) / 穿透力(50%) / 效果命中(420) / 受到的固定伤害(5000)",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n戰鬥開始時，適用空間扭曲<color=#28d9ed>1次</color>\\n所有速攻值增加效率<color=#28d9ed>-50%</color>\\n效果抵抗<color=#28d9ed>+200</color> / 生命力<color=#28d9ed>+30%</color>\\n復活時速攻值恢復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用護盾 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 暴擊率(80%) / 暴擊傷害(280%) / 貫穿力(50%) / 效果命中(420) / 受到的固定傷害(5000)"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_02",
@@ -113473,11 +113489,11 @@
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_04",
-    "Korean": "<color=#28d9ed>약자에게 기회를!</color> 적용\\n가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 무적 / 지속 회복 <color=#28d9ed>1턴</color> 적용",
-    "English": "<color=#28d9ed>Chance for the Weak!</color> applied\\n<color=#28d9ed>1</color> member per team with the lowest Health gains Invincible / Continuous Recovery for <color=#28d9ed>1 turn</color>",
-    "Japanese": "<color=#28d9ed>弱者にチャンスを！</color>適用\\n最もHPが低いチーム別<color=#28d9ed>1人</color>に無敵 / 継続回復を<color=#28d9ed>1ターン</color>適用",
-    "China_Simplified": "<color=#28d9ed>给弱者以机会！</color>适用\\n生命值最低的每队<color=#28d9ed>1人</color>适用无敌 / 持续恢复<color=#28d9ed>1回合</color>",
-    "China_Traditional": "<color=#28d9ed>給弱者以機會！</color>適用\\n生命力最低的每隊<color=#28d9ed>1人</color>適用無敵 / 持續恢復<color=#28d9ed>1回合</color>"
+    "Korean": "<color=#28d9ed>약자에게 기회를!</color> 적용\\n가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 실드 / 지속 회복 <color=#28d9ed>1턴</color> 적용",
+    "English": "<color=#28d9ed>Chance for the Weak!</color> applied\\n<color=#28d9ed>1</color> member per team with the lowest Health gains Barrier / Sustained Recovery for <color=#28d9ed>1 turn</color>",
+    "Japanese": "<color=#28d9ed>弱者にチャンスを！</color>適用\\n最もHPが低いチーム別<color=#28d9ed>1人</color>にシールド / 継続回復を<color=#28d9ed>1ターン</color>適用",
+    "China_Simplified": "<color=#28d9ed>给弱者以机会！</color>适用\\n生命值最低的每队<color=#28d9ed>1人</color>适用护盾 / 持续恢复<color=#28d9ed>1回合</color>",
+    "China_Traditional": "<color=#28d9ed>給弱者以機會！</color>適用\\n生命力最低的每隊<color=#28d9ed>1人</color>適用護盾 / 持續恢復<color=#28d9ed>1回合</color>"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G02_05",
@@ -113489,27 +113505,27 @@
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G03_01",
-    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n전투 시작 시, 실드 <color=#28d9ed>1턴</color> 적용(자신 체력 50%)\\n받는 지속 피해 <color=#28d9ed>-50%</color>\\n받는 피해 <color=#28d9ed>-30%</color>\\n전투 시작 시, 방어형 동료 속도 <color=#28d9ed>1턴</color> 증가(해제 불가)\\n\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 무적 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420) / 받는 고정 피해(5000)",
-    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nAt the start of battle, Barrier applied for <color=#28d9ed>1 turn</color> (50% of own Health)\\nDoT taken <color=#28d9ed>-50%</color>\\nDMG dealt by targets with Barrier <color=#28d9ed>+30%</color>\\nAt the start of battle, Defender hero Speed increases for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\nPriority recovery upon Revive <color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>Effects that Occur as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: Hardship for the Strong!</color> <color=#28d9ed>1</color> member per team with the highest Attack has Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: Chance for the Weak!</color> <color=#28d9ed>1</color> member per team with the lowest Health gains Invincible / Continuous Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs dispelled\\n<color=#28d9ed>Turn 24</color>: All buffs dispelled, Unbuffable applied (Ignores Immunity / Cannot be dispelled)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420) / Fixed DMG taken(5000)",
-    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n戦闘開始時、シールドを<color=#28d9ed>1ターン</color>適用（自分のHP50%）\\n受ける継続ダメージ<color=#28d9ed>-50%</color>\\nシールド保有対象の与ダメージ<color=#28d9ed>+30%</color>\\n戦闘開始時、防御型仲間のスピードを<color=#28d9ed>1ターン</color>増加（解除不可）\\n復活時の行動ゲージ回復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>に無敵 / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 会心率(80%) / 会心ダメージ(280%) / 貫通力(50%) / 効果命中(420) / 受ける固定ダメージ(5000)",
-    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n战斗开始时，适用护盾<color=#28d9ed>1回合</color>（自身生命值50%）\\n受到的持续伤害<color=#28d9ed>-50%</color>\\n持有护盾目标造成的伤害<color=#28d9ed>+30%</color>\\n战斗开始时，防御型同伴速度增加<color=#28d9ed>1回合</color>（无法解除）\\n复活时行动值恢复<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用无敌 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 暴击率(80%) / 暴击伤害(280%) / 穿透力(50%) / 效果命中(420) / 受到的固定伤害(5000)",
-    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n戰鬥開始時，適用護盾<color=#28d9ed>1回合</color>（自身生命力50%）\\n受到的持續傷害<color=#28d9ed>-50%</color>\\n持有護盾目標造成的傷害<color=#28d9ed>+30%</color>\\n戰鬥開始時，防禦型同伴速度增加<color=#28d9ed>1回合</color>（無法解除）\\n復活時速攻值恢復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用無敵 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 暴擊率(80%) / 暴擊傷害(280%) / 貫穿力(50%) / 效果命中(420) / 受到的固定傷害(5000)"
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n전투 시작 시, 실드 <color=#28d9ed>1턴</color> 적용(자신 체력 50%)\\n받는 지속 피해 <color=#28d9ed>-50%</color>\\n받는 피해 <color=#28d9ed>-30%</color>\\n전투 시작 시, 방어형 동료 속도 <color=#28d9ed>1턴</color> 증가(해제 불가)\\n\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 실드 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420) / 받는 고정 피해(5000)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nAt the start of battle, Barrier applied for <color=#28d9ed>1 turn</color> (50% of own Health)\\nDoT taken <color=#28d9ed>-50%</color>\\nDMG dealt by targets with Barrier <color=#28d9ed>+30%</color>\\nAt the start of battle, Defender hero Speed increases for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\nPriority recovery upon Revive <color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>Effects that Occur as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: Hardship for the Strong!</color> <color=#28d9ed>1</color> member per team with the highest Attack has Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: Chance for the Weak!</color> <color=#28d9ed>1</color> member per team with the lowest Health gains Barrier / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs dispelled\\n<color=#28d9ed>Turn 24</color>: All buffs dispelled, Unbuffable applied (Ignores Immunity / Cannot be dispelled)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420) / Fixed DMG taken(5000)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n戦闘開始時、シールドを<color=#28d9ed>1ターン</color>適用（自分のHP50%）\\n受ける継続ダメージ<color=#28d9ed>-50%</color>\\nシールド保有対象の与ダメージ<color=#28d9ed>+30%</color>\\n戦闘開始時、防御型仲間のスピードを<color=#28d9ed>1ターン</color>増加（解除不可）\\n復活時の行動ゲージ回復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>にシールド / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 会心率(80%) / 会心ダメージ(280%) / 貫通力(50%) / 効果命中(420) / 受ける固定ダメージ(5000)",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n战斗开始时，适用护盾<color=#28d9ed>1回合</color>（自身生命值50%）\\n受到的持续伤害<color=#28d9ed>-50%</color>\\n持有护盾目标造成的伤害<color=#28d9ed>+30%</color>\\n战斗开始时，防御型同伴速度增加<color=#28d9ed>1回合</color>（无法解除）\\n复活时行动值恢复<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用护盾 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 暴击率(80%) / 暴击伤害(280%) / 穿透力(50%) / 效果命中(420) / 受到的固定伤害(5000)",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n戰鬥開始時，適用護盾<color=#28d9ed>1回合</color>（自身生命力50%）\\n受到的持續傷害<color=#28d9ed>-50%</color>\\n持有護盾目標造成的傷害<color=#28d9ed>+30%</color>\\n戰鬥開始時，防禦型同伴速度增加<color=#28d9ed>1回合</color>（無法解除）\\n復活時速攻值恢復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用護盾 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 暴擊率(80%) / 暴擊傷害(280%) / 貫穿力(50%) / 效果命中(420) / 受到的固定傷害(5000)"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G03_02",
-    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n받는 지속 피해 <color=#28d9ed>-30%</color>\\n받는 피해 <color=#28d9ed>-20%</color>\\n전투 시작 시, 방어형 동료 속도 <color=#28d9ed>1턴</color> 증가(해제 불가)\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 무적 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)",
-    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nDoT taken <color=#28d9ed>-30%</color>\\nDMG dealt by targets with Barrier <color=#28d9ed>+20%</color>\\nAt the start of battle, Defender hero Speed increases for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\nPriority recovery upon Revive <color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>Effects that Occur as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: Hardship for the Strong!</color> <color=#28d9ed>1</color> member per team with the highest Attack has Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: Chance for the Weak!</color> <color=#28d9ed>1</color> member per team with the lowest Health gains Invincible / Continuous Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs dispelled\\n<color=#28d9ed>Turn 24</color>: All buffs dispelled, Unbuffable applied (Ignores Immunity / Cannot be dispelled)",
-    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n受ける継続ダメージ<color=#28d9ed>-30%</color>\\nシールド保有対象の与ダメージ<color=#28d9ed>+20%</color>\\n戦闘開始時、防御型仲間のスピードを<color=#28d9ed>1ターン</color>増加（解除不可）\\n復活時の行動ゲージ回復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>に無敵 / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）",
-    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n受到的持续伤害<color=#28d9ed>-30%</color>\\n持有护盾目标造成的伤害<color=#28d9ed>+20%</color>\\n战斗开始时，防御型同伴速度增加<color=#28d9ed>1回合</color>（无法解除）\\n复活时行动值恢复<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用无敌 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）",
-    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n受到的持續傷害<color=#28d9ed>-30%</color>\\n持有護盾目標造成的傷害<color=#28d9ed>+20%</color>\\n戰鬥開始時，防禦型同伴速度增加<color=#28d9ed>1回合</color>（無法解除）\\n復活時速攻值恢復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用無敵 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）"
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n받는 지속 피해 <color=#28d9ed>-30%</color>\\n받는 피해 <color=#28d9ed>-20%</color>\\n전투 시작 시, 방어형 동료 속도 <color=#28d9ed>1턴</color> 증가(해제 불가)\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 실드 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nDoT taken <color=#28d9ed>-30%</color>\\nDMG dealt by targets with Barrier <color=#28d9ed>+20%</color>\\nAt the start of battle, Defender hero Speed increases for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\nPriority recovery upon Revive <color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>Effects that Occur as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: Hardship for the Strong!</color> <color=#28d9ed>1</color> member per team with the highest Attack has Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be dispelled)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: Chance for the Weak!</color> <color=#28d9ed>1</color> member per team with the lowest Health gains Barrier / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs dispelled\\n<color=#28d9ed>Turn 24</color>: All buffs dispelled, Unbuffable applied (Ignores Immunity / Cannot be dispelled)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n受ける継続ダメージ<color=#28d9ed>-30%</color>\\nシールド保有対象の与ダメージ<color=#28d9ed>+20%</color>\\n戦闘開始時、防御型仲間のスピードを<color=#28d9ed>1ターン</color>増加（解除不可）\\n復活時の行動ゲージ回復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>にシールド / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n受到的持续伤害<color=#28d9ed>-30%</color>\\n持有护盾目标造成的伤害<color=#28d9ed>+20%</color>\\n战斗开始时，防御型同伴速度增加<color=#28d9ed>1回合</color>（无法解除）\\n复活时行动值恢复<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用护盾 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n受到的持續傷害<color=#28d9ed>-30%</color>\\n持有護盾目標造成的傷害<color=#28d9ed>+20%</color>\\n戰鬥開始時，防禦型同伴速度增加<color=#28d9ed>1回合</color>（無法解除）\\n復活時速攻值恢復<color=#28d9ed>-30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用護盾 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G04_01",
-    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n받는 지속 피해 <color=#28d9ed>-50%</color>\\n받는 피해 <color=#28d9ed>-50%</color>\\n체력 <color=#28d9ed>+50%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 무적 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 효과 적중(420) / 받는 고정 피해(5000)",
-    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\DoT taken <color=#28d9ed>-50%</color>\\nDMG taken <color=#28d9ed>-50%</color>\\nHealth <color=#28d9ed>+50%</color>\\nUpon revival, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects Applied as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: A Challenge for the Strong!</color> The <color=#28d9ed>1</color> member on each team with the highest Attack has their Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be removed)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: A Chance for the Weak!</color> The <color=#28d9ed>1</color> member on each team with the lowest Health gains Invulnerability / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs are removed\\n<color=#28d9ed>Turn 24</color>: All buffs are removed, and Unbuffable is applied (Ignores Immunity / Cannot be removed)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Effectiveness(420) / Fixed DMG taken(5000)",
-    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n受ける継続ダメージ<color=#28d9ed>-50%</color>\\n受けるダメージ<color=#28d9ed>-50%</color>\\nHP<color=#28d9ed>+50%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>に無敵 / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 効果命中(420) / 受ける固定ダメージ(5000)",
-    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n受到的持续伤害<color=#28d9ed>-50%</color>\\n受到的伤害<color=#28d9ed>-50%</color>\\n生命值<color=#28d9ed>+50%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用无敌 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 效果命中(420) / 受到的固定伤害(5000)",
-    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n受到的持續傷害<color=#28d9ed>-50%</color>\\n受到的傷害<color=#28d9ed>-50%</color>\\n生命力<color=#28d9ed>+50%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用無敵 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 效果命中(420) / 受到的固定傷害(5000)"
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n받는 지속 피해 <color=#28d9ed>-50%</color>\\n받는 피해 <color=#28d9ed>-50%</color>\\n체력 <color=#28d9ed>+50%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 실드 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 효과 적중(420) / 받는 고정 피해(5000)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\DoT taken <color=#28d9ed>-50%</color>\\nDMG taken <color=#28d9ed>-50%</color>\\nHealth <color=#28d9ed>+50%</color>\\nUpon revival, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects Applied as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: A Challenge for the Strong!</color> The <color=#28d9ed>1</color> member on each team with the highest Attack has their Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be removed)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: A Chance for the Weak!</color> The <color=#28d9ed>1</color> member on each team with the lowest Health gains Barrier / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs are removed\\n<color=#28d9ed>Turn 24</color>: All buffs are removed, and Unbuffable is applied (Ignores Immunity / Cannot be removed)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Effectiveness(420) / Fixed DMG taken(5000)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n受ける継続ダメージ<color=#28d9ed>-50%</color>\\n受けるダメージ<color=#28d9ed>-50%</color>\\nHP<color=#28d9ed>+50%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>1ターン：強者に逆境を！</color> 最も攻撃力が高いチーム別<color=#28d9ed>1人</color>の貫通力を<color=#28d9ed>1ターン</color>の間<color=#28d9ed>0</color>に適用（解除不可）\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>9ターン：弱者にチャンスを！</color> 最もHPが低いチーム別<color=#28d9ed>1人</color>にシールド / 継続回復を<color=#28d9ed>1ターン</color>適用\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）\\n\\n<color=#ffd732>戦闘ステータス上限設定</color>\\nHP(40000) / 攻撃力(6000) / 防御力(4000) / スピード(340) / 効果命中(420) / 受ける固定ダメージ(5000)",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n受到的持续伤害<color=#28d9ed>-50%</color>\\n受到的伤害<color=#28d9ed>-50%</color>\\n生命值<color=#28d9ed>+50%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第1回合：给强者以逆境！</color> 攻击力最高的每队<color=#28d9ed>1人</color>的穿透力在<color=#28d9ed>1回合</color>内适用为<color=#28d9ed>0</color>（无法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第9回合：给弱者以机会！</color> 生命值最低的每队<color=#28d9ed>1人</color>适用护盾 / 持续恢复<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）\\n\\n<color=#ffd732>战斗属性上限设定</color>\\n生命值(40000) / 攻击力(6000) / 防御力(4000) / 速度(340) / 效果命中(420) / 受到的固定伤害(5000)",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n受到的持續傷害<color=#28d9ed>-50%</color>\\n受到的傷害<color=#28d9ed>-50%</color>\\n生命力<color=#28d9ed>+50%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第1回合：給強者以逆境！</color> 攻擊力最高的每隊<color=#28d9ed>1人</color>的貫穿力在<color=#28d9ed>1回合</color>內適用為<color=#28d9ed>0</color>（無法解除）\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第9回合：給弱者以機會！</color> 生命力最低的每隊<color=#28d9ed>1人</color>適用護盾 / 持續恢復<color=#28d9ed>1回合</color>\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）\\n\\n<color=#ffd732>戰鬥屬性上限設定</color>\\n生命力(40000) / 攻擊力(6000) / 防禦力(4000) / 速度(340) / 效果命中(420) / 受到的固定傷害(5000)"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G04_02",
@@ -114070,6 +114086,158 @@
     "Japanese": "週間シーズンが終了し、アリーナロビーに移動します。",
     "China_Simplified": "本周赛季已结束，即将移至竞技场大厅。",
     "China_Traditional": "本週賽季已結束，即將移至決鬥場大廳。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_BAN_REASON_1",
+    "Korean": "최고 승률",
+    "English": "Highest Win Rate",
+    "Japanese": "最高勝率",
+    "China_Simplified": "最高胜率",
+    "China_Traditional": "最高勝率"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_BAN_REASON_2",
+    "Korean": "최고 픽률",
+    "English": "Highest Pick Rate",
+    "Japanese": "最高ピック率",
+    "China_Simplified": "最高选用率",
+    "China_Traditional": "最高選用率"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_BAN_REASON_3",
+    "Korean": "랜덤 밴",
+    "English": "Random Ban",
+    "Japanese": "ランダムBAN",
+    "China_Simplified": "随机禁用",
+    "China_Traditional": "隨機禁用"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_BAN_REASON_4",
+    "Korean": "운영 정책",
+    "English": "System Restriction",
+    "Japanese": "運営ポリシー",
+    "China_Simplified": "运营政策",
+    "China_Traditional": "營運政策"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_BAN_REASON_5",
+    "Korean": "기타",
+    "English": "Other",
+    "Japanese": "その他",
+    "China_Simplified": "其他",
+    "China_Traditional": "其他"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PENALTY_DEFEAT_TITLE",
+    "Korean": "강제 패배 안내",
+    "English": "Forced Defeat Notice",
+    "Japanese": "強制敗北のお知らせ",
+    "China_Simplified": "强制判负通知",
+    "China_Traditional": "強制判負通知"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PENALTY_WARNING",
+    "Korean": "스킬 미입력이 3회 누적되었습니다.\\n1회 더 발생 시 강제 패배됩니다.",
+    "English": "No skill input has been detected 3 times.\\nOne more missed input will result in a forced defeat.",
+    "Japanese": "スキル未入力が3回累積しました。\\nあと1回発生すると強制敗北となります。",
+    "China_Simplified": "已累计3次未输入技能。\\n再发生1次将被强制判负。",
+    "China_Traditional": "已累計3次未輸入技能。\\n再發生1次將被強制判負。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PENALTY_DEFEAT_MSG",
+    "Korean": "스킬 미입력이 4회 누적되었습니다.\\n비정상 플레이로 간주되어 패배 처리되었습니다.",
+    "English": "No skill input has been detected 4 times.\\nThis has been considered abnormal play and resulted in a defeat.",
+    "Japanese": "スキル未入力が4回累積しました。\\n異常プレイと見なされ、敗北処理されました。",
+    "China_Simplified": "已累计4次未输入技能。\\n已被视为异常游戏行为，判定为负。",
+    "China_Traditional": "已累計4次未輸入技能。\\n已被視為異常遊戲行為，判定為負。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_MASTER_PRESET_POPUP_TITLE",
+    "Korean": "마스터즈 리그 장비 프리셋",
+    "English": "Masters League Gear Preset",
+    "Japanese": "マスターズリーグ装備プリセット",
+    "China_Simplified": "大师联赛装备预设",
+    "China_Traditional": "大師聯賽裝備預設"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_MASTER_PRESET_POPUP_DESC",
+    "Korean": "1. 마스터즈 리그에서 사용할 장비를 설정할 수 있습니다.\\n2. 동료마다 1개의 전용 프리셋 설정이 가능합니다.\\n3. 마스터즈 리그 진행 시, 설정된 프리셋이 우선 적용됩니다.\\n4. 설정된 장비를 판매 또는 분해하면 자동으로 해제됩니다.\\n5. 다른 동료에게 설정한 장비를 중복으로 설정할 순 없습니다.",
+    "English": "1. You can configure gear to use in Masters League.\\n2. One dedicated preset can be set per Hero.\\n3. During Masters League, the configured preset takes priority.\\n4. If configured gear is sold or dismantled, it will be automatically removed from the preset.\\n5. Gear configured for another Hero cannot be set for a different Hero.",
+    "Japanese": "1. マスターズリーグで使用する装備を設定できます。\\n2. 仲間ごとに1つの専用プリセット設定が可能です。\\n3. マスターズリーグ進行中、設定されたプリセットが優先適用されます。\\n4. 設定した装備を売却または分解すると自動で解除されます。\\n5. 他の仲間に設定した装備を重複して設定することはできません。",
+    "China_Simplified": "1. 可设置在大师联赛中使用的装备。\\n2. 每位同伴可设置1个专属预设。\\n3. 进行大师联赛时，优先应用已设置的预设。\\n4. 出售或分解已设置的装备后将自动解除。\\n5. 已为其他同伴设置的装备不可重复设置。",
+    "China_Traditional": "1. 可設置在大師聯賽中使用的裝備。\\n2. 每位同伴可設置1個專屬預設。\\n3. 進行大師聯賽時，優先套用已設置的預設。\\n4. 出售或分解已設置的裝備後將自動解除。\\n5. 已為其他同伴設置的裝備不可重複設置。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_MASTER_PRESET_EXIT_MSG",
+    "Korean": "저장되지 않은 장비 변경 사항이 있습니다.\\n저장 후 마스터즈 리그 장비 장착을 종료하시겠습니까?",
+    "English": "There are unsaved gear changes.\\nWould you like to save and exit the Masters League Gear Preset?",
+    "Japanese": "保存されていない装備の変更があります。\\n保存後、マスターズリーグ装備装着を終了しますか？",
+    "China_Simplified": "存在未保存的装备变更。\\n保存后是否退出大师联赛装备装配？",
+    "China_Traditional": "存在未儲存的裝備變更。\\n儲存後是否退出大師聯賽裝備裝配？"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_MASTER_PRESET_SAVE_COMPLETE",
+    "Korean": "{0}의 마스터즈 리그 장비 장착을 변경하였습니다.\\n\\n해당 동료가 마스터즈 리그 입장 시, 설정된 프리셋 장비를 착용하여 입장합니다.\\n장비를 판매/분해 시, 장착 정보에서 제외됩니다.",
+    "English": "{0}'s Masters League gear has been updated.\\n\\nWhen this Hero enters Masters League, they will enter with the configured preset gear equipped.\\nIf gear is sold/dismantled, it will be removed from the equipped gear information.",
+    "Japanese": "{0}のマスターズリーグ装備設定を変更しました。\\n\\nこの仲間がマスターズリーグに入場する際、設定されたプリセット装備を装着して入場します。\\n装備を売却/分解した場合、装着情報から除外されます。",
+    "China_Simplified": "已更改{0}的大师联赛装备配置。\\n\\n该同伴进入大师联赛时，将装备已设置的预设装备入场。\\n出售/分解装备时，将从装备信息中移除。",
+    "China_Traditional": "已更改{0}的大師聯賽裝備配置。\\n\\n該同伴進入大師聯賽時，將裝備已設置的預設裝備入場。\\n出售/分解裝備時，將從裝備資訊中移除。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_MASTER_PRESET_SAVE_ALERT_01",
+    "Korean": "다른 동료의 마스터즈 리그 프리셋에 등록된 장비입니다.\\n장착 시 해당 동료의 장착 정보에서 제거됩니다.",
+    "English": "This gear is registered in another Hero's Masters League preset.\\nEquipping it will remove it from that Hero's equipped gear information.",
+    "Japanese": "他の仲間のマスターズリーグプリセットに登録されている装備です。\\n装着すると該当する仲間の装着情報から削除されます。",
+    "China_Simplified": "该装备已登记在其他同伴的大师联赛预设中。\\n装备后将从该同伴的装备信息中移除。",
+    "China_Traditional": "該裝備已登記在其他同伴的大師聯賽預設中。\\n裝備後將從該同伴的裝備資訊中移除。"
+  },
+  {
+    "ID": "SYS_PROFILE_PVP_TITLE",
+    "Korean": "결투장 정보",
+    "English": "Arena Info",
+    "Japanese": "アリーナ情報",
+    "China_Simplified": "竞技场信息",
+    "China_Traditional": "決鬥場資訊"
+  },
+  {
+    "ID": "SYS_PROFILE_PVP_SUB_TITLE_TACTICS",
+    "Korean": "R-PVP 택틱스 리그",
+    "English": "R-PVP Tactics League",
+    "Japanese": "R-PVPタクティクスリーグ",
+    "China_Simplified": "R-PVP战术联赛",
+    "China_Traditional": "R-PVP戰術聯賽"
+  },
+  {
+    "ID": "SYS_PROFILE_PVP_SUB_TITLE_MASTERS",
+    "Korean": "R-PVP 마스터즈 리그",
+    "English": "R-PVP Masters League",
+    "Japanese": "R-PVPマスターズリーグ",
+    "China_Simplified": "R-PVP大师联赛",
+    "China_Traditional": "R-PVP大師聯賽"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_BAN_DESC_01",
+    "Korean": "사용 불가 동료가 없습니다.",
+    "English": "There are no unavailable Heroes.",
+    "Japanese": "使用不可の仲間はいません。",
+    "China_Simplified": "没有不可使用的同伴。",
+    "China_Traditional": "沒有不可使用的同伴。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_SEASON_OFF",
+    "Korean": "시즌이 종료되었습니다.",
+    "English": "The season has ended.",
+    "Japanese": "シーズンが終了しました。",
+    "China_Simplified": "本赛季已结束。",
+    "China_Traditional": "本賽季已結束。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_SEASON_END_TITLE",
+    "Korean": "실시간 대전 - 주간 시즌 종료",
+    "English": "Rea lTime Arena - Weekly Season End",
+    "Japanese": "ワールドアリーナ - 週間シーズン終了",
+    "China_Simplified": "实时对战 - 每周赛季结束",
+    "China_Traditional": "即時對戰 - 每週賽季結束"
   },
   {
     "ID": "SYS_MONAD_GATE_MY_TEAM_INFO_1",
@@ -118881,7 +119049,7 @@
   },
   {
     "ID": "SYS_CHARACTER_FUSION_NAME_06",
-    "Korean": "코어 융합 : 앱실론",
+    "Korean": "코어 융합 : 엡실론",
     "English": "Core Fusion: Epsilon",
     "Japanese": "コアフュージョン：イプシロン",
     "China_Simplified": "核心融合：埃普西隆",
@@ -118889,7 +119057,7 @@
   },
   {
     "ID": "SYS_FUSION_LEVEL_NAME_2700070_01",
-    "Korean": "앱실론 코어 융합 Lv1",
+    "Korean": "엡실론 코어 융합 Lv1",
     "English": "Epsilon Core Fusion Lv1",
     "Japanese": "イプシロンコアフュージョンLv1",
     "China_Simplified": "埃普西隆核心融合Lv1",
@@ -118897,7 +119065,7 @@
   },
   {
     "ID": "SYS_FUSION_LEVEL_NAME_2700070_02",
-    "Korean": "앱실론 코어 융합 Lv2",
+    "Korean": "엡실론 코어 융합 Lv2",
     "English": "Epsilon Core Fusion Lv2",
     "Japanese": "イプシロンコアフュージョンLv2",
     "China_Simplified": "埃普西隆核心融合Lv2",
@@ -118905,7 +119073,7 @@
   },
   {
     "ID": "SYS_FUSION_LEVEL_NAME_2700070_03",
-    "Korean": "앱실론 코어 융합 Lv3",
+    "Korean": "엡실론 코어 융합 Lv3",
     "English": "Epsilon Core Fusion Lv3",
     "Japanese": "イプシロンコアフュージョンLv3",
     "China_Simplified": "埃普西隆核心融合Lv3",
@@ -118913,7 +119081,7 @@
   },
   {
     "ID": "SYS_FUSION_LEVEL_NAME_2700070_04",
-    "Korean": "앱실론 코어 융합 Lv4",
+    "Korean": "엡실론 코어 융합 Lv4",
     "English": "Epsilon Core Fusion Lv4",
     "Japanese": "イプシロンコアフュージョンLv4",
     "China_Simplified": "埃普西隆核心融合Lv4",
@@ -118921,7 +119089,7 @@
   },
   {
     "ID": "SYS_FUSION_LEVEL_NAME_2700070_05",
-    "Korean": "앱실론 코어 융합 Lv5",
+    "Korean": "엡실론 코어 융합 Lv5",
     "English": "Epsilon Core Fusion Lv5",
     "Japanese": "イプシロンコアフュージョンLv5",
     "China_Simplified": "埃普西隆核心融合Lv5",
@@ -118929,7 +119097,7 @@
   },
   {
     "ID": "SYS_FUSION_LEVEL_DESC_2700070_01",
-    "Korean": "<size=19>앱실론의 코어 융합 완료. 융합 패시브 추가</size>",
+    "Korean": "<size=19>엡실론의 코어 융합 완료. 융합 패시브 추가</size>",
     "English": "<size=19>Epsilon's Core Fusion complete. Fusion Passive unlocked.</size>",
     "Japanese": "<size=19>イプシロンのコアフュージョン完了。フュージョンパッシブ追加</size>",
     "China_Simplified": "<size=19>艾普西隆的核心融合完成。追加融合被动</size>",
@@ -119017,7 +119185,7 @@
   },
   {
     "ID": "SYS_EVENT_DUNGEON_HARD_CLEAR_WEEK_01",
-    "Korean": "영참사를 멈추면 안돼\\n1주차 하드 챕터3 100회 클리어 ",
+    "Korean": "영참사를 멈추면 안 돼\\n1주차 하드 챕터3 100회 클리어",
     "English": "Never Stop Soulslayers!\\nClear Week 1 Hard Chapter 3 100 times",
     "Japanese": "霊斬士を止めるな!\\n1週目ハードチャプター3を100回クリア",
     "China_Simplified": "不能阻挡灵斩师！\\n第1周困难第3章通关100次",
@@ -119049,7 +119217,7 @@
   },
   {
     "ID": "SYS_ARCADE_EVENT_SHOP_MISSION_01",
-    "Korean": "웹이벤트 - 교환 상점 일일미션",
+    "Korean": "3주년 일일 미션",
     "English": "3rd Anniversary Daily Mission",
     "Japanese": "3周年デイリーミッション",
     "China_Simplified": "3周年每日任务",
@@ -119057,7 +119225,7 @@
   },
   {
     "ID": "SYS_ARCADE_EVENT_SHOP",
-    "Korean": "웹이벤트 - 교환 상점",
+    "Korean": "3주년 코인 교환소",
     "English": "3rd Anniversary Coin Exchange",
     "Japanese": "3周年コイン交換所",
     "China_Simplified": "3周年代币兑换所",
@@ -119065,10 +119233,514 @@
   },
   {
     "ID": "SYS_ARCADE_EVENT_SHOP_MISSION_02",
-    "Korean": "웹이벤트 - 교환 상점 누적미션",
+    "Korean": "코인 누적 소모 보상",
     "English": "Cumulative Coin Spending Reward",
     "Japanese": "コイン累積消費報酬",
     "China_Simplified": "代币累积消耗奖励",
     "China_Traditional": "代幣累積消耗獎勵"
+  },
+  {
+    "ID": "SYS_BATTLE_PASS_BUY_ANAKI_TITLE",
+    "Korean": "스페셜 패스 혜택\\n아나키 코스튬 즉시 지급",
+    "English": "Special Pass Reward\\nObtain Anarky Costume Immediately",
+    "Japanese": "スペシャルパス特典\\nアナーキスキン即時支給",
+    "China_Simplified": "特别通行证福利\\n立即发放阿娜奇皮肤",
+    "China_Traditional": "特殊通行證優惠\\n立即獲得阿娜奇服裝"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_01",
+    "Korean": "소란의 시작",
+    "English": "The Spark of Chaos",
+    "Japanese": "騒動の始まり",
+    "China_Simplified": "骚乱的起点",
+    "China_Traditional": "騷亂的起點"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_02",
+    "Korean": "물감 테러리스트",
+    "English": "Paint Vandal",
+    "Japanese": "絵の具テロリスト",
+    "China_Simplified": "颜料恐怖分子",
+    "China_Traditional": "顏料恐怖分子"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_03",
+    "Korean": "예술을 외치며",
+    "English": "A Cry for Art",
+    "Japanese": "芸術を叫んで",
+    "China_Simplified": "高呼艺术",
+    "China_Traditional": "高呼藝術"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_04",
+    "Korean": "배고픈 불청객",
+    "English": "A Hungry Intruder",
+    "Japanese": "腹ペコの不法侵入者",
+    "China_Simplified": "饥肠辘辘的不速之客",
+    "China_Traditional": "飢腸轆轆的不速之客"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_05",
+    "Korean": "닿지 않는 마음",
+    "English": "Feelings That Don't Reach",
+    "Japanese": "届かぬ想い",
+    "China_Simplified": "触碰不到的心",
+    "China_Traditional": "觸碰不到的心"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_06",
+    "Korean": "나님의 대작전",
+    "English": "My Grand Scheme",
+    "Japanese": "俺様大作戦",
+    "China_Simplified": "本大爷的大行动",
+    "China_Traditional": "本大爺的大作戰"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_07",
+    "Korean": "신뢰의 무게",
+    "English": "The Weight of Trust",
+    "Japanese": "信頼の重さ",
+    "China_Simplified": "信任的重量",
+    "China_Traditional": "信任的重量"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_08",
+    "Korean": "색채의 습격",
+    "English": "An Assault of Color",
+    "Japanese": "色彩の奇襲",
+    "China_Simplified": "色彩的突袭",
+    "China_Traditional": "色彩的突襲"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_09",
+    "Korean": "자유의 그래피티",
+    "English": "Graffiti of Freedom",
+    "Japanese": "自由のグラフィティ",
+    "China_Simplified": "自由的涂鸦",
+    "China_Traditional": "自由的塗鴉"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_10",
+    "Korean": "덧바른 진실",
+    "English": "The Painted-Over Truth",
+    "Japanese": "塗り重ねられた真実",
+    "China_Simplified": "涂抹其上的真相",
+    "China_Traditional": "塗抹於上的真相"
+  },
+  {
+    "ID": "SYS_TITLE_SIDE_STORY_ANAKI_11",
+    "Korean": "아나키 스타일",
+    "English": "Anarky Style",
+    "Japanese": "アナーキスタイル",
+    "China_Simplified": "阿娜奇风格",
+    "China_Traditional": "阿娜奇風格"
+  },
+  {
+    "ID": "SYS_SIDE_STORY_ANAKI",
+    "Korean": "외침이 닿는 순간",
+    "English": "The Moment the Cry Is Heard",
+    "Japanese": "叫び声が届く瞬間",
+    "China_Simplified": "呼声触达的瞬间",
+    "China_Traditional": "呼聲觸達的瞬間"
+  },
+  {
+    "ID": "SYS_LRT_BACKGROUND_SIDE_1064_NAME",
+    "Korean": "로비 배경 - 아나키 외전",
+    "English": "Lobby Background - Anarky Side Story",
+    "Japanese": "ロビー背景 - アナーキ外伝",
+    "China_Simplified": "大厅背景 - 阿娜奇外传",
+    "China_Traditional": "大廳背景 - 阿娜奇外傳"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_110",
+    "Korean": "프로필 테두리 - 워터 슬라이드 ll",
+    "English": "Profile Frame: Water Slide II",
+    "Japanese": "プロフィールフレーム - ウォータースライド ll",
+    "China_Simplified": "头像边框 - 滑水道 ll",
+    "China_Traditional": "頭像外框 - 滑水道 ll"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_DES_110",
+    "Korean": "요타월드 기념주화 상점에서 구매할 수 있는 프로필 테두리입니다.",
+    "English": "A profile frame available for purchase at the Iota World Commemorative Coin Shop.",
+    "Japanese": "イオータワールド記念コイン商店で購入できるプロフィール枠です。",
+    "China_Simplified": "可在佑妲世界纪念币商店购买的头像框。",
+    "China_Traditional": "可在佑妲樂園紀念幣商店購買的頭像框。"
+  },
+  {
+    "ID": "SYS_2000116_DES",
+    "Korean": "[아나키]가 착용할 수 있는 코스튬입니다.",
+    "English": "A costume that [Anarky] can equip.",
+    "Japanese": "[アナーキ]が装着できるスキンです。",
+    "China_Simplified": "[阿娜奇]可穿戴的皮肤。",
+    "China_Traditional": "[阿娜奇]可穿戴的服裝。"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_TITLE",
+    "Korean": "차원 물자 호출",
+    "English": "Dimensional Supply",
+    "Japanese": "次元物資召喚",
+    "China_Simplified": "次元物资召唤",
+    "China_Traditional": "次元物資召喚"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_MISSSION",
+    "Korean": "차원 물자 호출 {0}회",
+    "English": "Supply Calls x{0}",
+    "Japanese": "次元物資召喚 {0}回",
+    "China_Simplified": "次元物资召唤 {0}次",
+    "China_Traditional": "次元物資召喚 {0}次"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_DESC_01",
+    "Korean": "10회 호출 시, 고등급 아이템 1종 이상 획득 가능\\n(고차원 물자 ll 또는 6성 전설 장비)",
+    "English": "Every 10 Supply Calls guarantees at least 1 high-grade item.\\n(Advanced Dimensional Supply II or 6★ Legendary Gear)",
+    "Japanese": "10回召喚時、高レアリティアイテム1種以上確定\\n（高次元物資II、または★6レジェンド装備）",
+    "China_Simplified": "10次召唤时，可获得至少1种高等级道具\\n（高次元物资II或6★传说装备）",
+    "China_Traditional": "10次召喚時，可獲得至少1種高等級道具\\n（高次元物資II或6★傳說裝備）"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_01",
+    "Korean": "커스텀 픽업 장비",
+    "English": "Select Rate-Up Gear",
+    "Japanese": "カスタムピックアップ装備",
+    "China_Simplified": "自选装备及选项",
+    "China_Traditional": "自選裝備及選項"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_DESC_01",
+    "Korean": "선택한 장비의 등장 확률이 상승합니다.",
+    "English": "Choose gear to increase its drop rate.",
+    "Japanese": "選択した装備の出現率が上昇します。",
+    "China_Simplified": "提高所选装备的出现概率。",
+    "China_Traditional": "提高所選裝備的出現機率。"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_02",
+    "Korean": "픽업 장비 커스텀",
+    "English": "Rate-Up Gear Settings",
+    "Japanese": "ピックアップ装備カスタム",
+    "China_Simplified": "精选装备选项定制",
+    "China_Traditional": "精選裝備選項定制"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_SETUP",
+    "Korean": "설정 완료",
+    "English": "Save Settings",
+    "Japanese": "設定完了",
+    "China_Simplified": "设置完成",
+    "China_Traditional": "設定完成"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_DESC_02",
+    "Korean": "선택한 픽업 장비 획득 시, 4/3/2/2 ~ 4/4/3/2 LV 범위의 서브 옵션으로 획득합니다.",
+    "English": "When selected Rate-Up Gear is obtained, substats will be in LV 4/3/2/2 ~ 4/4/3/2 range.",
+    "Japanese": "選択したピックアップ装備を獲得した際、サブオプションはLv.4/3/2/2～4/4/3/2の範囲で付与されます。",
+    "China_Simplified": "获得所选精选装备时，将以4/3/2/2～4/4/3/2级范围的副属性获得。",
+    "China_Traditional": "獲得所選精選裝備時，將以4/3/2/2～4/4/3/2級範圍的副屬性獲得。"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_DESC_03",
+    "Korean": "마일리지를 통한 장비 획득은 선택된 옵션으로 제공됩니다.\\n좌측 장비 이미지의 서브 옵션 레벨은 최소 적용되는 서브 옵션의 예시이며\\n선택 옵션의 레벨은 픽업 장비의 서브 옵션 레벨 범위 내에서 제공됩니다.",
+    "English": "Gear obtained via Mileage comes with selected stats.\\nThe left gear image shows example minimum substat levels.\\nSelected stat levels will fall within the Rate-Up Gear's substat level range.",
+    "Japanese": "次元召喚Ptで獲得した装備には選択したオプションが付与されます。\\n左側画像のLvは最低保証であり、実際のLvは指定範囲内で付与されます。",
+    "China_Simplified": "通过里程获得的装备将以所选选项提供。\\n左侧装备图像的副属性等级为最低适用副属性的示例，\\n所选选项的等级将在精选装备的副属性等级范围内提供。",
+    "China_Traditional": "透過里程獲得的裝備將以所選選項提供。\\n左側裝備圖像的副屬性等級為最低適用副屬性的示例，\\n所選選項的等級將在精選裝備的副屬性等級範圍內提供。"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_DESC_04",
+    "Korean": "방어구는 선택 옵션이 존재하지 않습니다.",
+    "English": "Armor does not have selectable stats.",
+    "Japanese": "防具には選択オプションが存在しません。",
+    "China_Simplified": "防具没有可选属性。",
+    "China_Traditional": "防具沒有可選屬性。"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_DESC_05",
+    "Korean": "모든 슬롯에 장비를 등록한 이후에 물자 호출을 진행할 수 있습니다.",
+    "English": "Dimensional Supply can be performed after registering gear in all slots.",
+    "Japanese": "すべてのスロットに装備を設定後、物資召喚を行えます。",
+    "China_Simplified": "在所有槽位注册装备后，才能进行物资召唤。",
+    "China_Traditional": "在所有槽位登錄裝備後，才能進行物資召喚。"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_DESC_06",
+    "Korean": "아래 재화를 사용하여 {0}회 호출을 진행하시겠습니까?",
+    "English": "Would you like to use the following resources to perform Supply Calls x{0}?",
+    "Japanese": "以下のアイテムを使用して{0}回召喚を行いますか？",
+    "China_Simplified": "是否使用以下道具进行{0}次召唤？",
+    "China_Traditional": "是否使用以下道具進行{0}次召喚？"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_DESC_07",
+    "Korean": "# 커스텀 픽업 장비 획득 시 다음과 같이 서브 옵션을 적용합니다. \\n4/3/2/2 LV의 서브 옵션부터 \\n4/4/3/2 LV 범위의 서브 옵션",
+    "English": "# When obtaining Rate-Up Gear, substats are applied as follows:\\nFrom Substats at Lv. 4/3/2/2\\nto Substats in the Lv. 4/4/3/2 range",
+    "Japanese": "# カスタムピックアップ装備の獲得時、サブオプションは以下のように付与されます。\\nLv.4/3/2/2 ～ Lv.4/4/3/2 の範囲のサブオプション",
+    "China_Simplified": "# 获得自定义精选装备时，副属性的适用方式如下。\\n从4/3/2/2级的副属性\\n到4/4/3/2级范围的副属性",
+    "China_Traditional": "# 獲得自定義精選裝備時，副屬性的適用方式如下。\\n從4/3/2/2級的副屬性\\n到4/4/3/2級範圍的副屬性"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_DESC_08",
+    "Korean": "이미 선택된 옵션입니다.",
+    "English": "This stat is already selected.",
+    "Japanese": "すでに選択されているオプションです。",
+    "China_Simplified": "该属性已被选择。",
+    "China_Traditional": "該屬性已被選擇。"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_CUSTOM_DESC_09",
+    "Korean": "선택한 장비를 획득하시겠습니까?\\n아래의 비용이 소모됩니다.",
+    "English": "Would you like to obtain the selected gear?\\nThe following cost will be used.",
+    "Japanese": "選択した装備を獲得しますか？\\n以下を消費します。",
+    "China_Simplified": "是否要获得所选装备？\\n将消耗以下费用。",
+    "China_Traditional": "是否要獲得所選裝備？\\n將消耗以下費用。"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_01",
+    "Korean": "1회 호출",
+    "English": "Call x1",
+    "Japanese": "1回召喚",
+    "China_Simplified": "召唤1次",
+    "China_Traditional": "召喚1次"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_10",
+    "Korean": "10회 호출",
+    "English": "Call x10",
+    "Japanese": "10回召喚",
+    "China_Simplified": "召唤10次",
+    "China_Traditional": "召喚10次"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_MILEAGE_COST",
+    "Korean": "차원 호출 마일리지",
+    "English": "Supply Mileage",
+    "Japanese": "次元召喚Pt",
+    "China_Simplified": "次元召唤积分",
+    "China_Traditional": "次元召喚積分"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_MILEAGE_COST_DESC",
+    "Korean": "차원 물자 호출을 통해 획득할 수 있는 재화입니다. \\n\\n차원 물자 호출에서 특정 장비를 선택하여 획득하는데 사용됩니다.",
+    "English": "This is currency that can be obtained through Dimensional Supply.\\n\\nIt is used to select and obtain specific gear in Dimensional Supply.",
+    "Japanese": "次元物資召喚を通じて獲得できるPtです。\\n\\n次元物資召喚で特定の装備を選択して入手するために使用されます。",
+    "China_Simplified": "可通过次元物资召唤获得的资源。\\n\\n用于在次元物资召唤中选择并获得特定装备。",
+    "China_Traditional": "可透過次元物資召喚獲得的資源。\\n\\n用於在次元物資召喚中選擇並獲得特定裝備。"
+  },
+  {
+    "ID": "SYS_EQUIP_GACHA_MILEAGE",
+    "Korean": "선택 호출",
+    "English": "Select Gear",
+    "Japanese": "選択召喚",
+    "China_Simplified": "自选召唤",
+    "China_Traditional": "自選召喚"
+  },
+  {
+    "ID": "SYS_RECRUIT_EQUIP_TITLE_06",
+    "Korean": "고차원 물자 lll",
+    "English": "Advanced Dimensional Supply III",
+    "Japanese": "高次元物資III",
+    "China_Simplified": "高次元物资III",
+    "China_Traditional": "高次元物資III"
+  },
+  {
+    "ID": "SYS_RECRUIT_EQUIP_TITLE_05",
+    "Korean": "커스텀 픽업 장비",
+    "English": "Selected Rate-Up Gear",
+    "Japanese": "カスタムピックアップ装備",
+    "China_Simplified": "已选装备",
+    "China_Traditional": "已選裝備"
+  },
+  {
+    "ID": "SYS_RECRUIT_EQUIP_TITLE_04",
+    "Korean": "고차원 물자 ll",
+    "English": "Advanced Dimensional Supply II",
+    "Japanese": "高次元物資II",
+    "China_Simplified": "高次元物资II",
+    "China_Traditional": "高次元物資II"
+  },
+  {
+    "ID": "SYS_RECRUIT_EQUIP_TITLE_03",
+    "Korean": "6성 전설 장비(모든 서브 옵션 3 LV)",
+    "English": "6★ Legendary Gear (All Substats at LV 3)",
+    "Japanese": "★6レジェンド装備（サブオプション全てLv.3）",
+    "China_Simplified": "6★传说装备（所有副属性Lv.3）",
+    "China_Traditional": "6★傳說裝備（所有副屬性Lv.3）"
+  },
+  {
+    "ID": "SYS_RECRUIT_EQUIP_TITLE_02",
+    "Korean": "고차원 물자 l",
+    "English": "Advanced Dimensional Supply I",
+    "Japanese": "高次元物資I",
+    "China_Simplified": "高次元物资I",
+    "China_Traditional": "高次元物資I"
+  },
+  {
+    "ID": "SYS_RECRUIT_EQUIP_TITLE_01",
+    "Korean": "6성 전설 장비(무작위 서브 옵션)",
+    "English": "6★ Legendary Gear (Random Substats)",
+    "Japanese": "★6レジェンド装備（オプションランダム付与）",
+    "China_Simplified": "6★传说装备（随机副属性）",
+    "China_Traditional": "6★傳說裝備（隨機副屬性）"
+  },
+  {
+    "ID": "SYS_RECRUIT_EQUIP_INFO_01",
+    "Korean": "아이템 이름",
+    "English": "Item Name",
+    "Japanese": "アイテム名",
+    "China_Simplified": "道具名称",
+    "China_Traditional": "道具名稱"
+  },
+  {
+    "ID": "SYS_RECRUIT_EQUIP_INFO_02",
+    "Korean": "수량",
+    "English": "Quantity",
+    "Japanese": "数量",
+    "China_Simplified": "数量",
+    "China_Traditional": "數量"
+  },
+  {
+    "ID": "SYS_GUIDE_RECRUIT_05_NAME",
+    "Korean": "차원 물자 호출",
+    "English": "Dimensional Supply",
+    "Japanese": "次元物資召喚",
+    "China_Simplified": "次元物资召唤",
+    "China_Traditional": "次元物資召喚"
+  },
+  {
+    "ID": "SYS_GUIDE_RECRUIT_05_1_DESC",
+    "Korean": "재화를 사용하여 [물자 호출]을 진행할 수 있습니다.\\n차원 물자 호출에 필요한 차원 호출 티켓은 유료 상점에서 특별 영입 티켓으로 구매할 수 있습니다.\\n물자 호출을 통해 서브 옵션 수준이 높은 장비 또는 탈리스만 선택 상자 및 다양한 아이템을 획득할 수 있습니다.",
+    "English": "You can use currency to perform [Supply Calls].\\nDimensional Supply Tickets required for Dimensional Supply can be purchased with Special Recruitment Tickets from the Premium Shop.\\nThrough Supply Calls, you can obtain gear with high substat levels, Talisman Selection Chests, and various items.",
+    "Japanese": "専用アイテムを使用して「次元物資召喚」を行えます。\\n召喚に必要な次元召喚チケットは、有料ショップにてプレミアムスカウトチケットと交換することで獲得できます。\\n物資召喚から、サブオプションLv.3の装備やタリスマン選択ボックスなど、様々なアイテムを入手できます。",
+    "China_Simplified": "可使用道具进行【物资召唤】。\\n次元物资召唤所需的次元召唤券可在付费商店以特别招募券购买。\\n通过物资召唤可获得副选项等级较高的装备或护身符选择箱及各种道具。",
+    "China_Traditional": "可使用道具進行【物資召喚】。\\n次元物資召喚所需的次元召喚券可在付費商店以特別招募券購買。\\n透過物資召喚可獲得副選項等級較高的裝備或護身符選擇箱及各種道具。"
+  },
+  {
+    "ID": "SYS_GUIDE_RECRUIT_05_2_DESC",
+    "Korean": "[물자 호출]을 진행하기 전, 3개의 픽업 장비를 지정할 수 있습니다.\\n장비 아이템 지정 후 메인 옵션 및 서브 옵션을 지정하여 설정을 완료할 수 있습니다.  ",
+    "English": "Before performing [Supply Calls], you can select 3 desired gear items.\\nAfter selecting gear, choose the Main Stat and substats to complete the setup.",
+    "Japanese": "「次元物資召喚」を行う前に、希望する装備を3つ選択できます。\\n装備を選択した後、メインオプションおよびサブオプションを指定して設定を完了します。",
+    "China_Simplified": "进行【物资召唤】前，可指定3件心仪的装备。\\n指定装备道具后，通过指定主属性及副属性完成设置。",
+    "China_Traditional": "進行【物資召喚】前，可指定3件心儀的裝備。\\n指定裝備道具後，透過指定主屬性及副屬性完成設置。"
+  },
+  {
+    "ID": "SYS_REALTIME_PVP_SHOP",
+    "Korean": "실시간 대전",
+    "English": "Real Time Arena",
+    "Japanese": "ワールドアリーナ",
+    "China_Simplified": "实时对战",
+    "China_Traditional": "即時對戰"
+  },
+  {
+    "ID": "SYS_DISC_ASSET_REALTIME_PVP_MEDAL",
+    "Korean": "실시간 대전에서 획득 가능한 전용 재화입니다.\\n모험가 상점의 실시간 대전 탭에서 다양한 상품과 교환하실 수 있습니다.",
+    "English": "This is exclusive currency that can be obtained in Real Time Arena.\\nYou can exchange it for various items in the Real Time Arena tab of the Adventurer's Shop.",
+    "Japanese": "ワールドアリーナで獲得できる専用アイテムです。\\n冒険者ショップのワールドアリーナタブでさまざまなアイテムと交換できます。",
+    "China_Simplified": "这是可在实时对战中获得的专属道具。\\n可在冒险者商店的世界竞技场标签中与各种商品进行兑换。",
+    "China_Traditional": "這是可在即時對戰中獲得的專屬道具。\\n可在冒險者商店的世界競技場標籤中與各種商品進行兌換。"
+  },
+  {
+    "ID": "SYS_ASSET_REALTIME_PVP_MEDAL",
+    "Korean": "실시간 대전 훈장",
+    "English": "Real Time Arena Medal",
+    "Japanese": "ワールドアリーナメダル",
+    "China_Simplified": "实时对战勋章",
+    "China_Traditional": "即時對戰勳章"
+  },
+  {
+    "ID": "SYS_GOOGLE_PLAY_JP1_TITLE",
+    "Korean": "[축하] 일본 Google Play 인기 차트 1위 기념!",
+    "English": "[Congratulations] Celebrating #1 on Japan Google Play Popular Chart!",
+    "Japanese": "【お祝い】日本 Google Play 人気チャート1位記念！",
+    "China_Simplified": " 【庆祝】日本Google Play人气榜第1名纪念！",
+    "China_Traditional": " 【慶祝】日本Google Play人氣榜第1名紀念！"
+  },
+  {
+    "ID": "SYS_GOOGLE_PLAY_KO1_TITLE",
+    "Korean": "[축하] 한국 Google Play 인기 차트 1위 기념!",
+    "English": "[Congratulations] Celebrating #1 on Korea Google Play Popular Chart!",
+    "Japanese": "【お祝い】韓国 Google Play 人気チャート1位記念！",
+    "China_Simplified": " 【庆祝】韩国Google Play人气榜第1名纪念！",
+    "China_Traditional": " 【慶祝】韓國Google Play人氣榜第1名紀念！"
+  },
+  {
+    "ID": "SYS_GOOGLE_PLAY_TW1_TITLE",
+    "Korean": "[축하] 대만 Google Play 인기 차트 1위 기념!",
+    "English": "[Congratulations] Celebrating #1 on Taiwan Google Play Popular Chart!",
+    "Japanese": "【お祝い】台湾 Google Play 人気チャート1位記念！",
+    "China_Simplified": " 【庆祝】台湾Google Play人气榜第1名纪念！",
+    "China_Traditional": " 【慶祝】台灣Google Play人氣榜第1名紀念！"
+  },
+  {
+    "ID": "SYS_LIMITED_HERO_TRANS_TITLE",
+    "Korean": "한정 동료 복각 기념 ★6 달성 보상",
+    "English": "Limited Hero Rerun Commemoration ★6 Achievement Reward",
+    "Japanese": "限定仲間復刻記念★6達成報酬",
+    "China_Simplified": "限定同伴复刻纪念★6达成奖励",
+    "China_Traditional": "限定同伴復刻紀念★6達成獎勵"
+  },
+  {
+    "ID": "SYS_SEASONAL_HERO_RECRUIT_TITLE",
+    "Korean": "시즈널 한정 동료 선택 영입 진행 보상",
+    "English": "Seasonal Limited Hero Selection Recruitment Reward",
+    "Japanese": "シーズナル限定仲間選択スカウト進行報酬",
+    "China_Simplified": "季节限定同伴选择招募进行奖励",
+    "China_Traditional": "季節限定同伴選擇招募進行獎勵"
+  },
+  {
+    "ID": "SYS_CREATOR_REWARD_TITLE",
+    "Korean": "크리에이터 보상",
+    "English": "Creator Reward",
+    "Japanese": "クリエイター報酬",
+    "China_Simplified": "Creator Reward",
+    "China_Traditional": "Creator Reward"
+  },
+  {
+    "ID": "SYS_GOOGLE_PLAY_JP1_MESSAGE",
+    "Korean": "일본 Google Play 무료 인기 차트 1위를 기념하여,\\n여러분께 감사 보상을 지급해 드립니다.\\n항상 보내주시는 사랑에 감사드립니다.",
+    "English": "To celebrate reaching #1 on the Japan Google Play Free Popular Chart,\\nwe will be sending everyone a thank-you reward.\\nThank you for your continued love and support.",
+    "Japanese": "日本 Google Play 無料人気チャート1位を記念して、\\n皆さまに感謝報酬をお届けします。\\nいつも温かいご支援をありがとうございます。",
+    "China_Simplified": "为庆祝荣登日本Google Play免费人气榜第1名，\\n向各位发放感谢奖励。\\n感谢大家一直以来给予的厚爱。",
+    "China_Traditional": "為慶祝榮登日本Google Play免費人氣榜第1名，\\n向各位發放感謝獎勵。\\n感謝大家一直以來給予的厚愛。"
+  },
+  {
+    "ID": "SYS_GOOGLE_PLAY_KO1_MESSAGE",
+    "Korean": "한국 Google Play 무료 인기 차트 1위를 기념하여,\\n여러분께 감사 보상을 지급해 드립니다.\\n항상 보내주시는 사랑에 감사드립니다.",
+    "English": "To celebrate reaching #1 on the Korea Google Play Free Popular Chart,\\nwe will be sending everyone a thank-you reward.\\nThank you for your continued love and support.",
+    "Japanese": "韓国 Google Play 無料人気チャート1位を記念して、\\n皆さまに感謝報酬をお届けします。\\nいつも温かいご支援をありがとうございます。",
+    "China_Simplified": "为庆祝荣登韩国Google Play免费人气榜第1名，\\n向各位发放感谢奖励。\\n感谢大家一直以来给予的厚爱。",
+    "China_Traditional": "為慶祝榮登韓國Google Play免費人氣榜第1名，\\n向各位發放感謝獎勵。\\n感謝大家一直以來給予的厚愛。"
+  },
+  {
+    "ID": "SYS_GOOGLE_PLAY_TW1_MESSAGE",
+    "Korean": "대만 Google Play 무료 인기 차트 1위를 기념하여,\\n여러분께 감사 보상을 지급해 드립니다.\\n항상 보내주시는 사랑에 감사드립니다.",
+    "English": "To celebrate reaching #1 on the Taiwan Google Play Free Popular Chart,\\nwe will be sending everyone a thank-you reward.\\nThank you for your continued love and support.",
+    "Japanese": "台湾 Google Play 無料人気チャート1位を記念して、\\n皆さまに感謝報酬をお届けします。\\nいつも温かいご支援をありがとうございます。",
+    "China_Simplified": "为庆祝荣登台湾Google Play免费人气榜第1名，\\n向各位发放感谢奖励。\\n感谢大家一直以来给予的厚爱。",
+    "China_Traditional": "為慶祝榮登台灣Google Play免費人氣榜第1名，\\n向各位發放感謝獎勵。\\n感謝大家一直以來給予的厚愛。"
+  },
+  {
+    "ID": "SYS_LIMITED_HERO_TRANS_MESSAGE",
+    "Korean": "한정 동료 복각을 기념하여, 이미 해당 동료의 ★6 초월을 달성한 오너님께 드리는 보상입니다.",
+    "English": "In commemoration of the Limited Hero rerun, this is a reward for Masters who have already achieved ★6 Transcendence for the relevant Hero.",
+    "Japanese": "限定仲間の復刻を記念して、すでに該当仲間の★6超越を達成されたマスター様への報酬です。",
+    "China_Simplified": "为纪念限定同伴复刻，这是已达成该同伴★6超越的主人专属奖励。",
+    "China_Traditional": "為紀念限定同伴復刻，這是已達成該同伴★6超越的主人專屬獎勵。"
+  },
+  {
+    "ID": "SYS_SEASONAL_HERO_RECRUIT_MESSAGE",
+    "Korean": "시즈널 한정 선택 영입이 종료되지 않은 상태에서 복각한 한정 동료를 50회 이상 영입하신 오너 여러분께 드리는 보상입니다.",
+    "English": "This is a reward for Masters who recruited a rerun Limited Hero 50 or more times while Seasonal Limited Select Recruitment was still active.",
+    "Japanese": "シーズナル限定仲間の選択スカウトが終了していない状態で、復刻した限定仲間を50回以上スカウトされたマスター様にお贈りする報酬です。",
+    "China_Simplified": "在季节限定同伴选择招募「再度登场限定同伴」50次以上的主人,将获得该同伴的碎片150个。",
+    "China_Traditional": "在季節限定同伴選擇招募中招募「復刻版限定同伴」50次以上的主人，將獲得該同伴的碎片150個。"
+  },
+  {
+    "ID": "SYS_CREATOR_REWARD_MESSAGE",
+    "Korean": "좋은 콘텐츠 제작해주셔서 감사합니다.",
+    "English": "Thank you for creating great content.",
+    "Japanese": "良いコンテンツの制作をお願いします。\\n今後とも『アウタープレーン』をどうぞよろしくお願いいたします。",
+    "China_Simplified": "Thank you.",
+    "China_Traditional": "Thank you."
   }
 ]

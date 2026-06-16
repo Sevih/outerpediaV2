@@ -15755,13 +15755,14 @@
   {
     "ID": "60000001",
     "BreakBuffID": "BID_BREAK_1,BID_BREAK_2,BID_BREAK_3",
-    "TriggerType": "LOSE_HP_VALUE",
-    "TriggerValue1": "400000"
+    "TriggerType": "USER_TURN_COUNT",
+    "TriggerValue1": "7"
   },
   {
     "ID": "60000002",
     "BreakBuffID": "BID_BREAK_1,BID_BREAK_2,BID_BREAK_3",
-    "TriggerType": "NONE"
+    "TriggerType": "USER_TURN_COUNT",
+    "TriggerValue1": "7"
   },
   {
     "ID": "60000003",
@@ -15777,8 +15778,8 @@
   {
     "ID": "60000005",
     "BreakBuffID": "BID_BREAK_1,BID_BREAK_2,BID_BREAK_3",
-    "TriggerType": "LOSE_HP_VALUE",
-    "TriggerValue1": "400000"
+    "TriggerType": "USER_TURN_COUNT",
+    "TriggerValue1": "7"
   },
   {
     "ID": "60000006",
@@ -15806,8 +15807,8 @@
   {
     "ID": "60000010",
     "BreakBuffID": "BID_BREAK_1,BID_BREAK_2,BID_BREAK_3",
-    "TriggerType": "LOSE_HP_VALUE",
-    "TriggerValue1": "250000"
+    "TriggerType": "USER_TURN_COUNT",
+    "TriggerValue1": "6"
   },
   {
     "ID": "60000011",
@@ -15824,8 +15825,8 @@
   {
     "ID": "60000013",
     "BreakBuffID": "BID_BREAK_1,BID_BREAK_2,BID_BREAK_3",
-    "TriggerType": "LOSE_HP_VALUE",
-    "TriggerValue1": "250000"
+    "TriggerType": "USER_TURN_COUNT",
+    "TriggerValue1": "6"
   },
   {
     "ID": "60000014",
