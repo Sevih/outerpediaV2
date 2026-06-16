@@ -35,17 +35,22 @@ function getDesc(transcend: Transcendence, level: string, lang: Lang): string | 
   return (transcend[`${level}_${lang}`] as string) ?? transcend[level] ?? null;
 }
 
-/* ── Parse "+X% Label" or "Label +X%" ── */
+/* ── Parse "+X% Label" or "Label +X%" (X may be a decimal) ── */
 function parseNumericBonus(s: string): { kind: 'pct' | 'flat'; label: string; amount: number } | null {
-  let m = s.match(/^\+(\d+)%\s+(.+)$/);
-  if (m) return { kind: 'pct', amount: parseInt(m[1], 10), label: m[2].trim() };
-  m = s.match(/^\+(\d+)\s+(.+)$/);
-  if (m) return { kind: 'flat', amount: parseInt(m[1], 10), label: m[2].trim() };
-  m = s.match(/^(.+?)\s*\+(\d+)%$/);
-  if (m) return { kind: 'pct', amount: parseInt(m[2], 10), label: m[1].trim() };
-  m = s.match(/^(.+?)\s*\+(\d+)$/);
-  if (m) return { kind: 'flat', amount: parseInt(m[2], 10), label: m[1].trim() };
+  let m = s.match(/^\+(\d+(?:\.\d+)?)%\s+(.+)$/);
+  if (m) return { kind: 'pct', amount: parseFloat(m[1]), label: m[2].trim() };
+  m = s.match(/^\+(\d+(?:\.\d+)?)\s+(.+)$/);
+  if (m) return { kind: 'flat', amount: parseFloat(m[1]), label: m[2].trim() };
+  m = s.match(/^(.+?)\s*\+(\d+(?:\.\d+)?)%$/);
+  if (m) return { kind: 'pct', amount: parseFloat(m[2]), label: m[1].trim() };
+  m = s.match(/^(.+?)\s*\+(\d+(?:\.\d+)?)$/);
+  if (m) return { kind: 'flat', amount: parseFloat(m[2]), label: m[1].trim() };
   return null;
+}
+
+/* ── Round to 2 decimals, dropping trailing zeros (avoids float drift like 4.800000001) ── */
+function fmtAmount(n: number): string {
+  return parseFloat(n.toFixed(2)).toString();
 }
 
 /* ── Component ── */
@@ -111,8 +116,8 @@ export default function TranscendenceSlider({ transcend, rarity = 3 }: Props) {
     const result: string[] = [];
     if (lastAtkDefHpLine) result.push(lastAtkDefHpLine);
     for (const [label, value] of Object.entries(bonusMap)) {
-      if (label.startsWith('flat|')) result.push(`+${value} ${label.slice(5)}`);
-      else result.push(`+${value}% ${label}`);
+      if (label.startsWith('flat|')) result.push(`+${fmtAmount(value)} ${label.slice(5)}`);
+      else result.push(`+${fmtAmount(value)}% ${label}`);
     }
     for (const v of uniqueEffects.values()) result.push(v);
     for (const v of otherBonuses) result.push(v);
