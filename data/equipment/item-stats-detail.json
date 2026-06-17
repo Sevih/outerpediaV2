@@ -31438,6 +31438,74 @@
           ]
         }
       },
+      "2000116": {
+        "name": "Sound of Silence",
+        "slot": "ee",
+        "characterId": "2000116",
+        "rarity": "legendary",
+        "star": 6,
+        "scalesVia": "enhanceLevels",
+        "mainStats": [
+          {
+            "key": "DMG RED%",
+            "label": {
+              "en": "Reduced DMG Taken vs Dark",
+              "jp": "闇属性対象の受ける ダメージDOWN",
+              "kr": "암속성 대상 받는 피해 감소",
+              "zh": "暗属性所受伤害降低"
+            },
+            "percent": true,
+            "conditional": true,
+            "levels": [20, 20.7, 21.4, 22.1, 22.8, 23.5, 24.2, 24.9, 25.6, 26.3, 27]
+          },
+          {
+            "key": "HIT_AP",
+            "label": {
+              "en": "Gains AP when hit",
+              "jp": "ダメージを受けるとAP獲得",
+              "kr": "피격 시 AP획득",
+              "zh": "受到攻击时获得AP"
+            },
+            "percent": false,
+            "conditional": false,
+            "levels": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10]
+          }
+        ],
+        "passive": {
+          "name": {
+            "en": "Anarky's Exclusive Equipment",
+            "jp": "アナーキの専用装備",
+            "kr": "아나키의 전용 장비",
+            "zh": "阿娜奇的专属装备"
+          },
+          "tiers": [
+            {
+              "unlockLevel": 1,
+              "isAdd": false,
+              "desc": {
+                "en": "All Allies' Defense [+Value]",
+                "jp": "味方全体の防御力[+Value]",
+                "kr": "아군 전체 방어력  [+Value]",
+                "zh": "全体友军防御力 [+Value]"
+              },
+              "values": {
+                "[+Value]": "+20%"
+              }
+            },
+            {
+              "unlockLevel": 10,
+              "isAdd": true,
+              "desc": {
+                "en": "When attacking a target with lower Defense than the caster, increases Penetration by <color=#28d9ed>+30%</color>",
+                "jp": "自分より防御力が低い対象を攻撃する時、貫通力 <color=#28d9ed>+30%</color>",
+                "kr": "자신보다 방어력 낮은 대상 공격 시 관통력 <color=#28d9ed>+30%</color>",
+                "zh": "攻击防御力低于自身的目标时，穿透力 <color=#28d9ed>+30%</color>"
+              },
+              "values": {}
+            }
+          ]
+        }
+      },
       "2000117": {
         "name": "Power & Ambition",
         "slot": "ee",
