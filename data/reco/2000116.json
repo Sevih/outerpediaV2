@@ -1,0 +1,94 @@
+{
+  "Patience": {
+    "Weapon": [
+      {
+        "name": "Gorgon's Wrath [Defender]",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Exquisite Death",
+        "mainStat": "DEF%"
+      } , 
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "DEF%"
+      } 
+    ],
+    "Amulet": [
+      {
+        "name": "Gorgon's Vanity [Defender]",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Briareos's Ambition [Defender]",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      "pat4"
+    ],
+    "SubstatPrio": "DEF>CHC>CHD>SPD=HP=DMG RED%>DMG UP%",
+    "Note": "",
+    "Talisman": [
+      "$CPplusVang"
+    ]
+  },
+  "Defense mix": {
+    "Weapon": [
+      {
+        "name": "Gorgon's Wrath [Defender]",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Exquisite Death",
+        "mainStat": "DEF%"
+      } , 
+      {
+        "name": "Talisman of Animosities",
+        "mainStat": "DEF%"
+      } 
+    ],
+    "Amulet": [
+      {
+        "name": "Gorgon's Vanity [Defender]",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Unholy Exsultet",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Chalice of Longing",
+        "mainStat": "DEF%"
+      },
+      {
+        "name": "Coward's Treasure",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Briareos's Ambition [Defender]",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      "p2def2","def2sw2","i2def2"
+    ],
+    "SubstatPrio": "$dpsDef",
+    "Note": "",
+    "Talisman": [
+      "$CPplusVang"
+    ]
+  }
+}
