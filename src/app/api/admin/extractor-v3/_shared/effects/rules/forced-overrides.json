@@ -2,183 +2,301 @@
   "_comment": "Manual buff/debuff/removeBuff/removeDebuff overrides for skills the extractor can't fully model from BuffTemplet alone. Keyed by ownerId (charID or monsterID) → skillType.",
   "2000065": {
     "SKT_FIRST": {
-      "buff": ["BT_ADDITIVE_ATTACK"],
-      "removeBuff": ["BT_STAT|ST_ATK"]
+      "buff": [
+        "BT_ADDITIVE_ATTACK"
+      ],
+      "removeBuff": [
+        "BT_STAT|ST_ATK"
+      ]
     }
   },
   "2000075": {
     "SKT_SECOND": {
-      "buff": ["BT_SEAL_COUNTER"]
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     }
   },
   "2000053": {
     "SKT_FIRST": {
-      "removeBuff": ["BT_KILL_UNDER_HP_RATE"],
-      "debuff": ["BT_KILL_UNDER_HP_RATE"]
+      "removeBuff": [
+        "BT_KILL_UNDER_HP_RATE"
+      ],
+      "debuff": [
+        "BT_KILL_UNDER_HP_RATE"
+      ]
     },
     "SKT_ULTIMATE": {
-      "removeBuff": ["BT_KILL_UNDER_HP_RATE"],
-      "debuff": ["BT_KILL_UNDER_HP_RATE"]
+      "removeBuff": [
+        "BT_KILL_UNDER_HP_RATE"
+      ],
+      "debuff": [
+        "BT_KILL_UNDER_HP_RATE"
+      ]
     },
     "SKT_CHAIN_PASSIVE": {
-      "removeDebuff": ["BT_WG_REVERSE_HEAL"]
+      "removeDebuff": [
+        "BT_WG_REVERSE_HEAL"
+      ]
     }
   },
   "2000021": {
     "SKT_SECOND": {
-      "removeBuff": ["BT_STAT|ST_AVOID"]
+      "removeBuff": [
+        "BT_STAT|ST_AVOID"
+      ]
     }
   },
   "2000042": {
     "SKT_FIRST": {
-      "removeBuff": ["BT_INVINCIBLE"]
+      "removeBuff": [
+        "BT_INVINCIBLE"
+      ]
     }
   },
   "2000043": {
     "SKT_SECOND": {
-      "removeDebuff": ["BT_STAT|ST_AVOID"]
+      "removeDebuff": [
+        "BT_STAT|ST_AVOID"
+      ]
     }
   },
   "2000060": {
     "SKT_SECOND": {
-      "removeBuff": ["BT_EXTEND_BUFF"]
+      "removeBuff": [
+        "BT_EXTEND_BUFF"
+      ]
     }
   },
   "2000072": {
     "SKT_ULTIMATE": {
-      "debuff": ["BT_STEAL_BUFF"]
+      "debuff": [
+        "BT_STEAL_BUFF"
+      ]
     }
   },
   "2000109": {
     "SKT_FIRST": {
-      "removeDebuff": ["BT_DOT_POISON"]
+      "removeDebuff": [
+        "BT_DOT_POISON"
+      ]
     },
     "SKT_SECOND": {
-      "removeDebuff": ["BT_DOT_POISON"]
+      "removeDebuff": [
+        "BT_DOT_POISON"
+      ]
     },
     "SKT_ULTIMATE": {
-      "removeBuff": ["BT_STAT|ST_DEF"],
-      "removeDebuff": ["BT_DOT_POISON"]
+      "removeBuff": [
+        "BT_STAT|ST_DEF"
+      ],
+      "removeDebuff": [
+        "BT_DOT_POISON"
+      ]
     },
     "SKT_CHAIN_PASSIVE": {
-      "removeDebuff": ["BT_DOT_POISON"]
+      "removeDebuff": [
+        "BT_DOT_POISON"
+      ]
     }
   },
   "2000085": {
     "SKT_SECOND": {
-      "removeDebuff": ["BT_RESOURCE_DOWN"]
+      "removeDebuff": [
+        "BT_RESOURCE_DOWN"
+      ]
     }
   },
   "2000084": {
     "SKT_FIRST": {
-      "buff": ["BT_CALL_BACKUP_2", "BT_CALL_BACKUP"]
+      "buff": [
+        "BT_CALL_BACKUP_2",
+        "BT_CALL_BACKUP"
+      ]
     }
   },
   "2000102": {
     "SKT_ULTIMATE": {
-      "buff": ["BT_EXTEND_DEBUFF"],
-      "debuff": ["BT_EXTEND_BUFF"]
+      "buff": [
+        "BT_EXTEND_DEBUFF"
+      ],
+      "debuff": [
+        "BT_EXTEND_BUFF"
+      ]
     }
   },
   "Unidentified Chimera|Special Request: Ecology Study": {
     "SKT_MONSTER_1": {
-      "removeBuff": ["BT_BARRIER"]
+      "removeBuff": [
+        "BT_BARRIER"
+      ]
     }
   },
   "Blazing Knight Meteos|Special Request: Identification": {
     "SKT_MONSTER_2": {
-      "removeDebuff": ["BT_SEALED_RESURRECTION"]
+      "removeDebuff": [
+        "BT_SEALED_RESURRECTION"
+      ]
     }
   },
   "Dek'Ril|Special Request: Identification": {
     "SKT_MONSTER_1": {
-      "removeBuff": ["BT_BARRIER"],
-      "removeDebuff": ["BT_DOT_POISON"]
+      "removeBuff": [
+        "BT_BARRIER"
+      ],
+      "removeDebuff": [
+        "BT_DOT_POISON"
+      ]
     }
   },
   "Drakhan|World Boss": {
     "SKT_MONSTER_1": {
-      "removeBuff": ["COURAGE_AGAINST_DESPAIR"]
+      "removeBuff": [
+        "COURAGE_AGAINST_DESPAIR"
+      ]
     }
   },
   "skill:Blessing of the Earth Tower": {
-    "*": { "clear_buff": true, "clear_debuff": true }
+    "*": {
+      "clear_buff": true,
+      "clear_debuff": true
+    }
   },
   "skill:Blessing of the Tower of Darkness": {
-    "*": { "clear_buff": true, "clear_debuff": true }
+    "*": {
+      "clear_buff": true,
+      "clear_debuff": true
+    }
   },
   "skill:Blessing of the Tower of Light": {
-    "*": { "clear_buff": true, "clear_debuff": true }
+    "*": {
+      "clear_buff": true,
+      "clear_debuff": true
+    }
   },
   "skill:Blessing of the Tower of Flames": {
-    "*": { "clear_buff": true, "clear_debuff": true }
+    "*": {
+      "clear_buff": true,
+      "clear_debuff": true
+    }
   },
   "skill:Blessing of the Water Tower": {
-    "*": { "clear_buff": true, "clear_debuff": true }
+    "*": {
+      "clear_buff": true,
+      "clear_debuff": true
+    }
   },
   "ee:2000109": {
     "*": {
-      "removeDebuff": ["BT_DOT_POISON"]
+      "removeDebuff": [
+        "BT_DOT_POISON"
+      ]
     }
   },
   "ee:2000119": {
     "*": {
-      "buff": ["BT_SEAL_COUNTER"]
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     }
   },
   "ee:2000117": {
     "*": {
-      "buff": ["BT_SEAL_COUNTER"]
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     }
   },
   "ee:2000105": {
     "*": {
-      "buff": ["BT_SEAL_COUNTER"]
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     }
   },
   "ee:2000092": {
     "*": {
-      "buff": ["BT_SEAL_COUNTER"]
+      "buff": [
+        "BT_SEAL_COUNTER"
+      ]
     }
   },
   "ee:2000047": {
     "*": {
-      "buff": ["BT_BARRIER"],
-      "removeBuff": ["BT_SHIELD_BASED_CASTER"]
+      "buff": [
+        "BT_BARRIER"
+      ],
+      "removeBuff": [
+        "BT_SHIELD_BASED_CASTER"
+      ]
     }
   },
   "skill:Death Sentence": {
-    "*": { "removeDebuff": ["BT_DOT_BURN"] }
+    "*": {
+      "removeDebuff": [
+        "BT_DOT_BURN"
+      ]
+    }
   },
   "60000005": {
     "SKT_RAGE_ENTER1": {
-      "buff": ["BT_STAT|ST_SPEED_IR", "BT_DAMAGE_TAKEN", "BT_IMMUNE"]
+      "buff": [
+        "BT_STAT|ST_SPEED_IR",
+        "BT_DAMAGE_TAKEN",
+        "BT_IMMUNE"
+      ]
     }
   },
   "skill:Death Denial|60000005": {
-    "*": { "clear_buff": true }
+    "*": {
+      "clear_buff": true
+    }
   },
   "skill:Extreme Scales|60000005": {
-    "*": { "buff": ["BT_ACTION_GAUGE"] }
+    "*": {
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    }
   },
   "skill:Monster Hunter's Crucible|60000001": {
-    "*": { "clear_buff": true, "debuff": ["BT_DOT_BURN"] }
+    "*": {
+      "clear_buff": true,
+      "debuff": [
+        "BT_DOT_BURN"
+      ]
+    }
   },
   "skill:Hunting Time|60000001": {
-    "*": { "clear_debuff": true, "buff": ["BT_REMOVE_DEBUFF"] }
+    "*": {
+      "clear_debuff": true,
+      "buff": [
+        "BT_REMOVE_DEBUFF"
+      ]
+    }
   },
   "skill:Enraged|60000001": {
     "*": {
       "clear_debuff": true,
       "clear_buff": true,
-      "buff": ["BT_STAT|ST_SPEED_IR", "BT_DAMAGE_TAKEN", "BT_IMMUNE"]
+      "buff": [
+        "BT_STAT|ST_SPEED_IR",
+        "BT_DAMAGE_TAKEN",
+        "BT_IMMUNE"
+      ]
     }
   },
   "skill:Archdemon's Guard Dog|60000008": {
-    "*": { "buff": ["BT_ACTION_GAUGE"] }
+    "*": {
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    }
   },
   "skill:Great Demon's Henchman|60000008": {
-    "*": { "clear_buff": true }
+    "*": {
+      "clear_buff": true
+    }
   },
   "skill:Enraged|60000008": {
     "*": {
@@ -192,23 +310,41 @@
     }
   },
   "skill:Establish : Fate Compulsion|60000010": {
-    "*": { "clear_buff": true, "debuff": ["BT_FIXED_DAMAGE"] }
+    "*": {
+      "clear_buff": true,
+      "debuff": [
+        "BT_FIXED_DAMAGE"
+      ]
+    }
   },
   "skill:Measure : Control Logic Reinforcement|60000010": {
-    "*": { "clear_buff": true, "buff": ["BT_STAT|ST_DEF"] }
+    "*": {
+      "clear_buff": true,
+      "buff": [
+        "BT_STAT|ST_DEF"
+      ]
+    }
   },
   "skill:Objective : Past Protection|60000010": {
-    "*": { "clear_buff": true }
+    "*": {
+      "clear_buff": true
+    }
   },
   "skill:Factor : Absolute Fate|60000010": {
     "*": {
-      "buff": ["BT_ACTION_GAUGE"]
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
     }
   },
   "skill:Dimensional Rift": {
     "*": {
-      "buff": ["BT_STAT|ST_PIERCE_POWER_RATE_IR"],
-      "debuff": ["BT_STAT|ST_PIERCE_POWER_RATE_IR"]
+      "buff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ],
+      "debuff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ]
     }
   },
   "skill:Enraged|60000010": {
@@ -221,7 +357,9 @@
     "*": {
       "clear_buff": true,
       "clear_debuff": true,
-      "debuff": ["BT_DOT_POISON"]
+      "debuff": [
+        "BT_DOT_POISON"
+      ]
     }
   },
   "skill:Domain of Lethal Poison|60000009": {
@@ -233,7 +371,9 @@
         "BT_CURSE_ENHANCE",
         "BT_ENHANCE_ALL"
       ],
-      "debuff": ["BT_STAT|ST_CRITICAL_RATE_IR"]
+      "debuff": [
+        "BT_STAT|ST_CRITICAL_RATE_IR"
+      ]
     }
   },
   "skill:Enraged|60000009": {
@@ -258,7 +398,7 @@
         "BT_STAT|ST_SPEED_IR"
       ],
       "debuff": [
-         "BT_STAT|ST_CRITICAL_DMG_RATE"
+        "BT_STAT|ST_CRITICAL_DMG_RATE"
       ]
     }
   },
@@ -271,7 +411,7 @@
         "BT_STAT|ST_SPEED_IR"
       ],
       "debuff": [
-          "BT_SEALED"
+        "BT_SEALED"
       ]
     }
   },
@@ -284,11 +424,11 @@
         "BT_STAT|ST_SPEED_IR"
       ],
       "debuff": [
-          "BT_REMOVE_BUFF"
+        "BT_REMOVE_BUFF"
       ]
     }
   },
-    "skill:Enraged|60000011": {
+  "skill:Enraged|60000011": {
     "*": {
       "clear_debuff": true,
       "clear_buff": true,
@@ -297,7 +437,7 @@
         "BT_STAT|ST_SPEED_IR"
       ],
       "debuff": [
-          "BT_REMOVE_BUFF"
+        "BT_REMOVE_BUFF"
       ]
     }
   },
@@ -310,17 +450,17 @@
         "BT_STAT|ST_SPEED_IR"
       ],
       "debuff": [
-          "BT_STAT|ST_CRITICAL_RATE"
+        "BT_STAT|ST_CRITICAL_RATE"
       ]
     }
   },
   "skill:Execute : Timeline Readjustment|60000012": {
     "*": {
       "debuff": [
-          "BT_ACTION_GAUGE"
+        "BT_ACTION_GAUGE"
       ],
       "buff": [
-          "BT_ACTION_GAUGE"
+        "BT_ACTION_GAUGE"
       ]
     }
   },
@@ -342,7 +482,7 @@
   },
   "skill:Factor : Absolute Fate|60000013": {
     "*": {
-            "buff": [
+      "buff": [
         "BT_ACTION_GAUGE"
       ]
     }
@@ -350,6 +490,34 @@
   "skill:Establish : Fate Compulsion|60000013": {
     "*": {
       "clear_buff": true
+    }
+  },
+  "skill:Enraged|60000002": {
+    "*": {
+      "clear_debuff": true,
+      "clear_buff": true,
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ],
+      "debuff": [
+        "BT_SEALED_RESURRECTION"
+      ]
+    }
+  },
+  "skill:Command: Incapacitate|60000002": {
+    "*": {
+      "buff": [
+        "BT_ADDITIVE_ATTACK"
+      ]
+    }
+  },
+  "skill:Command: Restrain|60000002": {
+    "*": {
+      "clear_buff": true,
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
     }
   }
 }

@@ -45,6 +45,31 @@ function loadSetNames() {
   return withShort;
 }
 
+/** Map bossId → Set of skill English names, for {SKB/Skill Name|bossId} validation. */
+function loadBossSkills() {
+  const map = new Map();
+  const dir = path.join(DATA, 'boss');
+  for (const f of fs.readdirSync(dir)) {
+    if (!f.endsWith('.json')) continue;
+    let d;
+    try {
+      d = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf-8'));
+    } catch {
+      continue;
+    }
+    if (!d || !d.id || !Array.isArray(d.skills)) continue;
+    const id = String(d.id);
+    const set = map.get(id) ?? new Set();
+    for (const s of d.skills) {
+      if (s?.name?.en) set.add(s.name.en);
+    }
+    map.set(id, set);
+  }
+  return map;
+}
+
+const BOSS_SKILLS = loadBossSkills();
+
 const VALID = {
   B: loadNames('effects/buffs.json'),
   D: loadNames('effects/debuffs.json'),
@@ -59,6 +84,7 @@ const VALID = {
   EE: loadCharacterNames(),
   AS: loadSetNames(),
   SK: loadCharacterNames(),
+  SKB: BOSS_SKILLS,
   'I-W': loadNames('equipment/weapon.json'),
   'I-A': loadNames('equipment/accessory.json'),
   'I-T': loadNames('equipment/talisman.json'),
@@ -67,7 +93,7 @@ const VALID = {
 
 // ── Scan files ─────────────────────────────────────────────────────
 
-const TAG_REGEX = /\{((?:[BDSCEP])|EE|AS|SK|I-(?:W|A|T|I))\/([^}]+)\}/g;
+const TAG_REGEX = /\{((?:[BDSCEP])|EE|AS|SKB|SK|I-(?:W|A|T|I))\/([^}]+)\}/g;
 
 function collectFiles(dir, exts) {
   const results = [];
@@ -114,6 +140,17 @@ function scanFile(filePath) {
         const [charName] = rawValue.split('|');
         if (!validSet.has(charName)) {
           issues.push({ file: filePath, line: i + 1, tag: full, type: tagType, value: charName });
+        }
+        continue;
+      }
+
+      if (tagType === 'SKB') {
+        const [skillName, bossId] = rawValue.split('|');
+        const skillSet = validSet.get(bossId);
+        if (!skillSet) {
+          issues.push({ file: filePath, line: i + 1, tag: full, type: tagType, value: `boss ${bossId}` });
+        } else if (!skillSet.has(skillName)) {
+          issues.push({ file: filePath, line: i + 1, tag: full, type: tagType, value: skillName });
         }
         continue;
       }

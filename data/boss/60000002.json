@@ -1,0 +1,183 @@
+{
+  "id": "60000002",
+  "Name": {
+    "en": "Planet Purification Unit",
+    "jp": "惑星浄化ユニット",
+    "kr": "행성 정화 유닛",
+    "zh": "净化行星单位"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Mage",
+  "element": "Fire",
+  "level": 100,
+  "icons": "4076011",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO,BT_REMOVE_BUFF,BT_DOT_BURN,BT_DOT_CURSE,BT_DOT_BLEED,BT_DOT_POISON,BT_DOT_LIGHTNING,ETERNAL_BLEEDING",
+  "StatBuffImmune": "",
+  "location": {
+    "dungeon": {
+      "en": "[Singularity] - Ksai",
+      "jp": "[特異点] - ザイ",
+      "kr": "[특이점] - 크사이",
+      "zh": "[奇点] - 科赛"
+    },
+    "mode": {
+      "en": "Dimensional Singularity",
+      "jp": "次元特異点",
+      "kr": "차원 특이점",
+      "zh": "次元奇点"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Command: Restrain",
+        "jp": "命令：制圧",
+        "kr": "명령 : 제압",
+        "zh": "命令：压制"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Prioritizes attacking the leftmost enemy.\\nIf the target is not a Defender, removes <color=#28d9ed>2</color> <color=#28d9ed>buff(s)</color> from the target.",
+        "jp": "最も左にいる敵を優先して攻撃する。\\n対象が防御型でなければ、対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>2</color>個解除する。",
+        "kr": "가장 좌측에 있는 적을 우선적으로 공격합니다\\n대상이 방어형이 아니라면 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>2</color>개 해제합니다.",
+        "zh": "优先攻击最左侧的敌人。\\n若目标不是防禦型，则解除目标的<color=#28d9ed>2</color>个<color=#28d9ed>强化效果</color>。"
+      },
+      "icon": "Skill_First_4054001",
+      "debuff": [
+        "BT_REMOVE_BUFF"
+      ]
+    },
+    {
+      "name": {
+        "en": "Command: Incapacitate",
+        "jp": "命令：無力化",
+        "kr": "명령 : 무력화",
+        "zh": "命令：无效化"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "(Triggered Effect)\\nAfter using <color=#28d9ed>Command: Restrain</color>, if the caster's <color=#28d9ed>Attack</color> is increased, activates an additional attack on all enemies.",
+        "jp": "（発動効果）\\n<color=#28d9ed>命令：制圧</color>使用後、自分の<color=#28d9ed>攻撃力</color>が上昇した状態なら敵全体に追加攻撃を与える。",
+        "kr": "(발동 효과)\\n<color=#28d9ed>명령:제압</color> 사용 후 자신의 <color=#28d9ed>공격력</color>이 증가한 상태라면 적 전체에게 추가 공격을 입힙니다.",
+        "zh": "（触发效果）\\n使用<color=#28d9ed>命令：压制</color>后，若自身<color=#28d9ed>攻击力</color>处于提升状态，则对全体敌人造成追加攻击。"
+      },
+      "icon": "Skill_Second_4054001",
+      "buff": [
+        "BT_ADDITIVE_ATTACK"
+      ]
+    },
+    {
+      "name": {
+        "en": "Command: Destroy",
+        "jp": "命令：破壊",
+        "kr": "명령 : 파괴",
+        "zh": "命令：破坏"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies and increases the caster's <color=#28d9ed>Attack</color> for <color=#28d9ed>5 turns</color>.",
+        "jp": "敵全体を攻撃し、自分の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>5ターン</color>増加させる。",
+        "kr": "적 전체를 공격하고, 자신의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>5턴</color> 동안 증가시킵니다.",
+        "zh": "攻击全体敌人，并使自身<color=#28d9ed>攻击力</color>提升<color=#28d9ed>5回合</color>。"
+      },
+      "icon": "Skill_Ultimate_4054001",
+      "buff": [
+        "BT_STAT|ST_ATK"
+      ]
+    },
+    {
+      "name": {
+        "en": "Terminal: Protect Weakness",
+        "jp": "端末：弱点保護",
+        "kr": "단말 : 약점 보호",
+        "zh": "终端：保护弱点"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Damage taken from Strikers increases by <color=#28d9ed>50%</color>, and damage taken increases by <color=#28d9ed>25%</color> for each Water enemy.\\nIf there are no Defenders on the enemy team, all skills deal fixed damage equal to <color=#28d9ed>20%</color> of the target's current HP before attacking.\\nDamage from Cursed and fixed damage taken by Bosses cannot exceed <color=#28d9ed>50,000</color>.",
+        "jp": "攻撃型から受けるダメージが<color=#28d9ed>50%</color>増加し、水属性の敵1体につき受けるダメージが<color=#28d9ed>25%</color>増加する。\\n敵チームに防御型がいなければ、全スキルが攻撃前に対象の現在HPの<color=#28d9ed>20%</color>分の<color=#28d9ed>固定ダメージ</color>を与える。\\nボスが受ける呪いおよび固定ダメージは<color=#28d9ed>50,000</color>を超えない。",
+        "kr": "공격형에게 받는 피해가 <color=#28d9ed>50%</color>증가하고 수속성 적 1명당 받는 피해가 <color=#28d9ed>25%</color> 증가합니다.\\n적 팀에 방어형이 없다면 모든 스킬이 공격 전 대상 현재 체력의 <color=#28d9ed>20%</color> 만큼 고정 피해를 입힙니다.\\n보스가 받는 저주 및 고정 피해의 피해는 <color=#28d9ed>50000</color>을 초과하지 않습니다.",
+        "zh": "攻击型造成的受到伤害提升<color=#28d9ed>50%</color>，每有1名水属性敌人受到伤害提升<color=#28d9ed>25%</color>。\\n若敌方队伍中没有防御型，所有技能在攻击前对目标当前生命值造成<color=#28d9ed>20%</color>的<color=#28d9ed>固定伤害</color>。\\n首领所受诅咒及固定伤害不超过<color=#28d9ed>50,000</color>。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "debuff": [
+        "BT_FIXED_DAMAGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Terminal: Reinitiate",
+        "jp": "端末：再稼働",
+        "kr": "단말 : 재가동",
+        "zh": "终端：重启"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "Always gains <color=#28d9ed>Buff Enhancement</color>. This effect cannot be removed.\\nAfter an enemy acts, if the caster's <color=#28d9ed>Attack</color> is increased, increases the caster's <color=#28d9ed>Priority</color> by <color=#28d9ed>10%</color>.\\nAfter the caster's turn ends, decreases the <color=#28d9ed>Priority</color> of non-Water targets by <color=#28d9ed>10%</color>.",
+        "jp": "常に<color=#28d9ed>強化促進</color>を得る。この効果は解除されない。\\n敵行動後、自分の<color=#28d9ed>攻撃力</color>が上昇した状態なら自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>増加させる。\\n自分の行動終了後、水属性でない対象の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>10%</color>減少させる。",
+        "kr": "항상 <color=#28d9ed>강화 촉진</color>을 얻습니다. 이 효과는 해제되지 않습니다.\\n적 행동 후 자신의 <color=#28d9ed>공격력</color>이 증가한 상태라면 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 증가시킵니다.\\n자신 행동 종료 후 수속성이 아닌 대상의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>10%</color> 감소시킵니다.",
+        "zh": "始终获得<color=#28d9ed>强化促进</color>。此效果无法被解除。\\n敌人行动后，若自身<color=#28d9ed>攻击力</color>处于提升状态，则使自身<color=#28d9ed>行动值</color>提升<color=#28d9ed>10%</color>。\\n自身行动结束后，使非水属性目标的<color=#28d9ed>行动值</color>降低<color=#28d9ed>10%</color>。"
+      },
+      "icon": "MT_Passive_1_Fire",
+      "buff": [
+        "BT_STAT_BUFF_ENHANCE_IR",
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dimensional Rift",
+        "jp": "次元の亀裂",
+        "kr": "차원의 균열",
+        "zh": "次元裂缝"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) Boss monsters' Priority increases upon entering Berserk. Additional effects are added based on rank as follows.\\n\\n<color=#ffd732>Applied from RANK D:</color> DMG dealt increases and DMG taken decreases for all attacks. The values increase as rank rises, maxing out at SSS. (Max 300%/200% respectively)\\n\\n<color=#ffd732>Applied from RANK B:</color> Final DMG and WG DMG taken from targets without elemental advantage decrease by <color=#28d9ed>70%/50%</color> respectively.\\n\\n<color=#ffd732>Applied from RANK S:</color> Increases own <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color> and decreases all enemies' <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color>.",
+        "jp": "(パッシブ効果) ボスモンスターは狂暴化突入後、行動ゲージが増加する。またランクに応じて以下の効果が追加される。\\n\\n<color=#ffd732>RANK D から適用：</color>すべての攻撃に対して与ダメージが増加し、受けるダメージが減少する。ランクが上がるほど数値が増加し、SSSで最大となる。（各最大300%/200%）\\n\\n<color=#ffd732>RANK B から適用：</color>有利な相性でない対象から受ける最終ダメージとWGダメージがそれぞれ<color=#28d9ed>70%/50%</color>減少する。\\n\\n<color=#ffd732>RANK S から適用：</color>自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>増加させ、敵全体の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>減少させる。",
+        "kr": "(패시브 효과) 보스 몬스터는 광폭화 진입 후 행동게이지가 증가합니다. 또한 랭크에 따라 아래 효과가 추가합니다.\\n\\n<color=#ffd732>RANK D 부터 적용:</color> 모든 공격에 대해 주는 피해가 증가하고 받는 피해가 감소합니다. 랭크가 오를수록 수치가 증가하여 SSS에서 최대가 됩니다.(각각 최대 300%/200%)\\n\\n<color=#ffd732>RANK B 부터 적용:</color> 유리한 상성이 아닌 대상에게 받는 최종 피해와 WG피해가 각각 <color=#28d9ed>70%/50%</color> 감소합니다.\\n\\n<color=#ffd732>RANK S 부터 적용:</color> 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 증가시키고 적 전체의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 감소시킵니다.",
+        "zh": "(被动效果) 首领怪物进入狂暴化后行动值提升。同时根据等级追加以下效果。\\n\\n<color=#ffd732>从RANK D开始适用：</color>所有攻击的造成伤害提升，受到伤害减少。等级越高数值越大，在SSS达到最大。（各最大300%/200%）\\n\\n<color=#ffd732>从RANK B开始适用：</color>受到非克制属性目标的最终伤害和WG伤害分别减少<color=#28d9ed>70%/50%</color>。\\n\\n<color=#ffd732>从RANK S开始适用：</color>使自身<color=#28d9ed>穿透力</color>增加<color=#28d9ed>30%</color>，使全体敌人<color=#28d9ed>穿透力</color>减少<color=#28d9ed>30%</color>。"
+      },
+      "icon": "MT_Passive_1_Singularity",
+      "buff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ],
+      "debuff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "jp": "狂暴化",
+        "kr": "광폭화",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state every time enemies take 7 actions.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color>: Deals DMG to all enemies, then grants self an irremovable Speed Increase/DMG Reduction effect for 1 turn and recovers WG by 10%.\\nEnemies killed by this skill cannot be Resurrected or Revived.",
+        "jp": "敵が7回行動するたびに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体にダメージを与えた後、自分に解除されないスピードUP/被ダメDOWN効果を1ターン付与し、WGを10%回復する。\\nこのスキルで倒れた敵は復活と蘇生ができなくなる。",
+        "kr": "적이 7회 행동할 때 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 피해를 입힌 후 자신에게 해제되지 않는 속도 증가/피해 감소 효과를 1턴 동안 부여하고 WG를 10% 회복합니다.\\n이 스킬로 사망한 적은 부활 및 소생이 불가능합니다.",
+        "zh": "敌人每行动7次进入<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>狂暴化冲入与必杀技</color>：对全体敌人造成伤害后，为自身附加无法解除的速度提升/受伤害降低效果持续1回合，并恢复10% WG。\\n被此技能击杀的敌人无法复活及复苏。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_STAT|ST_SPEED_IR"
+      ],
+      "debuff": [
+        "BT_SEALED_RESURRECTION"
+      ]
+    }
+  ]
+}
