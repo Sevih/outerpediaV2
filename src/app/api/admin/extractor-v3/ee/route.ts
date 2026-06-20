@@ -106,6 +106,7 @@ function findEEBuff2(buffsByID: Map<string, Row[]>, id: string, suffix = ''): Ro
 function findEEUpgradeBuff(buffsByID: Map<string, Row[]>, id: string): Row | undefined {
   return findEEBuff(buffsByID, id, '_CHANGE')
     ?? buffsByID.get(`BID_CEQUIP_${id}_ADD`)?.[0]
+    ?? buffsByID.get(`BID_CEQUIP_${id}_1_ADD`)?.[0]
 }
 
 function findEEUpgradeBuff2(buffsByID: Map<string, Row[]>, id: string): Row | undefined {

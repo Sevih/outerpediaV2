@@ -516,7 +516,7 @@
       {
         "type": "BT_STAT|ST_SPEED",
         "debuff": false,
-        "target": "MY_TEAM_HIGHEST_ATK"
+        "target": "MY_TEAM"
       },
       {
         "type": "BT_CALL_BACKUP_2",
@@ -1066,7 +1066,7 @@
       {
         "type": "BT_STAT|ST_COUNTER_RATE",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM_HIGHEST_ATK"
       },
       {
         "type": "BT_EXTEND_BUFF",
@@ -1560,7 +1560,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "ME"
+        "target": "MY_TEAM"
       }
     ]
   },
@@ -1866,13 +1866,13 @@
       {
         "type": "BT_STAT|ST_PIERCE_POWER_RATE",
         "debuff": false,
-        "target": "ME",
+        "target": "MY_TEAM",
         "burst": true
       },
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       }
     ],
     "s2": [
@@ -2045,7 +2045,7 @@
       {
         "type": "BT_AGGRO",
         "debuff": true,
-        "target": "ENEMY",
+        "target": "ENEMY_TEAM",
         "burst": true
       }
     ],
@@ -2099,7 +2099,7 @@
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY"
+        "target": "ENEMY_TEAM"
       },
       {
         "type": "BT_STAT|ST_ATK",
@@ -4036,7 +4036,7 @@
       {
         "type": "BT_COOL3_CHARGE",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": "ENEMY"
       },
       {
         "type": "BT_STAT|ST_DEF",
@@ -5027,7 +5027,7 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ME"
       },
       {
         "type": "BT_BARRIER",
@@ -6001,7 +6001,7 @@
       {
         "type": "BT_REMOVE_BUFF",
         "debuff": true,
-        "target": "ENEMY_SKILL_TARGET"
+        "target": "ENEMY"
       },
       {
         "type": "BT_FIXED_DAMAGE",
@@ -6509,12 +6509,12 @@
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": false,
-        "target": "MY_TEAM"
+        "target": "ENEMY_SKILL_TARGET"
       },
       {
         "type": "BT_ACTION_GAUGE",
         "debuff": true,
-        "target": "MY_TEAM"
+        "target": "ENEMY_SKILL_TARGET"
       }
     ],
     "s3": [
@@ -7127,7 +7127,7 @@
       {
         "type": "BT_REMOVE_DEBUFF",
         "debuff": false,
-        "target": "MY_TEAM_LOWEST_HP_RATE"
+        "target": "ME"
       },
       {
         "type": "BT_BARRIER",
