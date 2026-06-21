@@ -83,6 +83,13 @@ export default function UrdDarkGuide() {
             author: 'Sevih',
             label: 'Mero — Rank SSS++',
           },
+          {
+            platform: 'youtube',
+            id: '1--P5DZ2VZM',
+            title: 'Light team vs Urd (Dark Element) - Dimensional Singularity',
+            author: 'baba yaga',
+            label: 'Light Team',
+          },
         ]}
       />
     </GuideTemplate>

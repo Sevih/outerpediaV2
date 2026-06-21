@@ -4,6 +4,7 @@ import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -51,6 +52,19 @@ export default function PlanetPurificationUnitGuide() {
       ]} />
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={WATER_TITLE} entries={RECOMMENDED.water} />
+      <hr className="my-6 border-neutral-700" />
+      <MultiVideoEmbed
+        hashPrefix="planet-purification-unit-video"
+        videos={[
+          {
+            platform: 'youtube',
+            id: 'P3TJO_At4Z8',
+            title: 'Water Team - Dimensional Singularity KSAI | Outerplane',
+            author: 'baba yaga',
+            label: 'Water',
+          },
+        ]}
+      />
     </GuideTemplate>
   );
 }

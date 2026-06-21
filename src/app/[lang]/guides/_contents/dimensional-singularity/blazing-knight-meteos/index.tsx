@@ -105,6 +105,13 @@ export default function BlazingKnightMeteosGuide() {
             author: 'Sevih',
             label: 'Rank SSS++',
           },
+          {
+            platform: 'youtube',
+            id: '7FrEgI696Ww',
+            title: 'Dimensional Singularity Meteos - M.Skadi Team | Outerplane',
+            author: 'baba yaga',
+            label: 'M.Skadi',
+          },
         ]}
       />
     </GuideTemplate>
