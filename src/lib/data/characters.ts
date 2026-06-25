@@ -1,7 +1,9 @@
 import { join } from 'path';
 import { readJson } from './_json';
 import type { Character, CharacterIndexMap, CharacterListEntry, CharacterNameToIdMap, CharacterProfile, CharacterProsCons, CharacterSkin, CharacterStats, CharacterSynergies, CharacterVideo, NameAliases } from '@/types/character';
-import type { CharacterReco, RecoPresets } from '@/types/equipment';
+import type { CharacterReco, RecoPresets, StructuredCharacterReco, RecoGearStat } from '@/types/equipment';
+import { resolveRecoPresets } from '@/lib/data/reco';
+import { getWeapons, getAmulets, getArmorSets } from '@/lib/data/equipment';
 
 const CHARS_DIR = join(process.cwd(), 'data/character');
 const RECO_DIR = join(process.cwd(), 'data/reco');
@@ -80,6 +82,102 @@ export async function getCharacterReco(slug: string): Promise<CharacterReco | nu
 /** Get reco presets (shared talisman/set templates) */
 export async function getRecoPresets(): Promise<RecoPresets> {
   return readJson<RecoPresets>(join(RECO_DIR, '_presets.json'));
+}
+
+/**
+ * Outerpedia stat label → canonical engine stat key (the vocabulary the gear-solver uses).
+ * Sourced from the solver's `GAME_STAT` table (gear-solver/packages/core/src/stats.ts):
+ * each label maps through its game `ST_*` enum to the exact key the solver filters on.
+ */
+const STAT_KEY: Record<string, string> = {
+  'ATK': 'atk', 'ATK%': 'atkPct',
+  'HP': 'hp', 'HP%': 'hpPct',
+  'DEF': 'def', 'DEF%': 'defPct',
+  'CHC': 'critRate',          // ST_CRITICAL_RATE (game label CRC)
+  'CHD': 'critDmg',           // ST_CRITICAL_DMG_RATE
+  'SPD': 'spd',               // ST_SPEED
+  'EFF': 'eff',               // ST_BUFF_CHANCE
+  'RES': 'effRes',            // ST_BUFF_RESIST
+  'PEN%': 'pen',              // ST_PIERCE_POWER_RATE
+  'DMG UP%': 'dmgUp',         // ST_DMG_BOOST
+  'DMG RED%': 'dmgReduce',    // ST_DMG_REDUCE_RATE
+  'CDMG RED%': 'critDmgReduce', // ST_E_CRI_DMG_REDUCE
+};
+
+/** Map a display stat label to its canonical key, falling back to the raw label if unknown. */
+function toStatKey(label: string): string {
+  return STAT_KEY[label] ?? label;
+}
+
+/** Split a main-stat field like "PEN%/CHD" into its alternative canonical stat keys. */
+function parseMainStat(value: string | undefined): string[] {
+  if (!value) return [];
+  return value.split('/').map(s => s.trim()).filter(Boolean).map(toStatKey);
+}
+
+/** Parse a substat priority string ("ATK>CHC=EFF>CHD") into ordered tiers of tied canonical keys. */
+function parseSubstatPrio(value: string | undefined): string[][] | undefined {
+  if (!value) return undefined;
+  const tiers = value
+    .split('>')
+    .map(tier => tier.split('=').map(s => s.trim()).filter(Boolean).map(toStatKey))
+    .filter(tier => tier.length > 0);
+  return tiers.length > 0 ? tiers : undefined;
+}
+
+/**
+ * Get a character's recos by character ID, fully structured and aligned to the gear-solver's
+ * game vocabulary: weapons/amulets resolve to `itemId` (ItemTemplet.ID) + icon, sets to `setId`,
+ * and every stat label is mapped to its canonical engine key. Name→id joins run against the same
+ * extracted game data both projects share, so no string matching is left to the consumer.
+ */
+export async function getRecoStatPriorities(id: string): Promise<StructuredCharacterReco | null> {
+  let reco: CharacterReco;
+  try {
+    reco = await readJson<CharacterReco>(join(RECO_DIR, `${id}.json`));
+  } catch {
+    return null;
+  }
+
+  const presets = await getRecoPresets();
+  const resolved = resolveRecoPresets(reco, presets);
+
+  // Build name→game-id indexes once from the shared equipment dataset.
+  const [weapons, amulets, sets] = await Promise.all([getWeapons(), getAmulets(), getArmorSets()]);
+  const gearById = new Map<string, { itemId: number | null; effectIcon: string | null }>();
+  for (const g of [...weapons, ...amulets]) {
+    gearById.set(g.name, { itemId: g.id != null ? Number(g.id) : null, effectIcon: g.effect_icon });
+  }
+  // sets.json names carry a trailing " Set"/" set" suffix; recos use the short name.
+  const setIdByName = new Map<string, string>();
+  for (const s of sets) {
+    setIdByName.set(s.name, s.id);
+    setIdByName.set(s.name.replace(/\s+set$/i, ''), s.id);
+  }
+
+  const resolveGear = (entry: { name: string; mainStat?: string }): RecoGearStat => {
+    const match = gearById.get(entry.name);
+    return {
+      name: entry.name,
+      itemId: match?.itemId ?? null,
+      effectIcon: match?.effectIcon ?? null,
+      mainStat: parseMainStat(entry.mainStat),
+    };
+  };
+
+  const builds: StructuredCharacterReco['builds'] = {};
+  for (const [buildName, build] of Object.entries(resolved)) {
+    builds[buildName] = {
+      Weapon: build.Weapon?.map(resolveGear),
+      Amulet: build.Amulet?.map(resolveGear),
+      Set: build.Set?.map(combo =>
+        combo.map(s => ({ name: s.name, setId: setIdByName.get(s.name) ?? null, count: s.count }))
+      ),
+      SubstatPrio: parseSubstatPrio(build.SubstatPrio),
+    };
+  }
+
+  return { id, builds };
 }
 
 /** Get a character's profile (bio, story) by ID */

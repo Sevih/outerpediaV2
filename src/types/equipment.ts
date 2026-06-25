@@ -59,6 +59,8 @@ export type Talisman = WithLocalizedFields<
 // ── Armor Set ──
 
 type BaseArmorSet = {
+  /** Set group id (game) — matches the solver's `setId` / `armorSetId`. */
+  id: string;
   name: string;
   rarity: ItemRarity;
   set_icon: string;
@@ -163,4 +165,42 @@ export type RecoPresets = {
   talismans: Record<string, string[]>;
   sets: Record<string, RecoSetEntry[]>;
   substats: Record<string, string>;
+};
+
+/** A recommended gear piece, resolved to the shared game identifiers the solver consumes. */
+export type RecoGearStat = {
+  name: string;
+  /** ItemTemplet.ID — matches the solver's `GearPiece.itemId`. Null if the name didn't resolve. */
+  itemId: number | null;
+  /** Icon filename for display. Null if unresolved. */
+  effectIcon: string | null;
+  /** Canonical engine stat keys (atkPct, pen, critDmg…), alternatives split out. */
+  mainStat: string[];
+};
+
+/** A recommended set, resolved to the shared game set id the solver consumes. */
+export type RecoSetStat = {
+  name: string;
+  /** sets.json id — matches the solver's `setId` / `armorSetId`. Null if unresolved. */
+  setId: string | null;
+  count: number;
+};
+
+/**
+ * A single build, fully structured and aligned to the solver's game vocabulary.
+ * - Weapon/Amulet: recommended gear pieces with itemId, icon and canonical main stats.
+ * - Set: each entry is a set combo (one or two sets with their required count + setId).
+ * - SubstatPrio: ordered tiers of canonical stat keys, each tier a list of tied stats.
+ */
+export type StructuredRecoBuild = {
+  Weapon?: RecoGearStat[];
+  Amulet?: RecoGearStat[];
+  Set?: RecoSetStat[][];
+  SubstatPrio?: string[][];
+};
+
+/** Structured recos for a character, keyed by build name. */
+export type StructuredCharacterReco = {
+  id: string;
+  builds: Record<string, StructuredRecoBuild>;
 };
