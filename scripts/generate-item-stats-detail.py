@@ -403,7 +403,9 @@ def _is_permille(buff):
     if '_RATE' in st or '_DMG' in st:
         return True
     t = buff.get('Type') or ''
-    return t == 'BT_ADDITIVE_TURN' or '_ENHANCE' in t
+    # Counterattack triggers (BT_RUN_FIRST_SKILL_*) store their activation chance in
+    # Value as permille (1000 = 100%, 300 = 30%) with StatType/ApplyingType = NONE.
+    return t == 'BT_ADDITIVE_TURN' or '_ENHANCE' in t or 'RUN_FIRST_SKILL' in t
 
 
 def _num(x):

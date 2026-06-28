@@ -54,7 +54,9 @@ function isPermille(buff: Row): boolean {
   const st = buff.StatType ?? ''
   if (st.includes('_RATE') || st.includes('_DMG')) return true
   const t = buff.Type ?? ''
-  if (t === 'BT_ADDITIVE_TURN' || t.includes('_ENHANCE')) return true
+  // Counterattack triggers (BT_RUN_FIRST_SKILL_*) store their activation chance in
+  // Value as permille (1000 = 100%, 300 = 30%) with StatType/ApplyingType = NONE.
+  if (t === 'BT_ADDITIVE_TURN' || t.includes('_ENHANCE') || t.includes('RUN_FIRST_SKILL')) return true
   return false
 }
 
