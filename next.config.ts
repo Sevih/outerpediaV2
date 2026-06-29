@@ -47,6 +47,10 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // Build autonome pour Docker : génère .next/standalone (server.js + node_modules
+  // minimal), ce qui donne une image de prod légère.
+  output: 'standalone',
+
   allowedDevOrigins: [
     'outerpedia.local',
     '*.outerpedia.local',

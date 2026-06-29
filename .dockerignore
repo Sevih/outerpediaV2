@@ -1,0 +1,41 @@
+# Contexte de build Docker : on exclut tout ce qui est inutile ou lourd.
+# CRITIQUE : sans ça, le .git de 3,4 Go et node_modules seraient envoyés au
+# moteur Docker à chaque build (très lent).
+
+# Historique git (énorme) et meta
+.git
+.gitattributes
+
+# Dépendances et sorties de build (régénérées dans l'image)
+node_modules
+.next
+out
+build
+*.tsbuildinfo
+next-env.d.ts
+
+# Datamine : sources lourdes non committées, inutiles au build (skip gracieux)
+datamine
+
+# Fichiers de prod historiques (pm2, ancien .env) — remplacés par notre stack
+serveurprodFiles
+
+# Secrets — ne JAMAIS embarquer dans l'image
+.env
+.env.*
+
+# Outils / éditeurs / agents
+.vscode
+.claude
+.claire
+.clone
+.design
+.idea
+
+# Divers
+tmp
+*.log
+npm-debug.log*
+Dockerfile
+.dockerignore
+README.md
