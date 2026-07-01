@@ -188,5 +188,43 @@
     "Talisman": [
       "$v"
     ]
+  },
+    "DS - Lifesteal": {
+    "Weapon": [
+      {
+        "name": "Phantasm Necrosis",
+        "mainStat": "HP%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Death's Hold",
+        "mainStat": "PEN%/HP%"
+      },
+      {
+        "name": "Briareos's Ambition [Striker]",
+        "mainStat": "PEN%/HP%"
+      }
+    ],
+    "Set": [
+      [
+        { "name": "Lifesteal", "count": 2 },
+        { "name": "Life", "count": 2 }
+      ],
+      [
+        { "name": "Lifesteal", "count": 2 },
+        { "name": "Penetration", "count": 2 }
+      ]
+    ],
+    "SubstatPrio": "CHC>HP>CHD>DMG UP%>DEF=DMG RED%",
+    "Note": "No speed. +15 effects \nWeapon/Accessory: {S/DMG UP%} in Dimensional Singularity\n Armor: {S/DMG RED%} in Dimensional Singularity (at least 3x).",
+    "Note_jp": "スピードなし。+15効果 \n武器・アクセサリー：次元特異点の{S/DMG UP%}\n 防具：次元特異点の{S/DMG RED%}（最低3つ）。",
+    "Note_kr": "속도 없음. +15 효과 \n무기/장신구: 차원 특이점 {S/DMG UP%}\n 방어구: 차원 특이점 {S/DMG RED%} (최소 3개).",
+    "Note_zh": "无速度。+15效果 \n武器/饰品：次元奇点{S/DMG UP%}\n 防具：次元奇点{S/DMG RED%}（至少3件）。",
+    "Note_fr": "Pas de vitesse. Effets +15 \nArme/Accessoire : {S/DMG UP%} en Dimensional Singularity\n Armure : {S/DMG RED%} en Dimensional Singularity (au moins 3x).",
+    "Talisman": [
+      "Tactician's Charm",
+      "Vanguard's Charm"
+    ]
   }
 }
