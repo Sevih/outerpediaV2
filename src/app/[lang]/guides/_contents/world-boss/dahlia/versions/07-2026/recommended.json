@@ -67,6 +67,42 @@
   "phase2": [
     {
       "names": [
+        "Mystic Sage Ame"
+      ],
+      "reason": {
+        "en": "Strong CP generation and teamwide {B/BT_ACTION_GAUGE}.",
+        "jp": "強力なCP生成と全体{B/BT_ACTION_GAUGE}。",
+        "kr": "강력한 CP 생성과 전체 {B/BT_ACTION_GAUGE}.",
+        "zh": "强力的CP生成和全队{B/BT_ACTION_GAUGE}。",
+        "fr": "Forte génération de CP et {B/BT_ACTION_GAUGE} pour toute l'équipe."
+      }
+    },
+    {
+      "names": [
+        "Anarky"
+      ],
+      "reason": {
+        "en": "Provides teamwide {B/BT_BARRIER}, {B/BT_COUNTERATTACK}, and ultimate {B/BT_COOL_CHARGE}.",
+        "jp": "全体{B/BT_BARRIER}、{B/BT_COUNTERATTACK}、必殺技の{B/BT_COOL_CHARGE}を提供。",
+        "kr": "전체 {B/BT_BARRIER}, {B/BT_COUNTERATTACK}, 궁극기 {B/BT_COOL_CHARGE}를 제공.",
+        "zh": "提供全队{B/BT_BARRIER}、{B/BT_COUNTERATTACK}和奥义{B/BT_COOL_CHARGE}。",
+        "fr": "Fournit {B/BT_BARRIER} pour toute l'équipe, {B/BT_COUNTERATTACK} et {B/BT_COOL_CHARGE} de l'ultime."
+      }
+    },
+    {
+      "names": [
+        "Gnosis Beth"
+      ],
+      "reason": {
+        "en": "Stacks {D/ETERNAL_BLEEDING} on all enemies and detonates it for heavy damage, while granting {B/BT_STEALTHED} to allies.",
+        "jp": "全体に{D/ETERNAL_BLEEDING}を蓄積して起爆し大ダメージを与え、味方に{B/BT_STEALTHED}を付与。",
+        "kr": "모든 적에게 {D/ETERNAL_BLEEDING}를 축적한 뒤 폭발시켜 큰 피해를 주고, 아군에게 {B/BT_STEALTHED}를 부여.",
+        "zh": "在所有敌人身上叠加{D/ETERNAL_BLEEDING}并引爆造成大量伤害，同时为队友提供{B/BT_STEALTHED}。",
+        "fr": "Empile {D/ETERNAL_BLEEDING} sur tous les ennemis et le détone pour de lourds dégâts, tout en accordant {B/BT_STEALTHED} à l'équipe."
+      }
+    },
+    {
+      "names": [
         "Akari"
       ],
       "reason": {
@@ -91,14 +127,15 @@
     },
     {
       "names": [
-        "Tamara"
+        "Tamara",
+        "Valentine"
       ],
       "reason": {
-        "en": "Provides {B/BT_CALL_BACKUP}, {B/BT_STAT|ST_CRITICAL_RATE}, and {D/BT_MARKING}.",
-        "jp": "{B/BT_CALL_BACKUP}、{B/BT_STAT|ST_CRITICAL_RATE}、{D/BT_MARKING}を提供。",
-        "kr": "{B/BT_CALL_BACKUP}, {B/BT_STAT|ST_CRITICAL_RATE}, {D/BT_MARKING}를 제공.",
-        "zh": "提供{B/BT_CALL_BACKUP}、{B/BT_STAT|ST_CRITICAL_RATE}和{D/BT_MARKING}。",
-        "fr": "Fournit {B/BT_CALL_BACKUP}, {B/BT_STAT|ST_CRITICAL_RATE} et {D/BT_MARKING}."
+        "en": "Provides {B/BT_CALL_BACKUP} and {B/BT_STAT|ST_CRITICAL_RATE}.",
+        "jp": "{B/BT_CALL_BACKUP}と{B/BT_STAT|ST_CRITICAL_RATE}を提供。",
+        "kr": "{B/BT_CALL_BACKUP}와 {B/BT_STAT|ST_CRITICAL_RATE}를 제공.",
+        "zh": "提供{B/BT_CALL_BACKUP}和{B/BT_STAT|ST_CRITICAL_RATE}。",
+        "fr": "Fournit {B/BT_CALL_BACKUP} et {B/BT_STAT|ST_CRITICAL_RATE}."
       }
     },
     {
