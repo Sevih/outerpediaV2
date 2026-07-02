@@ -32,12 +32,12 @@ const GENERAL_TITLE: LangMap = {
   fr: 'Strategie equipe generale',
 };
 
-const GBETH_TITLE: LangMap = {
-  en: 'GBeth team strategy',
-  jp: 'GBeth編成戦略',
-  kr: 'GBeth 팀 전략',
-  zh: 'GBeth队伍策略',
-  fr: 'Strategie equipe GBeth',
+const MSKADI_TITLE: LangMap = {
+  en: 'MSkadi team strategy',
+  jp: 'MSkadi編成戦略',
+  kr: 'MSkadi 팀 전략',
+  zh: 'MSkadi队伍策略',
+  fr: 'Strategie equipe MSkadi',
 };
 
 export default function FrozenDragonPhantasmHarshnaGuide() {
@@ -61,7 +61,7 @@ export default function FrozenDragonPhantasmHarshnaGuide() {
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={GENERAL_TITLE} entries={RECOMMENDED.strategy} />
       <hr className="my-6 border-neutral-700" />
-      <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
+      <RecommendedCharacterList title={MSKADI_TITLE} entries={RECOMMENDED.mskadi} />
       <hr className="my-6 border-neutral-700" />
       <MultiVideoEmbed
               hashPrefix="frozen-dragon-of-phantasm-harshna-video"
