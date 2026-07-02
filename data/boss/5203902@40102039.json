@@ -44,16 +44,16 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Increases all allies' <color=#28d9ed>Attack</color>, <color=#28d9ed>Defense</color>, and <color=#28d9ed>Speed</color> at the start of the caster's turn.",
-        "jp": "自分のターンが来るたびに、味方全体の<color=#28d9ed>攻撃力</color>、<color=#28d9ed>防御力</color><color=#28d9ed>2ターン</color>間UPさせ、味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>UPさせる。",
+        "en": "Every own turn, increases all allies' <color=#28d9ed>Attack</color> and <color=#28d9ed>Defense</color> for <color=#28d9ed>2 turns</color>, then increases all allies' <color=#28d9ed>Priority</color> by <color=#28d9ed>30%</color>.",
+        "jp": "自分のターンごとに味方全体の<color=#28d9ed>攻撃力</color>、<color=#28d9ed>防御力</color>を<color=#28d9ed>2ターン</color>の間増加させた後、味方全体の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>30%</color>増加させる。",
         "kr": "자신의 턴 마다 아군 전체의 <color=#28d9ed>공격력</color>, <color=#28d9ed>방어력</color>을 <color=#28d9ed>2턴</color> 동안 증가시킨 뒤, 아군 전체의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>30%</color>증가시킵니다.",
-        "zh": "每到自身回合时，使全体友军的<color=#28d9ed>攻击力</color>和<color=#28d9ed>防御力</color>提升，持续<color=#28d9ed>2回合</color>，并使全体友军的<color=#28d9ed>行动值</color>提升<color=#28d9ed>30%</color>。"
+        "zh": "自身每个回合，使我方全体<color=#28d9ed>攻击力</color>、<color=#28d9ed>防御力</color>提升<color=#28d9ed>2回合</color>后，使我方全体<color=#28d9ed>行动值</color>增加<color=#28d9ed>30%</color>。"
       },
       "icon": "MT_Attack_Magic_1_Dark",
       "buff": [
         "BT_STAT|ST_ATK",
         "BT_STAT|ST_DEF",
-        "BT_STAT|ST_SPEED"
+        "BT_ACTION_GAUGE"
       ]
     },
     {

@@ -44,7 +44,7 @@
       },
       "type": "SKT_FIRST",
       "description": {
-        "en": "Attacks an enemy and increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Crit Rate</color>.",
+        "en": "Attacks an enemy and increases own <color=#28d9ed>Priority</color> by <color=#28d9ed>20%</color>.\\nDamage dealt increases proportional to the caster's <color=#28d9ed>Crit Rate</color>. (up to 50%).",
         "jp": "敵単体にダメージを与え、自分の<color=#28d9ed>行動ゲージ</color>を<color=#28d9ed>20%</color>UPさせる。\\nこのスキルは自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。",
         "kr": "적을 공격하고 자신의 <color=#28d9ed>행동 게이지</color>를 <color=#28d9ed>20%</color> 증가시킵니다.\\n이 스킬은 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%)",
         "zh": "攻击敌人，并使自身的<color=#28d9ed>行动值</color>增加<color=#28d9ed>20%</color>。\\n该技能伤害随自身的<color=#28d9ed>暴击率</color>提升(最大50%)。"
@@ -84,10 +84,10 @@
       },
       "type": "SKT_ULTIMATE",
       "description": {
-        "en": "Dispels all buff effects from the target and attacks an enemy. After attacking, grants <color=#28d9ed>Regina's World</color> <color=#28d9ed>1 time(s)</color>. This effect decreases by 1 count when hit.\\nIgnores <color=#28d9ed>30%</color> of the target's Defense, and damage dealt increases proportional to the caster's <color=#28d9ed>Critical Hit Chance</color>. The dispelling effect ignores the target's Resilience.",
+        "en": "Dispels all buff effects from the target and attacks an enemy. After attacking, grants <color=#28d9ed>Regina's World</color> <color=#28d9ed>1 time(s)</color>. This effect decreases by 1 count when hit.\\nIgnores <color=#28d9ed>30%</color> of the target's Defense, and damage dealt increases proportional to the caster's <color=#28d9ed>Critical Hit Chance</color>. (up to 50%) The dispelling effect ignores the target's Resilience.",
         "jp": "対象の強化効果をすべて解除し、敵単体にダメージを与える。攻撃後、<color=#28d9ed>【レジーナワールド】</color>を<color=#28d9ed>1回</color>発生させる。\\nこの効果は被弾時に回数が減少する。\\nこのスキルは対象の防御力を<color=#28d9ed>30%</color>無視し、自分の<color=#28d9ed>会心率</color>が高いほどダメージがUPする(最大50%)。\\n強化解除効果は対象の効果抵抗を無視する。",
         "kr": "대상의 강화 효과를 모두 해제하고 적을 공격합니다. 공격 후 <color=#28d9ed>레지나의 세계</color>를 <color=#28d9ed>1회</color> 발생시킵니다. 이 효과는 피격 시 횟수가 차감됩니다.\\n이 스킬은 대상의 방어력을 <color=#28d9ed>30%</color>무시하며, 자신의 <color=#28d9ed>치명 확률</color>이 높을수록 피해가 증가합니다.(최대 50%) 강화 해제 효과는 대상의 효과 저항을 무시합니다.",
-        "zh": "解除目标所有强化效果并攻击敌人。攻击后，生成<color=#28d9ed>1次</color><color=#28d9ed>蕾吉娜的世界</color>。该效果受到攻击时次数减少。\\n该技能无视目标<color=#28d9ed>30%</color>的防御力，且伤害随自身的<color=#28d9ed>暴击率</color>提升。解除强化效果无视目标的效果抵抗。"
+        "zh": "解除目标所有强化效果并攻击敌人。攻击后，生成<color=#28d9ed>1次</color><color=#28d9ed>蕾吉娜的世界</color>。该效果受到攻击时次数减少。\\n该技能无视目标<color=#28d9ed>30%</color>的防御力，且伤害随自身的<color=#28d9ed>暴击率</color>提升(最大50%)。解除强化效果无视目标的效果抵抗。"
       },
       "icon": "Skill_Ultimate_2000067",
       "buff": [

@@ -25541,7 +25541,7 @@
     "StackCount": "1",
     "IsIDOverlap": "False",
     "IsTypeOverlap": "False",
-    "BuffDebuffType": "DEBUFF_IGNORE_ALL",
+    "BuffDebuffType": "NEUTRAL",
     "IsIgnoreInterruption": "True",
     "IsEquip": "True",
     "IsEquipBuff": "False",
@@ -25572,7 +25572,7 @@
     "StackCount": "1",
     "IsIDOverlap": "False",
     "IsTypeOverlap": "False",
-    "BuffDebuffType": "DEBUFF_IGNORE_ALL",
+    "BuffDebuffType": "NEUTRAL",
     "IsIgnoreInterruption": "True",
     "IsEquip": "True",
     "IsEquipBuff": "False",
@@ -25603,7 +25603,7 @@
     "StackCount": "1",
     "IsIDOverlap": "False",
     "IsTypeOverlap": "False",
-    "BuffDebuffType": "DEBUFF_IGNORE_ALL",
+    "BuffDebuffType": "NEUTRAL",
     "IsIgnoreInterruption": "True",
     "IsEquip": "True",
     "IsEquipBuff": "False",
@@ -25634,7 +25634,7 @@
     "StackCount": "1",
     "IsIDOverlap": "False",
     "IsTypeOverlap": "False",
-    "BuffDebuffType": "DEBUFF_IGNORE_ALL",
+    "BuffDebuffType": "NEUTRAL",
     "IsIgnoreInterruption": "True",
     "IsEquip": "True",
     "IsEquipBuff": "False",
@@ -25665,7 +25665,7 @@
     "StackCount": "1",
     "IsIDOverlap": "False",
     "IsTypeOverlap": "False",
-    "BuffDebuffType": "DEBUFF_IGNORE_ALL",
+    "BuffDebuffType": "NEUTRAL",
     "IsIgnoreInterruption": "True",
     "IsEquip": "True",
     "IsEquipBuff": "False",
@@ -131893,7 +131893,7 @@
     "BuffCCType": "NONE",
     "StatType": "ST_NONE",
     "ApplyingType": "OAT_ADD",
-    "Value": "3",
+    "Value": "4",
     "TargetSkillType": "SKT_ULTIMATE",
     "BuffCreateType": "PASSIVE",
     "BuffConditionType": "NONE",
@@ -131923,7 +131923,7 @@
     "BuffCCType": "NONE",
     "StatType": "ST_NONE",
     "ApplyingType": "OAT_ADD",
-    "Value": "4",
+    "Value": "5",
     "TargetSkillType": "SKT_ULTIMATE",
     "BuffCreateType": "PASSIVE",
     "BuffConditionType": "NONE",
@@ -326620,8 +326620,8 @@
     "TargetType": "ME",
     "CreateRate": "1000",
     "StackCount": "1",
-    "IsIDOverlap": "False",
-    "IsTypeOverlap": "False",
+    "IsIDOverlap": "True",
+    "IsTypeOverlap": "True",
     "BuffDebuffType": "BUFF",
     "IsIgnoreInterruption": "True",
     "IsEquip": "False",
@@ -326748,8 +326748,8 @@
     "TargetType": "ME",
     "CreateRate": "1000",
     "StackCount": "1",
-    "IsIDOverlap": "False",
-    "IsTypeOverlap": "False",
+    "IsIDOverlap": "True",
+    "IsTypeOverlap": "True",
     "BuffDebuffType": "BUFF",
     "IsIgnoreInterruption": "True",
     "IsEquip": "False",
@@ -326871,8 +326871,8 @@
     "TargetType": "ME",
     "CreateRate": "1000",
     "StackCount": "1",
-    "IsIDOverlap": "False",
-    "IsTypeOverlap": "False",
+    "IsIDOverlap": "True",
+    "IsTypeOverlap": "True",
     "BuffDebuffType": "BUFF",
     "IsIgnoreInterruption": "True",
     "IsEquip": "False",
@@ -326961,8 +326961,8 @@
     "TargetType": "ME",
     "CreateRate": "1000",
     "StackCount": "1",
-    "IsIDOverlap": "False",
-    "IsTypeOverlap": "False",
+    "IsIDOverlap": "True",
+    "IsTypeOverlap": "True",
     "BuffDebuffType": "BUFF",
     "IsIgnoreInterruption": "True",
     "IsEquip": "False",
@@ -327015,6 +327015,96 @@
   },
   {
     "ID": "10287",
+    "BuffID": "RealTime_Field_Group_M_01",
+    "Level": "1",
+    "Type": "BT_DMG",
+    "TargetType": "ME",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "True",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_NONE",
+    "ApplyingType": "OAT_RATE",
+    "Value": "-300",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "PASSIVE",
+    "BuffConditionType": "NONE",
+    "IsLastCheck": "True",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ULTIMATE",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10288",
+    "BuffID": "RealTime_Field_Group_M_02",
+    "Level": "1",
+    "Type": "BT_STAT_PREMIUM",
+    "TargetType": "ME",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "True",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_DMG_REDUCE_RATE",
+    "ApplyingType": "OAT_ADD",
+    "Value": "300",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "PASSIVE",
+    "BuffConditionType": "NONE",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10289",
+    "BuffID": "RealTime_Field_Group_M_03",
+    "Level": "1",
+    "Type": "BT_ENHANCE_ALL",
+    "TargetType": "ME",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "True",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_NONE",
+    "ApplyingType": "OAT_RATE",
+    "Value": "-300",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "PASSIVE",
+    "BuffConditionType": "NONE",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10290",
     "BuffID": "Singularity_Passive_AntiCurse",
     "Level": "1",
     "Type": "BT_DOT_CURSE_CAP",
@@ -327044,7 +327134,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10288",
+    "ID": "10291",
     "BuffID": "Singularity_Passive_AntiTureDmg",
     "Level": "1",
     "Type": "BT_REVERSE_HEAL_CAP",
@@ -327074,7 +327164,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10289",
+    "ID": "10292",
     "BuffID": "Singularity_Rage_Action_guage",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -327105,7 +327195,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10290",
+    "ID": "10293",
     "BuffID": "Singularity_Passive_AntiTureDmg_2",
     "Level": "1",
     "Type": "BT_REVERSE_HEAL_CAP",
@@ -327135,7 +327225,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10291",
+    "ID": "10294",
     "BuffID": "Singularity_Passive_Normal_1_1",
     "Level": "1",
     "Type": "BT_DMG_REDUCE_FINAL",
@@ -327165,7 +327255,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10292",
+    "ID": "10295",
     "BuffID": "Singularity_Passive_Normal_1_2",
     "Level": "1",
     "Type": "BT_DMG_REDUCE_FINAL",
@@ -327195,7 +327285,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10293",
+    "ID": "10296",
     "BuffID": "Singularity_Passive_Normal_2_1",
     "Level": "1",
     "Type": "BT_WG_DMG_REDUCE",
@@ -327225,7 +327315,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10294",
+    "ID": "10297",
     "BuffID": "Singularity_Passive_Normal_2_2",
     "Level": "1",
     "Type": "BT_WG_DMG_REDUCE",
@@ -327255,7 +327345,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10295",
+    "ID": "10298",
     "BuffID": "Singularity_Passive_Normal_3_1",
     "Level": "1",
     "Type": "BT_DMG",
@@ -327285,7 +327375,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10296",
+    "ID": "10299",
     "BuffID": "Singularity_Passive_Normal_3_2",
     "Level": "1",
     "Type": "BT_DMG",
@@ -327315,7 +327405,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10297",
+    "ID": "10300",
     "BuffID": "Singularity_Pasive_S_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -327347,7 +327437,7 @@
     "ToolTipID": "1008"
   },
   {
-    "ID": "10298",
+    "ID": "10301",
     "BuffID": "Singularity_Pasive_S_2",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -327378,7 +327468,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10299",
+    "ID": "10302",
     "BuffID": "Singularity_Pasive_S_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -327410,7 +327500,7 @@
     "ToolTipID": "1019"
   },
   {
-    "ID": "10300",
+    "ID": "10303",
     "BuffID": "Singularity_Passive_Bel_SS_1",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -327441,7 +327531,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10301",
+    "ID": "10304",
     "BuffID": "Singularity_Passive_Bel_SS_2",
     "Level": "1",
     "Type": "BT_REMOVE_DEBUFF",
@@ -327473,7 +327563,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10302",
+    "ID": "10305",
     "BuffID": "Singularity_Passive_Bel_B_1",
     "Level": "1",
     "Type": "BT_DOT_BURN",
@@ -327506,7 +327596,7 @@
     "ToolTipID": "1"
   },
   {
-    "ID": "10303",
+    "ID": "10306",
     "BuffID": "Singularity_Passive_Bel_B_2",
     "Level": "1",
     "Type": "BT_DMG",
@@ -327537,7 +327627,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10304",
+    "ID": "10307",
     "BuffID": "Singularity_Mette_SKILL01_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -327569,7 +327659,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10305",
+    "ID": "10308",
     "BuffID": "Singularity_Passive_Mete_A_1",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -327600,7 +327690,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10306",
+    "ID": "10309",
     "BuffID": "Singularity_Passive_Mete_A_2",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -327631,7 +327721,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10307",
+    "ID": "10310",
     "BuffID": "Singularity_HS_SKILL01_1_1",
     "Level": "1",
     "Type": "BT_REMOVE_DEBUFF",
@@ -327663,7 +327753,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10308",
+    "ID": "10311",
     "BuffID": "Singularity_HS_SKILL01_1_2",
     "Level": "1",
     "Type": "BT_REMOVE_DEBUFF",
@@ -327695,7 +327785,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10309",
+    "ID": "10312",
     "BuffID": "Singularity_HS_SKILL01_1_3",
     "Level": "1",
     "Type": "BT_REMOVE_DEBUFF",
@@ -327727,7 +327817,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10310",
+    "ID": "10313",
     "BuffID": "Singularity_HS_SKILL01_1_4",
     "Level": "1",
     "Type": "BT_REMOVE_DEBUFF",
@@ -327759,7 +327849,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10311",
+    "ID": "10314",
     "BuffID": "Singularity_HS_SKILL02_1",
     "Level": "1",
     "Type": "BT_REMOVE_DEBUFF",
@@ -327790,7 +327880,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10312",
+    "ID": "10315",
     "BuffID": "Singularity_HS_SKILL02_2",
     "Level": "1",
     "Type": "BT_REMOVE_BUFF",
@@ -327822,7 +327912,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10313",
+    "ID": "10316",
     "BuffID": "Singularity_HS_SKILL03_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -327856,7 +327946,7 @@
     "ToolTipID": "11"
   },
   {
-    "ID": "10314",
+    "ID": "10317",
     "BuffID": "Singularity_HS_SKILL03_2",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -327887,7 +327977,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10315",
+    "ID": "10318",
     "BuffID": "Singularity_Passive_HS_B_1",
     "Level": "1",
     "Type": "BT_WG_DMG_REDUCE",
@@ -327918,7 +328008,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10316",
+    "ID": "10319",
     "BuffID": "Singularity_Passive_HS_B_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -327949,7 +328039,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10317",
+    "ID": "10320",
     "BuffID": "Singularity_Passive_HS_A_1",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -327981,7 +328071,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10318",
+    "ID": "10321",
     "BuffID": "Singularity_Passive_HS_A_2",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -328012,7 +328102,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10319",
+    "ID": "10322",
     "BuffID": "Singularity_SP_SKILL01_1",
     "Level": "1",
     "Type": "BT_EXTEND_BUFF",
@@ -328043,7 +328133,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10320",
+    "ID": "10323",
     "BuffID": "Singularity_SP_SKILL02_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -328077,7 +328167,7 @@
     "ToolTipID": "7"
   },
   {
-    "ID": "10321",
+    "ID": "10324",
     "BuffID": "Singularity_SP_SKILL02_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -328111,7 +328201,7 @@
     "ToolTipID": "15"
   },
   {
-    "ID": "10322",
+    "ID": "10325",
     "BuffID": "Singularity_SP_SKILL02_3",
     "Level": "1",
     "Type": "BT_EXTEND_BUFF",
@@ -328143,7 +328233,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10323",
+    "ID": "10326",
     "BuffID": "Singularity_SP_SKILL03_1",
     "Level": "1",
     "Type": "BT_INVINCIBLE",
@@ -328178,7 +328268,7 @@
     "ToolTipID": "27"
   },
   {
-    "ID": "10324",
+    "ID": "10327",
     "BuffID": "Singularity_Passive_SP_B_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -328209,7 +328299,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10325",
+    "ID": "10328",
     "BuffID": "Singularity_Passive_SP_B_2",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -328240,7 +328330,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10326",
+    "ID": "10329",
     "BuffID": "Singularity_Passive_SP_A_1",
     "Level": "1",
     "Type": "BT_DMG",
@@ -328271,7 +328361,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10327",
+    "ID": "10330",
     "BuffID": "Singularity_Passive_SP_A_2",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -328303,7 +328393,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10328",
+    "ID": "10331",
     "BuffID": "Singularity_SPIDER_SKILL01_1_1",
     "Level": "1",
     "Type": "BT_WG_HEAL",
@@ -328334,7 +328424,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10329",
+    "ID": "10332",
     "BuffID": "Singularity_SPIDER_SKILL01_1_2",
     "Level": "1",
     "Type": "BT_WG_HEAL",
@@ -328365,7 +328455,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10330",
+    "ID": "10333",
     "BuffID": "Singularity_SPIDER_SKILL01_1_3",
     "Level": "1",
     "Type": "BT_WG_HEAL",
@@ -328396,7 +328486,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10331",
+    "ID": "10334",
     "BuffID": "Singularity_SPIDER_SKILL01_1_4",
     "Level": "1",
     "Type": "BT_WG_HEAL",
@@ -328427,7 +328517,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10332",
+    "ID": "10335",
     "BuffID": "Singularity_SPIDER_SKILL01_1_5",
     "Level": "1",
     "Type": "BT_DOT_POISON",
@@ -328461,7 +328551,7 @@
     "ToolTipID": "1004"
   },
   {
-    "ID": "10333",
+    "ID": "10336",
     "BuffID": "Singularity_SPIDER_SKILL01_1_6",
     "Level": "1",
     "Type": "BT_DOT_POISON",
@@ -328495,7 +328585,7 @@
     "ToolTipID": "1004"
   },
   {
-    "ID": "10334",
+    "ID": "10337",
     "BuffID": "Singularity_SPIDER_SKILL01_1_7",
     "Level": "1",
     "Type": "BT_DOT_POISON",
@@ -328529,7 +328619,7 @@
     "ToolTipID": "1004"
   },
   {
-    "ID": "10335",
+    "ID": "10338",
     "BuffID": "Singularity_SPIDER_SKILL01_1_8",
     "Level": "1",
     "Type": "BT_DOT_POISON",
@@ -328563,7 +328653,7 @@
     "ToolTipID": "1004"
   },
   {
-    "ID": "10336",
+    "ID": "10339",
     "BuffID": "Singularity_SPIDER_SKILL02_1",
     "Level": "1",
     "Type": "BT_DMG",
@@ -328594,7 +328684,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10337",
+    "ID": "10340",
     "BuffID": "Singularity_SPIDER_SKILL03_1",
     "Level": "1",
     "Type": "BT_DOT_POISON",
@@ -328627,7 +328717,7 @@
     "ToolTipID": "4"
   },
   {
-    "ID": "10338",
+    "ID": "10341",
     "BuffID": "Singularity_Passive_SPIDER_B_1",
     "Level": "1",
     "Type": "BT_DOT_POISON",
@@ -328660,7 +328750,7 @@
     "ToolTipID": "4"
   },
   {
-    "ID": "10339",
+    "ID": "10342",
     "BuffID": "Singularity_Passive_SPIDER_B_2",
     "Level": "1",
     "Type": "BT_DOT_POISON",
@@ -328693,7 +328783,7 @@
     "ToolTipID": "4"
   },
   {
-    "ID": "10340",
+    "ID": "10343",
     "BuffID": "Singularity_Passive_SPIDER_A_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -328727,7 +328817,7 @@
     "ToolTipID": "1022"
   },
   {
-    "ID": "10341",
+    "ID": "10344",
     "BuffID": "Singularity_Passive_SPIDER_A_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -328757,7 +328847,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10342",
+    "ID": "10345",
     "BuffID": "Singularity_Passive_SPIDER_A_3_1",
     "Level": "1",
     "Type": "BT_CURSE_ENHANCE",
@@ -328787,7 +328877,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10343",
+    "ID": "10346",
     "BuffID": "singularity_passive_spider_a_3_2",
     "Level": "1",
     "Type": "BT_ENHANCE_ALL",
@@ -328817,7 +328907,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10344",
+    "ID": "10347",
     "BuffID": "Singularity_SHA_SKILL01_1",
     "Level": "1",
     "Type": "BT_DMG",
@@ -328848,7 +328938,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10345",
+    "ID": "10348",
     "BuffID": "Singularity_SHA_SKILL02_1",
     "Level": "1",
     "Type": "BT_STONE",
@@ -328882,7 +328972,7 @@
     "ToolTipID": "35"
   },
   {
-    "ID": "10346",
+    "ID": "10349",
     "BuffID": "Singularity_SHA_SKILL03_1_1",
     "Level": "1",
     "Type": "BT_SKILL_USING_CONDITION",
@@ -328911,7 +329001,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10347",
+    "ID": "10350",
     "BuffID": "Singularity_SHA_SKILL03_1_2",
     "Level": "1",
     "Type": "BT_RESOURCE_USE_SKILL",
@@ -328941,7 +329031,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10348",
+    "ID": "10351",
     "BuffID": "Singularity_SHA_SKILL03_2",
     "Level": "1",
     "Type": "BT_DMG",
@@ -328972,7 +329062,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10349",
+    "ID": "10352",
     "BuffID": "Singularity_SHA_SKILL03_3",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -329003,7 +329093,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10350",
+    "ID": "10353",
     "BuffID": "Singularity_SHA_SKILL03_4",
     "Level": "1",
     "Type": "BT_SEAL_COUNTER",
@@ -329033,7 +329123,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10351",
+    "ID": "10354",
     "BuffID": "Singularity_SHA_SKILL03_5",
     "Level": "1",
     "Type": "BT_DOT_LIGHTNING",
@@ -329066,7 +329156,7 @@
     "ToolTipID": "5"
   },
   {
-    "ID": "10352",
+    "ID": "10355",
     "BuffID": "Singularity_Passive_SHA_A_1",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -329096,7 +329186,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10353",
+    "ID": "10356",
     "BuffID": "Singularity_Passive_SHA_A_2",
     "Level": "1",
     "Type": "BT_DMG",
@@ -329126,7 +329216,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10354",
+    "ID": "10357",
     "BuffID": "Singularity_Passive_SHA_A_3",
     "Level": "1",
     "Type": "BT_DMG",
@@ -329156,7 +329246,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10355",
+    "ID": "10358",
     "BuffID": "Singularity_Passive_SHA_B_1",
     "Level": "1",
     "Type": "BT_RESOURCE_CHARGE",
@@ -329186,7 +329276,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10356",
+    "ID": "10359",
     "BuffID": "Singularity_Passive_SHA_B_2",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -329217,7 +329307,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10357",
+    "ID": "10360",
     "BuffID": "Singularity_OLD_SKILL01_1_1",
     "Level": "1",
     "Type": "BT_EXTEND_BUFF",
@@ -329248,7 +329338,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10358",
+    "ID": "10361",
     "BuffID": "Singularity_OLD_SKILL01_1_2_1",
     "Level": "1",
     "Type": "BT_REVERSE_HEAL_BASED_TARGET",
@@ -329278,7 +329368,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10359",
+    "ID": "10362",
     "BuffID": "Singularity_OLD_SKILL01_1_2_2",
     "Level": "1",
     "Type": "BT_REVERSE_HEAL_BASED_TARGET",
@@ -329308,7 +329398,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10360",
+    "ID": "10363",
     "BuffID": "Singularity_OLD_SKILL01_1_2_3",
     "Level": "1",
     "Type": "BT_REVERSE_HEAL_BASED_TARGET",
@@ -329338,7 +329428,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10361",
+    "ID": "10364",
     "BuffID": "Singularity_OLD_SKILL01_1_2_4",
     "Level": "1",
     "Type": "BT_REVERSE_HEAL_BASED_TARGET",
@@ -329368,7 +329458,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10362",
+    "ID": "10365",
     "BuffID": "Singularity_OLD_SKILL02_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -329402,7 +329492,7 @@
     "ToolTipID": "6"
   },
   {
-    "ID": "10363",
+    "ID": "10366",
     "BuffID": "Singularity_OLD_SKILL02_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -329437,7 +329527,7 @@
     "ToolTipID": "1006"
   },
   {
-    "ID": "10364",
+    "ID": "10367",
     "BuffID": "Singularity_OLD_SKILL03_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -329471,7 +329561,7 @@
     "ToolTipID": "12"
   },
   {
-    "ID": "10365",
+    "ID": "10368",
     "BuffID": "Singularity_OLD_SKILL03_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -329505,7 +329595,7 @@
     "ToolTipID": "11"
   },
   {
-    "ID": "10366",
+    "ID": "10369",
     "BuffID": "Singularity_OLD_SKILL03_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -329539,7 +329629,7 @@
     "ToolTipID": "15"
   },
   {
-    "ID": "10367",
+    "ID": "10370",
     "BuffID": "Singularity_Passive_OLD_A_1",
     "Level": "1",
     "Type": "BT_DMG_OWNER_BUFF",
@@ -329569,7 +329659,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10368",
+    "ID": "10371",
     "BuffID": "Singularity_Passive_OLD_A_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -329602,7 +329692,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10369",
+    "ID": "10372",
     "BuffID": "Singularity_Passive_OLD_SS_1",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -329634,7 +329724,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10370",
+    "ID": "10373",
     "BuffID": "Singularity_Passive_OLD_SS_2",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -329666,7 +329756,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10371",
+    "ID": "10374",
     "BuffID": "Singularity_Passive_OLD_SS_3",
     "Level": "1",
     "Type": "BT_DMG_OWNER_DEBUFF",
@@ -329696,7 +329786,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10372",
+    "ID": "10375",
     "BuffID": "Singularity_VER_SKILL01_1",
     "Level": "1",
     "Type": "BT_DOT_CURSE",
@@ -329729,7 +329819,7 @@
     "ToolTipID": "2"
   },
   {
-    "ID": "10373",
+    "ID": "10376",
     "BuffID": "Singularity_VER_SKILL02_1",
     "Level": "1",
     "Type": "BT_DMG",
@@ -329760,7 +329850,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10374",
+    "ID": "10377",
     "BuffID": "Singularity_VER_SKILL03_1",
     "Level": "1",
     "Type": "BT_DOT_CURSE",
@@ -329793,7 +329883,7 @@
     "ToolTipID": "2"
   },
   {
-    "ID": "10375",
+    "ID": "10378",
     "BuffID": "Singularity_VER_SKILL03_2",
     "Level": "1",
     "Type": "BT_ADDITIVE_TURN",
@@ -329825,7 +329915,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10376",
+    "ID": "10379",
     "BuffID": "Singularity_Passive_VER_A_1",
     "Level": "1",
     "Type": "BT_WG_HEAL",
@@ -329856,7 +329946,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10377",
+    "ID": "10380",
     "BuffID": "Singularity_Passive_VER_A_2",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -329888,7 +329978,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10378",
+    "ID": "10381",
     "BuffID": "Singularity_Passive_VER_SS_1",
     "Level": "1",
     "Type": "BT_DOT_CURSE",
@@ -329921,7 +330011,7 @@
     "ToolTipID": "2"
   },
   {
-    "ID": "10379",
+    "ID": "10382",
     "BuffID": "Singularity_Passive_VER_SS_2",
     "Level": "1",
     "Type": "BT_CURSE_ENHANCE",
@@ -329951,7 +330041,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10380",
+    "ID": "10383",
     "BuffID": "Singularity_Passive_VER_SS_3",
     "Level": "1",
     "Type": "BT_DMG_OWNER_DEBUFF",
@@ -329981,7 +330071,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10381",
+    "ID": "10384",
     "BuffID": "Singularity_SKD_SKILL01_1",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -330012,7 +330102,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10382",
+    "ID": "10385",
     "BuffID": "Singularity_SKD_SKILL02_1",
     "Level": "1",
     "Type": "BT_SEALED",
@@ -330047,7 +330137,7 @@
     "ToolTipID": "39"
   },
   {
-    "ID": "10383",
+    "ID": "10386",
     "BuffID": "Singularity_SKD_SKILL03_1",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -330078,7 +330168,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10384",
+    "ID": "10387",
     "BuffID": "Singularity_SKD_SKILL03_2",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -330109,7 +330199,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10385",
+    "ID": "10388",
     "BuffID": "Singularity_Passive_SKD_A_1",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -330140,7 +330230,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10386",
+    "ID": "10389",
     "BuffID": "Singularity_Passive_SKD_A_2",
     "Level": "1",
     "Type": "BT_DMG",
@@ -330171,7 +330261,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10387",
+    "ID": "10390",
     "BuffID": "Singularity_Passive_SKD_SS_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -330203,7 +330293,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10388",
+    "ID": "10391",
     "BuffID": "Singularity_Passive_SKD_SS_2",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -330234,7 +330324,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10389",
+    "ID": "10392",
     "BuffID": "Singularity_Passive_SKD_SS_3",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -330265,11 +330355,11 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10390",
+    "ID": "10393",
     "BuffID": "singularity_ks_skill01_1",
     "Level": "1",
     "Type": "BT_REMOVE_BUFF",
-    "TargetType": "ENEMY_TEAM",
+    "TargetType": "ENEMY_SKILL_TARGET",
     "CreateRate": "1000",
     "StackCount": "1",
     "IsIDOverlap": "False",
@@ -330284,8 +330374,8 @@
     "Value": "2",
     "TargetSkillType": "SKT_NONE",
     "BuffCreateType": "SKILL_FINISH",
-    "BuffConditionType": "OWNER_HAS_BUFF",
-    "BuffConditionValue": "9996",
+    "BuffConditionType": "OWNER_CLASS",
+    "BuffConditionValue": "2",
     "IsLastCheck": "False",
     "IgnoreCreateCheckCondition": "False",
     "CallerSkillType": "SKT_FIRST",
@@ -330297,100 +330387,103 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10391",
+    "ID": "10394",
     "BuffID": "singularity_ks_skill01_2",
     "Level": "1",
-    "Type": "BT_GROUP",
-    "TargetType": "ME",
+    "Type": "BT_REMOVE_BUFF",
+    "TargetType": "ENEMY_SKILL_TARGET",
     "CreateRate": "1000",
     "StackCount": "1",
     "IsIDOverlap": "False",
-    "IsTypeOverlap": "True",
-    "BuffDebuffType": "DEBUFF",
+    "IsTypeOverlap": "False",
+    "BuffDebuffType": "DEBUFF_IGNORE_IMMUNE",
     "IsIgnoreInterruption": "False",
     "IsEquip": "False",
     "IsEquipBuff": "False",
     "BuffCCType": "NONE",
     "StatType": "ST_NONE",
-    "ApplyingType": "OAT_NONE",
-    "Value": "160",
+    "ApplyingType": "OAT_ADD",
+    "Value": "2",
     "TargetSkillType": "SKT_NONE",
     "BuffCreateType": "SKILL_FINISH",
-    "BuffConditionType": "TARGET_CLASS",
-    "BuffConditionValue": "2",
-    "IsLastCheck": "False",
-    "IgnoreCreateCheckCondition": "False",
-    "CallerSkillType": "SKT_FIRST",
-    "TurnDuration": "1",
-    "BuffRemoveType": "ON_TURN_END",
-    "AdditiveAttack": "True",
-    "RemoveOnCasterDie": "False",
-    "MaterialType": "CMT_NONE"
-  },
-  {
-    "ID": "10392",
-    "BuffID": "singularity_ks_skill01_3",
-    "Level": "1",
-    "Type": "BT_GROUP",
-    "TargetType": "ME",
-    "CreateRate": "1000",
-    "StackCount": "1",
-    "IsIDOverlap": "False",
-    "IsTypeOverlap": "True",
-    "BuffDebuffType": "DEBUFF",
-    "IsIgnoreInterruption": "False",
-    "IsEquip": "False",
-    "IsEquipBuff": "False",
-    "BuffCCType": "NONE",
-    "StatType": "ST_NONE",
-    "ApplyingType": "OAT_NONE",
-    "Value": "160",
-    "TargetSkillType": "SKT_NONE",
-    "BuffCreateType": "SKILL_FINISH",
-    "BuffConditionType": "TARGET_CLASS",
+    "BuffConditionType": "OWNER_CLASS",
     "BuffConditionValue": "3",
     "IsLastCheck": "False",
     "IgnoreCreateCheckCondition": "False",
     "CallerSkillType": "SKT_FIRST",
-    "TurnDuration": "1",
-    "BuffRemoveType": "ON_TURN_END",
+    "BuffRemoveType": "IMMEDIATELY",
     "AdditiveAttack": "True",
     "RemoveOnCasterDie": "False",
+    "CreateEffect": "FX_Buff_Remove_Buff",
+    "CreateText": "SYS_BUFF_REMOVE_BUFF",
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10393",
-    "BuffID": "singularity_ks_skill01_4",
+    "ID": "10395",
+    "BuffID": "singularity_ks_skill01_3",
     "Level": "1",
-    "Type": "BT_GROUP",
-    "TargetType": "ME",
+    "Type": "BT_REMOVE_BUFF",
+    "TargetType": "ENEMY_SKILL_TARGET",
     "CreateRate": "1000",
     "StackCount": "1",
     "IsIDOverlap": "False",
-    "IsTypeOverlap": "True",
-    "BuffDebuffType": "DEBUFF",
+    "IsTypeOverlap": "False",
+    "BuffDebuffType": "DEBUFF_IGNORE_IMMUNE",
     "IsIgnoreInterruption": "False",
     "IsEquip": "False",
     "IsEquipBuff": "False",
     "BuffCCType": "NONE",
     "StatType": "ST_NONE",
-    "ApplyingType": "OAT_NONE",
-    "Value": "160",
+    "ApplyingType": "OAT_ADD",
+    "Value": "2",
     "TargetSkillType": "SKT_NONE",
     "BuffCreateType": "SKILL_FINISH",
-    "BuffConditionType": "TARGET_CLASS",
+    "BuffConditionType": "OWNER_CLASS",
     "BuffConditionValue": "4",
     "IsLastCheck": "False",
     "IgnoreCreateCheckCondition": "False",
     "CallerSkillType": "SKT_FIRST",
-    "TurnDuration": "1",
-    "BuffRemoveType": "ON_TURN_END",
+    "BuffRemoveType": "IMMEDIATELY",
     "AdditiveAttack": "True",
     "RemoveOnCasterDie": "False",
+    "CreateEffect": "FX_Buff_Remove_Buff",
+    "CreateText": "SYS_BUFF_REMOVE_BUFF",
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10394",
+    "ID": "10396",
+    "BuffID": "singularity_ks_skill01_4",
+    "Level": "1",
+    "Type": "BT_REMOVE_BUFF",
+    "TargetType": "ENEMY_SKILL_TARGET",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "False",
+    "BuffDebuffType": "DEBUFF_IGNORE_IMMUNE",
+    "IsIgnoreInterruption": "False",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_NONE",
+    "ApplyingType": "OAT_ADD",
+    "Value": "2",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "SKILL_FINISH",
+    "BuffConditionType": "OWNER_CLASS",
+    "BuffConditionValue": "5",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_FIRST",
+    "BuffRemoveType": "IMMEDIATELY",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "CreateEffect": "FX_Buff_Remove_Buff",
+    "CreateText": "SYS_BUFF_REMOVE_BUFF",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10397",
     "BuffID": "singularity_ks_skill01_5",
     "Level": "1",
     "Type": "BT_GROUP",
@@ -330421,7 +330514,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10395",
+    "ID": "10398",
     "BuffID": "singularity_ks_skill01_6",
     "Level": "1",
     "Type": "BT_RUN_PASSIVE_SKILL_ON_TURN_END",
@@ -330454,7 +330547,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10396",
+    "ID": "10399",
     "BuffID": "singularity_ks_skill03_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -330488,7 +330581,7 @@
     "ToolTipID": "7"
   },
   {
-    "ID": "10397",
+    "ID": "10400",
     "BuffID": "singularity_passive_ks_a_1",
     "Level": "1",
     "Type": "BT_DMG_REDUCE",
@@ -330519,7 +330612,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10398",
+    "ID": "10401",
     "BuffID": "singularity_passive_ks_a_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -330550,7 +330643,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10399",
+    "ID": "10402",
     "BuffID": "singularity_passive_ks_a_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -330581,7 +330674,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10400",
+    "ID": "10403",
     "BuffID": "singularity_passive_ks_a_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -330612,7 +330705,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10401",
+    "ID": "10404",
     "BuffID": "singularity_passive_ks_a_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -330643,7 +330736,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10402",
+    "ID": "10405",
     "BuffID": "singularity_passive_ks_a_18",
     "Level": "1",
     "Type": "BT_REVERSE_HEAL_BASED_TARGET",
@@ -330659,7 +330752,7 @@
     "BuffCCType": "NONE",
     "StatType": "ST_HP",
     "ApplyingType": "OAT_ADD",
-    "Value": "200",
+    "Value": "100",
     "TargetSkillType": "SKT_NONE",
     "BuffCreateType": "SKILL_START",
     "BuffConditionType": "CASTER_HAS_NOT_BUFF",
@@ -330673,7 +330766,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10403",
+    "ID": "10406",
     "BuffID": "singularity_passive_ks_a_19",
     "Level": "1",
     "Type": "BT_NONE",
@@ -330690,21 +330783,51 @@
     "StatType": "ST_NONE",
     "ApplyingType": "OAT_RATE",
     "TargetSkillType": "SKT_NONE",
-    "BuffCreateType": "ON_SPAWN2",
+    "BuffCreateType": "SKILL_START",
     "BuffConditionType": "CASTER_ENEMY_TEAM_HAS_BUFF",
     "BuffConditionValue": "11010",
     "IsLastCheck": "False",
     "IgnoreCreateCheckCondition": "False",
     "CallerSkillType": "SKT_ALL",
-    "TurnDuration": "1000",
-    "BuffRemoveType": "ON_TURN_END",
+    "TurnDuration": "1",
+    "BuffRemoveType": "ON_SKILL_FINISH",
     "AdditiveAttack": "True",
     "RemoveOnCasterDie": "True",
     "MaterialType": "CMT_NONE",
     "ToolTipID": "11010"
   },
   {
-    "ID": "10404",
+    "ID": "10407",
+    "BuffID": "singularity_passive_ks_a_20",
+    "Level": "1",
+    "Type": "BT_STAT",
+    "TargetType": "ENEMY_TEAM_DEFENDER",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_NONE",
+    "ApplyingType": "OAT_RATE",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "SKILL_START",
+    "BuffConditionType": "NONE",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "MaterialType": "CMT_NONE",
+    "ToolTipID": "11010"
+  },
+  {
+    "ID": "10408",
     "BuffID": "singularity_passive_ks_b_1",
     "Level": "1",
     "Type": "BT_STAT_BUFF_ENHANCE",
@@ -330736,7 +330859,7 @@
     "ToolTipID": "1092"
   },
   {
-    "ID": "10405",
+    "ID": "10409",
     "BuffID": "singularity_passive_ks_b_2",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -330768,7 +330891,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10406",
+    "ID": "10410",
     "BuffID": "singularity_passive_ks_b_3",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -330799,7 +330922,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10407",
+    "ID": "10411",
     "BuffID": "singularity_passive_ks_b_4",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -330831,7 +330954,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10408",
+    "ID": "10412",
     "BuffID": "singularity_passive_ks_b_5",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -330863,7 +330986,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10409",
+    "ID": "10413",
     "BuffID": "singularity_passive_ks_b_6",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -330895,7 +331018,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10410",
+    "ID": "10414",
     "BuffID": "singularity_rage_ks",
     "Level": "1",
     "Type": "BT_SEALED_RESURRECTION",
@@ -330923,7 +331046,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10411",
+    "ID": "10415",
     "BuffID": "Singularity_Passive_Dmg_up_d",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -330953,7 +331076,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10412",
+    "ID": "10416",
     "BuffID": "Singularity_Passive_Dmg_down_d",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -330983,7 +331106,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10413",
+    "ID": "10417",
     "BuffID": "Singularity_Passive_Dmg_up_c",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331013,7 +331136,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10414",
+    "ID": "10418",
     "BuffID": "Singularity_Passive_Dmg_down_c",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331043,7 +331166,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10415",
+    "ID": "10419",
     "BuffID": "Singularity_Passive_Dmg_up_a",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331073,7 +331196,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10416",
+    "ID": "10420",
     "BuffID": "Singularity_Passive_Dmg_down_a",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331103,7 +331226,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10417",
+    "ID": "10421",
     "BuffID": "Singularity_Passive_Dmg_up_aa",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331133,7 +331256,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10418",
+    "ID": "10422",
     "BuffID": "Singularity_Passive_Dmg_down_aa",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331163,7 +331286,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10419",
+    "ID": "10423",
     "BuffID": "Singularity_Passive_Dmg_up_aaa",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331193,7 +331316,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10420",
+    "ID": "10424",
     "BuffID": "Singularity_Passive_Dmg_down_aaa",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331223,7 +331346,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10421",
+    "ID": "10425",
     "BuffID": "Singularity_Passive_Dmg_up_aaa_2",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331253,7 +331376,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10422",
+    "ID": "10426",
     "BuffID": "Singularity_Passive_Dmg_down_aaa_2",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331283,7 +331406,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10423",
+    "ID": "10427",
     "BuffID": "Singularity_Passive_Dmg_up_aaa_3",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331313,7 +331436,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10424",
+    "ID": "10428",
     "BuffID": "Singularity_Passive_Dmg_down_aaa_3",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331343,7 +331466,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10425",
+    "ID": "10429",
     "BuffID": "Singularity_Passive_Dmg_up_s_2",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331373,7 +331496,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10426",
+    "ID": "10430",
     "BuffID": "Singularity_Passive_Dmg_down_s_2",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331403,7 +331526,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10427",
+    "ID": "10431",
     "BuffID": "Singularity_Passive_Dmg_up_s_3",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331433,7 +331556,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10428",
+    "ID": "10432",
     "BuffID": "Singularity_Passive_Dmg_down_s_3",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331463,7 +331586,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10429",
+    "ID": "10433",
     "BuffID": "Singularity_Passive_Dmg_up_ss",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331493,7 +331616,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10430",
+    "ID": "10434",
     "BuffID": "Singularity_Passive_Dmg_down_ss",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331523,7 +331646,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10431",
+    "ID": "10435",
     "BuffID": "Singularity_Passive_Dmg_up_ss_2",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331553,7 +331676,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10432",
+    "ID": "10436",
     "BuffID": "Singularity_Passive_Dmg_down_ss_2",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331583,7 +331706,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10433",
+    "ID": "10437",
     "BuffID": "Singularity_Passive_Dmg_up_ss_3",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331613,7 +331736,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10434",
+    "ID": "10438",
     "BuffID": "Singularity_Passive_Dmg_down_ss_3",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331643,7 +331766,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10435",
+    "ID": "10439",
     "BuffID": "Singularity_Passive_Dmg_up_sss",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331673,7 +331796,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10436",
+    "ID": "10440",
     "BuffID": "Singularity_Passive_Dmg_down_sss",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -331703,7 +331826,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10437",
+    "ID": "10441",
     "BuffID": "Singularity_RAGE_VER",
     "Level": "1",
     "Type": "BT_REMOVE_BUFF",
@@ -331735,7 +331858,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10438",
+    "ID": "10442",
     "BuffID": "Singularity_RAGE_SKD",
     "Level": "1",
     "Type": "BT_STAT",
@@ -331767,7 +331890,7 @@
     "ToolTipID": "1015"
   },
   {
-    "ID": "10439",
+    "ID": "10443",
     "BuffID": "Singularity_RAGE_OLD",
     "Level": "1",
     "Type": "BT_DMG",
@@ -331797,7 +331920,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10440",
+    "ID": "10444",
     "BuffID": "Singularity_RAGE_BEL",
     "Level": "1",
     "Type": "BT_DOT_BURN",
@@ -331830,7 +331953,7 @@
     "ToolTipID": "1"
   },
   {
-    "ID": "10441",
+    "ID": "10445",
     "BuffID": "Singularity_RAGE_METTE",
     "Level": "1",
     "Type": "BT_SEALED",
@@ -331865,7 +331988,7 @@
     "ToolTipID": "39"
   },
   {
-    "ID": "10442",
+    "ID": "10446",
     "BuffID": "Singularity_RAGE_HS",
     "Level": "1",
     "Type": "BT_IMMUNE",
@@ -331900,7 +332023,7 @@
     "ToolTipID": "30"
   },
   {
-    "ID": "10443",
+    "ID": "10447",
     "BuffID": "Singularity_RAGE_SP",
     "Level": "1",
     "Type": "BT_STAT",
@@ -331934,7 +332057,7 @@
     "ToolTipID": "23"
   },
   {
-    "ID": "10444",
+    "ID": "10448",
     "BuffID": "Singularity_RAGE_SHA",
     "Level": "1",
     "Type": "BT_STAT",
@@ -331967,7 +332090,7 @@
     "ToolTipID": "45"
   },
   {
-    "ID": "10445",
+    "ID": "10449",
     "BuffID": "Singularity_RAGE_SPIDER",
     "Level": "1",
     "Type": "BT_DOT_POISON",
@@ -332000,7 +332123,7 @@
     "ToolTipID": "4"
   },
   {
-    "ID": "10446",
+    "ID": "10450",
     "BuffID": "Singularity_equip_dmg_earth_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332030,7 +332153,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10447",
+    "ID": "10451",
     "BuffID": "Singularity_equip_dmg_earth_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332060,7 +332183,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10448",
+    "ID": "10452",
     "BuffID": "Singularity_equip_dmg_earth_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332090,7 +332213,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10449",
+    "ID": "10453",
     "BuffID": "Singularity_equip_dmg_earth_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332120,7 +332243,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10450",
+    "ID": "10454",
     "BuffID": "Singularity_equip_dmg_earth_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332150,7 +332273,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10451",
+    "ID": "10455",
     "BuffID": "Singularity_equip_dmg_earth_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332180,7 +332303,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10452",
+    "ID": "10456",
     "BuffID": "Singularity_equip_dmg_earth_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332210,7 +332333,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10453",
+    "ID": "10457",
     "BuffID": "Singularity_equip_dmg_earth_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332240,7 +332363,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10454",
+    "ID": "10458",
     "BuffID": "Singularity_equip_dmg_earth_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332270,7 +332393,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10455",
+    "ID": "10459",
     "BuffID": "Singularity_equip_dmg_earth_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332300,7 +332423,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10456",
+    "ID": "10460",
     "BuffID": "Singularity_equip_dmg_earth_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332330,7 +332453,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10457",
+    "ID": "10461",
     "BuffID": "Singularity_equip_dmg_earth_12",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332360,7 +332483,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10458",
+    "ID": "10462",
     "BuffID": "Singularity_equip_dmg_earth_13",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332390,7 +332513,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10459",
+    "ID": "10463",
     "BuffID": "Singularity_equip_dmg_earth_14",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332420,7 +332543,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10460",
+    "ID": "10464",
     "BuffID": "Singularity_equip_dmg_earth_15",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332450,7 +332573,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10461",
+    "ID": "10465",
     "BuffID": "Singularity_equip_dmg_earth_16",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332480,7 +332603,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10462",
+    "ID": "10466",
     "BuffID": "Singularity_equip_dmg_earth_17",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332510,7 +332633,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10463",
+    "ID": "10467",
     "BuffID": "Singularity_equip_dmg_earth_18",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332540,7 +332663,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10464",
+    "ID": "10468",
     "BuffID": "Singularity_equip_dmg_earth_19",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332570,7 +332693,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10465",
+    "ID": "10469",
     "BuffID": "Singularity_equip_dmg_earth_20",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332600,7 +332723,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10466",
+    "ID": "10470",
     "BuffID": "Singularity_equip_dmg_earth_21",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332630,7 +332753,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10467",
+    "ID": "10471",
     "BuffID": "Singularity_equip_dmg_waher_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332661,7 +332784,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10468",
+    "ID": "10472",
     "BuffID": "Singularity_equip_dmg_waher_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332692,7 +332815,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10469",
+    "ID": "10473",
     "BuffID": "Singularity_equip_dmg_waher_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332723,7 +332846,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10470",
+    "ID": "10474",
     "BuffID": "Singularity_equip_dmg_waher_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332754,7 +332877,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10471",
+    "ID": "10475",
     "BuffID": "Singularity_equip_dmg_waher_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332785,7 +332908,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10472",
+    "ID": "10476",
     "BuffID": "Singularity_equip_dmg_waher_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332816,7 +332939,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10473",
+    "ID": "10477",
     "BuffID": "Singularity_equip_dmg_waher_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332847,7 +332970,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10474",
+    "ID": "10478",
     "BuffID": "Singularity_equip_dmg_waher_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332878,7 +333001,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10475",
+    "ID": "10479",
     "BuffID": "Singularity_equip_dmg_waher_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332909,7 +333032,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10476",
+    "ID": "10480",
     "BuffID": "Singularity_equip_dmg_waher_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332940,7 +333063,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10477",
+    "ID": "10481",
     "BuffID": "Singularity_equip_dmg_waher_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -332971,7 +333094,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10478",
+    "ID": "10482",
     "BuffID": "Singularity_equip_dmg_waher_12",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333002,7 +333125,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10479",
+    "ID": "10483",
     "BuffID": "Singularity_equip_dmg_waher_13",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333033,7 +333156,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10480",
+    "ID": "10484",
     "BuffID": "Singularity_equip_dmg_waher_14",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333064,7 +333187,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10481",
+    "ID": "10485",
     "BuffID": "Singularity_equip_dmg_waher_15",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333095,7 +333218,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10482",
+    "ID": "10486",
     "BuffID": "Singularity_equip_dmg_waher_16",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333126,7 +333249,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10483",
+    "ID": "10487",
     "BuffID": "Singularity_equip_dmg_waher_17",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333157,7 +333280,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10484",
+    "ID": "10488",
     "BuffID": "Singularity_equip_dmg_waher_18",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333188,7 +333311,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10485",
+    "ID": "10489",
     "BuffID": "Singularity_equip_dmg_waher_19",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333219,7 +333342,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10486",
+    "ID": "10490",
     "BuffID": "Singularity_equip_dmg_waher_20",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333250,7 +333373,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10487",
+    "ID": "10491",
     "BuffID": "Singularity_equip_dmg_waher_21",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333281,7 +333404,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10488",
+    "ID": "10492",
     "BuffID": "Singularity_equip_dmg_fire_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333312,7 +333435,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10489",
+    "ID": "10493",
     "BuffID": "Singularity_equip_dmg_fire_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333343,7 +333466,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10490",
+    "ID": "10494",
     "BuffID": "Singularity_equip_dmg_fire_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333374,7 +333497,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10491",
+    "ID": "10495",
     "BuffID": "Singularity_equip_dmg_fire_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333405,7 +333528,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10492",
+    "ID": "10496",
     "BuffID": "Singularity_equip_dmg_fire_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333436,7 +333559,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10493",
+    "ID": "10497",
     "BuffID": "Singularity_equip_dmg_fire_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333467,7 +333590,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10494",
+    "ID": "10498",
     "BuffID": "Singularity_equip_dmg_fire_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333498,7 +333621,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10495",
+    "ID": "10499",
     "BuffID": "Singularity_equip_dmg_fire_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333529,7 +333652,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10496",
+    "ID": "10500",
     "BuffID": "Singularity_equip_dmg_fire_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333560,7 +333683,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10497",
+    "ID": "10501",
     "BuffID": "Singularity_equip_dmg_fire_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333591,7 +333714,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10498",
+    "ID": "10502",
     "BuffID": "Singularity_equip_dmg_fire_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333622,7 +333745,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10499",
+    "ID": "10503",
     "BuffID": "Singularity_equip_dmg_fire_12",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333653,7 +333776,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10500",
+    "ID": "10504",
     "BuffID": "Singularity_equip_dmg_fire_13",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333684,7 +333807,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10501",
+    "ID": "10505",
     "BuffID": "Singularity_equip_dmg_fire_14",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333715,7 +333838,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10502",
+    "ID": "10506",
     "BuffID": "Singularity_equip_dmg_fire_15",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333746,7 +333869,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10503",
+    "ID": "10507",
     "BuffID": "Singularity_equip_dmg_fire_16",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333777,7 +333900,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10504",
+    "ID": "10508",
     "BuffID": "Singularity_equip_dmg_fire_17",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333808,7 +333931,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10505",
+    "ID": "10509",
     "BuffID": "Singularity_equip_dmg_fire_18",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333839,7 +333962,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10506",
+    "ID": "10510",
     "BuffID": "Singularity_equip_dmg_fire_19",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333870,7 +333993,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10507",
+    "ID": "10511",
     "BuffID": "Singularity_equip_dmg_fire_20",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333901,7 +334024,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10508",
+    "ID": "10512",
     "BuffID": "Singularity_equip_dmg_fire_21",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333932,7 +334055,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10509",
+    "ID": "10513",
     "BuffID": "Singularity_equip_dmg_light_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333963,7 +334086,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10510",
+    "ID": "10514",
     "BuffID": "Singularity_equip_dmg_light_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -333994,7 +334117,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10511",
+    "ID": "10515",
     "BuffID": "Singularity_equip_dmg_light_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334025,7 +334148,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10512",
+    "ID": "10516",
     "BuffID": "Singularity_equip_dmg_light_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334056,7 +334179,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10513",
+    "ID": "10517",
     "BuffID": "Singularity_equip_dmg_light_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334087,7 +334210,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10514",
+    "ID": "10518",
     "BuffID": "Singularity_equip_dmg_light_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334118,7 +334241,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10515",
+    "ID": "10519",
     "BuffID": "Singularity_equip_dmg_light_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334149,7 +334272,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10516",
+    "ID": "10520",
     "BuffID": "Singularity_equip_dmg_light_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334180,7 +334303,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10517",
+    "ID": "10521",
     "BuffID": "Singularity_equip_dmg_light_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334211,7 +334334,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10518",
+    "ID": "10522",
     "BuffID": "Singularity_equip_dmg_light_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334242,7 +334365,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10519",
+    "ID": "10523",
     "BuffID": "Singularity_equip_dmg_light_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334273,7 +334396,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10520",
+    "ID": "10524",
     "BuffID": "Singularity_equip_dmg_light_12",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334304,7 +334427,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10521",
+    "ID": "10525",
     "BuffID": "Singularity_equip_dmg_light_13",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334335,7 +334458,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10522",
+    "ID": "10526",
     "BuffID": "Singularity_equip_dmg_light_14",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334366,7 +334489,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10523",
+    "ID": "10527",
     "BuffID": "Singularity_equip_dmg_light_15",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334397,7 +334520,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10524",
+    "ID": "10528",
     "BuffID": "Singularity_equip_dmg_light_16",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334428,7 +334551,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10525",
+    "ID": "10529",
     "BuffID": "Singularity_equip_dmg_light_17",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334459,7 +334582,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10526",
+    "ID": "10530",
     "BuffID": "Singularity_equip_dmg_light_18",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334490,7 +334613,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10527",
+    "ID": "10531",
     "BuffID": "Singularity_equip_dmg_light_19",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334521,7 +334644,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10528",
+    "ID": "10532",
     "BuffID": "Singularity_equip_dmg_light_20",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334552,7 +334675,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10529",
+    "ID": "10533",
     "BuffID": "Singularity_equip_dmg_light_21",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334583,7 +334706,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10530",
+    "ID": "10534",
     "BuffID": "Singularity_equip_dmg_dark_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334614,7 +334737,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10531",
+    "ID": "10535",
     "BuffID": "Singularity_equip_dmg_dark_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334645,7 +334768,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10532",
+    "ID": "10536",
     "BuffID": "Singularity_equip_dmg_dark_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334676,7 +334799,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10533",
+    "ID": "10537",
     "BuffID": "Singularity_equip_dmg_dark_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334707,7 +334830,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10534",
+    "ID": "10538",
     "BuffID": "Singularity_equip_dmg_dark_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334738,7 +334861,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10535",
+    "ID": "10539",
     "BuffID": "Singularity_equip_dmg_dark_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334769,7 +334892,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10536",
+    "ID": "10540",
     "BuffID": "Singularity_equip_dmg_dark_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334800,7 +334923,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10537",
+    "ID": "10541",
     "BuffID": "Singularity_equip_dmg_dark_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334831,7 +334954,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10538",
+    "ID": "10542",
     "BuffID": "Singularity_equip_dmg_dark_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334862,7 +334985,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10539",
+    "ID": "10543",
     "BuffID": "Singularity_equip_dmg_dark_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334893,7 +335016,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10540",
+    "ID": "10544",
     "BuffID": "Singularity_equip_dmg_dark_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334924,7 +335047,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10541",
+    "ID": "10545",
     "BuffID": "Singularity_equip_dmg_dark_12",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334955,7 +335078,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10542",
+    "ID": "10546",
     "BuffID": "Singularity_equip_dmg_dark_13",
     "Level": "1",
     "Type": "BT_STAT",
@@ -334986,7 +335109,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10543",
+    "ID": "10547",
     "BuffID": "Singularity_equip_dmg_dark_14",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335017,7 +335140,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10544",
+    "ID": "10548",
     "BuffID": "Singularity_equip_dmg_dark_15",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335048,7 +335171,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10545",
+    "ID": "10549",
     "BuffID": "Singularity_equip_dmg_dark_16",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335079,7 +335202,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10546",
+    "ID": "10550",
     "BuffID": "Singularity_equip_dmg_dark_17",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335110,7 +335233,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10547",
+    "ID": "10551",
     "BuffID": "Singularity_equip_dmg_dark_18",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335141,7 +335264,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10548",
+    "ID": "10552",
     "BuffID": "Singularity_equip_dmg_dark_19",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335172,7 +335295,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10549",
+    "ID": "10553",
     "BuffID": "Singularity_equip_dmg_dark_20",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335203,7 +335326,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10550",
+    "ID": "10554",
     "BuffID": "Singularity_equip_dmg_dark_21",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335234,7 +335357,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10551",
+    "ID": "10555",
     "BuffID": "Singularity_equip_dmg_reduce__earth_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335264,7 +335387,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10552",
+    "ID": "10556",
     "BuffID": "Singularity_equip_dmg_reduce__earth_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335294,7 +335417,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10553",
+    "ID": "10557",
     "BuffID": "Singularity_equip_dmg_reduce__earth_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335324,7 +335447,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10554",
+    "ID": "10558",
     "BuffID": "Singularity_equip_dmg_reduce__earth_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335354,7 +335477,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10555",
+    "ID": "10559",
     "BuffID": "Singularity_equip_dmg_reduce__earth_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335384,7 +335507,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10556",
+    "ID": "10560",
     "BuffID": "Singularity_equip_dmg_reduce__earth_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335414,7 +335537,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10557",
+    "ID": "10561",
     "BuffID": "Singularity_equip_dmg_reduce__earth_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335444,7 +335567,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10558",
+    "ID": "10562",
     "BuffID": "Singularity_equip_dmg_reduce__earth_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335474,7 +335597,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10559",
+    "ID": "10563",
     "BuffID": "Singularity_equip_dmg_reduce__earth_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335504,7 +335627,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10560",
+    "ID": "10564",
     "BuffID": "Singularity_equip_dmg_reduce__earth_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335534,7 +335657,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10561",
+    "ID": "10565",
     "BuffID": "Singularity_equip_dmg_reduce__earth_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335564,7 +335687,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10562",
+    "ID": "10566",
     "BuffID": "Singularity_equip_dmg_reduce__waher_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335595,7 +335718,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10563",
+    "ID": "10567",
     "BuffID": "Singularity_equip_dmg_reduce__waher_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335626,7 +335749,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10564",
+    "ID": "10568",
     "BuffID": "Singularity_equip_dmg_reduce__waher_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335657,7 +335780,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10565",
+    "ID": "10569",
     "BuffID": "Singularity_equip_dmg_reduce__waher_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335688,7 +335811,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10566",
+    "ID": "10570",
     "BuffID": "Singularity_equip_dmg_reduce__waher_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335719,7 +335842,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10567",
+    "ID": "10571",
     "BuffID": "Singularity_equip_dmg_reduce__waher_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335750,7 +335873,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10568",
+    "ID": "10572",
     "BuffID": "Singularity_equip_dmg_reduce__waher_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335781,7 +335904,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10569",
+    "ID": "10573",
     "BuffID": "Singularity_equip_dmg_reduce__waher_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335812,7 +335935,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10570",
+    "ID": "10574",
     "BuffID": "Singularity_equip_dmg_reduce__waher_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335843,7 +335966,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10571",
+    "ID": "10575",
     "BuffID": "Singularity_equip_dmg_reduce__waher_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335874,7 +335997,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10572",
+    "ID": "10576",
     "BuffID": "Singularity_equip_dmg_reduce__waher_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335905,7 +336028,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10573",
+    "ID": "10577",
     "BuffID": "Singularity_equip_dmg_reduce__fire_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335936,7 +336059,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10574",
+    "ID": "10578",
     "BuffID": "Singularity_equip_dmg_reduce__fire_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335967,7 +336090,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10575",
+    "ID": "10579",
     "BuffID": "Singularity_equip_dmg_reduce__fire_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -335998,7 +336121,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10576",
+    "ID": "10580",
     "BuffID": "Singularity_equip_dmg_reduce__fire_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336029,7 +336152,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10577",
+    "ID": "10581",
     "BuffID": "Singularity_equip_dmg_reduce__fire_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336060,7 +336183,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10578",
+    "ID": "10582",
     "BuffID": "Singularity_equip_dmg_reduce__fire_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336091,7 +336214,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10579",
+    "ID": "10583",
     "BuffID": "Singularity_equip_dmg_reduce__fire_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336122,7 +336245,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10580",
+    "ID": "10584",
     "BuffID": "Singularity_equip_dmg_reduce__fire_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336153,7 +336276,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10581",
+    "ID": "10585",
     "BuffID": "Singularity_equip_dmg_reduce__fire_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336184,7 +336307,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10582",
+    "ID": "10586",
     "BuffID": "Singularity_equip_dmg_reduce__fire_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336215,7 +336338,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10583",
+    "ID": "10587",
     "BuffID": "Singularity_equip_dmg_reduce__fire_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336246,7 +336369,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10584",
+    "ID": "10588",
     "BuffID": "Singularity_equip_dmg_reduce__light_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336277,7 +336400,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10585",
+    "ID": "10589",
     "BuffID": "Singularity_equip_dmg_reduce__light_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336308,7 +336431,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10586",
+    "ID": "10590",
     "BuffID": "Singularity_equip_dmg_reduce__light_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336339,7 +336462,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10587",
+    "ID": "10591",
     "BuffID": "Singularity_equip_dmg_reduce__light_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336370,7 +336493,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10588",
+    "ID": "10592",
     "BuffID": "Singularity_equip_dmg_reduce__light_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336401,7 +336524,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10589",
+    "ID": "10593",
     "BuffID": "Singularity_equip_dmg_reduce__light_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336432,7 +336555,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10590",
+    "ID": "10594",
     "BuffID": "Singularity_equip_dmg_reduce__light_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336463,7 +336586,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10591",
+    "ID": "10595",
     "BuffID": "Singularity_equip_dmg_reduce__light_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336494,7 +336617,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10592",
+    "ID": "10596",
     "BuffID": "Singularity_equip_dmg_reduce__light_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336525,7 +336648,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10593",
+    "ID": "10597",
     "BuffID": "Singularity_equip_dmg_reduce__light_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336556,7 +336679,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10594",
+    "ID": "10598",
     "BuffID": "Singularity_equip_dmg_reduce__light_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336587,7 +336710,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10595",
+    "ID": "10599",
     "BuffID": "Singularity_equip_dmg_reduce__dark_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336618,7 +336741,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10596",
+    "ID": "10600",
     "BuffID": "Singularity_equip_dmg_reduce__dark_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336649,7 +336772,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10597",
+    "ID": "10601",
     "BuffID": "Singularity_equip_dmg_reduce__dark_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336680,7 +336803,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10598",
+    "ID": "10602",
     "BuffID": "Singularity_equip_dmg_reduce__dark_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336711,7 +336834,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10599",
+    "ID": "10603",
     "BuffID": "Singularity_equip_dmg_reduce__dark_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336742,7 +336865,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10600",
+    "ID": "10604",
     "BuffID": "Singularity_equip_dmg_reduce__dark_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336773,7 +336896,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10601",
+    "ID": "10605",
     "BuffID": "Singularity_equip_dmg_reduce__dark_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336804,7 +336927,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10602",
+    "ID": "10606",
     "BuffID": "Singularity_equip_dmg_reduce__dark_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336835,7 +336958,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10603",
+    "ID": "10607",
     "BuffID": "Singularity_equip_dmg_reduce__dark_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336866,7 +336989,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10604",
+    "ID": "10608",
     "BuffID": "Singularity_equip_dmg_reduce__dark_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336897,7 +337020,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10605",
+    "ID": "10609",
     "BuffID": "Singularity_equip_dmg_reduce__dark_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -336928,7 +337051,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10606",
+    "ID": "10610",
     "BuffID": "Singularity_equip_dmg_common_1",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -336958,7 +337081,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10607",
+    "ID": "10611",
     "BuffID": "Singularity_equip_dmg_common_2",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -336988,7 +337111,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10608",
+    "ID": "10612",
     "BuffID": "Singularity_equip_dmg_common_3",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337018,7 +337141,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10609",
+    "ID": "10613",
     "BuffID": "Singularity_equip_dmg_common_4",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337048,7 +337171,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10610",
+    "ID": "10614",
     "BuffID": "Singularity_equip_dmg_common_5",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337078,7 +337201,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10611",
+    "ID": "10615",
     "BuffID": "Singularity_equip_dmg_common_6",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337108,7 +337231,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10612",
+    "ID": "10616",
     "BuffID": "Singularity_equip_dmg_common_7",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337138,7 +337261,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10613",
+    "ID": "10617",
     "BuffID": "Singularity_equip_dmg_common_8",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337168,7 +337291,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10614",
+    "ID": "10618",
     "BuffID": "Singularity_equip_dmg_common_9",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337198,7 +337321,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10615",
+    "ID": "10619",
     "BuffID": "Singularity_equip_dmg_common_10",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337228,7 +337351,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10616",
+    "ID": "10620",
     "BuffID": "Singularity_equip_dmg_common_11",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337258,7 +337381,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10617",
+    "ID": "10621",
     "BuffID": "Singularity_equip_dmg_common_12",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337288,7 +337411,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10618",
+    "ID": "10622",
     "BuffID": "Singularity_equip_dmg_common_13",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337318,7 +337441,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10619",
+    "ID": "10623",
     "BuffID": "Singularity_equip_dmg_common_14",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337348,7 +337471,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10620",
+    "ID": "10624",
     "BuffID": "Singularity_equip_dmg_common_15",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337378,7 +337501,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10621",
+    "ID": "10625",
     "BuffID": "Singularity_equip_dmg_common_16",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337408,7 +337531,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10622",
+    "ID": "10626",
     "BuffID": "Singularity_equip_dmg_common_17",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337438,7 +337561,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10623",
+    "ID": "10627",
     "BuffID": "Singularity_equip_dmg_common_18",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337468,7 +337591,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10624",
+    "ID": "10628",
     "BuffID": "Singularity_equip_dmg_common_19",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337498,7 +337621,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10625",
+    "ID": "10629",
     "BuffID": "Singularity_equip_dmg_common_20",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337528,7 +337651,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10626",
+    "ID": "10630",
     "BuffID": "Singularity_equip_dmg_common_21",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337558,7 +337681,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10627",
+    "ID": "10631",
     "BuffID": "Singularity_equip_dmg_reduce__common_1",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337588,7 +337711,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10628",
+    "ID": "10632",
     "BuffID": "Singularity_equip_dmg_reduce__common_2",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337618,7 +337741,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10629",
+    "ID": "10633",
     "BuffID": "Singularity_equip_dmg_reduce__common_3",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337648,7 +337771,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10630",
+    "ID": "10634",
     "BuffID": "Singularity_equip_dmg_reduce__common_4",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337678,7 +337801,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10631",
+    "ID": "10635",
     "BuffID": "Singularity_equip_dmg_reduce__common_5",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337708,7 +337831,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10632",
+    "ID": "10636",
     "BuffID": "Singularity_equip_dmg_reduce__common_6",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337738,7 +337861,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10633",
+    "ID": "10637",
     "BuffID": "Singularity_equip_dmg_reduce__common_7",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337768,7 +337891,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10634",
+    "ID": "10638",
     "BuffID": "Singularity_equip_dmg_reduce__common_8",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337798,7 +337921,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10635",
+    "ID": "10639",
     "BuffID": "Singularity_equip_dmg_reduce__common_9",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337828,7 +337951,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10636",
+    "ID": "10640",
     "BuffID": "Singularity_equip_dmg_reduce__common_10",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337858,7 +337981,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10637",
+    "ID": "10641",
     "BuffID": "Singularity_equip_dmg_reduce__common_11",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -337888,7 +338011,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10638",
+    "ID": "10642",
     "BuffID": "Singularity_equip_dmg_singularity_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -337919,7 +338042,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10639",
+    "ID": "10643",
     "BuffID": "Singularity_equip_dmg_singularity_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -337950,7 +338073,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10640",
+    "ID": "10644",
     "BuffID": "Singularity_equip_dmg_singularity_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -337981,7 +338104,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10641",
+    "ID": "10645",
     "BuffID": "Singularity_equip_dmg_singularity_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338012,7 +338135,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10642",
+    "ID": "10646",
     "BuffID": "Singularity_equip_dmg_singularity_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338043,7 +338166,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10643",
+    "ID": "10647",
     "BuffID": "Singularity_equip_dmg_singularity_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338074,7 +338197,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10644",
+    "ID": "10648",
     "BuffID": "Singularity_equip_dmg_singularity_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338105,7 +338228,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10645",
+    "ID": "10649",
     "BuffID": "Singularity_equip_dmg_singularity_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338136,7 +338259,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10646",
+    "ID": "10650",
     "BuffID": "Singularity_equip_dmg_singularity_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338167,7 +338290,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10647",
+    "ID": "10651",
     "BuffID": "Singularity_equip_dmg_singularity_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338198,7 +338321,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10648",
+    "ID": "10652",
     "BuffID": "Singularity_equip_dmg_singularity_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338229,7 +338352,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10649",
+    "ID": "10653",
     "BuffID": "Singularity_equip_dmg_singularity_12",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338260,7 +338383,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10650",
+    "ID": "10654",
     "BuffID": "Singularity_equip_dmg_singularity_13",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338291,7 +338414,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10651",
+    "ID": "10655",
     "BuffID": "Singularity_equip_dmg_singularity_14",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338322,7 +338445,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10652",
+    "ID": "10656",
     "BuffID": "Singularity_equip_dmg_singularity_15",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338353,7 +338476,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10653",
+    "ID": "10657",
     "BuffID": "Singularity_equip_dmg_singularity_16",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338384,7 +338507,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10654",
+    "ID": "10658",
     "BuffID": "Singularity_equip_dmg_singularity_17",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338415,7 +338538,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10655",
+    "ID": "10659",
     "BuffID": "Singularity_equip_dmg_singularity_18",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338446,7 +338569,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10656",
+    "ID": "10660",
     "BuffID": "Singularity_equip_dmg_singularity_19",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338477,7 +338600,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10657",
+    "ID": "10661",
     "BuffID": "Singularity_equip_dmg_singularity_20",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338508,7 +338631,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10658",
+    "ID": "10662",
     "BuffID": "Singularity_equip_dmg_singularity_21",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338539,7 +338662,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10659",
+    "ID": "10663",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338570,7 +338693,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10660",
+    "ID": "10664",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338601,7 +338724,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10661",
+    "ID": "10665",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338632,7 +338755,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10662",
+    "ID": "10666",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338663,7 +338786,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10663",
+    "ID": "10667",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338694,7 +338817,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10664",
+    "ID": "10668",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_6",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338725,7 +338848,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10665",
+    "ID": "10669",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_7",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338756,7 +338879,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10666",
+    "ID": "10670",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_8",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338787,7 +338910,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10667",
+    "ID": "10671",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_9",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338818,7 +338941,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10668",
+    "ID": "10672",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_10",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338849,7 +338972,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10669",
+    "ID": "10673",
     "BuffID": "Singularity_equip_dmg_reduce__singularity_11",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338880,7 +339003,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10670",
+    "ID": "10674",
     "BuffID": "Common_Rage_Buff_101",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338915,7 +339038,7 @@
     "ToolTipID": "1069"
   },
   {
-    "ID": "10671",
+    "ID": "10675",
     "BuffID": "Common_Rage_Buff_102",
     "Level": "1",
     "Type": "BT_STAT",
@@ -338949,7 +339072,7 @@
     "ToolTipID": "1015"
   },
   {
-    "ID": "10672",
+    "ID": "10676",
     "BuffID": "Singularity_check",
     "Level": "1",
     "Type": "BT_NONE",
@@ -338979,7 +339102,7 @@
     "ToolTipID": "4089003"
   },
   {
-    "ID": "10673",
+    "ID": "10677",
     "BuffID": "Singularity_equip_dmg_singularity_skill03_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339010,7 +339133,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10674",
+    "ID": "10678",
     "BuffID": "Singularity_equip_dmg_singularity_skill03_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339041,7 +339164,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10675",
+    "ID": "10679",
     "BuffID": "Singularity_equip_dmg_singularity_skill03_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339072,7 +339195,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10676",
+    "ID": "10680",
     "BuffID": "Singularity_equip_dmg_singularity_skill03_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339103,7 +339226,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10677",
+    "ID": "10681",
     "BuffID": "Singularity_equip_dmg_singularity_skill03_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339134,7 +339257,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10678",
+    "ID": "10682",
     "BuffID": "trust_level_ATK_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339164,7 +339287,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10679",
+    "ID": "10683",
     "BuffID": "trust_level_ATK_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339194,7 +339317,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10680",
+    "ID": "10684",
     "BuffID": "trust_level_ATK_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339224,7 +339347,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10681",
+    "ID": "10685",
     "BuffID": "trust_level_ATK_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339254,7 +339377,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10682",
+    "ID": "10686",
     "BuffID": "trust_level_ATK_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339284,7 +339407,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10683",
+    "ID": "10687",
     "BuffID": "trust_level_DEF_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339314,7 +339437,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10684",
+    "ID": "10688",
     "BuffID": "trust_level_DEF_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339344,7 +339467,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10685",
+    "ID": "10689",
     "BuffID": "trust_level_DEF_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339374,7 +339497,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10686",
+    "ID": "10690",
     "BuffID": "trust_level_DEF_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339404,7 +339527,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10687",
+    "ID": "10691",
     "BuffID": "trust_level_DEF_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339434,7 +339557,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10688",
+    "ID": "10692",
     "BuffID": "trust_level_HP_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339464,7 +339587,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10689",
+    "ID": "10693",
     "BuffID": "trust_level_HP_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339494,7 +339617,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10690",
+    "ID": "10694",
     "BuffID": "trust_level_HP_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339524,7 +339647,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10691",
+    "ID": "10695",
     "BuffID": "trust_level_HP_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339554,7 +339677,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10692",
+    "ID": "10696",
     "BuffID": "trust_level_HP_5",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339584,7 +339707,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10693",
+    "ID": "10697",
     "BuffID": "Interacion_DMG_Boost_01",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -339614,7 +339737,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10694",
+    "ID": "10698",
     "BuffID": "Interacion_DMG_Boost_02",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -339644,7 +339767,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10695",
+    "ID": "10699",
     "BuffID": "singularity_rage_common",
     "Level": "1",
     "Type": "BT_EXTEND_DEBUFF",
@@ -339676,7 +339799,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10696",
+    "ID": "10700",
     "BuffID": "singularity_rage_common2",
     "Level": "1",
     "Type": "BT_EXTEND_DEBUFF",
@@ -339708,7 +339831,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10697",
+    "ID": "10701",
     "BuffID": "2000116_0",
     "Level": "1",
     "Type": "BT_SWAP_STAT_ATTACK",
@@ -339738,7 +339861,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10698",
+    "ID": "10702",
     "BuffID": "2000116_1_1",
     "Level": "1",
     "Type": "BT_CALL_BACKUP",
@@ -339769,7 +339892,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10699",
+    "ID": "10703",
     "BuffID": "2000116_1_1",
     "Level": "3",
     "Type": "BT_CALL_BACKUP",
@@ -339800,7 +339923,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10700",
+    "ID": "10704",
     "BuffID": "2000116_1_1",
     "Level": "5",
     "Type": "BT_CALL_BACKUP",
@@ -339831,7 +339954,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10701",
+    "ID": "10705",
     "BuffID": "2000116_2_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339865,7 +339988,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10702",
+    "ID": "10706",
     "BuffID": "2000116_2_2",
     "Level": "1",
     "Type": "BT_SHIELD_BASED_CASTER",
@@ -339900,7 +340023,7 @@
     "ToolTipID": "29"
   },
   {
-    "ID": "10703",
+    "ID": "10707",
     "BuffID": "2000116_2_3",
     "Level": "1",
     "Type": "BT_SHIELD_BASED_CASTER",
@@ -339935,7 +340058,7 @@
     "ToolTipID": "29"
   },
   {
-    "ID": "10704",
+    "ID": "10708",
     "BuffID": "2000116_2_4",
     "Level": "1",
     "Type": "BT_STAT",
@@ -339967,7 +340090,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10705",
+    "ID": "10709",
     "BuffID": "2000116_2_4",
     "Level": "5",
     "Type": "BT_STAT",
@@ -339999,159 +340122,22 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10706",
-    "BuffID": "2000116_3_1",
-    "Level": "1",
-    "Type": "BT_AGGRO",
-    "TargetType": "ENEMY_TEAM",
-    "CreateRate": "1000",
-    "StackCount": "1",
-    "IsIDOverlap": "False",
-    "IsTypeOverlap": "False",
-    "BuffDebuffType": "DEBUFF_IGNORE_RESIST",
-    "IsIgnoreInterruption": "False",
-    "IsEquip": "False",
-    "IsEquipBuff": "False",
-    "BuffCCType": "NONE",
-    "StatType": "ST_NONE",
-    "ApplyingType": "OAT_NONE",
-    "TargetSkillType": "SKT_NONE",
-    "BuffCreateType": "SKILL_FINISH",
-    "BuffConditionType": "NONE",
-    "IsLastCheck": "False",
-    "IgnoreCreateCheckCondition": "False",
-    "CallerSkillType": "SKT_ULTIMATE",
-    "TurnDuration": "1",
-    "BuffRemoveType": "ON_TURN_END",
-    "AdditiveAttack": "True",
-    "RemoveOnCasterDie": "True",
-    "CreateText": "SYS_BUFF_AGGRO",
-    "LastingEffect": "FX_Buff_Aggro_Loop",
-    "MaterialType": "CMT_NONE",
-    "IconName": "IG_Buff_Effect_Aggro",
-    "ToolTipID": "32"
-  },
-  {
-    "ID": "10707",
-    "BuffID": "2000116_3_1",
-    "Level": "5",
-    "Type": "BT_AGGRO",
-    "TargetType": "ENEMY_TEAM",
-    "CreateRate": "1000",
-    "StackCount": "1",
-    "IsIDOverlap": "False",
-    "IsTypeOverlap": "False",
-    "BuffDebuffType": "DEBUFF_IGNORE_RESIST",
-    "IsIgnoreInterruption": "False",
-    "IsEquip": "False",
-    "IsEquipBuff": "False",
-    "BuffCCType": "NONE",
-    "StatType": "ST_NONE",
-    "ApplyingType": "OAT_NONE",
-    "TargetSkillType": "SKT_NONE",
-    "BuffCreateType": "SKILL_FINISH",
-    "BuffConditionType": "NONE",
-    "IsLastCheck": "False",
-    "IgnoreCreateCheckCondition": "False",
-    "CallerSkillType": "SKT_ULTIMATE",
-    "TurnDuration": "2",
-    "BuffRemoveType": "ON_TURN_END",
-    "AdditiveAttack": "True",
-    "RemoveOnCasterDie": "True",
-    "CreateText": "SYS_BUFF_AGGRO",
-    "LastingEffect": "FX_Buff_Aggro_Loop",
-    "MaterialType": "CMT_NONE",
-    "IconName": "IG_Buff_Effect_Aggro",
-    "ToolTipID": "32"
-  },
-  {
-    "ID": "10708",
-    "BuffID": "2000116_3_2",
-    "Level": "1",
-    "Type": "BT_SHIELD_BASED_CASTER",
-    "TargetType": "MY_TEAM",
-    "CreateRate": "1000",
-    "StackCount": "1",
-    "IsIDOverlap": "False",
-    "IsTypeOverlap": "False",
-    "BuffDebuffType": "BUFF",
-    "IsIgnoreInterruption": "False",
-    "IsEquip": "False",
-    "IsEquipBuff": "False",
-    "BuffCCType": "NONE",
-    "StatType": "ST_DEF",
-    "ApplyingType": "OAT_RATE",
-    "Value": "400",
-    "TargetSkillType": "SKT_NONE",
-    "BuffCreateType": "SKILL_FINISH",
-    "BuffConditionType": "NONE",
-    "IsLastCheck": "False",
-    "IgnoreCreateCheckCondition": "False",
-    "CallerSkillType": "SKT_ULTIMATE",
-    "TurnDuration": "1",
-    "BuffRemoveType": "ON_TURN_END",
-    "AdditiveAttack": "True",
-    "RemoveOnCasterDie": "False",
-    "CreateText": "SYS_BUFF_SHIELD",
-    "LastingEffect": "FX_Buff_Shield_Loop",
-    "RemoveEffect": "FX_Buff_Shield_End",
-    "MaterialType": "CMT_NONE",
-    "IconName": "IG_Buff_Effect_Shield",
-    "ToolTipID": "29"
-  },
-  {
-    "ID": "10709",
-    "BuffID": "2000116_3_2",
-    "Level": "5",
-    "Type": "BT_SHIELD_BASED_CASTER",
-    "TargetType": "MY_TEAM",
-    "CreateRate": "1000",
-    "StackCount": "1",
-    "IsIDOverlap": "False",
-    "IsTypeOverlap": "False",
-    "BuffDebuffType": "BUFF",
-    "IsIgnoreInterruption": "False",
-    "IsEquip": "False",
-    "IsEquipBuff": "False",
-    "BuffCCType": "NONE",
-    "StatType": "ST_DEF",
-    "ApplyingType": "OAT_RATE",
-    "Value": "400",
-    "TargetSkillType": "SKT_NONE",
-    "BuffCreateType": "SKILL_FINISH",
-    "BuffConditionType": "NONE",
-    "IsLastCheck": "False",
-    "IgnoreCreateCheckCondition": "False",
-    "CallerSkillType": "SKT_ULTIMATE",
-    "TurnDuration": "2",
-    "BuffRemoveType": "ON_TURN_END",
-    "AdditiveAttack": "True",
-    "RemoveOnCasterDie": "False",
-    "CreateText": "SYS_BUFF_SHIELD",
-    "LastingEffect": "FX_Buff_Shield_Loop",
-    "RemoveEffect": "FX_Buff_Shield_End",
-    "MaterialType": "CMT_NONE",
-    "IconName": "IG_Buff_Effect_Shield",
-    "ToolTipID": "29"
-  },
-  {
     "ID": "10710",
-    "BuffID": "2000116_3_3",
+    "BuffID": "2000116_3_1",
     "Level": "1",
-    "Type": "BT_STAT",
-    "TargetType": "MY_TEAM",
+    "Type": "BT_AGGRO",
+    "TargetType": "ENEMY_TEAM",
     "CreateRate": "1000",
     "StackCount": "1",
     "IsIDOverlap": "False",
     "IsTypeOverlap": "False",
-    "BuffDebuffType": "BUFF",
+    "BuffDebuffType": "DEBUFF_IGNORE_RESIST",
     "IsIgnoreInterruption": "False",
     "IsEquip": "False",
     "IsEquipBuff": "False",
     "BuffCCType": "NONE",
-    "StatType": "ST_COUNTER_RATE",
-    "ApplyingType": "OAT_ADD",
-    "Value": "1000",
+    "StatType": "ST_NONE",
+    "ApplyingType": "OAT_NONE",
     "TargetSkillType": "SKT_NONE",
     "BuffCreateType": "SKILL_FINISH",
     "BuffConditionType": "NONE",
@@ -340161,14 +340147,151 @@
     "TurnDuration": "1",
     "BuffRemoveType": "ON_TURN_END",
     "AdditiveAttack": "True",
-    "RemoveOnCasterDie": "False",
-    "ActivateText": "SYS_BUFF_COUNTER_UP",
+    "RemoveOnCasterDie": "True",
+    "CreateText": "SYS_BUFF_AGGRO",
+    "LastingEffect": "FX_Buff_Aggro_Loop",
     "MaterialType": "CMT_NONE",
-    "IconName": "IG_Buff_Counter",
-    "ToolTipID": "45"
+    "IconName": "IG_Buff_Effect_Aggro",
+    "ToolTipID": "32"
   },
   {
     "ID": "10711",
+    "BuffID": "2000116_3_1",
+    "Level": "5",
+    "Type": "BT_AGGRO",
+    "TargetType": "ENEMY_TEAM",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "False",
+    "BuffDebuffType": "DEBUFF_IGNORE_RESIST",
+    "IsIgnoreInterruption": "False",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_NONE",
+    "ApplyingType": "OAT_NONE",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "SKILL_FINISH",
+    "BuffConditionType": "NONE",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ULTIMATE",
+    "TurnDuration": "2",
+    "BuffRemoveType": "ON_TURN_END",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "True",
+    "CreateText": "SYS_BUFF_AGGRO",
+    "LastingEffect": "FX_Buff_Aggro_Loop",
+    "MaterialType": "CMT_NONE",
+    "IconName": "IG_Buff_Effect_Aggro",
+    "ToolTipID": "32"
+  },
+  {
+    "ID": "10712",
+    "BuffID": "2000116_3_2",
+    "Level": "1",
+    "Type": "BT_SHIELD_BASED_CASTER",
+    "TargetType": "MY_TEAM",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "False",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "False",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_DEF",
+    "ApplyingType": "OAT_RATE",
+    "Value": "400",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "SKILL_FINISH",
+    "BuffConditionType": "NONE",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ULTIMATE",
+    "TurnDuration": "1",
+    "BuffRemoveType": "ON_TURN_END",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "CreateText": "SYS_BUFF_SHIELD",
+    "LastingEffect": "FX_Buff_Shield_Loop",
+    "RemoveEffect": "FX_Buff_Shield_End",
+    "MaterialType": "CMT_NONE",
+    "IconName": "IG_Buff_Effect_Shield",
+    "ToolTipID": "29"
+  },
+  {
+    "ID": "10713",
+    "BuffID": "2000116_3_2",
+    "Level": "5",
+    "Type": "BT_SHIELD_BASED_CASTER",
+    "TargetType": "MY_TEAM",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "False",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "False",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_DEF",
+    "ApplyingType": "OAT_RATE",
+    "Value": "400",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "SKILL_FINISH",
+    "BuffConditionType": "NONE",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ULTIMATE",
+    "TurnDuration": "2",
+    "BuffRemoveType": "ON_TURN_END",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "CreateText": "SYS_BUFF_SHIELD",
+    "LastingEffect": "FX_Buff_Shield_Loop",
+    "RemoveEffect": "FX_Buff_Shield_End",
+    "MaterialType": "CMT_NONE",
+    "IconName": "IG_Buff_Effect_Shield",
+    "ToolTipID": "29"
+  },
+  {
+    "ID": "10714",
+    "BuffID": "2000116_3_3",
+    "Level": "1",
+    "Type": "BT_STAT",
+    "TargetType": "MY_TEAM",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "False",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "False",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_COUNTER_RATE",
+    "ApplyingType": "OAT_ADD",
+    "Value": "1000",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "SKILL_FINISH",
+    "BuffConditionType": "NONE",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ULTIMATE",
+    "TurnDuration": "1",
+    "BuffRemoveType": "ON_TURN_END",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "ActivateText": "SYS_BUFF_COUNTER_UP",
+    "MaterialType": "CMT_NONE",
+    "IconName": "IG_Buff_Counter",
+    "ToolTipID": "45"
+  },
+  {
+    "ID": "10715",
     "BuffID": "2000116_3_3",
     "Level": "5",
     "Type": "BT_STAT",
@@ -340201,7 +340324,7 @@
     "ToolTipID": "45"
   },
   {
-    "ID": "10712",
+    "ID": "10716",
     "BuffID": "2000116_3_4",
     "Level": "1",
     "Type": "BT_ACTION_GAUGE",
@@ -340232,7 +340355,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10713",
+    "ID": "10717",
     "BuffID": "2000116_3_4",
     "Level": "4",
     "Type": "BT_ACTION_GAUGE",
@@ -340263,7 +340386,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10714",
+    "ID": "10718",
     "BuffID": "2000116_chain_1_1",
     "Level": "1",
     "Type": "BT_COOL3_CHARGE",
@@ -340295,7 +340418,7 @@
     "IconName": "IG_Buff_Cool_Charge_Interruption"
   },
   {
-    "ID": "10715",
+    "ID": "10719",
     "BuffID": "2000116_backup_1_1",
     "Level": "1",
     "Type": "BT_SHIELD_BASED_CASTER",
@@ -340330,7 +340453,7 @@
     "ToolTipID": "29"
   },
   {
-    "ID": "10716",
+    "ID": "10720",
     "BuffID": "2000116_u_1_1",
     "Level": "1",
     "Type": "BT_STAT",
@@ -340360,7 +340483,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10717",
+    "ID": "10721",
     "BuffID": "2000116_u_1_2",
     "Level": "1",
     "Type": "BT_AGGRO",
@@ -340393,7 +340516,7 @@
     "ToolTipID": "32"
   },
   {
-    "ID": "10718",
+    "ID": "10722",
     "BuffID": "2000116_u_2",
     "Level": "1",
     "Type": "BT_STAT",
@@ -340423,7 +340546,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10719",
+    "ID": "10723",
     "BuffID": "2000116_u_3",
     "Level": "1",
     "Type": "BT_STAT",
@@ -340453,7 +340576,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10720",
+    "ID": "10724",
     "BuffID": "BID_CEQUIP_2000116_1",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -340484,7 +340607,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10721",
+    "ID": "10725",
     "BuffID": "BID_CEQUIP_2000116_2",
     "Level": "1",
     "Type": "BT_STAT_PREMIUM",
@@ -340515,7 +340638,7 @@
     "MaterialType": "CMT_NONE"
   },
   {
-    "ID": "10722",
+    "ID": "10726",
     "BuffID": "BID_CEQUIP_2000116_ADD",
     "Level": "1",
     "Type": "BT_STAT",
@@ -340543,6 +340666,229 @@
     "BuffRemoveType": "ON_SKILL_FINISH",
     "AdditiveAttack": "True",
     "RemoveOnCasterDie": "False",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10727",
+    "BuffID": "singularity_passive_dmg_earth3",
+    "Level": "1",
+    "Type": "BT_STAT",
+    "TargetType": "ENEMY_TEAM",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "NEUTRAL",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_DMG_BOOST",
+    "ApplyingType": "OAT_ADD",
+    "Value": "700",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "ON_SPAWN2",
+    "BuffConditionType": "OWNER_TEAM_ELEMENT_EARTH_COUNT",
+    "BuffConditionValue": "3",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "CreateText": "SYS_BUFF_DMG",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10728",
+    "BuffID": "singularity_passive_dmg_earth4",
+    "Level": "1",
+    "Type": "BT_STAT",
+    "TargetType": "ENEMY_TEAM",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "NEUTRAL",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_DMG_BOOST",
+    "ApplyingType": "OAT_ADD",
+    "Value": "1500",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "ON_SPAWN2",
+    "BuffConditionType": "OWNER_TEAM_ELEMENT_EARTH_COUNT",
+    "BuffConditionValue": "4",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "CreateText": "SYS_BUFF_DMG",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10729",
+    "BuffID": "singularity_passive_enemy_1_attacker",
+    "Level": "1",
+    "Type": "BT_STAT",
+    "TargetType": "ENEMY_TEAM_MAGE",
+    "CreateRate": "1000",
+    "StackCount": "10",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_DMG_BOOST",
+    "ApplyingType": "OAT_ADD",
+    "Value": "80",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "ON_TURN_END_DEFENDER",
+    "BuffConditionType": "OWNER_TEAM_CLASS_ATTACKER_COUNT",
+    "BuffConditionValue": "1",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "CreateText": "SYS_BUFF_DMG",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10730",
+    "BuffID": "singularity_passive_enemy_1_priest",
+    "Level": "1",
+    "Type": "BT_STAT",
+    "TargetType": "ENEMY_TEAM",
+    "CreateRate": "1000",
+    "StackCount": "10",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_DMG_REDUCE_RATE",
+    "ApplyingType": "OAT_ADD",
+    "Value": "80",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "ON_TURN_END_DEFENDER",
+    "BuffConditionType": "OWNER_TEAM_CLASS_PRIEST_COUNT",
+    "BuffConditionValue": "1",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "CreateText": "SYS_BUFF_DMG_REDUCE_RATE_UP",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10731",
+    "BuffID": "singularity_passive_enemy_1_deffender",
+    "Level": "1",
+    "Type": "BT_STAT",
+    "TargetType": "ME",
+    "CreateRate": "1000",
+    "StackCount": "5",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "NEUTRAL",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_ATK",
+    "ApplyingType": "OAT_RATE",
+    "Value": "-20",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "ON_TURN_END_DEFENDER",
+    "BuffConditionType": "TARGET_TEAM_CLASS_DEFENDER_COUNT",
+    "BuffConditionValue": "1",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "CreateEffect": "FX_Buff_Attack_Broken",
+    "CreateText": "SYS_BUFF_ATTACK_DOWN",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10732",
+    "BuffID": "singularity_passive_enemy_1_ranger",
+    "Level": "1",
+    "Type": "BT_REVERSE_HEAL_BASED_TARGET",
+    "TargetType": "ME",
+    "CreateRate": "1000",
+    "StackCount": "1",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "NEUTRAL",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_HP",
+    "ApplyingType": "OAT_RATE",
+    "Value": "10",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "ON_TURN_END_DEFENDER",
+    "BuffConditionType": "TARGET_TEAM_CLASS_RANGER_COUNT",
+    "BuffConditionValue": "1",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "BuffRemoveType": "IMMEDIATELY",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "MaterialType": "CMT_NONE"
+  },
+  {
+    "ID": "10733",
+    "BuffID": "singularity_passive_enemy_1_mage",
+    "Level": "1",
+    "Type": "BT_STAT",
+    "TargetType": "ENEMY_TEAM_ATTACKER",
+    "CreateRate": "1000",
+    "StackCount": "10",
+    "IsIDOverlap": "False",
+    "IsTypeOverlap": "True",
+    "BuffDebuffType": "BUFF",
+    "IsIgnoreInterruption": "True",
+    "IsEquip": "False",
+    "IsEquipBuff": "False",
+    "BuffCCType": "NONE",
+    "StatType": "ST_DMG_BOOST",
+    "ApplyingType": "OAT_ADD",
+    "Value": "80",
+    "TargetSkillType": "SKT_NONE",
+    "BuffCreateType": "ON_TURN_END_DEFENDER",
+    "BuffConditionType": "OWNER_TEAM_CLASS_MAGE_COUNT",
+    "BuffConditionValue": "1",
+    "IsLastCheck": "False",
+    "IgnoreCreateCheckCondition": "False",
+    "CallerSkillType": "SKT_ALL",
+    "TurnDuration": "-1",
+    "BuffRemoveType": "NONE",
+    "AdditiveAttack": "True",
+    "RemoveOnCasterDie": "False",
+    "CreateText": "SYS_BUFF_DMG",
     "MaterialType": "CMT_NONE"
   }
 ]

@@ -240,6 +240,8 @@
   },
   "60000005": {
     "SKT_RAGE_ENTER1": {
+      "clear_debuff": true,
+      "clear_buff": true,
       "buff": [
         "BT_STAT|ST_SPEED_IR",
         "BT_DAMAGE_TAKEN",
@@ -340,10 +342,8 @@
   "skill:Dimensional Rift": {
     "*": {
       "buff": [
-        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
-      ],
-      "debuff": [
-        "BT_STAT|ST_PIERCE_POWER_RATE_IR"
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR",
+        "BT_ACTION_GAUGE"
       ]
     }
   },

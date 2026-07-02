@@ -1857,8 +1857,8 @@
   },
   {
     "ID": "SYS_BUFF_DESC_2000110",
-    "Korean": "자신의 속도가 90% 감소하고, 아군이 턴을 획득하여 행동 시 참회하세요! 를 가장 공격력이 높은 적에게 사용합니다.\\n이후 자신의 행동 게이지가 40% 증가합니다.(해제 불가, 보스 브레이크 및 자신 턴 종료 시 해제, 혼자 생존 시 속도 감소 효과 제거 및 미발생)",
-    "English": "Reduces the caster’s Speed by 90%. When an ally takes a turn and performs an action, the caster uses Repent! on the enemy with the highest Attack.. Then, increase the caster’s Priority by 40%. (Irremovable. Removed when a Boss Break occurs or at the end of the caster’s turn. When the caster is the only surviving ally, the Speed reduction effect is removed and will not occur.)",
+    "Korean": "자신의 속도가 90% 감소하고, 아군이 턴을 획득하여 행동 시 [참회하세요!]를 가장 공격력이 높은 적에게 사용합니다.\\n이후 자신의 행동 게이지가 40% 증가합니다.(해제 불가, 보스 브레이크 및 자신 턴 종료 시 해제, 혼자 생존 시 속도 감소 효과 제거 및 미발생)",
+    "English": "Reduces the caster’s Speed by 90%. When an ally takes a turn and performs an action, the caster uses [Repent!] on the enemy with the highest Attack.. Then, increase the caster’s Priority by 40%. (Irremovable. Removed when a Boss Break occurs or at the end of the caster’s turn. When the caster is the only surviving ally, the Speed reduction effect is removed and will not occur.)",
     "Japanese": "自分のスピードが90%DOWNし、\\n味方がターンを獲得して行動する時、\\n攻撃力が最も高い敵単体に\\n【懺悔なさい！】を発動する。\\nその後、\\n自分の行動ゲージが40%UPする。\\n（解除不可、ブレイクまたは\\n自分のターン終了時に解除。\\n三蔵法師・あめのみ生存時は\\nスピードDOWN効果を解除し、\\n効果は発動しない）",
     "China_Simplified": "自身速度降低90%，\\n当我方单位获得回合并行动时，\\n对攻击力最高的敌人使用【忏悔吧!】。\\n\\n之后自身行动值提高40%。\\n（无法驱散，首领进入力竭状态及\\n自身回合结束时解除，\\n独自生存时\\n速度降低效果将被移除且不会触发）",
     "China_Traditional": "自身速度降低90%，\\n當我方單位獲得回合並行動時，\\n對攻擊力最高的敵人使用「懺悔吧！」。\\n之後自身行動值提高40%。\\n（無法驅散，首領進入休息狀態及\\n自身回合結束時解除，\\n獨自生存時\\n速度降低效果將被移除且不會發生）"
@@ -5883,33 +5883,33 @@
     "ID": "SYS_CHARACTER_TIER_BEGINNER",
     "Korean": "Beginner",
     "English": "Beginner",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "Beginner",
+    "China_Simplified": "Beginner",
+    "China_Traditional": "Beginner"
   },
   {
     "ID": "SYS_CHARACTER_TIER_EXPERT",
     "Korean": "Expert",
     "English": "Expert",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "Expert",
+    "China_Simplified": "Expert",
+    "China_Traditional": "Expert"
   },
   {
     "ID": "SYS_CHARACTER_TIER_MASTER",
     "Korean": "Master",
     "English": "Master",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "Master",
+    "China_Simplified": "Master",
+    "China_Traditional": "Master"
   },
   {
     "ID": "SYS_CHARACTER_TIER_GRANDMASTER",
     "Korean": "Grand Master",
     "English": "Grand Master",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "Grand Master",
+    "China_Simplified": "Grand Master",
+    "China_Traditional": "Grand Master"
   },
   {
     "ID": "SYS_CHARACTER_INVEN",
@@ -5963,9 +5963,9 @@
     "ID": "SYS_FAVORITE_CHARACTER_FAIL",
     "Korean": "대표 변경이 실패하였습니다.",
     "English": "Failed to change the leader.",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "代表変更に失敗しました。",
+    "China_Simplified": "代表变更失败。",
+    "China_Traditional": "代表變更失敗。"
   },
   {
     "ID": "SYS_STAT_LIKEABILITY",
@@ -5979,9 +5979,9 @@
     "ID": "SYS_VISIBLE_BATTLE_POWER",
     "Korean": "전투력 표기",
     "English": "Show Combat Power",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "戦闘力",
+    "China_Simplified": "战斗力",
+    "China_Traditional": "戰鬥力"
   },
   {
     "ID": "SYS_EQUIP_WEAPON",
@@ -6153,11 +6153,11 @@
   },
   {
     "ID": "SYS_NOT_EQUIP_BATTLETYPE",
-    "Korean": "전투 타입 제한",
+    "Korean": "배틀 타입 제한",
     "English": "Battle Type Restriction",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "戦闘タイプ制限",
+    "China_Simplified": "战斗类型限制",
+    "China_Traditional": "戰鬥類型限制"
   },
   {
     "ID": "SYS_DECK_CHANGE_NAME",
@@ -7020,7 +7020,7 @@
     "Korean": "동료 클래스업 실패",
     "English": "Failed to upgrade hero class.",
     "Japanese": "仲間のクラスアップに失敗しました。",
-    "China_Simplified": "0",
+    "China_Simplified": "同伴職業提升失敗",
     "China_Traditional": "同伴職業提升失敗"
   },
   {
@@ -7539,25 +7539,25 @@
     "ID": "SYS_GRADE_R",
     "Korean": "R",
     "English": "R",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "R",
+    "China_Simplified": "R",
+    "China_Traditional": "R"
   },
   {
     "ID": "SYS_GRADE_SR",
     "Korean": "SR",
     "English": "SR",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "SR",
+    "China_Simplified": "SR",
+    "China_Traditional": "SR"
   },
   {
     "ID": "SYS_GRADE_SSR",
     "Korean": "SSR",
     "English": "SSR",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "SSR",
+    "China_Simplified": "SSR",
+    "China_Traditional": "SSR"
   },
   {
     "ID": "SYS_CHARACTERFILTER_CLASS",
@@ -7657,11 +7657,11 @@
   },
   {
     "ID": "SYS_GACHA_RECRUIT_POPUP_NOTICE",
-    "Korean": "우선 순위에 따라 위의 재화를 소모합니다.\\n우선 소모되는 재화가 부족한 경우, 다음 우선순위의 재화가 소모됩니다. \\n(이벤트)가 붙은 영입 재화는 마일리지가 적립되지 않습니다.",
-    "English": "The resources above are used based on priority.\\nIf there is an insufficient amount of the current resource being used, the next resource available according to priority will be used.\\nUsing (Event) resources does not provide any mileage rewards.",
-    "Japanese": "上記のアイテムを消費します。\\n無償アイテムが足りない場合は、有償アイテムが代わりに消費されます。\\n(イベント)と書かれたスカウトチケットは交換Ptに変換されません。",
-    "China_Simplified": "将按优先顺序消耗货币。\\n优先消耗的货币不足时，将按照顺序消耗下一种货币。\\n使用有(活动)标记的招募货币时无法获得积分。",
-    "China_Traditional": "將按照優先順序消耗財物。\\n優先消耗的財物不足時，將按照以下順序來消耗財物。\\n招募財物若有標示(活動)字樣時，將無法累積積分。"
+    "Korean": "우선 순위에 따라 위의 재화를 소모합니다.\\n우선 소모되는 재화가 부족한 경우, 다음 우선순위의 재화가 소모됩니다.",
+    "English": "The resources above are used based on priority.\\nIf the highest-priority resource is insufficient, the next available resource will be used.",
+    "Japanese": "上記のアイテムを消費します。\\n無償アイテムが足りない場合は、有償アイテムが代わりに消費されます。",
+    "China_Simplified": "将按优先顺序消耗货币。\\n优先消耗的货币不足时，将按照顺序消耗下一种货币。",
+    "China_Traditional": "將按照優先順序消耗財物。\\n優先消耗的財物不足時，將按照以下順序來消耗財物。"
   },
   {
     "ID": "SYS_GACHA_RECRUIT_RATE_INFO",
@@ -7873,11 +7873,11 @@
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_3",
-    "Korean": "보안 카드",
-    "English": "Security Card",
-    "Japanese": "セキュリティカード",
-    "China_Simplified": "安全卡",
-    "China_Traditional": "安全卡"
+    "Korean": "맛 좋은 생선",
+    "English": "Tasty Fish",
+    "Japanese": "おいしい魚",
+    "China_Simplified": "美味的鱼",
+    "China_Traditional": "美味的魚"
   },
   {
     "ID": "SYS_ASSET_EVENT_COIN_4",
@@ -8105,11 +8105,11 @@
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_3",
-    "Korean": "비밀 창고의 열쇠, 특정한 보안 카드만 그 두꺼운 문을 연다. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
-    "English": "A key to the secret vault. Only a specific Security Card can open its heavy door. You can exchange it for a variety of items in the Event Shop.",
-    "Japanese": "秘密倉庫の鍵、特定のセキュリティカードだけがその厚い扉を開ける。イベントショップでさまざまな商品と交換できます。",
-    "China_Simplified": "秘密仓库的钥匙，只有特定的安全卡才能打开那扇厚重的门。可在活动商店中兑换各种商品。",
-    "China_Traditional": "秘密倉庫的鑰匙，只有特定的安全卡才能打開那扇厚重的門。可在活動商店中兌換各種商品。"
+    "Korean": "바다에서 생존하기 위한 필수품. 이벤트 상점에서 다양한 상품과 교환할 수 있습니다.",
+    "English": "An essential item for surviving at sea. Can be exchanged for various items in the Event Shop.",
+    "Japanese": "海で生き残るための必需品。イベントショップでさまざまなアイテムと交換可能。",
+    "China_Simplified": "在海上生存的必需品。可在活动商店兑换各种商品。",
+    "China_Traditional": "在海上生存的必需品。可在活動商店兌換各種商品。"
   },
   {
     "ID": "SYS_DISC_EVENT_COIN_4",
@@ -12675,17 +12675,17 @@
     "ID": "SYS_PUSH_MAIL_TEST02_T",
     "Korean": "우편 테스트2",
     "English": "Mail Test 2",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "Mail Test 2",
+    "China_Simplified": "Mail Test 2",
+    "China_Traditional": "Mail Test 2"
   },
   {
     "ID": "SYS_PUSH_MAIL_TEST03_T",
     "Korean": "우편 테스트3",
     "English": "Mail Test 3",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "Mail Test 3",
+    "China_Simplified": "Mail Test 3",
+    "China_Traditional": "Mail Test 3"
   },
   {
     "ID": "SYS_PUSH_MAIL_TEST04_T",
@@ -12699,25 +12699,25 @@
     "ID": "SYS_PUSH_MAIL_TEST01_C",
     "Korean": "우편 테스트1입니다.\\n잊지 말고 수령해 주세요",
     "English": "Mail Test 1.\\nDeleted after 5 minutes.",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "Mail Test 1.\\nDeleted after 5 minutes.",
+    "China_Simplified": "Mail Test 1.\\nDeleted after 5 minutes.",
+    "China_Traditional": "Mail Test 1.\\nDeleted after 5 minutes."
   },
   {
     "ID": "SYS_PUSH_MAIL_TEST02_C",
     "Korean": "우편 테스트2입니다.\\n60분 뒤에 삭제됩니다.",
     "English": "Mail Test 2.\\nDeleted after 60 minutes.",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "Mail Test 2.\\nDeleted after 60 minutes.",
+    "China_Simplified": "Mail Test 2.\\nDeleted after 60 minutes.",
+    "China_Traditional": "Mail Test 2.\\nDeleted after 60 minutes."
   },
   {
     "ID": "SYS_PUSH_MAIL_TEST03_C",
     "Korean": "우편 테스트3입니다.\\n24시간 뒤에 삭제됩니다",
     "English": "Mail Test 3.\\nDeleted in 24 hours.",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "Mail Test 3.\\nDeleted in 24 hours.",
+    "China_Simplified": "Mail Test 3.\\nDeleted in 24 hours.",
+    "China_Traditional": "Mail Test 3.\\nDeleted in 24 hours."
   },
   {
     "ID": "SYS_PUSH_MAIL_TEST04_C",
@@ -14715,40 +14715,40 @@
     "ID": "SYS_REMAINS_LOOP_TITLE_01_01",
     "Korean": "무한의 회랑",
     "English": "The Infinite Corridor",
-    "Japanese": "0",
-    "China_Simplified": "0",
+    "Japanese": "無限の回廊",
+    "China_Simplified": "无限回廊",
     "China_Traditional": "無限迴廊"
   },
   {
     "ID": "SYS_REMAINS_LOOP_TITLE_01_02",
     "Korean": "무한의 회랑",
     "English": "The Infinite Corridor",
-    "Japanese": "0",
-    "China_Simplified": "0",
+    "Japanese": "無限の回廊",
+    "China_Simplified": "无限回廊",
     "China_Traditional": "無限迴廊"
   },
   {
     "ID": "SYS_REMAINS_LOOP_TITLE_02_01",
     "Korean": "무한의 회랑 <심연>",
     "English": "The Infinite Corridor <Abyss>",
-    "Japanese": "0",
-    "China_Simplified": "0",
+    "Japanese": "無限の回廊",
+    "China_Simplified": "无限回廊",
     "China_Traditional": "無限迴廊〈深淵〉"
   },
   {
     "ID": "SYS_REMAINS_LOOP_TITLE_02_02",
     "Korean": "무한의 회랑 <심연>",
     "English": "The Infinite Corridor <Abyss>",
-    "Japanese": "0",
-    "China_Simplified": "0",
+    "Japanese": "無限の回廊",
+    "China_Simplified": "无限回廊",
     "China_Traditional": "無限迴廊〈深淵〉"
   },
   {
     "ID": "SYS_REMAINS_LOOP_TITLE_02_03",
     "Korean": "무한의 회랑 <심연>",
     "English": "The Infinite Corridor <Abyss>",
-    "Japanese": "0",
-    "China_Simplified": "0",
+    "Japanese": "無限の回廊",
+    "China_Simplified": "无限回廊",
     "China_Traditional": "無限迴廊〈深淵〉"
   },
   {
@@ -17898,7 +17898,7 @@
   {
     "ID": "SYS_GUIDE_TRUST_05_DESC",
     "Korean": "[대화하기] 기능은 동료 한 명당 일일 1회, 하루에 최대 5명의 동료와 대화할 수 있는 기능입니다. \\n대화 중 선택하는 선택지에 따라 애정도를 획득할 수 있습니다.\\n\\n[교감하기] 기능을 통해 일일 1회 원하는 동료에게 기프트를 주입할 수 있습니다. 기프트 주입 시 하루 동안 해당 동료의 능력이 상승합니다.\\n상승한 능력치는 일일 초기화 시점에 초기화됩니다.",
-    "English": "The [Chat] feature allows you to talk to up to 5 heroes per day, once per hero.\\nAffinity can be gained depending on the choices you make during conversations.\\n\\nThrough the [Bond] feature, you can infuse a Gift into a hero of your choice once per day. When a Gift is infused, that hero's stats increase for the day.\\nThe increased stats reset at the daily reset time.",
+    "English": "The [Chat] feature lets you talk with up to 5 Heroes per day, once per Hero.\\nAffinity can be gained based on the choices you make during conversations.\\n\\nThrough the [Bond] feature, you can infuse a Gift into one Hero of your choice once per day. Infusing a Gift increases that Hero's stats for the day.\\nThe increased stats reset at the daily reset time.",
     "Japanese": "【会話する】機能は仲間1人につき1日1回、1日に最大5人の仲間と会話できる機能です。\\n会話中に選択する選択肢によって愛情度を獲得できます。\\n\\n【ふれあい】機能を通じて、1日1回好きな仲間にギフトを注入できます。ギフト注入時、その日の間その仲間の能力が上昇します。\\n上昇した能力値は日次リセット時点でリセットされます。",
     "China_Simplified": "【对话】功能是每位同伴每日可对话1次，一天最多可与5名同伴对话的功能。\\n可根据对话中选择的选项获得好感度。\\n\\n通过【互动】功能，每日可向1名心仪的同伴注入礼物。注入礼物时，该同伴当天的能力将得到提升。\\n提升的能力值将在每日重置时点重置。",
     "China_Traditional": "【對話】功能是每位同伴每日可對話1次，一天最多可與5名同伴對話的功能。\\n可根據對話中選擇的選項獲得好感度。\\n\\n透過【互動】功能，每日可向1名心儀的同伴注入禮物。注入禮物時，該同伴當天的能力將得到提升。\\n提升的能力值將在每日重置時點重置。"
@@ -18073,11 +18073,11 @@
   },
   {
     "ID": "SYS_GUIDE_RECRUIT_01_DESC",
-    "Korean": "재화를 사용하여 동료를 [영입]할 수 있습니다.\\n[영입]의 종류에 따라 필요한 재화 종류나 비용이 다르며, 등장하는 [동료]의 종류 및 확률이 달라지기 때문에 정보를 미리 확인하세요.\\n하루에 한번 무료로 [커스텀 픽업 영입]을 할수 있습니다.",
-    "English": "Resources can be used to [Recruit] heroes.\\nBecause the type and cost needed and the type and chance of [Heroes] vary depending on the type of [Recruit], please make sure to check the related information in advance.\\nOne [Custom Rate Up Recruit] can be done for free every day.",
-    "Japanese": "【スカウト】では特定のアイテムを消費して、仲間を呼ぶことができます。\\nそれぞれの【スカウト】によって必要なアイテムや、必要なコストが異なり、登場する【仲間】の種類および確率も\\n異なります。\\n【スカウト】を行う前には、予め詳細を確認しましょう。\\n1日に1回、無料で【カスタムピックアップスカウト】を行えます。",
-    "China_Simplified": "可使用货币【招募】同伴。\\n根据【招募】类型，所需货币种类或费用有所不同，\\n且出现的【同伴】及几率也会发生变化，请提前确认信息。\\n每天可免费进行1次【自选PICKUP招募】。",
-    "China_Traditional": "使用財物即可【招募】同伴。\\n根據【同伴】種類的不同，招募所需財物的種類和費用也有所不同；登場【同伴】的種類及機率皆不同，因此請務必事先進行確認。\\n每天可免費進行一次【訂製PICKUP招募】。"
+    "Korean": "재화를 사용하여 동료를 [영입]할 수 있습니다.\\n[영입]의 종류에 따라 필요한 재화 종류나 비용이 다르며, 등장하는 [동료]의 종류 및 확률이 달라지기 때문에 정보를 미리 확인하세요.\\n하루에 한번 무료로 [커스텀 픽업 영입]과 [데미우르고스 영입]을 할수 있습니다.",
+    "English": "Resources can be used to [Recruit] Heroes.\\nRequired resources and costs vary by [Recruit] type, and available [Heroes] and rates may differ. Check the details before recruiting.\\nYou can perform [Custom Rate Up Recruit] and [Demiurge Recruit] once per day for free.",
+    "Japanese": "【スカウト】では特定のアイテムを消費して、仲間を呼ぶことができます。\\nそれぞれの【スカウト】によって必要なアイテムや、必要なコストが異なり、登場する【仲間】の種類および確率も\\n異なります。\\n【スカウト】を行う前には、予め詳細を確認しましょう。\\n1日に1回、無料で【カスタムピックアップスカウト】と【デミウルゴススカウト】を行えます。",
+    "China_Simplified": "可使用货币【招募】同伴。\\n根据【招募】类型，所需货币种类或费用有所不同，\\n且出现的【同伴】及几率也会发生变化，请提前确认信息。\\n每天可免费进行1次【自选PICKUP招募】和【创世之神招募】。",
+    "China_Traditional": "使用財物即可【招募】同伴。\\n根據【同伴】種類的不同，招募所需財物的種類和費用也有所不同；登場【同伴】的種類及機率皆不同，因此請務必事先進行確認。\\n每天可免費進行一次【訂製PICKUP招募】和【迪米烏哥斯招募】。"
   },
   {
     "ID": "SYS_GUIDE_RECRUIT_02_DESC",
@@ -21715,9 +21715,9 @@
     "ID": "SYS_TOWER_RANKING",
     "Korean": "비천의 탑 랭킹",
     "English": "Skyward Tower Ranking",
-    "Japanese": "비천의 탑 랭킹",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "Japanese": "飛天の塔ランキング",
+    "China_Simplified": "飞天之塔排名",
+    "China_Traditional": "飛天塔排名"
   },
   {
     "ID": "SYS_MY_RANKING",
@@ -22833,7 +22833,7 @@
   },
   {
     "ID": "SYS_REALATION_DESC_006",
-    "Korean": "학생 여러분 모두들 수강 신청은 잘하셨나요? \\n학원도시 매그놀리아의 하루는 빠르게 시작된답니다.  \\n서두르지 않으면 1교시를 놓칠지도 몰라요!",
+    "Korean": "학생 여러분 모두들 수강 신청은 잘하셨나요? \\n학원도시 매그놀리아의 하루는 빠르게 시작된답니다. \\n서두르지 않으면 1교시를 놓칠지도 몰라요!",
     "English": "Hello, students! I hope you all successfully registered for your courses.\\nA day in Magnolia Magic Academy starts off early.\\nIf you don't hurry, you might miss your morning classes!",
     "Japanese": "学生の皆さん、履修登録はちゃんと済ませましたか?\\n学園都市マグノリアの1日は朝早くから始まるようです。\\n急がないと1時限目に間に合わないかもしれませんよ!",
     "China_Simplified": "各位同学，大家都选好课了吗？\\n学院城市麦格诺里亚的一天很早就开始了。\\n若不加快速度，说不定会错过第一节课！",
@@ -24068,8 +24068,8 @@
     "Korean": "먼 훗날 도달할 깨달음의 경지.\\n잠시 도래했던 깨달음은 안개처럼 희미해 졌지만, 그 가능성의 편린은 여전히 아메 님의 마음 속에 남아있습니다.\\n<Color=#FFBF00>[깨달음의 잔상조차 번뇌이며, 집착을 끊어내는 것이 새로운 수행의 목표]</Color>. 본인은 그렇게 말씀하며 오늘도 참선을 이어가시지만……\\n\\n아메 님이 약속된 깨달음에 도달하기란 무척이나 어려워 보입니다. 그분을 번뇌에 들게 하는 존재가 한둘이 아니거든요. 가령, 아메 님의 옆에서 끝없이 깐족거리는 비엘라나, 발바닥 젤리로 끊임없이 유혹하는 쿠로 님……\\n혹은, 절망적으로 눈치가 없는 <color=#8DFFAD>누군가</Color>라던가 말이죠.",
     "English": "A distant state of enlightenment that may one day be reached.\\nThe brief enlightenment that once came to her has faded like mist, yet fragments of that possibility still linger in Ame’s heart.\\n<Color=#FFBF00>[Even the afterimage of enlightenment is but delusion; severing attachment is the goal of my new training.]</Color> Or so she says as she continues her meditation today as well…\\n\\nBut it seems incredibly difficult for Ame to reach the promised enlightenment. There is no shortage of things that disturb her mind—like Viella, endlessly teasing her at her side, or Kuro, forever tempting her with jelly-soft paw pads…\\nOr perhaps <color=#8DFFAD>a certain someone</Color> who is hopelessly oblivious.",
     "Japanese": "いつの日か到達するかもしれない悟りの境地。\\n一時だけ訪れた悟りは霧のように薄れてしまいましたが、その可能性の欠片は今もなおAmeの心の中に残っています。\\n<Color=#FFBF00>「悟りの残像さえ煩悩であり、執着を断ち切ることこそ新たな修行の目標です」</Color>――本人はそう語り、今日も座禅に励んでいますが……。\\n\\nAmeが約された悟りに到達するのは、どうにも容易ではなさそうです。彼女を煩悩に落とし込む存在が一人や二人ではありませんから。例えば、横で延々とちょっかいを出してくるVielaとか、ぷにぷにの肉球で誘惑してくるKuroとか……。\\nあるいは、絶望的に空気が読めない<color=#8DFFAD>誰かさん</Color>とか。",
-    "China_Simplified": "那是遥不可及的觉悟之境。\\n曾短暂降临的觉悟虽已如雾霭般消散，但那可能性的碎片依然留在亚美心中。\\n<Color=#FFBF00>[觉悟的残影亦是烦恼；斩断执念，方为修行新章]</Color>。\\n亚美如此说道，今日的禅修仍在继续……\\n\\n可是，她想要抵达的那个命定的觉悟之境，恐怕难如登天。\\n因为让她心生烦恼的存在，实在数不胜数。比如，在她耳边聒噪不休的比埃拉，或是总拿肉垫果冻诱惑她的小黑……\\n又或者，是那位完全不会看眼色的<color=#8DFFAD>某人</Color>。",
-    "China_Traditional": "終有一日將抵達的覺悟之境。\\n那短暫降臨的覺悟如霧般消散，但那份可能性的碎片，仍留存在亞美大人的心中。\\n<Color=#FFBF00>【連覺悟的殘影都成為煩惱，斬斷執著才是新的修行目標】</Color>。\\n她如此說著，今日也持續坐禪……\\n\\n然而，亞美大人要真正達到那份約定的覺悟，恐怕並不容易。\\n畢竟讓她陷入煩惱的存在，可不只一兩個。例如在她身旁不停挑釁的比耶拉，或以肉球不斷誘惑她的黑澤 庫蘿……\\n又或者，是那位毫無自覺的<color=#8DFFAD>某人</Color>。"
+    "China_Simplified": "遥远未来将抵达的悟道之境。\\n曾短暂降临的悟道如雾般渐渐淡去，但那份可能性的碎片仍残留在亚美大人心中。\\n<Color=#FFBF00>【即便是悟道的残影也是烦恼，斩断执念才是新修行的目标】</Color>。她如是说着，今日依旧持续参禅……\\n\\n亚美大人要抵达所约定的悟道，看起来相当困难。让她陷入烦恼的存在不止一两个。例如，在亚美大人身旁无尽调侃的比埃拉，或是用脚掌果冻不断诱惑的小黑大人……\\n\\n又或者，是某个绝望地没有眼力的<color=#8DFFAD>某人</color>呢。",
+    "China_Traditional": "遙遠未來將抵達的悟道之境。\\n曾短暫降臨的悟道如霧般漸漸淡去，但那份可能性的碎片仍殘留在亞美大人心中。\\n<Color=#FFBF00>【即便是悟道的殘影也是煩惱，斬斷執念才是新修行的目標】</Color>。她如是說著，今日依舊持續參禪……\\n\\n亞美大人要抵達所約定的悟道，看起來相當困難。讓她陷入煩惱的存在不止一兩個。例如，在亞美大人身旁無盡調侃的碧耶拉，或是用腳掌果凍不斷誘惑的黑澤庫蘿大人……\\n\\n又或者，是某個絕望地沒有眼力的<color=#8DFFAD>某人</color>呢。"
   },
   {
     "ID": "SYS_ACHIEVE_PROFILE_2000111",
@@ -28865,7 +28865,7 @@
   },
   {
     "ID": "SYS_RECRUIT_TOOLTIP_SPECIAL_01",
-    "Korean": "린 동료 영입 확률 UP.  10회 영입 시, 2★ 이상 1명 확정",
+    "Korean": "린 동료 영입 확률 UP. 10회 영입 시, 2★ 이상 1명 확정",
     "English": "Increased chance to recruit Rin. When recruiting 10 times, one Hero with 2★ or higher is guaranteed.",
     "Japanese": "リンピックアップ「10回スカウト」は★2以上1体確定",
     "China_Simplified": "招募琳为同伴的几率UP。招募10次时，保证获得1名2★以上同伴",
@@ -32490,10 +32490,10 @@
   {
     "ID": "SYS_ACCOUNT_FRAME_6",
     "Korean": "크리스마스 이벤트",
-    "English": "0",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "English": "Christmas Event",
+    "Japanese": "クリスマスイベント",
+    "China_Simplified": "圣诞活动",
+    "China_Traditional": "聖誕活動"
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_7",
@@ -32554,10 +32554,10 @@
   {
     "ID": "SYS_ACCOUNT_FRAME_DES_6",
     "Korean": "크리스마스 이벤트 상점에서 획득 가능합니다.",
-    "English": "0",
-    "Japanese": "0",
-    "China_Simplified": "0",
-    "China_Traditional": "0"
+    "English": "Can be obtained from the Christmas Event Shop.",
+    "Japanese": "クリスマスイベントショップで獲得可能です。",
+    "China_Simplified": "可在圣诞活动商店获得。",
+    "China_Traditional": "可在聖誕活動商店獲得。"
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_DES_7",
@@ -33226,8 +33226,8 @@
   {
     "ID": "SYS_2000019_DES",
     "Korean": "[린]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Rin.",
-    "Japanese": "【リン】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Rin] can equip.",
+    "Japanese": "【リン】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【琳】可穿戴的皮肤。",
     "China_Traditional": "【琳】可穿戴的服裝。"
   },
@@ -33985,11 +33985,11 @@
   },
   {
     "ID": "SYS_GACHA_RECRUIT_POPUP_NOTICE_2",
-    "Korean": "우선 순위에 따라 위의 재화를 소모합니다.\\n우선 소모되는 재화가 부족한 경우, 다음 우선순위의 재화가 소모됩니다. \\n(이벤트)가 붙은 영입 재화는 마일리지가 적립되지 않습니다.",
-    "English": "The resources above are used based on priority.\\nIf there is an insufficient amount of the current resource being used, the next resource available according to priority will be used.\\nUsing (Event) resources does not provide any mileage rewards.",
-    "Japanese": "上記のアイテムを消費します。\\n無償アイテムが足りない場合は、有償アイテムが代わりに消費されます。\\n(イベント)と書かれたスカウトチケットは仲間交換Ｐｔに変換されません。",
-    "China_Simplified": "将按优先顺序消耗货币。\\n优先消耗的货币不足时，将按照顺序消耗下一种货币。\\n使用有(活动)标记的招募货币时无法获得积分。",
-    "China_Traditional": "將按照優先順序消耗財物。\\n優先消耗的財物不足時，將按照以下順序來消耗財物。\\n招募財物若有標示(活動)字樣時，將無法累積積分。"
+    "Korean": "우선 순위에 따라 위의 재화를 소모합니다.\\n우선 소모되는 재화가 부족한 경우, 다음 우선순위의 재화가 소모됩니다.",
+    "English": "The resources above are used based on priority.\\nIf the highest-priority resource is insufficient, the next available resource will be used.",
+    "Japanese": "上記のアイテムを消費します。\\n無償アイテムが足りない場合は、有償アイテムが代わりに消費されます。",
+    "China_Simplified": "将按优先顺序消耗货币。\\n优先消耗的货币不足时，将按照顺序消耗下一种货币。",
+    "China_Traditional": "將按照優先順序消耗財物。\\n優先消耗的財物不足時，將按照以下順序來消耗財物。"
   },
   {
     "ID": "SYS_PACKAGE_NORMAL_MAIL_01_T",
@@ -35226,7 +35226,7 @@
   {
     "ID": "SYS_BATTLE_PASS_SPECIAL_PASS_COSTUME_MES",
     "Korean": "코스튬 즉시 지급",
-    "English": "Costume immediately given",
+    "English": "Obtain the costume immediately",
     "Japanese": "スキン即時支給",
     "China_Simplified": "立即发放皮肤",
     "China_Traditional": "立即發放服裝"
@@ -39226,8 +39226,8 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_RIN_TITLE",
     "Korean": "<color=#FFFFFF>스페셜 패스 혜택</color>\\n린 코스튬 즉시 지급\\n3성 동료 선택권",
-    "English": "<color=#FFFFFF>Special Pass Benefits</color>\\nReceive Rin Costume Immediately\\n3★ Ally Selection Ticket",
-    "Japanese": "<color=#FFFFFF>スペシャルパス特典</color>\\nリンのスキン即時獲得\\n★3仲間セレクト券",
+    "English": "<color=#FFFFFF>Special Pass Benefits</color>\\nObtain Rin's costume immediately\\n3★ Hero Selection Ticket",
+    "Japanese": "<color=#FFFFFF>スペシャルパス特典</color>\\nリンのスキン即時獲得\\n★3仲間選択チケット",
     "China_Simplified": "<color=#FFFFFF>特典通行证福利</color>\\n立即获得凛的服装\\n★3同伴选择券",
     "China_Traditional": "<color=#FFFFFF>特典通行證福利</color>\\n立即獲得凛的服裝\\n★3同伴選擇券"
   },
@@ -40715,7 +40715,7 @@
     "ID": "SYS_COSTUME_BUY_MSG",
     "Korean": "코스튬은 동료 정보 코스튬 메뉴에서 장착 가능합니다.",
     "English": "The costume can be equipped from the costume page of the hero menu.",
-    "Japanese": "スキンは【仲間】→【スキン】で装備できます。\\n※【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "Japanese": "スキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "皮肤可在同伴信息皮肤菜单中配戴。",
     "China_Traditional": "在同伴資訊的服裝選單中可穿戴服裝。"
   },
@@ -40938,8 +40938,8 @@
   {
     "ID": "SYS_2000037_DES",
     "Korean": "[베로니카]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Veronica.",
-    "Japanese": "【ヴェロニカ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Veronica] can equip.",
+    "Japanese": "【ヴェロニカ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【维罗妮卡】可穿戴的皮肤。",
     "China_Traditional": "【維羅妮卡】可穿戴的服裝。"
   },
@@ -41194,8 +41194,8 @@
   {
     "ID": "SYS_2000023_DES",
     "Korean": "[세이란]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Saeran.",
-    "Japanese": "【セイラン】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Saeran] can equip.",
+    "Japanese": "【セイラン】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【萨伊蓝】可穿戴的皮肤。",
     "China_Traditional": "【薩伊藍】可穿戴的服裝。"
   },
@@ -41266,8 +41266,8 @@
   {
     "ID": "SYS_2000022_DES",
     "Korean": "[노아]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Noa.",
-    "Japanese": "【ノア】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Noa] can equip.",
+    "Japanese": "【ノア】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【诺雅】可穿戴的皮肤。",
     "China_Traditional": "【諾雅】可穿戴的服裝。"
   },
@@ -42130,40 +42130,40 @@
   {
     "ID": "SYS_2000007_DES",
     "Korean": "[알파]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Alpha.",
-    "Japanese": "【アルファ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Alpha] can equip.",
+    "Japanese": "【アルファ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【阿尔法】可穿戴的皮肤。",
     "China_Traditional": "【阿爾法】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000025_DES",
     "Korean": "[베스]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Beth.",
-    "Japanese": "【ベス】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Beth] can equip.",
+    "Japanese": "【ベス】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【贝丝】可穿戴的皮肤。",
     "China_Traditional": "【貝絲】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000035_DES",
     "Korean": "[엘리제]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Eliza.",
-    "Japanese": "【エリーゼ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Eliza] can equip.",
+    "Japanese": "【エリーゼ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【伊莉莎】可穿戴的皮肤。",
     "China_Traditional": "【伊莉莎】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000039_DES",
     "Korean": "[스텔라]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Stella.",
-    "Japanese": "【ステラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Stella] can equip.",
+    "Japanese": "【ステラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【斯黛拉】可穿戴的皮肤。",
     "China_Traditional": "【斯黛拉】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000044_DES",
     "Korean": "[라플라스]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Laplace.",
-    "Japanese": "【ラプラス】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Laplace] can equip.",
+    "Japanese": "【ラプラス】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【拉普拉丝】可穿戴的皮肤。",
     "China_Traditional": "【拉普拉絲】可穿戴的服裝。"
   },
@@ -42554,8 +42554,8 @@
   {
     "ID": "SYS_2000012_DES",
     "Korean": "[발렌타인]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Valentine.",
-    "Japanese": "【バレンタイン】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Valentine] can equip.",
+    "Japanese": "【バレンタイン】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【瓦伦塔茵】可穿戴的皮肤。",
     "China_Traditional": "【瓦倫塔茵】可穿戴的服裝。"
   },
@@ -45330,8 +45330,8 @@
   {
     "ID": "SYS_2000058_DES",
     "Korean": "[아스테]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Astei.",
-    "Japanese": "【アステ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Astei] can equip.",
+    "Japanese": "【アステ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【奥斯黛】可穿戴的皮肤。",
     "China_Traditional": "【奧斯黛】可穿戴的服裝。"
   },
@@ -47002,8 +47002,8 @@
   {
     "ID": "SYS_2000060_DES",
     "Korean": "[타마라]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Tamara.",
-    "Japanese": "【タマラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Tamara] can equip.",
+    "Japanese": "【タマラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【塔玛拉】可穿戴的皮肤。",
     "China_Traditional": "【塔瑪拉】可穿戴的服裝。"
   },
@@ -47890,16 +47890,16 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_AME_TITLE",
     "Korean": "<size=22><color=#ffd883>스페셜 패스 혜택</color></size>\\n<size=18>아메 코스튬 즉시 지급</size>\\n<size=18>3성 동료 선택권</size>",
-    "English": "<size=22><color=#ffd883>Special Pass Reward</color></size>\\n<size=18>Obtain Ame’s costume immediately</size>\\n<size=18>3★ Ally Selection Ticket</size>",
-    "Japanese": "<size=22><color=#ffd883>プレミアムパス特典</color></size>\\n<size=18>【あめ】のスキン即時入手</size>\\n<size=18>★3仲間セレクト券</size>",
+    "English": "<size=22><color=#ffd883>Special Pass Reward</color></size>\\n<size=18>Obtain Ame’s costume immediately</size>\\n<size=18>3★ Hero Selection Ticket</size>",
+    "Japanese": "<size=22><color=#ffd883>プレミアムパス特典</color></size>\\n<size=18>【あめ】のスキン即時入手</size>\\n<size=18>★3仲間スカウト選択チケット</size>",
     "China_Simplified": "<size=22><color=#ffd883>特别通行证福利</color></size>\\n<size=18>立即发放亚美皮肤</size>\\n<size=18>★3同伴选择券</size>",
     "China_Traditional": "<size=22><color=#ffd883>特殊通行證優惠</color></size>\\n<size=18>立即獲得亞美的服裝</size>\\n<size=18>★3同伴選擇券</size>"
   },
   {
     "ID": "SYS_2000065_DES",
     "Korean": "[아메]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Ame.",
-    "Japanese": "【あめ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Ame] can equip.",
+    "Japanese": "【あめ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【亚美】可穿戴的皮肤。",
     "China_Traditional": "【亞美】可穿戴的服裝。"
   },
@@ -48450,24 +48450,24 @@
   {
     "ID": "SYS_2000043_DES",
     "Korean": "[이터널]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Eternal.",
-    "Japanese": "【エターナル】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Eternal] can equip.",
+    "Japanese": "【エターナル】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【伊特诺】可穿戴的皮肤。",
     "China_Traditional": "【伊特諾】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000004_DES",
     "Korean": "[아이리스]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Iris.",
-    "Japanese": "【アイリス】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Iris] can equip.",
+    "Japanese": "【アイリス】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【艾耶尔丽斯】可穿戴的皮肤。",
     "China_Traditional": "【艾耶爾麗斯】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000005_DES",
     "Korean": "[리샤]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Lisha.",
-    "Japanese": "【リーシャ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Lisha] can equip.",
+    "Japanese": "【リーシャ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【莉莎】可穿戴的皮肤。",
     "China_Traditional": "【莉莎】可穿戴的服裝。"
   },
@@ -51938,8 +51938,8 @@
   {
     "ID": "SYS_2000062_DES",
     "Korean": "[드레이칸]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Drakhan.",
-    "Japanese": "【ドレイカーン】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Drakhan] can equip.",
+    "Japanese": "【ドレイカーン】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【德雷坎】可穿戴的皮肤。",
     "China_Traditional": "【德蕾翰】可穿戴的服裝。"
   },
@@ -52458,8 +52458,8 @@
   {
     "ID": "SYS_2000068_DES",
     "Korean": "[달리아]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Dahlia.",
-    "Japanese": "【ダリア】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Dahlia] can equip.",
+    "Japanese": "【ダリア】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【达利娅】可穿戴的皮肤。",
     "China_Traditional": "【達利亞】可穿戴的服裝。"
   },
@@ -54090,8 +54090,8 @@
   {
     "ID": "SYS_2000066_DES",
     "Korean": "[샬롯]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Charlotte.",
-    "Japanese": "【シャーロット】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Charlotte] can equip.",
+    "Japanese": "【シャーロット】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【夏洛特】可穿戴的皮肤。",
     "China_Traditional": "【夏洛特】可穿戴的服裝。"
   },
@@ -55922,16 +55922,16 @@
   {
     "ID": "SYS_2000056_DES",
     "Korean": "[노티아]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Notia.",
-    "Japanese": "【ノティア】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Notia] can equip.",
+    "Japanese": "【ノティア】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【诺缇亚】可穿戴的皮肤。",
     "China_Traditional": "【諾緹亞】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000069_DES",
     "Korean": "[요타]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Iota.",
-    "Japanese": "【イオータ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Iota] can equip.",
+    "Japanese": "【イオータ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【佑妲】可穿戴的皮肤。",
     "China_Traditional": "【佑妲】可穿戴的服裝。"
   },
@@ -56634,8 +56634,8 @@
   {
     "ID": "SYS_2000061_DES",
     "Korean": "[크리스티나]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Christina.",
-    "Japanese": "【クリスティーナ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Christina] can equip.",
+    "Japanese": "【クリスティーナ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【克莉丝提娜】可穿戴的皮肤。",
     "China_Traditional": "【克莉絲提娜】可穿戴的服裝。"
   },
@@ -58274,8 +58274,8 @@
   {
     "ID": "SYS_2000055_DES",
     "Korean": "[아에르]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Aer.",
-    "Japanese": "【アエル】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Aer] can equip.",
+    "Japanese": "【アエル】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【艾耶尔】可穿戴的皮肤。",
     "China_Traditional": "【艾耶爾】可穿戴的服裝。"
   },
@@ -64122,8 +64122,8 @@
   {
     "ID": "SYS_2000009_DES",
     "Korean": "[에바]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Eva.",
-    "Japanese": "【エヴァ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Eva] can equip.",
+    "Japanese": "【エヴァ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【艾娃】可穿戴的皮肤。",
     "China_Traditional": "【艾娃】可穿戴的服裝。"
   },
@@ -64482,24 +64482,24 @@
   {
     "ID": "SYS_2000064_DES",
     "Korean": "[아카리]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Akari.",
-    "Japanese": "【アカリ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Akari] can equip.",
+    "Japanese": "【アカリ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【阿卡莉】可穿戴的皮肤。",
     "China_Traditional": "【阿卡莉】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000079_DES",
     "Korean": "[쿠로]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Kuro.",
-    "Japanese": "【クロ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Kuro] can equip.",
+    "Japanese": "【クロ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【小黑】可穿戴的皮肤。",
     "China_Traditional": "【黑澤】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000080_DES",
     "Korean": "[타마모노마에]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Tamamo-no-Mae.",
-    "Japanese": "【タマモノマエ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Tamamo-no-Mae] can equip.",
+    "Japanese": "【タマモノマエ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【玉藻前】可穿戴的皮肤。",
     "China_Traditional": "【玉藻前】可穿戴的服裝。"
   },
@@ -66770,16 +66770,16 @@
   {
     "ID": "SYS_2000063_DES",
     "Korean": "[데미우르고스 드레이칸]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Demiurge Drakhan.",
-    "Japanese": "【デミウルゴス・ドレイカーン】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Demiurge Drakhan] can equip.",
+    "Japanese": "【デミウルゴス・ドレイカーン】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【创世之神·德雷坎】可穿戴的皮肤。",
     "China_Traditional": "【迪米烏哥斯·德蕾翰】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000054_DES",
     "Korean": "[메네]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Mene.",
-    "Japanese": "【メネ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Mene Satellight] can equip.",
+    "Japanese": "【メネ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【麦尼】可穿戴的皮肤。",
     "China_Traditional": "【麥尼】可穿戴的服裝。"
   },
@@ -69170,16 +69170,16 @@
   {
     "ID": "SYS_2000081_DES",
     "Korean": "[맥시]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Maxie.",
-    "Japanese": "【マキシー】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Maxie] can equip.",
+    "Japanese": "【マキシー】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【麦克茜】可穿戴的皮肤。",
     "China_Traditional": "【麥西】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000082_DES",
     "Korean": "[록시]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Roxie.",
-    "Japanese": "【ロキシー】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Roxie] can equip.",
+    "Japanese": "【ロキシー】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【萝克茜】可穿戴的皮肤。",
     "China_Traditional": "【蘿西】可穿戴的服裝。"
   },
@@ -69562,16 +69562,16 @@
   {
     "ID": "SYS_2000074_DES",
     "Korean": "[다이안]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Dianne.",
-    "Japanese": "【ダイアン】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Dianne] can equip.",
+    "Japanese": "【ダイアン】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【黛安】可穿戴的皮肤。",
     "China_Traditional": "【黛安】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000084_DES",
     "Korean": "[모나드 에바]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Monad Eva.",
-    "Japanese": "【モナド・エヴァ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Monad Eva] can equip.",
+    "Japanese": "【モナド・エヴァ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【单子艾娃】可穿戴的皮肤。",
     "China_Traditional": "【單體艾娃】可穿戴的服裝。"
   },
@@ -72042,10 +72042,10 @@
   {
     "ID": "SYS_GUIDE_ADVENTURE_LICENSE_01_1_DESC",
     "Korean": "[모험 라이선스] 는 매주 초기화되는 주간 토벌 미션을 클리어하여 모험가 등급과 레벨을 상승시키는 컨텐츠입니다.\\n스토리 하드 난이도를 클리어 시 오픈되며, 시즌1 ~ 시즌2 중 어느쪽을 클리어하셔도 됩니다.",
-    "English": "Story License is a content that increases the adventurer rank and level by clearing weekly conquest missions that reset every week. It unlocks upon clearing the Hard difficulty of Story Season 1 or Season 2.",
-    "Japanese": "【ストーリー者ライセンス】は、毎週に開催されるウィークリー討伐ミッションをクリアし、ライセンスのランクとレベルを上げて様々な報酬を獲得するコンテンツです。\\n【ストーリー者ライセンス】は【ストーリー】のシーズン１・2どちらかのハードモードをクリアすると解放されます。",
-    "China_Simplified": "【故事许可证】是通关每周重置的每周讨伐任务，提升故事家级别和等级的玩法。\\n通关故事难度中的困难难度即可解锁，可通关第1季~第2季中的任何一个。",
-    "China_Traditional": "【故事執照】是能透過通關每週重置的每週討伐任務，來提升故事家級別和等級的內容。\\n通關故事困難模式時將開放，不限第1季或第2季。"
+    "English": "[Adventure License] is a content that increases the adventurer rank and level by clearing weekly conquest missions that reset every week. It unlocks upon clearing the Hard difficulty of Story Season 1 or Season 2.",
+    "Japanese": "【冒険者ライセンス】は、毎週に開催されるウィークリー討伐ミッションをクリアし、ライセンスのランクとレベルを上げて様々な報酬を獲得するコンテンツです。\\n【ストーリー者ライセンス】は【ストーリー】のシーズン１・2どちらかのハードモードをクリアすると解放されます。",
+    "China_Simplified": "【冒险许可证】是通关每周重置的每周讨伐任务，提升故事家级别和等级的玩法。\\n通关故事难度中的困难难度即可解锁，可通关第1季~第2季中的任何一个。",
+    "China_Traditional": "【冒險執照】是能透過通關每週重置的每週討伐任務，來提升故事家級別和等級的內容。\\n通關故事困難模式時將開放，不限第1季或第2季。"
   },
   {
     "ID": "SYS_GUIDE_ADVENTURE_LICENSE_01_2_DESC",
@@ -72394,16 +72394,16 @@
   {
     "ID": "SYS_2000071_DES",
     "Korean": "[카논]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Kanon.",
-    "Japanese": "【カノン】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Kanon] can equip.",
+    "Japanese": "【カノン】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【卡农】可穿戴的皮肤。",
     "China_Traditional": "【卡農】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000072_DES",
     "Korean": "[에델바이스]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Edelweiss.",
-    "Japanese": "【エーデルバイス】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Edelweiss] can equip.",
+    "Japanese": "【エーデルバイス】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【艾妲尔薇斯】可穿戴的皮肤。",
     "China_Traditional": "【艾妲爾薇斯】可穿戴的服裝。"
   },
@@ -76234,16 +76234,16 @@
   {
     "ID": "SYS_2000083_DES",
     "Korean": "[넬라]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Nella.",
-    "Japanese": "【ネラ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Nella] can equip.",
+    "Japanese": "【ネラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【内拉】可穿戴的皮肤。",
     "China_Traditional": "【奈拉】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000087_DES",
     "Korean": "[레이]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Rey.",
-    "Japanese": "【レイ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Rey] can equip.",
+    "Japanese": "【レイ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【雷伊】可穿戴的皮肤。",
     "China_Traditional": "【蕾伊】可穿戴的服裝。"
   },
@@ -77146,10 +77146,10 @@
   {
     "ID": "SYS_2000075_DES",
     "Korean": "[데미우르고스 블라다]가 착용할 수 있는 코스튬입니다.",
-    "English": "Costume for [Demiurge Blada].",
-    "Japanese": "［デミウルゴス・ブラダ］が着用できるスキンです。",
-    "China_Simplified": "供［创世之神·布拉达］穿戴的服装。",
-    "China_Traditional": "供［迪米烏哥斯·布拉達］著用的服裝。"
+    "English": "A costume that [Demiurge Vlada] can equip.",
+    "Japanese": "【デミウルゴス・ブラダ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
+    "China_Simplified": "供【创世之神·布拉达】穿戴的服装。",
+    "China_Traditional": "供【迪米烏哥斯·布拉達】著用的服裝。"
   },
   {
     "ID": "SYS_WORLD_NAME_S4",
@@ -77482,8 +77482,8 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_BLADA_TITLE",
     "Korean": "<size=22><color=#ffd883>스페셜 패스 혜택</color></size>\\n<size=18>데미우르고스 블라다 코스튬 즉시 지급</size>\\n<size=18>3성 동료 선택권</size>",
-    "English": "<size=22><color=#ffd883>Special Pass Reward</color></size>\\n<size=18>Obtain Demiurge Vlada’s costume immediately</size>\\n<size=18>3★ Ally Selection Ticket</size>",
-    "Japanese": "<size=22><color=#ffd883>スペシャルパス特典</color></size>\\n<size=18>【デミウルゴス・ヴラダ】のスキン即時支給</size>\\n<size=18>★3仲間セレクト券</size>",
+    "English": "<size=22><color=#ffd883>Special Pass Reward</color></size>\\n<size=18>Obtain Demiurge Vlada’s costume immediately</size>\\n<size=18>3★ Hero Selection Ticket</size>",
+    "Japanese": "<size=22><color=#ffd883>スペシャルパス特典</color></size>\\n<size=18>【デミウルゴス・ヴラダ】のスキン即時支給</size>\\n<size=18>★3仲間スカウト選択チケット</size>",
     "China_Simplified": "<size=22><color=#ffd883>特别通行证福利</color></size>\\n<size=18>立即发放创世之神布拉达皮肤</size>\\n<size=18>★3同伴选择券</size>",
     "China_Traditional": "<size=22><color=#ffd883>特殊通行證優惠</color></size>\\n<size=18>立即獲得迪米烏哥斯‧佛拉達的服裝</size>\\n<size=18>★3同伴選擇券</size>"
   },
@@ -80178,8 +80178,8 @@
   {
     "ID": "SYS_2000089_DES",
     "Korean": "[카렌]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Caren.",
-    "Japanese": "【カレン】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Caren] can equip.",
+    "Japanese": "【カレン】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【卡伦】可穿戴的皮肤。",
     "China_Traditional": "【凱倫】可穿戴的服裝。"
   },
@@ -80306,8 +80306,8 @@
   {
     "ID": "SYS_2000077_DES",
     "Korean": "[카파]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Kappa.",
-    "Japanese": "【カッパ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Kappa] can equip.",
+    "Japanese": "【カッパ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【卡帕】可穿戴的皮肤。",
     "China_Traditional": "【卡帕】可穿戴的服裝。"
   },
@@ -81122,7 +81122,7 @@
   {
     "ID": "SYS_BUFF_USERNICKNAME_STAMINA_DISCOUNT_1_DESC",
     "Korean": "특별의뢰 / 스토리 컨텐츠 플레이 시 소모 행동력 1 감소",
-    "English": "When playing Special Request/Story content, reduces Stamina consumed by 1",
+    "English": "Stamina consumed when playing Special Request / Story content decreases by 1",
     "Japanese": "特別依頼・ストーリープレイ時、活力消費1DOWN",
     "China_Simplified": "进行特别委托/故事时，消耗的行动力减少1",
     "China_Traditional": "進行特別委託/故事內容時，消耗的行動力減少1"
@@ -81130,7 +81130,7 @@
   {
     "ID": "SYS_BUFF_USERNICKNAME_STAMINA_DISCOUNT_2_DESC",
     "Korean": "특별의뢰 / 스토리 컨텐츠 플레이 시 소모 행동력 1 감소",
-    "English": "When playing Special Request/Story content, reduces Stamina consumed by 1",
+    "English": "Stamina consumed when playing Special Request / Story content decreases by 1",
     "Japanese": "特別依頼・ストーリープレイ時、活力消費1DOWN",
     "China_Simplified": "进行特别委托/故事时，消耗的行动力减少1",
     "China_Traditional": "進行特別委託/故事內容時，消耗的行動力減少1"
@@ -81138,7 +81138,7 @@
   {
     "ID": "SYS_BUFF_USERNICKNAME_STAMINA_DISCOUNT_3_DESC",
     "Korean": "특별의뢰 / 스토리 컨텐츠 플레이 시 소모 행동력 2 감소",
-    "English": "When playing Special Request/Story content, reduces Stamina consumed by 2",
+    "English": "Stamina consumed when playing Special Request / Story content decreases by 2",
     "Japanese": "特別依頼・ストーリープレイ時、活力消費2DOWN",
     "China_Simplified": "进行特别委托/故事时，消耗的行动力减少2",
     "China_Traditional": "進行特別委託/故事內容時，消耗的行動力減少2"
@@ -81810,16 +81810,16 @@
   {
     "ID": "SYS_2000076_DES",
     "Korean": "[브린]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Bryn.",
-    "Japanese": "【ブリン】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Bryn] can equip.",
+    "Japanese": "【ブリン】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【布琳】可穿戴的皮肤。",
     "China_Traditional": "【布林】可穿戴的服裝。"
   },
   {
     "ID": "SYS_2000094_DES",
     "Korean": "[엠버]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Ember.",
-    "Japanese": "【エンバー】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Ember] can equip.",
+    "Japanese": "【エンバー】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【炎珀】可穿戴的皮肤。",
     "China_Traditional": "【安柏】可穿戴的服裝。"
   },
@@ -82746,8 +82746,8 @@
   {
     "ID": "SYS_2000101_DES",
     "Korean": "[스카디]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Skadi.",
-    "Japanese": "【スカディ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Skadi] can equip.",
+    "Japanese": "【スカディ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【斯卡蒂】可穿戴的皮肤。",
     "China_Traditional": "【斯卡蒂】可穿戴的服裝。"
   },
@@ -82986,8 +82986,8 @@
   {
     "ID": "SYS_2000091_DES",
     "Korean": "[그노시스 넬라]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Gnosis Nella.",
-    "Japanese": "【グノーシス・ネラ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Gnosis Nella] can equip.",
+    "Japanese": "【グノーシス・ネラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【诺希斯·内拉】可穿戴的皮肤。",
     "China_Traditional": "【格諾西斯‧奈拉】可穿戴的服裝。"
   },
@@ -83234,8 +83234,8 @@
   {
     "ID": "SYS_2000088_DES",
     "Korean": "[힐데]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Hilde.",
-    "Japanese": "【ヒルデ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Hilde] can equip.",
+    "Japanese": "【ヒルデ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【希尔德】可穿戴的皮肤。",
     "China_Traditional": "【希德】可穿戴的服裝。"
   },
@@ -85650,7 +85650,7 @@
   {
     "ID": "DESC_MCT_AREA_CLEAR_2",
     "Korean": "스토리를 클리어하고 다양한 보상을 받아가세요!",
-    "English": "Clear the adventure and receive various rewards!",
+    "English": "Clear the story and receive various rewards!",
     "Japanese": "ストーリーをクリアし、様々な報酬を\\n獲得しましょう！",
     "China_Simplified": "完成故事，领取各种奖励吧！",
     "China_Traditional": "通關故事並獲得各式各樣的獎勵吧！"
@@ -85666,7 +85666,7 @@
   {
     "ID": "DESC_MCT_AREA_CLEAR_4",
     "Korean": "스토리를 클리어하고 다양한 보상을 받아가세요!",
-    "English": "Clear the adventure and receive various rewards!",
+    "English": "Clear the story and receive various rewards!",
     "Japanese": "ストーリーをクリアし、様々な報酬を\\n獲得しましょう！",
     "China_Simplified": "完成故事，领取各种奖励吧！",
     "China_Traditional": "通關故事並獲得各式各樣的獎勵吧！"
@@ -86764,40 +86764,40 @@
     "Korean": "<color=#F7F487>[모나드 강화]</color> : 힐데",
     "English": "<color=#F7F487>[Monad Enhancement]</color> : Hilde",
     "Japanese": "<color=#F7F487>[モナド強化]</color>：ヒルデ",
-    "China_Simplified": "<color=#F7F487>[强化单体]</color>：希尔德",
-    "China_Traditional": "<color=#F7F487>[強化單體]</color>：希德"
+    "China_Simplified": "<color=#F7F487>【强化单体】</color>：希尔德",
+    "China_Traditional": "<color=#F7F487>【強化單體】</color>：希德"
   },
   {
     "ID": "SYS_MONAD_ENCHANT_NODE_21_NAME",
     "Korean": "<color=#F7F487>[모나드 강화]</color> : 코어 융합 베로니카",
     "English": "<color=#F7F487>[Monad Enhancement]</color> : Core Fusion Veronica",
     "Japanese": "<color=#F7F487>[モナド強化]</color>：コアコアフュージョン・ヴェロニカ",
-    "China_Simplified": "<color=#F7F487>[强化单体]</color>：核心融合维罗妮卡",
-    "China_Traditional": "<color=#F7F487>[強化單體]</color>：核心融合維羅妮卡"
+    "China_Simplified": "<color=#F7F487>【强化单体】</color>：核心融合·维罗妮卡",
+    "China_Traditional": "<color=#F7F487>【強化單體】</color>：核心融合·維羅妮卡"
   },
   {
     "ID": "SYS_MONAD_ENCHANT_NODE_22_NAME",
     "Korean": "<color=#F7F487>[모나드 강화]</color> : 메네",
     "English": "<color=#F7F487>[Monad Enhancement]</color> : Mene",
     "Japanese": "<color=#F7F487>[モナド強化]</color>：メネ",
-    "China_Simplified": "<color=#F7F487>[强化单体]</color>：梅内",
-    "China_Traditional": "<color=#F7F487>[強化單體]</color>：梅內"
+    "China_Simplified": "<color=#F7F487>【强化单体】</color>：麦尼",
+    "China_Traditional": "<color=#F7F487>【強化單體】</color>：麥尼"
   },
   {
     "ID": "SYS_MONAD_ENCHANT_NODE_23_NAME",
     "Korean": "<color=#F7F487>[모나드 강화]</color> : 쿠로",
     "English": "<color=#F7F487>[Monad Enhancement]</color> : Kuro",
     "Japanese": "<color=#F7F487>[モナド強化]</color>：クロ",
-    "China_Simplified": "<color=#F7F487>[强化单体]</color>：库洛",
-    "China_Traditional": "<color=#F7F487>[強化單體]</color>：庫洛"
+    "China_Simplified": "<color=#F7F487>【强化单体】</color>：小黑",
+    "China_Traditional": "<color=#F7F487>【強化單體】</color>：黑澤"
   },
   {
     "ID": "SYS_MONAD_ENCHANT_NODE_24_NAME",
     "Korean": "<color=#F7F487>[모나드 강화]</color> : 코어 융합 베로니카",
     "English": "<color=#F7F487>[Monad Enhancement]</color> : Core Fusion Veronica",
     "Japanese": "<color=#F7F487>[モナド強化]</color>：コアコアフュージョン・ヴェロニカ",
-    "China_Simplified": "<color=#F7F487>[强化单体]</color>：核心融合维罗妮卡",
-    "China_Traditional": "<color=#F7F487>[強化單體]</color>：核心融合維羅妮卡"
+    "China_Simplified": "<color=#F7F487>【强化单体】</color>：核心融合·维罗妮卡",
+    "China_Traditional": "<color=#F7F487>【強化單體】</color>：核心融合·維羅妮卡"
   },
   {
     "ID": "SYS_MONAD_ENCHANT_NODE_01_DESC",
@@ -91458,8 +91458,8 @@
   {
     "ID": "SYS_2000001_DES",
     "Korean": "[케이]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by K.",
-    "Japanese": "【ケイ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [K] can equip.",
+    "Japanese": "【ケイ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【凯伊】可穿戴的服装。",
     "China_Traditional": "【凱伊】可穿戴的服裝。"
   },
@@ -91482,8 +91482,8 @@
   {
     "ID": "SYS_2000059_DES",
     "Korean": "[데미우르고스 아스테]가 착용할 수 있는 코스튬입니다.",
-    "English": "A costume that can be equipped by Demiurge Astei.",
-    "Japanese": "【デミウルゴス・アステ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Demiurge Astei] can equip.",
+    "Japanese": "【デミウルゴス・アステ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【创世之神·奥斯黛】可穿戴的皮肤。",
     "China_Traditional": "【迪米烏哥斯·奧斯黛】可穿戴的服裝。"
   },
@@ -92506,7 +92506,7 @@
   {
     "ID": "SYS_BUFF_USERNICKNAME_MONAD_06_DESC",
     "Korean": "스토리 / 특별의뢰 컨텐츠 플레이 시 소모 행동력 1 감소",
-    "English": "Consumes 1 less Stamina during Story / Special Request content",
+    "English": "Stamina consumed when playing Special Request / Story content decreases by 1",
     "Japanese": "ストーリー/特別依頼プレイ時、消耗活力が1DOWN",
     "China_Simplified": "游玩故事／特别委托内容时，消耗行动力减少1",
     "China_Traditional": "遊玩故事／特別委託內容時，消耗行動力減少1"
@@ -96370,8 +96370,8 @@
   {
     "ID": "SYS_2000098_DES",
     "Korean": "[리젤로테]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Liselotte.",
-    "Japanese": "【リーゼロッテ】のスキンです。スキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Liselotte] can equip.",
+    "Japanese": "【リーゼロッテ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【莉婕洛特】可穿戴的服装。",
     "China_Traditional": "【莉潔洛特】可穿戴的服裝。"
   },
@@ -97076,32 +97076,32 @@
     "Korean": "[영양만점]",
     "English": "[Nutritious]",
     "Japanese": "[栄養満点]",
-    "China_Simplified": "[营养满分]",
-    "China_Traditional": "[營養滿分]"
+    "China_Simplified": "【营养满分】",
+    "China_Traditional": "【營養滿分】"
   },
   {
     "ID": "SYS_USERNICKNAME_45",
     "Korean": "[욕심쟁이]",
     "English": "[Greedy]",
     "Japanese": "[欲張り]",
-    "China_Simplified": "[贪心鬼]",
-    "China_Traditional": "[貪然鬼]"
+    "China_Simplified": "【贪心鬼】",
+    "China_Traditional": "【貪然鬼】"
   },
   {
     "ID": "SYS_USERNICKNAME_46",
     "Korean": "[고급보디]",
     "English": "[Premium Body]",
     "Japanese": "[高級ボディ]",
-    "China_Simplified": "[高级身躯]",
-    "China_Traditional": "[高級身軀]"
+    "China_Simplified": "【高级身躯】",
+    "China_Traditional": "【高級身軀】"
   },
   {
     "ID": "SYS_USERNICKNAME_47",
     "Korean": "[라이선스]",
     "English": "[License]",
     "Japanese": "[ライセンス]",
-    "China_Simplified": "[许可证]",
-    "China_Traditional": "[執照]"
+    "China_Simplified": "【许可证】",
+    "China_Traditional": "【執照】"
   },
   {
     "ID": "SYS_USERNICKNAME_GET_ROUTE_44",
@@ -97140,104 +97140,104 @@
     "Korean": "칭호 [영양만점]",
     "English": "Title [Nutritious]",
     "Japanese": "称号 [栄養満点]",
-    "China_Simplified": "称号 [营养满分]",
-    "China_Traditional": "稱號 [營養滿分]"
+    "China_Simplified": "称号 【营养满分】",
+    "China_Traditional": "稱號 【營養滿分】"
   },
   {
     "ID": "SYS_USERNICKNAME_REWARD_45",
     "Korean": "칭호 [욕심쟁이]",
     "English": "Title [Greedy]",
     "Japanese": "称号 [欲張り]",
-    "China_Simplified": "称号 [贪心鬼]",
-    "China_Traditional": "稱號 [貪然鬼]"
+    "China_Simplified": "称号 【贪心鬼】",
+    "China_Traditional": "稱號 【貪然鬼】"
   },
   {
     "ID": "SYS_USERNICKNAME_REWARD_46",
     "Korean": "칭호 [고급보디]",
     "English": "Title [Premium Body]",
     "Japanese": "称号 [高級ボディ]",
-    "China_Simplified": "称号 [高级身躯]",
-    "China_Traditional": "稱號 [高級身軀]"
+    "China_Simplified": "称号 【高级身躯】",
+    "China_Traditional": "稱號 【高級身軀】"
   },
   {
     "ID": "SYS_USERNICKNAME_REWARD_47",
     "Korean": "칭호 [라이선스]",
     "English": "Title [License]",
     "Japanese": "称号 [ライセンス]",
-    "China_Simplified": "称号 [许可证]",
-    "China_Traditional": "稱號 [執照]"
+    "China_Simplified": "称号 【许可证】",
+    "China_Traditional": "稱號 【執照】"
   },
   {
     "ID": "SYS_USERNICKNAME_REWARD_DESC_44",
     "Korean": "칭호 [영양만점]을 얻습니다.\\n칭호 효과 1 : 스토리, 외전, 특별 의뢰 컨텐츠 진행 시 골드 입수량 +50%\\n칭호 효과 2 : 스토리, 특별 의뢰 컨텐츠 진행 시 골드 입수량 +15%",
     "English": "Obtain the title [Nutritious].\\nTitle Effect 1: Gold acquisition +50% in Story, Side Story, and Special Request.\\nTitle Effect 2: Gold acquisition +15% in Story and Special Request.",
     "Japanese": "称号 [栄養満点]を獲得します。\\n称号効果1：ストーリー、外伝、特別依頼コンテンツ進行時、ゴールド獲得量+50%\\n称号効果2：ストーリー、特別依頼コンテンツ進行時、ゴールド獲得量+15%",
-    "China_Simplified": "获得称号[营养满分]。\\n称号效果1：进行剧情、外传、特别委托内容时，金币获得量+50%\\n称号效果2：进行剧情、特别委托内容时，金币获得量+15%",
-    "China_Traditional": "獲得稱號 [營養滿分]。\\n稱號效果1：進行故事、外傳、特別委託內容時，金幣獲得量+50%\\n稱號效果2：進行故事、特別委託內容時，金幣獲得量+15%"
+    "China_Simplified": "获得称号【营养满分】。\\n称号效果1：进行剧情、外传、特别委托内容时，金币获得量+50%\\n称号效果2：进行剧情、特别委托内容时，金币获得量+15%",
+    "China_Traditional": "獲得稱號 【營養滿分】。\\n稱號效果1：進行故事、外傳、特別委託內容時，金幣獲得量+50%\\n稱號效果2：進行故事、特別委託內容時，金幣獲得量+15%"
   },
   {
     "ID": "SYS_USERNICKNAME_REWARD_DESC_45",
     "Korean": "칭호 [욕심쟁이]를 얻습니다.\\n칭호 효과 1 : 특별 의뢰 컨텐츠 진행 시 골드 입수량 +30%\\n칭호 효과 2 : 특별 의뢰 컨텐츠 진행 시 드랍율 +20%",
     "English": "Obtain the title [Greedy].\\nTitle Effect 1: Gold acquisition +30% in Special Request.\\nTitle Effect 2: Drop Rate +20% in Special Request.",
     "Japanese": "称号 [欲張り]を獲得します。\\n称号効果1：特別依頼コンテンツ進行時、ゴールド獲得量+30%\\n称号効果2：特別依頼コンテンツ進行時、ドロップ率+20%",
-    "China_Simplified": "获得称号[贪心鬼]。\\n称号效果1：进行特别委托内容时，金币获得量+30%\\n称号效果2：进行特别委托内容时，掉落率+20%",
-    "China_Traditional": "獲得稱號 [貪然鬼]。\\n稱號效果1：進行特別委託內容時，金幣獲得量+30%\\n稱號效果2：進行特別委託內容時，掉落率+20%"
+    "China_Simplified": "获得称号【贪心鬼】。\\n称号效果1：进行特别委托内容时，金币获得量+30%\\n称号效果2：进行特别委托内容时，掉落率+20%",
+    "China_Traditional": "獲得稱號 【貪然鬼】。\\n稱號效果1：進行特別委託內容時，金幣獲得量+30%\\n稱號效果2：進行特別委託內容時，掉落率+20%"
   },
   {
     "ID": "SYS_USERNICKNAME_REWARD_DESC_46",
     "Korean": "칭호 [고급보디]를 얻습니다.\\n칭호 효과 : 스토리, 특별 의뢰, 스토리 라이선스 진행 시 최대 체력 +5%",
     "English": "Obtain the title [Premium Body].\\nTitle Effect: Max Health +5% in Story, Special Request, and Story License.",
     "Japanese": "称号 [高級ボディ]を獲得します。\\n称号効果：ストーリー、特別依頼、ストーリーライセンス進行時、最大HP+5%",
-    "China_Simplified": "获得称号[高级身躯]。\\n称号效果：进行剧情、特别委托、剧情许可证时，生命值上限+5%",
-    "China_Traditional": "獲得稱號 [高級身軀]。\\n稱號效果：進行故事、特別委託、故事執照時，最大生命力+5%"
+    "China_Simplified": "获得称号【高级身躯】。\\n称号效果：进行剧情、特别委托、剧情许可证时，生命值上限+5%",
+    "China_Traditional": "獲得稱號 【高級身軀】。\\n稱號效果：進行故事、特別委託、故事執照時，最大生命力+5%"
   },
   {
     "ID": "SYS_USERNICKNAME_REWARD_DESC_47",
     "Korean": "칭호 [라이선스]를 얻습니다.\\n칭호 효과 1 : 특별 의뢰 컨텐츠 진행 시 골드 입수량 +15%\\n칭호 효과 2 : 특별 의뢰 컨텐츠 진행 시 드랍율 +15%\\n칭호 효과 3 : 특별 의뢰 컨텐츠 진행 시 행동력 소모 -1",
     "English": "Obtain the title [License].\\nTitle Effect 1: Gold acquisition +15% in Special Request.\\nTitle Effect 2: Drop Rate +15% in Special Request.\\nTitle Effect 3: Stamina consumption -1 in Special Request.",
     "Japanese": "称号 [ライセンス]を獲得します。\\n称号効果1：特別依頼コンテンツ進行時、ゴールド獲得量+15%\\n称号効果2：特別依頼コンテンツ進行時、ドロップ率+15%\\n称号効果3：特別依頼コンテンツ進行時、活力消耗-1",
-    "China_Simplified": "获得称号[许可证]。\\n称号效果1：进行特别委托内容时，金币获得量+15%\\n称号效果2：进行特别委托内容时，掉落率+15%\\n称号效果3：进行特别委托内容时，行动力消耗-1",
-    "China_Traditional": "獲得稱號 [執照]。\\n稱號效果1：進行特別委託內容時，金幣獲得量+15%\\n稱號效果2：進行特別委託內容時，掉落率+15%\\n稱號效果3：進行特別委託內容時，行動力消耗-1"
+    "China_Simplified": "获得称号【许可证】。\\n称号效果1：进行特别委托内容时，金币获得量+15%\\n称号效果2：进行特别委托内容时，掉落率+15%\\n称号效果3：进行特别委托内容时，行动力消耗-1",
+    "China_Traditional": "獲得稱號 【執照】。\\n稱號效果1：進行特別委託內容時，金幣獲得量+15%\\n稱號效果2：進行特別委託內容時，掉落率+15%\\n稱號效果3：進行特別委託內容時，行動力消耗-1"
   },
   {
     "ID": "SYS_BUFF_USERNICKNAME_LICENSE_01",
     "Korean": "칭호 버프 [대부호]",
     "English": "Title Buff [Tycoon]",
     "Japanese": "称号バフ [大富豪]",
-    "China_Simplified": "称号增益 [大富豪]",
-    "China_Traditional": "稱號增益 [大富豪]"
+    "China_Simplified": "称号增益 【大富豪】",
+    "China_Traditional": "稱號增益 【大富豪】"
   },
   {
     "ID": "SYS_BUFF_USERNICKNAME_LICENSE_02",
     "Korean": "칭호 버프 [영양만점]",
     "English": "Title Buff [Nutritious]",
     "Japanese": "称号バフ [栄養満点]",
-    "China_Simplified": "称号增益 [营养满分]",
-    "China_Traditional": "稱號增益 [營養滿分]"
+    "China_Simplified": "称号增益 【营养满分】",
+    "China_Traditional": "稱號增益 【營養滿分】"
   },
   {
     "ID": "SYS_BUFF_USERNICKNAME_LICENSE_03",
     "Korean": "칭호 버프 [욕심쟁이]",
     "English": "Title Buff [Greedy]",
     "Japanese": "称号バフ [欲張り]",
-    "China_Simplified": "称号增益 [贪心鬼]",
-    "China_Traditional": "稱號增益 [貪然鬼]"
+    "China_Simplified": "称号增益 【贪心鬼】",
+    "China_Traditional": "稱號增益 【貪然鬼】"
   },
   {
     "ID": "SYS_BUFF_USERNICKNAME_LICENSE_04",
     "Korean": "칭호 버프 [고급보디]",
     "English": "Title Buff [Premium Body]",
     "Japanese": "称号バフ [高級ボディ]",
-    "China_Simplified": "称号增益 [高级身躯]",
-    "China_Traditional": "稱號增益 [高級身軀]"
+    "China_Simplified": "称号增益 【高级身躯】",
+    "China_Traditional": "稱號增益 【高級身軀】"
   },
   {
     "ID": "SYS_BUFF_USERNICKNAME_LICENSE_05",
     "Korean": "칭호 버프 [라이선스]",
     "English": "Title Buff [License]",
     "Japanese": "称号バフ [ライセンス]",
-    "China_Simplified": "称号增益 [许可证]",
-    "China_Traditional": "稱號增益 [執照]"
+    "China_Simplified": "称号增益 【许可证】",
+    "China_Traditional": "稱號增益 【執照】"
   },
   {
     "ID": "SYS_BUFF_USERNICKNAME_LICENSE_01_DESC",
@@ -97354,10 +97354,10 @@
   {
     "ID": "SYS_BUFF_USERNICKNAME_SPECIAL_01_DESC",
     "Korean": "스토리, 특별 의뢰, 비천의 탑 컨텐츠 진행 시 행동력 소모 -1",
-    "English": "Energy cost -1 for Storys, Special Requests, and Tower of Trials content.",
+    "English": "Energy cost -1 for Story, Special Requests, and Skyward Tower content.",
     "Japanese": "ストーリー、特別依頼、飛天の塔プレイ時、消耗活力1DOWN",
-    "China_Simplified": "进行故事、特别委托及飞天之塔时，消耗的行动力-1。",
-    "China_Traditional": "遊玩故事、特別委託、飛天塔等內容時，消耗行動力減少1"
+    "China_Simplified": "进行剧情、特别委托、飞天之塔内容时，行动力消耗-1",
+    "China_Traditional": "進行劇情、特別委託、飛天塔內容時，行動力消耗-1"
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_81",
@@ -97474,7 +97474,7 @@
   {
     "ID": "SYS_BATTLEPASS_NORMAL_MISSION_DMRAID1",
     "Korean": "<color=#E5CCFF>[일반]</color> 특별의뢰 : 생태조사 {0}회 클리어",
-    "English": "<color=#E5CCFF>[Normal]</color> Special Request: Ecology Survey — clear {0} time(s)",
+    "English": "<color=#E5CCFF>[Normal]</color> Special Request: Ecology Study — clear {0} time(s)",
     "Japanese": "<color=#E5CCFF>[一般]</color> 特別依頼：生態調査 を{0}回クリアする",
     "China_Simplified": "<color=#E5CCFF>[一般]</color> 特别委托：生态调查 通关{0}次",
     "China_Traditional": "<color=#E5CCFF>[一般]</color> 特別委託：生態調查 通關{0}次"
@@ -97482,7 +97482,7 @@
   {
     "ID": "SYS_BATTLEPASS_NORMAL_MISSION_DMRAID2",
     "Korean": "<color=#E5CCFF>[일반]</color> 특별의뢰 : 정체규명 {0}회 클리어",
-    "English": "<color=#E5CCFF>[Normal]</color> Special Request: Identity Analysis — clear {0} time(s)",
+    "English": "<color=#E5CCFF>[Normal]</color> Special Request: Identification — clear {0} time(s)",
     "Japanese": "<color=#E5CCFF>[一般]</color> 特別依頼：正体究明 を{0}回クリアする",
     "China_Simplified": "<color=#E5CCFF>[一般]</color> 特别委托：身份查明 通关{0}次",
     "China_Traditional": "<color=#E5CCFF>[一般]</color> 特別委託：身分查明 通關{0}次"
@@ -97507,14 +97507,14 @@
     "ID": "SYS_BATTLEPASS_NORMAL_MISSION_GOLD_USE",
     "Korean": "<color=#E5CCFF>[일반]</color> 골드 {0}사용",
     "English": "<color=#E5CCFF>[Normal]</color> Use {0} Gold",
-    "Japanese": "<color=#E5CCFF>[一般]</color> ゴールドを{0}消費する",
+    "Japanese": "<color=#E5CCFF>[一般]</color> ゴールドを{0}使用",
     "China_Simplified": "<color=#E5CCFF>[一般]</color> 消耗{0}金币",
     "China_Traditional": "<color=#E5CCFF>[一般]</color> 消耗{0}金幣"
   },
   {
     "ID": "SYS_BATTLEPASS_NORMAL_MISSION_SHOP",
     "Korean": "<color=#E5CCFF>[일반]</color> 상점에서 상품 {0}회 구매",
-    "English": "<color=#E5CCFF>[Normal]</color> Purchase items at the Shop {0} time(s)",
+    "English": "<color=#E5CCFF>[Normal]</color> Purchase Items {0} Times from the Shop",
     "Japanese": "<color=#E5CCFF>[一般]</color> ショップで商品を{0}回購入する",
     "China_Simplified": "<color=#E5CCFF>[一般]</color> 在商店购买商品{0}次",
     "China_Traditional": "<color=#E5CCFF>[一般]</color> 於商店購買商品{0}次"
@@ -97522,7 +97522,7 @@
   {
     "ID": "SYS_BATTLEPASS_NORMAL_MISSION_STAMINA_USE",
     "Korean": "<color=#E5CCFF>[일반]</color> 행동력 {0}사용",
-    "English": "<color=#E5CCFF>[Normal]</color> Spend {0} Stamina",
+    "English": "<color=#E5CCFF>[Normal]</color> Use {0} Stamina",
     "Japanese": "<color=#E5CCFF>[一般]</color> 活力を{0}消費する",
     "China_Simplified": "<color=#E5CCFF>[一般]</color> 消耗{0}体力",
     "China_Traditional": "<color=#E5CCFF>[一般]</color> 消耗{0}體力"
@@ -97578,7 +97578,7 @@
   {
     "ID": "SYS_BATTLEPASS_DAILY_MISSION_DMRAID1",
     "Korean": "<color=#33FF33>[일일]</color> 특별의뢰 : 생태조사 {0}회 클리어",
-    "English": "<color=#33FF33>[Daily]</color> Special Request: Ecology Survey — clear {0} time(s)",
+    "English": "<color=#33FF33>[Daily]</color> Special Request: Ecology Study— clear {0} time(s)",
     "Japanese": "<color=#33FF33>[デイリー]</color> 特別依頼：生態調査 を{0}回クリアする",
     "China_Simplified": "<color=#33FF33>[每日]</color> 特别委托：生态调查 通关{0}次",
     "China_Traditional": "<color=#33FF33>[每日]</color> 特別委託：生態調查 通關{0}次"
@@ -97586,7 +97586,7 @@
   {
     "ID": "SYS_BATTLEPASS_DAILY_MISSION_DMRAID2",
     "Korean": "<color=#33FF33>[일일]</color> 특별의뢰 : 정체규명 {0}회 클리어",
-    "English": "<color=#33FF33>[Daily]</color> Special Request: Identity Analysis — clear {0} time(s)",
+    "English": "<color=#33FF33>[Daily]</color> Special Request: Identification — clear {0} time(s)",
     "Japanese": "<color=#33FF33>[デイリー]</color> 特別依頼：正体究明 を{0}回クリアする",
     "China_Simplified": "<color=#33FF33>[每日]</color> 特别委托：身份查明 通关{0}次",
     "China_Traditional": "<color=#33FF33>[每日]</color> 特別委託：身分查明 通關{0}次"
@@ -97626,7 +97626,7 @@
   {
     "ID": "SYS_BATTLEPASS_WEEKLY_MISSION_DMRAID1",
     "Korean": "<color=#FFFF99>[주간]</color> 특별의뢰 : 생태조사 {0}회 클리어",
-    "English": "<color=#FFFF99>[Weekly]</color> Special Request: Ecology Survey — clear {0} time(s)",
+    "English": "<color=#FFFF99>[Weekly]</color> Special Request: Ecology Study— clear {0} time(s)",
     "Japanese": "<color=#FFFF99>[ウィークリー]</color> 特別依頼：生態調査 を{0}回クリアする",
     "China_Simplified": "<color=#FFFF99>[每周]</color> 特别委托：生态调查 通关{0}次",
     "China_Traditional": "<color=#FFFF99>[每週]</color> 特別委託：生態調查 通關{0}次"
@@ -97634,7 +97634,7 @@
   {
     "ID": "SYS_BATTLEPASS_WEEKLY_MISSION_DMRAID2",
     "Korean": "<color=#FFFF99>[주간]</color> 특별의뢰 : 정체규명 {0}회 클리어",
-    "English": "<color=#FFFF99>[Weekly]</color> Special Request: Identity Analysis — clear {0} time(s)",
+    "English": "<color=#FFFF99>[Weekly]</color> Special Request: Identification — clear {0} time(s)",
     "Japanese": "<color=#FFFF99>[ウィークリー]</color> 特別依頼：正体究明 を{0}回クリアする",
     "China_Simplified": "<color=#FFFF99>[每周]</color> 特别委托：身份查明 通关{0}次",
     "China_Traditional": "<color=#FFFF99>[每週]</color> 特別委託：身分查明 通關{0}次"
@@ -99050,7 +99050,7 @@
   {
     "ID": "SYS_CONTENS_LOCK_PVE_RAID_B",
     "Korean": "특별의뢰: 정체 규명",
-    "English": "Special Request: Identity Analysis",
+    "English": "Special Request: Identification",
     "Japanese": "特別依頼：正体究明",
     "China_Simplified": "特别委托：身份查明",
     "China_Traditional": "特別委託：身分查明"
@@ -99218,7 +99218,7 @@
   {
     "ID": "SYS_CONTENS_LOCK_PVE_RAID_B_DARK",
     "Korean": "특별의뢰: 정체 규명",
-    "English": "Special Request: Identity Analysis",
+    "English": "Special Request: Identification",
     "Japanese": "特別依頼：正体究明",
     "China_Simplified": "特别委托：身份查明",
     "China_Traditional": "特別委託：身分查明"
@@ -99226,7 +99226,7 @@
   {
     "ID": "SYS_CONTENS_LOCK_PVE_RAID_B_LIGHT",
     "Korean": "특별의뢰: 정체 규명",
-    "English": "Special Request: Identity Analysis",
+    "English": "Special Request: Identification",
     "Japanese": "特別依頼：正体究明",
     "China_Simplified": "特别委托：身份查明",
     "China_Traditional": "特別委託：身分查明"
@@ -99354,16 +99354,16 @@
   {
     "ID": "SYS_CONTENS_LOCK_IRREGULAR_INFILTRATE",
     "Korean": "침투 섬멸전",
-    "English": "Infiltration Annihilation",
-    "Japanese": "潜入殲滅戦",
+    "English": "Infiltration Operation",
+    "Japanese": "侵入殲滅戦",
     "China_Simplified": "渗透歼灭战",
-    "China_Traditional": "滲透殲滅戰"
+    "China_Traditional": "潛入殲滅戰"
   },
   {
     "ID": "SYS_CONTENS_LOCK_IRREGULAR_CHASE",
     "Korean": "추격 섬멸전",
-    "English": "Pursuit Annihilation",
-    "Japanese": "追跡殲滅戦",
+    "English": "Pursuit Operation",
+    "Japanese": "追撃殲滅戦",
     "China_Simplified": "追击歼灭战",
     "China_Traditional": "追擊殲滅戰"
   },
@@ -100225,35 +100225,35 @@
   },
   {
     "ID": "SYS_AREA_NAME_EVENT_33_1",
-    "Korean": "웰컴 투 유토피아 - 1주차",
-    "English": "Welcome to Utopia - Week 1",
-    "Japanese": "ユートピアへようこそ - 第1週",
-    "China_Simplified": "欢迎来到乌托邦 - 第1周",
-    "China_Traditional": "歡迎來到烏托邦 - 第1週"
+    "Korean": "웰컴 투 유토피아 - 1부",
+    "English": "Welcome to Utopia - Part 1",
+    "Japanese": "ユートピアへようこそ - 第1部",
+    "China_Simplified": "欢迎来到乌托邦 - 第1部",
+    "China_Traditional": "歡迎來到烏托邦 - 第1部"
   },
   {
     "ID": "SYS_AREA_NAME_EVENT_33_HARD_1",
-    "Korean": "웰컴 투 유토피아 - 1주차 하드",
-    "English": "Welcome to Utopia - Week 1 (Hard)",
-    "Japanese": "ユートピアへようこそ - 第1週 ハード",
-    "China_Simplified": "欢迎来到乌托邦 - 第1周 困难",
-    "China_Traditional": "歡迎來到烏托邦 - 第1週 困難"
+    "Korean": "웰컴 투 유토피아 - 1부 하드",
+    "English": "Welcome to Utopia - Part 1 (Hard)",
+    "Japanese": "ユートピアへようこそ - 第1部 ハード",
+    "China_Simplified": "欢迎来到乌托邦 - 第1部 困难",
+    "China_Traditional": "歡迎來到烏托邦 - 第1部 困難"
   },
   {
     "ID": "SYS_AREA_NAME_EVENT_33_2",
-    "Korean": "웰컴 투 유토피아 - 2주차",
-    "English": "Welcome to Utopia - Week 2",
-    "Japanese": "ユートピアへようこそ - 第2週",
-    "China_Simplified": "欢迎来到乌托邦 - 第2周",
-    "China_Traditional": "歡迎來到烏托邦 - 第2週"
+    "Korean": "웰컴 투 유토피아 - 2부",
+    "English": "Welcome to Utopia - Part 2",
+    "Japanese": "ユートピアへようこそ - 第2部",
+    "China_Simplified": "欢迎来到乌托邦 - 第2部",
+    "China_Traditional": "歡迎來到烏托邦 - 第2部"
   },
   {
     "ID": "SYS_AREA_NAME_EVENT_33_HARD_2",
-    "Korean": "웰컴 투 유토피아 - 2주차 하드",
-    "English": "Welcome to Utopia - Week 2 (Hard)",
-    "Japanese": "ユートピアへようこそ - 第2週 ハード",
-    "China_Simplified": "欢迎来到乌托邦 - 第2周 困难",
-    "China_Traditional": "歡迎來到烏托邦 - 第2週 困難"
+    "Korean": "웰컴 투 유토피아 - 2부 하드",
+    "English": "Welcome to Utopia - Part 2 (Hard)",
+    "Japanese": "ユートピアへようこそ - 第2部 ハード",
+    "China_Simplified": "欢迎来到乌托邦 - 第2部 困难",
+    "China_Traditional": "歡迎來到烏托邦 - 第2部 困難"
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_86",
@@ -100809,7 +100809,7 @@
   },
   {
     "ID": "SYS_ARCADE_EVENT_GACHA_ACTIVE",
-    "Korean": "캡슐뽑기",
+    "Korean": "캡슐 뽑기",
     "English": "Capsule Draw",
     "Japanese": "ガチャ回し",
     "China_Simplified": "胶囊抽取",
@@ -100946,7 +100946,7 @@
   {
     "ID": "SYS_COSTUME_GET_ATTENDENCE",
     "Korean": "출석을 통해 얻으실 수 있는 코스튬입니다.",
-    "English": "This costume can be obtained through attendance.",
+    "English": "This costume can be obtained through Login Event.",
     "Japanese": "ログイン報酬で獲得できるスキンです。",
     "China_Simplified": "可通过签到获得的服装。",
     "China_Traditional": "可透過簽到獲得的服裝。"
@@ -101916,7 +101916,7 @@
     "Korean": "메르샤 페스티벌",
     "English": "Mirsha Festival",
     "Japanese": "メルシャフェス",
-    "China_Simplified": "美洛沙庆典",
+    "China_Simplified": "弥乐沙节",
     "China_Traditional": "美洛沙慶典"
   },
   {
@@ -101924,7 +101924,7 @@
     "Korean": "특정한 기간에만 한정으로 이용 가능한\\n<color=#FED434>[메르샤 페스티벌]</color> 컨텐츠가 활성화 되었습니다.",
     "English": "A limited content is now available:\\n<color=#FED434>Mirsha Festival</color>.",
     "Japanese": "特定期間中ご利用できる\\n<color=#FED434>【メルシャフェス】</color>コンテンツが解放されました。",
-    "China_Simplified": "仅在特定期间内可使用的\\n<color=#FED434>美洛沙庆典</color>内容已开放。",
+    "China_Simplified": "仅在特定期间内可使用的\\n<color=#FED434>弥乐沙节</color>内容已开放。",
     "China_Traditional": "僅在特定期間內可使用的\\n<color=#FED434>美洛沙慶典</color>內容已開放。"
   },
   {
@@ -101970,8 +101970,8 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_VIELLA_TITLE",
     "Korean": "<size=22><color=#ffd883>스페셜 패스 혜택</color></size>\\n<size=18>비엘라 코스튬 즉시 지급</size>\\n<size=18>3성 동료 선택권</size>",
-    "English": "<color=#FFFFFF>Special Pass Benefits</color>\\nReceive Viella Costume Immediately\\n3★ Ally Selection Ticket",
-    "Japanese": "<color=#FFFFFF>スペシャルパス特典</color>\\nビエラのスキン即時獲得\\n★3仲間セレクト券",
+    "English": "<color=#FFFFFF>Special Pass Reward</color>\\Obtain Viella's Costume Immediately\\n3★ Hero Selection Ticket",
+    "Japanese": "<color=#FFFFFF>スペシャルパス特典</color>\\nビエラのスキン即時獲得\\n★3仲間スカウト選択チケット",
     "China_Simplified": "<color=#FFFFFF>特典通行证福利</color>\\n立即获得比埃拉的服装\\n★3同伴选择券",
     "China_Traditional": "<color=#FFFFFF>特典通行證福利</color>\\n立即獲得碧耶拉的服裝\\n★3同伴選擇券"
   },
@@ -102290,7 +102290,7 @@
   {
     "ID": "SYS_2000108_DES",
     "Korean": "[비엘라]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Viella.",
+    "English": "A costume that [Viella] can equip.",
     "Japanese": "【ビエラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
     "China_Simplified": "【比埃拉】可穿戴的皮肤。",
     "China_Traditional": "【碧耶拉】可穿戴的服裝。"
@@ -102298,7 +102298,7 @@
   {
     "ID": "SYS_2000105_DES",
     "Korean": "[프랑]이 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Fran.",
+    "English": "A costume that [Fran] can equip.",
     "Japanese": "【フラン】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
     "China_Simplified": "【芙蓢】可穿戴的皮肤。",
     "China_Traditional": "【芙蓢】可穿戴的服裝。"
@@ -102348,16 +102348,16 @@
     "Korean": "역전 세계의 <color=#FFB266>삼장법사</color> 출석[상]",
     "English": "Mystic Sage of the Reversed World <color=#FFB266>Attendance</color> [Upper]",
     "Japanese": "逆転世界の<color=#FFB266>三蔵法師</color> ログイン［上］",
-    "China_Simplified": "逆转世界的<color=#FFB266>三藏法师</color> 签到［上］",
-    "China_Traditional": "逆轉世界的<color=#FFB266>三藏法師</color> 簽到［上］"
+    "China_Simplified": "逆转世界的<color=#FFB266>三藏法师</color> 签到【上】",
+    "China_Traditional": "逆轉世界的<color=#FFB266>三藏法師</color> 簽到【上】"
   },
   {
     "ID": "SYS_ATTENDANCE_EVENT_37_TITLE_2",
     "Korean": "역전 세계의 <color=#FFB266>삼장법사</color> 출석[하]",
     "English": "Mystic Sage of the Reversed World <color=#FFB266>Attendance</color> [Lower]",
     "Japanese": "逆転世界の<color=#FFB266>三蔵法師</color> ログイン［下］",
-    "China_Simplified": "逆转世界的<color=#FFB266>三藏法师</color> 签到［下］",
-    "China_Traditional": "逆轉世界的<color=#FFB266>三藏法師</color> 簽到［下］"
+    "China_Simplified": "逆转世界的<color=#FFB266>三藏法师</color> 签到【下】",
+    "China_Traditional": "逆轉世界的<color=#FFB266>三藏法師</color> 簽到【下】"
   },
   {
     "ID": "SYS_AREA_NAME_EVENT_37_1",
@@ -102476,16 +102476,16 @@
     "Korean": "역전 세계의 삼장법사 출석 - 1주차",
     "English": "Mystic Sage of the Reversed World Attendance [Upper]",
     "Japanese": "逆転世界の三蔵法師 ログイン［上］",
-    "China_Simplified": "逆转世界的三藏法师 签到［上］",
-    "China_Traditional": "逆轉世界的三藏法師 簽到［上］"
+    "China_Simplified": "逆转世界的三藏法师 签到【上】",
+    "China_Traditional": "逆轉世界的三藏法師 簽到【上】"
   },
   {
     "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_37_2",
     "Korean": "역전 세계의 삼장법사 출석 - 2주차",
     "English": "Mystic Sage of the Reversed World Attendance [Lower]",
     "Japanese": "逆転世界の三蔵法師 ログイン［下］",
-    "China_Simplified": "逆转世界的三藏法师 签到［下］",
-    "China_Traditional": "逆轉世界的三藏法師 簽到［下］"
+    "China_Simplified": "逆转世界的三藏法师 签到【下】",
+    "China_Traditional": "逆轉世界的三藏法師 簽到【下】"
   },
   {
     "ID": "SYS_EVENT_DUNGEON_SEASON37_01",
@@ -102874,10 +102874,10 @@
   {
     "ID": "SYS_2000053_DES",
     "Korean": "[데미우르고스 스텔라]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Demiurge Stella.",
-    "Japanese": "【デミウルゴス・ステラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
-    "China_Simplified": "【创世之神斯黛拉】可穿戴的皮肤。",
-    "China_Traditional": "【迪米烏哥斯斯黛拉】可穿戴的服裝。"
+    "English": "A costume that [Demiurge Stella] can equip.",
+    "Japanese": "【デミウルゴス・ステラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
+    "China_Simplified": "【创世之神·斯黛拉】可穿戴的皮肤。",
+    "China_Traditional": "【迪米烏哥斯·斯黛拉】可穿戴的服裝。"
   },
   {
     "ID": "SYS_EVENT_COIN_USE_S38",
@@ -104122,16 +104122,16 @@
   {
     "ID": "SYS_2000107_DES",
     "Korean": "[포르투나]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Fortuna.",
-    "Japanese": "【フォルトゥナ】のスキンです。\\nスキンは【仲間】→【スキン】で装備でき\\n【スキン】ボタンは仲間のスキンがある場合のみ表示されます。",
+    "English": "A costume that [Fortuna] can equip.",
+    "Japanese": "【フォルトゥナ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【福尔图娜】可穿戴的皮肤。",
     "China_Traditional": "【波魯圖娜】可穿戴的服裝。"
   },
   {
     "ID": "SYS_BATTLE_PASS_BUY_FORTUNA_TITLE",
     "Korean": "<size=22><color=#ffd883>스페셜 패스 혜택</color></size>\\n<size=18>포르투나 코스튬 즉시 지급</size>\\n<size=18>3성 동료 선택권</size>",
-    "English": "<size=22><color=#ffd883>Special Pass Reward</color></size>\\n<size=18>Obtain Fortuna’s costume immediately</size>\\n<size=18>3★ Ally Selection Ticket</size>",
-    "Japanese": "<size=22><color=#ffd883>プレミアムパス特典</color></size>\\n<size=18>【フォルトゥナ】のスキン即時入手</size>\\n<size=18>★3仲間セレクト券</size>",
+    "English": "<size=22><color=#ffd883>Special Pass Reward</color></size>\\n<size=18>Obtain Fortuna’s costume immediately</size>\\n<size=18>3★ Hero Selection Ticket</size>",
+    "Japanese": "<size=22><color=#ffd883>プレミアムパス特典</color></size>\\n<size=18>【フォルトゥナ】のスキン即時入手</size>\\n<size=18>★3仲間スカウト選択チケット</size>",
     "China_Simplified": "<size=22><color=#ffd883>特别通行证福利</color></size>\\n<size=18>立即发放福尔图娜皮肤</size>\\n<size=18>★3同伴选择券</size>",
     "China_Traditional": "<size=22><color=#ffd883>特殊通行證優惠</color></size>\\n<size=18>立即獲得波魯圖娜的服裝</size>\\n<size=18>★3同伴選擇券</size>"
   },
@@ -104690,7 +104690,7 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_GNOSIS_DALIA_TITLE",
     "Korean": "<size=22><color=#ffd883>스페셜 패스 혜택</color></size>\\n<size=18>그노시스 달리아 코스튬 즉시 지급</size>\\n<size=18>3성 동료 선택권</size>",
-    "English": "<size=22><color=#ffd883>Special Pass Benefits</color></size>\\n<size=18>Gnosis Dahlia Costume Granted Immediately</size>\\n<size=18>3★ Ally Selection Ticket</size>",
+    "English": "<size=22><color=#ffd883>Special Pass Reward</color></size>\\n<size=18>Obtain Gnosis Dahlia's costume Immediately</size>\\n<size=18>3★ Hero Selection Ticket</size>",
     "Japanese": "<size=22><color=#ffd883>スペシャルパス特典</color></size>\\n<size=18>グノーシス・ダリアのスキン即時付与</size>\\n<size=18>★3 仲間選択券</size>",
     "China_Simplified": "<size=22><color=#ffd883>特别通行证福利</color></size>\\n<size=18>立即发放诺西斯·达莉娅皮肤</size>\\n<size=18>3星同伴选择券</size>",
     "China_Traditional": "<size=22><color=#ffd883>特別通行證福利</color></size>\\n<size=18>立即發放諾西斯·達莉雅服裝</size>\\n<size=18>3星同伴選擇券</size>"
@@ -104722,7 +104722,7 @@
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_03_02",
     "Korean": "* <color=#2c6bb7>출혈</color> 을 부여하는 스킬을 다수 보유하고 있습니다.\\n* <color=#2c6bb7>출혈</color> 대상에게 <color=#2c6bb7>필그림 에이지</color> 사용 시 추가 공격을 하여 피해를 입힙니다.\\n* <color=#2c6bb7>출혈</color> 대상 공격 시 체력과 WG를 회복합니다.",
-    "English": "* Has multiple skills that inflict <color=#2c6bb7>Bleeding</color>.\\nWhen using <color=#2c6bb7>Pilgrim Age</color> on a <color=#2c6bb7>Bleeding</color> target, performs an additional attack and deals damage.\\nWhen attacking a <color=#2c6bb7>Bleeding</color> target, recovers Health and Weakness Gauge.",
+    "English": "* Has multiple skills that inflict <color=#2c6bb7>Bleeding</color>.\\nWhen using <color=#2c6bb7>Pilgrimage</color> on a <color=#2c6bb7>Bleeding</color> target, performs an additional attack and deals damage.\\nWhen attacking a <color=#2c6bb7>Bleeding</color> target, recovers Health and Weakness Gauge.",
     "Japanese": "* <color=#2c6bb7>出血</color>を付与するスキルを多数所有している。\\n<color=#2c6bb7>出血</color>対象に<color=#2c6bb7>【ピルグリムエイジ】</color>使用時、追加攻撃を与え、ダメージを与える。\\n<color=#2c6bb7>出血</color>対象を攻撃時、HPとWGを回復する。",
     "China_Simplified": "* 持有多种赋予<color=#2c6bb7>出血</color>的技能。\\n对<color=#2c6bb7>出血</color>目标使用<color=#2c6bb7>朝圣者时代</color>时，追加攻击并造成伤害。\\n攻击<color=#2c6bb7>出血</color>目标时，恢复生命值和WG。",
     "China_Traditional": "* 擁有多個賦予<color=#2c6bb7>出血</color>狀態的技能。\\n對<color=#2c6bb7>出血</color>目標使用<color=#2c6bb7>朝聖年代</color>時，會進行額外攻擊並造成傷害。\\n攻擊<color=#2c6bb7>出血</color>目標時，會恢復生命力和WG。"
@@ -104740,13 +104740,13 @@
     "Korean": "* <color=#2c6bb7>내가 사라져 가</color> 사용 시 일정 확률로 적 전체에게 <color=#2c6bb7>화상</color>을 부여합니다.\\n* 필살기 사용 시 WG를 회복합니다.\\n* 광폭화 종료 시 적 전체에게 효과 저항을 무시하는 <color=#2c6bb7>화상</color> 피해를 입힙니다.",
     "English": "* When using <color=#2c6bb7>I'm Fading</color>, has a chance to inflict <color=#2c6bb7>Burned</color> on all enemies.\\nWhen using the Ultimate Skill, recovers Weakness Gauge.\\nWhen Enraged ends, deals <color=#2c6bb7>Burned</color> damage to all enemies that ignores Resilience.",
     "Japanese": "* <color=#2c6bb7>【私が消えていく】</color>使用時、一定の確率で敵全体に<color=#2c6bb7>火傷</color>を付与する。\\n必殺スキル使用時、WGを回復する。\\n【狂暴化】終了時、敵全体に効果抵抗を無視する<color=#2c6bb7>火傷</color>ダメージを与える。",
-    "China_Simplified": "* 使用<color=#2c6bb7>我在消失</color>时，一定概率对全体敌人赋予<color=#2c6bb7>烧伤</color>。\\n使用必杀技时，恢复WG。\\n狂暴化结束时，对全体敌人造成无视效果抵抗的<color=#2c6bb7>烧伤</color>伤害。",
+    "China_Simplified": "* 使用<color=#2c6bb7>我要消失了</color>时，一定概率对全体敌人赋予<color=#2c6bb7>烧伤</color>。\\n使用必杀技时，恢复WG。\\n狂暴化结束时，对全体敌人造成无视效果抵抗的<color=#2c6bb7>烧伤</color>伤害。",
     "China_Traditional": "* 使用<color=#2c6bb7>我要消失了</color>時，有一定機率對全體敵人賦予<color=#2c6bb7>燒傷</color>狀態。\\n使用必殺技時，恢復WG。\\n狂暴化狀態結束時，對全體敵人造成無視效果抵抗的<color=#2c6bb7>燒傷</color>傷害。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_06",
     "Korean": "* 적에게 상태 이상 효과를 부여하는 스킬을 다수 보유하고 있습니다.\\n* 상태 이상의 적에게 더 큰 피해를 입힙니다.\\n* 광폭화 시 받는 WG 피해량이 감소합니다.\\n* 광폭화 종료 시 적 전체를 공격하고 <color=#2c6bb7>감전</color> 효과를 가진 대상에게 효과 저항을 무시하는 스턴 상태를 부여합니다.",
-    "English": "* Has multiple skills that inflict debuffs on enemies.\\nDeals increased damage to enemies with debuffs.\\nWhile Enraged, Weakness Gauge damage taken is reduced.\\nWhen Enraged ends, attacks all enemies and inflicts Stunned on targets that are <color=#2c6bb7>Shocked</color>, ignoring Resilience.",
+    "English": "* Has multiple skills that inflict debuffs on enemies.\\nDeals increased damage to enemies with debuffs.\\nWhile Enraged, WG damage taken is reduced.\\nWhen Enraged ends, attacks all enemies and inflicts Stunned on targets that are <color=#2c6bb7>Shocked</color>, ignoring Resilience.",
     "Japanese": "* 敵に状態異常を付与するスキルを多数所有している。\\n状態異常の敵に、より大ダメージを与える。\\n狂暴化発動時、受けるWGダメージがDOWNする。\\n【狂暴化】終了時、敵全体にダメージを与え、<color=#2c6bb7>感電</color>状態の対象に効果抵抗を無視するスタンを付与する。",
     "China_Simplified": "* 持有多种对敌人赋予异常状态效果的技能。\\n对异常状态的敌人造成更高伤害。\\n狂暴化时，受到的WG伤害量降低。\\n狂暴化结束时，攻击全体敌人，并对受到<color=#2c6bb7>触电</color>效果的目标赋予无视效果抵抗的晕眩状态。",
     "China_Traditional": "* 擁有多個對敵方賦予狀態異常的技能。\\n對狀態異常的敵人造成更大的傷害。\\n狂暴化時，受到的WG傷害量減少。\\n狂暴化狀態結束時，攻擊全體敵人，並對帶有<color=#2c6bb7>觸電</color>效果的目標賦予無視效果抵抗的暈眩狀態。"
@@ -104780,8 +104780,8 @@
     "Korean": "* <color=#2c6bb7>정의의 사자사연격</color> 사용 시 실드를 획득합니다.\\n* 실드 보유 시 피해량이 크게 증가합니다.\\n* 방어력이 증가하는 스킬을 다수 보유하고 있습니다.",
     "English": "* When using <color=#2c6bb7>Justice's Quad Strike</color>, gains a barrier.\\nDamage is greatly increased while granted a barrier.\\nHas multiple skills that increase Defense.",
     "Japanese": "* <color=#2c6bb7>【正義の獅子四連撃】</color>使用時、シールドを獲得する。\\nシールド状態の場合、ダメージが大幅にUPする。\\n防御力をUPさせるスキルを多数所有している。",
-    "China_Simplified": "* 使用<color=#2c6bb7>正义之狮四连击</color>时，获得护盾。\\n持有护盾时，伤害量大幅提升。\\n持有多种提升防御力的技能。",
-    "China_Traditional": "* 使用<color=#2c6bb7>正義獅四連擊</color>時獲得護盾。\\n擁有護盾時，傷害量大幅增加。\\n擁有多個增加防禦力的技能。"
+    "China_Simplified": "* 使用<color=#2c6bb7>正义使者四连击</color>时，获得护盾。\\n持有护盾时，伤害量大幅提升。\\n持有多种提升防御力的技能。",
+    "China_Traditional": "* 使用<color=#2c6bb7>正義使者四連擊</color>時獲得護盾。\\n擁有護盾時，傷害量大幅增加。\\n擁有多個增加防禦力的技能。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_10",
@@ -104797,15 +104797,15 @@
     "English": "* Uses <color=#2c6bb7>Command: Restrain</color> to inflict Stunned on enemies with a set chance.\\nWhen using <color=#2c6bb7>Command: Incapacitate</color>, steals the enemy's buffs.\\nWhen using the Ultimate Skill, reduces all enemies' Defense.\\nUpon entering Enraged, deals high damage immediately.",
     "Japanese": "* <color=#2c6bb7>命令：制圧</color>で敵に一定の確率でスタンを付与する。\\n<color=#2c6bb7>命令：無力化</color>使用時、敵の強化効果を奪う。\\n必殺スキル使用時、敵全体の防御力をDOWNさせる。\\n狂暴化発動後、即時大ダメージを与える。",
     "China_Simplified": "* 通过<color=#2c6bb7>命令：压制</color>一定概率对敌人赋予晕眩。\\n使用<color=#2c6bb7>命令：失能</color>时，掠夺敌人的强化效果。\\n使用必杀技时，全体敌人的防御力降低。\\n狂暴化立即造成大量伤害。",
-    "China_Traditional": "* 透過<color=#2c6bb7>命令：鎮壓</color>有一定機率對敵人賦予暈眩狀態。\\n使用<color=#2c6bb7>命令：無力化</color>時，奪取敵人的強化效果。\\n使用必殺技時，減少全體敵人的防禦力。\\n狂暴化時立即造成高傷害。"
+    "China_Traditional": "* 透過<color=#2c6bb7>命令：壓制</color>有一定機率對敵人賦予暈眩狀態。\\n使用<color=#2c6bb7>命令：無力化</color>時，奪取敵人的強化效果。\\n使用必殺技時，減少全體敵人的防禦力。\\n狂暴化時立即造成高傷害。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_10_03",
     "Korean": "* 버스트 스킬, 협공, 스킬 체인을 제외한 스킬로 받는 피해가 대폭 감소합니다.\\n* <color=#2c6bb7>죽어주세요</color>를 통해 저주를 부여하고 <color=#2c6bb7>신의 힘이에요</color> 사용 시 저주를 폭발시킵니다.\\n* 강화 효과를 해제하거나 강화 불가를 부여하는 스킬을 보유하고 있습니다.",
     "English": "* Damage taken from skills other than Burst Skills, Dual Attacks, and Skill Chains is greatly reduced.\\nUses <color=#2c6bb7>Please Die</color> to inflict Curse, and detonates the Curse when using <color=#2c6bb7>Behold God's Might</color>.\\nHas skills that remove buffs or inflict Unbuffable.",
     "Japanese": "* バーストスキル、連携攻撃、チェーンスキルを除くスキルによる受けるダメージが大幅にDOWNする。\\n<color=#2c6bb7>【死になさい】</color>で呪いを付与し、<color=#2c6bb7>【神の力です】</color>使用時、呪いを破裂させる。\\n強化効果を解除、または強化不可を付与するスキルを所有している。",
-    "China_Simplified": "* 受爆发技能、夹攻、连携技能以外技能造成的伤害大幅降低。\\n通过<color=#2c6bb7>为我而死</color>赋予诅咒，使用<color=#2c6bb7>此乃神之力</color>时引爆诅咒。\\n持有解除强化效果或赋予无法强化的技能。",
-    "China_Traditional": "* 受到除爆發技能、夾攻、連鎖技能以外的技能攻擊時，所受傷害大幅減少。\\n透過<color=#2c6bb7>去死吧</color>賦予詛咒，使用<color=#2c6bb7>這是神的力量</color>時引爆詛咒。\\n擁有解除強化效果或賦予無法強化狀態的技能。"
+    "China_Simplified": "* 受爆发技能、夹攻、连携技能以外技能造成的伤害大幅降低。\\n通过<color=#2c6bb7>去死吧</color>赋予诅咒，使用<color=#2c6bb7>神力</color>时引爆诅咒。\\n持有解除强化效果或赋予无法强化的技能。",
+    "China_Traditional": "* 受到除爆發技能、夾攻、連鎖技能以外的技能攻擊時，所受傷害大幅減少。\\n透過<color=#2c6bb7>去死吧</color>賦予詛咒，使用<color=#2c6bb7>神力</color>時引爆詛咒。\\n擁有解除強化效果或賦予無法強化狀態的技能。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_02_02",
@@ -104820,24 +104820,24 @@
     "Korean": "* 치명 공격 시 WG를 회복합니다.\\n* <color=#2c6bb7>나찰 가르기</color>를 사용할 때마다 <color=#2c6bb7>치명 피해</color>가 증가합니다.\\n* <color=#2c6bb7>도지기리 야스츠나</color>를 사용할 때마다 <color=#2c6bb7>공격력</color>이 증가합니다.",
     "English": "* Recovers Weakness Gauge on a Critical Hit.\\nEach time <color=#2c6bb7>Shura Slash</color> is used, <color=#2c6bb7>Critical Damage</color> is increased.\\nEach time <color=#2c6bb7>Doujikiri Yasutsuna</color> is used, <color=#2c6bb7>Attack</color> is increased.",
     "Japanese": "* 会心発生時、WGを回復する。\\n<color=#2c6bb7>【羅刹斬り】</color>を使用するたびに、<color=#2c6bb7>会心ダメージ</color>がUPする。\\n<color=#2c6bb7>【童子切安綱】</color>を発動するたび、<color=#2c6bb7>攻撃力</color>がUPする。",
-    "China_Simplified": "* 造成暴击时，恢复WG。\\n每次使用<color=#2c6bb7>裂斩罗刹</color>时，<color=#2c6bb7>暴击伤害</color>提升。\\n每次使用<color=#2c6bb7>童子切安纲</color>时，<color=#2c6bb7>攻击力</color>提升。",
-    "China_Traditional": "* 暴擊攻擊時，恢復WG。\\n每次使用<color=#2c6bb7>羅剎斬</color>時，<color=#2c6bb7>暴擊傷害</color>增加。\\n每次使用<color=#2c6bb7>童子切安綱</color>時，<color=#2c6bb7>攻擊力</color>增加。"
+    "China_Simplified": "* 造成暴击时，恢复WG。\\n每次使用<color=#2c6bb7>分裂罗刹</color>时，<color=#2c6bb7>暴击伤害</color>提升。\\n每次使用<color=#2c6bb7>童子切安纲</color>时，<color=#2c6bb7>攻击力</color>提升。",
+    "China_Traditional": "* 暴擊攻擊時，恢復WG。\\n每次使用<color=#2c6bb7>分裂羅剎</color>時，<color=#2c6bb7>暴擊傷害</color>增加。\\n每次使用<color=#2c6bb7>童子切安綱</color>時，<color=#2c6bb7>攻擊力</color>增加。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_11",
     "Korean": "* 적을 공격할 때마다 일정 확률로 공격력이 가장 높은 적에게 <color=#2c6bb7>스턴</color>을 부여합니다.\\n* <color=#2c6bb7>칼라마리의 부름</color> 사용 시 일정 확률로 적 전체에게 강화 불가를 부여합니다.\\n* <color=#2c6bb7>두려운 부등변다면체</color> 사용 시 적 전체의 보유 중인 약화 효과의 지속 시간을 증가시킵니다.",
     "English": "* Each time an enemy is attacked, has a set chance to inflict <color=#2c6bb7>Stunned</color> on the enemy with the highest Attack.\\nWhen using <color=#2c6bb7>Calamari's Call</color>, has a set chance to inflict Unbuffable on all enemies.\\nWhen using <color=#2c6bb7>Terrifying Trapezohedron</color>, increases the duration of existing debuffs on all enemies.",
     "Japanese": "* 敵を攻撃するたび、一定の確率で攻撃力が最も高い敵に<color=#2c6bb7>スタン</color>を付与する。\\n<color=#2c6bb7>【カラマリーの雄たけび】</color>使用時、一定の確率で敵全体に強化不可を付与する。\\n<color=#2c6bb7>【脅威の等辺多面体】</color>使用時、敵全体が保有している弱体効果の持続時間を増加させる。",
-    "China_Simplified": "* 每次攻击敌人时，一定概率对攻击力最高的敌人赋予<color=#2c6bb7>晕眩</color>。\\n使用<color=#2c6bb7>鱿鱼之召</color>时，一定概率对全体敌人赋予无法强化。\\n使用<color=#2c6bb7>可怖的不等边多面体</color>时，延长全体敌人当前受到的弱化效果持续时间。",
-    "China_Traditional": "* 每次攻擊敵人時，有一定機率對攻擊力最高的敵人賦予<color=#2c6bb7>暈眩</color>狀態。\\n使用<color=#2c6bb7>卡拉馬里的呼喚</color>時，有一定機率對全體敵人賦予無法強化狀態。\\n使用<color=#2c6bb7>可怕的不等邊多面體</color>時，增加全體敵人持有的弱化效果持續時間。"
+    "China_Simplified": "* 每次攻击敌人时，一定概率对攻击力最高的敌人赋予<color=#2c6bb7>晕眩</color>。\\n使用<color=#2c6bb7>海怪的召唤</color>时，一定概率对全体敌人赋予无法强化。\\n使用<color=#2c6bb7>可怖的偏方三八面体</color>时，延长全体敌人当前受到的弱化效果持续时间。",
+    "China_Traditional": "* 每次攻擊敵人時，有一定機率對攻擊力最高的敵人賦予<color=#2c6bb7>暈眩</color>狀態。\\n使用<color=#2c6bb7>五爪怪的召喚</color>時，有一定機率對全體敵人賦予無法強化狀態。\\n使用<color=#2c6bb7>可怕的不等邊多面體</color>時，增加全體敵人持有的弱化效果持續時間。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_12",
     "Korean": "* 적이 공격이 아닌 스킬 사용 시 아군 전체의 <color=#2c6bb7>WG</color>와 체력을 회복합니다.\\n* <color=#2c6bb7>용맹하게 싸워라!</color> 사용 시 강화 효과를 획득하며, 강화 효과 보유 시 <color=#2c6bb7>부서져라</color> 스킬이 강화됩니다.\\n* 광폭화 돌입과 동시에 큰 피해를 입히며 광폭화 이후 WG 피해를 받지 않습니다.",
-    "English": "* When an enemy uses a non-attack skill, recovers <color=#2c6bb7>Weakness Gauge</color> and Health for all allies.\\nWhen using <color=#2c6bb7>Fight Ferociously!</color>, gains buffs. When having buffs, <color=#2c6bb7>Shatter!</color> is enhanced.\\nUpon entering Enraged, deals heavy Damage, and does not take Weakness Gauge Damage after entering Enraged.",
+    "English": "* When an enemy uses a non-attack skill, recovers <color=#2c6bb7>Weakness Gauge</color> and Health for all allies.\\nWhen using <color=#2c6bb7>Fight Ferociously!</color>, gains buffs. When having buffs, <color=#2c6bb7>Shatter!</color> is enhanced.\\nUpon entering Enraged, deals heavy Damage, and does not take WG damage after entering Enraged.",
     "Japanese": "* 敵が攻撃以外のスキルを使用した場合、味方全体の<color=#2c6bb7>WG</color>とHPを回復する。\\n<color=#2c6bb7>【イージス・サンクチュアリ】</color>使用時、強化効果を獲得し、強化効果がある場合、<color=#2c6bb7>【紫電撃砕】</color>スキルが強化される。\\n【狂暴化】状態に切り替わると同時に大ダメージを与え、狂暴化後、WGダメージを受けない。",
-    "China_Simplified": "* 敌人使用非攻击类技能时，为全体友军恢复<color=#2c6bb7>WG</color>和生命值。\\n使用<color=#2c6bb7>勇敢作战吧！</color>时，获得强化效果；持有强化效果时，<color=#2c6bb7>粉碎</color>技能获得强化。\\n进入狂暴化状态的同时造成巨额伤害，狂暴化结束后不再受到WG伤害。",
-    "China_Traditional": "* 當敵人使用非攻擊技能時，恢復全體友軍的<color=#2c6bb7>WG</color>和生命力。\\n使用<color=#2c6bb7>勇敢戰鬥吧！</color>時獲得強化效果，擁有強化效果時<color=#2c6bb7>破碎吧</color>技能會被強化。\\n進入狂暴化突進狀態的同時造成巨大傷害，狂暴化之後不受到WG傷害。"
+    "China_Simplified": "* 敌人使用非攻击类技能时，为全体友军恢复<color=#2c6bb7>WG</color>和生命值。\\n使用<color=#2c6bb7>勇敢战斗吧！</color>时，获得强化效果；持有强化效果时，<color=#2c6bb7>粉身碎骨！</color>技能获得强化。\\n进入狂暴化状态的同时造成巨额伤害，狂暴化结束后不再受到WG伤害。",
+    "China_Traditional": "* 當敵人使用非攻擊技能時，恢復全體友軍的<color=#2c6bb7>WG</color>和生命力。\\n使用<color=#2c6bb7>勇猛奮戰！</color>時獲得強化效果，擁有強化效果時<color=#2c6bb7>粉身碎骨！</color>技能會被強化。\\n進入狂暴化突進狀態的同時造成巨大傷害，狂暴化之後不受到WG傷害。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_13",
@@ -104852,31 +104852,31 @@
     "Korean": "* 아군을 <color=#2c6bb7>회복</color>하는 스킬을 다수 보유하고 있습니다.\\n* 적이 공격이 아닌 스킬 사용 시 아군 전체의 <color=#2c6bb7>WG</color>와 체력을 회복합니다.\\n* <color=#2c6bb7>사람에게는 사랑이</color> 사용 시 적 전체의 치명 확률을 감소시킵니다.\\n* 광폭화 시 사망한 아군을 전부 부활시킨 후 적 전체에게 효과 저항을 무시하고 <color=#2c6bb7>침묵</color>을 부여합니다.",
     "English": "* Has multiple skills that <color=#2c6bb7>Heals</color> allies.\\nWhen an enemy uses a non-attack skill, recovers <color=#2c6bb7>Weakness Gauge</color> and Health for all allies.\\nWhen using <color=#2c6bb7>The Love in Our Hearts</color>, reduces all enemies' Critical Hit Chance.\\nWhen Enraged, revives all fallen allies, then inflicts <color=#2c6bb7>Silenced</color> on all enemies while ignoring Resilience.",
     "Japanese": "* 味方を<color=#2c6bb7>回復</color>するスキルを多数所有している。\\n敵が攻撃以外のスキルを使用した場合、味方全体の<color=#2c6bb7>WG</color>とHPを回復する。\\n<color=#2c6bb7>【人にありては愛】</color>使用時、敵全体の会心率をDOWNさせる。\\n狂暴化発動時、倒れた味方をすべて復活させた後、敵全体に効果抵抗を無視し、<color=#2c6bb7>沈黙</color>を付与する。",
-    "China_Simplified": "* 持有多种可<color=#2c6bb7>恢复</color>友军的技能。\\n敌人使用非攻击类技能时，为全体友军恢复<color=#2c6bb7>WG</color>和生命值。\\n使用<color=#2c6bb7>人类需要爱</color>时，全体敌人的暴击率降低。\\n狂暴化时，复活所有死亡的友军后，对全体敌人赋予无视效果抵抗的<color=#2c6bb7>沉默</color>。",
-    "China_Traditional": "* 擁有多個<color=#2c6bb7>恢復</color>友軍的技能。\\n當敵人使用非攻擊技能時，恢復全體友軍的<color=#2c6bb7>WG</color>和生命力。\\n使用<color=#2c6bb7>於人有愛</color>時，減少全體敵人的暴擊率。\\n狂暴化時，復活所有死亡的友軍成員後，對全體敵人賦予無視效果抵抗的<color=#2c6bb7>沉默</color>狀態。"
+    "China_Simplified": "* 持有多种可<color=#2c6bb7>恢复</color>友军的技能。\\n敌人使用非攻击类技能时，为全体友军恢复<color=#2c6bb7>WG</color>和生命值。\\n使用<color=#2c6bb7>人类有爱</color>时，全体敌人的暴击率降低。\\n狂暴化时，复活所有死亡的友军后，对全体敌人赋予无视效果抵抗的<color=#2c6bb7>沉默</color>。",
+    "China_Traditional": "* 擁有多個<color=#2c6bb7>恢復</color>友軍的技能。\\n當敵人使用非攻擊技能時，恢復全體友軍的<color=#2c6bb7>WG</color>和生命力。\\n使用<color=#2c6bb7>愛情之於人們</color>時，減少全體敵人的暴擊率。\\n狂暴化時，復活所有死亡的友軍成員後，對全體敵人賦予無視效果抵抗的<color=#2c6bb7>沉默</color>狀態。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_15",
     "Korean": "* 매 턴마다 턴 종료 시 무작위 적 1명에게 <color=#2c6bb7>석화</color> 효과를 부여합니다.\\n* <color=#2c6bb7>만물에게 안식을</color> 사용 시 효과 저항과 면역을 무시하고 석화 상태의 적을 <color=#2c6bb7>해제 불가</color> 상태의 석화로 변경합니다.\\n* <color=#2c6bb7>치명 확률</color>과 <color=#2c6bb7>치명 피해</color>를 증가시키는 스킬을 보유하고 있습니다.",
     "English": "* At the end of each turn, inflicts <color=#2c6bb7>Petrified</color> on 1 random enemy.\\nWhen using <color=#2c6bb7>Sanctuary for All</color>, ignores Resilience and Immunity, and converts enemies that are inflicted with Petrified into <color=#2c6bb7>Irremovable</color> Petrified state.\\nHas skills that increase <color=#2c6bb7>Critical Hit Chance</color> and <color=#2c6bb7>Critical Damage</color>.",
     "Japanese": "* 毎ターンごとにターン終了時、ランダムの敵単体に<color=#2c6bb7>石化</color>効果を付与する。\\n<color=#2c6bb7>【万物にありては安息】</color>を使用時、効果抵抗と免疫を無視し、石化状態の敵を<color=#2c6bb7>解除不可能な</color>石化に変更する。\\n<color=#2c6bb7>会心率</color>と<color=#2c6bb7>会心ダメージ</color>を増加させるスキルを所有している。",
-    "China_Simplified": "* 每回合结束时，对1名随机敌人赋予<color=#2c6bb7>石化</color>效果。\\n使用<color=#2c6bb7>向万物赐眠</color>时，无视效果抵抗与免疫，使石化状态的敌人变更为<color=#2c6bb7>无法解除</color>的石化。\\n持有提升<color=#2c6bb7>暴击率</color>与<color=#2c6bb7>暴击伤害</color>的技能。",
-    "China_Traditional": "* 每回合結束時，對隨機1名敵人賦予<color=#2c6bb7>石化</color>效果。\\n使用<color=#2c6bb7>萬物皆安息</color>時，無視效果抵抗和免疫，將石化狀態的敵人變更為<color=#2c6bb7>無法解除</color>的石化狀態。\\n擁有增加<color=#2c6bb7>暴擊率</color>和<color=#2c6bb7>暴擊傷害</color>的技能。"
+    "China_Simplified": "* 每回合结束时，对1名随机敌人赋予<color=#2c6bb7>石化</color>效果。\\n使用<color=#2c6bb7>赋予万物安息</color>时，无视效果抵抗与免疫，使石化状态的敌人变更为<color=#2c6bb7>无法解除</color>的石化。\\n持有提升<color=#2c6bb7>暴击率</color>与<color=#2c6bb7>暴击伤害</color>的技能。",
+    "China_Traditional": "* 每回合結束時，對隨機1名敵人賦予<color=#2c6bb7>石化</color>效果。\\n使用<color=#2c6bb7>願萬物安息</color>時，無視效果抵抗和免疫，將石化狀態的敵人變更為<color=#2c6bb7>無法解除</color>的石化狀態。\\n擁有增加<color=#2c6bb7>暴擊率</color>和<color=#2c6bb7>暴擊傷害</color>的技能。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_16",
     "Korean": "* 적이 행동 시 약화 효과를 보유한 적이 1명이라도 있으면 무작위 적 한 명에게 약화 효과를 부여합니다.\\n* <color=#2c6bb7>강력한 출력</color> 사용 시 일정 확률로 적 전체에게 약화 효과를 부여합니다.\\n* 적이 약화 효과 보유 시 <color=#2c6bb7>압도적인 성능</color>과 <color=#2c6bb7>가공할 위력</color>의 효과가 강화됩니다.",
     "English": "* When an enemy performs an action, if at least one enemy has a debuff, inflicts a debuff on 1 random enemy.\\nWhen using <color=#2c6bb7>Intense Output</color>, has a set chance to inflict debuffs on all enemies.\\nWhen enemies have debuffs, the effects of <color=#2c6bb7>Overwhelming Performance</color> and <color=#2c6bb7>Fearsome Might</color> are enhanced.",
     "Japanese": "* 敵が行動時、弱体効果を保有する敵がいると、ランダムの敵単体に弱体効果を付与する。\\n<color=#2c6bb7>【出力全開】</color>使用時、一定の確率で敵全体に弱体効果を付与する。\\n敵に弱体効果がある場合、<color=#2c6bb7>【圧倒的な性能】と</color><color=#2c6bb7>【恐れおののく威力】</color>の効果が強化される。",
-    "China_Simplified": "* 敌人行动时，若至少有1名敌人持有弱化效果，则随机对1名敌人赋予弱化效果。\\n使用<color=#2c6bb7>火力全开</color>时，一定概率对全体敌人赋予弱化效果。\\n敌人持有弱化效果时，<color=#2c6bb7>压倒性的性能</color>和<color=#2c6bb7>可怖威力</color>的效果得到强化。",
-    "China_Traditional": "* 當敵人行動時，如果場上至少有1名敵人帶有弱化效果，則對隨機1名敵人賦予弱化效果。\\n使用<color=#2c6bb7>強大輸出</color>時，有一定機率對全體敵人賦予弱化效果。\\n當敵人擁有弱化效果時，<color=#2c6bb7>壓倒性性能</color>和<color=#2c6bb7>驚人威力</color>的效果會被強化。"
+    "China_Simplified": "* 敌人行动时，若至少有1名敌人持有弱化效果，则随机对1名敌人赋予弱化效果。\\n使用<color=#2c6bb7>强力输出</color>时，一定概率对全体敌人赋予弱化效果。\\n敌人持有弱化效果时，<color=#2c6bb7>压倒性的性能</color>和<color=#2c6bb7>可怕的威力</color>的效果得到强化。",
+    "China_Traditional": "* 當敵人行動時，如果場上至少有1名敵人帶有弱化效果，則對隨機1名敵人賦予弱化效果。\\n使用<color=#2c6bb7>強力輸出</color>時，有一定機率對全體敵人賦予弱化效果。\\n當敵人擁有弱化效果時，<color=#2c6bb7>壓倒性的功能</color>和<color=#2c6bb7>加工威力</color>的效果會被強化。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_17",
     "Korean": "* <color=#2c6bb7>영광의 길</color> 사용 시 적에게 해제가 불가능한 <color=#2c6bb7>화상</color>을 부여합니다.\\n* <color=#2c6bb7>화상</color>을 보유한 적에게는 WG 피해를 받지 않습니다.",
-    "English": "* When using <color=#2c6bb7>Paths of Glory</color>, inflicts <color=#2c6bb7>Burned</color> that is irremovable on an enemy.\\nDoes not take Weakness Gauge Damage from enemies that have <color=#2c6bb7>Burned</color>.",
+    "English": "* When using <color=#2c6bb7>Paths of Glory</color>, inflicts <color=#2c6bb7>Burned</color> that is irremovable on an enemy.\\nDoes not take WG damage from enemies that have <color=#2c6bb7>Burned</color>.",
     "Japanese": "* <color=#2c6bb7>【栄光への道】</color>使用時、敵に解除不可能な<color=#2c6bb7>火傷</color>を付与する。\\n<color=#2c6bb7>火傷</color>を保有している敵はWGダメージを受けない。",
-    "China_Simplified": "* 使用<color=#2c6bb7>荣光之路</color>时，对敌人赋予无法解除的<color=#2c6bb7>烧伤</color>。\\n持有<color=#2c6bb7>烧伤</color>的敌人不会受到WG伤害。",
+    "China_Simplified": "* 使用<color=#2c6bb7>荣耀之路</color>时，对敌人赋予无法解除的<color=#2c6bb7>烧伤</color>。\\n持有<color=#2c6bb7>烧伤</color>的敌人不会受到WG伤害。",
     "China_Traditional": "* 使用<color=#2c6bb7>榮耀之路</color>時，對敵人賦予無法解除的<color=#2c6bb7>燒傷</color>狀態。\\n對擁有<color=#2c6bb7>燒傷</color>狀態的敵人，不受到WG傷害。"
   },
   {
@@ -104884,48 +104884,48 @@
     "Korean": "* <color=#2c6bb7>이벤트 호라이즌</color> 사용 시 공격력이 상승합니다. \\n* 공격력이 상승한 상태에서 <color=#2c6bb7>데드 얼라이브</color> 사용 시 적 전체를 공격합니다.\\n* 광폭화 시 해제되지 않는 공격력 증가 효과를 일정 턴 수 동안 획득합니다.",
     "English": "* When using <color=#2c6bb7>Event Horizon</color>, Attack increases.\\nWhen using <color=#2c6bb7>Braindead</color> while Attack is increased, attacks all enemies.\\nWhen Enraged, gains an irremovable Attack increase for a set number of turns.",
     "Japanese": "* <color=#2c6bb7>【イベント・ホライゾン】</color>使用時、攻撃力がUPする。\\n攻撃力がUPした状態で<color=#2c6bb7>【ブレインデッド】</color>使用時、敵全体にダメージを与える。\\n狂暴化発動時、解除不可能な攻撃力UP効果を一定ターンの間獲得する。",
-    "China_Simplified": "* 使用<color=#2c6bb7>事件视界</color>时，攻击力提升。\\n攻击力提升状态下使用<color=#2c6bb7>向死而生</color>时，对全体敌人发动攻击。\\n狂暴化时，一定回合内获得无法解除的攻击力提升效果。",
-    "China_Traditional": "* 使用<color=#2c6bb7>事件視界</color>時，攻擊力上升。\\n在攻擊力上升的狀態下使用<color=#2c6bb7>死亡復甦</color>時，攻擊全體敵人。\\n狂暴化時，在一定回合數內獲得無法解除的攻擊力增加效果。"
+    "China_Simplified": "* 使用<color=#2c6bb7>黑洞表面</color>时，攻击力提升。\\n攻击力提升状态下使用<color=#2c6bb7>向死而生</color>时，对全体敌人发动攻击。\\n狂暴化时，一定回合内获得无法解除的攻击力提升效果。",
+    "China_Traditional": "* 使用<color=#2c6bb7>撕裂地平線</color>時，攻擊力上升。\\n在攻擊力上升的狀態下使用<color=#2c6bb7>死亡復甦</color>時，攻擊全體敵人。\\n狂暴化時，在一定回合數內獲得無法解除的攻擊力增加效果。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_19",
     "Korean": "* 모든 공격 직후에는 적의 반격,복수,신속 대응이 발동하지 않습니다.\\n* <color=#2c6bb7>블라디 풀 버스트</color> 사용 시 일정 확률로 적 전체에게 스턴을 부여합니다. 적의 방어력이 감소된 상태일 경우 100%로 적용됩니다.\\n* <color=#2c6bb7>블라디 스트라이크</color> 사용 시 적의 방어력을 감소시킵니다.",
     "English": "* After every Attack, the enemy's Counterattack, Revenge, and Agile Response do not trigger.\\nWhen using <color=#2c6bb7>Vladi Full Burst</color>, has a set chance to inflict Stunned on all enemies. When the enemy's Defense is reduced, it applies at 100% chance.\\nUsing <color=#2c6bb7>Vladi Strike</color>, reduces the enemy's Defense.",
     "Japanese": "* すべての攻撃直後には敵の反撃、復讐、迅速対応が発動しない。\\n<color=#2c6bb7>【ブラッディフルバースト】</color>使用時、一定の確率で敵全体にスタンを付与する。敵の防御力がDOWNしている場合は100%で適用される。\\n<color=#2c6bb7>【ブラッディストライク】</color> 使用時、敵の防御力をDOWNさせる。",
-    "China_Simplified": "* 所有攻击不会触发敌人的反击、复仇或迅捷反应。\\n使用<color=#2c6bb7>布拉迪全力爆发</color>时，一定概率对全体敌人赋予晕眩。若敌人处于防御力降低状态，则100%生效。\\n使用<color=#2c6bb7>布拉迪强力打击</color>时，敌人的防御力降低。",
-    "China_Traditional": "* 所有攻擊結束後，敵人的反擊、復仇、迅捷應對不會發動。\\n使用<color=#2c6bb7>弗拉迪全面爆發</color>時，有一定機率對全體敵人賦予暈眩狀態。若敵人處於防禦力減少狀態，則套用100%。\\n使用<color=#2c6bb7>弗拉迪打擊</color>時，減少敵人的防禦力。"
+    "China_Simplified": "* 所有攻击不会触发敌人的反击、复仇或迅捷反应。\\n使用<color=#2c6bb7>血腥全爆</color>时，一定概率对全体敌人赋予晕眩。若敌人处于防御力降低状态，则100%生效。\\n使用<color=#2c6bb7>布拉迪强力打击</color>时，敌人的防御力降低。",
+    "China_Traditional": "* 所有攻擊結束後，敵人的反擊、復仇、迅捷應對不會發動。\\n使用<color=#2c6bb7>佛拉達大爆發</color>時，有一定機率對全體敵人賦予暈眩狀態。若敵人處於防禦力減少狀態，則套用100%。\\n使用<color=#2c6bb7>弗拉迪打擊</color>時，減少敵人的防禦力。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_20",
     "Korean": "* <color=#2c6bb7>정복자의 송곳니</color> 사용 시 최대 체력에 비례한 피해를 입힙니다.\\n* <color=#2c6bb7>용왕의 숨결</color>은 치명 피격 시 쿨타임이 초기화되며, 체력 15%이하의 적을 즉사시킵니다.\\n* 광폭화 이후 <color=#2c6bb7>용왕의 숨결</color>의 공격 범위가 적 전체로 변경됩니다.",
     "English": "* When using <color=#2c6bb7>Conqueror's Fang</color>, deals Damage proportional to Max Health.\\n<color=#2c6bb7>Dragon Ruler's Breath</color> resets its cooldown when hit by a Critical Hit and instantly kills enemies at 15% Health or lower.\\nAfter Enraged, the attack range of <color=#2c6bb7>Dragon Ruler's Breath</color> changes to all enemies.",
     "Japanese": "* <color=#2c6bb7>【征服者の牙】</color>使用時、最大HPが高いほどダメージがUPする。\\n<color=#2c6bb7>【竜王の息吹】</color>は会心ダメージを受けた場合、スキルターンを初期化し、HPが15%以下の敵を即死させる。狂暴化後\\n、<color=#2c6bb7>【竜王の息吹】</color>の攻撃範囲が敵全体に変更される。",
-    "China_Simplified": "* 使用<color=#2c6bb7>征服者獠牙</color>时，造成生命值上限百分比伤害。\\n受到暴击时，<color=#2c6bb7>龙王之息</color>的冷却时间重置，并使生命值在15%以下的敌人立即死亡。\\n狂暴化后，<color=#2c6bb7>龙王之息</color>的攻击范围变为全体敌人。",
-    "China_Traditional": "* 使用<color=#2c6bb7>征服者的尖牙</color>時，造成與最大生命力成比例的傷害。\\n<color=#2c6bb7>龍王的氣息</color>在受到暴擊時重置冷卻時間，並立即擊殺生命力低於15%的敵人。\\n狂暴化之後，<color=#2c6bb7>龍王的氣息</color>的攻擊範圍變更為全體敵人。"
+    "China_Simplified": "* 使用<color=#2c6bb7>征服者的利齿</color>时，造成生命值上限百分比伤害。\\n受到暴击时，<color=#2c6bb7>龙王吐息</color>的冷却时间重置，并使生命值在15%以下的敌人立即死亡。\\n狂暴化后，<color=#2c6bb7>龙王吐息</color>的攻击范围变为全体敌人。",
+    "China_Traditional": "* 使用<color=#2c6bb7>征服者的尖牙</color>時，造成與最大生命力成比例的傷害。\\n<color=#2c6bb7>龍王之息</color>在受到暴擊時重置冷卻時間，並立即擊殺生命力低於15%的敵人。\\n狂暴化之後，<color=#2c6bb7>龍王之息</color>的攻擊範圍變更為全體敵人。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_21",
     "Korean": "* 턴 종료 시 속도형 적이 없다면 적 전체의 행동 게이지를 대폭 감소시킵니다.\\n* <color=#2c6bb7>짓누르는 의구심</color>과 <color=#2c6bb7>쏜살같은 시간</color> 발동 시 적의 복수,반격,신속 대응이 발동하지 않습니다.\\n* <color=#2c6bb7>날카로운 질문</color>은 속도형 적을 우선적으로 대상으로 하며 속도형 적에게는 100% 확률로 효과 저항을 무시하고 <color=#2c6bb7>스턴</color>을 부여합니다.",
-    "English": "* At the end of the turn, if there are no Ranger enemies, greatly reduces all enemies' Priority.\\n<color=#2c6bb7>When Crushing Doubt</color> or <color=#2c6bb7>Time Like an Arrow</color> triggers, the enemy's Revenge, Counterattack, and Agile Response do not trigger.\\n<color=#2c6bb7>Sharp Question</color> prioritizes Ranger enemies, and inflicts <color=#2c6bb7>Stunned</color> with 100% chance to Ranger enemies, ignoring Resilience.",
+    "English": "* At the end of the turn, if there are no Ranger enemies, greatly reduces all enemies' Priority.\\nWhen <color=#2c6bb7>Crushing Doubt</color> or <color=#2c6bb7>Time Like an Arrow</color> triggers, the enemy's Revenge, Counterattack, and Agile Response do not trigger.\\n<color=#2c6bb7>Sharp Question</color> prioritizes Ranger enemies, and inflicts <color=#2c6bb7>Stunned</color> with 100% chance to Ranger enemies, ignoring Resilience.",
     "Japanese": "* ターン終了時、スピード型の敵がいない場合、敵全体の行動ゲージを大幅に減少させる。\\n<color=#2c6bb7>【圧迫の疑念】</color>と<color=#2c6bb7>【刹那の矢】</color>使用時、敵の復讐、反撃、迅速対応が発動しない。\\n<color=#2c6bb7>【穿つ問答】</color>はスピード型の敵を優先的に対象とし、スピード型の敵には100%の確率で効果抵抗を無視し、<color=#2c6bb7>スタン</color>を付与する。",
-    "China_Simplified": "* 回合结束时，若场上没有速度型敌人，则大幅降低全体敌人的行动值。\\n<color=#2c6bb7>压迫的质疑</color>和<color=#2c6bb7>瞬疾时刻</color>发动时，不会触发敌人的复仇、反击、迅捷反应。\\n<color=#2c6bb7>尖锐的提问</color>优先以速度型敌人为目标，有100%概率对速度型敌人造成无视效果抵抗的<color=#2c6bb7>晕眩</color>。",
-    "China_Traditional": "* 回合結束時，如果沒有速度型敵人，則大幅減少全體敵人的速攻值。\\n發動<color=#2c6bb7>壓抑的疑慮</color>和<color=#2c6bb7>飛逝的時間</color>時，敵人的復仇、反擊、迅捷應對不會發動。\\n<color=#2c6bb7>尖銳的質問</color>優先鎖定速度型敵人，並以100%機率無視效果抵抗對速度型敵人賦予<color=#2c6bb7>暈眩</color>狀態。"
+    "China_Simplified": "* 回合结束时，若场上没有速度型敌人，则大幅降低全体敌人的行动值。\\n<color=#2c6bb7>沉重疑虑</color>和<color=#2c6bb7>疾速时光</color>发动时，不会触发敌人的复仇、反击、迅捷反应。\\n<color=#2c6bb7>锐利质问</color>优先以速度型敌人为目标，有100%概率对速度型敌人造成无视效果抵抗的<color=#2c6bb7>晕眩</color>。",
+    "China_Traditional": "* 回合結束時，如果沒有速度型敵人，則大幅減少全體敵人的速攻值。\\n發動<color=#2c6bb7>積壓的疑慮</color>和<color=#2c6bb7>飛逝的時間</color>時，敵人的復仇、反擊、迅捷應對不會發動。\\n<color=#2c6bb7>尖銳的質問</color>優先鎖定速度型敵人，並以100%機率無視效果抵抗對速度型敵人賦予<color=#2c6bb7>暈眩</color>狀態。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_22",
     "Korean": "* <color=#2c6bb7>화속성</color>이 아닌 적에게 받는 피해가 대폭 감소합니다.\\n* <color=#2c6bb7>건조성 돌풍</color>을 통해 적의 강화 효과를 해제한 뒤 <color=#2c6bb7>그치지 않는 모래 폭풍</color>을 통해 해제 불가능한 <color=#2c6bb7>스턴</color>을 적 전체에게 부여합니다. \\n* 광폭화 이후부터는 WG 피해를 받지 않습니다.",
-    "English": "* Greatly reduces damage taken from non-<color=#2c6bb7>Fire</color> enemies.\\nUses <color=#2c6bb7>Arid Gust</color> to remove enemies' buffs, then uses <color=#2c6bb7>Unstoppable Sandstorm</color> to inflict irremovable <color=#2c6bb7>Stunned</color> on all enemies.\\nAfter Enraged, does not take Weakness Gauge Damage.",
+    "English": "* Greatly reduces damage taken from non-<color=#2c6bb7>Fire</color> enemies.\\nUses <color=#2c6bb7>Arid Gust</color> to remove enemies' buffs, then uses <color=#2c6bb7>Unstoppable Sandstorm</color> to inflict irremovable <color=#2c6bb7>Stunned</color> on all enemies.\\nAfter Enraged, does not take WG Damage.",
     "Japanese": "* <color=#2c6bb7>火属性</color>以外の敵から受けるダメージが大幅にDOWNする。\\n<color=#2c6bb7>【乾燥穿風】</color>で敵の強化効果を解除した後、<color=#2c6bb7>【無尽の砂嵐】</color>で解除不可能な<color=#2c6bb7>スタン</color>を敵全体に付与する。\\n狂暴化後はWGダメージを受けない。",
-    "China_Simplified": "* 受到非<color=#2c6bb7>火属性</color>敌人的伤害大幅减少。\\n通过<color=#2c6bb7>干燥性旋风</color>解除敌人的强化效果后，使用<color=#2c6bb7>无尽沙暴</color>对全体敌人赋予无法解除的<color=#2c6bb7>晕眩</color>。\\n狂暴化后，不再受到WG伤害。",
-    "China_Traditional": "* 受到非<color=#2c6bb7>火屬性</color>敵人攻擊時，所受傷害大幅減少。\\n透過<color=#2c6bb7>「乾燥旋風</color>解除敵人的強化效果後，再透過<color=#2c6bb7>不停息的沙塵暴</color>對全體敵人賦予無法解除的<color=#2c6bb7>暈眩</color>狀態。\\n狂暴化之後，不受到WG傷害。"
+    "China_Simplified": "* 受到非<color=#2c6bb7>火属性</color>敌人的伤害大幅减少。\\n通过<color=#2c6bb7>干燥旋风</color>解除敌人的强化效果后，使用<color=#2c6bb7>不息沙暴</color>对全体敌人赋予无法解除的<color=#2c6bb7>晕眩</color>。\\n狂暴化后，不再受到WG伤害。",
+    "China_Traditional": "* 受到非<color=#2c6bb7>火屬性</color>敵人攻擊時，所受傷害大幅減少。\\n透過<color=#2c6bb7>乾燥疾風</color>解除敵人的強化效果後，再透過<color=#2c6bb7>無止盡的沙塵暴</color>對全體敵人賦予無法解除的<color=#2c6bb7>暈眩</color>狀態。\\n狂暴化之後，不受到WG傷害。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_23",
     "Korean": "* <color=#2c6bb7>은신</color> 중에 <color=#2c6bb7>레퀴엠 세르케트</color>로 적을 처치 시 부활 및 소생을 불가하게 만들고 추가 턴을 획득합니다.\\n* <color=#2c6bb7>밤의 장막</color>을 사용할 때마다 자신에게 적용된 모든 약화 효과를 해제 후 자신은 <color=#2c6bb7>은신</color>, 아군은 <color=#2c6bb7>무적</color> 효과를 획득합니다. 모든 화속성 적에게 <color=#2c6bb7>침묵</color>을 부여합니다.",
     "English": "* While granted <color=#2c6bb7>Stealth</color>, defeating an enemy with <color=#2c6bb7>Requiem Serket</color> cannot be revived or resurrected, and gains an additional turn.\\nEach time <color=#2c6bb7>Curtain of Darkness</color> is used, removes all debuffs applied to the caster, then the caster gains <color=#2c6bb7>Stealth</color> and allies gain <color=#2c6bb7>Invulnerability</color>. Inflicts <color=#2c6bb7>Silenced</color> on all Fire enemies.",
     "Japanese": "* <color=#2c6bb7>隠れ身</color>中に<color=#2c6bb7>【レクイエム・セルケト】</color>で敵を倒した時、復活および蘇生をできなくさせ、追加ターンを獲得する。\\n<color=#2c6bb7>【夜の帳】</color>を使用するたびに自分のすべての弱体効果を解除し、自分は<color=#2c6bb7>隠れ身</color>、味方は<color=#2c6bb7>無敵</color>効果を獲得する。すべての火属性の敵に<color=#2c6bb7>沈黙</color>を付与する。",
-    "China_Simplified": "* <color=#2c6bb7>隐身</color>状态下，使用<color=#2c6bb7>安魂毒蝎</color>击败敌人时，使其无法复活或重生，自身获得额外回合。\\n使用<color=#2c6bb7>夜之帷幕</color>时，解除自身所有弱化效果后，自身获得<color=#2c6bb7>隐身</color>，友军获得<color=#2c6bb7>无敌</color>效果。对所有火属性敌人赋予<color=#2c6bb7>沉默</color>。",
-    "China_Traditional": "* 在<color=#2c6bb7>隱身</color>狀態下使用<color=#2c6bb7>塞爾凱特的安魂曲</color>消滅敵人時，使敵人無法復活和甦醒，並獲得額外回合。\\n每次使用<color=#2c6bb7>黑夜帷幕</color>時，解除自身所有弱化效果後，自身進入<color=#2c6bb7>隱身</color>狀態，友軍則獲得<color=#2c6bb7>無敵</color>效果。對所有火屬性敵人賦予<color=#2c6bb7>沉默</color>狀態。"
+    "China_Simplified": "* <color=#2c6bb7>隐身</color>状态下，使用<color=#2c6bb7>安魂曲塞尔凯特</color>击败敌人时，使其无法复活或重生，自身获得额外回合。\\n使用<color=#2c6bb7>夜之帷幕</color>时，解除自身所有弱化效果后，自身获得<color=#2c6bb7>隐身</color>，友军获得<color=#2c6bb7>无敌</color>效果。对所有火属性敌人赋予<color=#2c6bb7>沉默</color>。",
+    "China_Traditional": "* 在<color=#2c6bb7>隱身</color>狀態下使用<color=#2c6bb7>安魂曲賽爾凱特</color>消滅敵人時，使敵人無法復活和甦醒，並獲得額外回合。\\n每次使用<color=#2c6bb7>夜幕</color>時，解除自身所有弱化效果後，自身進入<color=#2c6bb7>隱身</color>狀態，友軍則獲得<color=#2c6bb7>無敵</color>效果。對所有火屬性敵人賦予<color=#2c6bb7>沉默</color>狀態。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_24",
@@ -104948,16 +104948,16 @@
     "Korean": "* 모든 행동에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.\\n* 최초 행동 시 <color=#2c6bb7>학살의 날개짓</color>을 사용하여 자신의 <color=#2c6bb7>효과 적중</color>을 상승시키고 적 전체에게 <color=#2c6bb7>저주</color>를 부여합니다.<color=#2c6bb7>효과 적중</color>이 상승한 상태에서 공격 시 적 전체의 <color=#2c6bb7>면역</color>을 무시하고 <color=#2c6bb7>저주</color>를 부여합니다.\\n* <color=#2c6bb7>몰락의 강림</color> 사용 시 체력이 70% 이하인 적은 <color=#2c6bb7>면역</color>을 무시하고 빙결을 부여합니다.",
     "English": "* During all actions, the enemy's Counterattack, Revenge, and Agile Response do not trigger.\\nOn the first action, uses <color=#2c6bb7>Slaughtering Flutter</color> to increase the caster's <color=#2c6bb7>Effectiveness</color> and inflict <color=#2c6bb7>Curse</color> on all enemies. When attacking while having increased <color=#2c6bb7>Effectiveness</color>, inflicts <color=#2c6bb7>Curse</color> on all enemies while ignoring <color=#2c6bb7>Immunity</color>.\\nWhen using <color=#2c6bb7>Advent of Ruin</color>, inflicts Frozen on enemies at 70% Health or lower, ignoring <color=#2c6bb7>Immunity</color>.",
     "Japanese": "* すべての行動は敵の反撃、復讐、迅速対応が発動しない。\\n初回行動時、<color=#2c6bb7>【虐殺の羽ばたき】</color>を使用して自分の<color=#2c6bb7>効果命中</color>をUPさせ、敵全体に<color=#2c6bb7>呪い</color>を付与する。<color=#2c6bb7>効果命中</color>がUPした状態で攻撃すると、敵全体の<color=#2c6bb7>免疫</color>を無視して<color=#2c6bb7>呪い</color>を付与する。\\n<color=#2c6bb7>【没落の降臨】</color>使用時、HPが70%以下の敵は<color=#2c6bb7>免疫</color>を無視し、凍結を付与する。",
-    "China_Simplified": "* 所有行动不会触发敌人的反击、复仇与迅捷反应。\\n首次行动时，使用<color=#2c6bb7>屠戮之翼</color>提升自身的<color=#2c6bb7>效果命中</color>，并对全体敌人赋予<color=#2c6bb7>诅咒</color>。<color=#2c6bb7>效果命中</color>提升状态下攻击时，对全体敌人赋予无视<color=#2c6bb7>免疫</color>的<color=#2c6bb7>诅咒</color>。\\n使用<color=#2c6bb7>陨落降临</color>时，对生命值在70%以下的敌人赋予无视<color=#2c6bb7>免疫</color>的冰冻。",
-    "China_Traditional": "* 所有行動都不會觸發敵人的反擊、復仇、迅捷應對。\\n首次行動時，使用<color=#2c6bb7>屠殺之翼</color>提升自身的<color=#2c6bb7>效果命中</color>，並對全體敵人賦予<color=#2c6bb7>詛咒</color>。在<color=#2c6bb7>效果命中</color>上升的狀態下攻擊時，無視全體敵人的<color=#2c6bb7>免疫</color>並賦予<color=#2c6bb7>詛咒</color>。\\n使用<color=#2c6bb7>隕落降臨</color>時，生命力低於70%的敵人無視<color=#2c6bb7>免疫</color>並賦予冰凍狀態。"
+    "China_Simplified": "* 所有行动不会触发敌人的反击、复仇与迅捷反应。\\n首次行动时，使用<color=#2c6bb7>屠戮之翼</color>提升自身的<color=#2c6bb7>效果命中</color>，并对全体敌人赋予<color=#2c6bb7>诅咒</color>。<color=#2c6bb7>效果命中</color>提升状态下攻击时，对全体敌人赋予无视<color=#2c6bb7>免疫</color>的<color=#2c6bb7>诅咒</color>。\\n使用<color=#2c6bb7>覆灭降临</color>时，对生命值在70%以下的敌人赋予无视<color=#2c6bb7>免疫</color>的冰冻。",
+    "China_Traditional": "* 所有行動都不會觸發敵人的反擊、復仇、迅捷應對。\\n首次行動時，使用<color=#2c6bb7>屠殺之翼</color>提升自身的<color=#2c6bb7>效果命中</color>，並對全體敵人賦予<color=#2c6bb7>詛咒</color>。在<color=#2c6bb7>效果命中</color>上升的狀態下攻擊時，無視全體敵人的<color=#2c6bb7>免疫</color>並賦予<color=#2c6bb7>詛咒</color>。\\n使用<color=#2c6bb7>沒落降臨</color>時，生命力低於70%的敵人無視<color=#2c6bb7>免疫</color>並賦予冰凍狀態。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_27",
-    "Korean": "* 약화 효과 보유 시 <color=#2c6bb7>사냥용 가시</color>와 <color=#2c6bb7>뿌리 돌출</color> 스킬의 위력이 강화됩니다.\\n* <color=#2c6bb7>죽음의 광선</color> 사용 시 <color=#2c6bb7>중독</color>을 부여합니다. 효과 저항이 증가하지 않은 적에겐 <color=#2c6bb7>면역</color>을 무시합니다.<color=#2c6bb7>중독</color> 상태의 적 행동 시 적 전체에게 해제불가능한 <color=#2c6bb7>침묵</color>을 부여합니다.",
+    "Korean": "* 약화 효과 보유 시 <color=#2c6bb7>사냥용 가시</color>와 <color=#2c6bb7>뿌리 돌출</color> 스킬의 위력이 강화됩니다.\\n* <color=#2c6bb7>죽음의 광선</color> 사용 시 <color=#2c6bb7>중독</color>을 부여합니다. 효과 저항이 증가하지 않은 적에겐 <color=#2c6bb7>면역</color>을 무시합니다.<color=#2c6bb7>중독</color> 상태의 적 행동 시 적 전체에게 해제 불가능한 <color=#2c6bb7>침묵</color>을 부여합니다.",
     "English": "* When having debuffs, the power of <color=#2c6bb7>Predator Thorns</color> and <color=#2c6bb7>Root Burst</color> is enhanced.\\nWhen using <color=#2c6bb7>Death Ray</color>, inflicts <color=#2c6bb7>Poisoned</color>. Against enemies that doesn't have increased Resilience, ignores <color=#2c6bb7>Immunity</color>. When an enemy inflicted with <color=#2c6bb7>Poisoned</color> takes action, inflicts irremovable <color=#2c6bb7>Silenced</color> on all enemies.",
     "Japanese": "* 弱体効果がある場合、<color=#2c6bb7>【狩猟用のトゲ】</color>と<color=#2c6bb7>【根のはみ出し】</color>スキルの威力が強化される。\\n<color=#2c6bb7>【死の光線】</color>使用時、<color=#2c6bb7>中毒</color>を付与する。効果抵抗がUPしていない敵には<color=#2c6bb7>免疫</color>を無視する。<color=#2c6bb7>中毒</color>状態の敵の行動時、敵全体に解除不可能な<color=#2c6bb7>沈黙</color>を付与する。",
-    "China_Simplified": "* 持有弱化效果时，<color=#2c6bb7>狩猎之刺</color>和<color=#2c6bb7>根须突起</color>技能的威力增强。\\n使用<color=#2c6bb7>死亡光线</color>时赋予<color=#2c6bb7>中毒</color>。对未获得效果抵抗提升的敌人无视<color=#2c6bb7>免疫</color>。处于<color=#2c6bb7>中毒</color>状态的敌人行动时，对全体敌人赋予无法解除的<color=#2c6bb7>沉默</color>。",
-    "China_Traditional": "* 擁有弱化效果時，<color=#2c6bb7>狩獵用荊棘</color>和<color=#2c6bb7>根部突起</color>技能的威力會被強化。\\n使用<color=#2c6bb7>死亡光線</color>時，賦予<color=#2c6bb7>中毒</color>狀態。對未增加效果抵抗的敵人，無視<color=#2c6bb7>免疫</color>。<color=#2c6bb7>中毒</color>狀態的敵人行動時，對全體敵人賦予無法解除的<color=#2c6bb7>沉默</color>狀態。"
+    "China_Simplified": "* 持有弱化效果时，<color=#2c6bb7>猎杀之刺</color>和<color=#2c6bb7>根须突袭</color>技能的威力增强。\\n使用<color=#2c6bb7>死亡光线</color>时赋予<color=#2c6bb7>中毒</color>。对未获得效果抵抗提升的敌人无视<color=#2c6bb7>免疫</color>。处于<color=#2c6bb7>中毒</color>状态的敌人行动时，对全体敌人赋予无法解除的<color=#2c6bb7>沉默</color>。",
+    "China_Traditional": "* 擁有弱化效果時，<color=#2c6bb7>狩獵用尖刺</color>和<color=#2c6bb7>根須突襲</color>技能的威力會被強化。\\n使用<color=#2c6bb7>死亡的光線</color>時，賦予<color=#2c6bb7>中毒</color>狀態。對未增加效果抵抗的敵人，無視<color=#2c6bb7>免疫</color>。<color=#2c6bb7>中毒</color>狀態的敵人行動時，對全體敵人賦予無法解除的<color=#2c6bb7>沉默</color>狀態。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_28",
@@ -104972,7 +104972,7 @@
     "Korean": "* 적이 30회 행동 시 광폭화 상태에 돌입하며 적을 즉사시킵니다. 이 스킬로 사망한 적은 <color=#2c6bb7>부활</color>과 <color=#2c6bb7>소생</color>이 불가능합니다.\\n* <color=#2c6bb7>거짓된 은총</color> 사용 시 대상의 방어력을 100% 무시합니다.\\n* <color=#2c6bb7>구세의 계율</color>은 적 전체를 공격하고 대상이 적을수록 피해가 증가합니다.",
     "English": "* When enemies take 30 actions, enters Enraged and instantly kills an enemy. Enemies defeated by this skill cannot be <color=#2c6bb7>revived</color> or <color=#2c6bb7>resurrected</color>.\\nWhen using <color=#2c6bb7>False Grace</color>, ignores 100% Defense of the target.\\n<color=#2c6bb7>Rules of Salvation</color> attacks all enemies, and Damage increases as the number of targets decreases.",
     "Japanese": "* 敵が30回行動すると【狂暴化】状態に切り替わり、敵を即死させる。このスキルで倒れた敵は<color=#2c6bb7>復活</color>と<color=#2c6bb7>蘇生</color>ができなくなる。\\n<color=#2c6bb7>【偽りの恩寵】</color>使用時、対象の防御力を100%無視する。\\n<color=#2c6bb7>【救世の戒律】</color>は敵全体にダメージを与え、対象が少ないほどダメージがUPする。",
-    "China_Simplified": "* 敌人行动30次时，进入狂暴化状态并使敌人立即死亡。因该技能死亡的敌人无法被<color=#2c6bb7>复活</color>或<color=#2c6bb7>重生</color>。\\n使用<color=#2c6bb7>虚伪的恩宠</color>时，无视目标100%防御力。\\n<color=#2c6bb7>救世戒律</color>攻击全体敌人，目标越多伤害越高。",
+    "China_Simplified": "* 敌人行动30次时，进入狂暴化状态并使敌人立即死亡。因该技能死亡的敌人无法被<color=#2c6bb7>复活</color>或<color=#2c6bb7>重生</color>。\\n使用<color=#2c6bb7>虚假的恩宠</color>时，无视目标100%防御力。\\n<color=#2c6bb7>救世戒律</color>攻击全体敌人，目标越多伤害越高。",
     "China_Traditional": "* 當敵人行動30次時進入狂暴化狀態，並立即擊殺敵人。被此技能擊殺的敵人無法<color=#2c6bb7>復活</color>和<color=#2c6bb7>甦醒</color>。\\n使用<color=#2c6bb7>虛假的恩寵</color>時，100%無視目標的防禦力。\\n<color=#2c6bb7>救世戒律</color>攻擊全體敵人，目標數量越少傷害越高。"
   },
   {
@@ -105004,8 +105004,8 @@
     "Korean": "* 적이 복수,반격,신속 대응 사용 시 체력을 <color=#2c6bb7>회복</color>합니다.\\n* 주변의 열화 코어를 통해 강화 효과를 획득하고 턴 종료 시 강화 효과를 보유하고 있었다면 회복형을 제외한 적 전체에게 <color=#2c6bb7>스턴</color>을 부여합니다.\\n* <color=#2c6bb7>홀리 샤인 볼</color> 사용 시 적 전체의 강화 효과를 모두 해제합니다.",
     "English": "* When enemies use Revenge, Counterattack, or Agile response, Health is <color=#2c6bb7>recovered</color>.\\nGains buffs through nearby Inferior Cores, and if buffs are present at the end of the turn, inflicts <color=#2c6bb7>Stunned</color> on all enemies except Healers.\\nWhen using <color=#2c6bb7>Holy Shine Ball</color>, removes all enemies' buffs.",
     "Japanese": "* 敵が復讐、反撃、迅速対応使用時、HPを<color=#2c6bb7>回復</color>する。\\n周囲の劣化コアを通じて強化効果を獲得し、ターン終了時、強化効果を保有している場合、回復型以外の敵全体に<color=#2c6bb7>スタン</color>を付与する。\\n<color=#2c6bb7>【ホーリーシャインボール】</color>使用時、敵全体の強化効果をすべて解除する。",
-    "China_Simplified": "* 敌人使用复仇、反击、迅捷反应时，恢复<color=#2c6bb7>生命值</color>。\\n通过周围的烈火核心获得强化效果，回合结束时若仍持有强化效果，则对除恢复型以外的全体敌人赋予<color=#2c6bb7>晕眩</color>。\\n使用<color=#2c6bb7>圣光球</color>时，解除全体敌人的强化效果。",
-    "China_Traditional": "* 當敵人使用復仇、反擊、迅捷應對時，<color=#2c6bb7>恢復</color>生命力。\\n透過周圍的熱火核心獲得強化效果，回合結束時如果擁有強化效果，則對除了恢復型以外的全體敵人賦予<color=#2c6bb7>暈眩</color>狀態。\\n使用<color=#2c6bb7>神聖閃耀球</color>時，解除全體敵人的所有強化效果。"
+    "China_Simplified": "* 敌人使用复仇、反击、迅捷反应时，恢复<color=#2c6bb7>生命值</color>。\\n通过周围的烈火核心获得强化效果，回合结束时若仍持有强化效果，则对除恢复型以外的全体敌人赋予<color=#2c6bb7>晕眩</color>。\\n使用<color=#2c6bb7>圣光之球</color>时，解除全体敌人的强化效果。",
+    "China_Traditional": "* 當敵人使用復仇、反擊、迅捷應對時，<color=#2c6bb7>恢復</color>生命力。\\n透過周圍的熱火核心獲得強化效果，回合結束時如果擁有強化效果，則對除了恢復型以外的全體敵人賦予<color=#2c6bb7>暈眩</color>狀態。\\n使用<color=#2c6bb7>聖光球</color>時，解除全體敵人的所有強化效果。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Dark_01",
@@ -105028,14 +105028,14 @@
     "Korean": "* 글리시스의 하수인이 존재하지 않을 경우 글리시스가 받는 피해량이 감소합니다.\\n* <color=#2c6bb7>총애를 받으라</color> 사용 시 거대 얼음 망령을 소환합니다. 거대 얼음 망령은 피격 시 높은 확률로 적 전체에게 <color=#2c6bb7>빙결</color>을 부여합니다.\\n* (10단계 이후)하수인 생존 중 글리시스가 공격을 받을 경우 <color=#2c6bb7>WG</color>를 회복합니다.",
     "English": "* If Glicys's underlings are not present, Damage taken by Glicys is reduced.\\nWhen using <color=#2c6bb7>Receive Your Blessings</color>, summons a Giant Ice Revenant. When attacking or when hit, the Giant Ice Revenant has a high chance to inflict <color=#2c6bb7>Frozen</color> on all enemies.\\n(From stage 10 onward) If Glicys is attacked while the underlings are alive, <color=#2c6bb7>Weakness Gauge</color> is recovered.",
     "Japanese": "* 【グリシス】の手下がいない場合、【グリシス】が受けるダメージがDOWNする。\\n<color=#2c6bb7>【寵愛を受けよ】</color>使用時、【零氷の亡霊】を召喚する。【零氷の亡霊】はダメージを受けた時、高確率で敵全体に<color=#2c6bb7>凍結</color>を付与する。\\n(10段階以降)手下が戦場にいる状態で【グリシス】がダメージを受けた場合、<color=#2c6bb7>WG</color>を回復する。",
-    "China_Simplified": "* 克里希丝的仆从不在场时，克里希丝受到的伤害量降低。\\n使用<color=#2c6bb7>接受我的宠爱</color>时，召唤巨型寒冰亡灵。巨型寒冰亡灵受击时，有较高概率对全体敌人赋予<color=#2c6bb7>冰冻</color>。\\n（10阶段之后）仆从存活期间，克里希丝受击时恢复<color=#2c6bb7>WG</color>。",
-    "China_Traditional": "* 如果克里希絲的僕從不存在，克里希絲所受傷害量減少。\\n使用<color=#2c6bb7>接受寵愛吧</color>時召喚巨大冰霜幽靈。巨大冰霜幽靈受到攻擊時，有高機率對全體敵人賦予<color=#2c6bb7>冰凍</color>狀態。\\n（10階段之後）僕從生存期間，克里希絲受到攻擊時會恢復<color=#2c6bb7>WG</color>。"
+    "China_Simplified": "* 克里希丝的仆从不在场时，克里希丝受到的伤害量降低。\\n使用<color=#2c6bb7>接受恩宠吧</color>时，召唤巨型寒冰亡灵。巨型寒冰亡灵受击时，有较高概率对全体敌人赋予<color=#2c6bb7>冰冻</color>。\\n（10阶段之后）仆从存活期间，克里希丝受击时恢复<color=#2c6bb7>WG</color>。",
+    "China_Traditional": "* 如果克里希絲的僕從不存在，克里希絲所受傷害量減少。\\n使用<color=#2c6bb7>接受恩寵吧</color>時召喚巨大冰霜幽靈。巨大冰霜幽靈受到攻擊時，有高機率對全體敵人賦予<color=#2c6bb7>冰凍</color>狀態。\\n（10階段之後）僕從生存期間，克里希絲受到攻擊時會恢復<color=#2c6bb7>WG</color>。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Fire_03",
     "Korean": "* 적이 공격이 아닌 스킬 사용 시 <color=#2c6bb7>WG</color>를 회복합니다. 피격 시 고유 자원을 획득하며 5개까지 쌓였을 경우 <color=#2c6bb7>네가 적인가</color> 스킬을 발동하여 반격합니다.\\n* 공격 대상이 <color=#2c6bb7>실드</color>를 보유하고 있을 때 피해량이 감소합니다.\\n* (10단계 이후)적 전체에게 <color=#2c6bb7>회복 불가</color>를 부여합니다.",
-    "English": "* When an enemy uses a non-attack skill, recovers <color=#2c6bb7>Weakness Gauge</color>. When hit, gains a Unique Resource, and when it reaches 5 stacks, triggers <color=#2c6bb7>You Must be the Enemy</color> to counterattack.\\nDamage is reduced when attacking a target that has a <color=#2c6bb7>barrier</color>.\\n(From stage 10 onward) Inflicts <color=#2c6bb7>Unhealable</color> on all enemies.",
-    "Japanese": "* 敵が攻撃以外のスキルを使用した場合、<color=#2c6bb7>WG</color>を回復する。ダメージを受けた時、固有資源を獲得し、5つまで重複すると<color=#2c6bb7>【オマエが敵か…】</color>スキルを発動して反撃する。\\n攻撃対象が<color=#2c6bb7>シールド</color>を保有している場合、ダメージがDOWNする。\\n(10段階以降)敵全体に<color=#2c6bb7>回復不可</color>を付与する。",
+    "English": "* When an enemy uses a non-attack skill, recovers <color=#2c6bb7>Weakness Gauge</color>. When hit, gains a Unique Resource, and when it reaches 5 stacks, triggers <color=#2c6bb7>Are You the Enemy</color> to counterattack.\\nDamage is reduced when attacking a target that has a <color=#2c6bb7>barrier</color>.\\n(From stage 10 onward) Inflicts <color=#2c6bb7>Unhealable</color> on all enemies.",
+    "Japanese": "* 敵が攻撃以外のスキルを使用した場合、<color=#2c6bb7>WG</color>を回復する。ダメージを受けた時、固有資源を獲得し、5つまで重複すると<color=#2c6bb7>【お前が敵か】</color>スキルを発動して反撃する。\\n攻撃対象が<color=#2c6bb7>シールド</color>を保有している場合、ダメージがDOWNする。\\n(10段階以降)敵全体に<color=#2c6bb7>回復不可</color>を付与する。",
     "China_Simplified": "* 敌人使用非攻击类技能时，恢复<color=#2c6bb7>WG</color>。受击时获得固有资源，累积到5个时发动<color=#2c6bb7>你是敌人吗</color>技能进行反击。\\n攻击目标持有<color=#2c6bb7>护盾</color>时伤害量降低。\\n（10阶段之后）对全体敌人赋予<color=#2c6bb7>无法恢复</color>。",
     "China_Traditional": "* 當敵人使用非攻擊技能時，恢復<color=#2c6bb7>WG</color>。受到攻擊時獲得專屬資源，疊加到5層時發動<color=#2c6bb7>你是敵人嗎</color>能進行反擊。\\n攻擊目標擁有<color=#2c6bb7>護盾</color>時，傷害量減少。\\n（10階段之後）對全體敵人賦予<color=#2c6bb7>無法恢復</color>狀態。"
   },
@@ -105044,7 +105044,7 @@
     "Korean": "* 시간이 지날수록 턴 시작 시 적 전체에게 입히는 고정 피해가 증가합니다.\\n* 아르스 노바 주변의 열화 코어는 아르스 노바의 <color=#2c6bb7>WG</color>를 회복시킵니다.\\n* <color=#2c6bb7>제 4의 예술</color> 사용 시 반격 확률이 증가합니다.",
     "English": "* As time passes, at the start of each turn, fixed Damage dealt to all enemies increases.\\nNearby Inferior Cores around Ars Nova recover Ars Nova's <color=#2c6bb7>Weakness Gauge</color>.\\nWhen using <color=#2c6bb7>The Fourth Art</color>, counterattack chance increases.",
     "Japanese": "* 時間が経つほど、ターン開始時に敵全体に与える固定ダメージがUPする。\\nアルス・ノーヴァの周囲にある劣化コアは、アルス・ノーヴァの<color=#2c6bb7>WG</color>を回復させる。\\n<color=#2c6bb7>【第4の芸術】</color>使用時、反撃発生率がUPする。",
-    "China_Simplified": "* 随着时间推移，回合开始时，对全体敌人造成的固定伤害提升。\\n艺术新星周围的烈火核心将恢复艺术新星的<color=#2c6bb7>WG</color>。\\n使用<color=#2c6bb7>第四艺术</color>时，反击概率提升。",
+    "China_Simplified": "* 随着时间推移，回合开始时，对全体敌人造成的固定伤害提升。\\n艺术新星周围的烈火核心将恢复艺术新星的<color=#2c6bb7>WG</color>。\\n使用<color=#2c6bb7>第4艺术</color>时，反击概率提升。",
     "China_Traditional": "* 隨著時間的推移，回合開始時對全體敵人造成的固定傷害增加。\\n阿勒斯新星周圍的熱火核心會恢復阿勒斯新星的<color=#2c6bb7>WG</color>。\\n使用<color=#2c6bb7>第四藝術</color>時，反擊機率增加。"
   },
   {
@@ -105077,7 +105077,7 @@
     "English": "* When hit by a single attack, counterattacks and recovers <color=#2c6bb7>Weakness Gauge</color>.\\nWhen having increased <color=#2c6bb7>Attack</color>, Damage dealt by <color=#2c6bb7>Enraged Strike</color> greatly increases.\\nUpon entering battle, the Golden Goblin gains Irremovable <color=#2c6bb7>Invulnerability</color>, and each turn grants <color=#2c6bb7>Invulnerability</color> and increased <color=#2c6bb7>Attack</color> to all allies.",
     "Japanese": "* 単体攻撃のダメージを受けた時、反撃後、<color=#2c6bb7>WG</color>を回復する。\\n<color=#2c6bb7>攻撃力</color>UP効果がある場合、<color=#2c6bb7>【怒りの一撃】</color>のダメージが大幅にUPする。\\n黄金ゴブリンは戦闘開始時、解除不可能な<color=#2c6bb7>無敵</color>を獲得し、毎ターンごとに味方全体に<color=#2c6bb7>無敵</color>と<color=#2c6bb7>攻撃力</color>UP効果を付与する。",
     "China_Simplified": "* 受到单体攻击时，进行反击并恢复<color=#2c6bb7>WG</color>。\\n持有<color=#2c6bb7>攻击力</color>提升效果时，<color=#2c6bb7>愤怒一击</color>的伤害量大幅提升。\\n黄金哥布林在战斗开始时获得无法解除的<color=#2c6bb7>无敌</color>，每回合赋予全体友军<color=#2c6bb7>无敌</color>和<color=#2c6bb7>攻击力</color>提升效果。",
-    "China_Traditional": "* 受到單一攻擊時，反擊後恢復<color=#2c6bb7>WG</color>。\\n擁有<color=#2c6bb7>攻擊力</color>增加效果時，<color=#2c6bb7>憤怒一擊</color>的傷害量大幅上升。\\n黃金哥布林戰鬥開始時獲得無法解除的<color=#2c6bb7>無敵</color>狀態，每回合對全體友軍賦予<color=#2c6bb7>無敵</color>和<color=#2c6bb7>攻擊力</color>增加效果。"
+    "China_Traditional": "* 受到單一攻擊時，反擊後恢復<color=#2c6bb7>WG</color>。\\n擁有<color=#2c6bb7>攻擊力</color>增加效果時，<color=#2c6bb7>憤怒的一擊</color>的傷害量大幅上升。\\n黃金哥布林戰鬥開始時獲得無法解除的<color=#2c6bb7>無敵</color>狀態，每回合對全體友軍賦予<color=#2c6bb7>無敵</color>和<color=#2c6bb7>攻擊力</color>增加效果。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_04",
@@ -105108,8 +105108,8 @@
     "Korean": "* 모든 공격 이후 적의 강화 효과를 <color=#2c6bb7>강탈</color>합니다. \\n* 스킬 및 열화 코어를 통해 <color=#2c6bb7>스턴</color>을 부여하는 특징을 가지고 있습니다.\\n* <color=#2c6bb7>섀도우 블로</color> 사용 시 <color=#2c6bb7>실드</color>를 획득합니다.",
     "English": "* After every Attack, <color=#2c6bb7>steals</color> buffs from the enemy.\\nInflicts <color=#2c6bb7>Stunned</color> through skills and Inferior Cores.\\nWhen using <color=#2c6bb7>Shadow Blow</color>, gains a <color=#2c6bb7>barrier</color>.",
     "Japanese": "* すべての攻撃後、敵の強化効果を<color=#2c6bb7>奪う</color>。\\nスキルおよび劣化コアで<color=#2c6bb7>スタン</color>を付与する特徴を持つ。\\n<color=#2c6bb7>【シャドウブロー】</color>使用時、<color=#2c6bb7>シールド</color>を獲得する。",
-    "China_Simplified": "* 所有攻击之后，<color=#2c6bb7>掠夺</color>敌人的强化效果。\\n具备通过技能和烈火核心赋予<color=#2c6bb7>晕眩</color>的特征。\\n使用<color=#2c6bb7>暗影拳</color>时获得<color=#2c6bb7>护盾</color>。",
-    "China_Traditional": "* 所有攻擊結束後，<color=#2c6bb7>奪取</color>敵人的強化效果。\\n具有透過技能和熱火核心賦予<color=#2c6bb7>暈眩</color>狀態的特性。\\n使用<color=#2c6bb7>暗影一擊</color>時獲得<color=#2c6bb7>護盾</color>。"
+    "China_Simplified": "* 所有攻击之后，<color=#2c6bb7>掠夺</color>敌人的强化效果。\\n具备通过技能和烈火核心赋予<color=#2c6bb7>晕眩</color>的特征。\\n使用<color=#2c6bb7>暗影打击</color>时获得<color=#2c6bb7>护盾</color>。",
+    "China_Traditional": "* 所有攻擊結束後，<color=#2c6bb7>奪取</color>敵人的強化效果。\\n具有透過技能和熱火核心賦予<color=#2c6bb7>暈眩</color>狀態的特性。\\n使用<color=#2c6bb7>暗影打擊</color>時獲得<color=#2c6bb7>護盾</color>。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_08",
@@ -105140,8 +105140,8 @@
     "Korean": "* 자신을 포함한 아군이 피격 시 낮은 확률로 <color=#2c6bb7>반격</color>합니다.\\n* 아이리스와 마찬가지로 <color=#2c6bb7>화상</color> 및 <color=#2c6bb7>화상</color> 폭발을 부여하는 스킬을 다수 보유하고 있습니다.\\n* 티오는 <color=#2c6bb7>신속 대응</color>을 통해 아군의 생존력을 끌어올릴 수 있습니다.",
     "English": "* When allies, including the caster, are hit, has a low chance to <color=#2c6bb7>counterattack</color>.\\nLike Iris, has multiple skills that inflict <color=#2c6bb7>Burned</color> and <color=#2c6bb7>Burned</color> detonation.\\nTio can enhance allies' survivability through <color=#2c6bb7>Agile Response</color>.",
     "Japanese": "* 自分を含む味方がダメージを受けた時、低い確率で<color=#2c6bb7>反撃</color>する。\\nアイリスと同様に<color=#2c6bb7>火傷</color>および<color=#2c6bb7>火傷</color>破裂を付与するスキルを多数所有している。\\nティオは<color=#2c6bb7>迅速対応</color>で、味方の生存力を高めることができる。",
-    "China_Simplified": "* 当包含自身在内的友军受击时，有较低概率进行<color=#2c6bb7>反击</color>。\\n与艾耶尔丽斯相同，持有多种赋予<color=#2c6bb7>烧伤</color>和引爆<color=#2c6bb7>烧伤</color>的技能。\\n蒂欧可通过<color=#2c6bb7>迅捷反应</color>提升友军的生存能力。",
-    "China_Traditional": "* 自身和友軍受到攻擊時時，有低機率<color=#2c6bb7>反擊</color>。\\n與艾耶爾麗斯一樣，擁有多個賦予<color=#2c6bb7>燒傷</color>和<color=#2c6bb7>燒傷</color>爆炸的技能。\\n蒂歐可以透過<color=#2c6bb7>迅捷應對</color>對提升友軍的生存能力。"
+    "China_Simplified": "* 当包含自身在内的友军受击时，有较低概率进行<color=#2c6bb7>反击</color>。\\n与艾尔丽斯相同，持有多种赋予<color=#2c6bb7>烧伤</color>和引爆<color=#2c6bb7>烧伤</color>的技能。\\n蒂欧可通过<color=#2c6bb7>迅捷反应</color>提升友军的生存能力。",
+    "China_Traditional": "* 自身和友軍受到攻擊時時，有低機率<color=#2c6bb7>反擊</color>。\\n與艾爾麗斯一樣，擁有多個賦予<color=#2c6bb7>燒傷</color>和<color=#2c6bb7>燒傷</color>爆炸的技能。\\n蒂歐可以透過<color=#2c6bb7>迅捷應對</color>對提升友軍的生存能力。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_12",
@@ -105149,7 +105149,7 @@
     "English": "* If the enemy's <color=#2c6bb7>front line</color> is a non-<color=#2c6bb7>Defender</color>, inflicts <color=#2c6bb7>Poisoned</color> when using <color=#2c6bb7>Shield Strike</color>.\\nHas high Defense and skills that increase Defense. When Defense is increased, using <color=#2c6bb7>Release Boundary</color> increases Damage.",
     "Japanese": "* <color=#2c6bb7>前衛</color>の敵が<color=#2c6bb7>防御型</color>でない場合、<color=#2c6bb7>シールドストライク</color>時に<color=#2c6bb7>中毒</color>を付与する。\\n高い防御力と防御力をUPさせるスキルを所有している。防御力がUPした状態で<color=#2c6bb7>結界解放</color>使用時、ダメージがUPする。",
     "China_Simplified": "* 若<color=#2c6bb7>前排</color>敌人非<color=#2c6bb7>防御型</color>，使用<color=#2c6bb7>盾牌击打</color>时附加<color=#2c6bb7>中毒</color>。\\n持有高防御力和提升防御力的技能。在防御力提升状态下使用<color=#2c6bb7>结界解放</color>时，伤害量提升。",
-    "China_Traditional": "* 如果<color=#2c6bb7>前排</color>敵人不是<color=#2c6bb7>防禦型</color>，使用<color=#2c6bb7>盾牌猛擊</color>時賦予<color=#2c6bb7>中毒</color>狀態。\\n擁有高防禦力及增加防禦力的技能。在防禦力增加的狀態下使用<color=#2c6bb7>結界解放</color>時，傷害量增加。"
+    "China_Traditional": "* 如果<color=#2c6bb7>前排</color>敵人不是<color=#2c6bb7>防禦型</color>，使用<color=#2c6bb7>盾牌攻擊</color>時賦予<color=#2c6bb7>中毒</color>狀態。\\n擁有高防禦力及增加防禦力的技能。在防禦力增加的狀態下使用<color=#2c6bb7>結界解放</color>時，傷害量增加。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_13",
@@ -105164,8 +105164,8 @@
     "Korean": "* 행동 게이지와 <color=#2c6bb7>행동 불가</color>를 유발하는 스킬을 다수 보유하고 있습니다.\\n* 주변 열화 코어들과 마찬가지로 <color=#2c6bb7>행동 불가</color>를 부여하는 스킬을 다수 보유하고 있습니다.\\n* 전열의 적이 <color=#2c6bb7>회복형</color>이 아닐경우 <color=#2c6bb7>워터 웨이브</color> 사용 시 해제 불가능한 <color=#2c6bb7>빙결</color>을 부여합니다.",
     "English": "* Has multiple skills that affect Priority and inflict <color=#2c6bb7>Action Disable</color>.\\nLike nearby Inferior Cores, also has multiple skills that inflict <color=#2c6bb7>Action Disable</color>.\\nWhen the enemy's front line a non-<color=#2c6bb7>Healer</color>, using <color=#2c6bb7>Water Wave</color> inflicts irremovable <color=#2c6bb7>Frozen</color>.",
     "Japanese": "* 行動ゲージと<color=#2c6bb7>行動不能</color>を誘発するスキルを多数所有している。\\n周囲の劣化コアと同様に<color=#2c6bb7>行動不能</color>を付与するスキルを多数所有している。\\n前衛の敵が<color=#2c6bb7>回復型</color>でない場合、<color=#2c6bb7>【ウォーターウェーブ】</color>使用時、解除不可能な<color=#2c6bb7>凍結</color>を付与する。",
-    "China_Simplified": "* 持有多种触发行动值和<color=#2c6bb7>无法行动</color>的技能。\\n与周围的烈火核心相同，持有多种赋予<color=#2c6bb7>无法行动</color>的技能。\\n若前排敌人非<color=#2c6bb7>恢复型</color>，使用<color=#2c6bb7>水浪</color>时赋予无法解除的<color=#2c6bb7>冰冻</color>。",
-    "China_Traditional": "* 擁有多個減少速攻值和導致<color=#2c6bb7>無法行動</color>狀態的技能。\\n與周圍的熱火核心一樣，擁有多個賦予<color=#2c6bb7>無法行動</color>狀態的技能。\\n如果前排敵人不是<color=#2c6bb7>恢復型</color>，使用<color=#2c6bb7>水之波浪</color>時賦予無法解除的<color=#2c6bb7>冰凍</color>狀態。"
+    "China_Simplified": "* 持有多种触发行动值和<color=#2c6bb7>无法行动</color>的技能。\\n与周围的烈火核心相同，持有多种赋予<color=#2c6bb7>无法行动</color>的技能。\\n若前排敌人非<color=#2c6bb7>恢复型</color>，使用<color=#2c6bb7>水波</color>时赋予无法解除的<color=#2c6bb7>冰冻</color>。",
+    "China_Traditional": "* 擁有多個減少速攻值和導致<color=#2c6bb7>無法行動</color>狀態的技能。\\n與周圍的熱火核心一樣，擁有多個賦予<color=#2c6bb7>無法行動</color>狀態的技能。\\n如果前排敵人不是<color=#2c6bb7>恢復型</color>，使用<color=#2c6bb7>水波</color>時賦予無法解除的<color=#2c6bb7>冰凍</color>狀態。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_15",
@@ -105210,7 +105210,7 @@
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_20",
     "Korean": "* 적이 공격이 아닌 스킬 사용 시 <color=#2c6bb7>WG</color>를 회복합니다. 피격 시 고유 자원을 획득하며 5개까지 쌓였을 경우 <color=#2c6bb7>네가 적인가</color> 스킬을 발동하여 반격합니다.\\n* 공격 대상이 <color=#2c6bb7>실드</color>를 보유하고 있을 때 피해량이 감소합니다.\\n* 적 전체에게 <color=#2c6bb7>회복 불가</color>를 부여합니다.",
-    "English": "* When an enemy uses a non-attack skill, recovers <color=#2c6bb7>Weakness Gauge</color>. When hit, gains a Unique Resource, and when it reaches 5 stacks, triggers <color=#2c6bb7>You Must be the Enemy</color> to counterattack.\\nDamage is reduced when attacking a target that has a <color=#2c6bb7>barrier</color>.\\nInflicts <color=#2c6bb7>Unhealable</color> on all enemies.",
+    "English": "* When an enemy uses a non-attack skill, recovers <color=#2c6bb7>Weakness Gauge</color>. When hit, gains a Unique Resource, and when it reaches 5 stacks, triggers <color=#2c6bb7>Are You the Enemy</color> to counterattack.\\nDamage is reduced when attacking a target that has a <color=#2c6bb7>barrier</color>.\\nInflicts <color=#2c6bb7>Unhealable</color> on all enemies.",
     "Japanese": "* 敵が攻撃以外のスキルを使用した場合、<color=#2c6bb7>WG</color>を回復する。ダメージを受けた時、固有資源を獲得し、5つまで重複すると<color=#2c6bb7>【オマエが敵か…】</color>スキルを発動して反撃する。\\n攻撃対象が<color=#2c6bb7>シールド</color>を保有している場合、ダメージがDOWNする。\\n敵全体に<color=#2c6bb7>回復不可</color>を付与する。",
     "China_Simplified": "* 敌人使用非攻击类技能时，恢复<color=#2c6bb7>WG</color>。受击时获得固有资源，累积到5个时发动<color=#2c6bb7>你是敌人吗</color>技能进行反击。\\n攻击目标持有<color=#2c6bb7>护盾</color>时伤害量降低。\\n对全体敌人赋予<color=#2c6bb7>无法恢复</color>。",
     "China_Traditional": "* 當敵人使用非攻擊技能時，恢復<color=#2c6bb7>WG</color>。受到攻擊時獲得專屬資源，疊加到5層時發動<color=#2c6bb7>你是敵人嗎</color>能進行反擊。\\n攻擊目標擁有<color=#2c6bb7>護盾</color>時，傷害量減少。\\n對全體敵人賦予<color=#2c6bb7>無法恢復</color>狀態。"
@@ -105276,12 +105276,12 @@
     "Korean": "* <color=#2c6bb7>치명 피해</color>를 입을 때마다 행동 게이지가 증가합니다.\\n* <color=#2c6bb7>약화 효과</color>를 부여하는 스킬을 다수 보유하고 있습니다.\\n* 광폭화 이후 리샤와 아이리스를 소환하며 아군 생존 시 받는 피해가 감소합니다.\\n* 리샤와 아이리스는 <color=#2c6bb7>협공</color> 위주의 스킬을 사용하며 협공 시 대상에게 <color=#2c6bb7>화상</color>을 부여합니다.",
     "English": "* Each time <color=#2c6bb7>Critical Damage</color> is taken, the Priority increases.\\nHas multiple skills that inflict <color=#2c6bb7>debuffs</color>.\\nAfter Enraged, summons Lisha and Iris, and while allies are alive, damage taken is reduced.\\nLisha and Iris primarily use <color=#2c6bb7>Dual Attacks</color>, and inflict <color=#2c6bb7>Burned</color> on the target when performing Dual Attacks.",
     "Japanese": "* <color=#2c6bb7>会心ダメージ</color>を受けるたびに行動ゲージがUPする。\\n<color=#2c6bb7>弱体効果</color>を付与するスキルを多数所有している。\\n狂暴化後、リーシャとアイリスを召喚し、戦場に味方がいる場合、受けるダメージがDOWNする。\\nリーシャとアイリスは、<color=#2c6bb7>連携</color>寄りのスキルを使用し、連携時、対象に<color=#2c6bb7>火傷</color>を付与する。",
-    "China_Simplified": "* 受到<color=#2c6bb7>暴击伤害</color>时行动值提升。\\n持有多种赋予<color=#2c6bb7>弱化效果</color>的技能。\\n狂暴化后，召唤莉莎和艾耶尔丽斯，且友军存活时受到的伤害降低。\\n莉莎和艾耶尔丽斯主要使用以<color=#2c6bb7>夹攻</color>为主的技能，夹攻时对目标赋予<color=#2c6bb7>烧伤</color>。",
-    "China_Traditional": "* 每受到一次<color=#2c6bb7>暴擊傷害</color>，速攻值增加。\\n擁有多個賦予<color=#2c6bb7>弱化效果</color>的技能。\\n狂暴化之後召喚莉莎和艾耶爾麗斯，友軍生存時所受傷害減少。\\n莉莎和艾耶爾麗斯使用以<color=#2c6bb7>夾攻</color>為主的技能，夾攻時對目標賦予<color=#2c6bb7>燒傷</color>狀態。"
+    "China_Simplified": "* 受到<color=#2c6bb7>暴击伤害</color>时行动值提升。\\n持有多种赋予<color=#2c6bb7>弱化效果</color>的技能。\\n狂暴化后，召唤莉莎和艾尔丽斯，且友军存活时受到的伤害降低。\\n莉莎和艾耶尔丽斯主要使用以<color=#2c6bb7>夹攻</color>为主的技能，夹攻时对目标赋予<color=#2c6bb7>烧伤</color>。",
+    "China_Traditional": "* 每受到一次<color=#2c6bb7>暴擊傷害</color>，速攻值增加。\\n擁有多個賦予<color=#2c6bb7>弱化效果</color>的技能。\\n狂暴化之後召喚莉莎和艾耶爾麗斯，友軍生存時所受傷害減少。\\n莉莎和艾爾麗斯使用以<color=#2c6bb7>夾攻</color>為主的技能，夾攻時對目標賦予<color=#2c6bb7>燒傷</color>狀態。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_29",
-    "Korean": "* 일정 체력이하가 될 때마다 광폭화 후 <color=#2c6bb7>아카리</color>와 <color=#2c6bb7>아메</color>를 차례대로 소환합니다.\\n* <color=#2c6bb7>전체 공격</color>으로 받는 피해가 감소하고 아메가 생존 시 <color=#2c6bb7>단일 공격</color>으로 받는 피해 또한 감소합니다. 또한 전체 공격 피격 시 <color=#2c6bb7>도지기리 야스츠나</color>의 쿨타임도 감소합니다.\\n* <color=#2c6bb7>도지기리 야스츠나</color> 사용 시 적 전체에게 <color=#2c6bb7>스턴</color>을 부여합니다.",
+    "Korean": "* 일정 체력 이하가 될 때마다 광폭화 후 <color=#2c6bb7>아카리</color>와 <color=#2c6bb7>아메</color>를 차례대로 소환합니다.\\n* <color=#2c6bb7>전체 공격</color>으로 받는 피해가 감소하고 아메가 생존 시 <color=#2c6bb7>단일 공격</color>으로 받는 피해 또한 감소합니다. 또한 전체 공격 피격 시 <color=#2c6bb7>도지기리 야스츠나</color>의 쿨타임도 감소합니다.\\n* <color=#2c6bb7>도지기리 야스츠나</color> 사용 시 적 전체에게 <color=#2c6bb7>스턴</color>을 부여합니다.",
     "English": "* When Health falls below set thresholds, enters Enraged and summons <color=#2c6bb7>Akari</color> and <color=#2c6bb7>Ame</color> in sequence.\\nDamage taken from <color=#2c6bb7>AoE Attacks</color> is reduced, and when Ame survives, Damage taken from <color=#2c6bb7>single attacks</color> is also reduced. When hit by an AoE Attack, the cooldown of <color=#2c6bb7>Doujikiri Yasutsuna</color> is reduced.\\nWhen using <color=#2c6bb7>Doujikiri Yasutsuna</color>, inflicts <color=#2c6bb7>Stunned</color> on all enemies.",
     "Japanese": "* 一定のHP以下になるたびに狂暴化し、<color=#2c6bb7>アカリ</color>と<color=#2c6bb7>あめ</color>を順に召喚する。\\n<color=#2c6bb7>全体攻撃</color>で受けるダメージがDOWNし、戦場にあめがいる場合、<color=#2c6bb7>単体攻撃</color>で受けるダメージもDOWNする。また、全体攻撃を受けた場合、<color=#2c6bb7>【童子切安綱】</color>のスキルターンも減少する。\\n<color=#2c6bb7>【童子切安綱】</color>を使用時、敵全体に<color=#2c6bb7>スタン</color>を付与する。",
     "China_Simplified": "* 低于一定生命值时，进入狂暴化并依次召唤<color=#2c6bb7>阿卡莉</color>与<color=#2c6bb7>亚美</color>。\\n受到的<color=#2c6bb7>全体攻击</color>伤害降低，且在亚美存活时受到的<color=#2c6bb7>单体攻击</color>伤害也会降低。此外，受到全体攻击时，<color=#2c6bb7>童子切安纲</color>的冷却时间减少。\\n使用<color=#2c6bb7>童子切安纲</color>时，对全体敌人赋予<color=#2c6bb7>晕眩</color>。",
@@ -105292,16 +105292,16 @@
     "Korean": "* 1웨이브의 크사이는 <color=#2c6bb7>명령: 제압</color> 사용 시 좌측의 대상을 우선으로 공격하며 대상이 <color=#2c6bb7>방어형</color>이 아닐 경우 100% 확률로 <color=#2c6bb7>스턴</color>을 부여합니다. 5턴 내에 크사이를 처치하지 못할 경우 적 전체에게 높은 피해를 제공 후 면역과 효과 저항을 무시하는 약화 효과를 부여합니다.\\n* 2웨이브의 엡실론은 약화 효과 보유 시 <color=#2c6bb7>하이퍼! 슈퍼 멋진 살인 기계</color>의 피해량이 대폭 증가합니다. 또한 매 턴 종료 시 <color=#2c6bb7>실드</color>를 획득합니다.",
     "English": "* In Wave 1, Ksai prioritizes attacking the leftmost target when using <color=#2c6bb7>Command: Restrain</color>, and if the target is a non-<color=#2c6bb7>Defender</color>, inflicts <color=#2c6bb7>Stunned</color> with 100% chance. If Ksai is not defeated within 5 turns, deals high Damage to all enemies and inflicts debuffs that ignore Immunity and Resilience.\\nIn Wave 2, Epsilon greatly increases the Damage of <color=#2c6bb7>Hyper! Super Cool Killing Machine</color> when enemies have debuffs. In addition, gains a <color=#2c6bb7>barrier</color> at the end of each turn.",
     "Japanese": "* 1ウェーブのザイは<color=#2c6bb7>命令：制圧</color>使用時、一番左側の敵を優先的に攻撃し、対象が<color=#2c6bb7>防御型</color>でない場合、100%の確率で<color=#2c6bb7>スタン</color>を付与する。5ターン以内にザイを倒せない場合、敵全体に大ダメージを与えた後、免疫と効果抵抗を無視する弱体効果を付与する。\\n2ウェーブのイプシロンは弱体効果がある場合、<color=#2c6bb7>ハイパー! スーパー殺戮マシーン</color>のダメージが大幅にUPする。また、毎ターン終了時、<color=#2c6bb7>シールド</color>を獲得する。",
-    "China_Simplified": "* 第1波的科赛在使用<color=#2c6bb7>命令：压制</color>时优先攻击左侧目标，若目标非<color=#2c6bb7>防御型</color>，则有100%概率赋予<color=#2c6bb7>晕眩</color>。若在5回合内未击败科赛，则对全体敌人造成大量伤害并赋予无视免疫与效果抵抗的弱化效果。\\n第2波的埃普西隆持有弱化效果时，<color=#2c6bb7>Hyper！超酷杀人机器</color>的伤害量大幅提升。此外，每回合结束时获得<color=#2c6bb7>护盾</color>。",
-    "China_Traditional": "* 第1波的科賽使用<color=#2c6bb7>命令：鎮壓</color>時，優先攻擊左側目標，如果目標不是<color=#2c6bb7>防禦型</color>，則100%機率賦予<color=#2c6bb7>暈眩</color>狀態。如果在5回合內未能消滅科賽，則對全體敵人造成高傷害後，賦予無視免疫和效果抵抗的弱化效果。\\n第2波的艾普西隆在擁有弱化效果時，<color=#2c6bb7>超級！極帥的殺人機器</color>的傷害量大幅增加。此外，每回合結束時獲得<color=#2c6bb7>護盾</color>。"
+    "China_Simplified": "* 第1波的科赛在使用<color=#2c6bb7>命令：压制</color>时优先攻击左侧目标，若目标非<color=#2c6bb7>防御型</color>，则有100%概率赋予<color=#2c6bb7>晕眩</color>。若在5回合内未击败科赛，则对全体敌人造成大量伤害并赋予无视免疫与效果抵抗的弱化效果。\\n第2波的埃普西隆持有弱化效果时，<color=#2c6bb7>特炫！超酷杀人机器</color>的伤害量大幅提升。此外，每回合结束时获得<color=#2c6bb7>护盾</color>。",
+    "China_Traditional": "* 第1波的科賽使用<color=#2c6bb7>命令：壓制</color>時，優先攻擊左側目標，如果目標不是<color=#2c6bb7>防禦型</color>，則100%機率賦予<color=#2c6bb7>暈眩</color>狀態。如果在5回合內未能消滅科賽，則對全體敵人造成高傷害後，賦予無視免疫和效果抵抗的弱化效果。\\n第2波的艾普西隆在擁有弱化效果時，<color=#2c6bb7>超級！超酷殺人機器</color>的傷害量大幅增加。此外，每回合結束時獲得<color=#2c6bb7>護盾</color>。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_31",
     "Korean": "* 적이 행동 시 <color=#2c6bb7>약화 효과</color>를 보유하는 적이 1명이라도 있으면 무작위 대상에게 약화 효과를 부여합니다.<color=#2c6bb7>강력한 출력</color>을 통해 적에게 일정 확률로 약화 효과를 부여합니다.\\n* 적이 약화 효과를 보유할 경우 <color=#2c6bb7>압도적인 성능</color>과 <color=#2c6bb7>가공할 위력</color>의 효과가 강화됩니다.",
     "English": "* When an enemy performs an action, if at least one enemy has a <color=#2c6bb7>debuff</color>, inflicts a debuff on 1 random enemy. Uses <color=#2c6bb7>Intense Output</color>, to inflict debuffs on all enemies by a set chance.\\nWhen enemies have debuffs, the effects of <color=#2c6bb7>Overwhelming Performance</color> and <color=#2c6bb7>Fearsome Might</color> are enhanced.",
     "Japanese": "* 敵が行動時、<color=#2c6bb7>弱体効果</color>がある敵が1体でもいると、ランダムな対象に弱体効果を付与する。<color=#2c6bb7>【出力全開】</color>使用時、一定の確率で敵に弱体効果を付与する。\\n敵に弱体効果がある場合、<color=#2c6bb7>【圧倒的な性能】</color>と<color=#2c6bb7>【恐れおののく威力】</color>の効果が強化される。",
-    "China_Simplified": "* 敌人行动时，若至少有1名敌人持有<color=#2c6bb7>弱化效果</color>，则对随机目标赋予弱化效果。<color=#2c6bb7>使用火力全开</color>时，一定概率对敌人赋予弱化效果。\\n敌人持有弱化效果时，<color=#2c6bb7>压倒性的性能</color>和<color=#2c6bb7>可怖威力</color>的效果得到强化。",
-    "China_Traditional": "* 當敵人行動時，如果場上至少有1名敵人帶有<color=#2c6bb7>弱化效果</color>，則對隨機目標賦予弱化效果。透過<color=#2c6bb7>強大輸出</color>，有一定機率對敵人賦予弱化效果。\\n當敵人擁有弱化效果時，<color=#2c6bb7>壓倒性性能</color>和<color=#2c6bb7>驚人威力</color>的效果會被強化。"
+    "China_Simplified": "* 敌人行动时，若至少有1名敌人持有<color=#2c6bb7>弱化效果</color>，则对随机目标赋予弱化效果。使用<color=#2c6bb7>强力输出</color>时，一定概率对敌人赋予弱化效果。\\n敌人持有弱化效果时，<color=#2c6bb7>压倒性的性能</color>和<color=#2c6bb7>可怕的威力</color>的效果得到强化。",
+    "China_Traditional": "* 當敵人行動時，如果場上至少有1名敵人帶有<color=#2c6bb7>弱化效果</color>，則對隨機目標賦予弱化效果。透過<color=#2c6bb7>強力輸出</color>，有一定機率對敵人賦予弱化效果。\\n當敵人擁有弱化效果時，<color=#2c6bb7>壓倒性的功能</color>和<color=#2c6bb7>加工威力</color>的效果會被強化。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_32",
@@ -105324,8 +105324,8 @@
     "Korean": "* 글리시스의 하수인이 존재하지 않을 경우 글리시스가 받는 피해량이 감소합니다.\\n* <color=#2c6bb7>총애를 받으라</color> 사용 시 거대 얼음 망령을 소환합니다. 거대 얼음 망령은 공격 시 피격 시 높은 확률로 적 전체에게 <color=#2c6bb7>빙결</color>을 부여합니다.\\n* 하수인 생존 중 글리시스가 단일 공격을 받을 경우 <color=#2c6bb7>WG</color>를 회복합니다.",
     "English": "* If Glicys's underlings are not present, Damage taken by Glicys is reduced.\\nWhen using <color=#2c6bb7>Receive Your Blessings</color>, summons a Giant Ice Revenant. When attacking or when hit, the Giant Ice Revenant has a high chance to inflict <color=#2c6bb7>Frozen</color> on all enemies.\\nIf Glicys is attacked while the underlings are alive, <color=#2c6bb7>Weakness Gauge</color> is recovered.",
     "Japanese": "* 【グリシス】の手下がいない場合、【グリシス】が受けるダメージがDOWNする。\\n<color=#2c6bb7>【寵愛を受けよ】</color>使用時、【零氷の亡霊】を召喚する。【零氷の亡霊】はダメージを受けた時、高確率で敵全体に<color=#2c6bb7>凍結</color>を付与する。\\n手下が戦場にいる状態で【グリシス】が単体攻撃を受けた場合、<color=#2c6bb7>WG</color>を回復する。",
-    "China_Simplified": "* 克里希丝的仆从不在场时，克里希丝受到的伤害量降低。\\n使用<color=#2c6bb7>接受我的宠爱</color>时，召唤巨型寒冰亡灵。巨型寒冰亡灵受击时，有较高概率对全体敌人赋予<color=#2c6bb7>冰冻</color>。\\n仆从存活期间，克里希丝受单体攻击时恢复<color=#2c6bb7>WG</color>。",
-    "China_Traditional": "* 如果克里希絲的僕從不存在，克里希絲所受傷害量減少。\\n使用<color=#2c6bb7>接受寵愛吧</color>時召喚巨大冰霜幽靈。巨大冰霜幽靈受到攻擊時，有高機率對全體敵人賦予<color=#2c6bb7>冰凍</color>狀態。\\n僕從生存期間，克里希絲受到單一攻擊時會恢復<color=#2c6bb7>WG</color>。"
+    "China_Simplified": "* 克里希丝的仆从不在场时，克里希丝受到的伤害量降低。\\n使用<color=#2c6bb7>接受恩宠吧</color>时，召唤巨型寒冰亡灵。巨型寒冰亡灵受击时，有较高概率对全体敌人赋予<color=#2c6bb7>冰冻</color>。\\n仆从存活期间，克里希丝受单体攻击时恢复<color=#2c6bb7>WG</color>。",
+    "China_Traditional": "* 如果克里希絲的僕從不存在，克里希絲所受傷害量減少。\\n使用<color=#2c6bb7>接受恩寵吧</color>時召喚巨大冰霜幽靈。巨大冰霜幽靈受到攻擊時，有高機率對全體敵人賦予<color=#2c6bb7>冰凍</color>狀態。\\n僕從生存期間，克里希絲受到單一攻擊時會恢復<color=#2c6bb7>WG</color>。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_35",
@@ -105340,8 +105340,8 @@
     "Korean": "* 페이탈이 가지는 <color=#2c6bb7>은신</color>은 해제가 불가능합니다.\\n* 적이 공격이 아닌 스킬 사용 시 <color=#2c6bb7>밤의 장막</color>을 사용하여 자신에게 걸린 약화 효과를 제거 후 공격합니다.\\n* <color=#2c6bb7>레퀴엠 세르케트</color>로 처치한 적은 소생 및 부활이 불가능합니다.\\n* 페이탈이 공격 시 이터널의 <color=#2c6bb7>행동 게이지</color>를 대폭 상승시킵니다.",
     "English": "* Fatal's <color=#2c6bb7>Stealth</color> is irremovable.\\nWhen an enemy uses a non-attack skill, uses <color=#2c6bb7>Curtain of Darkness</color> to remove debuffs applied to the caster, then attacks.\\nEnemies defeated by <color=#2c6bb7>Requiem Serket</color> cannot be revived or resurrected.\\nWhen Fatal attacks, greatly increases Eternal's <color=#2c6bb7>Priority</color>.",
     "Japanese": "* フェータルが持つ<color=#2c6bb7>隠れ身</color>は解除できない。\\n敵が攻撃以外のスキルを使用した場合、<color=#2c6bb7>【夜の帳】</color>を使用して自分の弱体効果を解除した後、攻撃する。\\n<color=#2c6bb7>【レクイエム・セルケト】</color>で倒した敵は、復活と蘇生ができなくなる。\\nフェータルが攻撃時、エターナルの<color=#2c6bb7>行動ゲージ</color>を大幅にUPさせる。",
-    "China_Simplified": "* 佩塔尔持有的<color=#2c6bb7>隐身</color>无法解除。\\n敌人使用非攻击类技能时，会使用<color=#2c6bb7>夜之帷幕</color>移除自身身上的弱化效果后攻击。\\n使用<color=#2c6bb7>安魂毒蝎</color>击败的敌人无法被重生或复活。\\n佩塔尔攻击时，伊特诺的<color=#2c6bb7>行动值</color>大幅提升。",
-    "China_Traditional": "* 菲塔兒具備的<color=#2c6bb7>隱身</color>無法解除。\\n敵人使用非攻擊技能時，會使用<color=#2c6bb7>黑夜帷幕</color>解除自身受到的弱化效果後再進行攻擊。\\n被<color=#2c6bb7>塞爾凱特的安魂曲</color>消滅的敵人將無法甦醒或復活。\\n菲塔兒攻擊時，伊特諾的<color=#2c6bb7>速攻值</color>會大幅提升。"
+    "China_Simplified": "* 佩塔尔持有的<color=#2c6bb7>隐身</color>无法解除。\\n敌人使用非攻击类技能时，会使用<color=#2c6bb7>夜之帷幕</color>移除自身身上的弱化效果后攻击。\\n使用<color=#2c6bb7>安魂曲塞尔凯特</color>击败的敌人无法被重生或复活。\\n佩塔尔攻击时，伊特诺的<color=#2c6bb7>行动值</color>大幅提升。",
+    "China_Traditional": "* 菲塔兒具備的<color=#2c6bb7>隱身</color>無法解除。\\n敵人使用非攻擊技能時，會使用<color=#2c6bb7>夜幕</color>解除自身受到的弱化效果後再進行攻擊。\\n被<color=#2c6bb7>安魂曲賽爾凱特</color>消滅的敵人將無法甦醒或復活。\\n菲塔兒攻擊時，伊特諾的<color=#2c6bb7>速攻值</color>會大幅提升。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_37",
@@ -105363,7 +105363,7 @@
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_39",
     "Korean": "* <color=#2c6bb7>피의 론도</color> 사용 시 효과 저항을 무시하고 <color=#2c6bb7>스턴</color>을 부여합니다.\\n* 피격 시 약화 효과를 보유하고 있지 않을 경우 <color=#2c6bb7>WG</color> 피해를 받지 않습니다.\\n* 공격 시 <color=#2c6bb7>면역</color>을 무시하는 약화 효과를 부여합니다.\\n* <color=#2c6bb7>치명 공격 시</color> 일부 스킬의 효과들이 강화됩니다.\\n* 빠른 시점에 광폭화 하고 광폭화 종료 시 적 전체를 <color=#2c6bb7>즉사</color>시킵니다.",
     "English": "* When using <color=#2c6bb7>Rondo of Blood</color>, inflicts <color=#2c6bb7>Stunned</color> while ignoring Resilience.\\nWhen hit, if the caster does not have debuffs, does not take <color=#2c6bb7>Weakness Gauge</color> Damage.\\nWhen attacking, inflicts debuffs that ignore <color=#2c6bb7>Immunity</color>.\\nOn a <color=#2c6bb7>Critical Hit</color>, the effects of some skills are enhanced.\\nEnters Enraged quickly, and when Enraged ends, <color=#2c6bb7>instantly kills</color> all enemies.",
-    "Japanese": "* <color=#2c6bb7>【血のロンド】</color>使用時、効果抵抗を無視して<color=#2c6bb7>スタン</color>を付与する。\\nダメージを受けた時に弱体効果がない場合、<color=#2c6bb7>WG</color>ダメージを受けない。\\n攻撃時、<color=#2c6bb7>免疫</color>を無視する弱体効果を付与する。\\n<color=#2c6bb7>会心発生時</color>、一部スキルの効果が強化される。\\n短時間で【狂暴化】し、【狂暴化】終了時、敵全体を<color=#2c6bb7>即死</color>させる。",
+    "Japanese": "* <color=#2c6bb7>【ブラッディロンド】</color>使用時、効果抵抗を無視して<color=#2c6bb7>スタン</color>を付与する。\\nダメージを受けた時に弱体効果がない場合、<color=#2c6bb7>WG</color>ダメージを受けない。\\n攻撃時、<color=#2c6bb7>免疫</color>を無視する弱体効果を付与する。\\n<color=#2c6bb7>会心発生時</color>、一部スキルの効果が強化される。\\n短時間で【狂暴化】し、【狂暴化】終了時、敵全体を<color=#2c6bb7>即死</color>させる。",
     "China_Simplified": "* 使用<color=#2c6bb7>血之回旋曲</color>时，无视效果抵抗赋予<color=#2c6bb7>晕眩</color>。\\n若未持有受击时的弱化效果，则不会受到<color=#2c6bb7>WG</color>伤害。\\n攻击时，赋予无视<color=#2c6bb7>免疫</color>的弱化效果。\\n<color=#2c6bb7>暴击时</color>，部分技能的效果得到强化。\\n在短时间内狂暴化，狂暴化结束时全体敌人<color=#2c6bb7>立即死亡</color>。",
     "China_Traditional": "* 使用<color=#2c6bb7>血之迴旋曲</color>時，無視效果抵抗並賦予<color=#2c6bb7>暈眩</color>。\\n受到攻擊時如果沒有弱化效果，則不受<color=#2c6bb7>WG</color>傷害。\\n攻擊時賦予無視<color=#2c6bb7>免疫</color>的弱化效果。\\n<color=#2c6bb7>暴擊攻擊時</color>，部分技能效果會被強化。\\n在短時間內進入狂暴化，並在狂暴化結束時，使全體敵人<color=#2c6bb7>立即死亡</color>。"
   },
@@ -105372,7 +105372,7 @@
     "Korean": "* <color=#2c6bb7>정복자의 송곳니</color>를 통해 최대 체력에 비례하여 높은 대미지를 입힐 수 있습니다. 또한 <color=#2c6bb7>용왕의 숨결</color>에 사용 시 일정 이하의 체력이 될 경우 <color=#2c6bb7>즉사</color>시킵니다. <color=#2c6bb7>용왕의 숨결</color>은 <color=#2c6bb7>치명 공격</color>에 피격 시 쿨타임이 초기화됩니다. 광폭화 이후에는 <color=#2c6bb7>용왕의 숨결</color>의 범위가 적 전체로 확대됩니다.",
     "English": "* Using <color=#2c6bb7>Conqueror's Fang</color>, deals high Damage proportional to Max Health. When using <color=#2c6bb7>Dragon Ruler's Breath</color>, <color=#2c6bb7>instantly kills</color> enemies whose Health falls below a certain threshold. <color=#2c6bb7>Dragon Ruler's Breath</color> resets its cooldown when hit by a <color=#2c6bb7>Critical Hit</color>. After Enraged, the range of <color=#2c6bb7>Dragon Ruler's Breath</color> expands to all enemies.",
     "Japanese": "* <color=#2c6bb7>【征服者の牙】</color>で最大HPが高いほどダメージを与える。また、<color=#2c6bb7>【竜王の息吹】</color>に使用時、一定のHP以下の場合、<color=#2c6bb7>即死</color>させる。<color=#2c6bb7>【竜王の息吹】</color>は<color=#2c6bb7>会心</color>ダメージを受けた時、スキルターンを初期化する。狂暴化後は<color=#2c6bb7>【竜王の息吹】</color>の範囲が敵全体に拡大する。",
-    "China_Simplified": "* 通过<color=#2c6bb7>征服者獠牙</color>，根据生命值上限造成高额伤害。此外，使用于<color=#2c6bb7>龙王之息</color>时，若目标生命值低于一定数值时，<color=#2c6bb7>立即死亡</color>。当受到<color=#2c6bb7>暴击</color>时，<color=#2c6bb7>龙王之息</color>的冷却时间重置。狂暴化后，<color=#2c6bb7>龙王之息</color>的范围会扩大至全体敌人。",
+    "China_Simplified": "* 通过<color=#2c6bb7>征服者的利齿</color>，根据生命值上限造成高额伤害。此外，使用于<color=#2c6bb7>龙王之息</color>时，若目标生命值低于一定数值时，<color=#2c6bb7>立即死亡</color>。当受到<color=#2c6bb7>暴击</color>时，<color=#2c6bb7>龙王吐息</color>的冷却时间重置。狂暴化后，<color=#2c6bb7>龙王之息</color>的范围会扩大至全体敌人。",
     "China_Traditional": "* 透過<color=#2c6bb7>征服者的尖牙</color>，可依最大生命力比例造成高傷害。此外，在<color=#2c6bb7>龍王之息</color>上使用時，若生命力降至特定數值以下，則<color=#2c6bb7>立即死亡</color>。<color=#2c6bb7>龍王之息</color>在受到<color=#2c6bb7>暴擊攻擊</color>時，冷卻時間會重置。進入狂暴化後，<color=#2c6bb7>龍王之息</color>的範圍會擴大至全體敵人。"
   },
   {
@@ -105627,8 +105627,8 @@
     "ID": "SYS_DUNGEON_CLEAR_TIP_026",
     "Korean": "* <color=#2c6bb7>강화 효과 해제</color>와 <color=#2c6bb7>강화 효과 강탈</color>에 면역이 있기 때문에 <color=#2c6bb7>강화 불가</color>를 부여하거나 강화 효과를 해제하는 동료를 편성.\\n* <color=#2c6bb7>면역</color>을 부여하는 동료를 편성하여 <color=#2c6bb7>저주</color>에 의한 피해 대처.",
     "English": "* Since the enemy is immune to <color=#2c6bb7>remove buff</color> and <color=#2c6bb7>steal buff</color>, include allies that inflict <color=#2c6bb7>Unbuffable</color> or allies that remove buffs.\\nInclude allies that grant <color=#2c6bb7>Immunity</color> to handle damage from <color=#2c6bb7>Cursed</color>",
-    "Japanese": "* <color=#2c6bb7>強化効果解除</color>と<color=#2c6bb7>強化効果を奪う</color>に免疫があるため、<color=#2c6bb7>強化不可</color>を付与、または強化効果を解除する仲間を編成する。\\n<color=#2c6bb7>免疫</color>を付与する仲間を編成し、<color=#2c6bb7>呪い</color>によるダメージに対処する。",
-    "China_Simplified": "* 因对<color=#2c6bb7>强化效果解除</color>和<color=#2c6bb7>强化效果掠夺</color>具有免疫，配置赋予<color=#2c6bb7>无法强化</color>或解除强化效果的同伴。\\n配置赋予<color=#2c6bb7>免疫</color>的同伴以对应<color=#2c6bb7>诅咒</color>造成的伤害",
+    "Japanese": "* <color=#2c6bb7>強化効果解除</color>と<color=#2c6bb7>強化効果強奪</color>に免疫があるため、<color=#2c6bb7>強化不可</color>を付与、または強化効果を解除する仲間を編成する。\\n<color=#2c6bb7>免疫</color>を付与する仲間を編成し、<color=#2c6bb7>呪い</color>によるダメージに対処する。",
+    "China_Simplified": "* 因对<color=#2c6bb7>强化效果解除</color>和<color=#2c6bb7>夺取强化效果</color>具有免疫，配置赋予<color=#2c6bb7>无法强化</color>或解除强化效果的同伴。\\n配置赋予<color=#2c6bb7>免疫</color>的同伴以对应<color=#2c6bb7>诅咒</color>造成的伤害",
     "China_Traditional": "* 因其具備對<color=#2c6bb7>解除強化效果</color>與<color=#2c6bb7>奪取強化效果</color>的免疫，建議編入可賦予<color=#2c6bb7>無法強化</color>或解除強化效果的同伴。\\n編入可賦予<color=#2c6bb7>免疫</color>的同伴，以應對<color=#2c6bb7>詛咒</color>造成的傷害"
   },
   {
@@ -105649,9 +105649,9 @@
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_029",
-    "Korean": "* <color=#2c6bb7>관통력</color>을 증가시킬 수 있는 동료 편성.\\n* 방어력을 무시하고 피해를 줄 수 있는 <color=#2c6bb7>화상</color> 효과를 가진 동료 편성.\\n* 적 브레이크 이후 관통력 감소를 해제하고 벙어력 버프를 부여하기 전에 <color=#2c6bb7>강화 불가</color> 효과를 부여.",
+    "Korean": "* <color=#2c6bb7>관통력</color>을 증가시킬 수 있는 동료 편성.\\n* 방어력을 무시하고 피해를 줄 수 있는 <color=#2c6bb7>화상</color> 효과를 가진 동료 편성.\\n* 적 브레이크 이후 관통력 감소를 해제하고 방어력 버프를 부여하기 전에 <color=#2c6bb7>강화 불가</color> 효과를 부여.",
     "English": "* Include allies that can increase <color=#2c6bb7>Penetration</color>.\\nInclude allies that can inflict <color=#2c6bb7>Burned</color> that deal damage while ignoring Defense.\\nAfter the enemy Breaks, apply <color=#2c6bb7>Unbuffable</color> before Penetration reduction is removed and Defense buffs are granted",
-    "Japanese": "* <color=#2c6bb7>貫通力</color>をUPさせる仲間を編成する。\\n防御力を無視してダメージを与えられる<color=#2c6bb7>火傷</color>効果を持つ仲間を編成する。\\n敵がブレイク後に貫通力DOWNを解除し、防御力バフを付与する前に、<color=#2c6bb7>強化不可</color>効果を付与する。",
+    "Japanese": "* <color=#2c6bb7>貫通力</color>をUPさせる仲間を編成する。\\n防御力を無視してダメージを与えられる<color=#2c6bb7>火傷</color>効果を持つ仲間を編成する。\\nブレイク後に敵が貫通力DOWNを解除し、防御力強化効果を付与する前に<color=#2c6bb7>強化不可</color>効果を付与する。",
     "China_Simplified": "* 配置可提升<color=#2c6bb7>穿透力</color>的同伴。\\n配置具有可无视防御力并造成伤害的<color=#2c6bb7>烧伤</color>效果的同伴。\\n敌人力竭后，解除穿透力减少，并在赋予防御力增益前，赋予<color=#2c6bb7>无法强化</color>效果",
     "China_Traditional": "* 編入可增加<color=#2c6bb7>貫穿力</color>的同伴。\\n編入具備可無視防禦力並造成傷害的<color=#2c6bb7>燒傷</color>效果的同伴。\\n在敵人休息後解除其貫穿力減少並賦予防禦力增益效果之前，賦予<color=#2c6bb7>無法強化</color>效果"
   },
@@ -105786,10 +105786,10 @@
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_007",
     "Korean": "* 열화 코어를 우선적으로 파괴.\\n* 강화 효과를 <color=#2c6bb7>해제</color>하거나 <color=#2c6bb7>강화 불가</color>를 부여하는 동료 편성.\\n* 강화 효과 강탈로 인해 면역보다는 약화 효과 지속 시간을 감소시킬 수 있는 동료 편성.",
-    "English": "* Prioritize destroying Inferior Cores.\\nInclude allies that <color=#2c6bb7>Remove</color> buffs or inflict <color=#2c6bb7>Unbuffable</color>.\\nSince buffs can be Stolen, prioritize allies that can reduce debuff duration rather than relying solely on Immunity",
-    "Japanese": "* 劣化コアを優先的に破壊する。\\n強化効果を<color=#2c6bb7>解除</color>、または<color=#2c6bb7>強化不可</color>を付与する仲間を編成する。\\n強化効果を奪うため、免疫よりも弱体効果のターンを減少させる仲間を編成する。",
-    "China_Simplified": "* 优先破坏烈火核心。\\n配置<color=#2c6bb7>解除</color>强化效果或赋予<color=#2c6bb7>无法强化</color>的同伴。\\n因强化效果掠夺，相比免疫，配置可减少弱化效果持续时间的同伴。",
-    "China_Traditional": "* 優先破壞周圍的熱火核心。\\n編入可<color=#2c6bb7>解除</color>強化效果或賦予<color=#2c6bb7>無法強化</color>的同伴。\\n由於可奪取強化效果，故比起免疫，建議編入可減少弱化效果持續時間的同伴"
+    "English": "* Prioritize destroying the Inferior Core.\\n* Form a lineup with heroes that <color=#2c6bb7>dispel</color> buffs or apply <color=#2c6bb7>Unbuffable</color>.\\n* Due to Stealing Buff, form a lineup with heroes that can reduce debuff duration rather than rely on immunity.",
+    "Japanese": "* 劣化コアを優先的に破壊。\\n* 強化効果を<color=#2c6bb7>解除</color>するか<color=#2c6bb7>強化不可</color>を付与する仲間編成。\\n* 強化効果強奪により、免疫よりも弱体効果の持続時間を減少させられる仲間編成。",
+    "China_Simplified": "* 优先破坏烈火核心。\\n* 编成可<color=#2c6bb7>解除</color>强化效果或附加<color=#2c6bb7>无法强化</color>的同伴。\\n* 由于夺取强化效果，比起免疫，更应编成能减少弱化效果持续时间的同伴。",
+    "China_Traditional": "* 優先破壞熱火核心。\\n* 編成可<color=#2c6bb7>解除</color>強化效果或附加<color=#2c6bb7>無法強化</color>的同伴。\\n* 由於奪取強化效果，比起免疫，更應編成能減少弱化效果持續時間的同伴。"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_008",
@@ -105924,7 +105924,7 @@
     "Korean": "* <color=#2c6bb7>단일 공격</color> 위주의 동료 편성.\\n* <color=#2c6bb7>면역</color>을 부여하는 동료를 편성하여 2웨이브 입장 전 면역 부여.\\n* 라플라스에게 강화 효과를 <color=#2c6bb7>해제</color>하거나 <color=#2c6bb7>강탈</color>하여 <color=#2c6bb7>그랑블루 퍼니시먼트</color>에 대한 피해량 감소.",
     "English": "* Include allies that focus on <color=#2c6bb7>single attacks</color>.\\nInclude allies that grant <color=#2c6bb7>Immunity</color> to be applied before entering Wave 2.\\nReduce damage from <color=#2c6bb7>Grand Blue Punishment</color> by <color=#2c6bb7>Removing</color> or <color=#2c6bb7>Stealing</color> buffs from Laplace",
     "Japanese": "* <color=#2c6bb7>単体攻撃</color>寄りの仲間を編成する。\\n<color=#2c6bb7>免疫</color>を付与する仲間を編成し、2ウェーブ開始前に付与しておく。\\nラプラスの強化効果を<color=#2c6bb7>解除、</color>または<color=#2c6bb7>奪う</color>ことで<color=#2c6bb7>【グランブルー・パニッシュメント】</color>によるダメージをDOWNさせる。",
-    "China_Simplified": "* 配置以<color=#2c6bb7>单体攻击</color>为主的同伴。\\n配置赋予<color=#2c6bb7>免疫</color>的同伴以第2波开始前赋予免疫。\\n对拉普拉丝<color=#2c6bb7>解除</color>或<color=#2c6bb7>掠夺</color>强化效果以减少对<color=#2c6bb7>碧海蓝天之惩</color>的伤害量",
+    "China_Simplified": "* 配置以<color=#2c6bb7>单体攻击</color>为主的同伴。\\n配置赋予<color=#2c6bb7>免疫</color>的同伴以第2波开始前赋予免疫。\\n对拉普拉丝<color=#2c6bb7>解除</color>或<color=#2c6bb7>掠夺</color>强化效果以减少对<color=#2c6bb7>碧蓝之惩</color>的伤害量",
     "China_Traditional": "* 編入以<color=#2c6bb7>單一攻擊</color>為主的同伴。\\n編入可賦予<color=#2c6bb7>免疫</color>的同伴，在進入第2波前賦予免疫。\\n對拉普拉絲<color=#2c6bb7>解除</color>或<color=#2c6bb7>奪取</color>強化效果，以減少<color=#2c6bb7>碧藍之懲</color>造成的傷害量"
   },
   {
@@ -105956,8 +105956,8 @@
     "Korean": "* <color=#2c6bb7>강격</color> 위주의 동료 편성.\\n* <color=#2c6bb7>면역</color>을 부여하는 동료 편성.\\n* <color=#2c6bb7>반격</color> 위주의 공격을 바탕으로 광폭화 시 소환되는 리샤와 아이리스를 빠르게 제거.",
     "English": "* Include allies that focus on <color=#2c6bb7>Heavy Strike</color>.\\nInclude allies that grant <color=#2c6bb7>Immunity</color>.\\nUse <color=#2c6bb7>counterattacks</color> to quickly eliminate Lisha and Iris summoned during Enraged",
     "Japanese": "* <color=#2c6bb7>強撃</color>寄りの仲間を編成する。\\n<color=#2c6bb7>免疫</color>を付与する仲間を編成する。\\n<color=#2c6bb7>反撃</color>寄りの攻撃で、狂暴化発動時、召喚されるリーシャとアイリスを迅速に倒す。",
-    "China_Simplified": "* 配置以<color=#2c6bb7>强击</color>为主的同伴。\\n配置赋予<color=#2c6bb7>免疫</color>的同伴。\\n以<color=#2c6bb7>反击</color>为主的攻击，迅速击败狂暴化时召唤的莉莎和艾耶尔丽斯",
-    "China_Traditional": "* 編入以<color=#2c6bb7>強擊</color>為主的同伴。\\n編入可賦予<color=#2c6bb7>免疫</color>的同伴。\\n以<color=#2c6bb7>反擊</color>為主的攻擊為基礎，快速消滅其狂暴化時召喚出的莉莎與艾耶爾麗斯"
+    "China_Simplified": "* 配置以<color=#2c6bb7>强击</color>为主的同伴。\\n配置赋予<color=#2c6bb7>免疫</color>的同伴。\\n以<color=#2c6bb7>反击</color>为主的攻击，迅速击败狂暴化时召唤的莉莎和艾尔丽斯",
+    "China_Traditional": "* 編入以<color=#2c6bb7>強擊</color>為主的同伴。\\n編入可賦予<color=#2c6bb7>免疫</color>的同伴。\\n以<color=#2c6bb7>反擊</color>為主的攻擊為基礎，快速消滅其狂暴化時召喚出的莉莎與艾爾麗斯"
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_029",
@@ -105993,7 +105993,7 @@
   },
   {
     "ID": "SYS_DUNGEON_CLEAR_TIP_Hard_033",
-    "Korean": "* <color=#2c6bb7>면역</color>을 부여하는 동료 편성.\\n* <color=#2c6bb7>강화 불가</color> 또는 강화 효과를 <color=#2c6bb7>강탈</color>하는 동료 편성.\\n* 마리안,샬롯,타마라 순서로 처치하는 방식을 권장.",
+    "Korean": "* <color=#2c6bb7>면역</color>을 부여하는 동료 편성.\\n* <color=#2c6bb7>강화 불가</color> 또는 강화 효과를 <color=#2c6bb7>강탈</color>하는 동료 편성.\\n* 마리안, 샬롯, 타마라 순서로 처치하는 방식을 권장.",
     "English": "* Include allies that grant <color=#2c6bb7>Immunity</color>.\\nInclude allies that inflict <color=#2c6bb7>Unbuffable</color> or <color=#2c6bb7>Steals</color> buffs.\\nDefeating enemies in the order Marian, Charlotte, Tamara is recommended",
     "Japanese": "* <color=#2c6bb7>免疫</color>を付与する仲間を編成する。\\n<color=#2c6bb7>強化不可</color>、または強化効果を<color=#2c6bb7>奪う</color>ことができる仲間を編成する。\\nマリアン、シャーロット、タマラの順に倒す戦法を推奨する。",
     "China_Simplified": "* 配置赋予<color=#2c6bb7>免疫</color>的同伴。\\n配置<color=#2c6bb7>无法强化</color>或<color=#2c6bb7>掠夺</color>强化效果的同伴。\\n建议按玛丽安、夏洛特、塔玛拉的顺序进行击败",
@@ -106052,7 +106052,7 @@
     "Korean": "* 열화 코어의 무적은 해제되지 않기 때문에 <color=#2c6bb7>강화 불가</color>를 통해 보스의 생존력을 감소시키는 방식이 권장.\\n* <color=#2c6bb7>강격</color>을 활용하여 <color=#2c6bb7>용왕의 숨결</color>의 쿨타임이 초기화되지 않도록 해야 함.\\n* <color=#2c6bb7>무적</color>을 활용하여 일정 대미지 감쇄.",
     "English": "* Since Invulnerability on Inferior Cores cannot be removed, it is recommended to use <color=#2c6bb7>Unbuffable</color> to reduce the boss's survivability.\\nUse <color=#2c6bb7>Heavy Strike</color> to prevent the cooldown of <color=#2c6bb7>Dragon Ruler's Breath</color> from being reset.\\nUse <color=#2c6bb7>Invulnerability</color> to mitigate incoming Damage",
     "Japanese": "* 劣化コアの無敵は解除されないため、<color=#2c6bb7>強化不可</color>でボスの生存力をDOWNさせる戦法を推奨する。\\n<color=#2c6bb7>強撃</color>を活用し、<color=#2c6bb7>竜王の息吹</color>のスキルターンを初期化されないようにする。\\n<color=#2c6bb7>無敵</color>を活用し、一定ダメージを軽減する。",
-    "China_Simplified": "* 因烈火核心的无敌无法解除，建议通过<color=#2c6bb7>无法强化</color>，降低首领的存活能力。\\n利用<color=#2c6bb7>强击</color>，阻挡<color=#2c6bb7>龙王之息</color>的冷却时间重置。\\n利用<color=#2c6bb7>无敌</color>消损一定量的伤害",
+    "China_Simplified": "* 因烈火核心的无敌无法解除，建议通过<color=#2c6bb7>无法强化</color>，降低首领的存活能力。\\n利用<color=#2c6bb7>强击</color>，阻挡<color=#2c6bb7>龙王吐息</color>的冷却时间重置。\\n利用<color=#2c6bb7>无敌</color>消损一定量的伤害",
     "China_Traditional": "* 由於熱火核心的無敵無法解除，建議採用透過<color=#2c6bb7>無法強化</color>來減少首領生存力的方式。\\n必須運用<color=#2c6bb7>強擊</color>使<color=#2c6bb7>龍王之息</color>的冷卻時間不會被重置。\\n運用<color=#2c6bb7>無敵</color>來減免一定的傷害"
   },
   {
@@ -106067,9 +106067,9 @@
     "ID": "SYS_ACCOUNT_FRAME_DES_91",
     "Korean": "삼장법사 아메 초월 보상으로 지급되는 프로필 테두리입니다.",
     "English": "A profile frame given as a reward for transcending Mystic Sage Ame.",
-    "Japanese": "三蔵法師あめの超越報酬として支給されるプロフィールフレームです。",
-    "China_Simplified": "作为三藏法师亚美超越奖励发放的头像边框。",
-    "China_Traditional": "作為三藏法師亞美超越獎勵發送的頭像外框。"
+    "Japanese": "三蔵法師・あめの超越報酬として支給されるプロフィールフレームです。",
+    "China_Simplified": "作为三藏法师·亚美超越奖励发放的头像边框。",
+    "China_Traditional": "作為三藏法師·亞美超越獎勵發送的頭像外框。"
   },
   {
     "ID": "SYS_OWN_SPECIAL",
@@ -106234,7 +106234,7 @@
   {
     "ID": "SYS_RESULT_CHAR_03",
     "Korean": "다음 전투부터 승리 시 무작위 동료를 노출합니다.",
-    "English": "From the next battle, a random ally will be shown upon victory.",
+    "English": "From the next battle, a random hero will be shown upon victory.",
     "Japanese": "次の戦闘から、勝利時にランダムな仲間が表示されます。",
     "China_Simplified": "从下一场战斗开始，胜利时将显示随机同伴。",
     "China_Traditional": "從下一場戰鬥開始，勝利時將顯示隨機同伴。"
@@ -106242,7 +106242,7 @@
   {
     "ID": "SYS_RESULT_CHAR_04",
     "Korean": "다음 전투부터 승리 시 MVP 동료를 노출합니다.",
-    "English": "From the next battle, the MVP ally will be shown upon victory.",
+    "English": "From the next battle, the MVP hero will be shown upon victory.",
     "Japanese": "次の戦闘から、勝利時にMVPの仲間が表示されます。",
     "China_Simplified": "从下一场战斗开始，胜利时将显示MVP同伴。",
     "China_Traditional": "從下一場戰鬥開始，勝利時將顯示MVP同伴。"
@@ -106274,10 +106274,10 @@
   {
     "ID": "SYS_2000090_DES",
     "Korean": "[그노시스 달리아]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by [Gnosis Dahlia].",
-    "Japanese": "[グノーシス・ダリア]が着用できるスキンです。",
-    "China_Simplified": "[诺希斯·达利娅]可穿戴的皮肤。",
-    "China_Traditional": "[格諾西斯‧達利亞]可穿戴的服裝。"
+    "English": "A costume that [Gnosis Dahlia] can equip.",
+    "Japanese": "【グノーシス・ダリア】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
+    "China_Simplified": "【诺希斯·达利娅】可穿戴的皮肤。",
+    "China_Traditional": "【格諾西斯·達利亞】可穿戴的服裝。"
   },
   {
     "ID": "SYS_SUPPORTERS_PRE_01",
@@ -106569,11 +106569,11 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_DES_92",
-    "Korean": "신년! 행운의 여신님에서 이벤트 상점 보상으로 지급되는 테두리입니다.",
+    "Korean": "[신년! 행운의 여신님] 이벤트 상점 보상으로 지급되는 테두리입니다.",
     "English": "A frame obtainable from the [New Year! Goddess of Fortune!] event shop.",
-    "Japanese": "新年!幸運の女神様イベントショップで獲得できるフレームです。",
-    "China_Simplified": "新年！可在幸运女神活动商店中获得的头像框。",
-    "China_Traditional": "新年！可於幸運女神活動商店中獲得的頭像框。"
+    "Japanese": "【新年!幸運の女神様】イベントショップで獲得できるフレームです。",
+    "China_Simplified": "【新年！可在幸运女神】活动商店中获得的头像框。",
+    "China_Traditional": "【新年！可於幸運女神】活動商店中獲得的頭像框。"
   },
   {
     "ID": "SYS_GUIDE_QUEST_SKADI_DESC_1",
@@ -107202,10 +107202,10 @@
   {
     "ID": "SYS_2000109_DES",
     "Korean": "[그노시스 비엘라]가 착용할 수 있는 코스튬입니다.",
-    "English": "A Costume equipable by [Gnosis Viella].",
-    "Japanese": "[グノーシス・ビエラ]が着用できるスキンです。",
-    "China_Simplified": "[灵知薇厄拉]可穿戴的时装。",
-    "China_Traditional": "[靈知薇厄拉]可穿戴的時裝。"
+    "English": "A costume that [Gnosis Viella] can equip.",
+    "Japanese": "【グノーシス・ビエラ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
+    "China_Simplified": "【灵知薇厄拉】可穿戴的时装。",
+    "China_Traditional": "【靈知薇厄拉】可穿戴的時裝。"
   },
   {
     "ID": "SYS_IRR_SWEEP_TITLE",
@@ -107260,56 +107260,56 @@
     "Korean": "[범용] 강완1",
     "English": "[General] Strong Arm 1",
     "Japanese": "[汎用] 強腕1",
-    "China_Simplified": "[泛用] 強臂1",
-    "China_Traditional": "[汎用] 強臂1"
+    "China_Simplified": "【泛用】 強臂1",
+    "China_Traditional": "【汎用】 強臂1"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_DEF_01_NAME",
     "Korean": "[범용] 경화1",
     "English": "[General] Reinforce 1",
     "Japanese": "[汎用] 硬化1",
-    "China_Simplified": "[泛用] 硬化1",
-    "China_Traditional": "[汎用] 硬化1"
+    "China_Simplified": "【泛用】 硬化1",
+    "China_Traditional": "【汎用】 硬化1"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_HP_01_NAME",
     "Korean": "[범용] 강건1",
     "English": "[General] Sturdy 1",
     "Japanese": "[汎用] 強健1",
-    "China_Simplified": "[泛用] 強健1",
-    "China_Traditional": "[汎用] 強健1"
+    "China_Simplified": "【泛用】 強健1",
+    "China_Traditional": "【汎用】 強健1"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_CRI_01_NAME",
     "Korean": "[범용] 약점파악1",
     "English": "[General] Weak Point 1",
     "Japanese": "[汎用] 弱点把握1",
-    "China_Simplified": "[泛用] 弱點捕捉1",
-    "China_Traditional": "[汎用] 弱點捕捉1"
+    "China_Simplified": "【泛用】 弱點捕捉1",
+    "China_Traditional": "【汎用】 弱點捕捉1"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_CRI_DMG_01_NAME",
     "Korean": "[범용] 필살1",
     "English": "[General] Critical Strike 1",
     "Japanese": "[汎用] 必殺1",
-    "China_Simplified": "[泛用] 必殺打擊1",
-    "China_Traditional": "[汎用] 必殺打擊1"
+    "China_Simplified": "【泛用】 必殺打擊1",
+    "China_Traditional": "【汎用】 必殺打擊1"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_SPD_01_NAME",
     "Korean": "[범용] 가속1",
     "English": "[General] Acceleration 1",
     "Japanese": "[汎用] 加速1",
-    "China_Simplified": "[泛用] 加速1",
-    "China_Traditional": "[汎用] 加速1"
+    "China_Simplified": "【泛用】 加速1",
+    "China_Traditional": "【汎用】 加速1"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_ACC_01_NAME",
     "Korean": "[범용] 분석1",
     "English": "[General] Analysis 1",
     "Japanese": "[汎用] 解析1",
-    "China_Simplified": "[泛用] 解析1",
-    "China_Traditional": "[汎用] 解析1"
+    "China_Simplified": "【泛用】 解析1",
+    "China_Traditional": "【汎用】 解析1"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_AVD_01_NAME",
@@ -107324,72 +107324,72 @@
     "Korean": "[범용] 적중1",
     "English": "[General] Accuracy 1",
     "Japanese": "[汎用] 命中1",
-    "China_Simplified": "[泛用] 命中1",
-    "China_Traditional": "[汎用] 命中1"
+    "China_Simplified": "【泛用】 命中1",
+    "China_Traditional": "【汎用】 命中1"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_RES_01_NAME",
     "Korean": "[범용] 저항1",
     "English": "[General] Resistance 1",
     "Japanese": "[汎用] 抵抗1",
-    "China_Simplified": "[泛用] 抵抗1",
-    "China_Traditional": "[汎用] 抵抗1"
+    "China_Simplified": "【泛用】 抵抗1",
+    "China_Traditional": "【汎用】 抵抗1"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_ATK_02_NAME",
     "Korean": "[범용] 강완2",
     "English": "[General] Strong Arm 2",
     "Japanese": "[汎用] 強腕2",
-    "China_Simplified": "[泛用] 強臂2",
-    "China_Traditional": "[汎用] 強臂2"
+    "China_Simplified": "【泛用】 強臂2",
+    "China_Traditional": "【汎用】 強臂2"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_DEF_02_NAME",
     "Korean": "[범용] 경화2",
     "English": "[General] Reinforce 2",
     "Japanese": "[汎用] 硬化2",
-    "China_Simplified": "[泛用] 硬化2",
-    "China_Traditional": "[汎用] 硬化2"
+    "China_Simplified": "【泛用】 硬化2",
+    "China_Traditional": "【汎用】 硬化2"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_HP_02_NAME",
     "Korean": "[범용] 강건2",
     "English": "[General] Sturdy 2",
     "Japanese": "[汎用] 強健2",
-    "China_Simplified": "[泛用] 強健2",
-    "China_Traditional": "[汎用] 強健2"
+    "China_Simplified": "【泛用】 強健2",
+    "China_Traditional": "【汎用】 強健2"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_CRI_02_NAME",
     "Korean": "[범용] 약점파악2",
     "English": "[General] Weak Point 2",
     "Japanese": "[汎用] 弱点把握2",
-    "China_Simplified": "[泛用] 弱點捕捉2",
-    "China_Traditional": "[汎用] 弱點捕捉2"
+    "China_Simplified": "【泛用】 弱點捕捉2",
+    "China_Traditional": "【汎用】 弱點捕捉2"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_CRI_DMG_02_NAME",
     "Korean": "[범용] 필살2",
     "English": "[General] Critical Strike 2",
     "Japanese": "[汎用] 必殺2",
-    "China_Simplified": "[泛用] 必殺打擊2",
-    "China_Traditional": "[汎用] 必殺打擊2"
+    "China_Simplified": "【泛用】 必殺打擊2",
+    "China_Traditional": "【汎用】 必殺打擊2"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_SPD_02_NAME",
     "Korean": "[범용] 가속2",
     "English": "[General] Acceleration 2",
     "Japanese": "[汎用] 加速2",
-    "China_Simplified": "[泛用] 加速2",
-    "China_Traditional": "[汎用] 加速2"
+    "China_Simplified": "【泛用】 加速2",
+    "China_Traditional": "【汎用】 加速2"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_ACC_02_NAME",
     "Korean": "[범용] 분석2",
     "English": "[General] Analysis 2",
     "Japanese": "[汎用] 解析2",
-    "China_Simplified": "[泛用] 解析2",
-    "China_Traditional": "[汎用] 解析2"
+    "China_Simplified": "【泛用】 解析2",
+    "China_Traditional": "【汎用】 解析2"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_AVD_02_NAME",
@@ -107404,32 +107404,32 @@
     "Korean": "[범용] 적중2",
     "English": "[General] Accuracy 2",
     "Japanese": "[汎用] 命中2",
-    "China_Simplified": "[泛用] 命中2",
-    "China_Traditional": "[汎用] 命中2"
+    "China_Simplified": "【泛用】 命中2",
+    "China_Traditional": "【汎用】 命中2"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_RES_02_NAME",
     "Korean": "[범용] 저항2",
     "English": "[General] Resistance 2",
     "Japanese": "[汎用] 抵抗2",
-    "China_Simplified": "[泛用] 抵抗2",
-    "China_Traditional": "[汎用] 抵抗2"
+    "China_Simplified": "【泛用】 抵抗2",
+    "China_Traditional": "【汎用】 抵抗2"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_01_NAME",
     "Korean": "[범용] 연무",
     "English": "[General] Combo Technique",
     "Japanese": "[汎用] 連舞",
-    "China_Simplified": "[泛用] 連舞",
-    "China_Traditional": "[汎用] 連舞"
+    "China_Simplified": "【泛用】 連舞",
+    "China_Traditional": "【汎用】 連舞"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_02_NAME",
     "Korean": "[범용] 강타",
     "English": "[General] Heavy Strike",
     "Japanese": "[汎用] 強打",
-    "China_Simplified": "[泛用] 強擊",
-    "China_Traditional": "[汎用] 強擊"
+    "China_Simplified": "【泛用】 強擊",
+    "China_Traditional": "【汎用】 強擊"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_03_NAME",
@@ -107444,16 +107444,16 @@
     "Korean": "[범용] 속공",
     "English": "[General] Quick Attack",
     "Japanese": "[汎用] 速攻",
-    "China_Simplified": "[泛用] 速攻",
-    "China_Traditional": "[汎用] 速攻"
+    "China_Simplified": "【泛用】 速攻",
+    "China_Traditional": "【汎用】 速攻"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_05_NAME",
     "Korean": "[범용] 육참골단",
     "English": "[General] Self-Sacrifice",
     "Japanese": "[汎用] 肉斬骨断",
-    "China_Simplified": "[泛用] 肉斩骨断",
-    "China_Traditional": "[汎用] 肉斬骨斷"
+    "China_Simplified": "【泛用】 肉斩骨断",
+    "China_Traditional": "【汎用】 肉斬骨斷"
   },
   {
     "ID": "SYS_MONAD_ARTIFACT_NORMAL_06_NAME",
@@ -109338,7 +109338,7 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_GNOSIS_VIELLA_TITLE",
     "Korean": "스페셜 패스 혜택\\n그노시스 비엘라 코스튬 즉시 지급",
-    "English": "Special Pass Benefit\\nGnosis Viella Costume sent immediately",
+    "English": "Special Pass Reward\\nObtain Gnosis Viella's costume immediately",
     "Japanese": "スペシャルパス特典\\nグノーシス・ビエラスキン即時支給",
     "China_Simplified": "特别通行证福利\\n立即发放灵知薇厄拉时装",
     "China_Traditional": "特別通行證福利\\n立即發放靈知薇厄拉時裝"
@@ -109970,10 +109970,10 @@
   {
     "ID": "SYS_2000111_DES",
     "Korean": "[모나드 요타]가 착용할 수 있는 코스튬입니다.",
-    "English": "A Costume for [Monad Iota].",
-    "Japanese": "[モナド・イオータ]が着用できるスキンです。",
-    "China_Simplified": "[单子・佑妲]可穿戴的时装。",
-    "China_Traditional": "[單體・佑妲]可穿戴的時裝。"
+    "English": "A costume that [Monad Iota] can equip.",
+    "Japanese": "【モナド・イオータ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
+    "China_Simplified": "【单子・佑妲】可穿戴的时装。",
+    "China_Traditional": "【單體・佑妲】可穿戴的時裝。"
   },
   {
     "ID": "SYS_USERNICKNAME_EVENT_03",
@@ -111274,7 +111274,7 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_PRIMINE_TITLE",
     "Korean": "스페셜 패스 혜택\\n프리미네 코스튬 즉시 지급",
-    "English": "Special Pass Benefit\\nPrimine Costume sent immediately",
+    "English": "Special Pass Reward\\nObtain Primine's costume immediately",
     "Japanese": "スペシャルパス特典\\nプリミネスキン即時支給",
     "China_Simplified": "特别通行证福利\\n立即发放普莉米妮时装",
     "China_Traditional": "特別通行證福利\\n立即發放普莉米妮時裝"
@@ -111378,10 +111378,10 @@
   {
     "ID": "SYS_2000113_DES",
     "Korean": "[프리미네]가 착용할 수 있는 코스튬입니다.",
-    "English": "This is a costume that can be worn by Primine.",
-    "Japanese": "[プリミネ]が着用できるスキンです。",
-    "China_Simplified": "[普莉米妮]可穿戴的时装。",
-    "China_Traditional": "[普莉米妮]可穿戴的時裝。"
+    "English": "A costume that [Primine] can equip.",
+    "Japanese": "【プリミネ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
+    "China_Simplified": "【普莉米妮】可穿戴的时装。",
+    "China_Traditional": "【普莉米妮】可穿戴的時裝。"
   },
   {
     "ID": "SYS_SEASONAL_SELECTION",
@@ -112321,7 +112321,7 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_97",
-    "Korean": "프로필 테두리 -  E반의 선생님",
+    "Korean": "프로필 테두리 - E반의 선생님",
     "English": "Profile Frame - Teacher of Class E",
     "Japanese": "プロフィール枠 - E組の先生",
     "China_Simplified": "头像框 - E班的老师",
@@ -112506,7 +112506,7 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_ERIS_TITLE",
     "Korean": "스페셜 패스 혜택\\n에리스 코스튬 즉시 지급",
-    "English": "Special Pass Benefits\\nGet Eris’s Costume Instantly",
+    "English": "Special Pass Reward\\nObtain Eris’s Costume Immediately",
     "Japanese": "スペシャルパス特典\\nエリスのスキンを即時支給",
     "China_Simplified": "高级通行证福利\\n立即发放艾莉丝服装",
     "China_Traditional": "高級通行證福利\\n立即發放艾莉絲服裝"
@@ -113098,10 +113098,10 @@
   {
     "ID": "SYS_2000117_DES",
     "Korean": "[에리스]가 착용할 수 있는 코스튬입니다.",
-    "English": "A costume for [Eris].",
-    "Japanese": "[エリス]が着用できるスキンです。",
-    "China_Simplified": "[艾莉丝]可穿戴的服装。",
-    "China_Traditional": "[艾莉絲]可穿戴的服裝。"
+    "English": "A costume that [Eris] can equip.",
+    "Japanese": "【エリス】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
+    "China_Simplified": "【艾莉丝】可穿戴的服装。",
+    "China_Traditional": "【艾莉絲】可穿戴的服裝。"
   },
   {
     "ID": "SYS_EVENT_WORLD_BOSS_TITLE_01",
@@ -113448,6 +113448,14 @@
     "China_Traditional": "本賽季不適用【不和】效果。\\n請自由搭配各種組合的陣容。"
   },
   {
+    "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_12",
+    "Korean": "<color=#ffd732>생존자에게 강화 불가(면역 무시 / 해제 불가) 적용</color>",
+    "English": "<color=#ffd732>Unbuffable applied to survivors (Ignores Immunity / Cannot be dispelled)</color>",
+    "Japanese": "<color=#ffd732>生存者に強化不可（免疫無視／解除不可）適用</color>",
+    "China_Simplified": "<color=#ffd732>对生存者附加无法强化（无视免疫/无法解除）</color>",
+    "China_Traditional": "<color=#ffd732>對生存者附加無法強化（無視免疫/無法解除）</color>"
+  },
+  {
     "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G01_01",
     "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n필살기 피해량 <color=#28d9ed>-50%</color>\\n받는 피해 <color=#28d9ed>-50%</color>\\n체력 <color=#28d9ed>+50%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>1턴 : 강자에게 역경을!</color> 가장 공격력이 높은 팀별 <color=#28d9ed>1인</color> 관통력 <color=#28d9ed>1턴</color> 동안 <color=#28d9ed>0</color>으로 적용(해제 불가)\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 및 효과 적중 증가 / 회복량 감소\\n<color=#28d9ed>9턴 : 약자에게 기회를!</color> 가장 체력이 낮은 팀별 <color=#28d9ed>1인</color> 실드 / 지속 회복 <color=#28d9ed>1턴</color> 적용\\n<color=#28d9ed>16턴</color> : 모든 강화 효과 해제\\n<color=#28d9ed>24턴</color> : 모든 강화 효과 해제, 강화 불가 적용(면역 무시 / 해제 불가)\\n\\n<color=#ffd732>전투 스탯 상한 설정</color>\\n체력(40000) / 공격력(6000) / 방어력(4000) / 속도(340) / 치명 확률(80%) / 치명 피해(280%) / 관통력(50%) / 효과 적중(420) / 받는 고정 피해(5000)",
     "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nUltimate Skill DMG <color=#28d9ed>-50%</color>\\nDMG taken <color=#28d9ed>-50%</color>\\nHealth <color=#28d9ed>+50%</color>\\nUpon revival, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects Applied as Battle Progresses</color>\\n<color=#28d9ed>Turn 1: A Challenge for the Strong!</color> The <color=#28d9ed>1</color> member on each team with the highest Attack has their Penetration set to <color=#28d9ed>0</color> for <color=#28d9ed>1 turn</color> (Cannot be removed)\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt and Effectiveness increase / Healing decreases\\n<color=#28d9ed>Turn 9: A Chance for the Weak!</color> The <color=#28d9ed>1</color> member on each team with the lowest Health gains Barrier / Sustained Recovery for <color=#28d9ed>1 turn</color>\\n<color=#28d9ed>Turn 16</color>: All buffs are removed\\n<color=#28d9ed>Turn 24</color>: All buffs are removed, and Unbuffable is applied (Ignores Immunity / Cannot be removed)\\n\\n<color=#ffd732>Combat Stat Cap Settings</color>\\nHealth(40000) / Attack(6000) / Defense(4000) / Speed(340) / Critical Hit Chance(80%) / Critical Damage(280%) / Penetration(50%) / Effectiveness(420) / Fixed DMG taken(5000)",
@@ -113534,6 +113542,14 @@
     "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n受ける継続ダメージ<color=#28d9ed>-30%</color>\\n受けるダメージ<color=#28d9ed>-30%</color>\\nHP<color=#28d9ed>+30%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージおよび効果命中増加 / 回復量減少\\n<color=#28d9ed>16ターン</color>：すべての強化効果解除\\n<color=#28d9ed>24ターン</color>：すべての強化効果解除、強化不可適用（免疫無視 / 解除不可）",
     "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n受到的持续伤害<color=#28d9ed>-30%</color>\\n受到的伤害<color=#28d9ed>-30%</color>\\n生命值<color=#28d9ed>+30%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害及效果命中增加 / 恢复量减少\\n<color=#28d9ed>第16回合</color>：解除所有强化效果\\n<color=#28d9ed>第24回合</color>：解除所有强化效果，附加强化不可（无视免疫 / 无法解除）",
     "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n受到的持續傷害<color=#28d9ed>-30%</color>\\n受到的傷害<color=#28d9ed>-30%</color>\\n生命力<color=#28d9ed>+30%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害及效果命中增加 / 恢復量減少\\n<color=#28d9ed>第16回合</color>：解除所有強化效果\\n<color=#28d9ed>第24回合</color>：解除所有強化效果，附加強化不可（無視免疫 / 無法解除）"
+  },
+  {
+    "ID": "SYS_REALTIME_ARENA_RULE_SKILL_DESC_G05_02",
+    "Korean": "전투 진행 시 아래의 규칙이 적용됩니다.\\n\\n<color=#ffd732>시작 효과(영구 지속, 모든 인원)</color>\\n받는 피해 <color=#28d9ed>-30%</color>\\n받는 지속 피해 <color=#28d9ed>-30%</color>\\n필살기 피해량 <color=#28d9ed>-30%</color>\\n부활 시 현재 행동 게이지의 <color=#28d9ed>30%</color> 감소\\n\\n<color=#ffd732>전투 경과 시 발생 효과</color>\\n<color=#28d9ed>8턴</color> : 8턴마다 주는 피해 증가 및 회복량 감소\\n<color=#28d9ed>24턴</color> : 강화 불가 적용(면역 무시 / 해제 불가)",
+    "English": "The following rules apply during battle.\\n\\n<color=#ffd732>Starting Effects (Permanent, All Members)</color>\\nDMG taken <color=#28d9ed>-30%</color>\\nDoT taken <color=#28d9ed>-30%</color>\\nUltimate Skill DMG <color=#28d9ed>-30%</color>\\nUpon Revive, current Priority decreases by <color=#28d9ed>30%</color>\\n\\n<color=#ffd732>Effects that Occur as Battle Progresses</color>\\n<color=#28d9ed>Turn 8</color>: Every 8 turns, DMG dealt increases and Healing decreases\\n<color=#28d9ed>Turn 24</color>: Unbuffable applied (Ignores Immunity / Cannot be dispelled)",
+    "Japanese": "戦闘中、以下のルールが適用されます。\\n\\n<color=#ffd732>開始効果（永久持続、全員）</color>\\n受けるダメージ<color=#28d9ed>-30%</color>\\n受ける継続ダメージ<color=#28d9ed>-30%</color>\\n必殺スキルダメージ<color=#28d9ed>-30%</color>\\n復活時、現在の行動ゲージの<color=#28d9ed>30%</color>減少\\n\\n<color=#ffd732>戦闘経過時に発生する効果</color>\\n<color=#28d9ed>8ターン</color>：8ターンごとに与ダメージUPおよび回復量DOWN\\n<color=#28d9ed>24ターン</color>：強化不可適用（免疫無視／解除不可）",
+    "China_Simplified": "战斗进行时将适用以下规则。\\n\\n<color=#ffd732>开始效果（永久持续，所有人员）</color>\\n受到的伤害<color=#28d9ed>-30%</color>\\n受到的持续伤害<color=#28d9ed>-30%</color>\\n必杀技伤害量<color=#28d9ed>-30%</color>\\n复活时，当前行动值减少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>战斗经过时发生的效果</color>\\n<color=#28d9ed>第8回合</color>：每8回合，造成伤害增加及恢复量减少\\n<color=#28d9ed>第24回合</color>：附加无法强化（无视免疫/无法解除）",
+    "China_Traditional": "戰鬥進行時將適用以下規則。\\n\\n<color=#ffd732>開始效果（永久持續，所有人員）</color>\\n受到的傷害<color=#28d9ed>-30%</color>\\n受到的持續傷害<color=#28d9ed>-30%</color>\\n必殺技傷害量<color=#28d9ed>-30%</color>\\n復活時，當前速攻值減少<color=#28d9ed>30%</color>\\n\\n<color=#ffd732>戰鬥經過時發生的效果</color>\\n<color=#28d9ed>第8回合</color>：每8回合，造成傷害增加及恢復量減少\\n<color=#28d9ed>第24回合</color>：附加無法強化（無視免疫/無法解除）"
   },
   {
     "ID": "SYS_REALTIME_ARENA_RECORD_WIN",
@@ -114137,16 +114153,16 @@
   },
   {
     "ID": "SYS_PVP_REALTIME_PENALTY_WARNING",
-    "Korean": "스킬 미입력이 3회 누적되었습니다.\\n1회 더 발생 시 강제 패배됩니다.",
-    "English": "No skill input has been detected 3 times.\\nOne more missed input will result in a forced defeat.",
+    "Korean": "밴픽 과정 혹은 전투 중 스킬 미입력이 {0}회 누적되었습니다.",
+    "English": "No skill input has been detected {0} times during the Ban/Pick phase or battle.",
     "Japanese": "スキル未入力が3回累積しました。\\nあと1回発生すると強制敗北となります。",
     "China_Simplified": "已累计3次未输入技能。\\n再发生1次将被强制判负。",
     "China_Traditional": "已累計3次未輸入技能。\\n再發生1次將被強制判負。"
   },
   {
     "ID": "SYS_PVP_REALTIME_PENALTY_DEFEAT_MSG",
-    "Korean": "스킬 미입력이 4회 누적되었습니다.\\n비정상 플레이로 간주되어 패배 처리되었습니다.",
-    "English": "No skill input has been detected 4 times.\\nThis has been considered abnormal play and resulted in a defeat.",
+    "Korean": "밴픽 과정 혹은 전투 중 스킬 미입력이 4회 누적되었습니다.\\n비정상 플레이로 간주되어 패배 처리되었습니다.",
+    "English": "No skill input has been detected 4 times during the Ban/Pick phase or battle.\\nThis has been considered abnormal play and resulted in a defeat.",
     "Japanese": "スキル未入力が4回累積しました。\\n異常プレイと見なされ、敗北処理されました。",
     "China_Simplified": "已累计4次未输入技能。\\n已被视为异常游戏行为，判定为负。",
     "China_Traditional": "已累計4次未輸入技能。\\n已被視為異常遊戲行為，判定為負。"
@@ -114238,6 +114254,118 @@
     "Japanese": "ワールドアリーナ - 週間シーズン終了",
     "China_Simplified": "实时对战 - 每周赛季结束",
     "China_Traditional": "即時對戰 - 每週賽季結束"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_DELETE_TITLE",
+    "Korean": "프리셋 해제",
+    "English": "Preset Removal",
+    "Japanese": "プリセット解除",
+    "China_Simplified": "解除预设",
+    "China_Traditional": "解除預設"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_DELETE_DESC_1",
+    "Korean": "해당 동료에게 적용된 마스터즈 리그 프리셋 장착 정보를 해제합니다. 해제 이후 마스터즈 리그 입장 시, 현재 장착된 장비를 사용하게 됩니다.",
+    "English": "Removes the Masters League preset gear information applied to this Hero. After removal, the currently equipped gear will be used when entering Masters League.",
+    "Japanese": "該当仲間に適用されたマスターズリーグプリセット装着情報を解除します。解除後にマスターズリーグに入場する際は、現在装着している装備を使用することになります。",
+    "China_Simplified": "解除该同伴所应用的大师联赛预设装备信息。解除后进入大师联赛时，将使用当前装备的装备。",
+    "China_Traditional": "解除該同伴所應用的大師聯賽預設裝備資訊。解除後進入大師聯賽時，將使用當前裝備的裝備。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_DELETE_DESC_2",
+    "Korean": "마스터즈 리그 장비 프리셋이 해제되었습니다.",
+    "English": "The Masters League gear preset has been removed.",
+    "Japanese": "マスターズリーグ装備プリセットが解除されました。",
+    "China_Simplified": "大师联赛装备预设已解除。",
+    "China_Traditional": "大師聯賽裝備預設已解除。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_EQUIP_MAIN_TITLE",
+    "Korean": "마스터즈 리그 장비 관리",
+    "English": "Masters League Gear Management",
+    "Japanese": "マスターズリーグ装備管理",
+    "China_Simplified": "大师联赛装备管理",
+    "China_Traditional": "大師聯賽裝備管理"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_INFO_1",
+    "Korean": "현재 장착 정보",
+    "English": "Current Gear Info",
+    "Japanese": "現在の装着情報",
+    "China_Simplified": "当前装备信息",
+    "China_Traditional": "當前裝備資訊"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_INFO_2",
+    "Korean": "변경 장착 정보",
+    "English": "Changed Gear Info",
+    "Japanese": "変更後の装着情報",
+    "China_Simplified": "变更后的装备信息",
+    "China_Traditional": "變更後的裝備資訊"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_DELETE_DESC_3",
+    "Korean": "해당 동료는 장비 프리셋이 적용되어 있지 않습니다.",
+    "English": "This Hero does not have a gear preset applied.",
+    "Japanese": "該当仲間には装備プリセットが適用されていません。",
+    "China_Simplified": "该同伴未应用装备预设。",
+    "China_Traditional": "該同伴未應用裝備預設。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_DELETE_DESC_4",
+    "Korean": "변경된 장착 정보가 없습니다.",
+    "English": "No gear changes have been made.",
+    "Japanese": "変更された装着情報はありません。",
+    "China_Simplified": "没有变更的装备信息。",
+    "China_Traditional": "沒有變更的裝備資訊。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_CHAR_POPUP_TITLE",
+    "Korean": "프리셋 장착 동료 확인",
+    "English": "Check Heroes with Presets",
+    "Japanese": "プリセット装着仲間確認",
+    "China_Simplified": "确认预设装备同伴",
+    "China_Traditional": "確認預設裝備同伴"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_CHAR_POPUP_DESC_1",
+    "Korean": "현재 마스터즈 리그 장비 프리셋이 적용된 동료 현황입니다.",
+    "English": "Shows Heroes currently using a Masters League gear preset.",
+    "Japanese": "現在マスターズリーグ装備プリセットが適用されている仲間の現状です。",
+    "China_Simplified": "这是当前已应用大师联赛装备预设的同伴现状。",
+    "China_Traditional": "這是當前已應用大師聯賽裝備預設的同伴現狀。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_PRESET_CHAR_POPUP_DESC_2",
+    "Korean": "현재 프리셋 적용 동료가 없습니다.",
+    "English": "There are currently no Heroes with a preset applied.",
+    "Japanese": "現在プリセットが適用されている仲間はいません。",
+    "China_Simplified": "目前没有已应用预设的同伴。",
+    "China_Traditional": "目前沒有已應用預設的同伴。"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_ENTER_PENALTY_TITLE",
+    "Korean": "입장 패널티",
+    "English": "Entry Penalty",
+    "Japanese": "入場ペナルティ",
+    "China_Simplified": "入场惩罚",
+    "China_Traditional": "入場懲罰"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_ENTER_PENALTY_DESC_1",
+    "Korean": "비정상적인 플레이가 감지되어 강제 패배 {0}회가 적용되었습니다. 실시간 대전 및 친선 대전 입장이 제한된 상태입니다.\\n건전한 플레이를 부탁드립니다.\\n\\n남은 시간 : {1}",
+    "English": "Abnormal play has been detected, and {0} forced defeat(s) have been applied. Entry to Real Time Arena and Friendly Match is currently restricted.\\nPlease engage in fair play.\\n\\nTime remaining: {1}",
+    "Japanese": "異常なプレイが検知され、強制敗北{0}回が適用されました。アリーナへの入場が制限されています。\\n健全なプレイをお願いいたします。\\n\\n残り時間：{1}",
+    "China_Simplified": "检测到异常游玩，已适用{0}次强制失败。竞技场入场受到限制。\\n请进行健康的游玩。\\n\\n剩余时间：{1}",
+    "China_Traditional": "檢測到異常遊玩，已適用{0}次強制失敗。競技場入場受到限制。\\n請進行健康的遊玩。\\n\\n剩餘時間：{1}"
+  },
+  {
+    "ID": "SYS_PVP_REALTIME_ENTER_PENALTY_DESC_2",
+    "Korean": "실시간 대전에서 밴픽 단계 또는 전투 진행 중 키 입력이 3회 이상 없을 경우 경고 팝업이 출력됩니다.\\n이후 동일한 행위를 4회 이상 반복할 경우 강제 패배 처리됩니다.\\n\\n강제 패배 누적 횟수에 따라 일정 시간 동안 실시간 대전 및 친선 대전 입장이 제한됩니다.\\n강제 패배 누적 횟수는 24시간 동안 유지됩니다.\\n\\n1회 강제 패배 : 2시간 입장 불가\\n2회 강제 패배 : 24시간 입장 불가",
+    "English": "If no input is detected 3 or more times during the Ban/Pick phase or battle in Real Time Arena, a warning popup will appear.\\nIf the same behavior is repeated 4 or more times afterward, it will be processed as a forced defeat.\\n\\nDepending on the cumulative number of forced defeats, entry to Real Time Arena and Friendly Match will be restricted for a set period.\\nThe cumulative forced defeat count remains for 24 hours.\\n\\n1 forced defeat: Entry restricted for 2 hours\\n2 forced defeats: Entry restricted for 24 hours",
+    "Japanese": "ワールドアリーナでバン・ピック段階または戦闘進行中にキー入力が3回以上ない場合、警告ポップアップが表示されます。\\n以降、同じ行為を4回以上繰り返す場合、強制敗北処理されます。\\n\\n強制敗北の累積回数に応じて、一定時間すべてのアリーナへの入場が制限されます。\\n\\n強制敗北1回：2時間入場不可\\n強制敗北2回：24時間入場不可",
+    "China_Simplified": "在世界竞技场中，禁选阶段或战斗进行中若3次以上未进行按键输入，将弹出警告窗口。\\n之后若同样行为重复4次以上，将被处理为强制失败。\\n\\n根据强制失败累计次数，将在一定时间内限制所有竞技场的入场。\\n\\n强制失败1次：限制入场2小时\\n强制失败2次：限制入场24小时",
+    "China_Traditional": "在世界競技場中，禁選階段或戰鬥進行中若3次以上未進行按鍵輸入，將彈出警告視窗。\\n之後若同樣行為重複4次以上，將被處理為強制失敗。\\n\\n根據強制失敗累計次數，將在一定時間內限制所有競技場的入場。\\n\\n強制失敗1次：限制入場2小時\\n強制失敗2次：限制入場24小時"
   },
   {
     "ID": "SYS_MONAD_GATE_MY_TEAM_INFO_1",
@@ -114825,7 +114953,7 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_99",
-    "Korean": "프로필 테두리 -  약속의 땅",
+    "Korean": "프로필 테두리 - 약속의 땅",
     "English": "Profile Frame - Land of Blooming Promise",
     "Japanese": "プロフィールフレーム - 約束の地",
     "China_Simplified": "头像边框 - 应许之地",
@@ -115058,7 +115186,7 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_GNOSIS_DOMINE_TITLE",
     "Korean": "스페셜 패스 혜택\\n그노시스 도미네 코스튬 즉시 지급",
-    "English": "Special Pass Reward\\nGnosis Domine's Costume granted immediately",
+    "English": "Special Pass Reward\\nObtain Gnosis Domine's costume immediately",
     "Japanese": "スペシャルパス特典\\nグノーシス・ドミネのスキン即時支給",
     "China_Simplified": "特别通行证福利\\n立即发放诺希斯·多米内皮肤",
     "China_Traditional": "特殊通行證優惠\\n立即發放格諾西斯·多米內服裝"
@@ -115074,14 +115202,14 @@
   {
     "ID": "SYS_2000112_DES",
     "Korean": "[그노시스 도미네]가 착용할 수 있는 코스튬입니다.",
-    "English": "A costume that [Gnosis Domine] can wear.",
-    "Japanese": "[グノーシス・ドミネ]が着用できるスキンです。",
-    "China_Simplified": "[诺希斯·多米内]可穿戴的皮肤。",
-    "China_Traditional": "[格諾西斯·多米內]可穿戴的服裝。"
+    "English": "A costume that [Gnosis Domine] can equip.",
+    "Japanese": "【グノーシス・ドミネ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
+    "China_Simplified": "【诺希斯·多米内】可穿戴的皮肤。",
+    "China_Traditional": "【格諾西斯·多米內】可穿戴的服裝。"
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_100",
-    "Korean": "프로필 테두리 -  실시간 대전",
+    "Korean": "프로필 테두리 - 실시간 대전",
     "English": "Profile Frame - Real Time Arena",
     "Japanese": "プロフィールフレーム - ワールドアリーナ",
     "China_Simplified": "头像边框 - 实时对战",
@@ -116073,7 +116201,7 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_101",
-    "Korean": "프로필 테두리 -  사막의 악동 l",
+    "Korean": "프로필 테두리 - 사막의 악동 l",
     "English": "Profile Frame - Desert Rascal I",
     "Japanese": "プロフィールフレーム - 砂漠のいたずらっ子 I",
     "China_Simplified": "头像边框 - 沙漠捣蛋鬼 I",
@@ -116081,7 +116209,7 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_102",
-    "Korean": "프로필 테두리 -  사막의 악동 ll",
+    "Korean": "프로필 테두리 - 사막의 악동 ll",
     "English": "Profile Frame - Desert Rascal II",
     "Japanese": "プロフィールフレーム - 砂漠のいたずらっ子 II",
     "China_Simplified": "头像边框 - 沙漠捣蛋鬼 II",
@@ -116121,7 +116249,7 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_103",
-    "Korean": "프로필 테두리 -  메이드 ll",
+    "Korean": "프로필 테두리 - 메이드 ll",
     "English": "Profile Frame - Maid II",
     "Japanese": "プロフィールフレーム - メイド II",
     "China_Simplified": "头像边框 - 女仆 II",
@@ -116993,7 +117121,7 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_104",
-    "Korean": "프로필 테두리 -  미드나이트 러시",
+    "Korean": "프로필 테두리 - 미드나이트 러시",
     "English": "Profile Frame - Midnight Rush",
     "Japanese": "プロフィールフレーム - ミッドナイトラッシュ",
     "China_Simplified": "头像边框 - 午夜突袭",
@@ -118778,7 +118906,7 @@
   {
     "ID": "SYS_BATTLE_PASS_BUY_REI_TITLE",
     "Korean": "스페셜 패스 혜택\\n레이 코스튬 즉시 지급",
-    "English": "Special Pass Reward\\nRey's Costume granted immediately",
+    "English": "Special Pass Reward\\nObtain Rey's costume immediately",
     "Japanese": "スペシャルパス特典\\nレイのスキン即時支給",
     "China_Simplified": "特别通行证福利\\n蕾伊皮肤立即发放",
     "China_Traditional": "特殊通行證優惠\\n蕾伊外觀立即發放"
@@ -118906,8 +119034,8 @@
   {
     "ID": "SYS_2000114_DES",
     "Korean": "[미드나이트 러시 스카디]가 착용할 수 있는 코스튬입니다.",
-    "English": "A costume that [Midnight Rush Skadi] can wear.",
-    "Japanese": "【ミッドナイトラッシュ・スカディ】が着用できるスキンです。",
+    "English": "A costume that [Midnight Rush Skadi] can equip.",
+    "Japanese": "【ミッドナイトラッシュ・スカディ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
     "China_Simplified": "【午夜狂潮·斯卡蒂·斯卡蒂】可穿戴的外观。",
     "China_Traditional": "【午夜狂潮·斯卡蒂】可穿戴的外觀。"
   },
@@ -118961,7 +119089,7 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_106",
-    "Korean": "프로필 테두리 -  아우터플레인 3주년",
+    "Korean": "프로필 테두리 - 아우터플레인 3주년",
     "English": "Profile Frame - Outerplane 3rd Anniversary",
     "Japanese": "プロフィールフレーム -  アウプレ3周年",
     "China_Simplified": "头像边框 - 异界战士3周年",
@@ -119017,7 +119145,7 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_107",
-    "Korean": "프로필 테두리 -  창조주 ll",
+    "Korean": "프로필 테두리 - 창조주 ll",
     "English": "Profile Frame: Creator II",
     "Japanese": "プロフィールフレーム - クリエイターII",
     "China_Simplified": "头像边框 - 创造者II",
@@ -119177,7 +119305,7 @@
   },
   {
     "ID": "SYS_SINGULARITY_ADJUSTMENT",
-    "Korean": "특이점 내의 정보를 정산중입니다. 해당 절차는 최대 5분까지 소요될 수 있습니다.",
+    "Korean": "특이점 내의 정보를 정산 중입니다. 해당 절차는 최대 5분까지 소요될 수 있습니다.",
     "English": "Singularity data is being processed. This may take up to 5 minutes.",
     "Japanese": "特異点内の情報を精算中です。この手続きは最大5分かかる場合があります。",
     "China_Simplified": "正在结算奇点内的信息。该流程最多可能需要5分钟。",
@@ -119193,7 +119321,7 @@
   },
   {
     "ID": "SYS_ACCOUNT_FRAME_108",
-    "Korean": "프로필 테두리 -  애드리브",
+    "Korean": "프로필 테두리 - 애드리브",
     "English": "Profile Frame: Ad-Lib",
     "Japanese": "プロフィールフレーム - アドリブ",
     "China_Simplified": "头像边框 - 即兴",
@@ -119241,8 +119369,8 @@
   },
   {
     "ID": "SYS_BATTLE_PASS_BUY_ANAKI_TITLE",
-    "Korean": "스페셜 패스 혜택\\n아나키 코스튬 즉시 지급",
-    "English": "Special Pass Reward\\nObtain Anarky Costume Immediately",
+    "Korean": "스페셜 패스 혜택\\n아나키 코스튬 즉시 지급\\n3성 동료 선택권",
+    "English": "Special Pass Reward\\nObtain Anarky's costume Immediately\\n3★ Hero Selection Ticket",
     "Japanese": "スペシャルパス特典\\nアナーキスキン即時支給",
     "China_Simplified": "特别通行证福利\\n立即发放阿娜奇皮肤",
     "China_Traditional": "特殊通行證優惠\\n立即獲得阿娜奇服裝"
@@ -119371,9 +119499,9 @@
     "ID": "SYS_2000116_DES",
     "Korean": "[아나키]가 착용할 수 있는 코스튬입니다.",
     "English": "A costume that [Anarky] can equip.",
-    "Japanese": "[アナーキ]が装着できるスキンです。",
-    "China_Simplified": "[阿娜奇]可穿戴的皮肤。",
-    "China_Traditional": "[阿娜奇]可穿戴的服裝。"
+    "Japanese": "【アナーキ】のスキンです。\\nスキンは【仲間】→【スキン】で装備できます。",
+    "China_Simplified": "【阿娜奇】可穿戴的皮肤。",
+    "China_Traditional": "【阿娜奇】可穿戴的服裝。"
   },
   {
     "ID": "SYS_EQUIP_GACHA_TITLE",
@@ -119393,11 +119521,11 @@
   },
   {
     "ID": "SYS_EQUIP_GACHA_DESC_01",
-    "Korean": "10회 호출 시, 고등급 아이템 1종 이상 획득 가능\\n(고차원 물자 ll 또는 6성 전설 장비)",
-    "English": "Every 10 Supply Calls guarantees at least 1 high-grade item.\\n(Advanced Dimensional Supply II or 6★ Legendary Gear)",
-    "Japanese": "10回召喚時、高レアリティアイテム1種以上確定\\n（高次元物資II、または★6レジェンド装備）",
-    "China_Simplified": "10次召唤时，可获得至少1种高等级道具\\n（高次元物资II或6★传说装备）",
-    "China_Traditional": "10次召喚時，可獲得至少1種高等級道具\\n（高次元物資II或6★傳說裝備）"
+    "Korean": "10회 호출 시 고차원 물자 ll 이상의 아이템\\n또는 6성 전설 장비 획득 가능",
+    "English": "Every 10 Supply Calls guarantees Advanced Dimensional Supply II or higher\\nor 6★ Legendary Gear.",
+    "Japanese": "10回召喚時、高次元物資 ll 以上のアイテム\\nまたは★6レジェンド装備獲得可能",
+    "China_Simplified": "每10次召唤时，可获得高次元物资 II 以上的道具\\n或6★传说装备",
+    "China_Traditional": "每10次召喚時，可獲得高次元物資 II 以上的道具\\n或6★傳說裝備"
   },
   {
     "ID": "SYS_EQUIP_GACHA_CUSTOM_01",
@@ -119617,7 +119745,7 @@
   },
   {
     "ID": "SYS_GUIDE_RECRUIT_05_2_DESC",
-    "Korean": "[물자 호출]을 진행하기 전, 3개의 픽업 장비를 지정할 수 있습니다.\\n장비 아이템 지정 후 메인 옵션 및 서브 옵션을 지정하여 설정을 완료할 수 있습니다.  ",
+    "Korean": "[물자 호출]을 진행하기 전, 3개의 픽업 장비를 지정할 수 있습니다.\\n장비 아이템 지정 후 메인 옵션 및 서브 옵션을 지정하여 설정을 완료할 수 있습니다.",
     "English": "Before performing [Supply Calls], you can select 3 desired gear items.\\nAfter selecting gear, choose the Main Stat and substats to complete the setup.",
     "Japanese": "「次元物資召喚」を行う前に、希望する装備を3つ選択できます。\\n装備を選択した後、メインオプションおよびサブオプションを指定して設定を完了します。",
     "China_Simplified": "进行【物资召唤】前，可指定3件心仪的装备。\\n指定装备道具后，通过指定主属性及副属性完成设置。",
@@ -119742,5 +119870,101 @@
     "Japanese": "良いコンテンツの制作をお願いします。\\n今後とも『アウタープレーン』をどうぞよろしくお願いいたします。",
     "China_Simplified": "Thank you.",
     "China_Traditional": "Thank you."
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_109",
+    "Korean": "프로필 테두리 - 청운의 꿈 ll",
+    "English": "Summer Knight's Dream II",
+    "Japanese": "プロフィールフレーム - 青雲の志ll",
+    "China_Simplified": "头像边框 - 青云之梦ll",
+    "China_Traditional": "頭像外框 - 青雲之夢ll"
+  },
+  {
+    "ID": "SYS_ACCOUNT_FRAME_DES_109",
+    "Korean": "맛 좋은 생선 상점에서 구매할 수 있는 프로필 테두리입니다.",
+    "English": "A profile frame available for purchase at the Tasty Fish Shop.",
+    "Japanese": "おいしい魚商店で購入できるプロフィール枠です。",
+    "China_Simplified": "可在美味的鱼商店购买的头像框。",
+    "China_Traditional": "可在美味的魚商店購買的頭像框。"
+  },
+  {
+    "ID": "SYS_EVENT_DUNGEON_ATTENDANCE_TITLE_33",
+    "Korean": "웰컴 투 <color=#FFB266>유토피아</color> 출석",
+    "English": "Welcome to <color=#FFB266>Utopia</color> Login Bonus",
+    "Japanese": "<color=#FFB266>ユートピア</color>へようこそログインボーナス",
+    "China_Simplified": "欢迎来到<color=#FFB266>乌托邦</color>签到",
+    "China_Traditional": "歡迎來到<color=#FFB266>烏托邦</color>簽到"
+  },
+  {
+    "ID": "SYS_EVENT_DUNGEON_HARD_CLEAR_33_WEEK_01",
+    "Korean": "웰컴 투 유토피아\\n1주차 하드 챕터3 40회 클리어",
+    "English": "Welcome to Utopia\\nWeek 1 Hard Chapter 3 Cleared 40 Times",
+    "Japanese": "ユートピアへようこそ\\n1週目ハードチャプター3を40回クリア",
+    "China_Simplified": "欢迎来到乌托邦\\n第1周困难第3章通关40次",
+    "China_Traditional": "歡迎來到烏托邦\\n第1週困難第3章通關40次"
+  },
+  {
+    "ID": "SYS_EVENT_DUNGEON_HARD_CLEAR_33_WEEK_02",
+    "Korean": "웰컴 투 유토피아\\n2주차 하드 챕터3 40회 클리어",
+    "English": "Welcome to Utopia\\nWeek 2 Hard Chapter 3 Cleared 40 Times",
+    "Japanese": "ユートピアへようこそ\\n2週目ハードチャプター3を40回クリア",
+    "China_Simplified": "欢迎来到乌托邦\\n第2周困难第3章通关40次",
+    "China_Traditional": "歡迎來到烏托邦\\n第2週困難第3章通關40次"
+  },
+  {
+    "ID": "SYS_LIMIT_RECRUIT_DESC",
+    "Korean": "한정 동료의 경우 이후 영입에 재등장할 가능성이 있습니다.",
+    "English": "Limited Heroes may reappear in future recruitments.",
+    "Japanese": "限定仲間の場合、以降のスカウトに再登場する可能性があります。",
+    "China_Simplified": "限定同伴可能会在之后的招募中再次出现。",
+    "China_Traditional": "限定同伴可能會在之後的招募中再次出現。"
+  },
+  {
+    "ID": "SYS_EQUIP_RECRUIT_HALF_COMPLETE_DESC",
+    "Korean": "탈리스만 상자 또는 커스텀 픽업 장비 입수까지 필요 : <color=#FFB266>80</color>회\\n현재 호출 횟수: {0}/<color=#FFB266>80</color>",
+    "English": "Supply Calls required for Talisman Chest or Custom Rate-Up Gear: <color=#FFB266>80</color>\\nCurrent Supply Call Count: {0}/<color=#FFB266>80</color>",
+    "Japanese": "最大<color=#FFB266>80</color>回の次元召喚で高次元物資IIまたは6★レジェンド装備を入手できます。\\n\\n現在の召喚回数：{0}/<color=#FFB266>80</color>回",
+    "China_Simplified": "距获得护身符箱或自选精选装备所需：<color=#FFB266>80</color>次\\n当前召唤次数：{0}/<color=#FFB266>80</color>次",
+    "China_Traditional": "距獲得護身符箱或自選精選裝備所需：<color=#FFB266>80</color>次\\n當前召喚次數：{0}/<color=#FFB266>80</color>次"
+  },
+  {
+    "ID": "SYS_SHOP_TAP_TYPE_RECRUIT_MILEAGE_REFUND",
+    "Korean": "영입 마일리지",
+    "English": "Recruitment Mileage",
+    "Japanese": "スカウトPt",
+    "China_Simplified": "招募里程",
+    "China_Traditional": "招募里程"
+  },
+  {
+    "ID": "SYS_POPUP_RULE_TITLE",
+    "Korean": "영입 규칙",
+    "English": "Recruitment Rules",
+    "Japanese": "スカウトルール",
+    "China_Simplified": "招募规则",
+    "China_Traditional": "招募規則"
+  },
+  {
+    "ID": "SYS_ATTENDANCE_EVENT_81",
+    "Korean": "군주님을 위한 <color=#fecd64>선물</color>",
+    "English": "A Gift for <color=#fecd64>My Lord</color>!",
+    "Japanese": "マスター様への<color=#fecd64>プレゼント</color>！",
+    "China_Simplified": "献给君主大人的<color=#fecd64>礼物</color>!",
+    "China_Traditional": "獻給君主大人的<color=#fecd64>禮物</color>!"
+  },
+  {
+    "ID": "SYS_LOGIN_COMPLETE_TITLE",
+    "Korean": "로그인 완료",
+    "English": "Login Complete",
+    "Japanese": "ログイン完了",
+    "China_Simplified": "登录完成",
+    "China_Traditional": "登入完成"
+  },
+  {
+    "ID": "SYS_LOGIN_COMPLETE_DESC",
+    "Korean": "로그인이 완료되었습니다.\\n게임 화면으로 돌아가 주세요.",
+    "English": "Login has been completed.\\nPlease return to the game screen.",
+    "Japanese": "ログインが完了しました。\\nゲーム画面に戻ってください。",
+    "China_Simplified": "登录已完成。\\n请返回游戏画面。",
+    "China_Traditional": "登入已完成。\\n請返回遊戲畫面。"
   }
 ]
