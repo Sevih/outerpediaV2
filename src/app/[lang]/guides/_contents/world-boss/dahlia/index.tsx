@@ -6,6 +6,7 @@ import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
 import StageBasedTeamSelector from '@/app/components/guides/StageBasedTeamSelector';
 import CombatFootage from '@/app/components/guides/CombatFootage';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -21,6 +22,13 @@ import type {
 
 /* ── Shared data ────────────────────────────────────────── */
 import defaultConfig from './config.json';
+
+/* ── Version: 07-2026 ──────────────────────────────────── */
+import v0726Config from './versions/07-2026/config.json';
+import v0726Strings from './versions/07-2026/strings.json';
+import v0726Teams from './versions/07-2026/teams.json';
+import v0726Recommended from './versions/07-2026/recommended.json';
+import v0726Tips from './versions/07-2026/tips.json';
 
 /* ── Version: 07-2025 ──────────────────────────────────── */
 import v07Config from './versions/07-2025/config.json';
@@ -67,6 +75,15 @@ function resolve(override: WorldBossVersionOverride): ResolvedVersion {
 
 /* ── Typed data ─────────────────────────────────────────── */
 
+const jul2026 = {
+  ...resolve(v0726Config as WorldBossVersionOverride),
+  strings: v0726Strings as Record<string, LangMap>,
+  teams: v0726Teams as TeamData,
+  phase1: v0726Recommended.phase1 as CharacterRecommendation[],
+  phase2: v0726Recommended.phase2 as CharacterRecommendation[],
+  tips: v0726Tips as Record<string, LangMap[]>,
+};
+
 const jul2025 = {
   ...resolve(v07Config as WorldBossVersionOverride),
   strings: v07Strings as Record<string, LangMap>,
@@ -88,10 +105,49 @@ export default function DahliaGuide() {
 
   return (
     <GuideTemplate
-      title={lRec(jul2025.strings.title, lang)}
-      introduction={lRec(jul2025.strings.intro, lang)}
-      defaultVersion="july2025"
+      title={lRec(jul2026.strings.title, lang)}
+      introduction={lRec(jul2026.strings.intro, lang)}
+      updating
+      defaultVersion="july2026"
       versions={{
+        july2026: {
+          label: lRec(jul2026.label, lang),
+          content: (
+            <>
+              <WorldBossDisplay
+                config={jul2026.boss}
+                defaultMode="Extreme"
+                preloadedBosses={jul2026.preloaded}
+                bossFileSuffix={jul2026.bossSuffix}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <TacticalTips
+                sections={[
+                  { title: 'strategy', tips: jul2026.tips.strategy },
+                  { title: 'phase2', tips: jul2026.tips.phase2 }
+                ]}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <RecommendedCharacterList title="phase1" entries={jul2026.phase1} />
+              <RecommendedCharacterList title="phase2" entries={jul2026.phase2} />
+              <hr className="my-6 border-neutral-700" />
+              <StageBasedTeamSelector teamData={jul2026.teams} defaultStage="Phase 1" />
+              <hr className="my-6 border-neutral-700" />
+              <MultiVideoEmbed
+                hashPrefix="dahlia-jul2026-video"
+                videos={[
+                  {
+                    platform: 'youtube',
+                    id: 'dPrFOA8Mya8',
+                    title: 'Dahlia — Extreme — SSS rank',
+                    author: 'Sevih',
+                    label: 'Extreme — SSS rank',
+                  }
+                ]}
+              />
+            </>
+          ),
+        },
         july2025: {
           label: lRec(jul2025.label, lang),
           content: (
