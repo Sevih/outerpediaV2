@@ -40,6 +40,15 @@ const GBETH_TITLE: LangMap = {
   fr: "Strategie equipe GBeth",
 };
 
+
+const MSKADI_TITLE: LangMap = {
+  en: 'MSkadi team strategy',
+  jp: 'MSkadi編成戦略',
+  kr: 'MSkadi 팀 전략',
+  zh: 'MSkadi队伍策略',
+  fr: 'Strategie equipe MSkadi',
+};
+
 export default function AbominationHunterBelialGuide() {
   const { lang } = useI18n();
 
@@ -66,6 +75,9 @@ export default function AbominationHunterBelialGuide() {
 
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={WATER_TITLE} entries={RECOMMENDED.water} />
+
+      <hr className="my-6 border-neutral-700" />
+      <RecommendedCharacterList title={MSKADI_TITLE} entries={RECOMMENDED.mskadi} />
 
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={GBETH_TITLE} entries={RECOMMENDED.gbeth} />
