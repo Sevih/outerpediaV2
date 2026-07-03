@@ -138,7 +138,7 @@ export default function DahliaGuide() {
                 videos={[
                   {
                     platform: 'youtube',
-                    id: 'dPrFOA8Mya8',
+                    id: 'YGGNejTOZWc',
                     title: 'Dahlia — Extreme — SSS rank',
                     author: 'Sevih',
                     label: 'Extreme — SSS rank',
