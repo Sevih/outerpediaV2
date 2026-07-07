@@ -14,15 +14,6 @@ const WP_API = 'https://annoucements.outerplane.vagames.co.kr/wp-json/wp/v2/post
 // Dev limit — set to 0 for all posts
 const DEV_LIMIT = 0;
 
-// Incremental runs re-scan posts published within this many days, even ones we
-// already have. The announcement site publishes posts out of date-order (a buff
-// schedule dated to the period start can go live days later; older posts get
-// edited and re-surfaced), so "stop at the first known post" silently misses
-// them. Re-scanning a window upserts any straggler that landed behind known
-// newer posts. Two weeks comfortably covers the buff-event cadence; widen if the
-// publisher ever backdates further than this.
-const RESCAN_WINDOW_DAYS = 14;
-
 // Rate limiting (ms)
 const DELAY_API = 500;
 const DELAY_IMAGE = 150;
@@ -58,6 +49,9 @@ const CATEGORY_TYPE_MAP: Record<number, string> = {
 type PatchNotePost = {
   id: number;
   date: string;
+  /** WP `modified` timestamp (site-local, naive). Used to detect re-edits so we
+   *  re-scrape a post we already have when the announcement site updates it. */
+  modified: string;
   slug: string;
   lang: string;
   type: string;
@@ -302,31 +296,51 @@ export async function run(): Promise<string> {
   type WPPost = {
     id: number;
     date: string;
+    modified: string;
     slug: string;
     title: { rendered: string };
     content: { rendered: string };
     categories: number[];
   };
 
-  const existingIds = new Set(existing.posts.map(p => p.id));
-  const allPosts: PatchNotePost[] = [...existing.posts];
+  // Keyed by id so we can UPSERT: a re-edited post already in our set is replaced
+  // rather than skipped (see the modified-timestamp check in the loop below).
+  const byId = new Map<number, PatchNotePost>(existing.posts.map(p => [p.id, p]));
   let newCount = 0;
+  let updatedCount = 0;
   let imgCount = 0;
 
   for (const { lang, parentCategoryId } of LANGUAGES) {
     const perPage = DEV_LIMIT || 100;
-    // Cold start scans the full history; incremental runs only re-scan the
-    // recent window. Posts are returned newest-first, so we page back until the
-    // page's oldest post falls outside the window.
-    const cutoffMs = existingIds.size === 0
-      ? -Infinity
-      : Date.now() - RESCAN_WINDOW_DAYS * DAY_MS;
+
+    // Incremental scans anchor the re-fetch on the newest post WE ALREADY HAVE
+    // for this language, not on wall-clock now. A fixed "now − N days" window
+    // silently misses posts whenever the pipeline hasn't run for longer than the
+    // window; anchoring on our latest known date always covers the gap since the
+    // last successful scrape, however long ago it was. Anchor PER LANGUAGE —
+    // EN/KR/JP publish on different cadences, so a global anchor would under-scan
+    // a lagging one.
+    //
+    // Filter on `modified_after` (not `after`): the announcement site re-edits
+    // and re-surfaces old posts whose publish date predates the anchor but whose
+    // modified date does not, so a publish-date filter would miss them. Ordering
+    // by modified keeps pagination consistent with the filter (the page's last
+    // row is the oldest-modified). posts.json stores date-only, so we anchor at
+    // 00:00 of the newest known day — a safe, slightly-past point. Times are
+    // naive (site-local), matching how WP compares and what the API returns.
+    const newestForLang = existing.posts
+      .filter(p => p.lang === lang)
+      .reduce((max, p) => (p.date > max ? p.date : max), '');
+    const coldStart = newestForLang === '';
+    const anchor = coldStart ? '' : `${newestForLang}T00:00:00`;
+    const cutoffMs = coldStart ? -Infinity : Date.parse(anchor);
+    const queryFilter = coldStart ? '' : `&modified_after=${anchor}&orderby=modified&order=desc`;
 
     let page = 1;
     let hasMore = true;
 
     while (hasMore) {
-      const url = `${WP_API}?categories=${parentCategoryId}&per_page=${perPage}&page=${page}&_fields=id,date,slug,title,content,categories`;
+      const url = `${WP_API}?categories=${parentCategoryId}&per_page=${perPage}&page=${page}${queryFilter}&_fields=id,date,modified,slug,title,content,categories`;
       let posts: WPPost[];
       try {
         if (page > 1 || lang !== 'en') await sleep(DELAY_API);
@@ -336,7 +350,13 @@ export async function run(): Promise<string> {
       }
 
       for (const post of posts) {
-        if (existingIds.has(post.id)) continue; // already have it — keep scanning
+        const known = byId.get(post.id);
+        // Skip only when we already have it AND it hasn't been re-edited since.
+        // A changed `modified` timestamp means the site updated the post, so we
+        // fall through and re-scrape it, overwriting the stale copy. (Posts
+        // stored before `modified` existed have it undefined → treated as changed
+        // and backfilled once.)
+        if (known && known.modified === post.modified) continue;
 
         const type = resolveType(post.categories);
         if (type === 'media') continue;
@@ -357,22 +377,24 @@ export async function run(): Promise<string> {
           } catch { /* skip broken images */ }
         }
 
-        allPosts.push({
+        byId.set(post.id, {
           id: post.id,
           date: post.date.split('T')[0],
+          modified: post.modified,
           slug: post.slug,
           lang,
           type,
           title: decodeEntities(post.title.rendered),
           content: html,
         });
-        existingIds.add(post.id);
-        newCount++;
+        if (known) updatedCount++; else newCount++;
       }
 
-      // Stop on a short (final) page, once we've paged past the re-scan window,
-      // or in dev mode. `posts` is date-desc, so its last item is the oldest.
-      const oldestMs = posts.length ? Date.parse(posts[posts.length - 1].date) : Infinity;
+      // Stop on a short (final) page, once we've paged past the window, or in
+      // dev mode. Incremental runs order by `modified` (see queryFilter), so the
+      // page's last row is the oldest-modified — compare that against the anchor.
+      // Cold start has cutoffMs = -Infinity, so only the short-page check fires.
+      const oldestMs = posts.length ? Date.parse(posts[posts.length - 1].modified) : Infinity;
       if (posts.length < perPage || oldestMs < cutoffMs || DEV_LIMIT > 0) {
         hasMore = false;
       } else {
@@ -382,7 +404,7 @@ export async function run(): Promise<string> {
   }
 
   // Sort by date descending
-  allPosts.sort((a, b) => b.date.localeCompare(a.date));
+  const allPosts = [...byId.values()].sort((a, b) => b.date.localeCompare(a.date));
 
   // Only rewrite when the meaningful content changed (see writeJsonIfChanged).
   const postsWritten = await writeJsonIfChanged(outputPath, { posts: allPosts });
@@ -399,5 +421,5 @@ export async function run(): Promise<string> {
 
   const changed = [postsWritten && 'posts.json', buffWritten && 'buff-events.json'].filter(Boolean);
   const changeInfo = changed.length ? ` — wrote ${changed.join(', ')}` : ' — no changes';
-  return `${allPosts.length} posts (${newCount} new), ${imgCount} images, ${buffSchedule.length} buff days${changeInfo}`;
+  return `${allPosts.length} posts (${newCount} new, ${updatedCount} updated), ${imgCount} images, ${buffSchedule.length} buff days${changeInfo}`;
 }
