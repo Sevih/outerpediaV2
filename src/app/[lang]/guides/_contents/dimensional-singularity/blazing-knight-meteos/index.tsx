@@ -109,7 +109,7 @@ export default function BlazingKnightMeteosGuide() {
             platform: 'youtube',
             id: '7FrEgI696Ww',
             title: 'Dimensional Singularity Meteos - M.Skadi Team | Outerplane',
-            author: 'baba yaga',
+            author: 'Baba Yaga',
             label: 'M.Skadi',
           },
         ]}

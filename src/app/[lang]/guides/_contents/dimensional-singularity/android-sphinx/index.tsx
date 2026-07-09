@@ -79,8 +79,15 @@ export default function AndroidSphinxGuide() {
             id: 'zT7d1IjcQs4',
             title: 'Sphinx Guardian — Dimensional Singularity — Rank SSS++',
             author: 'Sevih',
-            label: 'Rank SSS++',
+            label: 'GBeth Team',
           },
+          {
+            platform: 'youtube',
+            id: 'j2NwQQxPH6I',
+            title: 'Dimensional Singularity - Rey/Notia Team — Rank SSS++',
+            author: 'Baba Yaga',
+            label: 'Rey/Notia Team',
+          }
         ]}
       />
     </GuideTemplate>
