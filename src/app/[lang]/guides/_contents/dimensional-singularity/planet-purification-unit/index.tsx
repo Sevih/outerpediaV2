@@ -63,6 +63,13 @@ export default function PlanetPurificationUnitGuide() {
             author: 'baba yaga',
             label: 'Water',
           },
+          {
+            platform: 'youtube',
+            id: 'NLiBVg0TJes',
+            title: 'Dimensional Singularity KSAI - Regina/Roxie Team | Outerplane',
+            author: 'Baba Yaga',
+            label: 'Regina/Roxie Team',
+          }
         ]}
       />
     </GuideTemplate>
