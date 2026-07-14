@@ -232,7 +232,7 @@
         },
         "5": {
           "pve": "1",
-          "pvp": "3"
+          "pvp": "4"
         },
         "6": {
           "pve": "2",
@@ -298,7 +298,19 @@
     }
   ],
   "Limited": [
-{
+    {
+      "name": "Heatwave Cop Delta",
+      "review": "Shares a skillset with Ryu Lion (with improvements) and they cannot be deployed together. Excellent single target dps with more damage increasing support and better survivability than her collab counterpart. She gains her {B/BT_STAT|ST_SPEED} at battle start at 5-star, making it easier to get than the Premium options. 5-star also reduces her DoT damage taken, giving her a safer opening turn in arena (though she's no longer tied for fastest hero). 6-star mainly improves her strength in Dimensional Singularity.",
+      "recommended_pve": "Any",
+      "recommended_pvp": "5",
+      "impact": {
+        "3": { "pve": "5", "pvp": "3" },
+        "4": { "pve": "3", "pvp": "2" },
+        "5": { "pve": "4", "pvp": "5" },
+        "6": { "pve": "3", "pvp": "1" }
+      }
+    },
+    {
       "name": "Poolside Trickster Regina",
       "review": "Great water dps with the rare {D/BT_STEAL_BUFF}, {D/BT_SEALED_RESURRECTION} and {D/BT_RESOURCE_DOWN}. She gets a lot of free crit chance at 5-star, letting her focus on more damage instead.",
       "review_jp": "希少な{D/BT_STEAL_BUFF}、{D/BT_SEALED_RESURRECTION}、{D/BT_RESOURCE_DOWN}を持つ優れた水属性DPS。5つ星で多くの無償のクリティカル率を得られるため、代わりにさらなるダメージに集中できる。",
@@ -393,7 +405,7 @@
       "review_kr": "그에 걸맞은 모든 도구를 갖춘 컨트롤 덕후. {D/BT_STUN}과 {D/BT_SEALED_IR}로 세이크리드 가디언, 그랜드 칼라마리 및 기타 컨트롤에 취약한 많은 보스에 강하다. 높은 WG 데미지와 {D/BT_FIXED_DAMAGE} 체인 스타터도 있어 컨트롤 외에도 유용하다. 개인 딜은 부족하지만 많은 초월이 이를 보완하기 위한 것이다. 5성의 버스트 3 추가 {D/BT_STUN}은 있으면 좋다. 6성은 주로 아레나용이지만, 없어도 충분히 활약할 수 있다.",
       "review_zh": "拥有匹配工具的控制狂。{D/BT_STUN}和{D/BT_SEALED_IR}使她对圣域守护者、巨型鱿鱼及许多其他易受控制的Boss很强。她还带来高WG伤害和{D/BT_FIXED_DAMAGE}连锁启动者，在控制之外也有用。个人伤害不足，尽管很多超越是为了弥补这一点。5星爆发3的额外{D/BT_STUN}是锦上添花。6星主要用于竞技场，但没有也能表现良好。",
       "review_fr": "Control freak avec tous les outils qui vont avec. {D/BT_STUN} et {D/BT_SEALED_IR} la rendent forte contre Sacreed Guardian et Grand Calamari, ainsi que beaucoup d'autres bosses vulnérables au control. Elle apporte aussi un gros WG damage et un {D/BT_FIXED_DAMAGE} chain starter, ce qui la rend utile hors du control. Ses dégâts personnels sont faibles, même si une bonne partie de ses transcendances visent à corriger cela. Le {D/BT_STUN} supplémentaire dans son Burst 3 à 5★ est sympa à avoir. La 6★ sert surtout pour l'Arena, mais même sans, elle s'en sort bien.",
-      "recommended_pve": "4",
+      "recommended_pve": "3 to 5",
       "recommended_pvp": "Any",
       "impact": {
         "3": {
@@ -401,7 +413,7 @@
           "pvp": "5"
         },
         "4": {
-          "pve": "4",
+          "pve": "2",
           "pvp": "1"
         },
         "5": {
@@ -457,7 +469,7 @@
           "pvp": "3"
         },
         "4": {
-          "pve": "4",
+          "pve": "3",
           "pvp": "2"
         },
         "5": {
@@ -541,15 +553,15 @@
           "pvp": "1"
         },
         "4": {
-          "pve": "3",
+          "pve": "2",
           "pvp": "2"
         },
         "5": {
-          "pve": "3",
+          "pve": "2",
           "pvp": "2"
         },
         "6": {
-          "pve": "4",
+          "pve": "3",
           "pvp": "4"
         }
       }
@@ -569,7 +581,7 @@
           "pvp": "2"
         },
         "4": {
-          "pve": "4",
+          "pve": "5",
           "pvp": "3"
         },
         "5": {
@@ -578,7 +590,7 @@
         },
         "6": {
           "pve": "2",
-          "pvp": "4"
+          "pvp": "5"
         }
       }
     },
@@ -589,13 +601,13 @@
       "review_kr": "높은 HP, {B/BT_BARRIER}, {B/RUSH}로 강력한 생존력을 갖춘 만능 딜러. 그녀의 공격에는 항상 {B/BT_DMG_ELEMENT_SUPERIORITY}가 적용되며, {SK/Midnight Rush Skadi|S3}에 많은 추가 데미지를 더할 수 있어 대부분의 상황에서 꾸준한 데미지를 줄 수 있다. {D/BT_SILENCE}와 {D/BT_ACTION_GAUGE}에 대한 면역과 DoT에 대한 방어로 흔히 보이는 여러 아레나 조합에 대한 명확한 해답이 된다.",
       "review_zh": "凭借高生命值、{B/BT_BARRIER}和{B/RUSH}拥有强大生存能力的全能输出。她的攻击始终带有{B/BT_DMG_ELEMENT_SUPERIORITY}，并能为她的{SK/Midnight Rush Skadi|S3}附加大量额外伤害，使她在大多数情况下都能持续输出稳定伤害。她对{D/BT_SILENCE}和{D/BT_ACTION_GAUGE}免疫，加上对DoT的防御，使她成为多种常见竞技场队伍的明确克星。",
       "review_fr": "DPS polyvalent avec une excellente survivabilité grâce à ses PV élevés, ses {B/BT_BARRIER} et son {B/RUSH}. Ses attaques bénéficient toujours de {B/BT_DMG_ELEMENT_SUPERIORITY} et peuvent ajouter beaucoup de dégâts bonus à son {SK/Midnight Rush Skadi|S3}, lui permettant d'infliger des dégâts constants dans la plupart des situations. Son immunité à {D/BT_SILENCE} et {D/BT_ACTION_GAUGE} ainsi que sa défense contre les DoT en font une réponse claire à plusieurs équipes courantes en Arena.",
-      "recommended_pve": "Any",
+      "recommended_pve": "5 to 6",
       "recommended_pvp": "5 to 6",
       "impact": {
         "3": { "pve": "4", "pvp": "3" },
         "4": { "pve": "2", "pvp": "2" },
-        "5": { "pve": "4", "pvp": "4" },
-        "6": { "pve": "3", "pvp": "4" }
+        "5": { "pve": "5", "pvp": "4" },
+        "6": { "pve": "4", "pvp": "4" }
       }
     }
   ]
