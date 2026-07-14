@@ -1,0 +1,50 @@
+{
+  "Speed": {
+    "Weapon": [
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Combination Simulator",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Absolute Music",
+        "mainStat": "SPD"
+      }
+    ],
+    "Set": [
+      "s4"
+    ],
+    "SubstatPrio": "$sdps",
+    "Note": "PvP : {I-T/Assassin's Charm}",
+    "Talisman": [
+      "$CPdps"
+    ]
+  },
+  "Pen": {
+    "Weapon": [
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      "p4"
+    ],
+    "SubstatPrio": "$sdps",
+    "Note": "PvP : {I-T/Assassin's Charm}",
+    "Talisman": [
+      "$CPdps"
+    ]
+  }
+}
