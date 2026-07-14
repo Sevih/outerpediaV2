@@ -1,14 +1,66 @@
 {
-  "Speed": {
+  "DPS": {
     "Weapon": [
       {
         "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Heartunder's Blade",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Meteor Mashers",
         "mainStat": "ATK%"
       }
     ],
     "Amulet": [
       {
-        "name": "Combination Simulator",
+        "name": "Burning Soul",
+        "mainStat": "PEN%"
+      },
+      {
+        "name": "Physical Exorcism",
+        "mainStat": "PEN%"
+      }
+    ],
+    "Set": [
+      "p4",
+      "a2s2",
+      "p2a2"
+    ],
+    "SubstatPrio": "CHC>ATK>SPD=CHD>DMG UP%",
+    "Note": "{I-T/Executioner's Charm} at +10.",
+    "Note_jp": "{I-T/Executioner's Charm} は+10で。",
+    "Note_kr": "{I-T/Executioner's Charm}은 +10으로.",
+    "Note_zh": "{I-T/Executioner's Charm} 需 +10。",
+    "Note_fr": "{I-T/Executioner's Charm} au niveau +10.",
+    "Talisman": [
+      "$CPdps"
+    ]
+  },
+  "Priority Support/PvP": {
+    "Weapon": [
+      {
+        "name": "Barrage of Truth",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Meteor Mashers",
+        "mainStat": "ATK%"
+      },
+      {
+        "name": "Heartunder's Blade",
+        "mainStat": "ATK%"
+      }
+    ],
+    "Amulet": [
+      {
+        "name": "Gorgon's Vanity [Ranger]",
+        "mainStat": "SPD"
+      },
+      {
+        "name": "Briareos's Ambition [Ranger]",
         "mainStat": "SPD"
       },
       {
@@ -19,32 +71,11 @@
     "Set": [
       "s4"
     ],
-    "SubstatPrio": "$sdps",
-    "Note": "PvP : {I-T/Assassin's Charm}",
+    "SubstatPrio": "$subDpsCrit",
+    "Note": "",
     "Talisman": [
-      "$CPdps"
-    ]
-  },
-  "Pen": {
-    "Weapon": [
-      {
-        "name": "Barrage of Truth",
-        "mainStat": "ATK%"
-      }
-    ],
-    "Amulet": [
-      {
-        "name": "Burning Soul",
-        "mainStat": "PEN%"
-      }
-    ],
-    "Set": [
-      "p4"
-    ],
-    "SubstatPrio": "$sdps",
-    "Note": "PvP : {I-T/Assassin's Charm}",
-    "Talisman": [
-      "$CPdps"
+      "Assassin's Charm",
+      "Undertaker's Charm"
     ]
   }
 }
