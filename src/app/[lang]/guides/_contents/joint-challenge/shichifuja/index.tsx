@@ -22,6 +22,12 @@ import type {
 import strings from './strings.json';
 import defaultConfig from './config.json';
 
+/* -- Version: 07-2026 ---------------------------------------- */
+import v0726Config from './versions/07-2026/config.json';
+import v0726Tips from './versions/07-2026/tips.json';
+import v0726Recommended from './versions/07-2026/recommended.json';
+import v0726Teams from './versions/07-2026/teams.json';
+
 /* -- Version: 02-2026 ---------------------------------------- */
 import v0226Config from './versions/02-2026/config.json';
 import v0226Tips from './versions/02-2026/tips.json';
@@ -65,6 +71,13 @@ function resolve(override: JointChallengeVersionOverride): ResolvedVersion {
 
 /* -- Typed data ----------------------------------------------- */
 
+const jul2026 = {
+  ...resolve(v0726Config as JointChallengeVersionOverride),
+  tips: v0726Tips as Record<string, LangMap[]>,
+  recommended: v0726Recommended as CharacterRecommendation[],
+  teams: v0726Teams as TeamData,
+};
+
 const feb2026 = {
   ...resolve(v0226Config as JointChallengeVersionOverride),
   tips: v0226Tips as Record<string, LangMap[]>,
@@ -92,8 +105,37 @@ export default function ShichifujaGuide() {
     <GuideTemplate
       title={lRec(str.title, lang)}
       introduction={lRec(str.intro, lang)}
-      defaultVersion="february2026"
+      defaultVersion="july2026"
       versions={{
+        july2026: {
+          label: lRec(jul2026.label, lang),
+          content: (
+            <>
+              <BossDisplay
+                bossName="Shichifuja"
+                modeKey="Joint Challenge"
+                defaultBossId={jul2026.boss.id}
+                preloadedBosses={{ [jul2026.boss.id]: jul2026.boss.data }}
+                bossFileSuffix={jul2026.bossSuffix}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <TacticalTips
+                sections={[{ title: 'tactical', tips: jul2026.tips.tactical }]}
+              />
+              <hr className="my-6 border-neutral-700" />
+              <RecommendedCharacterList entries={jul2026.recommended} />
+              <hr className="my-6 border-neutral-700" />
+              <StageBasedTeamSelector teamData={jul2026.teams} defaultStage="Recommended Team" />
+              <hr className="my-6 border-neutral-700" />
+              <CombatFootage
+                videoId="wVCW6qVT64A"
+                title="Shichifuja - Joint Challenge - Very Hard Mode"
+                author="Sevih"
+                date="14/07/2026"
+              />
+            </>
+          ),
+        },
         february2026: {
           label: lRec(feb2026.label, lang),
           content: (
