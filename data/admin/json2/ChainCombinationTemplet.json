@@ -819,6 +819,13 @@
     "IconName": "SC_Buff_Effect_AP"
   },
   {
+    "ID": "2000121",
+    "Sequence": "2",
+    "ShowBuffID": "2000121_chain_1_1",
+    "BuffIconType": "ALL_DUBUFF",
+    "IconName": "SC_Buff_Effect_True_Dmg"
+  },
+  {
     "ID": "2700003",
     "Sequence": "0",
     "ShowBuffID": "2700003_chain_1_1",
@@ -1076,5 +1083,40 @@
     "ShowBuffID": "2000116_chain_1_1",
     "BuffIconType": "ALL_DUBUFF",
     "IconName": "SC_Buff_Effect_WG_Dmg"
+  },
+  {
+    "ID": "2020111",
+    "Sequence": "3",
+    "ShowBuffID": "2000111_chain_1_1",
+    "BuffIconType": "SINGLE_DUBUFF",
+    "IconName": "SC_Buff_Effect_Marking"
+  },
+  {
+    "ID": "2010119",
+    "Sequence": "3",
+    "ShowBuffID": "2000119_chain_1_1",
+    "BuffIconType": "ALL_BUFF",
+    "IconName": "SC_Buff_Effect_AP"
+  },
+  {
+    "ID": "2010120",
+    "Sequence": "3",
+    "ShowBuffID": "2000119_chain_1_1",
+    "BuffIconType": "ALL_BUFF",
+    "IconName": "SC_Buff_Effect_AP"
+  },
+  {
+    "ID": "2020108",
+    "Sequence": "3",
+    "ShowBuffID": "2000108_chain_1_1",
+    "BuffIconType": "ALL_BUFF",
+    "IconName": "SC_Buff_Dmg_Target_Break"
+  },
+  {
+    "ID": "2020089",
+    "Sequence": "3",
+    "ShowBuffID": "2000089_chain_1_1",
+    "BuffIconType": "SINGLE_BUFF",
+    "IconName": "SC_Buff_Cool_Charge"
   }
 ]

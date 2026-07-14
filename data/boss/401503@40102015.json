@@ -68,16 +68,14 @@
       },
       "type": "SKT_SECOND",
       "description": {
-        "en": "Attacks 2 enemies.\\nHas a <color=#28d9ed>85%</color> chance to remove <color=#28d9ed>1</color> <color=#28d9ed>Buffs</color> from the target and inflict <color=#28d9ed>Burn</color> for <color=#28d9ed>2 turn(s)</color>.\\nIf the target is Earth Element, this attack does not miss and decreases <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turn(s)</color>.",
-        "jp": "敵2体にダメージを与える。\\n<color=#28d9ed>85%</color>の確率で対象の<color=#28d9ed>強化効果</color>を<color=#28d9ed>1つ</color>解除し、<color=#28d9ed>2ターン</color>の間<color=#28d9ed>火傷</color>を付与する。\\n対象が地属性の場合、ミスが発生せず<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
-        "kr": "적 2인을 공격합니다.\\n<color=#28d9ed>85%</color>의 확률로 대상의 <color=#28d9ed>강화 효과</color>를 <color=#28d9ed>1개</color> 해제하고 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>화상</color> 상태로 만듭니다.\\n대상이 지속성이라면 빗나감이 발생하지 않으며 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
-        "zh": "攻击2名敌人。\\n有<color=#28d9ed>85%</color>的概率解除目标的<color=#28d9ed>1个</color><color=#28d9ed>强化效果</color>，并造成<color=#28d9ed>烧伤</color>，持续<color=#28d9ed>2回合</color>。\\n若目标为地属性，则不会发生闪避，并使<color=#28d9ed>攻击力</color>降低，持续<color=#28d9ed>2回合</color>。"
+        "en": "Attacks 2 enemies and decreases the targets' <color=#28d9ed>Attack</color> for <color=#28d9ed>2 turns</color>.",
+        "jp": "敵2体にダメージを与え、対象の<color=#28d9ed>攻撃力</color>を<color=#28d9ed>2ターン</color>の間DOWNさせる。",
+        "kr": "적 2명을 공격하고, 대상의 <color=#28d9ed>공격력</color>을 <color=#28d9ed>2턴</color> 동안 감소시킵니다.",
+        "zh": "攻击2名敌人，使目标<color=#28d9ed>攻击力</color>在<color=#28d9ed>2回合</color>内减少。"
       },
       "icon": "Skill_Second_2000043",
       "debuff": [
-        "BT_REMOVE_BUFF",
-        "BT_STAT|ST_ATK",
-        "BT_DOT_BURN"
+        "BT_STAT|ST_ATK"
       ]
     },
     {

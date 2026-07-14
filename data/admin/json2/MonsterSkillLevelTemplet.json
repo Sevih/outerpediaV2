@@ -17455,8 +17455,8 @@
     "DamageFactor": "1100",
     "StartCool": "4",
     "Cool": "4",
-    "BuffID": "2000043_2_1,2000043_2_2",
-    "BuffToolTip": "25"
+    "BuffID": "2700043_2_2",
+    "BuffToolTip": "18"
   },
   {
     "ID": "113193101",
@@ -24107,6 +24107,103 @@
     "DamageFactor": "5000",
     "BuffID": "4339001_15_1,4339001_15_2",
     "BuffToolTip": "1027"
+  },
+  {
+    "ID": "153916101",
+    "SkillID": "153916",
+    "SkillLevel": "1",
+    "DamageFactor": "1000",
+    "BuffID": "event_monster_buff_573",
+    "BuffToolTip": "18"
+  },
+  {
+    "ID": "153917101",
+    "SkillID": "153917",
+    "SkillLevel": "1",
+    "DamageFactor": "1200",
+    "Cool": "3",
+    "BuffID": "event_monster_buff_574",
+    "BuffToolTip": "22"
+  },
+  {
+    "ID": "153918101",
+    "SkillID": "153918",
+    "SkillLevel": "1",
+    "DamageFactor": "1500",
+    "StartCool": "1",
+    "Cool": "4",
+    "BuffID": "event_monster_buff_575",
+    "BuffToolTip": "39"
+  },
+  {
+    "ID": "153919101",
+    "SkillID": "153919",
+    "SkillLevel": "1",
+    "DamageFactor": "1200",
+    "BuffID": "event_monster_buff_576",
+    "BuffToolTip": "17"
+  },
+  {
+    "ID": "153920101",
+    "SkillID": "153920",
+    "SkillLevel": "1",
+    "DamageFactor": "1300",
+    "StartCool": "1",
+    "Cool": "3",
+    "BuffID": "event_monster_buff_577",
+    "BuffToolTip": "2"
+  },
+  {
+    "ID": "153921101",
+    "SkillID": "153921",
+    "SkillLevel": "1",
+    "DamageFactor": "1500",
+    "StartCool": "3",
+    "Cool": "4",
+    "BuffID": "event_monster_buff_578,event_monster_buff_579",
+    "BuffToolTip": "7,15"
+  },
+  {
+    "ID": "153922101",
+    "SkillID": "153922",
+    "SkillLevel": "1",
+    "BuffID": "event_monster_buff_580,event_monster_buff_581"
+  },
+  {
+    "ID": "153923101",
+    "SkillID": "153923",
+    "SkillLevel": "1",
+    "DamageFactor": "1200",
+    "BuffID": "event_monster_buff_582",
+    "BuffToolTip": "61"
+  },
+  {
+    "ID": "153924101",
+    "SkillID": "153924",
+    "SkillLevel": "1",
+    "DamageFactor": "1500",
+    "StartCool": "1",
+    "Cool": "3",
+    "BuffID": "event_monster_buff_583",
+    "BuffToolTip": "44"
+  },
+  {
+    "ID": "153925101",
+    "SkillID": "153925",
+    "SkillLevel": "1",
+    "DamageFactor": "1300",
+    "BuffID": "event_monster_buff_584",
+    "BuffToolTip": "7"
+  },
+  {
+    "ID": "153926101",
+    "SkillID": "153926",
+    "SkillLevel": "1",
+    "DamageFactor": "1600",
+    "StartCool": "3",
+    "Cool": "4",
+    "BuffID": "event_monster_buff_585",
+    "BuffToolTip": "1029"
   },
   {
     "ID": "153801101",
@@ -30909,6 +31006,60 @@
   {
     "ID": "900137101",
     "SkillID": "900137",
+    "SkillLevel": "1",
+    "DamageFactor": "3150"
+  },
+  {
+    "ID": "900141101",
+    "SkillID": "900141",
+    "SkillLevel": "1",
+    "DamageFactor": "1470",
+    "BuffID": "singularity_td_skill01_1",
+    "BuffToolTip": "15"
+  },
+  {
+    "ID": "900142101",
+    "SkillID": "900142",
+    "SkillLevel": "1",
+    "DamageFactor": "1365",
+    "StartCool": "3",
+    "Cool": "4",
+    "BuffID": "singularity_td_skill02_1,singularity_td_skill02_2",
+    "BuffToolTip": "26"
+  },
+  {
+    "ID": "900143101",
+    "SkillID": "900143",
+    "SkillLevel": "1",
+    "DamageFactor": "1890",
+    "StartCool": "1",
+    "Cool": "3",
+    "BuffID": "singularity_td_skill03_1,singularity_td_skill02_2",
+    "BuffToolTip": "33"
+  },
+  {
+    "ID": "900144101",
+    "SkillID": "900144",
+    "SkillLevel": "1",
+    "BuffID": "singularity_passive_td_a_1,singularity_passive_td_a_2,singularity_passive_td_a_3"
+  },
+  {
+    "ID": "900145101",
+    "SkillID": "900145",
+    "SkillLevel": "1",
+    "BuffID": "singularity_passive_td_b_1,singularity_passive_td_b_2,singularity_passive_td_b_3,singularity_passive_td_b_4,singularity_passive_td_b_5,Singularity_Passive_AntiCurse,Singularity_Passive_AntiTureDmg",
+    "BuffToolTip": "17"
+  },
+  {
+    "ID": "900146101",
+    "SkillID": "900146",
+    "SkillLevel": "1",
+    "DamageFactor": "1100",
+    "BuffID": "Common_Rage_Buff_101,common_monster_passive_wg1,Singularity_Rage_Action_guage,singularity_rage_td"
+  },
+  {
+    "ID": "900147101",
+    "SkillID": "900147",
     "SkillLevel": "1",
     "DamageFactor": "3150"
   },
