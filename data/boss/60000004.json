@@ -1,0 +1,183 @@
+{
+  "id": "60000004",
+  "Name": {
+    "en": "Tyrant Toddler",
+    "jp": "タイラントの幼生",
+    "kr": "타일런트 유생체",
+    "zh": "幼体泰兰特"
+  },
+  "Surname": null,
+  "IncludeSurname": false,
+  "class": "Striker",
+  "element": "Water",
+  "level": 100,
+  "icons": "4076005",
+  "BuffImmune": "BT_GOLDEN_CURSE,BT_STUN,BT_FREEZE,BT_STONE,BT_SILENCE,BT_AGGRO",
+  "StatBuffImmune": "",
+  "location": {
+    "dungeon": {
+      "en": "[Singularity] - Tyrant Larva",
+      "jp": "[特異点] - タイラントの幼生",
+      "kr": "[특이점] - 타일런트 유생체",
+      "zh": "[奇点] - 幼体泰兰特"
+    },
+    "mode": {
+      "en": "Dimensional Singularity",
+      "jp": "次元特異点",
+      "kr": "차원 특이점",
+      "zh": "次元奇点"
+    },
+    "area_id": {
+      "en": "",
+      "jp": "",
+      "kr": "",
+      "zh": ""
+    }
+  },
+  "skills": [
+    {
+      "name": {
+        "en": "Primordial Intimidation",
+        "jp": "古代種の脅威",
+        "kr": "고대종의 위협",
+        "zh": "古代种族的威胁"
+      },
+      "type": "SKT_FIRST",
+      "description": {
+        "en": "Attacks all enemies and increases the caster's <color=#28d9ed>Speed</color> for <color=#28d9ed>1 turns</color>.",
+        "jp": "敵全体にダメージを与え、自分の<color=#28d9ed>スピード</color>を<color=#28d9ed>1ターン</color>の間UPさせる。",
+        "kr": "적 전체를 공격하고 자신의 <color=#28d9ed>속도</color>를 <color=#28d9ed>1턴</color> 동안 증가시킵니다.",
+        "zh": "攻击全体敌人，使自身<color=#28d9ed>速度</color>在<color=#28d9ed>1回合</color>内增加。"
+      },
+      "icon": "Skill_First_4014002_Water",
+      "buff": [
+        "BT_STAT|ST_SPEED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Tremor of Despair",
+        "jp": "絶望の地鳴り",
+        "kr": "절망의 땅울림",
+        "zh": "绝望的地鸣"
+      },
+      "type": "SKT_SECOND",
+      "description": {
+        "en": "Attacks all enemies and decreases targets' <color=#28d9ed>Speed</color> for <color=#28d9ed>3</color> turns. (Ignores Resilience)\\nRight after using this skill, enemy Counterattack, Revenge, and Agile Response do not trigger.",
+        "jp": "敵全体にダメージを与え、対象の<color=#28d9ed>スピード</color>を<color=#28d9ed>3</color>ターンの間DOWNさせる。（効果抵抗無視）\\nこのスキルの直後は、敵の反撃、復讐、迅速対応が発動しない。",
+        "kr": "적 전체를 공격하고 대상의 <color=#28d9ed>속도</color>를 <color=#28d9ed>3</color>턴 동안 감소시킵니다. (효과 저항 무시)\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "zh": "攻击全体敌人，使目标<color=#28d9ed>速度</color>在<color=#28d9ed>3</color>回合内减少。（无视效果抵抗）\\n该技能使用后，敌方的反击、复仇、迅速应对不会发动。"
+      },
+      "icon": "Skill_Second_4014002_Water_Active",
+      "buff":[
+        "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_STAT|ST_SPEED"
+      ]
+    },
+    {
+      "name": {
+        "en": "Breath of Destruction",
+        "jp": "破滅の息吹",
+        "kr": "파멸의 숨결",
+        "zh": "破灭的吐息"
+      },
+      "type": "SKT_ULTIMATE",
+      "description": {
+        "en": "Attacks all enemies. If a target has <color=#28d9ed>Reduced Speed</color>, inflicts <color=#28d9ed>Frozen</color> on the target for <color=#28d9ed>2 turns</color> after attacking.\\nRight after using this skill, enemy Counterattack, Revenge, and Agile Response do not trigger.",
+        "jp": "敵全体にダメージを与える。対象が<color=#28d9ed>スピードDOWN</color>を保有している場合、攻撃後に対象に<color=#28d9ed>2ターン</color>の間<color=#28d9ed>凍結</color>を付与する。\\nこのスキルの直後は、敵の反撃、復讐、迅速対応が発動しない。",
+        "kr": "적 전체를 공격합니다.대상이 <color=#28d9ed>속도 감소</color>를 보유하고 있다면 공격 후 대상에게 <color=#28d9ed>2턴</color> 동안 <color=#28d9ed>빙결</color>을 부여합니다.\\n이 스킬 직후에는 적의 반격, 복수, 신속 대응이 발동하지 않습니다.",
+        "zh": "攻击全体敌人。若目标持有<color=#28d9ed>速度降低</color>，攻击后对目标附加<color=#28d9ed>2回合</color>的<color=#28d9ed>冰冻</color>。\\n该技能使用后，敌方的反击、复仇、迅速应对不会发动。"
+      },
+      "icon": "Skill_Ultimate_4014002_Water",
+      "buff":[
+        "BT_SEAL_COUNTER"
+      ],
+      "debuff": [
+        "BT_FREEZE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Mutation: Dimensional Deceleration",
+        "jp": "変異：次元減速",
+        "kr": "변이 : 차원 감속",
+        "zh": "变异：次元减速"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "DMG taken from enemies faster than the caster increases by <color=#28d9ed>100%</color>.\\nDMG dealt to enemies with <color=#28d9ed>Reduced Speed</color> increases by <color=#28d9ed>50%</color>.\\nDamage from Cursed and Fixed DMG taken by Bosses cannot exceed <color=#28d9ed>50000</color>.",
+        "jp": "自分よりスピードが速い敵から受けるダメージが<color=#28d9ed>100%</color>UPする。\\n<color=#28d9ed>スピードDOWN</color>を保有している敵に与えるダメージが<color=#28d9ed>50%</color>UPする。\\nボスが受ける呪いおよび固定ダメージのダメージは<color=#28d9ed>50000</color>を超えない。",
+        "kr": "자신보다 속도가 빠른 적에게 받는 피해가 <color=#28d9ed>100%</color> 증가합니다.\\n속도 감소를 보유한 적에게 가하는 피해가 <color=#28d9ed>50%</color> 증가합니다.\\n보스가 받는 저주 및 고정 피해의 피해는 <color=#28d9ed>50000</color>을 초과하지 않습니다.",
+        "zh": "受到速度比自身更快的敌人造成的伤害增加<color=#28d9ed>100%</color>。\\n对持有<color=#28d9ed>速度降低</color>的敌人造成的伤害增加<color=#28d9ed>50%</color>。\\n首领受到的诅咒及固定伤害不超过<color=#28d9ed>50000</color>。"
+      },
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Distortion: Gravitational Collapse",
+        "jp": "歪曲：重力崩壊",
+        "kr": "왜곡 : 중력 붕괴",
+        "zh": "扭曲：重力崩塌"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "At the start of battle, takes the first turn and grants the caster irremovable <color=#28d9ed>Reduced Defense</color> if there is exactly 1 Ranger on the enemy team.\\nAt the start of a non-Earth target's turn, increases the caster's Priority by <color=#28d9ed>20%</color>.",
+        "jp": "戦闘開始時、最初にターンを得て、敵にスピード型が1人いる場合、自分に解除不可能な<color=#28d9ed>防御力DOWN</color>を付与する。\\n地属性でない対象のターン開始時、自分の行動ゲージを<color=#28d9ed>20%</color>増加させる。",
+        "kr": "전투 시작 시 가장 빠르게 턴을 획득하고 적 팀에 속도형이 1명 있다면 자신에게 해제 불가능한 <color=#28d9ed>방어력 감소</color>를 부여합니다.\\n지속성이 아닌 대상 턴 시작 시 자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "zh": "战斗开始时最先获得回合，若敌方队伍中有1名速度型，则对自身附加无法解除的<color=#28d9ed>防御力降低</color>。\\n非土属性目标回合开始时，使自身行动值增加<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Passive_1_Water",
+      "buff": [
+        "BT_ACTION_GAUGE"
+      ],
+      "debuff": [
+        "BT_STAT|ST_DEF_IR"
+      ]
+    },
+    {
+      "name": {
+        "en": "Dimensional Rift",
+        "jp": "次元の亀裂",
+        "kr": "차원의 균열",
+        "zh": "次元裂缝"
+      },
+      "type": "SKT_MONSTER_1",
+      "description": {
+        "en": "(Passive Effect) The boss monster's Priority increases after entering Berserk state. The following effects are added depending on rank.\\n\\n<color=#ffd732>Applies from RANK D:</color> DMG dealt by all attacks increases and DMG taken decreases. The values increase as rank rises, reaching their maximum at SSS. (Up to 300%/200% respectively)\\n\\n<color=#ffd732>Applies from RANK B:</color> Final DMG taken and WG DMG taken from targets without elemental advantage decrease by <color=#28d9ed>70%/50%</color> respectively.\\n\\n<color=#ffd732>Applies from RANK S:</color> Increases the caster's <color=#28d9ed>Penetration</color> by <color=#28d9ed>30%</color>.\\n\\n<color=#ffd732>Class Synergy</color>: After an enemy acts, if there is exactly 1 enemy team member of the corresponding class, gains a special effect.\\n\\nMage: Enemy Striker DMG increases by 8% (Max 10 stacks)\\nStriker: Enemy Mage DMG increases by 8% (Max 10 stacks)\\nHealer: All enemies' DMG taken decreases by 8% (Max 10 stacks)\\nDefender: Boss Attack decreases by 2% (Max 5 stacks)\\nRanger: The boss takes Fixed DMG equal to 1% of its Max Health",
+        "jp": "(パッシブ効果) ボスモンスターは狂暴化突入後、行動ゲージが増加する。ランクに応じて以下の効果が追加される。\\n\\n<color=#ffd732>RANK Dから適用：</color> すべての攻撃に対する与ダメージが増加し、受けるダメージが減少する。ランクが上がるほど数値が増加し、SSSで最大になる。（それぞれ最大300%／200%）\\n\\n<color=#ffd732>RANK Bから適用：</color> 有利属性ではない対象から受ける最終ダメージとWGダメージがそれぞれ<color=#28d9ed>70%／50%</color>減少する。\\n\\n<color=#ffd732>RANK Sから適用：</color> 自分の<color=#28d9ed>貫通力</color>を<color=#28d9ed>30%</color>増加させる。\\n\\n<color=#ffd732>職業シナジー</color>：敵の行動後、敵チームの該当職業が1人の場合、特別な効果を得る。\\n\\n魔法型：敵攻撃型ダメージ8%増加（最大10回累積）\\n攻撃型：敵魔法型ダメージ8%増加（最大10回累積）\\n回復型：敵全体が受けるダメージ8%減少（最大10回累積）\\n防御型：ボス攻撃力2%減少（最大5回累積）\\nスピード型：ボス最大HPの1%固定ダメージ",
+        "kr": "(패시브 효과) 보스 몬스터는 광폭화 진입 후 행동 게이지가 증가합니다. 랭크에 따라 아래 효과가 추가됩니다.\\n\\n<color=#ffd732>RANK D 부터 적용:</color> 모든 공격에 대해 주는 피해가 증가하고 받는 피해가 감소합니다. 랭크가 오를수록 수치가 증가하여 SSS에서 최대가 됩니다.(각각 최대 300%/200%)\\n\\n<color=#ffd732>RANK B 부터 적용:</color> 유리한 상성이 아닌 대상에게 받는 최종 피해와 WG 피해가 각각 <color=#28d9ed>70%/50%</color> 감소합니다.\\n\\n<color=#ffd732>RANK S 부터 적용:</color> 자신의 <color=#28d9ed>관통력</color>을 <color=#28d9ed>30%</color> 증가시킵니다.\\n\\n<color=#ffd732>직업 시너지</color>: 적 행동 후, 적 팀의 해당 직업이 1명일 때 특별한 효과를 얻습니다.\\n\\n마법형: 적 공격형 피해 8% 증가 (최대 10회 누적)\\n공격형: 적 마법형 피해 8%증가 (최대 10회 누적)\\n회복형: 적 전체 받는 피해 감소 8% (최대 10회 누적)\\n방어형: 보스 공격력 감소 2% (최대 5회 누적)\\n속도형: 보스 최대 체력 1% 고정 피해",
+        "zh": "(被动效果) 首领怪物进入狂暴化后行动值增加。根据等级将追加以下效果。\\n\\n<color=#ffd732>从RANK D开始适用：</color> 所有攻击造成的伤害增加，受到的伤害减少。等级越高数值越大，在SSS时达到最大值。（分别最大300%/200%）\\n\\n<color=#ffd732>从RANK B开始适用：</color> 从无克制属性的目标处受到的最终伤害和WG伤害分别减少<color=#28d9ed>70%/50%</color>。\\n\\n<color=#ffd732>从RANK S开始适用：</color> 使自身<color=#28d9ed>穿透力</color>增加<color=#28d9ed>30%</color>。\\n\\n<color=#ffd732>职业增效</color>：敌方行动后，若敌方队伍中对应职业仅有1名，则获得特殊效果。\\n\\n法师型：敌方战士型伤害增加8%（最多叠加10次）\\n战士型：敌方法师型伤害增加8%（最多叠加10次）\\n辅助型：敌方全体受到的伤害减少8%（最多叠加10次）\\n坦克型：首领攻击力减少2%（最多叠加5次）\\n敏捷型：首领最大生命值1%固定伤害"
+      },
+      "icon": "MT_Passive_1_Singularity",
+      "buff": [
+        "BT_STAT|ST_PIERCE_POWER_RATE_IR",
+        "BT_ACTION_GAUGE"
+      ]
+    },
+    {
+      "name": {
+        "en": "Enraged",
+        "jp": "狂暴化",
+        "kr": "광폭화",
+        "zh": "狂暴化"
+      },
+      "type": "SKT_RAGE_ENTER1",
+      "description": {
+        "en": "Enters <color=#28d9ed>Berserk</color> state every time enemies take 7 actions.\\n\\n<color=#28d9ed>Berserk Entry & Ultimate Skill</color>: Deals DMG to all enemies, then grants the caster an irremovable DMG Reduction effect for 1 turn and recovers WG by 10%.\\nIncreases the caster's Priority by <color=#28d9ed>20%</color>.",
+        "jp": "敵が7回行動するたびに<color=#28d9ed>狂暴化</color>状態に移行する。\\n\\n<color=#28d9ed>狂暴化突入と必殺スキル</color>：敵全体にダメージを与えた後、自分に解除されないダメージ減少効果を1ターンの間付与し、WGを10%回復する。\\n自分の行動ゲージを<color=#28d9ed>20%</color>増加させる。",
+        "kr": "적이 7회 행동할 때 마다 <color=#28d9ed>광폭화</color> 상태로 전환합니다.\\n\\n<color=#28d9ed>광폭화 돌입과 필살기</color> : 적 전체에게 피해를 입힌 후 자신에게 해제되지 피해 감소 효과를 1턴 동안 부여하고 WG를 10% 회복합니다.\\n자신의 행동 게이지를 <color=#28d9ed>20%</color> 증가시킵니다.",
+        "zh": "敌人每行动7次，转换为<color=#28d9ed>狂暴化</color>状态。\\n\\n<color=#28d9ed>进入狂暴化与必杀技</color>：对全体敌人造成伤害后，对自身附加无法解除的伤害减少效果持续1回合，并恢复10%的WG。\\n使自身行动值增加<color=#28d9ed>20%</color>。"
+      },
+      "icon": "MT_Boss_Rage_Common_1",
+      "buff": [
+        "BT_DAMAGE_TAKEN",
+        "BT_ACTION_GAUGE"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "strategy": [
+    {
+      "en": "Keep the whole team faster than the boss — it takes +100% damage from faster targets.",
+      "jp": "チーム全員をボスより速く保つ — ボスは自分より速い対象から受けるダメージが+100%になる。",
+      "kr": "팀 전원을 보스보다 빠르게 유지하세요 — 보스는 자신보다 빠른 대상에게 받는 피해가 +100%입니다.",
+      "zh": "保持全队速度快于Boss — Boss受到速度更快目标的伤害+100%。",
+      "fr": "Gardez toute l'équipe plus rapide que le Boss — il subit +100% de dégâts des cibles plus rapides."
+    },
+    {
+      "en": "Clear {D/BT_STAT|ST_SPEED} before the boss's Ultimate: it inflicts {D/BT_FREEZE} on every target carrying it. Its S2 applies it to all, ignoring Resilience — bring {B/BT_REMOVE_DEBUFF} or {B/BT_IMMUNE}.",
+      "jp": "ボスの必殺技の前に{D/BT_STAT|ST_SPEED}を解除する：保有している対象すべてに{D/BT_FREEZE}を付与する。S2は効果抵抗を無視して全体に付与するため、{B/BT_REMOVE_DEBUFF}か{B/BT_IMMUNE}を用意する。",
+      "kr": "보스의 필살기 전에 {D/BT_STAT|ST_SPEED}을 해제하세요: 이를 보유한 모든 대상에게 {D/BT_FREEZE}을 부여합니다. S2는 효과 저항을 무시하고 전체에 부여하므로 {B/BT_REMOVE_DEBUFF} 또는 {B/BT_IMMUNE}이 필요합니다.",
+      "zh": "在Boss必杀技之前解除{D/BT_STAT|ST_SPEED}：它会对所有持有该效果的目标附加{D/BT_FREEZE}。其S2无视效果抵抗对全体附加，请携带{B/BT_REMOVE_DEBUFF}或{B/BT_IMMUNE}。",
+      "fr": "Nettoyez {D/BT_STAT|ST_SPEED} avant l'Ultime du Boss : il inflige {D/BT_FREEZE} à toute cible qui le porte. Son S2 l'applique à tous en ignorant la Résilience — prévoyez {B/BT_REMOVE_DEBUFF} ou {B/BT_IMMUNE}."
+    },
+    {
+      "en": "Bring exactly one character per class. A lone {C/Ranger} makes the boss self-inflict {D/BT_STAT|ST_DEF_IR}, and every Class Synergy requires exactly 1 member of that class.",
+      "jp": "各職業をちょうど1人ずつ編成する。{C/Ranger}が1人だけならボスは自分に{D/BT_STAT|ST_DEF_IR}を付与し、職業シナジーは各職業1人のときのみ発動する。",
+      "kr": "각 직업을 정확히 1명씩 편성하세요. {C/Ranger}가 1명뿐이면 보스가 자신에게 {D/BT_STAT|ST_DEF_IR}을 부여하며, 직업 시너지는 해당 직업이 정확히 1명일 때만 발동합니다.",
+      "zh": "每个职业恰好编入1名。仅有1名{C/Ranger}时Boss会对自身附加{D/BT_STAT|ST_DEF_IR}，且各职业增效均需该职业恰好1名才会触发。",
+      "fr": "Emmenez exactement un personnage par classe. Un {C/Ranger} unique force le Boss à s'infliger {D/BT_STAT|ST_DEF_IR}, et chaque Synergie de classe exige exactement 1 membre de cette classe."
+    },
+    {
+      "en": "Go mono-{E/Earth}: every non-{E/Earth} target gives the boss +20% {B/BT_ACTION_GAUGE} at the start of its turn.",
+      "jp": "{E/Earth}属性で統一する：{E/Earth}属性でない対象はターン開始時にボスの{B/BT_ACTION_GAUGE}を+20%増加させる。",
+      "kr": "{E/Earth} 속성으로 통일하세요: {E/Earth} 속성이 아닌 대상은 턴 시작 시 보스의 {B/BT_ACTION_GAUGE}을 +20% 증가시킵니다.",
+      "zh": "组建纯{E/Earth}队伍：非{E/Earth}属性目标在回合开始时会使Boss的{B/BT_ACTION_GAUGE}+20%。",
+      "fr": "Jouez mono-{E/Earth} : chaque cible non-{E/Earth} donne +20% de {B/BT_ACTION_GAUGE} au Boss au début de son tour."
+    },
+    {
+      "en": "Skip {D/BT_DOT_CURSE} carries — Curse and fixed damage on the boss are capped at 50,000.",
+      "jp": "{D/BT_DOT_CURSE}軸のキャリアは避ける — ボスへの呪いと固定ダメージは50,000が上限。",
+      "kr": "{D/BT_DOT_CURSE} 기반 딜러는 피하세요 — 보스에게 주는 저주 및 고정 피해는 50,000이 상한입니다.",
+      "zh": "避免{D/BT_DOT_CURSE}型主C — 对Boss的诅咒与固定伤害上限为50,000。",
+      "fr": "Évitez les carries {D/BT_DOT_CURSE} — Malédiction et dégâts fixes sur le Boss sont plafonnés à 50 000."
+    }
+  ]
+}
