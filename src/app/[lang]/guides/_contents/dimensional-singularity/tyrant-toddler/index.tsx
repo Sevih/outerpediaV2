@@ -4,6 +4,7 @@ import GuideTemplate from '@/app/components/guides/GuideTemplate';
 import BossDisplay from '@/app/components/guides/BossDisplay';
 import TacticalTips from '@/app/components/guides/TacticalTips';
 import RecommendedCharacterList from '@/app/components/guides/RecommendedCharacterList';
+import MultiVideoEmbed from '@/app/components/ui/MultiVideoEmbed';
 import { useI18n } from '@/lib/contexts/I18nContext';
 import { lRec } from '@/lib/i18n/localize';
 import type { Boss } from '@/types/boss';
@@ -51,6 +52,19 @@ export default function TyrantToddlerGuide() {
       ]} />
       <hr className="my-6 border-neutral-700" />
       <RecommendedCharacterList title={EARTH_TITLE} entries={RECOMMENDED.earth} />
+      <hr className="my-6 border-neutral-700" />
+      <MultiVideoEmbed
+        hashPrefix="tyrant-toddler-video"
+        videos={[
+          {
+            platform: 'youtube',
+            id: 'S84F1X5hZWE',
+            title: 'Dimensional Singularity Tyrant Toddler - S.Delta Team | Outerplane',
+            author: 'baba yaga',
+            label: 'S.Delta',
+          },
+        ]}
+      />
     </GuideTemplate>
   );
 }
