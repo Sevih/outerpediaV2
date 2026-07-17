@@ -167,9 +167,10 @@
       "icon": "MT_Boss_Rage_Common_1",
       "buff": [
         "BT_STAT|ST_SPEED_IR",
-        "BT_DAMAGE_TAKEN",
-        "BT_DOT_BURN"
-      ]
+        "BT_DAMAGE_TAKEN"
+      ],
+      "debuff":[
+        "BT_DOT_BURN"]
     }
   ]
 }
